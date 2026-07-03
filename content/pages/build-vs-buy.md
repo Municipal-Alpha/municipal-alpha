@@ -8,7 +8,7 @@ We mean it. The question every serious buyer asks, out loud or quietly in a budg
 
 So here is the evaluation prompt we hand prospective buyers. Paste it into Claude, Gemini, ChatGPT, whatever your team uses. Run it against your whole exposed footprint, not a sample of two towns. Refine it however you want. Then put what you get next to what we deliver every week, and decide. We would rather you buy this knowing exactly what it is worth.
 
-One honest note on scope before you start. The answer depends on your footprint. If your exposure is a few dozen towns you already know by name, a scripted watch of your own is a reasonable build and we will tell you so. The economics flip when the footprint is broad, hundreds or thousands of jurisdictions, refreshed weekly, with misses that cost you money.
+One honest note on scope before you start. The answer depends on your footprint. If your exposure is a few dozen towns you already know by name, with people in them you already talk to, a scripted watch of your own is a reasonable build and we will tell you so. The economics flip when the footprint is broad, hundreds or thousands of jurisdictions, refreshed weekly, with misses that cost you money, in towns where nobody would think to call you.
 
 ## The prompt
 

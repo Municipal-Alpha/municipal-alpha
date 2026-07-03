@@ -5,7 +5,7 @@ Summary: Coverage, data freshness, classification, entity resolution, alpha meas
 
 ## Coverage
 
-We have records from 3,900+ municipalities across 50 states (as of July 2026). The United States has 19,500 municipalities. Our coverage is concentrated in New England, the Midwest, and the Mountain West, expanding weekly through automated onboarding.
+We have records from 3,900+ municipalities across 50 states (as of July 2026). The United States has 19,500 municipalities. Coverage density follows buyer demand, not capability: our earliest buyers were concentrated in New England, so coverage is deepest there today, with substantial footprints in the Midwest and Mountain West. Onboarding is by publishing platform, and the platforms are national (CivicPlus, Granicus, BoardDocs, and others), so a new buyer's footprint anywhere in the country onboards the same way. Coverage expands weekly through automated onboarding.
 
 **What we cover well today:**
 
@@ -18,11 +18,11 @@ We have records from 3,900+ municipalities across 50 states (as of July 2026). T
 **Known coverage gaps:**
 
 - County-level data (recorder, probate, assessor) is early stage -- depth in Maine and New Hampshire, limited elsewhere
-- Western and Southern states are underrepresented relative to New England and Midwest
+- Regional density varies with buyer history: Western and Southern states have fewer onboarded municipalities today than New England and the Midwest. This reflects where buyers pulled coverage first, not a platform limit; a named footprint in any state onboards at pilot start
 - Insurance rate filings and mineral rights data are in pilot phase
 - Real-time check register feeds exist for a minority of covered municipalities -- most are periodic via records requests
 
-We are transparent about where our coverage is strong and where it is thin. If you need data from a specific jurisdiction, [ask](/contact/) -- we can often onboard a new municipality in days.
+We are transparent about where our coverage is strong and where it is thin. If you are evaluating us for a specific footprint, [send the list](/contact/) -- we will return a per-jurisdiction coverage manifest showing exactly what we have for each, and onboard the gaps during the pilot, typically in days per municipality.
 
 ## Data Freshness
 
