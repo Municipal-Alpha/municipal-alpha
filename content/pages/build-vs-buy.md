@@ -36,6 +36,10 @@ Rules, so this is honest and not a demo:
   fetched and one verbatim quoted sentence with its location. If you cannot actually
   open a document, write "UNVERIFIED, could not fetch" and do not describe its
   contents from memory. Facts you know from training do not count as "found it."
+- LABEL EVERY NUMBER inline: [FETCHED] (from a source you opened), [DERIVED]
+  (computed from numbers you fetched), or [PRIOR] (training knowledge or assumption).
+  For the three numbers your recommendation depends on most, state what would prove
+  each one wrong and how I could check it myself in 15 minutes.
 
 Do this:
 1. Reverse-engineer their pipeline end to end.
@@ -69,6 +73,8 @@ cost of doing it ourselves.
 
 **The history is the part no budget recovers.** A build you start today gets you a snapshot, it can't produce last year's crawl. Tracing a decision back through the working-group discussion and the first agenda mention, months earlier, requires having been there. You can build the photograph, you can't build the movie backward.
 
+**Run it twice, in different models, and use the spread.** In our own runs of this prompt, two frontier models disagreed by roughly 3x on year-one build cost. Neither number came from a fetched source; both were stated with equal confidence. The spread between runs is your real error bar. That discount applies to every confident memo, including one that recommends us, which is why the number labels above matter more than the numbers.
+
 **Watch for a lazy run.** The verifiable-hands-on and self-audit rules are in the prompt because a model that fabricates its hands-on step will tell you the build is easy. Keep the rules in. Honesty favors whichever answer is actually true for your footprint. The same goes for invented specifics: in our own test runs, models made up statute names and town examples. If a run names a tool, a law, or a company as evidence, make it show the fetched source.
 
 **Make the model audit us, too.** Step 5 asks the model how we tilted this prompt in our own favor, and to rewrite it neutrally. Keep that step in, take whatever rewrite it produces, and run that version instead if you like it better. We did not write a prompt that makes us look good. We wrote one you can take apart.
@@ -77,4 +83,4 @@ cost of doing it ourselves.
 
 ## Decide with the comparison in hand
 
-Run the prompt, then [tell us your footprint](/contact/) and we'll show you what the record says about it, next to what your build would cost.
+Run the prompt, then [tell us your footprint](/contact/) and we'll return a per-jurisdiction coverage manifest, including the towns the model tested, next to what your build would cost. If we don't cover one of your jurisdictions yet, or our newest document for it is stale, the manifest will say so, and onboarding it is the first week of the pilot, not a roadmap promise.
