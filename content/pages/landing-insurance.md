@@ -1,7 +1,7 @@
 Title: Municipal Infrastructure Risk
 Slug: solutions/infrastructure-risk
 Sortorder: 34
-Summary: Pre-event risk intelligence. Infrastructure spending patterns, deferred maintenance signals, and contagion tracking from 3,400+ municipalities. Risk indicators visible in public records months before they become claims.
+Summary: Pre-event risk intelligence. Infrastructure spending patterns, deferred maintenance signals, and contagion tracking from 3,900+ municipalities. Risk indicators visible in public records months before they become claims.
 
 <style>
 .lp-hero { display: flex; gap: 40px; margin-bottom: 48px; align-items: flex-start; }
@@ -61,8 +61,9 @@ Summary: Pre-event risk intelligence. Infrastructure spending patterns, deferred
 <div class="lp-hero">
 <div class="lp-hero-text">
 <div class="lp-tag">Insurance & Risk</div>
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #888; letter-spacing: 1px; margin-bottom: 10px;">Before the vote. Before the permit. Before the RFP.</div>
 <h2>You see the risk before it becomes a claim</h2>
-<p>Claims history tells you what already went wrong. Municipal spending data tells you what's about to. Deferred maintenance, stalled capital projects, and emergency spending spikes are visible in public records months before they become claims. I read these records daily across 3,400+ municipalities.</p>
+<p>Claims history tells you what already went wrong. Municipal spending data tells you what's about to. Deferred maintenance, stalled capital projects, and emergency spending spikes are visible in public records months before they become claims. I read these records daily across 3,900+ municipalities.</p>
 </div>
 <img class="lp-hero-img" src="/images/story-pfas.png" alt="PFAS and infrastructure risk signal">
 </div>
@@ -86,7 +87,7 @@ Summary: Pre-event risk intelligence. Infrastructure spending patterns, deferred
 <span class="lp-metric-label">Contagion topics</span>
 </div>
 <div class="lp-metric">
-<span class="lp-metric-value">3,400+</span>
+<span class="lp-metric-value">3,900+</span>
 <span class="lp-metric-label">Municipalities</span>
 </div>
 <div class="lp-metric">
@@ -138,4 +139,5 @@ Summary: Pre-event risk intelligence. Infrastructure spending patterns, deferred
 <a class="cta-button" href="https://calendar.app.google/s6wDVSaJuqCkwcmg9">Book a 15-minute data review</a>
 <span class="lp-or">or</span>
 <a class="lp-email" href="mailto:matt@municipalalpha.com?subject=Infrastructure%20risk%20inquiry%20%28via%20landing%20page%29">matt@municipalalpha.com</a>
+<p style="margin-top: 16px; font-size: 13px; color: #888;">Weighing build vs buy? <a href="/build-vs-buy/">Run our evaluation prompt yourself</a>.</p>
 </div>

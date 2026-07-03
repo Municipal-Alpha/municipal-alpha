@@ -22,7 +22,7 @@ The system is good at finding things because it has spent a year learning the sy
 
 ## Two Precedents
 
-**The business model:** The Echo Nest built a structured understanding of music from fragmented public sources. No single source was complete. But by ingesting everything, structuring it, and building intelligence on top, they created the canonical layer that Spotify, Pandora, and the rest of the streaming industry built on. Multiple revenue streams on one underlying data asset. Acquired by Spotify for ~$100M in 2014. I am building the same thing for US public records.
+**The business model:** The Echo Nest built a structured understanding of music from fragmented public sources. No single source was complete. But by ingesting everything, structuring it, and building intelligence on top, they created the canonical layer that Spotify, Pandora, and the rest of the streaming industry built on top of. Multiple revenue streams on one underlying data asset. The Echo Nest was acquired by Spotify for ~$100M in 2014. That business model, applied to US public records, is what I am building.
 
 **The technical architecture:** Google acquired Metaweb in 2010 to get Freebase, a knowledge base that structured the messy open web into entities and relationships. That became the Google Knowledge Graph. The insight: structured relationships between entities are more valuable than the raw documents that contain them. Municipal Alpha is a knowledge graph of US public records -- entities, relationships, and the precursor signals they produce.
 
@@ -30,9 +30,9 @@ The system is good at finding things because it has spent a year learning the sy
 
 | What exists nationally | Volume | What's structured today |
 |---|---|---|
-| US municipalities | 19,500 | 3,400+ monitored daily |
-| Building permits issued annually | ~1.5 million (Census Bureau) | 43,000+ structured in our pipeline |
-| Annual municipal government spending | $3.9 trillion (Census of Governments) | Vendor payments from 2,300+ towns, 118 resolved tickers |
+| US municipalities | 19,500 | 3,900+ monitored daily |
+| Building permits issued annually | ~1.5 million (Census Bureau) | 44,000+ structured in our pipeline |
+| Annual municipal government spending | $3.9 trillion (Census of Governments) | Vendor payments from 2,300+ towns, 136 resolved tickers |
 | Municipal bond market | $4 trillion (SIFMA) | Credit signals from source spending documents |
 | FCC-registered tower structures | 130,000+ | 5,400+ screened with parcel cross-reference |
 | Municipal infrastructure investment gap | $2.6 trillion (ASCE) | Deferred maintenance signals from spending patterns |
@@ -79,7 +79,7 @@ Municipal Alpha is built and operated by Matt MacDonald.
 
 Previously: Chief Product Officer at Acast (podcast infrastructure, $200M revenue, NASDAQ IPO), co-founder of RadioPublic (raised $3.5M, grew to acquisition). Two decades building data products from fragmented, unstructured sources at scale, first in audio, now in public records.
 
-The pipeline runs autonomously: 3,400+ municipalities crawled daily, documents classified and entity-resolved same-day, self-healing infrastructure that detects and adapts to website changes without human intervention. One person built it. The automation operates it.
+The pipeline runs autonomously: 3,900+ municipalities crawled daily, documents classified and entity-resolved same-day, self-healing infrastructure that detects and adapts to website changes without human intervention. One person built it. The automation operates it.
 
 Embedded at the Roux Institute NSIH (National Security Innovation Hub, Northeastern University, Portland ME).
 

@@ -1,8 +1,8 @@
 {% autoescape false %}# Municipal Alpha
 
-> Municipal Alpha reads the precursor chain in US municipal public records (the working-group discussion, the draft moratorium, the early agenda item) months before a town votes, permits, or issues an RFP. A knowledge graph of US local government built from daily collection of agendas, minutes, check registers, permits, RFPs, capital plans, and assessor records across 3,400+ of the ~19,500 US municipalities.
+> Municipal Alpha reads the precursor chain in US municipal public records (the working-group discussion, the draft moratorium, the early agenda item) months before a town votes, permits, or issues an RFP. A knowledge graph of US local government built from daily collection of agendas, minutes, check registers, permits, RFPs, capital plans, and assessor records across {{ METRICS.municipalities }} of the ~19,500 US municipalities.
 
-Municipal Alpha shows you what a town is working toward before it decides, before the vote, before the permit, before the RFP. It reads the precursor chain (the working-group discussion, the draft moratorium, the early agenda item) in 3,400+ of the ~19,500 US municipalities, months before the decision is on record.
+Municipal Alpha shows you what a town is working toward before it decides, before the vote, before the permit, before the RFP. It reads the precursor chain (the working-group discussion, the draft moratorium, the early agenda item) in {{ METRICS.municipalities }} of the ~19,500 US municipalities, months before the decision is on record.
 
 Buyers use it to act on the front end of the timeline instead of the finish line: to compete on an RFP before it becomes an RFP, to trade on a municipal signal before the building permit, to flag credit or infrastructure risk before it becomes a rating action or a claim. Documents are classified by type, vendor names are resolved to public-company tickers, and the signal chain is traced from the earliest trigger to the eventual decision.
 
@@ -83,7 +83,18 @@ Municipal Alpha publishes public profiles for vendors and municipalities documen
 
 ## Why This Data Is Hard to Get
 
-Roughly 99% of the documents in our pipeline are invisible to search engines and AI agents. Municipal CMS platforms store documents at URLs with no navigation link, a clerk uploads a check register, it gets a URL, and nothing on the site points to it. The asymmetric signals live in the small and mid-sized town halls, on the worst websites, behind the most obscure records requests, the sources a national permit or decision feed skips because they are not worth the effort. We built connectors for each platform that reach the document store directly, and we read 3,400+ of the ~19,500 US municipalities today, growing weekly.
+Roughly 99% of the documents in our pipeline are invisible to search engines and AI agents. Municipal CMS platforms store documents at URLs with no navigation link, a clerk uploads a check register, it gets a URL, and nothing on the site points to it. The asymmetric signals live in the small and mid-sized town halls, on the worst websites, behind the most obscure records requests, the sources a national permit or decision feed skips because they are not worth the effort. We built connectors for each platform that reach the document store directly, and we read {{ METRICS.municipalities }} of the ~19,500 US municipalities today, growing weekly.
+
+## Should You Build or Buy Municipal Monitoring?
+
+The honest framework, the same one Municipal Alpha hands to prospective buyers:
+
+- The AI/classification step is a commodity. A capable model with web access can reproduce a handful of published examples. Municipal Alpha uses the same models everyone else does; that step is not the moat and no vendor should claim it is.
+- The expensive parts of a DIY build are the registry of where each of thousands of towns actually publishes (most municipal documents sit at URLs nothing links to), OCR on scanned PDFs at volume, continuous connector maintenance as portals change, and low-miss recall week after week. Independent frontier-model evaluations of this build scope it at hundreds of thousands of dollars per year in ongoing engineering.
+- The un-reproducible part is the historical corpus. A new build can produce today's snapshot; it cannot produce last year's crawl, and precursor-chain analysis (tracing a decision back to the working-group discussion months earlier) requires the history. You can build the photograph, you cannot build the movie backward.
+- Scope decides the answer. For a narrow footprint (a few dozen towns you already know by name), building your own watch is reasonable and Municipal Alpha says so. Across a broad, multi-market exposed footprint, continuous low-miss coverage is where DIY stops penciling out and buy wins.
+
+Municipal Alpha publishes the build-vs-buy evaluation prompt so buyers can run the analysis themselves against their whole exposed footprint: {{ SITEURL }}/build-vs-buy/
 
 ## Contact
 

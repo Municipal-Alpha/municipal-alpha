@@ -1,4 +1,4 @@
-Title: Wright-Pierce — Municipal Engineering Activity Across New England
+Title: Wright-Pierce: Municipal Engineering Activity Across New England
 Slug: vendors/wright-pierce
 Status: hidden
 Summary: Public profile compiled from municipal records. Wright-Pierce appears in 22+ New England municipalities across water, wastewater, and civil engineering work, with documented engagement spanning 2008-2026.
@@ -20,7 +20,7 @@ The deepest engagements are in Nashua, NH and Trumbull, CT, where Wright-Pierce 
 |---|---|
 | New England municipalities with documented activity | 22 |
 | Total document mentions in our corpus | 429 |
-| Date range of documented activity | 2008-03-01 — 2026-04-22 |
+| Date range of documented activity | 2008-03-01 to 2026-04-22 |
 | States with active engagement | ME, NH, CT, VT, MA |
 | Primary practice areas (from document context) | Water, wastewater, stormwater, civil engineering |
 
@@ -30,12 +30,12 @@ The following municipalities have published documents mentioning Wright-Pierce i
 
 | Municipality | State | Document mentions | Activity range |
 |---|---|---:|---|
-| Nashua | NH | 191 | 2013-02-15 — 2026-04-21 |
-| Trumbull | CT | 176 | 2011-11-22 — 2025-02-27 |
-| Montpelier | VT | 9 | 2024-11-15 — 2025-12-15 |
-| Lewiston | ME | 7 | 2024-06-03 — 2026-01-12 |
-| Wells | ME | 7 | 2019-08-06 — 2021-01-05 |
-| Falmouth | ME | 6 | 2025-11-10 — 2026-03-03 |
+| Nashua | NH | 191 | 2013-02-15 to 2026-04-21 |
+| Trumbull | CT | 176 | 2011-11-22 to 2025-02-27 |
+| Montpelier | VT | 9 | 2024-11-15 to 2025-12-15 |
+| Lewiston | ME | 7 | 2024-06-03 to 2026-01-12 |
+| Wells | ME | 7 | 2019-08-06 to 2021-01-05 |
+| Falmouth | ME | 6 | 2025-11-10 to 2026-03-03 |
 | **Showing 6 of 22 New England municipalities** | | | **[Claim to unlock →](#claim-this-profile)** |
 
 ## Recent Project Activity (2025-2026)
@@ -55,7 +55,7 @@ Specific projects referenced in meeting minutes and agendas where Wright-Pierce 
 
 ## Sample Payment Records (Public Check Registers)
 
-The following payments appear in municipal check registers — public records of vendor payments. Reported as published; not aggregated by Municipal Alpha.
+The following payments appear in municipal check registers, public records of vendor payments. Reported as published; not aggregated by Municipal Alpha.
 
 | Date | Municipality | Payment | Source |
 |---|---|---:|---|
@@ -86,17 +86,17 @@ Are you Wright-Pierce? You can claim this profile to:
 - Receive notifications when new municipal activity matching your firm is published
 - Suggest corrections or clarifications to any data point above
 - See expanded data not shown on the public page (additional municipalities, deeper project context, payment cadence analysis)
-- Get access to **upcoming opportunities** in your service area not yet reflected here — RFPs, capital plan line items, and procurement activity in adjacent New England municipalities where your competitors are currently engaged
+- Get access to **upcoming opportunities** in your service area not yet reflected here: RFPs, capital plan line items, and procurement activity in adjacent New England municipalities where your competitors are currently engaged
 
 [**Claim this profile →**](mailto:vendors@municipalalpha.com?subject=Claim%20Wright-Pierce%20profile&body=I%20represent%20Wright-Pierce.%20Please%20share%20the%20expanded%20profile%20and%20discuss%20how%20to%20receive%20alerts%20for%20upcoming%20New%20England%20opportunities.)
 
 [**Request correction →**](mailto:data@municipalalpha.com?subject=Wright-Pierce%20profile%20correction)
 
-Corrections are processed within one business day. Disputed pages can be removed on the same day at the named firm's request — we publish municipal records, not opinions.
+Corrections are processed within one business day. Disputed pages can be removed on the same day at the named firm's request. We publish municipal records, not opinions.
 
 ## About Municipal Alpha
 
-Municipal Alpha builds a structured knowledge graph of US public municipal records — meeting minutes, agendas, check registers, RFPs, capital plans, and assessor data — across 2,100+ municipalities in 50 states. We provide alt-data products to financial firms, infrastructure analysts, and engineering consultancies. [Learn more →](/about/)
+Municipal Alpha builds a structured knowledge graph of US public municipal records, meeting minutes, agendas, check registers, RFPs, capital plans, and assessor data, across 2,100+ municipalities in 50 states. We provide alt-data products to financial firms, infrastructure analysts, and engineering consultancies. [Learn more →](/about/)
 
 <script type="application/ld+json">
 {

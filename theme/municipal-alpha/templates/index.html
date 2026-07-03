@@ -16,7 +16,7 @@
         "@type": "Organization",
         "name": "Municipal Alpha",
         "url": "https://municipalalpha.com",
-        "description": "Precursor intelligence from 3,300+ US municipalities. The documents that predict market events, before they become RFPs, rating changes, earnings surprises, or lease listings.",
+        "description": "Precursor intelligence from {{ METRICS.municipalities }} US municipalities. The documents that predict market events, before they become RFPs, rating changes, earnings surprises, or lease listings.",
         "contactPoint": {
             "@type": "ContactPoint",
             "email": "matt@municipalalpha.com",
@@ -51,8 +51,8 @@
 {% block content %}
 <section class="hero">
     <div class="container">
-        <h1>The signal was in the record.<br><em>We found it first.</em></h1>
-        <p class="hero-sub">Right now, you find out about projects when the RFP drops. About vendor relationships when earnings publish. About infrastructure spending when the bond prices move. By then, everyone else knows too.</p>
+        <h1>The decision is coming.<br><em>We see it first.</em></h1>
+        <p class="hero-sub">Right now, you find out about projects when the RFP drops. About vendor relationships when earnings publish. About infrastructure spending when the bond prices move. By then, everyone else knows too. The record showed it months earlier: before the vote, before the permit, before the RFP.</p>
         <div style="margin-top: 32px;">
             <a href="{{ SITEURL }}/research/amherst-tower/" class="btn">See a Real Signal Chain</a>
             <a href="https://calendar.app.google/s6wDVSaJuqCkwcmg9" class="btn btn-outline">Book a Data Review</a>
@@ -258,7 +258,7 @@
                 <p>Remediation spending signals visible in town council agendas months before EPA enforcement.</p>
             </a>
             <a href="{{ SITEURL }}/research/company-footprint/" class="story-card">
-                <span class="story-stat">135 tickers · 3,400+ municipalities</span>
+                <span class="story-stat">{{ METRICS.tickers }} tickers · {{ METRICS.municipalities }} municipalities</span>
                 <h3>The Company That Shows Up in 123 Towns</h3>
                 <p>Entity resolution reveals which public companies have the deepest municipal government footprint.</p>
             </a>
@@ -312,6 +312,26 @@
             Roughly 99% of the documents ingested are invisible to search engines and AI assistants. Public record, on public servers, at URLs that nothing points to. The system finds them because it has connectors for each municipal CMS platform, not a general-purpose crawler.
         </p>
         <a href="{{ SITEURL }}/how-it-works/">How it finds what search engines miss &rarr;</a>
+    </div>
+</section>
+
+<!-- Build-vs-buy honesty band: raise the objection verbatim, concede, contest the economics, hand them the prompt -->
+<section class="build-vs-buy">
+    <div class="container" style="max-width: 800px;">
+        <h2>"Can't you just do this with Claude?"</h2>
+        <p>
+            Fair question. Honestly, you can do some of it. A good model with web access can reproduce a handful of the examples we publish. The AI step is a commodity, and we use the same models.
+        </p>
+        <p>
+            What the model can't give you is the pipeline behind it, the continuous, low-miss coverage across thousands of town sites on a dozen CMS platforms, refreshed weekly, with OCR on the scanned PDFs and repairs every time a portal changes. We handed this exact build-vs-buy evaluation to two frontier AI models in July 2026. Both scoped the real build at hundreds of thousands of dollars a year, and both recommended buy.
+        </p>
+        <p>
+            And there is the half no build can reach. You can build the photograph, you can't build the movie backward. Nothing you start today produces last year's crawl, and the precursor chain lives in the history.
+        </p>
+        <p>
+            Don't take our word for it. We wrote the evaluation prompt for you. Run it against your whole exposed footprint, refine it however you want, and put the result next to what we deliver every week.
+        </p>
+        <a href="{{ SITEURL }}/build-vs-buy/" style="display: inline-block; font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #E8512D; text-decoration: none; padding: 10px 24px; border: 1px solid #E8512D; border-radius: 3px; transition: all 0.2s;">Try to build it yourself &rarr;</a>
     </div>
 </section>
 

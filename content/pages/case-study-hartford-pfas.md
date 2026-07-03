@@ -169,5 +169,5 @@ Hartford, Vermont has been navigating PFAS contamination across two wastewater f
 </div>
 
 <div class="cs-note">
-<strong>Methodology note:</strong> This signal chain was assembled from public documents available on hartford-vt.org. Every link above goes to the original source published by the Town of Hartford. Documents are monitored daily across 2,400+ municipalities using automated crawling and classification. This case study presents publicly available information and does not constitute environmental consulting advice or a recommendation to pursue any specific contract.
+<strong>Methodology note:</strong> This signal chain was assembled from public documents available on hartford-vt.org. Every link above goes to the original source published by the Town of Hartford. Documents are monitored daily across 3,900+ municipalities using automated crawling and classification. A retrospective chain like this proves the method and the lead time, not a hit rate; the forward call is what a pilot is for. This case study presents publicly available information and does not constitute environmental consulting advice or a recommendation to pursue any specific contract.
 </div>

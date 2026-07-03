@@ -1,7 +1,7 @@
 Title: Tower & Infrastructure Leads
 Slug: solutions/tower-leads
 Sortorder: 30
-Summary: Pre-listing lease intelligence. 7,700+ qualified tower lease prospects with parcel data, owner identification, and FCC/FAA cross-reference, across 3,400+ municipalities.
+Summary: Pre-listing lease intelligence. 7,700+ qualified tower lease prospects with parcel data, owner identification, and FCC/FAA cross-reference, across 3,900+ municipalities.
 
 <style>
 .lp-hero { display: flex; gap: 40px; margin-bottom: 48px; align-items: flex-start; }
@@ -61,6 +61,7 @@ Summary: Pre-listing lease intelligence. 7,700+ qualified tower lease prospects 
 <div class="lp-hero">
 <div class="lp-hero-text">
 <div class="lp-tag">Infrastructure & REITs</div>
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #888; letter-spacing: 1px; margin-bottom: 10px;">Before the vote. Before the permit. Before the RFP.</div>
 <h2>You contact the landowner before anyone else knows the lease exists</h2>
 <p>Tower lease aggregation is a land rush. A lease that hits the open market gets bid up 30-40%. I cross-reference assessor records, planning board votes, FCC registrations, and check register payments to identify tower prospects months before a renewal hits the market. You get to the landowner first.</p>
 </div>
@@ -137,4 +138,5 @@ Summary: Pre-listing lease intelligence. 7,700+ qualified tower lease prospects 
 <a class="cta-button" href="https://calendar.app.google/s6wDVSaJuqCkwcmg9">Book a 15-minute data review</a>
 <span class="lp-or">or</span>
 <a class="lp-email" href="mailto:matt@municipalalpha.com?subject=Tower%20leads%20inquiry%20%28via%20landing%20page%29">matt@municipalalpha.com</a>
+<p style="margin-top: 16px; font-size: 13px; color: #888;">Weighing build vs buy? <a href="/build-vs-buy/">Run our evaluation prompt yourself</a>.</p>
 </div>

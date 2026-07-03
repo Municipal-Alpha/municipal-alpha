@@ -5,13 +5,13 @@ Summary: Coverage, data freshness, classification, entity resolution, alpha meas
 
 ## Coverage
 
-We have records from 3,400+ municipalities across 50 states. The United States has 19,500 municipalities. Our coverage is concentrated in New England, the Midwest, and the Mountain West, expanding weekly through automated onboarding.
+We have records from 3,900+ municipalities across 50 states (as of July 2026). The United States has 19,500 municipalities. Our coverage is concentrated in New England, the Midwest, and the Mountain West, expanding weekly through automated onboarding.
 
 **What we cover well today:**
 
-- Municipal meeting documents (agendas, minutes, packets) from 3,400+ municipalities
+- Municipal meeting documents (agendas, minutes, packets) from 3,900+ municipalities
 - Check registers and accounts payable data from 200+ municipalities
-- Building permits from 400+ municipalities (40,000+ structured records)
+- Building permits from 400+ municipalities (44,000+ structured records)
 - Tower and infrastructure lease data from assessor records (13,000+ sites screened)
 - FOAA/FOIA response data from 100+ jurisdictions with active records requests
 
@@ -65,7 +65,7 @@ Vendor names in municipal documents are messy. "Waste Management of Maine," "WM,
 - **Tier 1 (Watchlist):** Curated ticker-company pairs. Exact string matching. High confidence. Primary source for trading signals.
 - **Tier 2 (Discovery):** Broader matching against subsidiary names, DBAs, and known aliases. Substring and fuzzy matching. Medium confidence. Stored for validation and portfolio expansion.
 
-Current resolution covers 135 public company tickers across 3,400+ municipalities. Resolution accuracy varies by entity -- large, frequently-appearing companies (AT&T, Verizon, Waste Management) resolve at high accuracy. Smaller or regional companies may not resolve on first appearance and are queued for review.
+Current resolution covers 136 public company tickers across 3,900+ municipalities. Resolution accuracy varies by entity -- large, frequently-appearing companies (AT&T, Verizon, Waste Management) resolve at high accuracy. Smaller or regional companies may not resolve on first appearance and are queued for review.
 
 **Known limitation:** Entity confidence is currently expressed as a tier label, not a numeric probability score. Numeric confidence scoring is planned.
 

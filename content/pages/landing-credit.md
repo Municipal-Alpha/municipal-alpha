@@ -1,7 +1,7 @@
 Title: Municipal Credit Intelligence
 Slug: solutions/credit-intelligence
 Sortorder: 32
-Summary: Pre-downgrade fiscal intelligence. Leading indicators of municipal fiscal health from the source spending documents that rating agencies eventually read. 3,400+ municipalities.
+Summary: Pre-downgrade fiscal intelligence. Leading indicators of municipal fiscal health from the source spending documents that rating agencies eventually read. 3,900+ municipalities.
 
 <style>
 .lp-hero { display: flex; gap: 40px; margin-bottom: 48px; align-items: flex-start; }
@@ -57,6 +57,7 @@ Summary: Pre-downgrade fiscal intelligence. Leading indicators of municipal fisc
 <div class="lp-hero">
 <div class="lp-hero-text">
 <div class="lp-tag">Fixed Income</div>
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #888; letter-spacing: 1px; margin-bottom: 10px;">Before the vote. Before the permit. Before the RFP.</div>
 <h2>You see the fiscal stress before the rating agency does</h2>
 <p>Rating agencies evaluate municipal credit from financial statements published months after the fact. I read the raw spending data daily, the same source material those statements are built from. You see the precursor signals. They see the downgrade.</p>
 </div>
@@ -77,7 +78,7 @@ Summary: Pre-downgrade fiscal intelligence. Leading indicators of municipal fisc
 <span class="lp-metric-label">Separation ratio</span>
 </div>
 <div class="lp-metric">
-<span class="lp-metric-value">3,400+</span>
+<span class="lp-metric-value">3,900+</span>
 <span class="lp-metric-label">Municipalities</span>
 </div>
 <div class="lp-metric">
@@ -136,4 +137,5 @@ Summary: Pre-downgrade fiscal intelligence. Leading indicators of municipal fisc
 <a class="cta-button" href="https://calendar.app.google/s6wDVSaJuqCkwcmg9">Book a 15-minute data review</a>
 <span class="lp-or">or</span>
 <a class="lp-email" href="mailto:matt@municipalalpha.com?subject=Credit%20intelligence%20inquiry%20%28via%20landing%20page%29">matt@municipalalpha.com</a>
+<p style="margin-top: 16px; font-size: 13px; color: #888;">Weighing build vs buy? <a href="/build-vs-buy/">Run our evaluation prompt yourself</a>.</p>
 </div>

@@ -1,4 +1,4 @@
-Title: Sanborn Head & Associates — Northeast Authority & Municipal Opportunity Profile
+Title: Sanborn Head & Associates: Northeast Authority & Municipal Opportunity Profile
 Slug: vendors/sanborn-head
 Status: hidden
 Summary: Active PFAS environmental opportunities at Northeast quasi-public authorities (MRRA, Loring, Pease) plus Sanborn Head's documented existing footprint in Hartford VT, Boscawen NH, and adjacent municipalities. Compiled from public records.
@@ -12,27 +12,27 @@ schema_type: Organization
 
 ## What We Found for Sanborn Head (May 2026)
 
-The Midcoast Regional Redevelopment Authority (MRRA) in Brunswick, Maine just published a $60,000 PFAS-focused environmental Liaison RFP with a Thursday, May 21 deadline — the kind of authority-class opportunity that doesn't appear in SAM.gov or state procurement portals because Northeast quasi-public authorities run procurement through their own websites. Sanborn Head's confirmed brownfields advisory practice (Boscawen NH Brownfields Advisory Committee) and ongoing environmental program engagements position the firm directly for this scope and the broader stream of similar work at Northeast peer authorities. Below is the active opportunity, the data behind it, and the documented footprint that confirms our intelligence quality.
+The Midcoast Regional Redevelopment Authority (MRRA) in Brunswick, Maine just published a $60,000 PFAS-focused environmental Liaison RFP with a Thursday, May 21 deadline, the kind of authority-class opportunity that doesn't appear in SAM.gov or state procurement portals because Northeast quasi-public authorities run procurement through their own websites. Sanborn Head's confirmed brownfields advisory practice (Boscawen NH Brownfields Advisory Committee) and ongoing environmental program engagements position the firm directly for this scope and the broader stream of similar work at Northeast peer authorities. Below is the active opportunity, the data behind it, and the documented footprint that confirms our intelligence quality.
 
 ## Active Authority-Class Opportunity
 
 | Authority | Opportunity | Deadline | Scope | Budget |
 |---|---|---|---|---|
-| Midcoast Regional Redevelopment Authority (MRRA), Brunswick, ME | RFP — Qualified Environmental Professional (QEP) | Thursday, May 21, 2026 by 2:00pm | Environmental Liaison role for Brunswick Landing redevelopment. Explicit focus on PFAS/PFOS criteria and emerging contaminants, regulatory interpretation, US Navy + Maine DEP coordination, remediation planning review | $60,000 / 12-month engagement, annual renewal |
+| Midcoast Regional Redevelopment Authority (MRRA), Brunswick, ME | RFP, Qualified Environmental Professional (QEP) | Thursday, May 21, 2026 by 2:00pm | Environmental Liaison role for Brunswick Landing redevelopment. Explicit focus on PFAS/PFOS criteria and emerging contaminants, regulatory interpretation, US Navy + Maine DEP coordination, remediation planning review | $60,000 / 12-month engagement, annual renewal |
 
 Submission to Ashley Rand, Deputy Director, MRRA, 15 Terminal Road, Suite 203, Brunswick, ME 04011. Three hard copies, five-page maximum proposal.
 
 ## Why This Opportunity Class Matters
 
-There are approximately **70 Base Realignment and Closure (BRAC) redevelopment authorities nationally** — each one a multi-hundred-acre former military installation with inherited environmental remediation programs, ongoing PFAS contamination histories from legacy AFFF firefighting foam use, and recurring procurement of qualified environmental professionals. Most operate as state-chartered public municipal corporations and publish RFPs, board minutes, financial audits, and environmental monitoring data on their own websites — outside SAM.gov, outside state procurement portals, outside conventional bid-aggregation tools.
+There are approximately **70 Base Realignment and Closure (BRAC) redevelopment authorities nationally**, each one a multi-hundred-acre former military installation with inherited environmental remediation programs, ongoing PFAS contamination histories from legacy AFFF firefighting foam use, and recurring procurement of qualified environmental professionals. Most operate as state-chartered public municipal corporations and publish RFPs, board minutes, financial audits, and environmental monitoring data on their own websites, outside SAM.gov, outside state procurement portals, outside conventional bid-aggregation tools.
 
 Northeast peers directly relevant to Sanborn Head's geography:
 
-- **Pease Development Authority** — Portsmouth NH, former Pease AFB, well-documented PFAS contamination history (closest to Concord HQ)
-- **Midcoast Regional Redevelopment Authority (MRRA)** — Brunswick ME, former Naval Air Station Brunswick
-- **Loring Commerce Centre / Loring Development Authority** — Limestone ME, former Loring AFB
-- **Devens / MassDevelopment** — former Fort Devens, MA
-- **Quonset Development Corporation** — North Kingstown RI, former Quonset Point Naval Air Station
+- **Pease Development Authority**, Portsmouth NH, former Pease AFB, well-documented PFAS contamination history (closest to Concord HQ)
+- **Midcoast Regional Redevelopment Authority (MRRA)**, Brunswick ME, former Naval Air Station Brunswick
+- **Loring Commerce Centre / Loring Development Authority**, Limestone ME, former Loring AFB
+- **Devens / MassDevelopment**, former Fort Devens, MA
+- **Quonset Development Corporation**, North Kingstown RI, former Quonset Point Naval Air Station
 
 Each operates its own RFP cadence and publishes its own environmental data outside conventional channels.
 
@@ -50,7 +50,7 @@ MRRA published Brunswick Landing PFAS Testing Results from October 2025 sampling
 
 The 6:2 FTS / 8:2 FTS / PFOS pattern is consistent with classic AFFF firefighting-foam contamination from the legacy Naval Air Station. Compounds detected at 8 of 9 sample locations. Lab reports are structured PDFs published directly on the MRRA website.
 
-## Coverage Extension Status — Northeast Quasi-Public Authorities
+## Coverage Extension Status: Northeast Quasi-Public Authorities
 
 | Authority | Type | Indexing status |
 |---|---|---|
@@ -70,37 +70,37 @@ The opportunity intelligence above is drawn from the same daily-monitored corpus
 
 ## Sanborn Head in Northeast Municipalities
 
-Sanborn Head & Associates appears in **5 Northeast municipalities** with documented activity from 2019 through April 2026. The deepest current engagement is in Hartford, VT, where Sanborn Head produces recurring Significant Activity Reports — likely the engineer-of-record relationship for the town's environmental program. The firm also serves on the **Boscawen NH Brownfields Advisory Committee** as of February-April 2026, a direct fit with the firm's brownfields practice positioning.
+Sanborn Head & Associates appears in **5 Northeast municipalities** with documented activity from 2019 through April 2026. The deepest current engagement is in Hartford, VT, where Sanborn Head produces recurring Significant Activity Reports, likely the engineer-of-record relationship for the town's environmental program. The firm also serves on the **Boscawen NH Brownfields Advisory Committee** as of February-April 2026, a direct fit with the firm's brownfields practice positioning.
 
 | Metric | Value |
 |---|---|
 | Northeast municipalities with documented activity | 5 |
 | Total document mentions in our corpus | 36 |
-| Date range of documented activity | 2019-02-13 — 2026-04-29 |
+| Date range of documented activity | 2019-02-13 to 2026-04-29 |
 | States with active engagement | VT, NH |
 | Primary practice areas (from document context) | Brownfield advisory, environmental remediation, significant-activity reporting, landfill management |
 
 | Municipality | State | Document mentions | Activity range |
 |---|---|---:|---|
-| Hartford | VT | 22 | 2023-05-30 — 2025-12-30 |
-| Boscawen | NH | 6 | 2026-02-18 — 2026-04-01 |
-| Montpelier | VT | 5 | 2019-02-13 — 2019-10-09 |
-| Nashua | NH | 2 | 2025-10-28 — 2026-04-29 |
+| Hartford | VT | 22 | 2023-05-30 to 2025-12-30 |
+| Boscawen | NH | 6 | 2026-02-18 to 2026-04-01 |
+| Montpelier | VT | 5 | 2019-02-13 to 2019-10-09 |
+| Nashua | NH | 2 | 2025-10-28 to 2026-04-29 |
 | Springfield | VT | 1 | (date undated in corpus) |
 
 ## Recent Project Activity (2025-2026)
 
 | Date | Municipality | Project / Context |
 |---|---|---|
-| 2026-04-29 | Nashua, NH | Joint Meeting — Committee on Infrastructure and Board of Public Works |
+| 2026-04-29 | Nashua, NH | Joint Meeting, Committee on Infrastructure and Board of Public Works |
 | 2026-04-01 | Boscawen, NH | Select Board agenda materials |
 | 2026-03-23 | Boscawen, NH | Brownfields Advisory Committee minutes |
-| 2026-03-18 | Boscawen, NH | Select Board minutes — engineering reference |
+| 2026-03-18 | Boscawen, NH | Select Board minutes, engineering reference |
 | 2026-02-18 | Boscawen, NH | Select Board agenda |
-| 2025-12-30 | Hartford, VT | Significant Activity Report — December 30, 2025 |
-| 2025-10-28 | Nashua, NH | Bid Addendum #2 — Four Hills Landfill 5,000 Gallon Diesel Fuel |
-| 2025-10-14 | Hartford, VT | Significant Activity Report — October 14, 2025 |
-| 2025-09-30 | Hartford, VT | Significant Activity Report — September 30, 2025 |
+| 2025-12-30 | Hartford, VT | Significant Activity Report, December 30, 2025 |
+| 2025-10-28 | Nashua, NH | Bid Addendum #2: Four Hills Landfill 5,000 Gallon Diesel Fuel |
+| 2025-10-14 | Hartford, VT | Significant Activity Report, October 14, 2025 |
+| 2025-09-30 | Hartford, VT | Significant Activity Report, September 30, 2025 |
 | **Showing 9 of 25+ documented project references since 2024** | | **[Claim to unlock →](#claim-this-profile)** |
 
 ## Methodology
@@ -132,7 +132,7 @@ Corrections are processed within one business day. Disputed pages can be removed
 
 ## About Municipal Alpha
 
-Municipal Alpha builds a structured knowledge graph of US public municipal records and quasi-public authority data — meeting minutes, agendas, check registers, RFPs, capital plans, environmental monitoring data, and assessor records — across 2,100+ municipalities and a growing set of quasi-public authorities. We provide alt-data products to financial firms, infrastructure analysts, and engineering and environmental consultancies. [Learn more →](/about/)
+Municipal Alpha builds a structured knowledge graph of US public municipal records and quasi-public authority data, meeting minutes, agendas, check registers, RFPs, capital plans, environmental monitoring data, and assessor records, across 2,100+ municipalities and a growing set of quasi-public authorities. We provide alt-data products to financial firms, infrastructure analysts, and engineering and environmental consultancies. [Learn more →](/about/)
 
 <script type="application/ld+json">
 {

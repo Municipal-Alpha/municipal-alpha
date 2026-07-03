@@ -479,6 +479,29 @@ a.solution-featured:hover {
     color: var(--paper);
 }
 
+/* Build-vs-buy honesty band */
+.build-vs-buy {
+    padding: 80px 0;
+    background: var(--ink);
+    color: var(--paper);
+    border-top: 3px solid var(--signal);
+}
+
+.build-vs-buy h2 {
+    font-family: 'Newsreader', serif;
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 24px;
+}
+
+.build-vs-buy p {
+    font-size: 17px;
+    line-height: 1.7;
+    opacity: 0.8;
+    margin-bottom: 16px;
+    max-width: 720px;
+}
+
 /* Locate example section */
 .locate-example {
     padding: 60px 0;

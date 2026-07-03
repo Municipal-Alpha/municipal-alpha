@@ -82,8 +82,8 @@ State-level bills with current pipeline visibility:
 | State | Bill | Direction |
 |---|---|---|
 | ME | LD307 | Moratorium proposal (House passed Apr 6, Governor vetoed Apr 24, House override failed Apr 29) |
-| ME | LD713 | Tax-incentive denial (signed Apr 29) — data centers prohibited from claiming state business-development tax incentives |
-| ME | LD912 | Electricity caps (passed) — limits supply to commercial/industrial sites |
+| ME | LD713 | Tax-incentive denial (signed Apr 29), data centers prohibited from claiming state business-development tax incentives |
+| ME | LD912 | Electricity caps (passed), limits supply to commercial/industrial sites |
 | MA | H630 | Education-to-career data center initiative |
 | MD | HB1595 | County tax subclass authority for data center personal property |
 | NH | SB439 | Municipal zoning authority over data centers |

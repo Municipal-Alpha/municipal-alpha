@@ -1,4 +1,4 @@
-Title: S.W. Cole Engineering — Municipal Activity Across New England
+Title: S.W. Cole Engineering: Municipal Activity Across New England
 Slug: vendors/sw-cole
 Status: hidden
 Summary: Public profile compiled from municipal records. S.W. Cole Engineering appears in 9 New England municipalities across geotechnical, environmental, and construction-materials engineering work, with documented activity from 2013 through 2026.
@@ -14,13 +14,13 @@ schema_type: Organization
 
 S.W. Cole Engineering, Inc. is a Gray, Maine-headquartered firm specializing in geotechnical engineering, environmental services, and construction materials testing for municipal, transportation, and private clients across New England. Based on our coverage of 2,100+ US municipalities, the firm appears in **9 New England municipalities** across Maine, New Hampshire, and Vermont, with documented activity from 2013 through February 2026.
 
-The deepest documented engagements are in Nashua, NH (77 mentions), Bedford, NH (21), and Montpelier, VT (10). Most volume comes from check-register records — public AP data showing payment cadence — with named geotechnical and slope-stability projects documented in meeting minutes for several other municipalities.
+The deepest documented engagements are in Nashua, NH (77 mentions), Bedford, NH (21), and Montpelier, VT (10). Most volume comes from check-register records, public AP data showing payment cadence, with named geotechnical and slope-stability projects documented in meeting minutes for several other municipalities.
 
 | Metric | Value |
 |---|---|
 | New England municipalities with documented activity | 9 |
 | Total document mentions in our corpus | 113 |
-| Date range of documented activity | 2013-09-27 — 2026-02-18 |
+| Date range of documented activity | 2013-09-27 to 2026-02-18 |
 | States with active engagement | ME, NH, VT |
 | Primary practice areas (from document context) | Geotechnical engineering, slope stability, materials testing, environmental support |
 
@@ -28,15 +28,15 @@ The deepest documented engagements are in Nashua, NH (77 mentions), Bedford, NH 
 
 | Municipality | State | Document mentions | Activity range |
 |---|---|---:|---|
-| Nashua | NH | 77 | 2013-09-27 — 2026-03-26 |
-| Bedford | NH | 21 | 2016-10-27 — 2025-09-11 |
-| Montpelier | VT | 10 | 2018-08-01 — 2021-12-01 |
+| Nashua | NH | 77 | 2013-09-27 to 2026-03-26 |
+| Bedford | NH | 21 | 2016-10-27 to 2025-09-11 |
+| Montpelier | VT | 10 | 2018-08-01 to 2021-12-01 |
 | Falmouth | ME | 1 | 2025-11-10 |
 | Bethlehem | NH | 1 | 2025-09-19 |
 | Auburn | ME | 1 | 2025-03-24 |
 | Portsmouth | NH | 1 | 2023-07-26 |
 | Wells | ME | 1 | 2018-12-18 |
-| Bangor | ME | 1 | — |
+| Bangor | ME | 1 | - |
 
 ## Recent Project Activity (2023-2026)
 
@@ -44,16 +44,16 @@ Specific projects referenced in meeting minutes, agendas, and engineering report
 
 | Date | Municipality | Project / Context |
 |---|---|---|
-| 2025-11-10 | Falmouth, ME | Old Mill Road Slope Stability — geotechnical engineering support for slope stability analysis and repair recommendations (subcontractor role) |
-| 2025-09-19 | Bethlehem, NH | Maplewood Hill Road Alternatives Analysis — completed geotechnical investigations |
-| 2025-03-24 | Auburn, ME | Engine 2 Fire Station project — consultant role |
-| 2023-07-26 | Portsmouth, NH | Engineering report ("Attachment A — Prepared by S. W. Cole Engineering, Inc.") |
+| 2025-11-10 | Falmouth, ME | Old Mill Road Slope Stability, geotechnical engineering support for slope stability analysis and repair recommendations (subcontractor role) |
+| 2025-09-19 | Bethlehem, NH | Maplewood Hill Road Alternatives Analysis, completed geotechnical investigations |
+| 2025-03-24 | Auburn, ME | Engine 2 Fire Station project, consultant role |
+| 2023-07-26 | Portsmouth, NH | Engineering report ("Attachment A - Prepared by S. W. Cole Engineering, Inc.") |
 
 The corpus reflects what's documented in publicly-published municipal records. Geotechnical site investigations are often referenced in capital project files, attachments, and engineering reports that don't always appear in published meeting minutes. The named projects above are likely a small fraction of S.W. Cole's actual municipal portfolio in the documented date range.
 
 ## Sample Payment Records (Public Check Registers)
 
-The following payments appear in municipal check registers — public records of vendor payments. Reported as published; not aggregated by Municipal Alpha.
+The following payments appear in municipal check registers, public records of vendor payments. Reported as published; not aggregated by Municipal Alpha.
 
 | Date | Municipality | Payment | Source |
 |---|---|---:|---|
@@ -94,17 +94,17 @@ Are you S.W. Cole Engineering? You can claim this profile to:
 
 - Receive notifications when new municipal activity matching your firm is published in our coverage area
 - Suggest corrections or fill in coverage gaps (additional municipalities, projects not reflected in minutes, transportation-agency or state-environmental work)
-- See expanded data not shown on the public page — adjacent New England municipalities with active geotechnical, slope-stability, or environmental-testing scopes where your firm could be engaged
+- See expanded data not shown on the public page: adjacent New England municipalities with active geotechnical, slope-stability, or environmental-testing scopes where your firm could be engaged
 
 [**Claim this profile →**](mailto:vendors@municipalalpha.com?subject=Claim%20S.W.%20Cole%20profile&body=I%20represent%20S.W.%20Cole%20Engineering.%20Please%20share%20the%20expanded%20profile%20and%20discuss%20how%20to%20receive%20alerts%20for%20upcoming%20New%20England%20opportunities.)
 
 [**Request correction →**](mailto:data@municipalalpha.com?subject=S.W.%20Cole%20profile%20correction)
 
-Corrections are processed within one business day. Disputed pages can be removed on the same day at the named firm's request — we publish municipal records, not opinions.
+Corrections are processed within one business day. Disputed pages can be removed on the same day at the named firm's request. We publish municipal records, not opinions.
 
 ## About Municipal Alpha
 
-Municipal Alpha builds a structured knowledge graph of US public municipal records — meeting minutes, agendas, check registers, RFPs, capital plans, and assessor data — across 2,100+ municipalities in 50 states. We provide alt-data products to financial firms, infrastructure analysts, and engineering consultancies. [Learn more →](/about/)
+Municipal Alpha builds a structured knowledge graph of US public municipal records, meeting minutes, agendas, check registers, RFPs, capital plans, and assessor data, across 2,100+ municipalities in 50 states. We provide alt-data products to financial firms, infrastructure analysts, and engineering consultancies. [Learn more →](/about/)
 
 <script type="application/ld+json">
 {

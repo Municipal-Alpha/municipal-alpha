@@ -207,5 +207,5 @@ A citizen complained about cell coverage at a Board of Selectmen meeting in July
 </div>
 
 <div class="cs-note">
-<strong>Methodology note:</strong> This signal chain was assembled from public meeting minutes available on amherstnh.gov. Every link above goes to the original source document published by the Town of Amherst. No proprietary data sources were used. The documents have always been public. They were just sitting on a town website, unread.
+<strong>Methodology note:</strong> This signal chain was assembled from public meeting minutes available on amherstnh.gov. Every link above goes to the original source document published by the Town of Amherst. No proprietary data sources were used. The documents have always been public. They were just sitting on a town website, unread. A retrospective chain like this proves the method and the lead time, not a hit rate; the forward call is what a pilot is for.
 </div>

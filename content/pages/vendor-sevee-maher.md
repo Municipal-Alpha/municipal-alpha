@@ -1,4 +1,4 @@
-Title: Sevee & Maher Engineers — Maine Authority & Municipal Opportunity Profile
+Title: Sevee & Maher Engineers: Maine Authority & Municipal Opportunity Profile
 Slug: vendors/sevee-maher
 Status: hidden
 Summary: Active PFAS environmental opportunities at Maine quasi-public authorities (MRRA, Loring) plus Sevee & Maher's documented existing footprint across 12 Maine municipalities. Compiled from public records.
@@ -12,30 +12,30 @@ schema_type: Organization
 
 ## What We Found for Sevee & Maher (May 2026)
 
-The Midcoast Regional Redevelopment Authority (MRRA) in Brunswick, Maine just published a $60,000 PFAS-focused environmental Liaison RFP with a Thursday, May 21 deadline — the kind of authority-class opportunity that doesn't appear in SAM.gov or state procurement portals because Maine's quasi-public authorities run procurement through their own websites. Sevee & Maher's existing Maine practice positions the firm well for this opportunity and a broader stream of similar work at peer authorities. Below is the active opportunity, the data behind it, and the documented footprint that confirms our intelligence quality.
+The Midcoast Regional Redevelopment Authority (MRRA) in Brunswick, Maine just published a $60,000 PFAS-focused environmental Liaison RFP with a Thursday, May 21 deadline, the kind of authority-class opportunity that doesn't appear in SAM.gov or state procurement portals because Maine's quasi-public authorities run procurement through their own websites. Sevee & Maher's existing Maine practice positions the firm well for this opportunity and a broader stream of similar work at peer authorities. Below is the active opportunity, the data behind it, and the documented footprint that confirms our intelligence quality.
 
 ## Active Authority-Class Opportunity
 
 | Authority | Opportunity | Deadline | Scope | Budget |
 |---|---|---|---|---|
-| Midcoast Regional Redevelopment Authority (MRRA), Brunswick, ME | RFP — Qualified Environmental Professional (QEP) | Thursday, May 21, 2026 by 2:00pm | Environmental Liaison role for Brunswick Landing redevelopment. Explicit focus on PFAS/PFOS criteria and emerging contaminants, regulatory interpretation, US Navy + Maine DEP coordination, remediation planning review | $60,000 / 12-month engagement, annual renewal |
+| Midcoast Regional Redevelopment Authority (MRRA), Brunswick, ME | RFP, Qualified Environmental Professional (QEP) | Thursday, May 21, 2026 by 2:00pm | Environmental Liaison role for Brunswick Landing redevelopment. Explicit focus on PFAS/PFOS criteria and emerging contaminants, regulatory interpretation, US Navy + Maine DEP coordination, remediation planning review | $60,000 / 12-month engagement, annual renewal |
 
 Submission to Ashley Rand, Deputy Director, MRRA, 15 Terminal Road, Suite 203, Brunswick, ME 04011. Three hard copies, five-page maximum proposal. E-mail questions to Ashley Rand directly.
 
 ## Why This Opportunity Class Matters
 
-There are approximately **70 Base Realignment and Closure (BRAC) redevelopment authorities nationally** — each one a multi-hundred-acre former military installation with inherited environmental remediation programs, ongoing PFAS contamination histories from legacy AFFF firefighting foam use, and recurring procurement of qualified environmental professionals. Most operate as state-chartered public municipal corporations and publish RFPs, board minutes, financial audits, and environmental monitoring data on their own websites — outside SAM.gov, outside state procurement portals, outside conventional bid-aggregation tools.
+There are approximately **70 Base Realignment and Closure (BRAC) redevelopment authorities nationally**, each one a multi-hundred-acre former military installation with inherited environmental remediation programs, ongoing PFAS contamination histories from legacy AFFF firefighting foam use, and recurring procurement of qualified environmental professionals. Most operate as state-chartered public municipal corporations and publish RFPs, board minutes, financial audits, and environmental monitoring data on their own websites, outside SAM.gov, outside state procurement portals, outside conventional bid-aggregation tools.
 
 Maine alone has two BRAC authorities directly relevant to Sevee & Maher's existing geography:
 
-- **Midcoast Regional Redevelopment Authority (MRRA)** — Brunswick, former Naval Air Station Brunswick, ~3,200 acres, active PFAS testing program (Method 1633A, October 2025 sampling at 9 locations on the property)
-- **Loring Commerce Centre / Loring Development Authority** — Limestone, former Loring AFB, ongoing redevelopment with parallel environmental procurement cadence
+- **Midcoast Regional Redevelopment Authority (MRRA)**, Brunswick, former Naval Air Station Brunswick, ~3,200 acres, active PFAS testing program (Method 1633A, October 2025 sampling at 9 locations on the property)
+- **Loring Commerce Centre / Loring Development Authority**, Limestone, former Loring AFB, ongoing redevelopment with parallel environmental procurement cadence
 
 Plus the broader Northeast peer set: Pease Development Authority (Portsmouth NH), Devens / MassDevelopment (former Fort Devens MA), and Quonset Development Corporation (former Quonset Point Naval Air Station RI).
 
 ## Recent Quasi-Public Authority Environmental Data
 
-MRRA published Brunswick Landing PFAS Testing Results from October 2025 sampling, conducted to EPA Method 1633A standard across 9 sample locations on the property — four oil-water separators (OWS-4 through OWS-6 East/West) and five sewer lift stations (SLS-1 through SLS-5). Headline results from one sample point (SLS-1, 2 Pegasus St):
+MRRA published Brunswick Landing PFAS Testing Results from October 2025 sampling, conducted to EPA Method 1633A standard across 9 sample locations on the property, four oil-water separators (OWS-4 through OWS-6 East/West) and five sewer lift stations (SLS-1 through SLS-5). Headline results from one sample point (SLS-1, 2 Pegasus St):
 
 | Compound | Result (ng/L) |
 |---|---|
@@ -49,7 +49,7 @@ The 6:2 FTS / 8:2 FTS / PFOS pattern is consistent with classic AFFF firefightin
 
 This is one quasi-public authority publishing one round of monitoring data. The full BRAC class produces comparable data continuously.
 
-## Coverage Extension Status — Maine Quasi-Public Authorities
+## Coverage Extension Status: Maine Quasi-Public Authorities
 
 | Authority | Type | Indexing status |
 |---|---|---|
@@ -74,18 +74,18 @@ Sevee & Maher Engineers appears in **12 distinct Maine municipalities** with doc
 |---|---|
 | Maine municipalities with documented activity | 12 |
 | Total document mentions in our corpus | 53 |
-| Date range of documented activity | 2009-11-17 — 2026-04-27 |
+| Date range of documented activity | 2009-11-17 to 2026-04-27 |
 | Primary practice areas (from document context) | Brownfield cleanup, environmental remediation, planning review, water resources, civil engineering |
 
 | Municipality | Document mentions | Activity range |
 |---|---:|---|
-| Millinocket | 20 | 2024-05-23 — 2026-01-21 |
-| Falmouth | 8 | 2025-12-09 — 2026-04-07 |
-| Wilton | 7 | 2024-11-27 — 2026-01-22 |
-| Acton | 6 | 2023-12-13 — 2026-01-13 |
-| Lewiston | 3 | 2024-06-03 — 2026-02-12 |
+| Millinocket | 20 | 2024-05-23 to 2026-01-21 |
+| Falmouth | 8 | 2025-12-09 to 2026-04-07 |
+| Wilton | 7 | 2024-11-27 to 2026-01-22 |
+| Acton | 6 | 2023-12-13 to 2026-01-13 |
+| Lewiston | 3 | 2024-06-03 to 2026-02-12 |
 | Cumberland | 2 | 2026-02-17 |
-| Wiscasset | 2 | 2026-04-13 — 2026-04-27 |
+| Wiscasset | 2 | 2026-04-13 to 2026-04-27 |
 | **Showing 7 of 12 Maine municipalities** | | **[Claim to unlock →](#claim-this-profile)** |
 
 ## Recent Project Activity (2025-2026)
@@ -94,14 +94,14 @@ Specific projects referenced in meeting minutes and supporting documents where S
 
 | Date | Municipality | Project / Context |
 |---|---|---|
-| 2026-04-27 | Wiscasset, ME | North Point Cleanup Site Plan Review — Brownfields cleanup and shoreline stabilization, North Point Fill Area, North Point Road (Planning Board packet) |
+| 2026-04-27 | Wiscasset, ME | North Point Cleanup Site Plan Review: Brownfields cleanup and shoreline stabilization, North Point Fill Area, North Point Road (Planning Board packet) |
 | 2026-04-13 | Wiscasset, ME | Same project, Planning Board minutes |
 | 2026-04-07 | Falmouth, ME | FCC Application + Planner Review attachment (Planning Board) |
 | 2026-02-17 | Cumberland, ME | ReVision Energy Landfill Solar Site Plan Review application |
 | 2026-02-12 | Lewiston, ME | Staff Review Committee Meeting (engineering review) |
 | 2026-02-03 | Falmouth, ME | Verdad Self-Storage Plan Set + Planner Review (Planning Board) |
 | 2026-01-22 | Wilton, ME | Selectboard Minutes (engineering reference) |
-| 2026-01-21 | Millinocket, ME | Town Manager's Report — engineering discussion items |
+| 2026-01-21 | Millinocket, ME | Town Manager's Report, engineering discussion items |
 | **Showing 8 of 25+ documented project references since 2024** | | **[Claim to unlock →](#claim-this-profile)** |
 
 ## Methodology
@@ -133,7 +133,7 @@ Corrections are processed within one business day. Disputed pages can be removed
 
 ## About Municipal Alpha
 
-Municipal Alpha builds a structured knowledge graph of US public municipal records and quasi-public authority data — meeting minutes, agendas, check registers, RFPs, capital plans, environmental monitoring data, and assessor records — across 2,100+ municipalities and a growing set of quasi-public authorities. We provide alt-data products to financial firms, infrastructure analysts, and engineering and environmental consultancies. [Learn more →](/about/)
+Municipal Alpha builds a structured knowledge graph of US public municipal records and quasi-public authority data, meeting minutes, agendas, check registers, RFPs, capital plans, environmental monitoring data, and assessor records, across 2,100+ municipalities and a growing set of quasi-public authorities. We provide alt-data products to financial firms, infrastructure analysts, and engineering and environmental consultancies. [Learn more →](/about/)
 
 <script type="application/ld+json">
 {

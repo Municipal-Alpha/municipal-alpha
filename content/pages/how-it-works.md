@@ -2,7 +2,7 @@ Title: How It Works
 Slug: how-it-works
 Sortorder: 4
 
-![Data Layer Stack: a query enters through four data layers (Federal, County, Municipal, FOAA) and returns as an enriched Data Package]({static}/images/data-layer-stack.png)
+<!-- IMAGE DROPPED 2026-07-02 (interim per open-items graphics-cleanup item): AI-generated PNG rendered literal hex codes / garbled labels. Restore when regenerated to deck brand. Was: ![Data Layer Stack: a query enters through four data layers (Federal, County, Municipal, FOAA) and returns as  -->
 
 ## Precursor Intelligence from a Knowledge Graph
 
@@ -12,7 +12,7 @@ It is a knowledge graph: entities, types, properties, and the relationships betw
 
 ## How a Parcel Connects Everything
 
-![Diagram showing a single parcel connected to five data sources: Assessor Records, FCC Registry, FAA Database, Check Register, and Planning Board]({static}/images/intelligence-layer.png)
+<!-- IMAGE DROPPED 2026-07-02 (interim per open-items graphics-cleanup item): AI-generated PNG rendered literal hex codes / garbled labels. Restore when regenerated to deck brand. Was: ![Diagram showing a single parcel connected to five data sources: Assessor Records, FCC Registry, FAA Database -->
 
 A single parcel in Falmouth, Maine appears in:
 
@@ -44,13 +44,13 @@ Nobody else reads Gorham, Maine. Or Pocatello, Idaho. Or the thousands of other 
 
 The coverage gap is the product.
 
-**Where the system is today:**
+**Where the system is today (as of July 2026):**
 
-- **3,400+** municipalities monitored daily, all 50 states
-- **705,000+** documents ingested and classified
+- **3,900+** municipalities monitored daily, all 50 states
+- **768,000+** documents ingested and classified
 - **44,000+** building permits structured
-- **118** public company tickers resolved from municipal vendor names
-- **61,000+** classified investment signals
+- **136** public company tickers resolved from municipal vendor names
+- **321,000+** classified signals
 - Adding new municipalities weekly, with infrastructure built to scale past 5,000
 
 **Where this goes:**
@@ -76,6 +76,10 @@ Google indexes what it can find through links. AI agents browse the same public-
 This is why scraping municipal websites the normal way produces almost nothing. The navigation tree shows what the CMS vendor's default menu structure exposes. The actual document store is orders of magnitude larger. Our connectors understand how each platform stores data internally, not just what it shows visitors.
 
 For data teams, research firms, and AI companies building on public records: the documents you are missing are not behind a paywall or a login. They are sitting on a public server at a URL that nothing links to. We know where they are because we built connectors for each platform, not a general-purpose web crawler.
+
+## Could You Build This Yourself?
+
+You should ask. The AI classification step is a commodity, and the honest answer depends on your footprint. The expensive parts aren't the AI, they're the registry of where each of thousands of towns actually publishes, the OCR on scanned PDFs, the connector repairs every time a portal changes, and the history no new build can produce. We published [the evaluation prompt we hand buyers](/build-vs-buy/) so you can run the build-vs-buy analysis yourself, against your whole exposed footprint, before you pay us a dollar.
 
 ## The Recipe Library
 
@@ -105,11 +109,11 @@ A competitor can read the statute. They can't replicate what we've learned from 
 
 Building permits are one of the most underrated public data sources. Every commercial construction project, infrastructure upgrade, and development phase starts with a permit. The data tells you which contractors are winning work, which developers are active in a geography, where infrastructure spending is accelerating, and how local construction activity maps to public company revenue -- months before any of it shows up in earnings or analyst reports.
 
-Small and mid-sized municipalities issue the same permits as large cities, just on worse websites with less standardization. That's where the coverage gap is widest. We structure 43,000+ permit records and growing, resolved to entities and tickers where possible.
+Small and mid-sized municipalities issue the same permits as large cities, just on worse websites with less standardization. That's where the coverage gap is widest. We structure 44,000+ permit records and growing, resolved to entities and tickers where possible.
 
 ## The Pipeline
 
-![Diagram showing the self-improving pipeline cycle: Crawl, Classify, Score, Improve, Learn]({static}/images/pipeline-loop-v2.png)
+<!-- IMAGE DROPPED 2026-07-02 (interim per open-items graphics-cleanup item): AI-generated PNG rendered literal hex codes / garbled labels. Restore when regenerated to deck brand. Was: ![Diagram showing the self-improving pipeline cycle: Crawl, Classify, Score, Improve, Learn]({static}/images/p -->
 
 The system runs daily, autonomously. It crawls municipal portals, classifies documents, resolves entities to public company tickers, scores signals, and delivers qualified leads. Self-healing automation detects when a municipality changes its website and adapts. A reward-based learning system tracks which automated actions succeed and evolves strategy over time. When a fix works for one town, the system propagates it to similar towns with decaying confidence by similarity.
 

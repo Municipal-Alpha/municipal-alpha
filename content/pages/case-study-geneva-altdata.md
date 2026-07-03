@@ -163,5 +163,5 @@ This is not insider information. Every check register cited above is a public do
 </div>
 
 <div class="cs-note">
-<strong>Methodology note:</strong> All documents cited in this case study are public records published by the City of Geneva, Illinois. Every link above goes to the original source document on geneva.il.us. No proprietary data sources were used. Vendor-to-ticker resolution runs automatically on every accounts payable document ingested. The documents have always been public. They were just sitting on a city website, unread.
+<strong>Methodology note:</strong> All documents cited in this case study are public records published by the City of Geneva, Illinois. Every link above goes to the original source document on geneva.il.us. No proprietary data sources were used. Vendor-to-ticker resolution runs automatically on every accounts payable document ingested. The documents have always been public. They were just sitting on a city website, unread. A retrospective chain like this proves the method and the lead time, not a hit rate; the forward call is what a pilot is for.
 </div>
