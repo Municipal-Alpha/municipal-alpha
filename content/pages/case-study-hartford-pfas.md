@@ -35,7 +35,7 @@ Summary: 8 signals over 2.5 years trace Hartford's PFAS response from routine bi
 .tl-gap-text { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #E8512D; text-transform: uppercase; letter-spacing: 2px; }
 
 .cs-window { background: #0C0C0C; color: #F7F4F0; border-radius: 6px; padding: 32px 40px; margin: 48px 0; max-width: 640px; }
-.cs-window h3 { font-family: 'Newsreader', serif; font-size: 22px; font-weight: 500; margin-bottom: 12px; }
+.cs-window h3 { font-family: 'Newsreader', serif; font-size: 22px; font-weight: 500; color: #F7F4F0; margin-bottom: 12px; }
 .cs-window p { font-size: 14px; color: #aaa; line-height: 1.7; margin-bottom: 8px; }
 .cs-window .cs-highlight { color: #E8512D; font-weight: 600; }
 
@@ -159,7 +159,7 @@ Hartford, Vermont has been navigating PFAS contamination across two wastewater f
 <h3>This pattern repeats across municipalities</h3>
 <p>Hartford is not unusual. PFAS contamination follows a predictable escalation arc: routine testing reveals a problem, state or federal mandates expand the scope, additional facilities and contaminants enter the picture, and the testing and remediation work compounds over years.</p>
 <p>The environmental services firm that sees the <span class="cs-highlight">first signal</span> builds a relationship that compounds through every subsequent stage. The one that waits for an RFP is already behind an incumbent.</p>
-<p>Every source linked above is a public document on hartford-vt.org. <span class="cs-highlight">We read 2,400+ municipalities this way, every day.</span></p>
+<p>Every source linked above is a public document on hartford-vt.org. <span class="cs-highlight">We monitor 3,900+ municipalities this way, every day.</span></p>
 </div>
 
 <div class="cs-cta">

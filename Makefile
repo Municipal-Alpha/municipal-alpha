@@ -8,9 +8,9 @@ OUTPUTDIR=$(BASEDIR)/output
 CONFFILE=$(BASEDIR)/pelicanconf.py
 PUBLISHCONF=$(BASEDIR)/publishconf.py
 
-.PHONY: html clean serve publish copy-static-html noindex-extra goatcounter-extra llms-full
+.PHONY: html clean serve publish copy-static-html noindex-extra goatcounter-extra llms-full metrics-drift
 
-html:
+html: metrics-drift
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
 	$(MAKE) copy-static-html
 	$(MAKE) noindex-extra
@@ -23,12 +23,21 @@ clean:
 serve: html
 	cd $(OUTPUTDIR) && $(PY) -m http.server 8000
 
-publish:
+publish: metrics-drift
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
 	$(MAKE) copy-static-html
 	$(MAKE) noindex-extra
 	$(MAKE) goatcounter-extra
 	$(MAKE) llms-full
+
+# Fail the build when a content page carries a platform-scale claim (N
+# municipalities / documents / signals / tickers) that diverges from
+# data/metrics.json. Content pages hardcode their numbers (only the homepage
+# template + llms.txt read METRICS), so without this gate corpus-scale claims
+# silently drift as the pipeline grows. See tools/check_metrics_drift.py
+# header for pass rules, thresholds, and the `metrics-ok` waiver.
+metrics-drift:
+	$(PY) tools/check_metrics_drift.py
 
 # Inject <meta name="robots" content="noindex"> into the unlinked standalone
 # pages under content/extra/ (prospect/buyer pages, dispatches, decks). They are

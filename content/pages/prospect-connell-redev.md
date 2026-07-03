@@ -16,7 +16,7 @@ These documents live inside municipal CMS platforms at URLs with no
 public navigation link. A zoning amendment gets uploaded to a portal
 and nothing on the site points to it. We built connectors that reach
 into each platform's document store directly, across 15+ CMS vendors,
-and read them the day they're published. Across 2,600+ municipalities
+and read them the day they're published. Across 3,900+ municipalities
 in 50 states.
 
 ## What We're Tracking

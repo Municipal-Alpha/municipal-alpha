@@ -45,7 +45,7 @@ Summary: Municipal Alpha tracks US data-center siting and zoning from municipal 
 .tl-gap-text { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #E8512D; text-transform: uppercase; letter-spacing: 2px; }
 
 .cs-window { background: #0C0C0C; color: #F7F4F0; border-radius: 6px; padding: 32px 40px; margin: 48px 0; max-width: 640px; }
-.cs-window h3 { font-family: 'Newsreader', serif; font-size: 22px; font-weight: 500; margin-bottom: 12px; }
+.cs-window h3 { font-family: 'Newsreader', serif; font-size: 22px; font-weight: 500; color: #F7F4F0; margin-bottom: 12px; }
 .cs-window p { font-size: 14px; color: #aaa; line-height: 1.7; margin-bottom: 8px; }
 .cs-window .cs-highlight { color: #E8512D; font-weight: 600; }
 
@@ -271,5 +271,5 @@ For a broader cut across the corpus, see <a href="/research/data-center-zoning">
 </div>
 
 <div class="cs-note">
-<strong>Methodology note:</strong> This signal chain was assembled from public municipal documents published on the official websites of Gorham, Rockland, Bangor, Lewiston, Sidney, and Winthrop, Maine. Every municipal link goes to the original source document. No proprietary data sources were used for the municipal layer. The state-legislative outcomes (veto, override-vote failure, LD 713 signing, executive order) were verified against the Office of the Governor of Maine's published statements, Maine Morning Star, Maine Public Radio, Press Herald, and TechCrunch reporting; those were not captured in our automated pipeline at the time of the events. We are building a bill-watchlist mechanism to follow bills meeting a vertical-relevance threshold to terminal status. Municipal Alpha monitors 173 Maine municipalities and 2,300+ nationally, scanning town halls nightly for new documents.
+<strong>Methodology note:</strong> This signal chain was assembled from public municipal documents published on the official websites of Gorham, Rockland, Bangor, Lewiston, Sidney, and Winthrop, Maine. Every municipal link goes to the original source document. No proprietary data sources were used for the municipal layer. The state-legislative outcomes (veto, override-vote failure, LD 713 signing, executive order) were verified against the Office of the Governor of Maine's published statements, Maine Morning Star, Maine Public Radio, Press Herald, and TechCrunch reporting; those were not captured in our automated pipeline at the time of the events. We are building a bill-watchlist mechanism to follow bills meeting a vertical-relevance threshold to terminal status. Municipal Alpha monitors 180 Maine municipalities and 3,900+ nationally, scanning town halls nightly for new documents.
 </div>

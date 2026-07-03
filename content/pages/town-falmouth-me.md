@@ -23,4 +23,4 @@ Falmouth is a coastal town in southern Maine, located between Portland and Freep
 
 ---
 
-*[Municipal Alpha](/) monitors 2,600+ municipalities across 50 states. The structured data behind these digests is available for [institutional data buyers](/solutions/alt-data/), [infrastructure companies](/solutions/tower-leads/), and [research teams](/contact/).*
+*[Municipal Alpha](/) monitors 3,900+ municipalities across 50 states. The structured data behind these digests is available for [institutional data buyers](/solutions/alt-data/), [infrastructure companies](/solutions/tower-leads/), and [research teams](/contact/).*

@@ -35,7 +35,7 @@ Summary: 1,099 sightings across 28 states. Contract extensions, competitive disp
 .tl-gap-text { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #E8512D; text-transform: uppercase; letter-spacing: 2px; }
 
 .cs-window { background: #0C0C0C; color: #F7F4F0; border-radius: 6px; padding: 32px 40px; margin: 48px 0; max-width: 640px; }
-.cs-window h3 { font-family: 'Newsreader', serif; font-size: 22px; font-weight: 500; margin-bottom: 12px; }
+.cs-window h3 { font-family: 'Newsreader', serif; font-size: 22px; font-weight: 500; color: #F7F4F0; margin-bottom: 12px; }
 .cs-window p { font-size: 14px; color: #aaa; line-height: 1.7; margin-bottom: 8px; }
 .cs-window .cs-highlight { color: #E8512D; font-weight: 600; }
 
@@ -154,7 +154,7 @@ Waste Management (NYSE: WM) appears in municipal documents under dozens of name 
 </div>
 
 <div class="cs-cta">
-<h3>WM is one company. We read 2,300+ municipalities every day.</h3>
+<h3>WM is one company. We monitor 3,900+ municipalities.</h3>
 <p>The same entity resolution runs across every document for every company that does business with local government. Waste haulers, engineering firms, construction companies, insurers, law firms, IT vendors. Tell me what ticker you're watching and I'll show you what the municipal record says.</p>
 <a href="https://calendar.app.google/s6wDVSaJuqCkwcmg9" class="cta-button">Book a 15-Minute Data Review</a>
 </div>

@@ -35,7 +35,7 @@ Summary: A citizen complained about cell coverage. 32 months later, American Tow
 .tl-gap-text { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #E8512D; text-transform: uppercase; letter-spacing: 2px; }
 
 .cs-window { background: #0C0C0C; color: #F7F4F0; border-radius: 6px; padding: 32px 40px; margin: 48px 0; max-width: 640px; }
-.cs-window h3 { font-family: 'Newsreader', serif; font-size: 22px; font-weight: 500; margin-bottom: 12px; }
+.cs-window h3 { font-family: 'Newsreader', serif; font-size: 22px; font-weight: 500; color: #F7F4F0; margin-bottom: 12px; }
 .cs-window p { font-size: 14px; color: #aaa; line-height: 1.7; margin-bottom: 8px; }
 .cs-window .cs-highlight { color: #E8512D; font-weight: 600; }
 
@@ -201,7 +201,7 @@ A citizen complained about cell coverage at a Board of Selectmen meeting in July
 </div>
 
 <div class="cs-cta">
-<h3>This is one town. We read 2,300+ every day.</h3>
+<h3>This is one town. We monitor 3,900+.</h3>
 <p>The same signal chain exists in planning boards, town councils, and boards of selectmen across the country. Different projects, same pattern: the document trail starts months or years before the deal closes. Tell me what you're watching and I'll show you what the record says.</p>
 <a href="https://calendar.app.google/s6wDVSaJuqCkwcmg9" class="cta-button">Book a 15-Minute Data Review</a>
 </div>

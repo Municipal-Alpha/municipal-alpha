@@ -21,4 +21,4 @@ Lewiston sits on the Androscoggin River across from its twin city Auburn. The ci
 
 ---
 
-*[Municipal Alpha](/) monitors 2,000+ municipalities across 50 states. The structured data behind these digests is available for [institutional data buyers](/solutions/alt-data/), [infrastructure companies](/solutions/tower-leads/), and [research teams](/contact/).*
+*[Municipal Alpha](/) monitors 3,900+ municipalities across 50 states. The structured data behind these digests is available for [institutional data buyers](/solutions/alt-data/), [infrastructure companies](/solutions/tower-leads/), and [research teams](/contact/).*

@@ -1,11 +1,11 @@
 Title: Towns
 Slug: towns
 Sortorder: 3
-Summary: Weekly town government digests from 3,400+ municipalities. What your town council, planning board, and public works department did this week, from public records.
+Summary: Weekly town government digests from 3,900+ municipalities. What your town council, planning board, and public works department did this week, from public records.
 
 Weekly digests of town government activity, generated from public records. What your local boards discussed, what permits were issued, and what's coming next, written in plain language from the actual documents.
 
-We monitor 3,400+ municipalities across 50 states. Our agents read every public document published by a municipality's boards and committees, agendas, minutes, meeting packets, permits, budget reports, and generate a weekly summary in plain, factual language. No editorializing, no predictions, no sides taken. If the planning board discussed it, we report it.
+We monitor 3,900+ municipalities across 50 states. Our agents read every public document published by a municipality's boards and committees, agendas, minutes, meeting packets, permits, budget reports, and generate a weekly summary in plain, factual language. No editorializing, no predictions, no sides taken. If the planning board discussed it, we report it.
 
 ## Request Your Town
 

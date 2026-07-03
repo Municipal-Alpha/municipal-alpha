@@ -5,13 +5,13 @@ Summary: Coverage, data freshness, classification, entity resolution, alpha meas
 
 ## Coverage
 
-We have records from 3,900+ municipalities across 50 states (as of July 2026). The United States has 19,500 municipalities. Coverage density follows buyer demand, not capability: our earliest buyers were concentrated in New England, so coverage is deepest there today, with substantial footprints in the Midwest and Mountain West. Onboarding is by publishing platform, and the platforms are national (CivicPlus, Granicus, BoardDocs, and others), so a new buyer's footprint anywhere in the country onboards the same way. Coverage expands weekly through automated onboarding.
+We have records from 3,900+ municipalities across 50 states (as of July 2026). The United States has 19,500 municipalities. <!-- metrics-ok: total US --> Coverage density follows buyer demand, not capability: our earliest buyers were concentrated in New England, so coverage is deepest there today, with substantial footprints in the Midwest and Mountain West. Onboarding is by publishing platform, and the platforms are national (CivicPlus, Granicus, BoardDocs, and others), so a new buyer's footprint anywhere in the country onboards the same way. Coverage expands weekly through automated onboarding.
 
 **What we cover well today:**
 
 - Municipal meeting documents (agendas, minutes, packets) from 3,900+ municipalities
 - Check registers and accounts payable data from 200+ municipalities
-- Building permits from 400+ municipalities (44,000+ structured records)
+- Building permits (44,000+ structured records, entity-resolved)
 - Tower and infrastructure lease data from assessor records (13,000+ sites screened)
 - FOAA/FOIA response data from 100+ jurisdictions with active records requests
 

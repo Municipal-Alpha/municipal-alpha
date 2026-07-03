@@ -36,11 +36,11 @@ A single jurisdiction like Cumberland County, Maine produces assessor data (towe
 
 Every new jurisdiction added to the pipeline activates data for every active vertical simultaneously. The graph gets denser, and denser graphs produce better intelligence.
 
-## Why 19,500 Municipalities
+## Why 19,500 Municipalities <!-- metrics-ok: total US municipalities, not our coverage -->
 
 The big data vendors cover New York and Chicago. Nobody is reading the 19,500 small and mid-sized municipalities that issue the same building permits, check registers, and assessor records -- just on worse websites, behind more obscure FOIA statutes. That's where the precursor signals are least picked-over.
 
-Nobody else reads Gorham, Maine. Or Pocatello, Idaho. Or the thousands of other towns where the finance director posts a check register to a CivicPlus portal and nobody outside city hall ever looks at it. Those check registers contain vendor payment data that precedes quarterly earnings reports, just at the local level, where 19,500 jurisdictions spend a combined $3.9 trillion annually.
+Nobody else reads Gorham, Maine. Or Pocatello, Idaho. Or the thousands of other towns where the finance director posts a check register to a CivicPlus portal and nobody outside city hall ever looks at it. Those check registers contain vendor payment data that precedes quarterly earnings reports, just at the local level, where 19,500 jurisdictions spend a combined $3.9 trillion annually. <!-- metrics-ok: total US -->
 
 The coverage gap is the product.
 
@@ -109,7 +109,7 @@ A competitor can read the statute. They can't replicate what we've learned from 
 
 Building permits are one of the most underrated public data sources. Every commercial construction project, infrastructure upgrade, and development phase starts with a permit. The data tells you which contractors are winning work, which developers are active in a geography, where infrastructure spending is accelerating, and how local construction activity maps to public company revenue -- months before any of it shows up in earnings or analyst reports.
 
-Small and mid-sized municipalities issue the same permits as large cities, just on worse websites with less standardization. That's where the coverage gap is widest. We structure 44,000+ permit records and growing, resolved to entities and tickers where possible.
+Small and mid-sized municipalities issue the same permits as large cities, just on worse websites with less standardization. That's where the coverage gap is widest. We monitor 3,900+ municipalities and structure the permit records they publish into entity- and ticker-resolved time series, 44,000+ records and growing.
 
 ## The Pipeline
 

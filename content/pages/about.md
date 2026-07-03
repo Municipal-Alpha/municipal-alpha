@@ -18,7 +18,7 @@ The big data vendors cover New York and Chicago. Nobody is systematically readin
 
 ## How the System Learns
 
-The system is good at finding things because it has spent a year learning the system it operates in. Which CMS platforms hide documents behind JavaScript. Which FOIA statutes require which language. Which assessor offices respond to email and which require certified mail. Which board names mean "check registers" in which towns. None of this was designed upfront. It was learned through contact with 2,300+ jurisdictions, thousands of FOIA interactions, and hundreds of dead ends that each taught the system something. Every interaction produces a recipe. The recipes accumulate.
+The system is good at finding things because it has spent a year learning the system it operates in. Which CMS platforms hide documents behind JavaScript. Which FOIA statutes require which language. Which assessor offices respond to email and which require certified mail. Which board names mean "check registers" in which towns. None of this was designed upfront. It was learned through contact with 3,900+ jurisdictions, thousands of FOIA interactions, and hundreds of dead ends that each taught the system something. Every interaction produces a recipe. The recipes accumulate.
 
 ## Two Precedents
 
@@ -32,7 +32,7 @@ The system is good at finding things because it has spent a year learning the sy
 |---|---|---|
 | US municipalities | 19,500 | 3,900+ monitored daily |
 | Building permits issued annually | ~1.5 million (Census Bureau) | 44,000+ structured in our pipeline |
-| Annual municipal government spending | $3.9 trillion (Census of Governments) | Vendor payments from 2,300+ towns, 136 resolved tickers |
+| Annual municipal government spending | $3.9 trillion (Census of Governments) | Vendor payments from 230+ towns, 136 resolved tickers |
 | Municipal bond market | $4 trillion (SIFMA) | Credit signals from source spending documents |
 | FCC-registered tower structures | 130,000+ | 5,400+ screened with parcel cross-reference |
 | Municipal infrastructure investment gap | $2.6 trillion (ASCE) | Deferred maintenance signals from spending patterns |

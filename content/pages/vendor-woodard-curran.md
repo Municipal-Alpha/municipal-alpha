@@ -106,7 +106,7 @@ Woodard & Curran appears in **15 Northeast municipalities** across Maine, New Ha
 
 ## Methodology
 
-Municipal Alpha monitors 2,100+ US municipalities daily across 15+ government content management platforms, with extending coverage of quasi-public authorities. Engineering firm names are extracted from meeting minutes, agendas, planning attachments, water commission records, RFPs, and engineering reports, then aggregated by entity.
+Municipal Alpha monitors 3,900+ US municipalities daily across 15+ government content management platforms, with extending coverage of quasi-public authorities. Engineering firm names are extracted from meeting minutes, agendas, planning attachments, water commission records, RFPs, and engineering reports, then aggregated by entity.
 
 **What this profile is:** A factual aggregation of currently active opportunities at Northeast quasi-public authorities relevant to Woodard & Curran's practice areas, plus the firm's documented activity in 15 Northeast municipalities.
 
@@ -133,7 +133,7 @@ Corrections are processed within one business day. Disputed pages can be removed
 
 ## About Municipal Alpha
 
-Municipal Alpha builds a structured knowledge graph of US public municipal records and quasi-public authority data, meeting minutes, agendas, check registers, RFPs, capital plans, environmental monitoring data, and assessor records, across 2,100+ municipalities and a growing set of quasi-public authorities. We provide alt-data products to financial firms, infrastructure analysts, and engineering and environmental consultancies. [Learn more →](/about/)
+Municipal Alpha builds a structured knowledge graph of US public municipal records and quasi-public authority data, meeting minutes, agendas, check registers, RFPs, capital plans, environmental monitoring data, and assessor records, across 3,900+ municipalities and a growing set of quasi-public authorities. We provide alt-data products to financial firms, infrastructure analysts, and engineering and environmental consultancies. [Learn more →](/about/)
 
 <script type="application/ld+json">
 {

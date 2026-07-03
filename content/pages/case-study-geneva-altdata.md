@@ -35,7 +35,7 @@ Summary: Geneva, Illinois publishes bi-weekly check registers. Municipal Alpha r
 .tl-gap-text { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #E8512D; text-transform: uppercase; letter-spacing: 2px; }
 
 .cs-window { background: #0C0C0C; color: #F7F4F0; border-radius: 6px; padding: 32px 40px; margin: 48px 0; max-width: 640px; }
-.cs-window h3 { font-family: 'Newsreader', serif; font-size: 22px; font-weight: 500; margin-bottom: 12px; }
+.cs-window h3 { font-family: 'Newsreader', serif; font-size: 22px; font-weight: 500; color: #F7F4F0; margin-bottom: 12px; }
 .cs-window p { font-size: 14px; color: #aaa; line-height: 1.7; margin-bottom: 8px; }
 .cs-window .cs-highlight { color: #E8512D; font-weight: 600; }
 
@@ -63,7 +63,7 @@ Geneva, Illinois publishes bi-weekly check registers listing every payment the c
 <div class="cs-stat"><span class="cs-stat-value">9</span><span class="cs-stat-label">years of check registers</span></div>
 <div class="cs-stat"><span class="cs-stat-value">15+</span><span class="cs-stat-label">public company tickers</span></div>
 <div class="cs-stat"><span class="cs-stat-value">~200</span><span class="cs-stat-label">bi-weekly registers</span></div>
-<div class="cs-stat"><span class="cs-stat-value">2,500+</span><span class="cs-stat-label">municipalities at scale</span></div>
+<div class="cs-stat"><span class="cs-stat-value">3,900+</span><span class="cs-stat-label">municipalities at scale</span></div>
 </div>
 
 <div class="cs-window">
