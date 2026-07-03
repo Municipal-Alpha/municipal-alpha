@@ -117,41 +117,52 @@ Sortorder: 1
 </style>
 
 <div class="sol-hero">
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #E8512D; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 12px;">Before the vote. Before the permit. Before the RFP.</div>
 <h2>You see the thing before it becomes a thing</h2>
-<p>Every day, 19,500 town halls publish documents that predict market events weeks or months before they happen. Vendor payments before earnings. Planning votes before permits. Budget approvals before RFPs. I built a system that reads them all.</p>
+<p>Every day, 19,500 town halls publish the documents where decisions first take shape. Siting votes before permits. Capital plans before RFPs. Employer distress before the news. Vendor payments before earnings. I built a system that reads them all.</p>
 <a href="https://calendar.app.google/s6wDVSaJuqCkwcmg9" class="cta-button">Book a 15-Minute Data Review</a>
 </div>
 
 <div class="solution-grid">
-<a href="/solutions/alt-data/" class="solution-card solution-featured">
+<a href="/solutions/energy-development/" class="solution-card solution-featured">
 <span class="solution-badge">Case study</span>
-<h3>Municipal Alt Data</h3>
-<p>Pre-earnings municipal signals. Vendor payments and building permits resolved to public company tickers. 136 tickers tracked. <span style="color: #E8512D;">Geneva IL case study</span></p>
+<h3>Renewable Energy &amp; Data-Center Siting</h3>
+<p>Solar, battery storage, and data-center siting intelligence. Moratorium-to-permit pipeline tracked across 50 states. The siting decision, before the vote. <span style="color: #E8512D;">Solar siting case study &rarr;</span></p>
+</a>
+<a href="/solutions/economic-development/" class="solution-card solution-featured">
+<span class="solution-badge">Case study</span>
+<h3>Regional &amp; Economic Development</h3>
+<p>Member-town activity in one weekly brief. Employer distress, housing policy, and capital projects from the records where they appear first. <span style="color: #E8512D;">Business retention case study &rarr;</span></p>
+</a>
+<a href="/solutions/aec/" class="solution-card solution-featured">
+<span class="solution-badge">Case study</span>
+<h3>AEC &amp; Professional Services</h3>
+<p>Master plans, capital votes, and facility studies signal design and engineering work 6-24 months before the RFP posts. <span style="color: #E8512D;">Hartford VT PFAS case study &rarr;</span></p>
 </a>
 <a href="/solutions/tower-leads/" class="solution-card solution-featured">
 <span class="solution-badge">Case study</span>
 <h3>Tower &amp; Infrastructure Leads</h3>
 <p>Pre-listing lease intelligence. Qualified tower prospects with parcel data and owner ID. 7,700+ sites screened. <span style="color: #E8512D;">Amherst case study &rarr;</span></p>
 </a>
+<a href="/solutions/alt-data/" class="solution-card solution-featured">
+<span class="solution-badge">Case study</span>
+<h3>Municipal Alt Data</h3>
+<p>Pre-earnings municipal signals. Vendor payments and building permits resolved to public company tickers. 136 tickers tracked. <span style="color: #E8512D;">Geneva IL case study</span></p>
+</a>
 <a href="/solutions/credit-intelligence/" class="solution-card solution-featured">
 <span class="solution-badge">Case study</span>
 <h3>Municipal Credit Intelligence</h3>
 <p>Pre-downgrade fiscal intelligence. Leading indicators of stress from source spending documents. 8.7x separation ratio. <span style="color: #E8512D;">La Marque case study &rarr;</span></p>
 </a>
-<a href="/solutions/contractor-signals/" class="solution-card solution-featured">
-<span class="solution-badge">Case study</span>
-<h3>Government Contractor Signals</h3>
-<p>Entity resolution across 111 municipalities. Contract pipeline, competitive wins, and geographic expansion visible in meeting minutes. <span style="color: #E8512D;">WM case study &rarr;</span></p>
-</a>
-<a href="/solutions/energy-development/" class="solution-card solution-featured">
-<span class="solution-badge">Case study</span>
-<h3>Renewable Energy Siting</h3>
-<p>Pre-RFP project intelligence. Moratorium-to-permit pipeline tracked across 50 states. Zoning decisions before the RFP is written. <span style="color: #E8512D;">Solar siting case study &rarr;</span></p>
-</a>
 <a href="/solutions/infrastructure-risk/" class="solution-card solution-featured">
 <span class="solution-badge">Case study</span>
 <h3>Infrastructure Risk Intelligence</h3>
 <p>Pre-event risk intelligence. 459 contagion topics tracked. PFAS, deferred maintenance, consent decree signals. <span style="color: #E8512D;">Hartford VT PFAS case study &rarr;</span></p>
+</a>
+<a href="/solutions/contractor-signals/" class="solution-card solution-featured">
+<span class="solution-badge">Case study</span>
+<h3>Government Contractor Signals</h3>
+<p>Entity resolution across 111 municipalities. Contract pipeline, competitive wins, and geographic expansion visible in meeting minutes. <span style="color: #E8512D;">WM case study &rarr;</span></p>
 </a>
 </div>
 
