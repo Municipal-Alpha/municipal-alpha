@@ -68,7 +68,7 @@ Firms with active practice in PFAS, brownfield remediation, and environmental li
 
 ## Methodology
 
-Municipal Alpha monitors 3,900+ US municipalities daily across 15+ government content management platforms, with extending coverage of quasi-public authorities (BRAC redevelopment authorities, port authorities, special districts). Authority-class records are extracted from board meeting minutes, agendas, RFPs, financial audits, environmental monitoring reports, and master plans, then aggregated by entity and published as structured intelligence feeds.
+Municipal Alpha monitors 4,100+ US municipalities daily across 15+ government content management platforms, with extending coverage of quasi-public authorities (BRAC redevelopment authorities, port authorities, special districts). Authority-class records are extracted from board meeting minutes, agendas, RFPs, financial audits, environmental monitoring reports, and master plans, then aggregated by entity and published as structured intelligence feeds.
 
 **What this profile is:** A factual aggregation of currently active opportunities, recently published environmental data, and forward-looking coverage status across Northeast quasi-public authorities relevant to Roux Associates' practice areas. Every cited document is publicly available from the source authority.
 
@@ -94,7 +94,7 @@ Corrections are processed within one business day. Disputed pages can be removed
 
 ## About Municipal Alpha
 
-Municipal Alpha builds a structured knowledge graph of US public municipal records and quasi-public authority data, meeting minutes, agendas, check registers, RFPs, capital plans, environmental monitoring data, and assessor records, across 3,900+ municipalities and a growing set of quasi-public authorities. We provide alt-data products to financial firms, infrastructure analysts, and engineering and environmental consultancies. [Learn more →](/about/)
+Municipal Alpha builds a structured knowledge graph of US public municipal records and quasi-public authority data, meeting minutes, agendas, check registers, RFPs, capital plans, environmental monitoring data, and assessor records, across 4,100+ municipalities and a growing set of quasi-public authorities. We provide alt-data products to financial firms, infrastructure analysts, and engineering and environmental consultancies. [Learn more →](/about/)
 
 <script type="application/ld+json">
 {

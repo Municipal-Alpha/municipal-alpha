@@ -201,7 +201,7 @@ A citizen complained about cell coverage at a Board of Selectmen meeting in July
 </div>
 
 <div class="cs-cta">
-<h3>This is one town. We monitor 3,900+.</h3>
+<h3>This is one town. We monitor 4,100+.</h3>
 <p>The same signal chain exists in planning boards, town councils, and boards of selectmen across the country. Different projects, same pattern: the document trail starts months or years before the deal closes. Tell me what you're watching and I'll show you what the record says.</p>
 <a href="https://calendar.app.google/s6wDVSaJuqCkwcmg9" class="cta-button">Book a 15-Minute Data Review</a>
 </div>

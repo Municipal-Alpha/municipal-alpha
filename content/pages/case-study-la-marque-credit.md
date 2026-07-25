@@ -140,7 +140,7 @@ Moody's downgraded La Marque, Texas from A1 to A3 in October 2025. Two notches. 
 </div>
 
 <div class="cs-cta">
-<h3>This is one town. The system monitors 3,900+.</h3>
+<h3>This is one town. The system monitors 4,100+.</h3>
 <p>The same governance signals exist in finance committees, town councils, and boards of selectmen across the country. Different fiscal pressures, same pattern: the document trail starts months or years before the numbers catch up. Tell me what municipalities matter to your portfolio and I'll show you what the record says.</p>
 <a href="https://calendar.app.google/s6wDVSaJuqCkwcmg9" class="cta-button">Book a 15-Minute Data Review</a>
 </div>

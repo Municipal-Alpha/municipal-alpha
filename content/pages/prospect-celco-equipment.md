@@ -11,7 +11,7 @@ drill rigs, excavators, railcars, hauling trucks. That need shows up in
 municipal planning board minutes and permit approvals months before the
 operator contacts a dealer or leasing company.
 
-We monitor 3,900+ municipalities daily across 50 states, plus federal
+We monitor 4,100+ municipalities daily across 50 states, plus federal
 solicitations from SAM.gov. Mining permits, quarry approvals, mineral
 rights activity, and heavy equipment bids all flow through our pipeline.
 For an equipment leasing operation, each approved permit is a potential
@@ -47,7 +47,7 @@ leasing customer at the moment of permit approval or project kickoff.
 | 2026-03-27 | Union | #3970276 - JET 15'' DRILL PRESS — Union, ME (Current Bid: $200) |
 | 2026-03-27 | Unity | #3972281 - Biology Equipment Lot — Unity, ME (Current Bid: $1) |
 | 2026-03-27 | Unity | #3975597 - Theatre Equipment Pallet — Unity, ME (Current Bid: $2,000) |
-| 2026-03-27 | Orland | #3972964 - 2001 JB Enterprise Trailer 10' (TL5136) — Orland, ME (Current Bid: $5 |
+| 2026-03-27 | Orland | #3972964 - 2001 JB Enterprise Trailer 10' (TL5100+) — Orland, ME (Current Bid: $5 |
 | 2026-03-27 | Paris | #3952660 - 2000 CASE 580 SUPER L BACKHOE (7120 870) — Paris, ME (Current Bid: $5 |
 | 2026-03-27 | Paris | #3927475 - 2001 KUBOTA M6800 TRACTOR RELIST (7537 902) — Paris, ME (Current Bid: |
 | 2026-03-27 | Lake Jackson | #3963492 - 600 John Deere Tractor — Lake Jackson, TX (Current Bid: $25) |

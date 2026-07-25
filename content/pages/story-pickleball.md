@@ -76,7 +76,7 @@ These regulatory signals, both permissive and restrictive, are the kind of early
 
 ## What This Means
 
-Pickleball infrastructure is a small but real signal in the broader municipal recreation spending story. The 29 signals we've detected are almost certainly undercounting the actual activity, since our pipeline currently covers 3,900+ municipalities out of 19,500 nationally.
+Pickleball infrastructure is a small but real signal in the broader municipal recreation spending story. The 29 signals we've detected are almost certainly undercounting the actual activity, since our pipeline currently covers 4,100+ municipalities out of 19,500 nationally.
 
 The interesting part isn't the sport. It's the pattern: a consumer trend becomes a community demand, which becomes a parks commission agenda item, which becomes a budget line item, which becomes a federal grant application, which becomes a construction contract. Every step in that chain produces a public document. We read them all.
 

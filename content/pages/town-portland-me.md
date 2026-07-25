@@ -23,4 +23,4 @@ Portland is the largest city in Maine, a regional economic center on Casco Bay w
 
 ---
 
-*[Municipal Alpha](/) monitors 3,900+ municipalities across 50 states. The structured data behind these digests is available for [institutional data buyers](/solutions/alt-data/), [infrastructure companies](/solutions/tower-leads/), and [research teams](/contact/).*
+*[Municipal Alpha](/) monitors 4,100+ municipalities across 50 states. The structured data behind these digests is available for [institutional data buyers](/solutions/alt-data/), [infrastructure companies](/solutions/tower-leads/), and [research teams](/contact/).*
