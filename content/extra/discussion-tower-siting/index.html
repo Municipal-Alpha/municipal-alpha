@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Municipal Alpha for tower siting &amp; ground lease intelligence</title>
+<script data-goatcounter="https://stats.municipalalpha.com/count" async src="//gc.zgo.at/count.js"></script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,500&family=DM+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+  :root {
+    --ink: #0C0C0C; --paper: #F7F4F0; --signal: #E8512D;
+    --ink-80: rgba(12,12,12,0.80); --ink-60: rgba(12,12,12,0.60); --ink-40: rgba(12,12,12,0.40);
+    --ink-12: rgba(12,12,12,0.12); --signal-06: rgba(232,81,45,0.06);
+    --font-display: 'Newsreader', Georgia, serif; --font-body: 'DM Sans', -apple-system, sans-serif; --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--paper); color: var(--ink); font-family: var(--font-body); -webkit-font-smoothing: antialiased; }
+  .container { max-width: 780px; margin: 0 auto; padding: 0 36px 80px 36px; }
+  .header { position: sticky; top: 0; z-index: 10; background: var(--paper); display: flex; justify-content: space-between; align-items: center; padding: 22px 0 16px 0; border-bottom: 1px solid var(--ink-12); margin-bottom: 32px; }
+  .wordmark { font-family: var(--font-display); font-weight: 500; font-size: 22px; }
+  .header-meta { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink-60); text-align: right; line-height: 1.4; }
+  .hero { margin-bottom: 8px; }
+  .hero h1 { font-family: var(--font-display); font-weight: 500; font-size: 31px; line-height: 1.2; letter-spacing: -0.01em; margin: 0 0 12px 0; }
+  .hero .lede { font-size: 15.5px; line-height: 1.55; color: var(--ink-60); margin: 0 0 20px 0; max-width: 62ch; }
+  .cta-button { display: inline-block; background: var(--signal); color: var(--paper); padding: 14px 30px; text-decoration: none; font-weight: 600; font-size: 14px; border-radius: 3px; }
+  .cta-secondary { display: block; margin-top: 10px; font-family: var(--font-mono); font-size: 11px; color: var(--ink-60); }
+  .cta-secondary a { color: var(--ink-80); }
+  .section { margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--ink-12); }
+  .section h2 { font-family: var(--font-display); font-weight: 500; font-size: 23px; line-height: 1.2; margin: 0 0 8px 0; }
+  .section .section-sub { font-size: 13.5px; color: var(--ink-60); line-height: 1.5; margin: 0 0 18px 0; max-width: 62ch; }
+  .section p { font-size: 14.5px; line-height: 1.65; margin: 0 0 14px 0; max-width: 62ch; }
+  .signal-list { list-style: none; padding: 0; margin: 14px 0 0 0; display: grid; gap: 12px; }
+  .signal-list li { padding: 14px 16px; background: #fff; border: 1px solid var(--ink-12); border-radius: 2px; }
+  .signal-list .sig-title { font-family: var(--font-display); font-size: 15.5px; font-weight: 500; margin-bottom: 4px; }
+  .signal-list .sig-body { font-size: 13px; line-height: 1.5; color: var(--ink-80); margin-bottom: 6px; }
+  .signal-list .sig-where { color: var(--ink-60); font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.04em; text-transform: uppercase; }
+  .signal-list .sig-where a { color: var(--signal); text-decoration: none; border-bottom: 1px solid currentColor; }
+  .stat-strip { display: flex; gap: 28px; flex-wrap: wrap; margin: 16px 0; padding: 18px 22px; background: var(--ink); border-radius: 2px; }
+  .stat-strip .stat-num { font-family: var(--font-display); font-weight: 500; font-size: 24px; color: var(--signal); line-height: 1; }
+  .stat-strip .stat-label { font-family: var(--font-mono); font-size: 9.5px; letter-spacing: 0.05em; text-transform: uppercase; color: rgba(247,244,240,0.6); margin-top: 6px; }
+  .depth-note { font-size: 12.5px; color: var(--ink-60); margin-top: 8px; max-width: 62ch; }
+  .objection { margin: 16px 0 4px; padding: 18px 20px; border: 1px solid var(--ink-12); border-radius: 2px; background: #fff; }
+  .obj-label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--signal); margin-bottom: 8px; }
+  .obj-q { font-family: var(--font-display); font-style: italic; font-size: 17px; line-height: 1.35; margin: 0 0 10px 0; }
+  .cta-block { margin: 26px 0 4px; padding: 26px 30px; background: var(--ink); color: var(--paper); border-radius: 3px; text-align: center; }
+  .cta-block h3 { font-family: var(--font-display); font-weight: 500; font-size: 20px; margin: 0 0 8px 0; color: var(--paper); }
+  .cta-block p { font-size: 13.5px; color: rgba(247,244,240,0.7); margin: 0 0 16px 0; }
+  .footer { margin-top: 56px; padding-top: 18px; border-top: 1px solid var(--ink-12); font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink-40); display: flex; justify-content: space-between; }
+  .footer a { color: var(--ink-60); text-decoration: none; }
+  @media (max-width: 560px) { .container { padding: 0 20px 60px 20px; } .hero h1 { font-size: 24px; } }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <div class="wordmark">municipαl</div>
+    <div class="header-meta">Discussion guide<br>Tower siting &amp; ground lease</div>
+  </div>
+
+  <div class="hero">
+    <h1>Tower siting shows up in town records years before FCC or FAA filings.</h1>
+    <p class="lede">By the time a permit is on file, the deliberation is over, the spec is written, the lease counterparty is locked in. I read the earlier layer, select-board packets, planning-board decisions, zoning-bylaw revisions, every night. Three examples below, all from the last eight weeks, all sourced to the town's own document.</p>
+    <div>
+      <a class="cta-button" href="https://calendar.app.google/HkZk29hxj7Cdtvuc9" onclick="if(window.goatcounter&amp;&amp;window.goatcounter.count){try{window.goatcounter.count({path:'tower-cta-click-top',title:'tower cta click (top)',event:true});}catch(e){}}">See live signals for your footprint</a>
+      <span class="cta-secondary">or email <a href="mailto:matt@municipalalpha.com?subject=Tower%20siting%20signals%20%28via%20discussion%20page%29">matt@municipalalpha.com</a></span>
+    </div>
+  </div>
+
+  <div class="section" style="margin-top:28px;">
+    <h2>What's moving, across three states</h2>
+    <ul class="signal-list">
+      <li>
+        <div class="sig-title">Mendota Heights, MN &middot; a 149-foot Verizon-affiliate monopole, in for a conditional-use permit</div>
+        <div class="sig-body">City Council agenda item: a Conditional Use Permit application for a 149-foot wireless telecommunications monopole. The applicant, "The Towers LLC," is named in the packet as a Verizon Wireless partner, applicant-identity detail that doesn't reach FCC/FAA filings until the site is already built.</div>
+        <div class="sig-where">City Council &middot; Jun 2, 2026 &middot; agenda item &middot; <a href="https://www.mendotaheightsmn.gov/AgendaCenter/ViewFile/Agenda/_06022026-439?html=true" target="_blank" rel="noopener">View agenda &#8594;</a></div>
+      </li>
+      <li>
+        <div class="sig-title">Farmington, NM &middot; a wireless facility application, tracked across two hearings</div>
+        <div class="sig-body">Special Use Permit for a wireless communications facility and monopole on city-owned property, first on the Planning &amp; Zoning agenda June 11, back again June 25, a live, tracked deliberation.</div>
+        <div class="sig-where">Planning &amp; Zoning &middot; Jun 11 &amp; 25, 2026 &middot; agenda item &middot; <a href="https://farmingtonnm.gov/AgendaCenter/ViewFile/Agenda/_06252026-2304?html=true" target="_blank" rel="noopener">View agenda &#8594;</a></div>
+      </li>
+      <li>
+        <div class="sig-title">Jefferson City, MO &middot; a council resolution amending an existing AT&amp;T cell tower lease on park land</div>
+        <div class="sig-body">Resolution 2026-004, authorizing an amendment to the AT&amp;T lease in Ellis Porter Park, a municipal-land lease renegotiation, counterparty and term detail an aggregator underwriting a competing position would want early.</div>
+        <div class="sig-where">City Council &middot; Jun 1, 2026 &middot; agenda item &middot; <a href="https://jeffersoncitymo.gov/2026-06-01%20agenda.pdf" target="_blank" rel="noopener">View agenda &#8594;</a></div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="cta-block">
+    <h3>Point this at your footprint</h3>
+    <p>Name the states or specific carriers/entities you track and I'll walk through what's live there.</p>
+    <a class="cta-button" href="https://calendar.app.google/HkZk29hxj7Cdtvuc9" onclick="if(window.goatcounter&amp;&amp;window.goatcounter.count){try{window.goatcounter.count({path:'tower-cta-click-mid',title:'tower cta click (mid)',event:true});}catch(e){}}">See live signals for your footprint</a>
+    <span class="cta-secondary">or email <a href="mailto:matt@municipalalpha.com?subject=Tower%20siting%20signals%20%28via%20discussion%20page%29">matt@municipalalpha.com</a></span>
+  </div>
+
+  <div class="section">
+    <h2>Why FAA and FCC feeds miss this</h2>
+    <p>FAA antenna-structure registrations and FCC license filings are downstream, by the time an entry is filed, the lease is executed and the site selected. Wireless Estimator, BeAccurate, and adjacent FCC-derived feeds work that layer well. What they can't answer is when and where the next application is forming, who's filing, and how the town handles these applications, the layer this reads.</p>
+    <div class="stat-strip">
+      <div><div class="stat-num">3,900+</div><div class="stat-label">municipalities read, all 50 states</div></div>
+      <div><div class="stat-num">31</div><div class="stat-label">states with tower-siting signal extracted so far</div></div>
+      <div><div class="stat-num">138</div><div class="stat-label">municipalities with tower-siting docs found</div></div>
+    </div>
+    <p class="depth-note">Tower-siting extraction depth tracks where the pipeline has been specifically pointed, not the full 3,900+ footprint, a paid pilot scopes backfill and state depth to your markets specifically.</p>
+  </div>
+
+  <div class="section">
+    <h2>The honest limit</h2>
+    <div class="objection">
+      <div class="obj-label">What it won't do</div>
+      <div class="obj-q">"So this gets us the lease?"</div>
+      <p style="max-width:62ch;">No. This surfaces the sourced signal, the applicant, the parcel, the hearing date, while there's still time to act. Whether that becomes a position is on your team, your relationship with the owner, and your terms.</p>
+    </div>
+  </div>
+
+  <div class="cta-block">
+    <h3>See it on your own markets</h3>
+    <p>15 minutes, sourced examples in your states, no deck.</p>
+    <a class="cta-button" href="https://calendar.app.google/HkZk29hxj7Cdtvuc9" onclick="if(window.goatcounter&amp;&amp;window.goatcounter.count){try{window.goatcounter.count({path:'tower-cta-click-bottom',title:'tower cta click (bottom)',event:true});}catch(e){}}">See live signals for your footprint</a>
+    <br><span class="cta-secondary">or email <a href="mailto:matt@municipalalpha.com?subject=Tower%20siting%20signals%20%28via%20discussion%20page%29">matt@municipalalpha.com</a></span>
+  </div>
+
+  <div class="footer">
+    <span>Municipal Alpha &middot; <a href="mailto:matt@municipalalpha.com">matt@municipalalpha.com</a></span>
+    <span><a href="https://municipalalpha.com">municipalalpha.com</a></span>
+  </div>
+
+</div>
+</body>
+</html>
