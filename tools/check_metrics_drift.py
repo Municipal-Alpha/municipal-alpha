@@ -61,7 +61,7 @@ def numeric(display: str) -> int:
 
 def main() -> int:
     metrics = json.loads(METRICS_FILE.read_text())
-    canonical = {k: numeric(v) for k, v in metrics.items() if numeric(str(v))}
+    canonical = {k: numeric(str(v)) for k, v in metrics.items() if numeric(str(v))}
 
     targets = [p for p in sorted((BASE / "content" / "pages").glob("*.md"))
                if not EXEMPT.search(p.name)]
