@@ -48,7 +48,7 @@ A query behind one of the digests returned nothing at all for eleven days. Night
 
 Every one of those was found by a person noticing that something downstream looked wrong. None of them fired an alert.
 
-My favorite, if that's the word, is the classifier. It was failing every night and the monitoring did report it. The chronic-failure counter capped at eight days, so night ten and night twenty-six both displayed as "CHRONIC 8d." A number that stops moving stops being read, and the outage wallpapered itself.
+My favorite, if that's the word, is the one where the monitoring worked. A nightly job failed for twenty-six nights running, and the monitoring reported it every single time. The trouble was that the chronic-failure counter capped at eight days, so night ten and night twenty-six both displayed as "CHRONIC 8d." A number that stops moving stops being read, and the outage wallpapered itself.
 
 ## The half that didn't run without me
 
