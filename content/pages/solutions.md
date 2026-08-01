@@ -182,7 +182,7 @@ Sortorder: 1
 </div>
 
 <div class="sol-bottom-cta">
-<h3>933,000+ documents. 4,100+ municipalities. Updated every night.</h3>
+<h3>950,000+ documents. 4,200+ municipalities. Updated every night.</h3>
 <p>The same precursor intelligence powers every product above. The question is how your industry uses the timing advantage.</p>
 <a href="https://calendar.app.google/s6wDVSaJuqCkwcmg9" class="cta-button">Book a Data Review</a>
 <span class="sol-or">or</span>

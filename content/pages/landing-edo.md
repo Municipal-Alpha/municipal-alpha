@@ -1,7 +1,7 @@
 Title: Regional & Economic Development Intelligence
 Slug: solutions/economic-development
 Sortorder: 36
-Summary: Regional project visibility for EDOs, COGs, and planning commissions. Employer distress, housing policy, and capital projects surface in municipal records before they reach the news. 4,100+ municipalities, updated daily.
+Summary: Regional project visibility for EDOs, COGs, and planning commissions. Employer distress, housing policy, and capital projects surface in municipal records before they reach the news. 4,200+ municipalities, updated daily.
 
 <style>
 .lp-hero { display: flex; gap: 40px; margin-bottom: 48px; align-items: flex-start; }
@@ -63,7 +63,7 @@ Summary: Regional project visibility for EDOs, COGs, and planning commissions. E
 <div class="lp-tag">Regional &amp; Economic Development</div>
 <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #888; letter-spacing: 1px; margin-bottom: 10px;">Before the vote. Before the permit. Before the RFP.</div>
 <h2>You see what's moving in your region before it's in the news</h2>
-<p>Economic developers say retaining an existing employer is far easier than attracting a new one, yet most learn a local employer is in trouble from the news, after the window to act has closed. The earlier record is municipal: the abatement request, the lease non-renewal on a council agenda, the workforce line quietly cut from a budget. I read these documents daily across 4,100+ municipalities and surface what's forming in your region while there is still time to act on it.</p>
+<p>Economic developers say retaining an existing employer is far easier than attracting a new one, yet most learn a local employer is in trouble from the news, after the window to act has closed. The earlier record is municipal: the abatement request, the lease non-renewal on a council agenda, the workforce line quietly cut from a budget. I read these documents daily across 4,200+ municipalities and surface what's forming in your region while there is still time to act on it.</p>
 </div>
 </div>
 
@@ -77,11 +77,11 @@ Summary: Regional project visibility for EDOs, COGs, and planning commissions. E
 
 <div class="lp-metrics">
 <div class="lp-metric">
-<span class="lp-metric-value">4,100+</span>
+<span class="lp-metric-value">4,200+</span>
 <span class="lp-metric-label">Municipalities</span>
 </div>
 <div class="lp-metric">
-<span class="lp-metric-value">933,000+</span>
+<span class="lp-metric-value">950,000+</span>
 <span class="lp-metric-label">Documents</span>
 </div>
 <div class="lp-metric">

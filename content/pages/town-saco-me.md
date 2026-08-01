@@ -21,4 +21,4 @@ Saco sits on the north bank of the Saco River, across from Biddeford. The city m
 
 ---
 
-*[Municipal Alpha](/) monitors 4,100+ municipalities across 50 states. The structured data behind these digests is available for [institutional data buyers](/solutions/alt-data/), [infrastructure companies](/solutions/tower-leads/), and [research teams](/contact/).*
+*[Municipal Alpha](/) monitors 4,200+ municipalities across 50 states. The structured data behind these digests is available for [institutional data buyers](/solutions/alt-data/), [infrastructure companies](/solutions/tower-leads/), and [research teams](/contact/).*

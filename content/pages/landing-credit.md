@@ -1,7 +1,7 @@
 Title: Municipal Credit Intelligence
 Slug: solutions/credit-intelligence
 Sortorder: 32
-Summary: Pre-downgrade fiscal intelligence. Leading indicators of municipal fiscal health from the source spending documents that rating agencies eventually read. 4,100+ municipalities.
+Summary: Pre-downgrade fiscal intelligence. Leading indicators of municipal fiscal health from the source spending documents that rating agencies eventually read. 4,200+ municipalities.
 
 <style>
 .lp-hero { display: flex; gap: 40px; margin-bottom: 48px; align-items: flex-start; }
@@ -78,7 +78,7 @@ Summary: Pre-downgrade fiscal intelligence. Leading indicators of municipal fisc
 <span class="lp-metric-label">Separation ratio</span>
 </div>
 <div class="lp-metric">
-<span class="lp-metric-value">4,100+</span>
+<span class="lp-metric-value">4,200+</span>
 <span class="lp-metric-label">Municipalities</span>
 </div>
 <div class="lp-metric">
