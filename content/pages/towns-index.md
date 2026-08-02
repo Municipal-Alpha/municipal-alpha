@@ -1,30 +1,38 @@
 Title: Towns
 Slug: towns
 Sortorder: 3
-Summary: Weekly town government digests from 4,100+ municipalities. What your town council, planning board, and public works department did this week, from public records.
+Summary: What Municipal Alpha holds from the public record of individual municipalities, and what it does not.
 
-Weekly digests of town government activity, generated from public records. What your local boards discussed, what permits were issued, and what's coming next, written in plain language from the actual documents.
+Municipal Alpha reads the documents municipalities publish themselves: agendas, minutes, meeting packets, budgets, capital plans. The pages below say what we hold for a given place, which boards appear in that record, how far back it goes and where it stops.
 
-We monitor 4,100+ municipalities across 50 states. Our agents read every public document published by a municipality's boards and committees, agendas, minutes, meeting packets, permits, budget reports, and generate a weekly summary in plain, factual language. No editorializing, no predictions, no sides taken. If the planning board discussed it, we report it.
+They are built from the corpus, so every number on them is a count of documents we actually have. Where our coverage of a place is thin, its page is short and says so. That is more useful than a page that reads well and cannot be checked.
 
-## Request Your Town
+**Last built:** 2026-08-01.
 
-We can build a digest for any municipality that publishes documents online. It takes about a day to set up. If you'd like to see your town covered, just ask.
+## Request your town
 
-<a href="mailto:matt@municipalalpha.com?subject=Town%20digest%20request%20-%20[your%20town]" class="cta-button">Request a town digest</a>
+We can read any municipality that publishes its documents online.
 
-## Sample Towns
+<a href="mailto:matt@municipalalpha.com?subject=Town%20coverage%20request%20-%20[your%20town]" class="cta-button">Request a town</a>
 
-See what a weekly digest looks like:
+## Places we hold records for
 
-- **[Millinocket, Maine](/towns/millinocket-me/)** -- 4,000 people, 7 boards monitored. Former mill town reinventing around outdoor recreation and remote work at the gateway to Baxter State Park.
-- **[Falmouth, Maine](/towns/falmouth-me/)** -- 12,000 people, 18 boards monitored. Coastal New England town with active development, PFAS testing, and infrastructure projects.
-- **[Geneva, Illinois](/towns/geneva-il/)** -- 22,000 people, 45 boards monitored. Historic Fox River city west of Chicago with deep check register data and active preservation commission.
-- **[Portland, Maine](/towns/portland-me/)** -- 68,000 people, 59 boards monitored. Maine's largest city with active waterfront governance, affordable housing programs, and federal grant activity.
-- **[Westbrook, Maine](/towns/westbrook-me/)** -- 20,000 people, 41 boards monitored. Gateway city on the Presumpscot River with major riverfront redevelopment and Rock Row mixed-use district.
-- **[Lewiston, Maine](/towns/lewiston-me/)** -- 37,000 people, 52 boards monitored. Maine's second-largest city on the Androscoggin River, former mill center with active downtown revitalization and diverse communities.
-- **[Augusta, Maine](/towns/augusta-me/)** -- 19,000 people, state capital on the Kennebec River. Seat of Maine government with active city council and planning board.
-- **[Brunswick, Maine](/towns/brunswick-me/)** -- 22,000 people, 37 boards monitored. Home to Bowdoin College and Brunswick Landing redevelopment with the most active committee structure in Midcoast Maine.
-- **[Sanford, Maine](/towns/sanford-me/)** -- 22,000 people, 8 boards monitored. Southern Maine city with Springvale village, airport district development, and active economic development efforts.
-- **[Saco, Maine](/towns/saco-me/)** -- 20,000 people, 14 boards monitored. Growing Saco River city with historic mill district, Saco Island redevelopment, and coastal neighborhoods.
-- **[Pocatello, Idaho](/towns/pocatello-id/)** -- 56,000 people, 39 boards monitored. Infrastructure-heavy city at the I-15/I-86 junction with water treatment, airport expansion, and lead pipe replacement activity.
+| Place | Documents held | Readable | Boards in the record | Latest meeting held |
+|---|---|---|---|---|
+| [Lewiston, Maine](/towns/lewiston-me/) | 5,931 | 689 | 84 | 2026-07-30 |
+| [Augusta, Maine](/towns/augusta-me/) | 3,728 | 762 | 5 | 2026-03-10 |
+| [Pocatello, Idaho](/towns/pocatello-id/) | 2,547 | 1,160 | 45 | 2026-07-28 |
+| [Geneva, Illinois](/towns/geneva-il/) | 2,151 | 264 | 49 | 2026-06-23 |
+| [Millinocket, Maine](/towns/millinocket-me/) | 1,809 | 307 | 8 | 2026-07-16 |
+| [Falmouth, Maine](/towns/falmouth-me/) | 1,127 | 672 | 21 | 2026-07-28 |
+| [Saco, Maine](/towns/saco-me/) | 975 | 648 | 16 | 2026-07-28 |
+| [Westbrook, Maine](/towns/westbrook-me/) | 611 | 128 | 24 | 2026-06-16 |
+| [Portland, Maine](/towns/portland-me/) | 448 | 267 | 31 | 2026-07-29 |
+| [Sanford, Maine](/towns/sanford-me/) | 408 | 199 | 9 | 2026-05-28 |
+| [Brunswick, Maine](/towns/brunswick-me/) | 251 | 103 | 38 | 2026-05-18 |
+
+"Readable" counts the documents whose text we successfully extracted. The remainder are held as a title and a link; we make no claim about their contents. "Latest meeting held" is the most recent meeting date in our record for that place, which is a statement about our coverage rather than about the municipality.
+
+---
+
+*[Municipal Alpha](/) monitors municipal public records across 50 states. The structured data behind these pages is available for [institutional data buyers](/solutions/alt-data/), [infrastructure companies](/solutions/tower-leads/), and [research teams](/contact/).*

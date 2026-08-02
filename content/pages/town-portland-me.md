@@ -1,26 +1,97 @@
 Title: Portland, Maine
 Slug: towns/portland-me
 Sortorder: 100
-Summary: Automated weekly digests of Portland, Maine city government activity from public records. City council, planning, housing, waterfront, and public spending.
+Summary: What Municipal Alpha holds from the public record of Portland, Maine, and what it does not.
 
-*Portland, Maine (pop. 68,000) -- Cumberland County*
+*Portland, Maine. Cumberland County.*
 
-Automated weekly digest of city government activity, generated from public records by Municipal Alpha. Portland's city government operates through 59 boards and committees, from the City Council and Planning Board to the Rent Board, Sustainability and Transportation Committee, Portland Fish Pier Authority, and Land Bank Commission. We monitor all of them.
+## What this page is
 
-## Weekly Digests
+This is a record of what Municipal Alpha holds from Portland's own published documents. It is built from the corpus itself, so every count below is a count of documents we actually have.
 
-- [Week of March 28 - April 3, 2026](/towns/portland-me/2026-04-03/) -- Utility rate cases reviewed, federal grant allocations for education, urban development and sustainability discussions.
-- [Week of March 22-28, 2026](/towns/portland-me/2026-03-28/) -- Extensive FAA filings for new antennas, City Council debates affordable housing, continued development and public safety activity.
-- [Week of March 20-26, 2026](/towns/portland-me/2026-03-26/) -- FAA tower filings for 16 new antenna structures, 2027 Capital Improvement Program released, $76K federal health grant awarded.
-- [Week of March 15-21, 2026](/towns/portland-me/2026-03-21/) -- Federal HHS grant, Maine PUC infrastructure docket activity, FAA tower filings, City Council housing discussions.
-- [Week of March 8-14, 2026](/towns/portland-me/2026-03-14/) -- $7.2M federal transportation grants, CDBG allocation review, City Council goal-setting sessions, Land Bank affordable housing efforts.
+It is deliberately not a narrative. Where a narrative appears on a page like this one, every sentence in it is read from the full text of a named document and the document is cited. Until that reading has been done for this city, this page states the shape of the record rather than describing it.
 
-## About Portland
+**Last built:** 2026-08-01.
 
-Portland is the largest city in Maine, a regional economic center on Casco Bay with a population of approximately 68,000. The city operates one of the most active municipal governments in New England, with 59 boards and committees producing public documents. Portland's working waterfront, managed through the Fish Pier Authority and its subcommittees, coexists with a rapidly growing restaurant and arts scene centered in the Old Port and Arts District. The city faces significant affordable housing pressure, addressed through the Rent Board, Land Bank Commission, and CDBG programs. Portland International Jetport serves as the state's primary airport, and Greater Portland Metro provides regional transit. The city includes island communities on Peaks, Long, Cliff, and Great Diamond islands, each with distinct governance needs.
+## What we hold
 
-**Boards monitored:** City Council, Planning Board, Board of Appeals, Rent Board, Sustainability and Transportation Committee, Land Bank Commission, Creative Portland Corporation, Portland Fish Pier Authority, CDBG Allocation Committee, Board of Assessment Review, Historic Preservation Board, Housing Committee, Parks Commission, Waterfront Advisory Committee, Capital Improvement Programs Board, and 44 additional boards and subcommittees.
+- **448 documents** in total.
+- **437** carry a meeting date in 2026.
+- **267** (60 percent) had their text extracted successfully and are readable to us. The rest are held as a title and a link only. Nothing can be said about the contents of those.
+- **31 boards and committees** appear in the record.
+- **25** are scanned images awaiting text recognition.
+- The most recent document was discovered on **2026-07-30**. Anything the city published after that date is outside this page.
+- **2** documents carry no usable meeting date, so they do not appear in any date-ordered view below.
+
+## Boards and committees in the record
+
+| Board | Documents | First meeting date | Last meeting date |
+|---|---|---|---|
+| City Council | 53 | 2026-01-05 | 2026-07-20 |
+| Ad Hoc Committee | 42 | 2026-01-08 | 2026-07-29 |
+| Portland Fish Pier Authority | 34 | 2026-01-08 | 2026-07-16 |
+| Finance Committee | 30 | 2025-01-27 | 2026-07-23 |
+| Planning Board | 25 | 2026-01-13 | 2026-07-28 |
+| Rent Board | 24 | 2026-01-28 | 2026-07-22 |
+| Public Art Committee | 22 | 2026-01-21 | 2026-07-23 |
+| Housing & Economic Development Committee | 21 | 2026-01-20 | 2026-07-21 |
+| Social Housing Task Force | 20 | 2026-01-14 | 2026-07-08 |
+| Historic Preservation Board | 18 | 2026-01-21 | 2026-07-15 |
+| Civil Service Employment Subcommittee | 15 | 2026-01-14 | 2026-07-09 |
+| HHS and Public Safety Committee | 15 | 2026-01-13 | 2026-07-14 |
+| Land Bank Commission | 15 | 2026-01-14 | 2026-06-10 |
+| Zoning Board of Appeals | 15 | 2026-01-15 | 2026-06-18 |
+| Legislative/Nominating Committee | 14 | 2026-01-13 | 2026-07-02 |
+| Sustainability and Transportation Committee | 14 | 2026-01-14 | 2026-07-08 |
+| Ethics Commission | 11 | 2025-12-30 | 2026-06-30 |
+| Creative Portland Corporation | 10 | 2026-01-07 | 2026-07-01 |
+| Portland Development Corporation | 10 | 2026-02-19 | 2026-07-16 |
+| Parks Commission | 9 | 2026-02-05 | 2026-06-04 |
+| Peaks Island Council | 6 | 2026-01-28 | 2026-07-22 |
+| Registry of Deeds — Cumberland County | 5 | 2026-03-03 | 2026-03-03 |
+| Civilian Police Review Board | 4 | 2026-06-11 | 2026-07-15 |
+| Federal — Department of Transportation | 4 | 2022-09-19 | 2026-03-04 |
+| FAA OE/AAA | 2 | 2026-02-17 | 2026-02-17 |
+| Federal — Environmental Protection Agency | 2 | 2025-10-01 | 2025-10-01 |
+| Jetport Noise Advisory Committee | 2 | 2026-04-16 | 2026-07-09 |
+| Maine PUC — Central Maine Power | 2 | 2026-03-19 | 2026-03-31 |
+| Unknown | 2 | unknown | unknown |
+| Federal — Department of Education | 1 | 2025-10-01 | 2025-10-01 |
+| Federal — Department of Health and Human Services | 1 | 2024-09-01 | 2024-09-01 |
+
+A board with an old last-meeting date is a statement about our coverage of it, not necessarily about whether it still meets.
+
+## The most recent meetings we hold records for
+
+| Meeting date | Board | Records held | Agenda or minutes |
+|---|---|---|---|
+| 2026-07-29 | Ad Hoc Committee | 4 | [view](https://portlandme.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=20206,plainText=false)) |
+| 2026-07-28 | Planning Board | 2 | [view](https://portlandme.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=20198,plainText=false)) |
+| 2026-07-23 | Ad Hoc Committee | 2 | [view](https://portlandme.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=20183,plainText=false)) |
+| 2026-07-23 | Finance Committee | 3 | [view](https://portlandme.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=20208,plainText=false)) |
+| 2026-07-23 | Public Art Committee | 2 | [view](https://portlandme.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=20201,plainText=false)) |
+| 2026-07-22 | Peaks Island Council | 1 | [view](https://portlandme.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=20196,plainText=false)) |
+| 2026-07-22 | Rent Board | 2 | [view](https://portlandme.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=20191,plainText=false)) |
+| 2026-07-21 | Housing & Economic Development Committee | 2 | [view](https://portlandme.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=20187,plainText=false)) |
+| 2026-07-20 | City Council | 4 | [view](https://portlandme.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=20173,plainText=false)) |
+| 2026-07-16 | Portland Development Corporation | 2 | [view](https://portlandme.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=20152,plainText=false)) |
+| 2026-07-16 | Portland Fish Pier Authority | 2 | [view](https://portlandme.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=20168,plainText=false)) |
+| 2026-07-15 | Ad Hoc Committee | 2 | [view](https://portlandme.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=20155,plainText=false)) |
+| 2026-07-15 | Civilian Police Review Board | 2 | [view](https://portlandme.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=20171,plainText=false)) |
+| 2026-07-15 | Historic Preservation Board | 2 | [view](https://portlandme.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=20150,plainText=false)) |
+| 2026-07-15 | Public Art Committee | 2 | [view](https://portlandme.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=20164,plainText=false)) |
+| 2026-07-14 | HHS and Public Safety Committee | 2 | [view](https://portlandme.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=20166,plainText=false)) |
+| 2026-07-14 | Planning Board | 2 | [view](https://portlandme.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=20147,plainText=false)) |
+| 2026-07-09 | Civil Service Employment Subcommittee | 2 | [view](https://portlandme.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=20117,plainText=false)) |
+| 2026-07-09 | Jetport Noise Advisory Committee | 1 | [view](https://portlandme.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=20119,plainText=false)) |
+| 2026-07-09 | Portland Fish Pier Authority | 2 | [view](https://portlandme.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=20128,plainText=false)) |
+
+Links go to the city's own copy. Where a link no longer resolves, the document has moved or been removed at the source. Meetings are listed rather than individual files, because a single meeting's packet can run to dozens of attachments, and those attachments routinely name private residents and their home addresses. Those are public records and we do not republish them here.
+
+## Corrections
+
+Two kinds of correction are useful. A fact that is wrong, and a thread that matters to Portland and is missing here because we cannot see the document it lives in. Both make the next version better. Where this page says the record stops, that is a statement about what we hold, not about the city.
 
 ---
 
-*[Municipal Alpha](/) monitors 4,100+ municipalities across 50 states. The structured data behind these digests is available for [institutional data buyers](/solutions/alt-data/), [infrastructure companies](/solutions/tower-leads/), and [research teams](/contact/).*
+*[Municipal Alpha](/) monitors municipal public records across 50 states. The structured data behind this page is available for [institutional data buyers](/solutions/alt-data/), [infrastructure companies](/solutions/tower-leads/), and [research teams](/contact/).*
