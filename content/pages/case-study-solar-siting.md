@@ -55,7 +55,7 @@ Summary: Municipal Alpha tracks US solar and renewable-energy siting from town a
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
 <p class="cs-intro">
-Renewable energy developers face a fragmented regulatory landscape. Solar ordinances are written at the municipal level, evolve through public meetings, and aren't published in any central registry until they're already adopted. <strong>By then, the competitive window is closed.</strong> Municipal Alpha tracks the regulatory pipeline across 4,100+ municipalities. This case study traces the moratorium-to-permit pattern through four towns where solar development was debated, restricted, and eventually regulated. Every citation links to a verifiable public document.
+Renewable energy developers face a fragmented regulatory landscape. Solar ordinances are written at the municipal level, evolve through public meetings, and aren't published in any central registry until they're already adopted. <strong>By then, the competitive window is closed.</strong> Municipal Alpha tracks the regulatory pipeline across 4,200+ municipalities. This case study traces the moratorium-to-permit pattern through four towns where solar development was debated, restricted, and eventually regulated. Every citation links to a verifiable public document.
 </p>
 
 <div class="cs-stats">
@@ -169,5 +169,5 @@ Renewable energy developers face a fragmented regulatory landscape. Solar ordina
 </div>
 
 <div class="cs-note">
-<strong>Methodology note:</strong> This signal chain was assembled from public meeting minutes, planning board packets, and budget documents available on municipal websites. Every link above goes to the original source document. No proprietary data sources were used. Municipal Alpha monitors 4,100+ municipalities across all 50 states, with deep coverage in New England. These signals were extracted from routine pipeline operations, not a targeted search.
+<strong>Methodology note:</strong> This signal chain was assembled from public meeting minutes, planning board packets, and budget documents available on municipal websites. Every link above goes to the original source document. No proprietary data sources were used. Municipal Alpha monitors 4,200+ municipalities across all 50 states, with deep coverage in New England. These signals were extracted from routine pipeline operations, not a targeted search.
 </div>

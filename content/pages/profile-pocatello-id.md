@@ -82,13 +82,13 @@ Pocatello has 13 advisory committees producing agendas. Thirteen. The Arts Counc
 
 Pocatello is the answer to "why does this matter for small cities?" It matters because the data exists, it's public, and nobody is reading it. Nearly a hundred high-priority signals from one city in Idaho. Thirty-eight tower sites. Over a hundred check registers. Infrastructure spending patterns that touch the same public companies showing up in Geneva, in Falmouth, and in hundreds of other municipalities.
 
-The patterns aren't visible from any single town. They're visible from 4,100+.
+The patterns aren't visible from any single town. They're visible from 4,200+.
 
 ---
 
 ### Want this data?
 
-Pocatello's 38 tower sites and 280+ signals are a sample of what the full pipeline produces. Coverage spans 4,100+ municipalities.
+Pocatello's 38 tower sites and 280+ signals are a sample of what the full pipeline produces. Coverage spans 4,200+ municipalities.
 
 - **[Download a sample of our signal data (CSV)](/sample-data/signals-sample.csv)** -- 50 entity-resolved signals
 - **[Download sample tower prospects (CSV)](/sample-data/tower-prospects-sample.csv)** -- 25 redacted tower prospects

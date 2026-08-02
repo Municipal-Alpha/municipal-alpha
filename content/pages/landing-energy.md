@@ -1,7 +1,7 @@
 Title: Renewable Energy Siting Intelligence
 Slug: solutions/energy-development
 Sortorder: 35
-Summary: Pre-RFP project intelligence. Zoning decisions, planning board approvals, and site plan reviews from 4,100+ municipalities. Early signals for greenfield site origination.
+Summary: Pre-RFP project intelligence. Zoning decisions, planning board approvals, and site plan reviews from 4,200+ municipalities. Early signals for greenfield site origination.
 
 <style>
 .lp-hero { display: flex; gap: 40px; margin-bottom: 48px; align-items: flex-start; }
@@ -63,7 +63,7 @@ Summary: Pre-RFP project intelligence. Zoning decisions, planning board approval
 <div class="lp-tag">Project Origination</div>
 <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #888; letter-spacing: 1px; margin-bottom: 10px;">Before the vote. Before the permit. Before the RFP.</div>
 <h2>You know about the project before the RFP is written</h2>
-<p>The earliest signals in energy project development come from municipal government. A planning board approves a solar overlay district. A zoning board grants a variance for battery storage. A town meeting votes on a utility-scale moratorium. I read these decisions daily across 4,100+ municipalities, months before an RFP or permit application exists.</p>
+<p>The earliest signals in energy project development come from municipal government. A planning board approves a solar overlay district. A zoning board grants a variance for battery storage. A town meeting votes on a utility-scale moratorium. I read these decisions daily across 4,200+ municipalities, months before an RFP or permit application exists.</p>
 </div>
 <img class="lp-hero-img" src="/images/story-renewable-energy.png" alt="Renewable energy siting signal">
 </div>
@@ -83,11 +83,11 @@ Summary: Pre-RFP project intelligence. Zoning decisions, planning board approval
 
 <div class="lp-metrics">
 <div class="lp-metric">
-<span class="lp-metric-value">4,100+</span>
+<span class="lp-metric-value">4,200+</span>
 <span class="lp-metric-label">Municipalities</span>
 </div>
 <div class="lp-metric">
-<span class="lp-metric-value">4,100+</span>
+<span class="lp-metric-value">4,200+</span>
 <span class="lp-metric-label">Zoning docs</span>
 </div>
 <div class="lp-metric">

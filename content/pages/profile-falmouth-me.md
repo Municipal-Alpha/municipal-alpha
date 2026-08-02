@@ -95,7 +95,7 @@ The entities that appear most frequently in Falmouth's public documents paint a 
 
 These are local and regional firms. But the products they specify, the utilities they coordinate with, and the materials they purchase flow to public companies. The local architect specifies a Carrier HVAC system. The site engineer specs ADS drainage pipe. The electrician pulls permits for Eaton panels. Each specification is a micro-signal that maps to a ticker.
 
-Individually they're noise. Aggregated across 4,100+ municipalities, they're a dataset that doesn't exist anywhere else.
+Individually they're noise. Aggregated across 4,200+ municipalities, they're a dataset that doesn't exist anywhere else.
 
 ## The Boring Part That Matters
 
@@ -113,7 +113,7 @@ The attachments are where the gold is. An agenda tells you what a board plans to
 
 ## So What
 
-Falmouth is one town. One of 4,100+ in our pipeline. The data shown here -- development signals, climate spending, tower infrastructure, vendor relationships, supply chain mapping -- is generated automatically from public documents the town publishes on its own website.
+Falmouth is one town. One of 4,200+ in our pipeline. The data shown here -- development signals, climate spending, tower infrastructure, vendor relationships, supply chain mapping -- is generated automatically from public documents the town publishes on its own website.
 
 Nobody reads Falmouth's Long Range Planning Advisory Committee minutes for investment signals. We do. Every day, for every town in the pipeline. And the patterns visible in one town become predictive when you see them across hundreds.
 
@@ -121,7 +121,7 @@ Nobody reads Falmouth's Long Range Planning Advisory Committee minutes for inves
 
 ### Want this data?
 
-Falmouth is one of 4,100+ municipalities generating structured intelligence daily. The full dataset includes signals, entities, tower sites, and vendor payments.
+Falmouth is one of 4,200+ municipalities generating structured intelligence daily. The full dataset includes signals, entities, tower sites, and vendor payments.
 
 - **[Download a sample of our signal data (CSV)](/sample-data/signals-sample.csv)** -- 50 entity-resolved signals
 - **[Download sample tower prospects (CSV)](/sample-data/tower-prospects-sample.csv)** -- 25 redacted tower prospects
