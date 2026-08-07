@@ -41,6 +41,36 @@ TICKER_PATTERNS = [
 NONTICKER_ACRONYMS = {'MRRA', 'BRAC', 'RFP', 'RFQ', 'CSV', 'PDF'}
 GENERIC_PARENS_PATTERN = r'\([A-Z]{2,5}\)'
 
+# Ticker-shaped acronyms that MUST keep flagging even when spelled out, because
+# the whole point of this gate is to hide that we track public companies. An
+# expansion like "Waste Management (WM)" is exactly the leak, not an exemption.
+TICKER_DENY = {'WM', 'STN', 'XYL', 'TTEK', 'CG', 'CNM', 'VEOEY', 'RSG', 'CWST',
+               'AWK', 'WTRG', 'ECOL', 'CLH', 'NVRI', 'AMT', 'CCI', 'SBAC'}
+
+_STOPWORDS = {'of', 'and', 'the', 'for', 'in', 'on', 'at', 'to', '&'}
+
+
+def _is_acronym_definition(line, acronym):
+    """True when the words immediately before "(ACRO)" spell it out.
+
+    "Capital Improvement Program (CIP)" defines an acronym; a bare "(WM)" does
+    not. This distinguishes the two structurally instead of growing an
+    allowlist one municipal board at a time, which would weaken the gate with
+    every entry. Ticker-shaped acronyms in TICKER_DENY are never exempted.
+    """
+    if acronym in TICKER_DENY:
+        return False
+    idx = line.find('(' + acronym + ')')
+    if idx <= 0:
+        return False
+    before = re.sub(r'[^A-Za-z&\s]', ' ', line[:idx])
+    words = [w for w in before.split() if w.lower() not in _STOPWORDS]
+    if len(words) < len(acronym):
+        return False
+    initials = ''.join(w[0] for w in words[-len(acronym):]).upper()
+    return initials == acronym.upper()
+
+
 # Pipeline/architecture leaks
 PIPELINE_PATTERNS = [
     (r'\bnavigator[s]?\b', 'Navigator reference (pipeline architecture)'),
@@ -168,7 +198,8 @@ def scan_file(filepath, strict=False):
                 # (RFP, MRRA, BRAC, ...) so government/document terms don't false-flag,
                 # but still flag any parenthetical that could be a real ticker.
                 if not [m for m in re.findall(pattern, line)
-                        if m.strip('()') not in NONTICKER_ACRONYMS]:
+                        if m.strip('()') not in NONTICKER_ACRONYMS
+                        and not _is_acronym_definition(line, m.strip('()'))]:
                     continue
             elif not re.search(pattern, line):
                 continue
