@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Trending in Maine — what towns are taking up | Municipal Alpha</title>
+<script data-goatcounter="https://stats.municipalalpha.com/count" async src="//gc.zgo.at/count.js"></script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,500&family=DM+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+  :root {
+    --ink:#0C0C0C; --paper:#F7F4F0; --signal:#E8512D; --edge:#1B4332;
+    --ink-80:rgba(12,12,12,.80); --ink-60:rgba(12,12,12,.60); --ink-40:rgba(12,12,12,.40);
+    --ink-12:rgba(12,12,12,.12); --ink-06:rgba(12,12,12,.06);
+    --font-display:'Newsreader',Georgia,serif; --font-body:'DM Sans',-apple-system,sans-serif; --font-mono:'IBM Plex Mono',ui-monospace,monospace;
+  }
+  *,*::before,*::after{box-sizing:border-box;}
+  html,body{margin:0;padding:0;background:var(--paper);color:var(--ink);font-family:var(--font-body);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+  .container{max-width:780px;margin:0 auto;padding:0 36px 80px 36px;}
+  .header{position:sticky;top:0;z-index:10;background:var(--paper);display:flex;justify-content:space-between;align-items:center;padding:22px 0 16px 0;border-bottom:1px solid var(--ink-12);margin-bottom:32px;}
+  .wordmark{font-family:var(--font-display);font-weight:500;font-size:22px;letter-spacing:-.005em;}
+  .header-meta{font-family:var(--font-mono);font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-60);text-align:right;line-height:1.4;}
+  .hero{margin-bottom:18px;}
+  .hero .eyebrow{font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--signal);margin-bottom:14px;}
+  .hero h1{font-family:var(--font-display);font-weight:500;font-size:38px;line-height:1.1;letter-spacing:-.01em;margin:0 0 14px 0;}
+  .hero .lede{font-family:var(--font-body);font-size:15.5px;line-height:1.55;color:var(--ink-60);margin:0;max-width:64ch;}
+  .hero .lede strong{color:var(--ink);font-weight:600;}
+  .stat-strip{margin-top:22px;padding:16px 18px;background:var(--ink);color:var(--paper);border-radius:2px;display:flex;flex-wrap:wrap;gap:22px;}
+  .stat{flex:1 1 110px;}
+  .stat .num{font-family:var(--font-display);font-size:28px;font-weight:500;line-height:1;color:var(--signal);font-variant-numeric:tabular-nums;}
+  .stat .lab{font-family:var(--font-mono);font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:rgba(247,244,240,.6);margin-top:6px;}
+  .previewnote{margin-top:18px;font-family:var(--font-mono);font-size:11px;letter-spacing:.03em;color:var(--ink-40);}
+  .section{margin-top:48px;padding-top:28px;border-top:1px solid var(--ink-12);}
+  .kicker{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--signal);margin:0 0 10px 0;}
+  .section h2{font-family:var(--font-display);font-weight:500;font-size:26px;line-height:1.2;letter-spacing:-.005em;margin:0 0 8px 0;}
+  .section .section-sub{font-family:var(--font-body);font-size:14px;color:var(--ink-60);line-height:1.5;margin:0 0 20px 0;max-width:62ch;}
+  .trow{display:grid;grid-template-columns:34px 1fr auto;gap:2px 16px;padding:20px 0 18px;border-top:1px solid var(--ink-12);}
+  .trow:first-of-type{border-top:none;padding-top:6px;}
+  .trow .rk{font-family:var(--font-mono);font-size:12px;color:var(--signal);padding-top:6px;}
+  .trow .tname{font-family:var(--font-display);font-weight:500;font-size:21px;line-height:1.25;letter-spacing:-.005em;}
+  .trow .tcat{font-family:var(--font-mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-40);display:block;margin-bottom:3px;}
+  .trow .tstats{text-align:right;font-variant-numeric:tabular-nums;padding-top:2px;}
+  .trow .tstats .n1{font-family:var(--font-display);font-size:24px;font-weight:500;color:var(--signal);line-height:1;}
+  .trow .tstats .l1{font-family:var(--font-mono);font-size:9.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-40);display:block;margin-top:4px;}
+  .trow .tdetail{grid-column:2/4;}
+  .towns{display:flex;flex-wrap:wrap;gap:6px;margin:9px 0 2px;}
+  .town{font-family:var(--font-body);font-size:12.5px;background:var(--ink-06);border-radius:2px;padding:2px 9px;color:var(--ink-80);}
+  .town.first{box-shadow:inset 0 0 0 1px var(--signal);color:var(--ink);}
+  .townkey{font-family:var(--font-mono);font-size:10px;color:var(--ink-40);margin:6px 0 0;}
+  .cites{margin:10px 0 0;padding:0;list-style:none;}
+  .cites li{font-family:var(--font-mono);font-size:11.5px;line-height:1.7;color:var(--ink-60);overflow-wrap:anywhere;}
+  .cites .cd{color:var(--ink);}
+  .cites a{color:var(--signal);text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:1px;}
+  .cites a:hover{color:var(--ink);}
+  .cites a:focus-visible{outline:2px solid var(--signal);outline-offset:2px;}
+  .ticker{font-family:var(--font-mono);font-size:12px;font-weight:500;color:var(--edge);border:1px solid var(--edge);border-radius:2px;padding:1px 6px;margin-left:8px;vertical-align:3px;white-space:nowrap;}
+  .entnote{font-family:var(--font-body);font-size:12.5px;color:var(--ink-60);margin-top:7px;}
+  .method{margin-top:56px;padding:26px 28px;background:var(--ink-06);border-radius:2px;max-width:none;}
+  .method .kicker{margin-bottom:12px;}
+  .method p{font-family:var(--font-body);font-size:13.5px;line-height:1.6;color:var(--ink-80);margin:0 0 12px 0;max-width:66ch;}
+  .method .wtn{font-family:var(--font-mono);font-size:10.5px;line-height:1.7;color:var(--ink-40);display:block;overflow-wrap:anywhere;}
+  .cta{margin-top:48px;}
+  .cta p{font-family:var(--font-body);font-size:14.5px;line-height:1.6;color:var(--ink);max-width:62ch;margin:0 0 10px;}
+  .cta a{color:var(--signal);}
+  .foot{margin-top:56px;padding-top:18px;border-top:1px solid var(--ink-12);font-family:var(--font-mono);font-size:10.5px;letter-spacing:.03em;color:var(--ink-40);}
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <div class="wordmark">Municipal Alpha</div>
+    <div class="header-meta">State signal · Maine<br>90-day window · 2026-08-07</div>
+  </div>
+
+  <div class="hero">
+    <div class="eyebrow">Trending · State of Maine</div>
+    <h1>What Maine towns are taking up</h1>
+    <p class="lede">Topics and organizations gaining ground in Maine's municipal record — agendas, minutes, and meeting packets, read at the source. Ranked by <strong>towns engaging for the first time</strong> in the last 90 days. Every citation links to the town's own document.</p>
+    <div class="stat-strip">
+      <div class="stat"><div class="num">36</div><div class="lab">towns with a tracked topic event, 90d</div></div>
+      <div class="stat"><div class="num">101</div><div class="lab">towns with any dated record, 90d</div></div>
+      <div class="stat"><div class="num">191</div><div class="lab">Maine municipalities in corpus</div></div>
+    </div>
+    <p class="previewnote">Early look — unlisted, shared directly. Numbers are a live read of our coverage, not a census of Maine.</p>
+  </div>
+
+  <div class="section">
+    <div class="kicker">Part one</div>
+    <h2>Topics gaining ground</h2>
+    <p class="section-sub">A topic ranks by how many towns took it up for the first time in the window. Outlined towns are the first-timers.</p>
+
+    <div class="trow">
+      <div class="rk">01</div>
+      <div><span class="tcat">Development</span><span class="tname">Data center regulation</span></div>
+      <div class="tstats"><span class="n1">5</span><span class="l1">new towns · 7 in window</span></div>
+      <div class="tdetail">
+        <div class="towns"><span class="town first">Brunswick</span><span class="town first">Hollis</span><span class="town first">Kennebunk</span><span class="town first">North Berwick</span><span class="town first">Westbrook</span><span class="town">Winthrop</span><span class="town">Gorham</span></div>
+        <ul class="cites">
+          <li><span class="cd">2026-08-03</span> · Brunswick · <a href="https://www.brunswickme.gov/AgendaCenter/ViewFile/Agenda/_08032026-3897?html=true" rel="noopener">Town Council Workshop</a></li>
+          <li><span class="cd">2026-06-15</span> · Kennebunk · <a href="https://www.kennebunkmaine.us/AgendaCenter/ViewFile/Minutes/_06152026-3942" rel="noopener">Select Board minutes</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="trow">
+      <div class="rk">02</div>
+      <div><span class="tcat">Development</span><span class="tname">Zoning and site plan</span></div>
+      <div class="tstats"><span class="n1">4</span><span class="l1">new towns · 12 in window</span></div>
+      <div class="tdetail">
+        <div class="towns"><span class="town first">Kittery</span><span class="town first">North Berwick</span><span class="town first">Pittston</span><span class="town first">South Portland</span><span class="town">+ 8 more in window</span></div>
+        <ul class="cites">
+          <li><span class="cd">2026-08-06</span> · Wilton · <a href="https://www.wiltonmaine.gov/wp-content/uploads/2026/07/Planning-Board-Agenda-08-06-26.pdf" rel="noopener">Planning Board agenda</a></li>
+          <li><span class="cd">2026-08-04</span> · Falmouth · <a href="https://play.champds.com/ATT/falmouthme/2026-07/12643a8bd940a0b264287129b76d844e90dbd3ed.pdf" rel="noopener">Ordinance amendment: legislative mandates</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="trow">
+      <div class="rk">03</div>
+      <div><span class="tcat">Development</span><span class="tname">Animal control regulation</span></div>
+      <div class="tstats"><span class="n1">3</span><span class="l1">new towns · 5 in window</span></div>
+      <div class="tdetail">
+        <div class="towns"><span class="town first">Chelsea</span><span class="town first">Fairfield</span><span class="town first">Kennebunk</span><span class="town">Falmouth</span><span class="town">Harpswell</span></div>
+        <ul class="cites">
+          <li><span class="cd">2026-08-04</span> · Falmouth · <a href="https://play.champds.com/ATT/falmouthme/2026-07/12643a8bd940a0b264287129b76d844e90dbd3ed.pdf" rel="noopener">Ordinance amendment: legislative mandates</a></li>
+          <li><span class="cd">2026-06-18</span> · Harpswell · <a href="https://harpswell.govoffice.com/vertical/sites/%7B3F690C92-5208-4D62-BAFB-2559293F6CAE%7D/uploads/AGENDA06.18.26DOCS.pdf" rel="noopener">Select Board agenda</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="trow">
+      <div class="rk">04</div>
+      <div><span class="tcat">Waste</span><span class="tname">Solid waste operation</span></div>
+      <div class="tstats"><span class="n1">3</span><span class="l1">new towns · 5 in window</span></div>
+      <div class="tdetail">
+        <div class="towns"><span class="town first">Lewiston</span><span class="town first">South Portland</span><span class="town first">Wilton</span><span class="town">Falmouth</span><span class="town">Bar Harbor</span></div>
+        <ul class="cites">
+          <li><span class="cd">2026-07-21</span> · Falmouth · <a href="https://play.champds.com/falmouthme/minutespdf/3390" rel="noopener">Town Council annual work planning session, minutes</a></li>
+          <li><span class="cd">2026-07-21</span> · Lewiston · <a href="https://www.lewistonmaine.gov/ArchiveCenter/ViewFile/Item/6922" rel="noopener">City Council minutes</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="trow">
+      <div class="rk">05</div>
+      <div><span class="tcat">Development</span><span class="tname">Short-term rental</span></div>
+      <div class="tstats"><span class="n1">3</span><span class="l1">new towns · 5 in window</span></div>
+      <div class="tdetail">
+        <div class="towns"><span class="town first">Harpswell</span><span class="town first">Lewiston</span><span class="town first">Winthrop</span><span class="town">Saco</span><span class="town">Bar Harbor</span></div>
+        <ul class="cites">
+          <li><span class="cd">2026-07-21</span> · Lewiston · <a href="https://www.lewistonmaine.gov/ArchiveCenter/ViewFile/Item/6922" rel="noopener">City Council minutes</a></li>
+          <li><span class="cd">2026-06-18</span> · Harpswell · <a href="https://harpswell.govoffice.com/vertical/sites/%7B3F690C92-5208-4D62-BAFB-2559293F6CAE%7D/uploads/06.18.26.pdf" rel="noopener">Select Board agenda</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="trow">
+      <div class="rk">06</div>
+      <div><span class="tcat">Development</span><span class="tname">Historic preservation</span></div>
+      <div class="tstats"><span class="n1">3</span><span class="l1">new towns · 4 in window</span></div>
+      <div class="tdetail">
+        <ul class="cites">
+          <li><span class="cd">2026-07-01</span> · Berwick · <a href="https://www.berwickmaine.gov/Agendas-Minutes-BOA/2026/July%201%202026.pdf?t=202606221128400" rel="noopener">Board of Appeals, July 1</a></li>
+          <li><span class="cd">2026-06-22</span> · Gorham · <a href="https://me-gorham.civicplus.com/AgendaCenter/ViewFile/Agenda/_06222026-673?html=true" rel="noopener">Historic Preservation Commission agenda</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="trow">
+      <div class="rk">07</div>
+      <div><span class="tcat">Waste</span><span class="tname">Composting</span></div>
+      <div class="tstats"><span class="n1">3</span><span class="l1">new towns · 3 in window</span></div>
+      <div class="tdetail">
+        <ul class="cites">
+          <li><span class="cd">2026-07-14</span> · South Portland · <a href="https://southportland-gov.community.diligentoneplatform.com/document/42800" rel="noopener">City Council workshop</a></li>
+          <li><span class="cd">2026-06-23</span> · Wilton · <a href="https://www.wiltonmaine.gov/wp-content/uploads/2026/06/Selectboard-Minutes-03-17-2026.pdf" rel="noopener">Selectboard minutes</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="trow">
+      <div class="rk">08</div>
+      <div><span class="tcat">Waste</span><span class="tname">Pesticide regulation</span></div>
+      <div class="tstats"><span class="n1">2</span><span class="l1">new towns · 3 in window</span></div>
+      <div class="tdetail">
+        <ul class="cites">
+          <li><span class="cd">2026-07-20</span> · Falmouth · <a href="https://play.champds.com/ATT/falmouthme/2026-07/fdae9da04ec06745b72bc1cd18041d35b3478549.pdf" rel="noopener">Conservation Commission minutes</a></li>
+          <li><span class="cd">2026-07-13</span> · South Portland · <a href="https://southportland-gov.community.diligentoneplatform.com/document/42839" rel="noopener">Landcare Management Advisory Committee</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="kicker">Part two</div>
+    <h2>Organizations appearing in deliberative records</h2>
+    <p class="section-sub">Ranked on appearances in agendas, minutes, and packets only. An organization a town merely pays — check registers, warrants — never ranks here; when a payment-record count exists it is shown separately, because a town discussing an organization and a town paying one are different events. Public tickers shown where resolved.</p>
+
+    <div class="trow">
+      <div class="rk">01</div>
+      <div><span class="tname">Maine Municipal Association</span></div>
+      <div class="tstats"><span class="n1">4</span><span class="l1">new towns · 6 deliberative</span></div>
+      <div class="tdetail">
+        <div class="towns"><span class="town first">Falmouth</span><span class="town first">Hollis</span><span class="town first">Richmond</span><span class="town first">Union</span></div>
+        <ul class="cites">
+          <li><span class="cd">2026-07-21</span> · Richmond · agenda · <a href="https://www.richmondmaine.com/meetingfiles/42814/agendas/3fdd37f439e74a95b7afd7030f7df883.pdf" rel="noopener">Select Board agenda</a></li>
+          <li><span class="cd">2026-07-20</span> · Auburn · minutes · <a href="https://www.auburnmaine.gov/Documents/Government/City%20Council/7-20-26%20Council%20Packet.pdf?t=202607170841580" rel="noopener">City Council packet</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="trow">
+      <div class="rk">02</div>
+      <div><span class="tname">GPCOG</span></div>
+      <div class="tstats"><span class="n1">2</span><span class="l1">new towns · 5 deliberative</span></div>
+      <div class="tdetail">
+        <div class="towns"><span class="town first">Gorham</span><span class="town first">South Portland</span></div>
+        <ul class="cites">
+          <li><span class="cd">2026-07-21</span> · South Portland · agenda · <a href="https://southportland-gov.community.diligentoneplatform.com/document/43637" rel="noopener">City Council meeting agenda</a></li>
+          <li><span class="cd">2026-07-21</span> · Falmouth · packet · <a href="https://play.champds.com/falmouthme/agendapacketpdf/3390" rel="noopener">Town Council annual work planning session</a></li>
+        </ul>
+        <p class="entnote">Also present in one other record type.</p>
+      </div>
+    </div>
+
+    <div class="trow">
+      <div class="rk">03</div>
+      <div><span class="tname">American Legion</span></div>
+      <div class="tstats"><span class="n1">2</span><span class="l1">new towns · 3 deliberative</span></div>
+      <div class="tdetail">
+        <div class="towns"><span class="town first">Freeport</span><span class="town first">Turner</span></div>
+        <ul class="cites">
+          <li><span class="cd">2026-07-06</span> · Turner · agenda · <a href="https://www.turnermaine.com/wp-content/uploads/2026/07/Agenda-07-06-24.pdf" rel="noopener">Select Board agenda</a></li>
+          <li><span class="cd">2026-06-02</span> · Freeport · agenda · <a href="https://www.freeportmaine.com/AgendaCenter/ViewFile/Agenda/_06022026-856?html=true" rel="noopener">Town Council agenda</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="trow">
+      <div class="rk">04</div>
+      <div><span class="tname">Amazon<span class="ticker">AMZN</span></span></div>
+      <div class="tstats"><span class="n1">1</span><span class="l1">new town · 3 deliberative</span></div>
+      <div class="tdetail">
+        <div class="towns"><span class="town first">Wilton</span><span class="town">Waterville</span><span class="town">Gorham</span></div>
+        <ul class="cites">
+          <li><span class="cd">2026-07-28</span> · Waterville · minutes · <a href="https://www.waterville-me.gov/AgendaCenter/ViewFile/Minutes/_06092026-48" rel="noopener">City Council minutes</a></li>
+          <li><span class="cd">2026-06-02</span> · Gorham · minutes · <a href="https://me-gorham.civicplus.com/AgendaCenter/ViewFile/Minutes/_06022026-705?html=true" rel="noopener">Town Council minutes</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="method">
+    <div class="kicker">How to read this page</div>
+    <p>These rankings measure what our coverage saw spread, not what spread. 36 of the 191 Maine municipalities in our corpus produced a tracked topic event on a document dated inside the window; growing the corpus grows the numbers. If a subject's rank rises in a window where its new-adopter count rose no faster than the covered-town population, that movement is a coverage artifact, not adoption.</p>
+    <p>Dates are each document's own meeting date, never the date we found it. Organization rankings count deliberative records only; sightings without a document date are excluded and counted below.</p>
+    <span class="wtn">witness — topics: examined=7,158 events · shown=15 · below-min-towns=162 · future-dated dropped=3 &nbsp;|&nbsp; organizations: examined=15,476 dated sightings · groups=7,756 · noise-dropped=613 · undated-at-source=16,074 &nbsp;|&nbsp; window 90d · baseline 365d · data as of 2026-08-07</span>
+  </div>
+
+  <div class="cta">
+    <p>This is an early look at a page we can produce for any state, region, or watch list, from the same records that power our weekly briefs. If a topic or organization here is in your world, reply with the one you'd track — <a href="mailto:matt@municipalalpha.com?subject=Trending%20Maine%20%28early%20look%29">matt@municipalalpha.com</a>.</p>
+  </div>
+
+  <div class="foot">Municipal Alpha · municipalalpha.com · the public record, upstream of the decision</div>
+
+</div>
+</body>
+</html>
