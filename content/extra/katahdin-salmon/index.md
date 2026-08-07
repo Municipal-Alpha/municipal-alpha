@@ -58,7 +58,7 @@ The narrative comes first. The site plans, the state permits, and the constructi
 
 A $300 million investment does not announce itself with a press release on day one. It shows up first as a name in a cleanup partner list, then as a line in an airport-improvement memo, then eventually as a permit. By the time it reaches the headlines or the RFP, the story has been visible in the public record for months.
 
-Municipal Alpha captures that record across more than 3,300 municipalities and makes it searchable, so you can see what's happening before the decision is made.
+Municipal Alpha captures that record across more than 4,200 municipalities and makes it searchable, so you can see what's happening before the decision is made.
 
 For the Katahdin region, the record tells a clear story: a former paper-mill town turning a cleaned-up industrial site into a salmon farm and a biofuels plant, with Our Katahdin in the middle of it.
 
@@ -75,4 +75,4 @@ All documents published by the Town of Millinocket, Maine:
 
 ---
 
-*Municipal Alpha reads the public record across more than 3,300 municipalities so you can see what is coming, upstream of the decision. municipalalpha.com*
+*Municipal Alpha reads the public record across more than 4,200 municipalities so you can see what is coming, upstream of the decision. municipalalpha.com*
