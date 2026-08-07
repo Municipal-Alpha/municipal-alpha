@@ -50,7 +50,7 @@ Summary: A citizen complained about cell coverage. 32 months later, American Tow
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
 <p class="cs-intro">
-A citizen complained about cell coverage at a Board of Selectmen meeting in July 2023. <strong>32 months later, American Tower Company signed a 30-year ground lease.</strong> The entire chain is documented in public meeting minutes on amherstnh.gov. Every link below goes to the source document.
+No FCC Antenna Structure Registration. No FAA obstruction filing. No permit in any federal database. When American Tower signed a 30-year ground lease in Amherst, New Hampshire, <strong>the only record of the deal forming was in the meeting minutes of a town of 12,000.</strong> It started with a citizen complaint about cell coverage in July 2023 — 32 months, 17 signals, 15 public meetings. Every link below goes to the source document on amherstnh.gov.
 </p>
 
 <div class="cs-stats">
@@ -61,8 +61,9 @@ A citizen complained about cell coverage at a Board of Selectmen meeting in July
 </div>
 
 <div class="cs-window">
-<h3>What you're about to read</h3>
-<p>Every entry is a real document from the Town of Amherst, New Hampshire. Population: 12,000. The links go to amherstnh.gov. <span class="cs-highlight">No FCC or FAA registration exists for this tower.</span> The only record is in meeting minutes. If you weren't reading Amherst's Board of Selectmen minutes, you would not have known this deal existed until construction started.</p>
+<h3>The competitive window</h3>
+<p><span class="cs-highlight">23 months.</span> From the first vendor engagement (February 2024) to American Tower being named (January 2026). During that window, any infrastructure company reading Amherst's meeting minutes would have known a tower deal was forming. The town was actively seeking a partner. <span class="cs-highlight">The RFP never existed as a formal document.</span> The opportunity was only visible in meeting minutes.</p>
+<p>If you weren't reading Amherst's Board of Selectmen minutes, you would not have known this deal existed until construction started.</p>
 </div>
 
 ## The Signal Chain
@@ -194,16 +195,10 @@ A citizen complained about cell coverage at a Board of Selectmen meeting in July
 
 </div>
 
-<div class="cs-window">
-<h3>The competitive window</h3>
-<p><span class="cs-highlight">23 months.</span> From the first vendor engagement (February 2024) to American Tower being named (January 2026). During that window, any infrastructure company reading Amherst's meeting minutes would have known a tower deal was forming. The town was actively seeking a partner. The RFP never existed as a formal document. The opportunity was only visible in meeting minutes.</p>
-<p>No FCC Antenna Structure Registration. No FAA obstruction filing. No permit in any federal database. <span class="cs-highlight">The only record of this deal is in the minutes of a town of 12,000.</span></p>
-</div>
-
 <div class="cs-cta">
-<h3>This is one town. We monitor 4,200+.</h3>
-<p>The same signal chain exists in planning boards, town councils, and boards of selectmen across the country. Different projects, same pattern: the document trail starts months or years before the deal closes. Tell me what you're watching and I'll show you what the record says.</p>
-<a href="https://calendar.app.google/s6wDVSaJuqCkwcmg9" class="cta-button">Book a 15-Minute Data Review</a>
+<h3>Want the record on a town you're bidding?</h3>
+<p>This is one town. We monitor 4,200+ — and the same chain, citizen complaint to signed lease, is forming right now in towns you're bidding, leasing, or screening. Name the town and I'll send you what its record says: who's involved, how far along it is, and how long the window has been open.</p>
+<a href="mailto:matt@municipalalpha.com?subject=Record%20request%3A%20%5Byour%20town%5D" class="cta-button">Name your town</a>
 </div>
 
 <div class="cs-note">
