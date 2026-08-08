@@ -81,7 +81,7 @@ Summary: See the design work forming before the RFP is written. Master plans, ca
 <span class="lp-metric-label">Municipalities</span>
 </div>
 <div class="lp-metric">
-<span class="lp-metric-value">950,000+</span>
+<span class="lp-metric-value">960,000+</span>
 <span class="lp-metric-label">Documents</span>
 </div>
 <div class="lp-metric">

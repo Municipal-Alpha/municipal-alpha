@@ -1,8 +1,8 @@
 {
   "municipalities": "4,200+",
   "states": "51",
-  "documents": "950,000+",
-  "signals": "383,000+",
+  "documents": "960,000+",
+  "signals": "409,000+",
   "tower_sites": "64,000+",
   "permits": "44,000+",
   "tickers": "100+",
@@ -11,12 +11,12 @@
   "onboarded_total": "2,200+",
   "onboarded_total_exact": 2248,
   "active_90d": "1,400+",
-  "active_90d_exact": 1416,
+  "active_90d_exact": 1403,
   "active_30d": "700+",
-  "active_30d_exact": 775,
+  "active_30d_exact": 711,
   "inventoried": "35,000+",
   "inventoried_exact": 35492,
   "fingerprinted": "100+",
   "fingerprinted_exact": 174,
-  "updated": "2026-08-01"
+  "updated": "2026-08-08"
 }

@@ -81,7 +81,7 @@ Summary: Regional project visibility for EDOs, COGs, and planning commissions. E
 <span class="lp-metric-label">Municipalities</span>
 </div>
 <div class="lp-metric">
-<span class="lp-metric-value">950,000+</span>
+<span class="lp-metric-value">960,000+</span>
 <span class="lp-metric-label">Documents</span>
 </div>
 <div class="lp-metric">
