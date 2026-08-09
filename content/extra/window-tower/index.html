@@ -15,74 +15,177 @@
     --font-display:'Newsreader',Georgia,serif; --font-body:'DM Sans',-apple-system,sans-serif; --font-mono:'IBM Plex Mono',ui-monospace,monospace;
   }
   *,*::before,*::after{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
   html,body{margin:0;padding:0;background:var(--paper);color:var(--ink);font-family:var(--font-body);-webkit-font-smoothing:antialiased;}
-  .container{max-width:680px;margin:0 auto;padding:0 36px 80px 36px;}
-  .header{position:sticky;top:0;z-index:10;background:var(--paper);display:flex;justify-content:space-between;align-items:center;padding:22px 0 16px 0;border-bottom:1px solid var(--ink-12);margin-bottom:40px;}
-  .wordmark{font-family:var(--font-display);font-weight:500;font-size:22px;}
-  .header-meta{font-family:var(--font-mono);font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-60);text-align:right;line-height:1.4;}
+  .container{max-width:760px;margin:0 auto;padding:0 32px;}
+  .header{position:sticky;top:0;z-index:10;background:var(--paper);border-bottom:1px solid var(--ink-12);}
+  .header .container{display:flex;justify-content:space-between;align-items:center;padding-top:16px;padding-bottom:14px;}
+  .wordmark{font-family:var(--font-display);font-weight:500;font-size:20px;}
+  .header .hbtn{font-family:var(--font-mono);font-size:12px;background:var(--signal);color:#fff;padding:8px 14px;border-radius:2px;text-decoration:none;white-space:nowrap;}
+  .header .hbtn:hover{background:var(--ink);}
+  .hero{padding:56px 0 40px;}
   .eyebrow{font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--signal);margin-bottom:14px;}
-  h1{font-family:var(--font-display);font-weight:500;font-size:clamp(30px,5.5vw,40px);line-height:1.1;letter-spacing:-.01em;margin:0 0 16px 0;}
-  .lede{font-size:16px;line-height:1.6;color:var(--ink-60);margin:0 0 8px;max-width:60ch;}
-  .lede strong{color:var(--ink);font-weight:600;}
-  .proof{margin:36px 0;padding:26px 30px;background:var(--ink);color:var(--paper);border-radius:2px;}
-  .proof .kicker{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--signal);margin:0 0 14px 0;}
-  .proof-row{display:grid;grid-template-columns:96px 1fr;gap:14px;padding:8px 0;border-top:1px solid rgba(247,244,240,.12);}
+  h1{font-family:var(--font-display);font-weight:500;font-size:clamp(32px,6vw,46px);line-height:1.06;letter-spacing:-.012em;margin:0 0 18px 0;}
+  .sub{font-size:17px;line-height:1.6;color:var(--ink-60);margin:0 0 26px;max-width:56ch;}
+  .sub strong{color:var(--ink);font-weight:600;}
+  .btn{display:inline-block;font-family:var(--font-mono);font-size:14px;letter-spacing:.02em;background:var(--signal);color:#fff;padding:14px 26px;border-radius:2px;text-decoration:none;}
+  .btn:hover{background:var(--ink);}
+  .btn-sub{display:block;font-family:var(--font-mono);font-size:11px;color:var(--ink-40);margin-top:10px;}
+  .cred{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:34px;padding-top:20px;border-top:1px solid var(--ink-12);}
+  .cred span{font-family:var(--font-mono);font-size:11.5px;letter-spacing:.03em;color:var(--ink-60);}
+  .cred b{color:var(--ink);font-weight:600;}
+  section{padding:44px 0 8px;}
+  .kicker{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--signal);margin:0 0 8px 0;}
+  h2{font-family:var(--font-display);font-weight:500;font-size:27px;line-height:1.15;margin:0 0 12px;letter-spacing:-.005em;}
+  p{font-size:15px;line-height:1.65;color:var(--ink);margin:0 0 14px;max-width:60ch;}
+  p strong{font-weight:600;}
+  .proof{margin:8px 0 0;padding:26px 30px;background:var(--ink);color:var(--paper);border-radius:2px;}
+  .proof .kicker{margin-bottom:14px;}
+  .proof-row{display:grid;grid-template-columns:96px 1fr;gap:14px;padding:9px 0;border-top:1px solid rgba(247,244,240,.12);}
   .proof-row:first-of-type{border-top:none;}
   .proof-row .d{font-family:var(--font-mono);font-size:11.5px;color:var(--signal);padding-top:2px;}
   .proof-row .t{font-size:13.5px;line-height:1.55;color:rgba(247,244,240,.85);}
   .proof-row .t em{font-family:var(--font-display);font-style:italic;color:var(--paper);}
-  .proof .punch{font-family:var(--font-display);font-size:19px;font-weight:500;color:var(--paper);margin:16px 0 0;line-height:1.35;}
+  .proof .punch{font-family:var(--font-display);font-size:20px;font-weight:500;color:var(--paper);margin:18px 0 0;line-height:1.3;}
   .proof .punch span{color:var(--signal);}
-  h2{font-family:var(--font-display);font-weight:500;font-size:23px;line-height:1.2;margin:44px 0 10px;}
-  p{font-size:14.5px;line-height:1.65;color:var(--ink);margin:0 0 14px;max-width:60ch;}
-  p strong{font-weight:600;}
-  .steps{display:grid;gap:14px;margin:20px 0;}
-  .step{display:grid;grid-template-columns:26px 1fr;gap:14px;align-items:baseline;}
-  .step .n{font-family:var(--font-mono);font-size:12px;color:var(--signal);}
-  .step .b{font-size:14px;line-height:1.6;color:var(--ink);max-width:58ch;}
+  .brief{border:1px solid var(--ink-12);border-radius:3px;background:#FFFDF9;box-shadow:0 2px 14px rgba(12,12,12,.06);margin:18px 0 6px;}
+  .brief-bar{display:flex;justify-content:space-between;align-items:center;background:var(--ink-06);padding:10px 18px;border-bottom:1px solid var(--ink-12);}
+  .brief-bar .bt{font-family:var(--font-mono);font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-60);}
+  .brief-bar .bd{font-family:var(--font-mono);font-size:11px;color:var(--ink-40);}
+  .brief-body{padding:16px 20px 12px;}
+  .bitem{padding:11px 0;border-top:1px dashed var(--ink-12);}
+  .bitem:first-child{border-top:none;}
+  .bitem .bt1{font-size:14px;font-weight:600;color:var(--ink);line-height:1.4;}
+  .bitem .bt2{font-size:13px;color:var(--ink-80);line-height:1.55;margin-top:3px;}
+  .bitem .bm{font-family:var(--font-mono);font-size:10.5px;color:var(--signal);margin-top:5px;}
+  .brief-foot{font-family:var(--font-mono);font-size:10px;color:var(--ink-40);padding:10px 20px 14px;border-top:1px solid var(--ink-12);line-height:1.6;}
+  .steps{display:grid;gap:16px;margin:22px 0 4px;}
+  .step{display:grid;grid-template-columns:30px 1fr;gap:14px;align-items:baseline;}
+  .step .n{font-family:var(--font-mono);font-size:13px;color:var(--signal);}
+  .step .b{font-size:14.5px;line-height:1.6;color:var(--ink);max-width:58ch;}
   .step .b strong{font-weight:600;}
-  .promise{font-family:var(--font-display);font-style:italic;font-size:17.5px;line-height:1.55;color:var(--ink-80);border-left:2px solid var(--signal);padding:4px 0 4px 18px;margin:36px 0;max-width:56ch;}
-  .cta{margin-top:44px;padding:30px;background:var(--ink-06);border-radius:2px;}
-  .cta h2{margin-top:0;}
-  .cta .btn{display:inline-block;font-family:var(--font-mono);font-size:13px;letter-spacing:.02em;background:var(--signal);color:#fff;padding:11px 20px;border-radius:2px;text-decoration:none;margin-top:8px;}
-  .cta .btn:hover{background:var(--ink);}
-  .foot{margin-top:52px;padding-top:16px;border-top:1px solid var(--ink-12);font-family:var(--font-mono);font-size:10.5px;color:var(--ink-40);line-height:1.7;}
+  .risk{border-left:2px solid var(--edge);padding:4px 0 4px 18px;margin:24px 0 6px;max-width:56ch;}
+  .risk p{font-size:14px;color:var(--ink-80);margin:0;}
+  .risk b{color:var(--edge);}
+  .diff{display:grid;gap:12px;margin:20px 0 4px;}
+  .diff-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;padding:12px 0;border-top:1px solid var(--ink-12);}
+  .diff-row:first-of-type{border-top:none;}
+  .diff-row .a{font-size:13.5px;color:var(--ink-40);line-height:1.55;}
+  .diff-row .z{font-size:13.5px;color:var(--ink);line-height:1.55;font-weight:500;}
+  .diff-h{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .diff-h span{font-family:var(--font-mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-40);}
+  .faq{margin:20px 0 4px;}
+  .faq details{border-top:1px solid var(--ink-12);padding:14px 0;}
+  .faq details:first-of-type{border-top:none;}
+  .faq summary{font-size:15px;font-weight:600;color:var(--ink);cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px;}
+  .faq summary::after{content:'+';font-family:var(--font-mono);color:var(--signal);}
+  .faq details[open] summary::after{content:'−';}
+  .faq details p{margin-top:10px;font-size:14px;color:var(--ink-80);}
+  .final{margin:52px 0 0;padding:40px 36px;background:var(--ink);color:var(--paper);border-radius:2px;text-align:left;}
+  .final h2{color:var(--paper);font-size:30px;margin-bottom:10px;}
+  .final p{color:rgba(247,244,240,.8);max-width:56ch;}
+  .final .btn{margin-top:8px;}
+  .final .btn-sub{color:rgba(247,244,240,.5);}
+  .foot{margin:44px 0 0;padding:20px 0 60px;border-top:1px solid var(--ink-12);font-family:var(--font-mono);font-size:10.5px;color:var(--ink-40);line-height:1.7;}
+  @media (max-width:560px){ .diff-row,.diff-h{grid-template-columns:1fr;} .diff-h span:last-child{display:none;} }
 </style>
 </head>
 <body>
+
+<div class="header"><div class="container">
+  <div class="wordmark">Municipal Alpha</div>
+  <a class="hbtn" href="mailto:matt@municipalalpha.com?subject=Record%20request%3A%20%5Byour%20town%5D">Name your town</a>
+</div></div>
+
 <div class="container">
 
-  <div class="header">
-    <div class="wordmark">Municipal Alpha</div>
-    <div class="header-meta">For tower &amp; infrastructure teams<br>2026-08</div>
+  <div class="hero">
+    <div class="eyebrow">For tower &amp; infrastructure teams</div>
+    <h1>The lease was in the minutes for 23 months.</h1>
+    <p class="sub">A tower deal formed in Amherst NH's public minutes for almost two years before American Tower was named. No RFP ever existed, no FCC or FAA filing preceded it. <strong>We watch for that formation pattern — and the first run is free.</strong></p>
+    <a class="btn" href="mailto:matt@municipalalpha.com?subject=Record%20request%3A%20%5Byour%20town%5D">Name your town</a>
+    <span class="btn-sub">Free. No contract, no call required — reply lands in your inbox.</span>
+    <div class="cred">
+      <span><b>4,200+</b> municipalities read continuously</span>
+      <span><b>950,000+</b> documents collected</span>
+      <span>every claim <b>linked to the town's own record</b></span>
+    </div>
   </div>
 
-  <div class="eyebrow">For tower &amp; infrastructure teams</div>
-  <h1>The lease was in the minutes for 23 months.</h1>
-  <p class="lede">In Amherst, New Hampshire, a tower deal formed in public meeting minutes for almost two years before American Tower was named. No RFP ever existed. No FCC registration, no FAA filing, no federal record. <strong>The only early surface was the minutes of a town of 12,000.</strong></p>
+  <section>
+    <div class="kicker">The problem</div>
+    <h2>The deals that never hit your pipeline were public the whole time</h2>
+    <p>Your BD pipeline sees RFPs, filings, and relationships. But small towns don't issue RFPs for tower deals — they complain about coverage at a selectmen's meeting, form a committee, and start talking to whoever shows up.</p>
+<p><strong>By the time a deal is visible in any federal database, it's signed.</strong> The only early surface is the minutes of towns too small for anyone to staff.</p>
+  </section>
 
-  <div class="proof">
-    <div class="kicker">The window, from the town's own record — Amherst, NH</div>
-    <div class="proof-row"><div class="d">Jul 2023</div><div class="t">A citizen raises cell coverage as a safety concern at a Board of Selectmen meeting. The board agrees to <em>investigate</em>.</div></div>
-    <div class="proof-row"><div class="d">Feb 2024</div><div class="t">First vendor engagement. The town is actively seeking a partner — visible only in meeting minutes.</div></div>
-    <div class="proof-row"><div class="d">Jan 2026</div><div class="t">American Tower is named. 30-year ground lease follows. 17 signals across 15 public meetings, start to finish.</div></div>
-    <p class="punch">Competitive window: <span>23 months</span> in which any company reading the minutes would have known.</p>
-  </div>
+  <section>
+    <div class="kicker">Proof, not promise</div>
+    <h2>The whole arc, from the town's own record</h2>
+    <div class="proof">
+      <div class="kicker">Amherst, NH — population 12,000</div>
+      <div class="proof-row"><div class="d">Jul 2023</div><div class="t">A citizen raises cell coverage as a safety concern. The Board of Selectmen agrees to <em>investigate</em>.</div></div>
+      <div class="proof-row"><div class="d">Feb 2024</div><div class="t">First vendor engagement. The town is actively seeking a partner — visible only in meeting minutes.</div></div>
+      <div class="proof-row"><div class="d">Jan 2026</div><div class="t">American Tower is named. 30-year ground lease. 17 signals across 15 public meetings, start to finish.</div></div>
+      <p class="punch">Competitive window: <span>23 months</span> in which any company reading the minutes would have known.</p>
+    </div>
+  </section>
 
-  <p class="promise">Your business is about being right, and right first. We help you do that, provably. And we don't get paid until you see the proof.</p>
+  <section>
+    <div class="kicker">The product</div>
+    <h2>What arrives, every week</h2>
+    <p>A reviewed weekly watch on your build markets — coverage complaints becoming committee items becoming towns seeking partners — each item linked to the board document it came from.</p>
+    <div class="brief">
+      <div class="brief-bar"><span class="bt">Weekly watch — your build markets</span><span class="bd">sample items, from real records</span></div>
+      <div class="brief-body">
+        <div class="bitem"><div class="bt1">Board of Selectmen: citizen cell-coverage complaint referred for investigation</div><div class="bt2">The Amherst pattern, day one: a coverage gap named in public, a board that agrees to look into it. This is where 23-month windows open.</div><div class="bm">minutes · first mention in our record for this town</div></div>
+        <div class="bitem"><div class="bt1">Town considering “collaborating with a cell company” for new antenna mast; administrator to find an independent agent</div><div class="bt2">Formation language: the town is organizing itself to seek a partner. No RFP exists; none may ever exist.</div><div class="bm">minutes · 3 months after first mention</div></div>
+        <div class="bitem"><div class="bt1">45 towns show lease-forming activity in our record since January 2025</div><div class="bt2">The pattern recurs at scale — each one a window that closes the day a competitor's name appears in the minutes.</div><div class="bm">corpus scan · your markets filtered on request</div></div>
+      </div>
+      <div class="brief-foot">Every item links to the source document. Items we hold but cannot read are disclosed, never summarized. Counts always carry their coverage denominator.</div>
+    </div>
+    <p style="margin-top:14px">Prefer paying nothing until something closes? We can register the leads we surface in your markets — a fee exists only if the town's own minutes later record your lease.</p>
+  </section>
 
-  <h2>How the proof works</h2>
-  <div class="steps">
-    <div class="step"><div class="n">01</div><div class="b"><strong>The record, first.</strong> Name your build markets. We watch for exactly this formation pattern — coverage complaints becoming committee items becoming a town seeking a partner — and send it when it starts, not when it closes.</div></div>
-    <div class="step"><div class="n">02</div><div class="b"><strong>Then a real run, free.</strong> A standing watch on your named markets for a fixed run, from the same system our paying customers use. Every item linked to the town's own document.</div></div>
-    <div class="step"><div class="n">03</div><div class="b"><strong>Then you decide.</strong> After the run we ask one question: was this useful? If the answer is no, it stops, no invoice, no hard feelings. If you find you don't want it to stop, that is the answer too.</div></div>
-  </div>
-  <p>If you'd rather pay nothing until something closes: we can register the leads we surface, and a fee exists only if the town's own minutes later record your lease. Every claim we ship links to the town's own published document, verified against its full text before you see it.</p>
+  <section>
+    <div class="kicker">How it works</div>
+    <h2>Proof first. Payment after. In that order.</h2>
+    <div class="steps">
+      <div class="step"><div class="n">01</div><div class="b"><strong>Name your build markets — or one town you're bidding.</strong> We send what the record shows there: who's involved, how far along it is, how long the window has been open.</div></div>
+      <div class="step"><div class="n">02</div><div class="b"><strong>The watch runs free for a fixed run.</strong> Weekly on your named markets, from the same system our paying customers use. Formation signals, not closed-deal news.</div></div>
+      <div class="step"><div class="n">03</div><div class="b"><strong>Then one question: was this useful?</strong> If no, it stops — no invoice, no follow-up sequence. If you find you don't want it to stop, that's the answer too, and we price from there.</div></div>
+    </div>
+    <div class="risk"><p><b>What's the risk?</b> That is the honest question to ask — and the answer is: your attention, nothing else. No contract, no payment details, no procurement, no integration. The only thing you can lose by asking is not knowing.</p></div>
+    <p style="margin-top:18px"><a class="btn" href="mailto:matt@municipalalpha.com?subject=Record%20request%3A%20%5Byour%20town%5D">Name your town</a></p>
+  </section>
 
-  <div class="cta">
+  <section>
+    <div class="kicker">Why this is different</div>
+    <h2>FCC data tells you about towers that exist. This is about the ones forming.</h2>
+    <div class="diff">
+      <div class="diff-h"><span>What you have today</span><span>What the record adds</span></div>
+      <div class="diff-row"><div class="a">ASR/ULS and permit databases record deals after they're structured — the registration is the end of the window, not the start.</div><div class="z">The minutes carry the deal at formation: the complaint, the committee, the town seeking a partner — months to years earlier.</div></div>
+      <div class="diff-row"><div class="a">In-house site acquisition covers markets your people know and towns big enough to matter individually.</div><div class="z">A watch reads every town in your markets with equal attention — the 12,000-person towns where nobody goes to meetings are exactly where windows stay open longest.</div></div>
+      <div class="diff-row"><div class="a">Broker networks surface deals someone wants to sell you.</div><div class="z">The record surfaces deals nobody has monetized yet — no intermediary, no marked-up asset.</div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="kicker">Questions you should ask</div>
+    <h2>Straight answers</h2>
+    <div class="faq">
+      <details><summary>Is my geography even covered?</summary><p>Name your markets and we'll answer with numbers before anything starts. Where our depth is thin we say so and onboard those towns first — targeted onboarding is the same machinery this business runs on.</p></details>
+      <details><summary>How do I know the items are real?</summary><p>Every item links to the town's own published document, and every claim is verified against the document's full text before you see it. Dates are the document's own meeting dates, never the date we found it. When we hold a document we cannot read, we say so instead of guessing.</p></details>
+      <details><summary>What does it cost?</summary><p>The proof run costs nothing. If it proves out, pricing is sized to what the work is worth in your world — a per-town record pull at the bid moment, a standing watch on your markets, or the registered-lead shape — where a fee exists only when the minutes record your close. We quote after you've seen the product working on your geography, not before.</p></details>
+      <details><summary>We build site acquisition in-house. Why would we buy this?</summary><p>Keep building in-house — this isn't a replacement for your team, it's the input they can't staff: continuous reading of every small-town meeting record in your markets. Your people take the meetings that matter; the watch tells them which rooms those are, earlier.</p></details>
+    </div>
+  </section>
+
+  <div class="final">
     <h2>Want the record on a town you're bidding?</h2>
     <p>Name the town and I'll send you what its record says: who's involved, how far along it is, and how long the window has been open.</p>
     <a class="btn" href="mailto:matt@municipalalpha.com?subject=Record%20request%3A%20%5Byour%20town%5D">Name your town</a>
+    <span class="btn-sub">One email. Free. The reply is the product, not a pitch.</span>
   </div>
 
   <div class="foot">Municipal Alpha reads the public record of 4,200+ municipalities, upstream of the decision. This page is unlisted and was shared with you directly. municipalalpha.com</div>
