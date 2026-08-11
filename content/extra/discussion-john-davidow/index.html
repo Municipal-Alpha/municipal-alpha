@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Municipal Alpha for newsrooms</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,500&family=DM+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+  :root {
+    --ink: #0C0C0C;
+    --paper: #F7F4F0;
+    --signal: #E8512D;
+    --edge: #1B4332;
+    --ink-80: rgba(12, 12, 12, 0.80);
+    --ink-60: rgba(12, 12, 12, 0.60);
+    --ink-40: rgba(12, 12, 12, 0.40);
+    --ink-12: rgba(12, 12, 12, 0.12);
+    --ink-06: rgba(12, 12, 12, 0.06);
+    --signal-06: rgba(232, 81, 45, 0.06);
+    --font-display: 'Newsreader', Georgia, serif;
+    --font-body: 'DM Sans', -apple-system, sans-serif;
+    --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    background: var(--paper); color: var(--ink);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+  }
+  .container { max-width: 780px; margin: 0 auto; padding: 0 36px 90px 36px; }
+
+  .header {
+    display: flex; justify-content: space-between; align-items: baseline;
+    padding: 24px 0 16px 0; border-bottom: 1px solid var(--ink-12); margin-bottom: 36px;
+  }
+  .wordmark { font-family: var(--font-display); font-weight: 500; font-size: 22px; }
+  .header-meta {
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.04em;
+    text-transform: uppercase; color: var(--ink-60); text-align: right; line-height: 1.5;
+  }
+
+  h1 { font-family: var(--font-display); font-weight: 500; font-size: 38px; line-height: 1.1; margin: 0 0 16px 0; }
+  .lede { font-size: 16px; line-height: 1.6; color: var(--ink-80); margin: 0 0 10px 0; max-width: 64ch; }
+
+  .note {
+    background: var(--signal-06); border-left: 2px solid var(--signal);
+    padding: 20px 24px; margin: 32px 0 0 0;
+  }
+  .note p { font-size: 15px; line-height: 1.65; margin: 0 0 12px 0; max-width: 62ch; }
+  .note p:last-child { margin-bottom: 0; }
+
+  .section { margin-top: 54px; padding-top: 30px; border-top: 1px solid var(--ink-12); }
+  .kicker {
+    font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.08em;
+    text-transform: uppercase; color: var(--signal); margin: 0 0 10px 0;
+  }
+  h2 { font-family: var(--font-display); font-weight: 500; font-size: 27px; line-height: 1.2; margin: 0 0 12px 0; }
+  h3 { font-family: var(--font-display); font-weight: 500; font-size: 19px; line-height: 1.3; margin: 32px 0 10px 0; }
+  p { font-size: 15px; line-height: 1.65; color: var(--ink); margin: 0 0 14px 0; max-width: 64ch; }
+  a { color: var(--signal); text-decoration: none; border-bottom: 1px solid rgba(232,81,45,0.35); }
+  a:hover { border-bottom-color: var(--signal); }
+
+  .artifact {
+    background: #FFFFFF; border: 1px solid var(--ink-12); border-radius: 2px;
+    padding: 0; margin: 22px 0; overflow: hidden;
+  }
+  .artifact-label {
+    font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--ink-60); background: var(--ink-06); padding: 9px 18px; border-bottom: 1px solid var(--ink-12);
+  }
+  .artifact-body { padding: 20px 22px; }
+  .artifact-body p { font-size: 14.5px; max-width: none; }
+  .artifact-body p:last-child { margin-bottom: 0; }
+
+  .item { padding: 14px 0; border-top: 1px dashed var(--ink-12); }
+  .item:first-child { border-top: none; padding-top: 0; }
+  .item-head { font-family: var(--font-mono); font-size: 11.5px; color: var(--ink-60); margin-bottom: 5px; letter-spacing: 0.02em; }
+  .item-title { font-weight: 600; font-size: 14.5px; margin-bottom: 5px; }
+  .item-body { font-size: 14px; line-height: 1.55; color: var(--ink-80); margin-bottom: 6px; }
+  .item-src { font-family: var(--font-mono); font-size: 11px; }
+
+  .timeline { margin: 26px 0 0 0; }
+  .beat { display: grid; grid-template-columns: 116px 1fr; gap: 20px; padding: 20px 0; border-top: 1px solid var(--ink-12); }
+  .beat:last-child { border-bottom: 1px solid var(--ink-12); }
+  .beat-date { font-family: var(--font-mono); font-size: 11.5px; color: var(--signal); letter-spacing: 0.03em; line-height: 1.5; padding-top: 3px; }
+  .beat-date span { display: block; color: var(--ink-40); text-transform: uppercase; font-size: 10px; margin-top: 4px; }
+  .beat-body p { font-size: 14.5px; margin-bottom: 9px; }
+  .beat-body p:last-child { margin-bottom: 0; }
+  blockquote {
+    margin: 0 0 10px 0; padding: 10px 0 10px 16px; border-left: 2px solid var(--ink-12);
+    font-family: var(--font-display); font-size: 15px; line-height: 1.55; color: var(--ink-80); font-style: italic;
+  }
+  .src { font-family: var(--font-mono); font-size: 11px; color: var(--ink-60); }
+
+  .callout {
+    border: 1px solid var(--signal); background: var(--signal-06);
+    padding: 20px 24px; margin: 26px 0;
+  }
+  .callout p { margin-bottom: 10px; }
+  .callout p:last-child { margin-bottom: 0; }
+
+  ul.plain { list-style: none; padding: 0; margin: 6px 0 16px 0; display: grid; gap: 11px; }
+  ul.plain li { font-size: 15px; line-height: 1.55; padding-left: 18px; position: relative; max-width: 64ch; }
+  ul.plain li::before { content: ""; position: absolute; left: 0; top: 8px; width: 6px; height: 6px; background: var(--signal); border-radius: 1px; }
+
+  .footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--ink-12); }
+  .footer p { font-size: 13.5px; color: var(--ink-60); }
+
+  @media (max-width: 620px) {
+    .container { padding: 0 20px 60px 20px; }
+    h1 { font-size: 30px; }
+    .beat { grid-template-columns: 1fr; gap: 6px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <div class="wordmark">municip&#945;l alpha</div>
+    <div class="header-meta">Prepared for John Davidow<br>August 11, 2026</div>
+  </div>
+
+  <h1>What this looks like in a newsroom</h1>
+  <p class="lede">Two things, both built from records that were already public. A weekly read on one town, and a single story reconstructed from 26 months of a city's own minutes. Every claim below links to the document it came from, so you can check any of it.</p>
+
+  <div class="note">
+    <p>John, rather than describe this again, here is the thing itself.</p>
+    <p>The first half is the ongoing product, a week of one Maine town. The second half is the other mode, where you point it at one subject and read backward through the record. I picked a story where the paper trail runs 26 months ahead of the tax bill.</p>
+    <p>What would help me most is at the end, and it is small.</p>
+  </div>
+
+  <!-- ============ PART ONE ============ -->
+  <div class="section">
+    <p class="kicker">Part one &middot; the weekly read</p>
+    <h2>One town, one week</h2>
+    <p>Every weekday we read the planning, zoning, council, committee and finance records that Maine municipalities post, and every Monday a community gets a short brief on what moved. Below is the Falmouth brief from the run of August 10, 2026, going to the Maine Trust for Local News. Items are trimmed for length here and nothing is reworded.</p>
+
+    <div class="artifact">
+      <div class="artifact-label">Weekly digest &middot; Falmouth &middot; week ending August 10, 2026 &middot; excerpt</div>
+      <div class="artifact-body">
+        <p>Falmouth's Town Council has scheduled a special meeting for August 10 to hold a public hearing on amendments to Chapters II-19 and II-24 of the Code of Ordinances. These changes are proposed to comply with state mandates regarding poultry, setback variances, and energy systems. The Ordinance Committee's May 5 meeting included discussion of a parking amendment related to policing issues on Clearwater Drive and the Tide Water development easement. The Planning Board's August 4 meeting has a proposal for 12 signs for NDVH at 422 US Route 1 up for administrative action.</p>
+      </div>
+    </div>
+
+    <div class="artifact">
+      <div class="artifact-label">This week's items &middot; each with its source document</div>
+      <div class="artifact-body">
+        <div class="item">
+          <div class="item-head">Town Council &middot; agenda &middot; 2026-08-10</div>
+          <div class="item-title">2026.08.10 Special Town Council Meeting</div>
+          <div class="item-body">The Town Council's special meeting agenda includes a public hearing on amendments to ordinances regarding poultry, setback variances, and energy systems, plus a public forum on the Johnson Road/Route 88 intersection.</div>
+          <div class="item-src"><a href="https://play.champds.com/falmouthme/agendapdf/3394">open the agenda &#8594;</a></div>
+        </div>
+        <div class="item">
+          <div class="item-head">Town Council &middot; ordinance &middot; 2026-08-10</div>
+          <div class="item-title">Ordinance Amendment, Legislative Mandates</div>
+          <div class="item-body">This ordinance details amendments to Chapters II-19 and II-24 of the Code of Ordinances to comply with state mandates on poultry, setback variances, and energy systems.</div>
+          <div class="item-src"><a href="https://play.champds.com/ATT/falmouthme/2026-08/83bd4682374c6e9229f3a31183d08e5b3d1b4077.pdf">open the ordinance &#8594;</a></div>
+        </div>
+        <div class="item">
+          <div class="item-head">Planning Board &middot; attachment &middot; 2026-08-04</div>
+          <div class="item-title">VetClinic_PlannerReview_08.26.pdf</div>
+          <div class="item-body">NDVH is seeking approval for 12 signs at 422 US Route 1, including one freestanding, three directional, and eight wall signs.</div>
+          <div class="item-src"><a href="https://play.champds.com/ATT/falmouthme/2026-07/650fe423f7beccea091337da3f8c59ce57017084.pdf">open the planner review &#8594;</a></div>
+        </div>
+        <div class="item">
+          <div class="item-head">Planning Board &middot; minutes &middot; 2026-07-07</div>
+          <div class="item-title">2026.07.07 Minutes.pdf</div>
+          <div class="item-body">Routine: The Planning Board approved minutes from June 2, 2026, and a subdivision amendment for Winnwood Farm Way.</div>
+          <div class="item-src"><a href="https://play.champds.com/ATT/falmouthme/2026-08/12e538a2b683fad5bda36b85cbfd5def2e3e66a3.pdf">open the minutes &#8594;</a></div>
+        </div>
+      </div>
+    </div>
+
+    <p>Most weeks in most towns read like that, and the word "routine" on an item is doing real work. A brief that flags everything is the same as a brief that flags nothing, so the ordinary items stay in, labelled, and the editor's eye goes where the label changes.</p>
+
+    <h3>The part newsroom people react to</h3>
+    <p>Each brief carries a section on topics moving through Maine municipal records that the newsroom's own coverage list does not name. It ranks by how many towns are on a topic <em>for the first time</em> in our 365-day record, which measures what is spreading rather than what is large. Coverage is statewide on purpose, because a topic spreading in towns a newsroom does not cover is the part it cannot see from its own desk.</p>
+
+    <div class="artifact">
+      <div class="artifact-label">Emerging topics &middot; from the same August 10 brief &middot; excerpt</div>
+      <div class="artifact-body">
+        <p><strong>Animal control regulation.</strong> 5 towns in the last 90 days, 3 of them appearing on this topic for the first time in our 365-day record (Chelsea, Fairfield, Kennebunk).</p>
+        <p>Falmouth is scheduled to amend its ordinance to allow the keeping of poultry in all zoning districts that allow residential uses, in response to a new state law. Harpswell's Select Board set the fine schedule for its animal control ordinance on June 18, $50 for a first offense and $125 after that, following voter approval of the ordinance changes on June 9. Fairfield's Town Council discussed proposed amendments to the Public Safety Ordinance regarding the regulation of chickens and roosters, with a councilor raising concern about regulating chickens and the town manager clarifying the amendment would address noise complaints.</p>
+      </div>
+    </div>
+
+    <p>Five towns took up animal control inside 90 days, three of them for the first time in our record. The stated drivers are not the same: Falmouth's amendment answers a new state law, Harpswell was setting fines after a June 9 vote, Fairfield was dealing with noise complaints. Whether there is one cause underneath is the reporter's question, and it is a question no single town's agenda raises, because it only becomes visible when the towns are read together.</p>
+
+    <p>It is also where the reporting starts rather than ends. Falmouth's poultry amendment was still a proposal on August 10. Harpswell had already set its fines for violations on town-owned property, $50 then $125, on June 18 (<a href="https://harpswell.govoffice.com/vertical/sites/%7B3F690C92-5208-4D62-BAFB-2559293F6CAE%7D/uploads/06.18.26.pdf">minutes</a>). And in Fairfield the same question had already split the council. Reading the full minutes behind that one line, the town manager, Michelle Flewelling, told the council the amendment came after complaints about nuisance roosters and would not permit chickens where they are currently prohibited, and Councilor Lawrence objected that regulating chickens was unnecessary. The council then passed it:</p>
+
+    <blockquote>Item 26-61: Ordered that the Fairfield Town Council hereby approves amendments to the Public Safety Ordinance, Article 6, Section 4. &hellip; Motion by Thibodeau and seconded by Townsend. Motion carried 3-2</blockquote>
+    <p class="src">Fairfield, ME &middot; Town Council &middot; minutes &middot; May 27, 2026 &middot; <a href="https://me-fairfield.civicplus.com/AgendaCenter/ViewFile/Minutes/_05272026-185?html=true">open the minutes &#8594;</a></p>
+
+    <p>Those minutes record twelve votes that night. Ten carried 5-0, one carried 4-0-1 with an abstention, and the roosters carried 3-2. It was the only item anyone voted against. That is a story about a divided small-town council sitting in a public document, and the only thing between a reporter and it was knowing the document existed.</p>
+  </div>
+
+  <!-- ============ PART TWO ============ -->
+  <div class="section">
+    <p class="kicker">Part two &middot; the deep dive</p>
+    <h2>Old Town, and the 26 months before the tax bill</h2>
+    <p>The other mode is backward-looking. Point it at one subject in one place and it reconstructs what the record already said, in order. Old Town is a mill city on the Penobscot River. Its ND Paper mill went to extended downtime and then closed, and the city worked through what that would do to its finances in public, in its own minutes, starting in the spring of 2023.</p>
+
+    <div class="timeline">
+
+      <div class="beat">
+        <div class="beat-date">Apr 3, 2023<span>council minutes</span></div>
+        <div class="beat-body">
+          <p>The city manager reports that Old Town is already modelling the end state, more than a year before the mill is described as closed.</p>
+          <blockquote>Talks with the State Treasury on Maine State Revenue Sharing, along with the Department of Education, trying to get information on what impact on next year's budget a total closing of the Mill would look like for the City.</blockquote>
+          <p>The same minutes record that the mill was operating on April 1, so the current year would be "a typical year", and that if the shutdown extended into September 2023 the city would begin filing for sudden and severe disruption help from the State. A councilor asks whether the mill has notified the State; the manager is unsure whether a W.A.R.N. notice has been filed.</p>
+          <p class="src">City of Old Town &middot; Regular Council Meeting Minutes &middot; <a href="https://old-town.org/vertical/sites/%7BF7FABD96-D29C-4681-A9ED-8F3156759DC9%7D/uploads/Min._Reg._Council_Mtg._04.03.2023_website.pdf">open the minutes &#8594;</a></p>
+        </div>
+      </div>
+
+      <div class="beat">
+        <div class="beat-date">Nov 6, 2023<span>council minutes</span></div>
+        <div class="beat-body">
+          <p>The council comes out of executive session at 7:10pm, votes to take up an item that was not on the agenda, and approves paying money back to the State.</p>
+          <blockquote>Resolved, the Old Town City Council hereby authorizes the Finance Department to reimburse the State of Maine $907,597 for BETE payment of equipment that was not eligible for reimbursement. Funds for the payment will come from Fund Balance &hellip; Approved, 7&ndash;0</blockquote>
+          <p>BETE is Maine's Business Equipment Tax Exemption, the program that reimburses a town for taxes it cannot collect on exempt business equipment. Nearly a million dollars, off the agenda, straight after a closed-door session, out of fund balance.</p>
+          <p class="src">City of Old Town &middot; Regular Council Meeting Minutes &middot; <a href="https://old-town.org/vertical/sites/%7BF7FABD96-D29C-4681-A9ED-8F3156759DC9%7D/uploads/Min._Reg._Council_Mtg._11.06.2023.pdf">open the minutes &#8594;</a></p>
+        </div>
+      </div>
+
+      <div class="beat">
+        <div class="beat-date">Aug 19, 2024<span>council minutes</span></div>
+        <div class="beat-body">
+          <p>This is the one worth stopping on. The assessor has run the commitment numbers, and the council is told what the tax rate actually is before it is told what it will be published as.</p>
+          <blockquote>April (City Assessor) ran all the numbers to get where the final commitment number should be and determined that without using Fund Balance, the Property tax rate would be $18.03 and if the City used $290,000 out of Fund Balance that tax rate would stay flat at 17.7.</blockquote>
+          <p>Another off-agenda motion follows in the same meeting:</p>
+          <blockquote>Resolved, the Old Town City Council herby approves the transfer of $290,000 from the Fund Balance acct. &hellip; to maintain a flat tax rate of $17.70. &hellip; Approved all in favor, 7-0</blockquote>
+          <p>So the flat rate that year was purchased, for $290,000 out of savings, and the minutes say so in plain words. The published rate did not move. The reason it did not move is written down, in a routine set of minutes, in a motion that was not on the agenda.</p>
+          <p class="src">City of Old Town &middot; minutes of August 19, 2024 &middot; <a href="https://old-town.org/vertical/sites/%7BF7FABD96-D29C-4681-A9ED-8F3156759DC9%7D/uploads/website(4).pdf">open the minutes &#8594;</a></p>
+        </div>
+      </div>
+
+      <div class="beat">
+        <div class="beat-date">Jun 16, 2025<span>budget document</span></div>
+        <div class="beat-body">
+          <p>The following year the budget stops absorbing it. Two revenue lines name the cause outright:</p>
+          <blockquote>B.E.T.E &ndash; reduced $1,500,000, due to mill closure<br>TIF Revenue &ndash; reduced $91,204 due to mill closure</blockquote>
+          <p>And the mil-rate worksheet carries a line reading <span style="font-family:var(--font-mono);font-size:13px">Loss of mill value (32,000,000)</span>, against an estimated valuation of $650,004,349. The same worksheet adds $7,000,000 back and lands on $625,004,349, so the net movement it shows is about $25.0M rather than the full $32M. It puts the 2024-2025 rate at $17.70 and the 2025-2026 estimated rate at $19.46, a 9.94% increase, which on the median home value of $150,864 works out as $265.46 more a year.</p>
+          <p class="src">City of Old Town &middot; FY 2025-2026 General Budget, presented June 16, 2025 &middot; <a href="https://old-town.org/vertical/sites/%7BF7FABD96-D29C-4681-A9ED-8F3156759DC9%7D/uploads/FY_2025-2026_General_Budget_06.16.25.pdf">open the budget &#8594;</a></p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="callout">
+      <p><strong>Where we stop, and why it matters more than where we start.</strong> That $19.46 is an estimate, and the budget document says so itself: "This calculation is only an estimate. By law, only the Assessor can set the municipal tax rate." An earlier draft of the same budget, three weeks before, estimated $19.06 off the identical $32,000,000 line.</p>
+      <p>We hold no Old Town document recording the rate the assessor actually committed. So the honest version of this story is that the city's own budget projected a 9.94% increase, and a reporter's next call is to the assessor for the committed figure. We will not fill that number in for you.</p>
+    </div>
+
+    <p>The reporting value is not the mill closing. It is that the arithmetic was published in stages, in ordinary documents, over 26 months: the contingency modelling in April 2023, the $907,597 repayment in November 2023, the $290,000 bought year in August 2024, the two revenue lines naming the closure in June 2025. Read singly they are four routine filings, each one a PDF on a single town's website. Read in order they are the anatomy of a tax increase, with 26 months of lead time on it.</p>
+  </div>
+
+  <!-- ============ PART THREE ============ -->
+  <div class="section">
+    <p class="kicker">Part three &middot; the limits</p>
+    <h2>What it refuses to do</h2>
+    <p>Any newsroom evaluating this will want the failure modes, so here they are before you ask.</p>
+
+    <ul class="plain">
+      <li><strong>It says when it cannot tell.</strong> In the same August 10 run, several Portland items came back with the line: "The text we hold for this record is identical to the text we hold for other documents this week, so we cannot tell which one it belongs to and will not guess. Open the link to see the real document." That is our extraction colliding on two files, and the brief ships the admission rather than a plausible summary.</li>
+      <li><strong>Dates in municipal PDFs are frequently wrong, and we do not trust our own.</strong> Old Town is a live example: most of the dates our system parsed for that city collapsed to January 1 of the right year. The dates in the timeline above come from each document's own header, read by hand, which is why this section exists rather than a claim that the pipeline got it right.</li>
+      <li><strong>A search finding nothing proves nothing.</strong> We hold 961,906 documents; 208,412 of them are full-text searchable today. So a zero result is a statement about the searchable fifth, never about the world, and we quote the denominator whenever we quote a count.</li>
+      <li><strong>Agendas are not minutes.</strong> An agenda states the proposed outcome in the item title, so almost every agenda-sourced item reads like a completed approval. Items sourced from agendas get scheduled-action wording, and only minutes and adopted ordinances get "approved" or "passed". The Falmouth poultry amendment above is described as proposed for exactly that reason.</li>
+      <li><strong>It does not do the reporting.</strong> Everything above points at a document. Whether the story is there is a judgment we are not in a position to make from Portland, Maine, and would not want to.</li>
+    </ul>
+
+    <p>Coverage today, for context: 4,754 municipalities across the country have documents in the corpus, 191 of them in Maine, and 86 Maine towns produced at least one new document in the last 30 days of crawling.</p>
+  </div>
+
+  <!-- ============ THE ASK ============ -->
+  <div class="section">
+    <p class="kicker">The ask</p>
+    <h2>Three or four names, and I will build the real version</h2>
+    <p>Falmouth and Old Town are ours, chosen because we could verify every line. They are almost certainly not the examples that would land with the people you would introduce this to.</p>
+    <p>So the specific thing that would help: send me a few of the beats, regions, or newsrooms you are working with, and I will run the same two things against them. A weekly read on their actual towns, and one deep dive on a subject their readers already care about, built from records in their own coverage area rather than mine.</p>
+    <p>Three or four is plenty. A beat and a geography is enough to work from, and it does not need to be a formal introduction to anyone. If some of these are organizations where a demonstration would be unwelcome, say so and they come off the list.</p>
+    <p>And if the honest answer is that this is not the shape newsrooms want, that is worth more to me than a polite yes, so tell me that instead.</p>
+  </div>
+
+  <div class="footer">
+    <p>Municipal Alpha reads what cities and towns publish, every weekday, and routes it to the people who need it early. Built and run by Matt MacDonald in Portland, Maine. Every claim on this page links to the public document it came from; documents were retrieved and checked on August 11, 2026.</p>
+    <p>matt@municipalalpha.com &middot; <a href="https://municipalalpha.com">municipalalpha.com</a></p>
+  </div>
+
+</div>
+</body>
+</html>
