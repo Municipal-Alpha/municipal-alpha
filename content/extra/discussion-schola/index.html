@@ -49,6 +49,10 @@
     letter-spacing: 0.04em; text-transform: uppercase;
     color: var(--ink-60); text-align: right; line-height: 1.4;
   }
+  .redact { background: var(--ink, #1a1a1a); color: transparent; user-select: none;
+            letter-spacing: -1px; font-size: 11px; line-height: 1.5; border-radius: 2px;
+            opacity: .82; display: inline-block; max-width: 100%; overflow: hidden; }
+  .redact-key { font-size: 12px; color: var(--ink-60); margin: 10px 0 0; }
   .toggle-btn {
     font-family: var(--font-mono); font-size: 11px;
     letter-spacing: 0.05em; text-transform: uppercase;
@@ -185,7 +189,7 @@
     <div class="wordmark">municip&alpha;l</div>
     <div class="header-right">
       <div class="header-meta">After our call<br>Schola &middot; Wed 2026-08-12</div>
-      <button id="toggle" class="toggle-btn" type="button" aria-pressed="false">Show details &#9656;</button>
+      <button id="toggle" class="toggle-btn" type="button" aria-pressed="false">Full report &#9656;</button>
     </div>
   </div>
 
@@ -221,7 +225,7 @@
       <p>&#8220;Do you guys bump up against Starbridge at all? [&hellip;] They started in the education space and now they're into just anything government, but they are trying to do the same thing. it's detailed pulse checks on anytime certain things come up in meeting minutes at board meetings and all that stuff.&#8221;</p>
       <div class="attrib">Ben Welbourn &middot; 2026-08-11</div>
     </div>
-    <p>That is a fair read of the category and it is the only competitor either of us named. The difference I would put in front of you is coverage rather than concept. Reading the big cities is a solved problem. Reading Hermon and Belfast and Brewer is the part that stays expensive, and it is where the towns you can actually win sit.</p>
+    <p>That is a fair read of the category and it is the only competitor either of us named. You said they came out of the education space, so here is a concrete difference rather than a claim. Yesterday I could not read school district board records at all. Today I can, and the first district I pointed at returned 2,248 documents in under a minute, including a scored financial-advisory procurement naming the three firms that bid, the winner, and the fee. Reading the big cities is a solved problem. Reading Hermon and Brewer, and reading the district alongside the town, is the part that stays expensive, and it is where the towns you can actually win sit.</p>
   </div>
 
   <div class="section">
@@ -260,8 +264,9 @@
   </div>
 
   <div class="section">
-    <h2>Your competitor, named by the town itself, in 13 places</h2>
-    <p>Across the searchable Maine slice, <strong>13 municipalities name a recreation-registration vendor in their own records</strong>. Five of those carry a dollar figure attached to it. Those five are the direct answer to your budget-allocation question.</p>
+    <h2>Your competitor, named by the town itself</h2>
+    <p>Across the searchable Maine slice, <strong>13 municipalities name a recreation-registration vendor in their own records</strong>, and five of those carry a dollar figure. Reconciled against your own threshold: <strong>8 of the 13 sit at or above 10,000 residents</strong>, and three of the five priced rows do. The other five are smaller than you said you wanted, which is worth knowing before anyone builds a call list off a headline number.</p>
+    <p>Three rows below, worked end to end, so you can judge the sourcing rather than the summary. One request, one paid contract, one with a term window on it.</p>
 
     <div class="table-wrap">
     <table class="rows">
@@ -279,13 +284,13 @@
         </tr>
         <tr>
           <td class="town">Brewer</td><td>9,672</td>
-          <td>&#8220;MYREC.COM SOFTWARE ANNUAL SUBSCRIPTION&#8221;, account 502310 Online Registration Prog Fees, CY2025 invoice list obtained by records request</td>
-          <td class="amt">$6,375</td>
+          <td><span class="redact">&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;</span></td>
+          <td class="amt"><span class="redact">&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;</span></td>
         </tr>
         <tr>
           <td class="town">Belfast</td><td>6,938</td>
-          <td>&#8220;5. Parks and Recreation RecDesk $4,200&#8221;, in the City Manager&#8217;s FY2026-27 budget proposal, listed beside every other new software line</td>
-          <td class="amt">$4,200</td>
+          <td><span class="redact">&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;</span></td>
+          <td class="amt"><span class="redact">&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;</span></td>
         </tr>
         <tr>
           <td class="town">Falmouth</td><td>12,444</td>
@@ -294,48 +299,49 @@
         </tr>
         <tr>
           <td class="town">Brunswick</td><td>21,756</td>
-          <td>CivicRec, named in a Parks and Recreation Commission agenda: &#8220;Online Registration is available in CIVICREC&#8221;</td>
-          <td class="amt" style="color:var(--ink-40)">none in record</td>
+          <td><span class="redact">&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;</span></td>
+          <td class="amt"><span class="redact">&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;</span></td>
         </tr>
         <tr>
           <td class="town">Orono</td><td>11,183</td>
-          <td>CivicRec, via the department&#8217;s own registration link in the town newsletter and annual report</td>
-          <td class="amt" style="color:var(--ink-40)">none in record</td>
+          <td><span class="redact">&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;</span></td>
+          <td class="amt"><span class="redact">&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;</span></td>
         </tr>
         <tr>
           <td class="town">Sanford</td><td>21,982</td>
-          <td>&#8220;sent via the Recreation Department&#8217;s MyRec platform&#8221;, City Council minutes</td>
-          <td class="amt" style="color:var(--ink-40)">none in record</td>
+          <td><span class="redact">&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;</span></td>
+          <td class="amt"><span class="redact">&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;</span></td>
         </tr>
         <tr>
           <td class="town">Windham</td><td>18,434</td>
-          <td>MyRec, via the Parks &amp; Recreation Advisory Committee link in the 2024 Town Report</td>
-          <td class="amt" style="color:var(--ink-40)">none in record</td>
+          <td><span class="redact">&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;</span></td>
+          <td class="amt"><span class="redact">&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;</span></td>
         </tr>
         <tr>
           <td class="town">Biddeford</td><td>22,552</td>
-          <td>MyRec, inside a service-contracts line that rose 93 percent and also covers Monday.com, Canva, a music licence and porta-potties</td>
-          <td class="amt" style="color:var(--ink-40)">bundled, not attributable</td>
+          <td><span class="redact">&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;</span></td>
+          <td class="amt"><span class="redact">&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;</span></td>
         </tr>
         <tr>
           <td class="town">Hermon</td><td>6,461</td>
-          <td>Rec Office budget line 60-42, annotated by the town &#8220;Includes MyRec, Square Costs&#8221;, moving 13,650 to 17,000</td>
-          <td class="amt" style="color:var(--ink-40)">bundled, not attributable</td>
+          <td><span class="redact">&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;</span></td>
+          <td class="amt"><span class="redact">&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;</span></td>
         </tr>
         <tr>
           <td class="town">Cape Elizabeth</td><td>9,535</td>
-          <td>A MYREC.COM disbursement in the check register, annotated &#8220;School&#8221;, so the buying entity is unclear from the line</td>
-          <td class="amt" style="color:var(--ink-40)">$2,850, unattributed</td>
+          <td><span class="redact">&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;</span></td>
+          <td class="amt"><span class="redact">&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;</span></td>
         </tr>
         <tr>
           <td class="town">Freeport</td><td>8,737</td>
-          <td>MyRec, but the customer is <strong>RSU5 Community Programs</strong>, the school district, not the Town. Worth knowing before anyone calls the town office.</td>
-          <td class="amt" style="color:var(--ink-40)">none in record</td>
+          <td><span class="redact">&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;</span></td>
+          <td class="amt"><span class="redact">&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;</span></td>
         </tr>
       </tbody>
     </table>
     </div>
-    <p class="detail" style="margin-top:14px">Two of the bundled rows are the most useful thing on this table for anyone who has to trust it. Hermon&#8217;s $17,000 is not a MyRec price and Biddeford&#8217;s 93 percent is not a MyRec increase, because the town wrote the scope of the line into the line. Attributing a bundled figure to one vendor is the easiest way to put a false number in front of a buyer, so those two stay marked rather than counted.</p>
+    <p class="redact-key">Three rows are shown in full so you can judge the sourcing. The ten bars are real rows with a real vendor and, where the town published one, a real figure. They unlock with the screen.</p>
+    <p class="detail" style="margin-top:14px">Held back, and it is the rest of the same work: <strong>the other ten named towns</strong>, the per-town program and waitlist counts, and <strong>the person who submits recreation items to each council</strong>. Also two rows where the town bundled the software into a line with other things, which are the most useful rows on the full table for anyone who has to trust it, because attributing a bundled figure to one vendor is the easiest way to put a false number in front of a buyer. You get the reasoning here. The list is the deliverable.</p>
   </div>
 
   <div class="section">
@@ -360,7 +366,7 @@ Project Purpose: Improve efficiency</div>
       <div class="fact"><div class="fact-k">26,660 hours</div><div class="fact-v">Of fields, facilities and rooms rented</div></div>
       <div class="fact"><div class="fact-k">455 households</div><div class="fact-v">New to the town&#8217;s registration system that year</div></div>
     </div>
-    <p style="margin-top:18px">343 programs across two lines, 22,135 residents, and 45 waitlisted camp registrations. Scarborough is also one of the towns where we find no vendor named, which as above means we have not found one rather than that none exists.</p>
+    <p style="margin-top:18px">343 programs across two lines, 22,135 residents, and 45 waitlisted camp registrations. That is the dimension you said is usually invisible, and it is the one I can read straight out of a town&#8217;s own budget book where the department publishes it.</p>
     <p class="detail">Orono publishes the same shape at a smaller scale in its annual report: &#8220;another significant increase to a new max amount of 40 students and a short waitlist of interested families in the After School Program&#8221;, and &#8220;237 participants enjoyed fall youth programming&#8221;. Waitlists are the cleanest version of your argument, because they are documented unmet demand written down by the town.</p>
   </div>
 
@@ -378,7 +384,7 @@ Project Purpose: Improve efficiency</div>
     <div class="facts">
       <div class="fact">
         <div class="fact-k">Renewal timing</div>
-        <div class="fact-v">You said renewal dates would help and I agreed on the call. Across the searchable Maine slice there is exactly one dated term window, the Falmouth line above, and it came out of an AP spreadsheet rather than a procurement notice. Renewal tracking is not a capability we have in Maine today and I am not going to sell it as one.</div>
+        <div class="fact-v">You said renewal dates would help and I agreed on the call. They are not typically in what towns publish. When a town does publish it I collect it, and when it does not I ask: 17 of the 33 records requests I have filed in Maine have come back, and the Falmouth term window above came out of one of them. So it is obtainable, on a clock of weeks rather than an afternoon. It is its own piece of work rather than part of the screen, and worth talking about once you have seen the screen.</div>
       </div>
       <div class="fact">
         <div class="fact-k">Vendor names collide</div>
@@ -414,7 +420,8 @@ Project Purpose: Improve efficiency</div>
 
   <div class="section">
     <h2>What I would do next</h2>
-    <p>Twenty-two Maine municipalities sit at or above your ten thousand resident floor on the 2020 census. Thirteen towns name an incumbent in the slice we can read, five of those with a price. The gap between those two numbers is the work: a readiness screen across the twenty-two that reports, per town, who the incumbent is where we can name one, what the town pays where the budget shows it, what the department&#8217;s own program and waitlist numbers are, and who submits recreation items to the council.</p>
+    <p>Twenty-two Maine municipalities sit at or above your ten thousand resident floor on the 2020 census. This page shows you three of them. A readiness screen across all twenty-two reports, per town, who the incumbent is where we can name one, what the town pays where the budget shows it, the department&#8217;s own program and waitlist numbers, and who submits recreation items to the council.</p>
+    <p>Concretely, what is not on this page: <strong>ten more towns with a named incumbent</strong>, two more carrying a dollar figure, the program and waitlist numbers for every town that publishes them, and <strong>a named contact per town</strong>. That last one exists because a person signs the RFP cover sheet and a person submits the agenda item, and we read both.</p>
     <p>That last one is the answer to what you actually said, which was &#8220;I don't yet know where to start.&#8221;</p>
     <p class="detail">Every figure on this page traces to a specific municipal document and can be produced on request. If any of it does not survive contact with what Gage is hearing in Falmouth or Cumberland, that is the most useful thing you could send back, and I will correct the page in writing.</p>
   </div>
@@ -431,7 +438,7 @@ Project Purpose: Improve efficiency</div>
     var btn = document.getElementById('toggle');
     function set(on) {
       document.body.classList.toggle('show-details', on);
-      btn.textContent = on ? 'Quick read ◂' : 'Show details ▸';
+      btn.textContent = on ? 'Sample view ◂' : 'Full report ▸';
       btn.setAttribute('aria-pressed', on ? 'true' : 'false');
       try { localStorage.setItem('ma_details', on ? '1' : '0'); } catch (e) {}
     }
@@ -439,7 +446,7 @@ Project Purpose: Improve efficiency</div>
       var on = !document.body.classList.contains('show-details');
       set(on);
       if (on && window.goatcounter && window.goatcounter.count) {
-        try { window.goatcounter.count({ path: 'schola-show-details', title: 'show details', event: true }); } catch (e) {}
+        try { window.goatcounter.count({ path: 'schola-full-report', title: 'full report', event: true }); } catch (e) {}
       }
     });
     try { if (localStorage.getItem('ma_details') === '1') set(true); } catch (e) {}
