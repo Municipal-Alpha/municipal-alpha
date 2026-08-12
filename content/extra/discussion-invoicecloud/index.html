@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Municipal Alpha for InvoiceCloud</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,500&family=DM+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+  :root {
+    --ink: #0C0C0C;
+    --paper: #F7F4F0;
+    --signal: #E8512D;
+    --ink-80: rgba(12, 12, 12, 0.80);
+    --ink-60: rgba(12, 12, 12, 0.60);
+    --ink-40: rgba(12, 12, 12, 0.40);
+    --ink-12: rgba(12, 12, 12, 0.12);
+    --ink-06: rgba(12, 12, 12, 0.06);
+    --signal-06: rgba(232, 81, 45, 0.06);
+
+    --font-display: 'Newsreader', Georgia, serif;
+    --font-body: 'DM Sans', -apple-system, sans-serif;
+    --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    background: var(--paper); color: var(--ink);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  .container { max-width: 780px; margin: 0 auto; padding: 0 36px 80px 36px; }
+
+  .header {
+    position: sticky; top: 0; z-index: 10;
+    background: var(--paper);
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 22px 0 16px 0;
+    border-bottom: 1px solid var(--ink-12);
+    margin-bottom: 32px;
+  }
+  .wordmark { font-family: var(--font-display); font-weight: 500; font-size: 22px; letter-spacing: -0.005em; }
+  .header-right { display: flex; align-items: center; gap: 16px; }
+  .header-meta {
+    font-family: var(--font-mono); font-size: 11px;
+    letter-spacing: 0.04em; text-transform: uppercase;
+    color: var(--ink-60); text-align: right; line-height: 1.4;
+  }
+  .toggle-btn {
+    font-family: var(--font-mono); font-size: 11px;
+    letter-spacing: 0.05em; text-transform: uppercase;
+    color: var(--signal); background: var(--signal-06);
+    border: 1px solid var(--signal); border-radius: 2px;
+    padding: 7px 13px; cursor: pointer; white-space: nowrap;
+  }
+  .toggle-btn:hover { background: var(--signal); color: var(--paper); }
+
+  .hero { margin-bottom: 18px; }
+  .hero h1 {
+    font-family: var(--font-display); font-weight: 500;
+    font-size: 38px; line-height: 1.1; letter-spacing: -0.01em;
+    margin: 0 0 14px 0;
+  }
+  .hero .lede {
+    font-family: var(--font-body); font-size: 15.5px;
+    line-height: 1.55; color: var(--ink-60);
+    margin: 0; max-width: 64ch;
+  }
+  .mode-cue {
+    font-family: var(--font-mono); font-size: 10.5px;
+    letter-spacing: 0.04em; text-transform: uppercase;
+    color: var(--ink-40); margin: 16px 0 0 0;
+    padding-top: 12px; border-top: 1px dashed var(--ink-12);
+  }
+
+  .section { margin-top: 48px; padding-top: 28px; border-top: 1px solid var(--ink-12); }
+  .section h2 {
+    font-family: var(--font-display); font-weight: 500;
+    font-size: 26px; line-height: 1.2; letter-spacing: -0.005em;
+    margin: 0 0 8px 0;
+  }
+  .section .section-sub {
+    font-family: var(--font-body); font-size: 14px;
+    color: var(--ink-60); line-height: 1.5;
+    margin: 0 0 20px 0; max-width: 62ch;
+  }
+  .section p {
+    font-family: var(--font-body); font-size: 14.5px; line-height: 1.65;
+    color: var(--ink); margin: 0 0 14px 0; max-width: 62ch;
+  }
+
+  .two-rel { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 8px; }
+  .rel-card { padding: 18px 20px; background: var(--paper); border: 1px solid var(--ink-12); border-radius: 2px; }
+  .rel-label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--signal); margin-bottom: 6px; }
+  .rel-title { font-family: var(--font-display); font-weight: 500; font-size: 18px; margin-bottom: 8px; }
+  .rel-body { font-family: var(--font-body); font-size: 13.5px; line-height: 1.55; color: var(--ink-80); }
+
+  .source-link {
+    display: inline-block; font-family: var(--font-mono); font-size: 11px;
+    letter-spacing: 0.03em; color: var(--signal);
+    text-decoration: none; border-bottom: 1px solid currentColor;
+    padding-bottom: 1px;
+  }
+  .source-link:hover { color: var(--ink); }
+
+  .signal-list { list-style: none; padding: 0; margin: 16px 0 0 0; display: grid; gap: 12px; }
+  .signal-list li { padding: 14px 16px; background: var(--paper); border: 1px solid var(--ink-12); border-radius: 2px; }
+  .signal-list .sig-title { font-family: var(--font-display); font-size: 16px; font-weight: 500; color: var(--ink); margin-bottom: 4px; }
+  .signal-list .sig-body { font-family: var(--font-body); font-size: 13px; line-height: 1.5; color: var(--ink-80); margin-bottom: 6px; }
+  .signal-list .sig-where { color: var(--ink-60); font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.04em; text-transform: uppercase; }
+
+  .stat-strip {
+    margin-top: 16px; padding: 16px 18px;
+    background: var(--ink); color: var(--paper); border-radius: 2px;
+    display: flex; flex-wrap: wrap; gap: 22px;
+  }
+  .stat { flex: 1 1 120px; }
+  .stat .num { font-family: var(--font-display); font-size: 28px; font-weight: 500; line-height: 1; }
+  .stat .lab { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.05em; text-transform: uppercase; color: rgba(247,244,240,0.6); margin-top: 6px; }
+
+  .question { margin: 14px 0; padding: 16px 20px; background: var(--paper); border-left: 3px solid var(--ink-12); }
+  .question .q-text { font-family: var(--font-display); font-size: 16px; line-height: 1.5; color: var(--ink); }
+  .question .why {
+    font-family: var(--font-body); font-size: 12.5px; line-height: 1.55;
+    color: var(--ink-60); margin-top: 10px;
+    padding-top: 10px; border-top: 1px solid var(--ink-12);
+  }
+  .question .why::before {
+    content: "Why this question \00B7 ";
+    font-family: var(--font-mono); font-size: 10px;
+    letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--signal); font-weight: 500;
+  }
+
+  .path { margin: 14px 0; padding: 18px 22px; background: var(--paper); border: 1px solid var(--ink-12); border-radius: 2px; }
+  .path-title { font-family: var(--font-display); font-weight: 500; font-size: 17px; margin-bottom: 6px; }
+  .path-body { font-family: var(--font-body); font-size: 13.5px; line-height: 1.55; color: var(--ink-80); }
+
+  .footer {
+    margin-top: 64px; padding-top: 18px;
+    border-top: 1px solid var(--ink-12);
+    font-family: var(--font-mono); font-size: 10.5px;
+    letter-spacing: 0.04em; text-transform: uppercase;
+    color: var(--ink-40);
+    display: flex; justify-content: space-between;
+  }
+  .footer a { color: var(--ink-60); text-decoration: none; }
+
+  .facts { display: grid; gap: 13px; margin-top: 16px; }
+  .fact { display: grid; grid-template-columns: 140px 1fr; gap: 16px; align-items: baseline; }
+  .fact-k { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.05em; text-transform: uppercase; color: var(--signal); padding-top: 2px; }
+  .fact-v { font-family: var(--font-body); font-size: 14px; line-height: 1.55; color: var(--ink); }
+
+  .block-label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-60); margin: 28px 0 0; }
+
+  .hl {
+    background: rgba(232, 81, 45, 0.15); font-weight: 500;
+    padding: 0.04em 0.26em; border-radius: 2px;
+    box-decoration-break: clone; -webkit-box-decoration-break: clone;
+  }
+
+  .detail { display: none; }
+  body.show-details .detail { display: block; }
+  .detail-cue { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.03em; color: var(--ink-40); margin: 12px 0 0 0; }
+  body.show-details .detail-cue { display: none; }
+
+  /* six-week calibration → paid subscription timeline */
+  .timeline { margin: 22px 0 6px; display: grid; grid-template-columns: 1.35fr auto 1fr; gap: 12px; align-items: stretch; }
+  .tl-phase { padding: 18px 20px 16px; border-radius: 2px; }
+  .tl-phase.calibration { background: var(--signal-06); border: 1px solid var(--signal); }
+  .tl-phase.subscription { background: var(--ink); color: var(--paper); border: 1px solid var(--ink); }
+  .tl-label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--signal); margin-bottom: 6px; }
+  .tl-title { font-family: var(--font-display); font-weight: 500; font-size: 17px; margin-bottom: 12px; line-height: 1.25; color: var(--ink); }
+  .tl-title.on-dark { color: var(--paper); }
+  .tl-weeks { display: flex; align-items: center; gap: 6px; margin: 8px 0 14px; flex-wrap: wrap; }
+  .tl-week { min-width: 22px; height: 22px; padding: 0 6px; border-radius: 11px; background: var(--signal); color: var(--paper); font-family: var(--font-mono); font-size: 10px; display: inline-flex; align-items: center; justify-content: center; font-weight: 500; }
+  .tl-week.hollow { background: transparent; border: 1.5px solid rgba(247,244,240,0.4); color: rgba(247,244,240,0.6); }
+  .tl-events { display: grid; gap: 8px; }
+  .tl-event { font-family: var(--font-body); font-size: 13px; line-height: 1.5; color: var(--ink); }
+  .tl-event.on-dark { color: rgba(247,244,240,0.85); }
+  .tl-marker { font-family: var(--font-mono); color: var(--signal); font-weight: 500; margin-right: 6px; }
+  .tl-arrow { align-self: center; font-family: var(--font-display); font-size: 26px; color: var(--signal); padding: 0 2px; }
+  .tl-then { text-align: center; font-family: var(--font-body); font-size: 12.5px; color: var(--ink-60); margin: 12px 0 0; line-height: 1.5; }
+
+  @media (max-width: 560px) {
+    .container { padding: 0 20px 60px 20px; }
+    .two-rel { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 30px; }
+    .fact { grid-template-columns: 1fr; gap: 3px; }
+    .timeline { grid-template-columns: 1fr; }
+    .tl-arrow { text-align: center; padding: 4px; transform: rotate(90deg); }
+  }
+  @media print {
+    .detail { display: block !important; }
+    .detail-cue, .toggle-btn { display: none !important; }
+    .header { position: static; }
+    .container { max-width: none; padding: 24px; }
+    .section { page-break-inside: avoid; }
+    .rel-card, .path, .question { page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <div class="wordmark">municip&alpha;l</div>
+    <div class="header-right">
+      <div class="header-meta">Discussion guide<br>InvoiceCloud &middot; Wed 2026-08-12</div>
+      <button id="toggle" class="toggle-btn" type="button" aria-pressed="false">Show details &#9656;</button>
+    </div>
+  </div>
+
+  <div class="hero">
+    <h1>Municipal Alpha for InvoiceCloud</h1>
+    <div class="question" style="margin-bottom:18px">
+      <div class="rel-label">What you wrote when you booked, 2026-08-10</div>
+      <p style="margin:0 0 10px 0">&#8220;Government Data RE: Payment Contracts&#8221;</p>
+      <p style="margin:0"><strong>That is everything I have from you, so everything below is a guess.</strong> Five words, no call yet. I would rather show you what the record actually holds and let you tell me which part is the useful one than arrive with a pitch built on my own assumption. Where I have guessed wrong, say so and I will rebuild this page around what you actually said.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Your own footprint, as the municipal record has it</h2>
+    <p>I looked before we spoke. InvoiceCloud appears in <strong>215 documents across 39 municipalities in 13 states</strong>, published by the municipalities themselves.</p>
+    <p class="detail">Two spellings matter and most searches miss it. Clerks write &#8220;InvoiceCloud&#8221; and &#8220;Invoice Cloud&#8221; roughly one to six, so a single-spelling query returns 30 documents and misses 185. That is a small example of the thing this business is actually about.</p>
+
+    <div class="facts">
+      <div class="fact">
+        <div class="fact-k">New Hampshire</div>
+        <div class="fact-v">67 documents. Portsmouth, Hanover, Bedford, Windham, Wolfeboro, Hollis, Canaan, Boscawen, Troy, Weare.</div>
+      </div>
+      <div class="fact">
+        <div class="fact-k">Illinois</div>
+        <div class="fact-v">64 documents. Skokie, Libertyville, Lockport, DeKalb, Riverside, Flossmoor, Hanover Park, Bloomingdale, La Grange Park.</div>
+      </div>
+      <div class="fact">
+        <div class="fact-k">Florida</div>
+        <div class="fact-v">35 documents, concentrated in North Miami Beach.</div>
+      </div>
+      <div class="fact">
+        <div class="fact-k">Everywhere else</div>
+        <div class="fact-v">Michigan 15, Connecticut 10, Massachusetts 8, Maine 5, Montana 4, then Washington, New York, California, Maryland, Idaho.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>What kind of documents they are, which is the honest part</h2>
+    <p>The breakdown matters more than the total, because most of it is not what a demo would want you to think it is.</p>
+
+    <div class="facts">
+      <div class="fact">
+        <div class="fact-k">83 check registers</div>
+        <div class="fact-v">A town paying its InvoiceCloud invoice. That is an accounts-payable line, not a contract event. Useful as a payment and continuity signal, useless as a procurement signal, and anyone who sells you these as &#8220;contract activity&#8221; is selling you a check register.</div>
+      </div>
+      <div class="fact">
+        <div class="fact-k">24 agendas, 7 minutes</div>
+        <div class="fact-v">The deliberative layer. An agenda states what a body intends to do; minutes record what it did. These are the rows where a renewal or an award actually appears.</div>
+      </div>
+      <div class="fact">
+        <div class="fact-k">52 documents, 21 reports, 11 investment reports</div>
+        <div class="fact-v">Departmental and finance reporting, where a payments platform surfaces inside a treasurer&#8217;s or finance director&#8217;s own narrative.</div>
+      </div>
+      <div class="fact">
+        <div class="fact-k">1 RFP</div>
+        <div class="fact-v">One procurement document in the set. That is the shape of the thing worth building toward, and one is not a product yet.</div>
+      </div>
+    </div>
+
+    <p class="detail">Most recent real record: Norwich, Connecticut, council minutes, 2026-07-06. One row in the set carries a 2027 date, which is a dating artifact on our side rather than a document from the future, and I would rather tell you that than have you find it.</p>
+  </div>
+
+  <div class="section">
+    <h2>The competitive picture, such as it is</h2>
+    <p>Same corpus, same method, your named competitors:</p>
+    <div class="facts">
+      <div class="fact">
+        <div class="fact-k">Point &amp; Pay</div>
+        <div class="fact-v">56 documents, 6 municipalities, concentrated in Louisiana and Massachusetts.</div>
+      </div>
+      <div class="fact">
+        <div class="fact-k">Paymentus</div>
+        <div class="fact-v">16 documents across 7 municipalities in 7 states. Thin.</div>
+      </div>
+      <div class="fact">
+        <div class="fact-k">nCourt</div>
+        <div class="fact-v">2 documents, 1 municipality. Effectively absent.</div>
+      </div>
+      <div class="fact">
+        <div class="fact-k">Category language</div>
+        <div class="fact-v">&#8220;Convenience fee&#8221; 236 documents in 29 states, &#8220;merchant services&#8221; 239 in 12 states. The vocabulary a fee change is argued in.</div>
+      </div>
+    </div>
+    <p class="detail">Read that asymmetry carefully rather than flatteringly. You appear more often than your competitors partly because you have more municipal clients and partly because our coverage is uneven by state. It is evidence about the record, not a market-share estimate, and I will not dress it up as one.</p>
+  </div>
+
+  <div class="section">
+    <h2>The layer underneath: what towns actually pay, to whom</h2>
+    <p>Accounts payable is the largest structured thing we hold. <strong>15,440 check registers across 132 municipalities in 36 states.</strong> Every vendor a town paid, and how much.</p>
+    <p>For a payments company that is two different products depending on which question you are asking, and I do not know which one you are here for:</p>
+    <div class="facts">
+      <div class="fact">
+        <div class="fact-k">Where is a contract coming up</div>
+        <div class="fact-v">The deliberative layer, agendas and minutes, read for renewal and award language. This is the pre-decision window and it is the hardest of the three.</div>
+      </div>
+      <div class="fact">
+        <div class="fact-k">Who holds it today</div>
+        <div class="fact-v">The AP layer, read as an incumbency census. Which town pays which processor, at what cadence, and when a payment stream to one vendor stops and another begins.</div>
+      </div>
+      <div class="fact">
+        <div class="fact-k">What is inside the terms</div>
+        <div class="fact-v">Fee schedules, convenience-fee ordinances, and the finance-committee arguments around them. Partially reachable, and the least even of the three.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>What I will not claim</h2>
+    <p>The number that matters most on this page is the one that limits every other number on it.</p>
+    <div class="facts">
+      <div class="fact">
+        <div class="fact-k">Coverage denominator</div>
+        <div class="fact-v">Counts here describe the searchable slice of what we hold, not the United States. Nationally about a quarter of collected documents are full-text searchable today. Every figure above is a floor, and I will always give you the denominator next to the count.</div>
+      </div>
+      <div class="fact">
+        <div class="fact-k">Absence is not evidence</div>
+        <div class="fact-v">A town where I find no processor is a town where I have not found one. It is not a town without one, and I will never hand you a prospect list built on that confusion.</div>
+      </div>
+      <div class="fact">
+        <div class="fact-k">Homonyms are the real work</div>
+        <div class="fact-v">In an adjacent search this month, &#8220;Spectrum&#8221; resolved to a sign company and &#8220;Grande&#8221; to a legal-aid nonprofit. A keyword count that has not been read is a guess with a number attached to it.</div>
+      </div>
+      <div class="fact">
+        <div class="fact-k">Verb licence</div>
+        <div class="fact-v">An agenda item reading &#8220;Approving an Application for...&#8221; is a proposal, not an approval. Municipal agendas state the intended disposition in the title, so every agenda-sourced signal reads like a completed decision unless something stops it. We gate that.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>What I would like to learn on our call</h2>
+    <p>In rough order of how much it would change what I build for you:</p>
+    <ol>
+      <li><strong>Which of the three questions above is the live one.</strong> Contracts coming up, incumbency today, or terms. They are different products and I would rather build one properly.</li>
+      <li><strong>Whether this is an InvoiceCloud question or your own.</strong> You booked from a personal address, which is entirely normal at the exploratory stage, and it changes who I should be writing for.</li>
+      <li><strong>What you use today to see this, and where it stops.</strong> The gap is more useful to me than the requirement.</li>
+      <li><strong>Which geographies matter.</strong> Our coverage is uneven and I would rather point the next crawl at your map than at ours.</li>
+    </ol>
+  </div>
+
+  <div class="section">
+    <h2>How to use this page</h2>
+    <p>It is unlisted and not indexed, so it is yours to share internally or ignore. If a claim on it does not survive contact with what you know about your own municipal book, that is the most useful thing you could tell me, and I will say so in writing when I am wrong.</p>
+    <p class="detail">Every figure was pulled from full document text on 2026-08-12, not from search snippets, and can be traced to the specific municipal document it came from on request.</p>
+  </div>
+
+</div>
+
+<script>
+  (function () {
+    var btn = document.getElementById('toggle');
+    function set(on) {
+      document.body.classList.toggle('show-details', on);
+      btn.textContent = on ? 'Quick read ◂' : 'Show details ▸';
+      btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+      try { localStorage.setItem('ma_details', on ? '1' : '0'); } catch (e) {}
+    }
+    btn.addEventListener('click', function () {
+      var on = !document.body.classList.contains('show-details');
+      set(on);
+      if (on && window.goatcounter && window.goatcounter.count) {
+        try { window.goatcounter.count({ path: 'schola-show-details', title: 'show details', event: true }); } catch (e) {}
+      }
+    });
+    try { if (localStorage.getItem('ma_details') === '1') set(true); } catch (e) {}
+  })();
+</script>
+</body>
+</html>
