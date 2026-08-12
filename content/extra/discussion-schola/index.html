@@ -92,25 +92,44 @@
     color: var(--ink); margin: 0 0 14px 0; max-width: 62ch;
   }
 
-  .two-rel { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 8px; }
-  .rel-card { padding: 18px 20px; background: var(--paper); border: 1px solid var(--ink-12); border-radius: 2px; }
-  .rel-label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--signal); margin-bottom: 6px; }
-  .rel-title { font-family: var(--font-display); font-weight: 500; font-size: 18px; margin-bottom: 8px; }
-  .rel-body { font-family: var(--font-body); font-size: 13.5px; line-height: 1.55; color: var(--ink-80); }
-
-  .source-link {
-    display: inline-block; font-family: var(--font-mono); font-size: 11px;
-    letter-spacing: 0.03em; color: var(--signal);
-    text-decoration: none; border-bottom: 1px solid currentColor;
-    padding-bottom: 1px;
+  /* Ben's own words */
+  .said { margin: 0 0 14px 0; padding: 0 0 0 18px; border-left: 3px solid var(--signal); max-width: 64ch; }
+  .said p {
+    font-family: var(--font-display); font-size: 17px; line-height: 1.5;
+    color: var(--ink); margin: 0 0 8px 0; max-width: none;
   }
-  .source-link:hover { color: var(--ink); }
+  .said .attrib {
+    font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.05em;
+    text-transform: uppercase; color: var(--ink-40);
+  }
 
-  .signal-list { list-style: none; padding: 0; margin: 16px 0 0 0; display: grid; gap: 12px; }
-  .signal-list li { padding: 14px 16px; background: var(--paper); border: 1px solid var(--ink-12); border-radius: 2px; }
-  .signal-list .sig-title { font-family: var(--font-display); font-size: 16px; font-weight: 500; color: var(--ink); margin-bottom: 4px; }
-  .signal-list .sig-body { font-family: var(--font-body); font-size: 13px; line-height: 1.5; color: var(--ink-80); margin-bottom: 6px; }
-  .signal-list .sig-where { color: var(--ink-60); font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.04em; text-transform: uppercase; }
+  .rel-label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--signal); margin-bottom: 6px; }
+
+  .mono-row {
+    font-family: var(--font-mono); font-size: 12px; line-height: 1.6;
+    background: var(--ink-06); border-radius: 2px;
+    padding: 12px 14px; margin: 10px 0 12px 0;
+    overflow-x: auto; white-space: pre-wrap; word-break: break-word;
+  }
+
+  table.rows { width: 100%; border-collapse: collapse; margin: 16px 0 8px; font-size: 13.5px; }
+  table.rows th {
+    font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.05em;
+    text-transform: uppercase; color: var(--ink-60);
+    text-align: left; padding: 0 12px 8px 0; border-bottom: 1px solid var(--ink-12); vertical-align: bottom;
+  }
+  table.rows td { padding: 11px 12px 11px 0; border-bottom: 1px solid var(--ink-12); vertical-align: top; line-height: 1.5; }
+  table.rows td.town { font-weight: 600; white-space: nowrap; }
+  table.rows td.amt { font-family: var(--font-mono); font-size: 13px; white-space: nowrap; }
+  .table-wrap { overflow-x: auto; }
+
+  .question { margin: 14px 0; padding: 16px 20px; background: var(--paper); border-left: 3px solid var(--ink-12); }
+  .question .q-text { font-family: var(--font-display); font-size: 16px; line-height: 1.5; color: var(--ink); }
+
+  .facts { display: grid; gap: 13px; margin-top: 16px; }
+  .fact { display: grid; grid-template-columns: 150px 1fr; gap: 16px; align-items: baseline; }
+  .fact-k { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.05em; text-transform: uppercase; color: var(--signal); padding-top: 2px; }
+  .fact-v { font-family: var(--font-body); font-size: 14px; line-height: 1.55; color: var(--ink); }
 
   .stat-strip {
     margin-top: 16px; padding: 16px 18px;
@@ -120,39 +139,6 @@
   .stat { flex: 1 1 120px; }
   .stat .num { font-family: var(--font-display); font-size: 28px; font-weight: 500; line-height: 1; }
   .stat .lab { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.05em; text-transform: uppercase; color: rgba(247,244,240,0.6); margin-top: 6px; }
-
-  .question { margin: 14px 0; padding: 16px 20px; background: var(--paper); border-left: 3px solid var(--ink-12); }
-  .question .q-text { font-family: var(--font-display); font-size: 16px; line-height: 1.5; color: var(--ink); }
-  .question .why {
-    font-family: var(--font-body); font-size: 12.5px; line-height: 1.55;
-    color: var(--ink-60); margin-top: 10px;
-    padding-top: 10px; border-top: 1px solid var(--ink-12);
-  }
-  .question .why::before {
-    content: "Why this question \00B7 ";
-    font-family: var(--font-mono); font-size: 10px;
-    letter-spacing: 0.06em; text-transform: uppercase;
-    color: var(--signal); font-weight: 500;
-  }
-
-  .path { margin: 14px 0; padding: 18px 22px; background: var(--paper); border: 1px solid var(--ink-12); border-radius: 2px; }
-  .path-title { font-family: var(--font-display); font-weight: 500; font-size: 17px; margin-bottom: 6px; }
-  .path-body { font-family: var(--font-body); font-size: 13.5px; line-height: 1.55; color: var(--ink-80); }
-
-  .footer {
-    margin-top: 64px; padding-top: 18px;
-    border-top: 1px solid var(--ink-12);
-    font-family: var(--font-mono); font-size: 10.5px;
-    letter-spacing: 0.04em; text-transform: uppercase;
-    color: var(--ink-40);
-    display: flex; justify-content: space-between;
-  }
-  .footer a { color: var(--ink-60); text-decoration: none; }
-
-  .facts { display: grid; gap: 13px; margin-top: 16px; }
-  .fact { display: grid; grid-template-columns: 140px 1fr; gap: 16px; align-items: baseline; }
-  .fact-k { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.05em; text-transform: uppercase; color: var(--signal); padding-top: 2px; }
-  .fact-v { font-family: var(--font-body); font-size: 14px; line-height: 1.55; color: var(--ink); }
 
   .block-label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-60); margin: 28px 0 0; }
 
@@ -167,31 +153,20 @@
   .detail-cue { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.03em; color: var(--ink-40); margin: 12px 0 0 0; }
   body.show-details .detail-cue { display: none; }
 
-  /* six-week calibration → paid subscription timeline */
-  .timeline { margin: 22px 0 6px; display: grid; grid-template-columns: 1.35fr auto 1fr; gap: 12px; align-items: stretch; }
-  .tl-phase { padding: 18px 20px 16px; border-radius: 2px; }
-  .tl-phase.calibration { background: var(--signal-06); border: 1px solid var(--signal); }
-  .tl-phase.subscription { background: var(--ink); color: var(--paper); border: 1px solid var(--ink); }
-  .tl-label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--signal); margin-bottom: 6px; }
-  .tl-title { font-family: var(--font-display); font-weight: 500; font-size: 17px; margin-bottom: 12px; line-height: 1.25; color: var(--ink); }
-  .tl-title.on-dark { color: var(--paper); }
-  .tl-weeks { display: flex; align-items: center; gap: 6px; margin: 8px 0 14px; flex-wrap: wrap; }
-  .tl-week { min-width: 22px; height: 22px; padding: 0 6px; border-radius: 11px; background: var(--signal); color: var(--paper); font-family: var(--font-mono); font-size: 10px; display: inline-flex; align-items: center; justify-content: center; font-weight: 500; }
-  .tl-week.hollow { background: transparent; border: 1.5px solid rgba(247,244,240,0.4); color: rgba(247,244,240,0.6); }
-  .tl-events { display: grid; gap: 8px; }
-  .tl-event { font-family: var(--font-body); font-size: 13px; line-height: 1.5; color: var(--ink); }
-  .tl-event.on-dark { color: rgba(247,244,240,0.85); }
-  .tl-marker { font-family: var(--font-mono); color: var(--signal); font-weight: 500; margin-right: 6px; }
-  .tl-arrow { align-self: center; font-family: var(--font-display); font-size: 26px; color: var(--signal); padding: 0 2px; }
-  .tl-then { text-align: center; font-family: var(--font-body); font-size: 12.5px; color: var(--ink-60); margin: 12px 0 0; line-height: 1.5; }
+  .footer {
+    margin-top: 64px; padding-top: 18px;
+    border-top: 1px solid var(--ink-12);
+    font-family: var(--font-mono); font-size: 10.5px;
+    letter-spacing: 0.04em; text-transform: uppercase;
+    color: var(--ink-40);
+    display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+  }
+  .footer a { color: var(--ink-60); text-decoration: none; }
 
   @media (max-width: 560px) {
     .container { padding: 0 20px 60px 20px; }
-    .two-rel { grid-template-columns: 1fr; }
     .hero h1 { font-size: 30px; }
     .fact { grid-template-columns: 1fr; gap: 3px; }
-    .timeline { grid-template-columns: 1fr; }
-    .tl-arrow { text-align: center; padding: 4px; transform: rotate(90deg); }
   }
   @media print {
     .detail { display: block !important; }
@@ -199,7 +174,7 @@
     .header { position: static; }
     .container { max-width: none; padding: 24px; }
     .section { page-break-inside: avoid; }
-    .rel-card, .path, .question { page-break-inside: avoid; }
+    .question, .said { page-break-inside: avoid; }
   }
 </style>
 </head>
@@ -207,273 +182,245 @@
 <div class="container">
 
   <div class="header">
-    <div class="wordmark">municipαl</div>
+    <div class="wordmark">municip&alpha;l</div>
     <div class="header-right">
-      <div class="header-meta">Discussion guide<br>Schola &middot; Tue 2026-08-11</div>
+      <div class="header-meta">After our call<br>Schola &middot; Wed 2026-08-12</div>
       <button id="toggle" class="toggle-btn" type="button" aria-pressed="false">Show details &#9656;</button>
     </div>
   </div>
 
   <div class="hero">
     <h1>Municipal Alpha for Schola</h1>
-    <div class="question" style="margin-bottom:18px">
-      <div class="rel-label">What you wrote, 2026-08-10</div>
-      <p style="margin:0 0 10px 0">&#8220;We&#8217;ve started partnering with municipalities using our Assembly platform to create a central town-wide catalog of all programs, activities, and events for their constituents. Schools, parks &amp; rec, camps, libraries... all of it. I&#8217;m wondering if we could work together and use Municipal Alpha to identify the municipalities who are actively trying to organize facilities, staff, and programs to serve their community members.&#8221;</p>
-      <p style="margin:0"><strong>Everything below is my answer to that.</strong> It is written before we have spoken, so it is my reading of your ask, not yours. Where I have guessed at what Schola needs, say so and I will rebuild the page around what you actually tell me.</p>
-    </div>
     <p class="lede">
-      Municipal Alpha reads the town-level record, the night the meeting posts, across parks and rec, library, camp, and school-adjacent programming. Two distinct offerings for Schola, mapping to the two asks in your cold email and covering both of your products (ScholaOne and Assembly): a one-off forensic audit of your existing customer base across both products (Layer 1), and an ongoing lead-generation feed of new districts and municipalities to sell into on either side (Layer 2).
+      We spoke on 11 August. This page is your problem in your words, then what the Maine municipal record actually holds against it. The earlier version of this page was written before we met and was my guess at your ask. It has been replaced.
     </p>
-    <p class="mode-cue">Quick read by default. Show details for the real municipal data behind each layer &#9656;</p>
+    <p class="mode-cue">Quotes are verbatim from the Meet transcript, which is machine generated. Square brackets mark where it garbled a word &#9656;</p>
   </div>
 
-  <!-- ───────── 1. THE CATALOG PROBLEM ───────── -->
   <div class="section">
-    <h2>The catalog problem</h2>
-    <p>
-      You are building a town-wide catalog of programs, activities, and events across schools, parks and rec, camps, and libraries. Two of the hardest parts of that build are the same problem underneath: the town's own record of what it runs is scattered across a parks board here, a library trustee minutes there, a school-district calendar somewhere else, and a camp brochure posted on the rec department's own site.
-    </p>
-    <p>
-      It is all public, in the narrowest sense of the word: <span class="hl">roughly ninety-nine percent of it never reaches a search engine</span>. Catalog-by-hand becomes catalog-by-whoever-clicks-through-every-town's-website-every-week. That is what Municipal Alpha runs at scale, and it is the wedge in Schola's direction.
-    </p>
-  </div>
-
-  <!-- ───────── 2. WHAT MA GIVES YOU (the core) ───────── -->
-  <div class="section">
-    <h2>What Municipal Alpha gives you, two offerings</h2>
-    <p class="section-sub">
-      Two distinct MA offerings for Schola. Both work across your two products: ScholaOne (school districts, family-facing recruitment and enrollment) and Assembly (community-org and municipal program management). Both drawn from the same underlying pipeline that reads three thousand-plus municipalities the night their agendas drop. Run one MA offering or both.
-    </p>
-
-    <div class="two-rel">
-      <div class="rel-card">
-        <div class="rel-label">Layer 1</div>
-        <div class="rel-title">One-off forensic audit of your existing customers</div>
-        <div class="rel-body">
-          <p style="margin: 0 0 10px 0;">A deep-dive on the districts and towns already running either ScholaOne or Assembly. For each account:</p>
-          <div class="tl-events">
-            <div class="tl-event"><span class="tl-marker">&rarr;</span> What the community is saying in and around your program area</div>
-            <div class="tl-event"><span class="tl-marker">&rarr;</span> What has moved since Schola started serving them</div>
-            <div class="tl-event"><span class="tl-marker">&rarr;</span> What has stalled</div>
-            <div class="tl-event"><span class="tl-marker">&rarr;</span> What the account manager should know before the next conversation</div>
-          </div>
-          <p style="margin: 12px 0 0 0; font-size: 12.5px; color: var(--ink-60); font-style: italic;">&dagger; Found today by calibrated keyword watch rather than a dedicated signal category; the six-week calibration is where the yield gets proven, before anything is billed.</p>
-          <p style="margin: 12px 0 0 0; font-size: 12.5px; color: var(--ink-60);">Mechanics and pricing below.</p>
-        </div>
-      </div>
-      <div class="rel-card">
-        <div class="rel-label">Layer 2</div>
-        <div class="rel-title">Lead generation, ongoing feed of new municipalities to sell into</div>
-        <div class="rel-body">
-          <p style="margin: 0 0 10px 0;">Every week, a PDF and CSV of new districts and municipalities. Shapes each of your products wins on:</p>
-
-          <p class="tl-label" style="margin: 10px 0 6px;">For Assembly</p>
-          <div class="tl-events">
-            <div class="tl-event"><span class="tl-marker">&rarr;</span> Consolidation feasibility studies</div>
-            <div class="tl-event"><span class="tl-marker">&rarr;</span> Capital plans for community programming</div>
-            <div class="tl-event"><span class="tl-marker">&rarr;</span> Department reorganizations&dagger;</div>
-            <div class="tl-event"><span class="tl-marker">&rarr;</span> Activity-registration and program-management RFPs&dagger;</div>
-          </div>
-
-          <p class="tl-label" style="margin: 14px 0 6px;">For ScholaOne*</p>
-          <div class="tl-events">
-            <div class="tl-event"><span class="tl-marker">&rarr;</span> Enrollment-pressure reports</div>
-            <div class="tl-event"><span class="tl-marker">&rarr;</span> New charter-school or program competition</div>
-            <div class="tl-event"><span class="tl-marker">&rarr;</span> Redistricting votes</div>
-            <div class="tl-event"><span class="tl-marker">&rarr;</span> Family-engagement and recruitment initiatives</div>
-          </div>
-
-          <p style="margin: 12px 0 0 0; font-size: 12.5px; color: var(--ink-60);">Mechanics and pricing below.</p>
-        </div>
-      </div>
+    <h2>What you said Schola is</h2>
+    <div class="said">
+      <p>&#8220;we built this platform starting B2B that was like we will aggregate every program activity and event make a beautiful catalog and then manage all the back-end operations of those programs. So it's facilities usage, it's staffing, it's attendance, it's weight list [waitlist] management, it's grant funding.&#8221;</p>
     </div>
+    <div class="said">
+      <p>&#8220;we figured out we could repurpose the program catalog to be an aggregated marketplace and then give that to a bunch of different stakeholder organizations.&#8221;</p>
+    </div>
+    <div class="said">
+      <p>&#8220;it shows, swim lessons, it shows nights out for parents, it shows the pool hours for the public pool, it shows like summer camps, it shows adult education classes, like literally everything that happens in that town.&#8221;</p>
+      <div class="attrib">Ben Welbourn &middot; 2026-08-11</div>
+    </div>
+    <p class="detail">On the municipal side you were direct about where you are: &#8220;we haven't really gone into the municipality space to deal with all their softwares and I've looked at parks and rec[k] departments and my [w]reck and things like that.&#8221; And on the shape of the year: &#8220;when I stepped in the company had three months to live and it was burning 350k a month and we are now one deal away from profitability.&#8221;</p>
+  </div>
 
-    <p class="block-label" style="margin-top:40px">Coverage across your four verticals, honest</p>
+  <div class="section">
+    <h2>What you took us to be</h2>
+    <div class="said">
+      <p>&#8220;So that's where I saw you and I was like you would answer a ton of questions for how to do that.&#8221;</p>
+    </div>
+    <div class="said">
+      <p>&#8220;Do you guys bump up against Starbridge at all? [&hellip;] They started in the education space and now they're into just anything government, but they are trying to do the same thing. it's detailed pulse checks on anytime certain things come up in meeting minutes at board meetings and all that stuff.&#8221;</p>
+      <div class="attrib">Ben Welbourn &middot; 2026-08-11</div>
+    </div>
+    <p>That is a fair read of the category and it is the only competitor either of us named. The difference I would put in front of you is coverage rather than concept. Reading the big cities is a solved problem. Reading Hermon and Belfast and Brewer is the part that stays expensive, and it is where the towns you can actually win sit.</p>
+  </div>
 
+  <div class="section">
+    <h2>What you said you need</h2>
+    <p class="section-sub">This is the part I built the rest of the page against, so it is worth being exact about.</p>
+    <div class="said">
+      <p>&#8220;we are very much in discovery. so I think what we'd be most interested in is identifying municipalities or any other entity that is right for what we're doing [&hellip;] right now it would be prospecting mostly.&#8221;</p>
+    </div>
+    <div class="said">
+      <p>&#8220;being able to identify towns that don't have some obnoxious incumbent where we have to deal with their contracts and all that stuff.&#8221;</p>
+    </div>
+    <div class="said">
+      <p>&#8220;are you able to actually identify the budget allocation for kind of what we're doing in some cases?&#8221;</p>
+    </div>
+    <div class="said">
+      <p>&#8220;that's the thing we haven't actually successfully launched with any municipalities. [&hellip;] I don't yet know where to start.&#8221;</p>
+    </div>
+    <div class="said">
+      <p>&#8220;if we wanted to start with really proving it out, it would be towns that have I don't know hundreds at least of programs and activities and maybe 10,000 residents, something like that. [&hellip;] So we're talking medium to big probably.&#8221;</p>
+      <div class="attrib">Ben Welbourn &middot; 2026-08-11</div>
+    </div>
+    <p>So: who is the incumbent, what is the town paying for it, is it up, and does the town run enough programs to be worth your time. I went and looked for all four.</p>
+  </div>
+
+  <div class="section">
+    <h2>Before any number, the denominator</h2>
+    <p>Every count below describes the slice of Maine we can read in full text today. It is not a statement about Maine.</p>
+    <div class="stat-strip">
+      <div class="stat"><div class="num">66,887</div><div class="lab">Maine documents collected</div></div>
+      <div class="stat"><div class="num">21,350</div><div class="lab">full-text searchable</div></div>
+      <div class="stat"><div class="num">31.9%</div><div class="lab">coverage</div></div>
+      <div class="stat"><div class="num">170</div><div class="lab">towns with a searchable document</div></div>
+    </div>
+    <p style="margin-top:16px">A town where we find no vendor is a town where we have not found one. It is not a town without one, and I will not hand you a prospect list built on that confusion. Read every absence on this page that way.</p>
+    <p class="detail">Read directly from full document text on 2026-08-12, never from search snippets and never from our truncated text column. A snippet tells you which document to open. It never tells you what the document says.</p>
+  </div>
+
+  <div class="section">
+    <h2>Your competitor, named by the town itself, in 13 places</h2>
+    <p>Across the searchable Maine slice, <strong>13 municipalities name a recreation-registration vendor in their own records</strong>. Five of those carry a dollar figure attached to it. Those five are the direct answer to your budget-allocation question.</p>
+
+    <div class="table-wrap">
+    <table class="rows">
+      <thead><tr><th>Town</th><th>Pop 2020</th><th>Named in the record</th><th>Annual figure</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="town">Auburn</td><td>24,061</td>
+          <td>RecTrac, requested for &#8220;Recreation registration and website software&#8221; in the Recreation &amp; Sports Facilities worksheet of the FY2021 Capital Improvement Program</td>
+          <td class="amt">$25,000<br><span style="color:var(--ink-60);font-size:11px">requested, not awarded</span></td>
+        </tr>
+        <tr>
+          <td class="town">South Portland</td><td>26,498</td>
+          <td>&#8220;MyRec Contract&#8221;, line item under account 10477062 627000, Fiscal Year 2024 Annual Municipal Budget</td>
+          <td class="amt">$6,500</td>
+        </tr>
+        <tr>
+          <td class="town">Brewer</td><td>9,672</td>
+          <td>&#8220;MYREC.COM SOFTWARE ANNUAL SUBSCRIPTION&#8221;, account 502310 Online Registration Prog Fees, CY2025 invoice list obtained by records request</td>
+          <td class="amt">$6,375</td>
+        </tr>
+        <tr>
+          <td class="town">Belfast</td><td>6,938</td>
+          <td>&#8220;5. Parks and Recreation RecDesk $4,200&#8221;, in the City Manager&#8217;s FY2026-27 budget proposal, listed beside every other new software line</td>
+          <td class="amt">$4,200</td>
+        </tr>
+        <tr>
+          <td class="town">Falmouth</td><td>12,444</td>
+          <td>&#8220;CP ANNUAL FEE&#8221; to Active Network LLC, Community Programs, FY25 vendor AP detail obtained by records request</td>
+          <td class="amt">$4,000</td>
+        </tr>
+        <tr>
+          <td class="town">Brunswick</td><td>21,756</td>
+          <td>CivicRec, named in a Parks and Recreation Commission agenda: &#8220;Online Registration is available in CIVICREC&#8221;</td>
+          <td class="amt" style="color:var(--ink-40)">none in record</td>
+        </tr>
+        <tr>
+          <td class="town">Orono</td><td>11,183</td>
+          <td>CivicRec, via the department&#8217;s own registration link in the town newsletter and annual report</td>
+          <td class="amt" style="color:var(--ink-40)">none in record</td>
+        </tr>
+        <tr>
+          <td class="town">Sanford</td><td>21,982</td>
+          <td>&#8220;sent via the Recreation Department&#8217;s MyRec platform&#8221;, City Council minutes</td>
+          <td class="amt" style="color:var(--ink-40)">none in record</td>
+        </tr>
+        <tr>
+          <td class="town">Windham</td><td>18,434</td>
+          <td>MyRec, via the Parks &amp; Recreation Advisory Committee link in the 2024 Town Report</td>
+          <td class="amt" style="color:var(--ink-40)">none in record</td>
+        </tr>
+        <tr>
+          <td class="town">Biddeford</td><td>22,552</td>
+          <td>MyRec, inside a service-contracts line that rose 93 percent and also covers Monday.com, Canva, a music licence and porta-potties</td>
+          <td class="amt" style="color:var(--ink-40)">bundled, not attributable</td>
+        </tr>
+        <tr>
+          <td class="town">Hermon</td><td>6,461</td>
+          <td>Rec Office budget line 60-42, annotated by the town &#8220;Includes MyRec, Square Costs&#8221;, moving 13,650 to 17,000</td>
+          <td class="amt" style="color:var(--ink-40)">bundled, not attributable</td>
+        </tr>
+        <tr>
+          <td class="town">Cape Elizabeth</td><td>9,535</td>
+          <td>A MYREC.COM disbursement in the check register, annotated &#8220;School&#8221;, so the buying entity is unclear from the line</td>
+          <td class="amt" style="color:var(--ink-40)">$2,850, unattributed</td>
+        </tr>
+        <tr>
+          <td class="town">Freeport</td><td>8,737</td>
+          <td>MyRec, but the customer is <strong>RSU5 Community Programs</strong>, the school district, not the Town. Worth knowing before anyone calls the town office.</td>
+          <td class="amt" style="color:var(--ink-40)">none in record</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="detail" style="margin-top:14px">Two of the bundled rows are the most useful thing on this table for anyone who has to trust it. Hermon&#8217;s $17,000 is not a MyRec price and Biddeford&#8217;s 93 percent is not a MyRec increase, because the town wrote the scope of the line into the line. Attributing a bundled figure to one vendor is the easiest way to put a false number in front of a buyer, so those two stay marked rather than counted.</p>
+  </div>
+
+  <div class="section">
+    <h2>Auburn wrote your pitch, four years early</h2>
+    <p>The best single document in the set is a Capital Improvement Program worksheet. Auburn&#8217;s Recreation and Sports Facilities department asked for registration software and justified it like this:</p>
+    <div class="mono-row">Department: Recreation &amp; Sports Facilities
+Project Title: Recreation registration and website software (RecTrac)
+Justification: ... The department wants to move from paying for five (5)
+different software systems to one (1) system.
+Cost FY2021 $25,000     Useful Life: 10 Yrs     Priority: High
+Project Purpose: Improve efficiency</div>
+    <p>A Maine city of 24,000 wrote your consolidation argument about itself, put a high priority on it, and attached the largest recreation-software figure anywhere in the slice we can read. That is a request rather than an award, and the request is four years old, so treat it as a statement of appetite rather than a live contract. The appetite is the part that matters.</p>
+  </div>
+
+  <div class="section">
+    <h2>Scarborough answers your other threshold</h2>
+    <p>You set two bars: ten thousand residents and &#8220;hundreds at least of programs and activities&#8221;. The second one is usually invisible. Scarborough publishes it, in the Community Services year-in-review inside its FY2026 budget book:</p>
+    <div class="facts">
+      <div class="fact"><div class="fact-k">189 programs</div><div class="fact-v">1,489 Active Adult Program enrollments</div></div>
+      <div class="fact"><div class="fact-k">154 programs</div><div class="fact-v">3,581 Youth Program enrollments</div></div>
+      <div class="fact"><div class="fact-k">351 registrations</div><div class="fact-v">Summer camp, 45 of them waitlisted</div></div>
+      <div class="fact"><div class="fact-k">26,660 hours</div><div class="fact-v">Of fields, facilities and rooms rented</div></div>
+      <div class="fact"><div class="fact-k">455 households</div><div class="fact-v">New to the town&#8217;s registration system that year</div></div>
+    </div>
+    <p style="margin-top:18px">343 programs across two lines, 22,135 residents, and 45 waitlisted camp registrations. Scarborough is also one of the towns where we find no vendor named, which as above means we have not found one rather than that none exists.</p>
+    <p class="detail">Orono publishes the same shape at a smaller scale in its annual report: &#8220;another significant increase to a new max amount of 40 students and a short waitlist of interested families in the After School Program&#8221;, and &#8220;237 participants enjoyed fall youth programming&#8221;. Waitlists are the cleanest version of your argument, because they are documented unmet demand written down by the town.</p>
+  </div>
+
+  <div class="section">
+    <h2>Falmouth, where Gage already is</h2>
+    <p>You said Gage is working Yarmouth, Cumberland and Falmouth. Falmouth is the one town where we can see a term window on the incumbent at all, and it sits in an accounts-payable file we obtained by records request:</p>
+    <div class="mono-row">CP ANNUAL FEE 05/25/25-05/24/2 | ACTIVE NETWORK, LLC | 4000</div>
+    <p>Two things to say plainly. The description field is truncated by the town&#8217;s own export, so the closing year is cut off mid-digit. A twelve-month term beginning 25 May 2025 is the obvious reading, and it is a reading, not a record. Confirming it is a short records request rather than a guess, and I would confirm before Gage times anything around it.</p>
+    <p>The second thing is that $4,000 is the whole annual fee. That is the number he is displacing.</p>
+  </div>
+
+  <div class="section">
+    <h2>Where this stops</h2>
+    <p class="section-sub">Four limits, because you will find them anyway and it is cheaper if you find them here.</p>
     <div class="facts">
       <div class="fact">
-        <div class="fact-k">Parks &amp; rec</div>
-        <div class="fact-v">Strong. Parks and Recreation boards, department reports, recurring program calendars, capital and RFP items, all captured where the municipal publishing surface reaches them.</div>
+        <div class="fact-k">Renewal timing</div>
+        <div class="fact-v">You said renewal dates would help and I agreed on the call. Across the searchable Maine slice there is exactly one dated term window, the Falmouth line above, and it came out of an AP spreadsheet rather than a procurement notice. Renewal tracking is not a capability we have in Maine today and I am not going to sell it as one.</div>
       </div>
       <div class="fact">
-        <div class="fact-k">Libraries</div>
-        <div class="fact-v">Strong where the library board is municipal. Trustee minutes, event calendars, program flyers when posted in board packets.</div>
+        <div class="fact-k">Vendor names collide</div>
+        <div class="fact-v">Searching &#8220;Active Network&#8221; returns four Maine towns. Three of them are the ordinary English phrase &#8220;an active network of&#8221;: 150 partner agencies in a Westbrook grant narrative, pedestrian and transit connections in a Scarborough plan, 380 volunteers in a letter to a Cape Elizabeth library committee. One is the vendor. Every count on this page was read before it was counted.</div>
       </div>
       <div class="fact">
-        <div class="fact-k">Camps</div>
-        <div class="fact-v">Partial. Municipal rec-department summer camp brochures and registration flyers flow through parks-rec publishing. Independent day and specialty camps do not.</div>
+        <div class="fact-k">Verbs follow the document</div>
+        <div class="fact-v">A municipal agenda states the intended disposition in the item title, so agenda-sourced items read like completed decisions. Auburn requested $25,000. Belfast&#8217;s $4,200 sits in a manager&#8217;s budget proposal. Neither is an award, and we gate that distinction rather than trusting the reader to catch it.</div>
       </div>
       <div class="fact">
-        <div class="fact-k">Schools*</div>
-        <div class="fact-v">Patchy. School districts are typically separate legal entities from the town, publishing on their own infrastructure. MA reaches district content where it appears in municipal-adjacent surfaces: joint capital plans, shared-facility agreements, town-council school-liaison reports. A systematic school-district crawl would need explicit scoping. <span style="display:block; margin-top:8px; font-style: italic; color: var(--ink-60); font-size: 13px;">* The four ScholaOne signal shapes listed in Layer 2 above are what a ScholaOne feed would look for once the district-level crawl is added, not shapes MA delivers systematically today.</span></div>
+        <div class="fact-k">Revenue share</div>
+        <div class="fact-v">You raised revenue share as one monetization path. Searching for it does not work in municipal records. &#8220;Revenue sharing&#8221; returns 954 Maine documents and the largest identifiable use is Maine&#8217;s own State Municipal Revenue Sharing, a budget transfer from the state to the town, named outright in 333 of them. The narrower &#8220;revenue share&#8221; appears in 48 documents across 6 towns. The workable version is to find the vendor first and read the deal shape out of how the town books it.</div>
       </div>
     </div>
+    <p class="detail" style="margin-top:18px">One more, on the shape of this slice. 74 Maine documents mention any recreation-registration term at all, across 23 towns. Only 2 of the 74 are check registers, which is unusual and good: this is deliberative and budget material rather than a pile of a town paying its own bill. It also means the population is small, so nobody should promise you thirty towns of this quality in Maine at today&#8217;s coverage.</p>
+  </div>
 
-    <p class="detail-cue">Show details for the two layers in real municipal data &#9656;</p>
+  <div class="section">
+    <h2>The thing I told you I throw away</h2>
+    <p>On the call I said we currently discard the community-event listings flowing out of parks and rec departments, because no buyer had wanted them. You said &#8220;interesting&#8221;, which was the most commercially useful moment of the hour.</p>
+    <p>Schola is the buyer for that stream. Turning it back on for a scoped set of Maine towns is a configuration change on our side, not a research question, and it produces exactly the inventory your marketplace needs on day one in a town you have not signed yet.</p>
+  </div>
 
-    <div class="detail">
-
-      <p class="block-label">Layer 1, a real town-metro cut (Kansas City metro, 2026-03-30 sample)</p>
-
-      <div class="stat-strip">
-        <div class="stat"><div class="num">23</div><div class="lab">municipalities in one KC-metro cut</div></div>
-        <div class="stat"><div class="num">4,421</div><div class="lab">total docs ingested from those</div></div>
-        <div class="stat"><div class="num">153</div><div class="lab">parks and rec docs identified</div></div>
-        <div class="stat"><div class="num">5</div><div class="lab">towns with dedicated parks &amp; rec boards</div></div>
-      </div>
-
-      <ul class="signal-list">
-        <li>
-          <div class="sig-title">Mission, KS: Mission Market at Broadmoor Park, recurring town-programmed community event</div>
-          <div class="sig-body">Eight dated instances of the same recurring event across June and July 2026, plus a Parks, Recreation and Tree Commission agenda for July 13, 2026 in the same set. Exactly the shape a resident-facing catalog would list.</div>
-          <div class="sig-where">Mission KS &middot; Event calendar &middot; Jun 18, 2026 (one of eight)</div>
-          <a class="source-link" href="https://www.missionks.org/event/mission-market-at-broadmoor-park/2026-06-18/" target="_blank" rel="noopener">View event page &rarr;</a>
-        </li>
-        <li>
-          <div class="sig-title">Merriam, KS: Parks &amp; Recreation Advisory Board, March 24, 2026 agenda</div>
-          <div class="sig-body">A standing municipal advisory board's live agenda, pulled from the town's document portal. The board's calendar, discussion topics, and adopted actions are all in the pack.</div>
-          <div class="sig-where">Merriam KS &middot; Parks &amp; Rec Advisory Board &middot; Mar 24, 2026</div>
-          <a class="source-link" href="https://merriam.civicweb.net/document/129970/Parks%20_%20Recreation%20Advisory%20Board%20-%20Mar%2024%202026.pdf" target="_blank" rel="noopener">View agenda &rarr;</a>
-        </li>
-        <li>
-          <div class="sig-title">Mission Hills, KS: Park Board meeting, March 3, 2026</div>
-          <div class="sig-body">A dedicated Park Board's meeting agenda for a small Johnson County town. Small towns often carry the same board structure larger ones do, and the shape of programming decisions is legible from the agenda alone.</div>
-          <div class="sig-where">Mission Hills KS &middot; Park Board &middot; Mar 3, 2026</div>
-          <a class="source-link" href="https://missionhillsks.gov/AgendaCenter/ViewFile/Agenda/_03032026-616?html=true" target="_blank" rel="noopener">View agenda &rarr;</a>
-        </li>
-        <li>
-          <div class="sig-title">Blue Springs, MO: Parks and Recreation Commission, twenty-one meeting notices in the town archive</div>
-          <div class="sig-body">A permanent Parks and Recreation Commission with a named assistant director (Nicholas Hutchison, 816-622-4006) as a contact. Twenty-one notices captured from the town's Archive Center, ready-to-use scheduling and contact metadata.</div>
-          <div class="sig-where">Blue Springs MO &middot; Parks &amp; Recreation Commission</div>
-          <a class="source-link" href="https://bluespringsgov.com/ArchiveCenter/ViewFile/Item/1544" target="_blank" rel="noopener">View sample notice &rarr;</a>
-        </li>
-      </ul>
-
-      <p class="block-label">Layer 2, a town committing to program capacity ahead of expansion (real records)</p>
-
-      <ul class="signal-list">
-        <li>
-          <div class="sig-title">Leawood, KS: 2026-2030 Capital Improvements Plan, public notice</div>
-          <div class="sig-body">A five-year capital plan going to public hearing on May 27, 2025, Case No. 46-25. The parks, recreation, and facilities line items in a five-year CIP commit a town to programming space for the next half-decade, an Assembly-shaped in-market signal. ScholaOne-shaped signals (enrollment stress, redistricting, program competition) would come from district-level records queried the same way.</div>
-          <div class="sig-where">Leawood KS &middot; Notice &middot; May 27, 2025</div>
-          <a class="source-link" href="https://www.leawood.org/ArchiveCenter/ViewFile/Item/122" target="_blank" rel="noopener">View public notice PDF &rarr;</a>
-        </li>
-        <li>
-          <div class="sig-title">Leawood, KS: Capital Improvements Program 2024, full document</div>
-          <div class="sig-body">The prior year's full CIP, in the archive. The historical line item for parks and community facilities is the reference against which a town's next-cycle investment is read, and is where a delta-year-over-year in parks and rec spend becomes a signal on its own.</div>
-          <div class="sig-where">Leawood KS &middot; Report</div>
-          <a class="source-link" href="https://www.leawood.org/ArchiveCenter/ViewFile/Item/76" target="_blank" rel="noopener">View CIP PDF &rarr;</a>
-        </li>
-      </ul>
-
-      <p style="margin-top:22px">
-        <strong>Honest framing.</strong> Layer 1 depth is already in place for parks and rec and municipal libraries; we quote the forensic audit against the specific list of accounts Schola names. Layer 2 is served by an existing watchlist tool; Schola-specific watch terms (activity-registration software RFP, parks reorganization, library digitization, program-management procurement) and a target-region list come out of this call, and the six-week calibration draws a fresh set of RFP and procurement signals scoped to Schola's ICP geographies. School-district reorganization signals in particular would need a supplementary school-district crawl to be systematic, since school districts are usually separate publishing entities from the town.
-      </p>
-
+  <div class="section">
+    <h2>Open between us</h2>
+    <div class="facts">
+      <div class="fact"><div class="fact-k">You offered</div><div class="fact-v">The Clear Channel billboard markets, and the Denver context. Denver is the more interesting of the two, because &#8220;more than half our revenue just in Denver so far&#8221; with no known cause is a question the municipal record can be pointed at.</div></div>
+      <div class="fact"><div class="fact-k">You offered</div><div class="fact-v">An introduction to Neil at Androscoggin Bank. Yes please.</div></div>
+      <div class="fact"><div class="fact-k">I offered</div><div class="fact-v">An introduction to Kinsey at Newspack, which is the publishing platform under a large share of the newsrooms you were describing for the Cox and USA Today angle.</div></div>
+      <div class="fact"><div class="fact-k">I owe you</div><div class="fact-v">This page, and the readout of the twenty-two Maine towns at or above your ten thousand floor.</div></div>
     </div>
   </div>
 
-  <!-- ───────── 3. HOW WE'D PROPOSE TO START ───────── -->
   <div class="section">
-    <h2>How we'd propose to start</h2>
-    <p class="section-sub">
-      Commercial shape of each offering. The natural sequence is Layer 1 first: the audit proves the depth on accounts Schola already knows well, and what it surfaces then anchors what the Layer 2 feed should look for. Independent otherwise, run either alone or together.
-    </p>
-
-    <p class="block-label" style="margin-top:8px">Layer 1 &middot; one-off forensic audit</p>
-
-    <div class="path">
-      <div class="path-title">Deep-dive on the towns Schola names, priced by scale</div>
-      <div class="path-body">
-        <p style="margin: 0 0 12px 0;">A historical deep-dive on any set of towns Schola names, starting with the existing customer base. For each town in the set:</p>
-        <div class="tl-events">
-          <div class="tl-event"><span class="tl-marker">&rarr;</span> The public-record backstory of the community</div>
-          <div class="tl-event"><span class="tl-marker">&rarr;</span> Signals visible in the years before the town became relevant to Schola</div>
-          <div class="tl-event"><span class="tl-marker">&rarr;</span> What has moved in the town since Schola started serving it</div>
-          <div class="tl-event"><span class="tl-marker">&rarr;</span> What the account manager should know before the next conversation</div>
-        </div>
-        <p style="margin: 14px 0 0 0;">Priced by scale (number of accounts and depth of the pull); we quote after seeing the target list.</p>
-      </div>
-    </div>
-
-    <p class="block-label" style="margin-top:32px">Layer 2 &middot; lead generation</p>
-
-    <div class="timeline">
-      <div class="tl-phase calibration">
-        <div class="tl-label">Weeks 1 to 6 &middot; Free</div>
-        <div class="tl-title">Calibration</div>
-        <div class="tl-weeks">
-          <span class="tl-week">1</span>
-          <span class="tl-week">2</span>
-          <span class="tl-week">3</span>
-          <span class="tl-week">4</span>
-          <span class="tl-week">5</span>
-          <span class="tl-week">6</span>
-        </div>
-        <div class="tl-events">
-          <div class="tl-event"><span class="tl-marker">&rarr;</span> Weekly PDF + CSV of new municipalities matching Schola's calibrated watch terms</div>
-          <div class="tl-event"><span class="tl-marker">&rarr;</span> Weekly 30-minute check-in with the person at Schola who uses the data</div>
-        </div>
-      </div>
-      <div class="tl-arrow">&rarr;</div>
-      <div class="tl-phase subscription">
-        <div class="tl-label" style="color: var(--signal)">Week 7 onward</div>
-        <div class="tl-title on-dark">$2,500 / month</div>
-        <div class="tl-weeks">
-          <span class="tl-week hollow">7</span>
-          <span class="tl-week hollow">8</span>
-          <span class="tl-week hollow">9</span>
-          <span class="tl-week hollow">&hellip;</span>
-        </div>
-        <div class="tl-events">
-          <div class="tl-event on-dark"><span class="tl-marker">&rarr;</span> Same weekly PDF + CSV delivery, ongoing</div>
-          <div class="tl-event on-dark"><span class="tl-marker">&rarr;</span> Check-in cadence Schola sets, monthly or as-needed</div>
-        </div>
-      </div>
-    </div>
-    <p class="tl-then">Or walk away with what you have at end of week six.</p>
-  </div>
-
-  <!-- ───────── 4. QUESTIONS ───────── -->
-  <div class="section">
-    <h2>Questions where your answers change how we calibrate</h2>
-    <p class="section-sub">
-      Genuine discussion topics, not a checklist. The first four route the calibration; the last two open the shape of the relationship past week six.
-    </p>
-
-    <div class="question">
-      <div class="q-text">Which of your two products carries the Layer 2 lead-gen feed for the six-week calibration, ScholaOne, Assembly, or both in parallel? And within whichever, which of the four verticals (schools, parks &amp; rec, camps, libraries) is the first wedge?</div>
-      <div class="why">Determines whether we run one set of watch terms or two, whether the 30-minute check-in is one meeting or two, and whether to prioritize school-district crawl work (currently the weakest of the four coverage rows) for the ScholaOne side.</div>
-    </div>
-
-    <div class="question">
-      <div class="q-text">Who at Schola uses this data day-to-day, sales, you as founder, marketing, a community-manager role?</div>
-      <div class="why">Sets the delivery format. A PDF for a founder-scan lands differently than a CSV a salesperson hits every morning, and the 30-minute check-in works only if the same person shows up.</div>
-    </div>
-
-    <div class="question">
-      <div class="q-text">What geographies and population bands is your ICP today, for each product if they differ?</div>
-      <div class="why">Sizes MA's data reach against your actual market, and lets us cut the six-week target list against towns and districts the pipeline already covers well. Assembly's community-org footprint and ScholaOne's district footprint may not overlap cleanly.</div>
-    </div>
-
-    <div class="question">
-      <div class="q-text">What signal shape tells you a district or a town is ready to buy from Schola in either product, versus merely aware of the problem?</div>
-      <div class="why">Calibrates the watch terms. The RFP for a program-management platform is one shape (Assembly); a district enrollment-decline report or a redistricting vote is another (ScholaOne). Your read is more reliable than ours here.</div>
-    </div>
-
-    <div class="question detail">
-      <div class="q-text">Weekly PDF plus CSV is our default delivery. Does that work for how Schola's team consumes data, or would a different shape land better?</div>
-      <div class="why">Delivery surface matters as much as the signal for adoption. A great feed in the wrong format is invisible. Answer sets whether we ship an extract, a feed, or push into a CRM you already run.</div>
-    </div>
-
-    <div class="question detail">
-      <div class="q-text">The "AI-powered intelligence layer" language on Schola's site: is that a roadmap where MA could partner as a data source into what you are building, or is that already resourced internally?</div>
-      <div class="why">Read A of your inbound (MA identifies districts and municipalities Schola sells into on either ScholaOne or Assembly) and Read B (MA feeds structured signal into Schola's own intelligence product) are different conversations with different commercial shapes. Worth knowing which is on the table before Phase 2.</div>
-    </div>
+    <h2>What I would do next</h2>
+    <p>Twenty-two Maine municipalities sit at or above your ten thousand resident floor on the 2020 census. Thirteen towns name an incumbent in the slice we can read, five of those with a price. The gap between those two numbers is the work: a readiness screen across the twenty-two that reports, per town, who the incumbent is where we can name one, what the town pays where the budget shows it, what the department&#8217;s own program and waitlist numbers are, and who submits recreation items to the council.</p>
+    <p>That last one is the answer to what you actually said, which was &#8220;I don't yet know where to start.&#8221;</p>
+    <p class="detail">Every figure on this page traces to a specific municipal document and can be produced on request. If any of it does not survive contact with what Gage is hearing in Falmouth or Cumberland, that is the most useful thing you could send back, and I will correct the page in writing.</p>
   </div>
 
   <div class="footer">
-    <span>Municipal Alpha &middot; prepared for Schola &middot; Ben Welbourn</span>
+    <span>Municipal Alpha &middot; prepared for Ben Welbourn, Schola &middot; after our call of 2026-08-11</span>
     <span><a href="https://municipalalpha.com">municipalalpha.com</a></span>
   </div>
 
