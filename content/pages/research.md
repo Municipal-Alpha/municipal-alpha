@@ -332,7 +332,7 @@ Summary: Cross-municipal patterns from live pipeline data. Each story is built e
 <h3>See a pattern relevant to your portfolio?</h3>
 <p>Every story above was built from the same pipeline that powers our data products. Tell me what you're watching.</p>
 </div>
-<a href="https://calendar.app.google/s6wDVSaJuqCkwcmg9" class="cta-button">Book a 15-Minute Call</a>
+<a href="https://calendar.app.google/HkZk29hxj7Cdtvuc9" class="cta-button">Book a Call</a>
 </div>
 
 <div class="ds-section-label">Datasets</div>
@@ -412,7 +412,7 @@ Summary: Cross-municipal patterns from live pipeline data. Each story is built e
 <div class="ds-bottom-cta">
 <h3>What should we investigate next?</h3>
 <p>The pipeline monitors 4,200+ municipalities in real time. If there's a trend, policy wave, or spending pattern you want us to dig into, we'll build the data story.</p>
-<a href="https://calendar.app.google/s6wDVSaJuqCkwcmg9" class="cta-button">Book a Data Review</a>
+<a href="https://calendar.app.google/HkZk29hxj7Cdtvuc9" class="cta-button">Book a Data Review</a>
 <span class="ds-or">or</span>
 <a href="mailto:matt@municipalalpha.com?subject=Data%20story%20request" class="ds-email">matt@municipalalpha.com</a>
 </div>

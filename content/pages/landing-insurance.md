@@ -136,7 +136,7 @@ Summary: Pre-event risk intelligence. Infrastructure spending patterns, deferred
 <div class="lp-bottom-cta">
 <h3>See risk signals for your geographic footprint</h3>
 <p>Tell me which states or regions you underwrite and I'll show you what the spending data reveals.</p>
-<a class="cta-button" href="https://calendar.app.google/s6wDVSaJuqCkwcmg9">Book a 15-minute data review</a>
+<a class="cta-button" href="https://calendar.app.google/HkZk29hxj7Cdtvuc9">Book a data review</a>
 <span class="lp-or">or</span>
 <a class="lp-email" href="mailto:matt@municipalalpha.com?subject=Infrastructure%20risk%20inquiry%20%28via%20landing%20page%29">matt@municipalalpha.com</a>
 <p style="margin-top: 16px; font-size: 13px; color: #888;">Weighing build vs buy? <a href="/build-vs-buy/">Run our evaluation prompt yourself</a>.</p>

@@ -4,7 +4,7 @@ Sortorder: 5
 
 ## Talk to Us
 
-**[Book a 15-minute data review](https://calendar.app.google/s6wDVSaJuqCkwcmg9)** -- see coverage for your tickers, geography, or sector. No pitch, just data.
+**[Book a data review](https://calendar.app.google/HkZk29hxj7Cdtvuc9)** -- see coverage for your tickers, geography, or sector. No pitch, just data.
 
 **Email:** [matt@municipalalpha.com](mailto:matt@municipalalpha.com?subject=Inquiry%20%28via%20contact%20page%29)
 
@@ -28,4 +28,4 @@ All data products are available as structured feeds (CSV, JSON) or via API, upda
 
 ### Pricing
 
-Scoped to your coverage needs. Pilot programs available. **[Book a call](https://calendar.app.google/s6wDVSaJuqCkwcmg9)** to discuss.
+Scoped to your coverage needs. Pilot programs available. **[Book a call](https://calendar.app.google/HkZk29hxj7Cdtvuc9)** to discuss.

@@ -127,7 +127,7 @@ Summary: Pre-RFP project intelligence. Zoning decisions, planning board approval
 <div class="lp-bottom-cta">
 <h3>See energy siting signals in your target geography</h3>
 <p>Tell me where you're developing and I'll walk through coverage live.</p>
-<a class="cta-button" href="https://calendar.app.google/s6wDVSaJuqCkwcmg9">Book a 15-minute data review</a>
+<a class="cta-button" href="https://calendar.app.google/HkZk29hxj7Cdtvuc9">Book a data review</a>
 <span class="lp-or">or</span>
 <a class="lp-email" href="mailto:matt@municipalalpha.com?subject=Energy%20siting%20inquiry%20%28via%20solutions%20page%29">matt@municipalalpha.com</a>
 <p style="margin-top: 16px; font-size: 13px; color: #888;">Weighing build vs buy? <a href="/build-vs-buy/">Run our evaluation prompt yourself</a>.</p>

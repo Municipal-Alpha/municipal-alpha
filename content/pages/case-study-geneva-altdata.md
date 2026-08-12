@@ -159,7 +159,7 @@ This is not insider information. Every check register cited above is a public do
 <div class="cs-cta">
 <h3>See what your tickers look like.</h3>
 <p>Pick a ticker. I'll pull the municipal payment history across every town in the network and show you what the signal looks like before it hits the 10-K.</p>
-<a href="https://calendar.app.google/s6wDVSaJuqCkwcmg9" class="cta-button">Book a 15-Minute Data Review</a>
+<a href="https://calendar.app.google/HkZk29hxj7Cdtvuc9" class="cta-button">Book a Data Review</a>
 </div>
 
 <div class="cs-note">

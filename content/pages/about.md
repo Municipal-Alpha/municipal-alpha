@@ -83,4 +83,4 @@ The pipeline runs autonomously: 4,200+ municipalities crawled daily, documents c
 
 Embedded at the Roux Institute NSIH (National Security Innovation Hub, Northeastern University, Portland ME).
 
-**[Book a 15-minute data review](https://calendar.app.google/s6wDVSaJuqCkwcmg9)** or email [matt@municipalalpha.com](mailto:matt@municipalalpha.com).
+**[Book a data review](https://calendar.app.google/HkZk29hxj7Cdtvuc9)** or email [matt@municipalalpha.com](mailto:matt@municipalalpha.com).

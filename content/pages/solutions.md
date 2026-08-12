@@ -120,7 +120,7 @@ Sortorder: 1
 <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #E8512D; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 12px;">Before the vote. Before the permit. Before the RFP.</div>
 <h2>You see the thing before it becomes a thing</h2>
 <p>Every day, 19,500 town halls publish the documents where decisions first take shape. Siting votes before permits. Capital plans before RFPs. Employer distress before the news. Vendor payments before earnings. I built a system that reads them all.</p>
-<a href="https://calendar.app.google/s6wDVSaJuqCkwcmg9" class="cta-button">Book a 15-Minute Data Review</a>
+<a href="https://calendar.app.google/HkZk29hxj7Cdtvuc9" class="cta-button">Book a Data Review</a>
 </div>
 
 <div class="solution-grid">
@@ -173,7 +173,7 @@ Sortorder: 1
 <h3>Not sure which fits?</h3>
 <p>Tell me what you're working on. I'll show you what I can see before it hits your current sources.</p>
 </div>
-<a href="https://calendar.app.google/s6wDVSaJuqCkwcmg9" class="cta-button">Book a 15-Minute Call</a>
+<a href="https://calendar.app.google/HkZk29hxj7Cdtvuc9" class="cta-button">Book a Call</a>
 </div>
 
 <div class="sol-proof-section">
@@ -184,7 +184,7 @@ Sortorder: 1
 <div class="sol-bottom-cta">
 <h3>960,000+ documents. 4,200+ municipalities. Updated every night.</h3>
 <p>The same precursor intelligence powers every product above. The question is how your industry uses the timing advantage.</p>
-<a href="https://calendar.app.google/s6wDVSaJuqCkwcmg9" class="cta-button">Book a Data Review</a>
+<a href="https://calendar.app.google/HkZk29hxj7Cdtvuc9" class="cta-button">Book a Data Review</a>
 <span class="sol-or">or</span>
 <a href="mailto:matt@municipalalpha.com?subject=Solutions%20inquiry" class="sol-email">matt@municipalalpha.com</a>
 </div>

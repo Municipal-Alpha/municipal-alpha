@@ -165,7 +165,7 @@ Renewable energy developers face a fragmented regulatory landscape. Solar ordina
 <div class="cs-cta">
 <h3>Moratoria are clocks, not walls.</h3>
 <p>The moratorium-to-permit pipeline is predictable. The stages are consistent, the documents are public, and the timeline is knowable. Tell me what you're developing and I'll show you which towns are opening up, which are closing down, and which are about to rewrite the rules.</p>
-<a href="https://calendar.app.google/s6wDVSaJuqCkwcmg9" class="cta-button">Book a 15-Minute Data Review</a>
+<a href="https://calendar.app.google/HkZk29hxj7Cdtvuc9" class="cta-button">Book a Data Review</a>
 </div>
 
 <div class="cs-note">

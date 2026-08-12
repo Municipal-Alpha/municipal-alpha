@@ -101,7 +101,7 @@ Back in Old Town, the budget lines will keep carrying the mill for years, the wa
 <div class="lp-bottom-cta">
 <h3>Get the weekly retention read for your region</h3>
 <p>If business retention is part of your mandate, at a regional development organization, a growth council, or a state agency, tell me your region and I'll walk through what the record shows there, live.</p>
-<a class="cta-button" href="https://calendar.app.google/s6wDVSaJuqCkwcmg9">Book a 15-minute walkthrough</a>
+<a class="cta-button" href="https://calendar.app.google/HkZk29hxj7Cdtvuc9">Book a walkthrough</a>
 <span class="lp-or">or</span>
 <a class="lp-email" href="mailto:matt@municipalalpha.com?subject=Retention%20read%20%28via%20research%20article%29">matt@municipalalpha.com</a>
 </div>

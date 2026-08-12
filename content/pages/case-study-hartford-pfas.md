@@ -165,7 +165,7 @@ Hartford, Vermont has been navigating PFAS contamination across two wastewater f
 <div class="cs-cta">
 <h3>See PFAS signals in your geographic footprint.</h3>
 <p>Tell me where your labs operate and I'll show you which municipalities are moving through the PFAS escalation arc right now, from first sampling to expanding scope, before the RFP hits.</p>
-<a href="https://calendar.app.google/s6wDVSaJuqCkwcmg9" class="cta-button">Book a 15-Minute Data Review</a>
+<a href="https://calendar.app.google/HkZk29hxj7Cdtvuc9" class="cta-button">Book a Data Review</a>
 </div>
 
 <div class="cs-note">
