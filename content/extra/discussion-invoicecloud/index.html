@@ -24,6 +24,7 @@
   }
 
   *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-padding-top: 84px; }
   html, body {
     margin: 0; padding: 0;
     background: var(--paper); color: var(--ink);
@@ -49,6 +50,10 @@
     letter-spacing: 0.04em; text-transform: uppercase;
     color: var(--ink-60); text-align: right; line-height: 1.4;
   }
+  .redact { background: var(--ink, #1a1a1a); color: transparent; user-select: none;
+            letter-spacing: -1px; font-size: 11px; line-height: 1.5; border-radius: 2px;
+            opacity: .82; display: inline-block; max-width: 100%; overflow: hidden; }
+  .redact-key { font-size: 12px; color: var(--ink-60); margin: 10px 0 0; }
   .toggle-btn {
     font-family: var(--font-mono); font-size: 11px;
     letter-spacing: 0.05em; text-transform: uppercase;
@@ -69,10 +74,11 @@
     line-height: 1.55; color: var(--ink-60);
     margin: 0; max-width: 64ch;
   }
+  /* Footnote. Deliberately NOT uppercased: these run to three lines and all-caps
+     at 10.5px is both shouty and slow to read at that length. */
   .mode-cue {
-    font-family: var(--font-mono); font-size: 10.5px;
-    letter-spacing: 0.04em; text-transform: uppercase;
-    color: var(--ink-40); margin: 16px 0 0 0;
+    font-family: var(--font-body); font-size: 12.5px; line-height: 1.6;
+    color: var(--ink-60); margin: 18px 0 0 0; max-width: 62ch;
     padding-top: 12px; border-top: 1px dashed var(--ink-12);
   }
 
@@ -92,25 +98,95 @@
     color: var(--ink); margin: 0 0 14px 0; max-width: 62ch;
   }
 
-  .two-rel { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 8px; }
-  .rel-card { padding: 18px 20px; background: var(--paper); border: 1px solid var(--ink-12); border-radius: 2px; }
-  .rel-label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--signal); margin-bottom: 6px; }
-  .rel-title { font-family: var(--font-display); font-weight: 500; font-size: 18px; margin-bottom: 8px; }
-  .rel-body { font-family: var(--font-body); font-size: 13.5px; line-height: 1.55; color: var(--ink-80); }
-
-  .source-link {
-    display: inline-block; font-family: var(--font-mono); font-size: 11px;
-    letter-spacing: 0.03em; color: var(--signal);
-    text-decoration: none; border-bottom: 1px solid currentColor;
-    padding-bottom: 1px;
+  .said { margin: 0 0 14px 0; padding: 0 0 0 18px; border-left: 3px solid var(--signal); max-width: 64ch; }
+  .said p {
+    font-family: var(--font-display); font-size: 17px; line-height: 1.5;
+    color: var(--ink); margin: 0 0 8px 0; max-width: none;
   }
-  .source-link:hover { color: var(--ink); }
+  .said .attrib {
+    font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.05em;
+    text-transform: uppercase; color: var(--ink-40);
+  }
 
-  .signal-list { list-style: none; padding: 0; margin: 16px 0 0 0; display: grid; gap: 12px; }
-  .signal-list li { padding: 14px 16px; background: var(--paper); border: 1px solid var(--ink-12); border-radius: 2px; }
-  .signal-list .sig-title { font-family: var(--font-display); font-size: 16px; font-weight: 500; color: var(--ink); margin-bottom: 4px; }
-  .signal-list .sig-body { font-family: var(--font-body); font-size: 13px; line-height: 1.5; color: var(--ink-80); margin-bottom: 6px; }
-  .signal-list .sig-where { color: var(--ink-60); font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.04em; text-transform: uppercase; }
+  .rel-label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--signal); margin-bottom: 6px; }
+
+  .mono-row {
+    font-family: var(--font-mono); font-size: 12px; line-height: 1.6;
+    background: var(--ink-06); border-radius: 2px;
+    padding: 12px 14px; margin: 10px 0 12px 0;
+    overflow-x: auto; white-space: pre-wrap; word-break: break-word;
+  }
+
+  /* Dated record extracts. A real two-column grid rather than hardcoded
+     whitespace: the source text wrapped at a fixed width, so any container
+     narrower than that orphaned trailing words to the left margin and broke the
+     date column. Here the label column is fixed and the quote wraps inside its
+     own column, at any width. */
+  .recs {
+    font-family: var(--font-mono); font-size: 12px;
+    background: var(--ink-06); border-radius: 2px;
+    padding: 6px 14px; margin: 12px 0 14px 0;
+  }
+  .rec { display: grid; grid-template-columns: 96px 1fr; gap: 16px;
+         align-items: baseline; padding: 9px 0; }
+  /* A bullet does not need a 96px column. */
+  .recs.bullets .rec { grid-template-columns: 12px 1fr; gap: 10px; }
+  .rec + .rec { border-top: 1px solid var(--ink-12); }
+  .rec-d { color: var(--ink-60); white-space: nowrap; letter-spacing: 0.01em; }
+  .rec-t { line-height: 1.65; word-break: break-word; }
+  .recs-cap {
+    font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.06em;
+    text-transform: uppercase; color: var(--ink-60);
+    padding: 10px 0 2px 0; border-bottom: 1px solid var(--ink-12);
+  }
+  @media (max-width: 560px) {
+    .rec { grid-template-columns: 1fr; gap: 3px; }
+    .rec-d { color: var(--signal); }
+  }
+
+  table.rows { width: 100%; border-collapse: collapse; margin: 18px 0 24px; font-size: 13.5px; }
+  /* The rate figures are the headline content of that table; at body size they
+     read as incidental. */
+  table.rows td.amt.big { font-family: var(--font-display); font-size: 22px;
+                          font-weight: 500; color: var(--ink); }
+  table.rows th {
+    font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.05em;
+    text-transform: uppercase; color: var(--ink-60);
+    text-align: left; padding: 0 12px 8px 0; border-bottom: 1px solid var(--ink-12); vertical-align: bottom;
+  }
+  table.rows td { padding: 11px 12px 11px 0; border-bottom: 1px solid var(--ink-12); vertical-align: top; line-height: 1.5; }
+  table.rows td.town { font-weight: 600; white-space: nowrap; }
+  table.rows td.amt { font-family: var(--font-mono); font-size: 12.5px; white-space: nowrap; }
+  /* Explicit column balance. Left to itself the browser gave the rate column far
+     more room than a three-character figure needs, and squeezed the "how early"
+     column until every value wrapped. */
+  table.rates td:nth-child(1), table.rates th:nth-child(1) { width: 46%; }
+  table.rates td:nth-child(2), table.rates th:nth-child(2) { width: 15%; }
+  table.rates td:nth-child(3), table.rates th:nth-child(3) { width: 39%; }
+  table.sample td:nth-child(1), table.sample th:nth-child(1) { width: 21%; }
+  table.sample td:nth-child(2), table.sample th:nth-child(2) { width: 22%; }
+  table.sample td:nth-child(3), table.sample th:nth-child(3) { width: 20%; }
+  table.sample td:nth-child(4), table.sample th:nth-child(4) { width: 37%; }
+  table.price td:nth-child(1), table.price th:nth-child(1) { width: 26%; }
+  table.price td:nth-child(2), table.price th:nth-child(2) { width: 20%; }
+  table.price td:nth-child(3), table.price th:nth-child(3) { width: 54%; }
+  table.price td.amt { font-size: 14px; font-weight: 500; color: var(--ink); }
+  /* The row that matters gets a quiet tint rather than a headline-sized
+     number. `.big` belongs to the rate percentages, where an oversized
+     figure IS the content; in a price column it just shouts. */
+  table.price tr.pick td { background: var(--signal-06); }
+  table.price tr.pick td.amt { color: var(--signal); font-weight: 600; }
+  .table-wrap { overflow-x: auto; }
+
+  .cascade { margin: 18px 0 8px; }
+  .casc-row { display: grid; grid-template-columns: 92px 1fr; gap: 16px; align-items: baseline; padding: 9px 0; border-bottom: 1px solid var(--ink-12); }
+  .casc-n { font-family: var(--font-display); font-size: 22px; font-weight: 500; color: var(--signal); }
+  .casc-t { font-family: var(--font-body); font-size: 13.5px; line-height: 1.5; color: var(--ink); }
+
+  .facts { display: grid; gap: 15px; margin: 16px 0 22px; }
+  .fact { display: grid; grid-template-columns: 150px 1fr; gap: 16px; align-items: baseline; }
+  .fact-k { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.05em; text-transform: uppercase; color: var(--signal); padding-top: 2px; }
+  .fact-v { font-family: var(--font-body); font-size: 14px; line-height: 1.55; color: var(--ink); }
 
   .stat-strip {
     margin-top: 16px; padding: 16px 18px;
@@ -121,23 +197,31 @@
   .stat .num { font-family: var(--font-display); font-size: 28px; font-weight: 500; line-height: 1; }
   .stat .lab { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.05em; text-transform: uppercase; color: rgba(247,244,240,0.6); margin-top: 6px; }
 
-  .question { margin: 14px 0; padding: 16px 20px; background: var(--paper); border-left: 3px solid var(--ink-12); }
-  .question .q-text { font-family: var(--font-display); font-size: 16px; line-height: 1.5; color: var(--ink); }
-  .question .why {
-    font-family: var(--font-body); font-size: 12.5px; line-height: 1.55;
-    color: var(--ink-60); margin-top: 10px;
-    padding-top: 10px; border-top: 1px solid var(--ink-12);
-  }
-  .question .why::before {
-    content: "Why this question \00B7 ";
-    font-family: var(--font-mono); font-size: 10px;
-    letter-spacing: 0.06em; text-transform: uppercase;
-    color: var(--signal); font-weight: 500;
+  .hl {
+    background: rgba(232, 81, 45, 0.15); font-weight: 500;
+    padding: 0.04em 0.26em; border-radius: 2px;
+    box-decoration-break: clone; -webkit-box-decoration-break: clone;
   }
 
-  .path { margin: 14px 0; padding: 18px 22px; background: var(--paper); border: 1px solid var(--ink-12); border-radius: 2px; }
-  .path-title { font-family: var(--font-display); font-weight: 500; font-size: 17px; margin-bottom: 6px; }
-  .path-body { font-family: var(--font-body); font-size: 13.5px; line-height: 1.55; color: var(--ink-80); }
+  /* An empty cell means two opposite things and must not look the same in both.
+     `.gap` is a genuine unknown. `.open` is unresolved BECAUSE the town is
+     mid-decision, which is the most actionable state in the table, and it always
+     carries the reason it is open. */
+  .gap { color: var(--ink-40); }
+  .open { color: var(--signal); font-weight: 600; }
+  .open-why { display: block; color: var(--ink-60); font-weight: 400;
+              font-size: 12.5px; line-height: 1.45; margin-top: 2px; }
+  .legend {
+    display: flex; flex-wrap: wrap; gap: 18px;
+    font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.05em;
+    text-transform: uppercase; color: var(--ink-60); margin: 0 0 4px 2px;
+  }
+  .legend b { font-weight: 400; }
+
+  .detail { display: none; }
+  body.show-details .detail { display: block; }
+  .detail-cue { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.03em; color: var(--ink-40); margin: 12px 0 0 0; }
+  body.show-details .detail-cue { display: none; }
 
   .footer {
     margin-top: 64px; padding-top: 18px;
@@ -145,53 +229,15 @@
     font-family: var(--font-mono); font-size: 10.5px;
     letter-spacing: 0.04em; text-transform: uppercase;
     color: var(--ink-40);
-    display: flex; justify-content: space-between;
+    display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap;
   }
   .footer a { color: var(--ink-60); text-decoration: none; }
 
-  .facts { display: grid; gap: 13px; margin-top: 16px; }
-  .fact { display: grid; grid-template-columns: 140px 1fr; gap: 16px; align-items: baseline; }
-  .fact-k { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.05em; text-transform: uppercase; color: var(--signal); padding-top: 2px; }
-  .fact-v { font-family: var(--font-body); font-size: 14px; line-height: 1.55; color: var(--ink); }
-
-  .block-label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-60); margin: 28px 0 0; }
-
-  .hl {
-    background: rgba(232, 81, 45, 0.15); font-weight: 500;
-    padding: 0.04em 0.26em; border-radius: 2px;
-    box-decoration-break: clone; -webkit-box-decoration-break: clone;
-  }
-
-  .detail { display: none; }
-  body.show-details .detail { display: block; }
-  .detail-cue { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.03em; color: var(--ink-40); margin: 12px 0 0 0; }
-  body.show-details .detail-cue { display: none; }
-
-  /* six-week calibration → paid subscription timeline */
-  .timeline { margin: 22px 0 6px; display: grid; grid-template-columns: 1.35fr auto 1fr; gap: 12px; align-items: stretch; }
-  .tl-phase { padding: 18px 20px 16px; border-radius: 2px; }
-  .tl-phase.calibration { background: var(--signal-06); border: 1px solid var(--signal); }
-  .tl-phase.subscription { background: var(--ink); color: var(--paper); border: 1px solid var(--ink); }
-  .tl-label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--signal); margin-bottom: 6px; }
-  .tl-title { font-family: var(--font-display); font-weight: 500; font-size: 17px; margin-bottom: 12px; line-height: 1.25; color: var(--ink); }
-  .tl-title.on-dark { color: var(--paper); }
-  .tl-weeks { display: flex; align-items: center; gap: 6px; margin: 8px 0 14px; flex-wrap: wrap; }
-  .tl-week { min-width: 22px; height: 22px; padding: 0 6px; border-radius: 11px; background: var(--signal); color: var(--paper); font-family: var(--font-mono); font-size: 10px; display: inline-flex; align-items: center; justify-content: center; font-weight: 500; }
-  .tl-week.hollow { background: transparent; border: 1.5px solid rgba(247,244,240,0.4); color: rgba(247,244,240,0.6); }
-  .tl-events { display: grid; gap: 8px; }
-  .tl-event { font-family: var(--font-body); font-size: 13px; line-height: 1.5; color: var(--ink); }
-  .tl-event.on-dark { color: rgba(247,244,240,0.85); }
-  .tl-marker { font-family: var(--font-mono); color: var(--signal); font-weight: 500; margin-right: 6px; }
-  .tl-arrow { align-self: center; font-family: var(--font-display); font-size: 26px; color: var(--signal); padding: 0 2px; }
-  .tl-then { text-align: center; font-family: var(--font-body); font-size: 12.5px; color: var(--ink-60); margin: 12px 0 0; line-height: 1.5; }
-
   @media (max-width: 560px) {
     .container { padding: 0 20px 60px 20px; }
-    .two-rel { grid-template-columns: 1fr; }
     .hero h1 { font-size: 30px; }
     .fact { grid-template-columns: 1fr; gap: 3px; }
-    .timeline { grid-template-columns: 1fr; }
-    .tl-arrow { text-align: center; padding: 4px; transform: rotate(90deg); }
+    .casc-row { grid-template-columns: 1fr; gap: 2px; }
   }
   @media print {
     .detail { display: block !important; }
@@ -199,185 +245,399 @@
     .header { position: static; }
     .container { max-width: none; padding: 24px; }
     .section { page-break-inside: avoid; }
-    .rel-card, .path, .question { page-break-inside: avoid; }
+    .said { page-break-inside: avoid; }
   }
 </style>
 </head>
 <body>
+
 <div class="container">
 
   <div class="header">
     <div class="wordmark">municip&alpha;l</div>
     <div class="header-right">
-      <div class="header-meta">Discussion guide<br>InvoiceCloud &middot; Wed 2026-08-12</div>
-      <button id="toggle" class="toggle-btn" type="button" aria-pressed="false">Show details &#9656;</button>
+      <div class="header-meta">After our call<br>InvoiceCloud &middot; Wed 2026-08-12</div>
     </div>
   </div>
 
   <div class="hero">
-    <h1>Municipal Alpha for InvoiceCloud</h1>
-    <div class="question" style="margin-bottom:18px">
-      <div class="rel-label">What you wrote when you booked, 2026-08-10</div>
-      <p style="margin:0 0 10px 0">&#8220;Government Data RE: Payment Contracts&#8221;</p>
-      <p style="margin:0"><strong>That is everything I have from you, so everything below is a guess.</strong> Five words, no call yet. I would rather show you what the record actually holds and let you tell me which part is the useful one than arrive with a pitch built on my own assumption. Where I have guessed wrong, say so and I will rebuild this page around what you actually said.</p>
-    </div>
+    <h1>What we know about a town, and about your competitors in it</h1>
+    <p class="lede">
+      Gary, you said the secret sauce is finding your competitors in these places, and Nicholas described what you
+      have now as taking a shot on goal and moving on. Here is what we can tell you about a municipality today, how
+      often we can tell it, and how that compares to the rate you are getting.
+    </p>
   </div>
 
   <div class="section">
-    <h2>Your own footprint, as the municipal record has it</h2>
-    <p>I looked before we spoke. InvoiceCloud appears in <strong>215 documents across 39 municipalities in 13 states</strong>, published by the municipalities themselves.</p>
-    <p class="detail">Two spellings matter and most searches miss it. Clerks write &#8220;InvoiceCloud&#8221; and &#8220;Invoice Cloud&#8221; roughly one to six, so a single-spelling query returns 30 documents and misses 185. That is a small example of the thing this business is actually about.</p>
-
+    <h2>What I understand you are solving for</h2>
+    <p>
+      Everything below is aimed at two things. If I have either of them wrong, that is the single most useful
+      correction you can send me, because the rest of this page is built on them.
+    </p>
     <div class="facts">
       <div class="fact">
-        <div class="fact-k">New Hampshire</div>
-        <div class="fact-v">67 documents. Portsmouth, Hanover, Bedford, Windham, Wolfeboro, Hollis, Canaan, Boscawen, Troy, Weare.</div>
+        <div class="fact-k">Acquire</div>
+        <div class="fact-v">Which municipalities and districts a competitor holds today, which ones are starting to
+        signal that a change is coming, and when the contract turns over.</div>
       </div>
       <div class="fact">
-        <div class="fact-k">Illinois</div>
-        <div class="fact-v">64 documents. Skokie, Libertyville, Lockport, DeKalb, Riverside, Flossmoor, Hanover Park, Bloomingdale, La Grange Park.</div>
-      </div>
-      <div class="fact">
-        <div class="fact-k">Florida</div>
-        <div class="fact-v">35 documents, concentrated in North Miami Beach.</div>
-      </div>
-      <div class="fact">
-        <div class="fact-k">Everywhere else</div>
-        <div class="fact-v">Michigan 15, Connecticut 10, Massachusetts 8, Maine 5, Montana 4, then Washington, New York, California, Maryland, Idaho.</div>
+        <div class="fact-k">Retain</div>
+        <div class="fact-v">The same lens pointed at your own book. The signals that tell you a competitor is
+        vulnerable are the ones that tell you when you are.</div>
       </div>
     </div>
+    <p>
+      In your own words, that comes down to five things: the incumbent&#39;s identity where it is not you, the end
+      date of that contract, public sentiment when the vendor comes up at a meeting, the CIS or ERP migration that
+      drags the payment layer with it, and municipal priorities as the softer signal. This page answers each of them
+      with a number and an example you can check.
+    </p>
+    <p>
+      One thing worth being precise about, because it decides the shape of the work: <strong>the scope is your 2,000,
+      not the country.</strong> Those 2,000 can be spread across every state and it makes no difference. What matters
+      is how many of them we already hold deeply, and what it costs to bring the rest up. That is a countable job on a
+      named list, not an open-ended national buildout, and it is the thing a first engagement actually buys.
+    </p>
   </div>
 
   <div class="section">
-    <h2>What kind of documents they are, which is the honest part</h2>
-    <p>The breakdown matters more than the total, because most of it is not what a demo would want you to think it is.</p>
+    <h2>The system migration is the signal, and it arrives first</h2>
+    <div class="said">
+      <p>&#8220;if somebody is changing their CIS or changing any other major software, um that&#39;s something that we
+      would like to know about because oftentimes if you change your CIS, you&#39;re going to have to change all of the
+      other ways that you do things too.&#8221;</p>
+      <div class="attrib">Nicholas</div>
+    </div>
+    <p>
+      You already know this. What we add is that it is <strong>written down as it happens</strong>, and we can name it
+      in <span class="hl">67% of the municipalities where we hold enough of the record to read</span>, the highest rate
+      on this page. In Grafton it was legible in August 2024 and the town announced its new processor the following
+      May: <strong>nine months of visible lead</strong>.
+    </p>
+    <p>
+      An agent that reads a town&#39;s payments page tells you who is there today. It cannot tell you the town is nine
+      months from changing, because that is not on the payments page, it is in a treasurer&#39;s report about an ERP
+      focus group. <strong>Different question, not a better hit rate.</strong> One you could answer yourselves by
+      reading minutes, at the cost Nicholas already priced when he said a scale of one customer is not the answer. And
+      it is the acquire lever, because by the time a renewal date arrives the vendor has usually already been chosen
+      by whoever ran the migration.
+    </p>
+  </div>
 
+  <div class="section">
+    <div class="rel-label">Grafton, Massachusetts &middot; the migration chose the payment vendor, and it was legible the whole time</div>
+    <p>
+      Two bullets, four lines apart, in one 2022 report:
+    </p>
+    <div class="recs bullets" data-src="Grafton MA">
+      <div class="recs-cap">Treasurer / Collector report &middot; 2022-08-19</div>
+      <div class="rec"><span class="rec-d">&bull;</span><span class="rec-t">Spoke to invoice cloud reps and set meeting for demo</span></div>
+      <div class="rec"><span class="rec-d">&bull;</span><span class="rec-t">Met with Vadar/School/Finance Director on Vadar Cash Receipt Process for the school.</span></div>
+    </div>
+    <p>
+      Your demo and the ERP relationship that decided the account two years later, on the same page on the same day.
+      Nothing came of the first. Here is the second, across thirty-two documents and sixteen meeting months, every one
+      a treasurer or collector report and not one a check register:
+    </p>
+    <div class="recs" data-src="Grafton MA">
+      <div class="rec"><span class="rec-d">2024-08-09</span><span class="rec-t">Attended zoom meeting with Vadar Systems as part of the focus group to aid in the launch of Vadar&#39;s online collection program. Vadar is working with Point &amp; Pay to launch online payment processing website</span></div>
+      <div class="rec"><span class="rec-d">2024-09-06</span><span class="rec-t">Town will maintain working relationship with Unipay while assisting in the launch of the new program</span></div>
+      <div class="rec"><span class="rec-d">2025-05-09</span><span class="rec-t">Our office is now officially only utilizing Point &amp; Pay as our online payment processor. The UniPay link has been removed from the town&#39;s website.</span></div>
+      <div class="rec"><span class="rec-d">2025-09-05</span><span class="rec-t">The town has not utilized UniPay beginning July 1st, 2025</span></div>
+    </div>
+    <p>
+      The September 2024 line is the one worth sitting with: the incumbent is being wound down and helping, nine
+      months before the switch is announced. Any of those sixteen months was a month somebody could have made a call.
+    </p>
+    <p>
+      I am showing you a seat you did not take rather than one you won, because a win announces itself and this did
+      not. The demo went quiet in 2022 and the decision arrived in 2024 through a channel nobody was watching.
+    </p>
+
+    <div class="rel-label">Derby, Vermont &middot; in motion, before signature</div>
+    <div class="recs" data-src="Derby VT">
+      <div class="rec"><span class="rec-d">2026-05-05</span><span class="rec-t"><em>minutes</em> &nbsp; we currently utilize a credit card machine and it helps residents to easily pay utilities and taxes. A few residents have asked about an online payment method which Peggy has been researching, called Municipay</span></div>
+      <div class="rec"><span class="rec-d">2026-06-02</span><span class="rec-t"><em>agenda</em> &nbsp; Discuss, Review and Sign Municipay Online Payment Portal Agreement</span></div>
+    </div>
+    <p>
+      A competitor named, in a village of three thousand, from the moment a clerk started researching to the agenda
+      line authorising signature. Nicholas described the thing that hurts as the one that comes round every five or
+      seven years where missing it means never getting another shot. That was ten weeks ago, and the record named the
+      winner before the ink.
+    </p>
+
+    <div class="rel-label">Pella, Iowa &middot; plain incumbency, in the town&#39;s own words</div>
+    <div class="recs" data-src="Pella IA">
+      <div class="rec"><span class="rec-d">Pella, IA</span><span class="rec-t">Utility bill payment options: Online An online payment system by Paymentus (https://ipn2.paymentus.com/cp/plla) is available for online payment of utility bills.</span></div>
+    </div>
+    <p>
+      One example rather than a list, because a clean statement of incumbency is rarer than it sounds. Search a
+      vendor&#39;s name across the corpus and most of what returns is a check register, and a register says a town
+      paid someone, not who holds the contract or when it ends. Filter for contract term structure instead and the
+      registers disappear entirely.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>How often we can tell you, and how that compares to what you get now</h2>
+    <p>
+      Measured in the municipalities where we hold enough of the record to read it. Each line is one of the five
+      things you asked for.
+    </p>
+    <div class="table-wrap">
+      <table class="rows rates">
+        <thead><tr><th>What you asked for</th><th>How often</th><th>How early</th></tr></thead>
+        <tbody>
+          <tr><td class="town">The system migration that moves the payment layer</td><td class="amt big">67%</td><td>Nine months ahead, in Grafton</td></tr>
+          <tr><td class="town">How the town bills and gets paid</td><td class="amt big">45%</td><td>Earliest of the four</td></tr>
+          <tr><td class="town">A competitor payment processor</td><td class="amt big">19%</td><td>Who holds it today</td></tr>
+          <tr><td class="town">A contract date, term or notice window, quoted from the record</td><td class="amt big">13%</td><td>When the door opens</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>
+      <span class="hl">You put your own hit rate at 5% or 10%.</span> On that same question, naming who holds the
+      account today, we are at 19%. The top two rows are the ones that matter, and they are high for a reason: towns
+      write far more about the change they are weighing than about the vendor they already have.
+    </p>
+    <p>
+      The date is the hard one, and it is low because <strong>municipalities do not file contracts as
+      contracts</strong>. So we searched for the instruments instead of the vendors, found <strong>2,929</strong>
+      across 420 municipalities, and read the 1,010 touching a water or sewer utility. Ninety-nine are a utility&#39;s
+      own contract, fifty-four name a vendor it buys from, thirteen carry a quotable term.
+      <span class="hl">One of the ninety-nine is your own Biller Agreement</span>, in the Lisbon Water District packet,
+      five years from go live with successive three year renewals. Pull it and check it against your file.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Your second data point is the most common signal we have</h2>
+    <p>
+      In the <strong>457 municipalities holding a hundred or more readable documents</strong>, 207 have a record of
+      how they bill and get paid: a paperless push, a convenience fee debate, a portal conversion, a ratepayer at the
+      podium about a bill he never received. In those same towns, 71 name a payment vendor at all.
+      <span class="hl">The thing you called secondary shows up about three times as often as the holy grail</span>,
+      and earlier. A town debating a convenience fee has not chosen a processor yet.
+    </p>
+    <p>
+      Worth knowing before you write the keyword list: the record does not answer to &#8220;going green.&#8221; Your
+      literal words return reservoir dams and golf cart ordinances. Towns write about postage, convenience fees,
+      portal projects and billing complaints. Ask for the mechanics and you get 86% precision; ask for the theme and
+      you get half that.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>What those rates depend on</h2>
+    <p>
+      One thing, and it is measurable the day your list arrives: <strong>depth</strong>. We have reached 4,683
+      municipalities and can read 4,492, but 3,015 of those hold four documents or fewer, so every rate above is
+      measured where the record is deep enough to answer. Our coverage points where earlier buyers asked, which is why
+      nothing here claims to describe your accounts until we run it against them.
+    </p>
+    <p class="mode-cue">Every candidate is read against the full document before it counts, which is why these
+    numbers are smaller than a keyword search would give you. PSN also matches PSNH; nCourt also matches
+    Bettencourt.</p>
+  </div>
+
+  <div class="section">
+    <h2>What a row looks like</h2>
+    <p>
+      Real rows from towns we already hold, since I do not have your list yet. <strong>This is the deliverable</strong>,
+      one row per account, and the blanks are as much the point as the entries.
+    </p>
+    <p>
+      A date is marked <strong>observed</strong> when the record states it and we quote it, or <strong>derived</strong>
+      when a stated term and a stated start let us do the arithmetic. Derived was tested against 95 cases where the
+      real answer was published and lands within about a quarter roughly half the time; it always arrives with the
+      sentences it came from. Otherwise the field is blank.
+      <span class="hl">You will never receive an inferred date presented as an observed one.</span>
+    </p>
+    <div class="legend">
+      <span><b style="color:var(--signal)">in play</b> &nbsp;the town is deciding now</span>
+      <span><b style="color:var(--ink-40)">not stated</b> &nbsp;a genuine gap</span>
+      <span><b>observed</b> &nbsp;quoted from the record</span>
+    </div>
+    <div class="table-wrap">
+      <table class="rows sample">
+        <thead><tr><th>Municipality</th><th>Financial / ERP system</th><th>Payment processor</th><th>Contract clock</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="town">Grafton, MA</td>
+            <td>Vadar Systems<br><span class="open-why">migration, 2024</span></td>
+            <td>Point &amp; Pay<br><span class="open-why">displaced UniPay 2025-05</span></td>
+            <td><span class="gap">not stated</span></td>
+          </tr>
+          <tr>
+            <td class="town">Lisbon Water District, ME</td>
+            <td><span class="gap">not stated</span></td>
+            <td>InvoiceCloud</td>
+            <td><strong>observed</strong><br>5 yrs from go live, successive 3 yr renewals</td>
+          </tr>
+          <tr>
+            <td class="town">Derby, VT</td>
+            <td><span class="gap">not stated</span></td>
+            <td><strong>MuniciPay</strong><span class="open-why">named on the agenda</span></td><td><strong>observed</strong><br>authorised for signature 2026-06-02; outcome not yet in our record</td>
+          </tr>
+          <tr>
+            <td class="town">Groton, CT</td>
+            <td>Harris Computer / NorthStar<br><span class="open-why">utility billing, sole source</span></td>
+            <td><span class="gap">not stated</span></td>
+            <td><strong>observed</strong><br>dated maintenance period</td>
+          </tr>
+          <tr>
+            <td class="town">Pocatello, ID</td>
+            <td>CentralSquare</td>
+            <td><span class="open">in play</span><span class="open-why">CIS terminated 2025-07</span></td>
+            <td><strong>observed</strong><br>terminated by mutual agreement, effective 2025-07-31</td>
+          </tr>
+          <tr>
+            <td class="town">Hope, ME</td>
+            <td>Catalis</td>
+            <td><span class="open">in play</span><span class="open-why">extension lapsed 2025-06</span></td>
+            <td><strong>observed</strong><br>ended 2024-12-31, six month extension</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="rel-label">What closes a blank</div>
+    <p>
+      The question is not how many gaps that table has, it is what each costs to fill. Three answers, very different
+      prices.
+    </p>
     <div class="facts">
       <div class="fact">
-        <div class="fact-k">83 check registers</div>
-        <div class="fact-v">A town paying its InvoiceCloud invoice. That is an accounts-payable line, not a contract event. Useful as a payment and continuity signal, useless as a procurement signal, and anyone who sells you these as &#8220;contract activity&#8221; is selling you a check register.</div>
+        <div class="fact-k">1 &middot; We have it, unprocessed</div>
+        <div class="fact-v">The answer sits in a document already in the corpus, in a scan with no text layer or
+        history not yet extracted. <strong>Grafton&#39;s clock and Lisbon&#39;s ERP are both this.</strong> We hold
+        about 960,000 documents and have processed roughly 210,000, deliberately: processing follows demand rather
+        than running ahead of it. <span class="hl">Your list sets the order.</span></div>
       </div>
       <div class="fact">
-        <div class="fact-k">24 agendas, 7 minutes</div>
-        <div class="fact-v">The deliberative layer. An agenda states what a body intends to do; minutes record what it did. These are the rows where a renewal or an award actually appears.</div>
+        <div class="fact-k">2 &middot; It has not happened yet</div>
+        <div class="fact-v">Nothing is missing, the town has not decided. <strong>Derby signs in June, Pocatello just
+        terminated its financial system.</strong> Time closes these, which is what the recurring monitor is for.</div>
       </div>
       <div class="fact">
-        <div class="fact-k">52 documents, 21 reports, 11 investment reports</div>
-        <div class="fact-v">Departmental and finance reporting, where a payments platform surfaces inside a treasurer&#8217;s or finance director&#8217;s own narrative.</div>
-      </div>
-      <div class="fact">
-        <div class="fact-k">1 RFP</div>
-        <div class="fact-v">One procurement document in the set. That is the shape of the thing worth building toward, and one is not a product yet.</div>
+        <div class="fact-k">3 &middot; Never published</div>
+        <div class="fact-v">Some agreements are executed and never posted. Those we go and get as public records.
+        Slower, and not every one comes back.</div>
       </div>
     </div>
-
-    <p class="detail">Most recent real record: Norwich, Connecticut, council minutes, 2026-07-06. One row in the set carries a 2027 date, which is a dating artifact on our side rather than a document from the future, and I would rather tell you that than have you find it.</p>
+    <p>
+      <span class="hl">The two cells marked in play are the ones worth a call this week.</span> Pocatello has no
+      processor because its financial system was terminated by mutual agreement in July, so the whole stack is being
+      re-decided. Hope&#39;s extension lapsed in June. Neither row names a payment vendor anywhere, and neither would
+      survive a search for one, which is exactly why both are invisible to an agent that reads the payments page.
+    </p>
+    <p>
+      Derby is the opposite case and the one I would look at hardest: a competitor named, in a village of three
+      thousand, on the agenda line authorising signature. That is a contract we watched get decided.
+      <span class="hl">Note what the clock cell says: the outcome is not yet in our record.</span> Our Derby documents
+      run to mid-June and the signing was 2026-06-02, so the confirmation is either in a packet we have not processed
+      or in one the village has not posted. That is the honest state, and it is the case a recurring monitor closes on
+      its own.
+    </p>
   </div>
 
   <div class="section">
-    <h2>The competitive picture, such as it is</h2>
-    <p>Same corpus, same method, your named competitors:</p>
-    <div class="facts">
-      <div class="fact">
-        <div class="fact-k">Point &amp; Pay</div>
-        <div class="fact-v">56 documents, 6 municipalities, concentrated in Louisiana and Massachusetts.</div>
-      </div>
-      <div class="fact">
-        <div class="fact-k">Paymentus</div>
-        <div class="fact-v">16 documents across 7 municipalities in 7 states. Thin.</div>
-      </div>
-      <div class="fact">
-        <div class="fact-k">nCourt</div>
-        <div class="fact-v">2 documents, 1 municipality. Effectively absent.</div>
-      </div>
-      <div class="fact">
-        <div class="fact-k">Category language</div>
-        <div class="fact-v">&#8220;Convenience fee&#8221; 236 documents in 29 states, &#8220;merchant services&#8221; 239 in 12 states. The vocabulary a fee change is argued in.</div>
-      </div>
+    <h2>The same lens, pointed at your own accounts</h2>
+    <p>
+      The 2,000 is a target list, so everything above is acquire. Run the same pass against the accounts you hold and
+      it is retain, which may be the half that pays first: a town migrating its ERP is a town where your renewal just
+      became somebody else&#39;s opportunity. Grafton is what that looks like from the losing side.
+    </p>
+    <p>
+      That needs a different list, and I am not asking for your customer book. We already detect InvoiceCloud in a set
+      of municipalities and Gary put that set at <strong>95% correct</strong> on the call. Confirm or correct it and it
+      becomes the defence watchlist, with no sensitive file changing hands.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>What I propose</h2>
+    <p>
+      <strong>Two steps, and the first one is free.</strong>
+    </p>
+    <p>
+      <strong>Step one: the overlap, on your target list.</strong> Send the top 2,000 prospects Nicholas offered and
+      I will tell you which of those targets sit in the deep part of the corpus, which are thin, and which we do not
+      reach at all. That costs you nothing and it is useful on its own: it is a map of which of your targets we can
+      see into, and which ones your team is currently working blind. It takes days, not weeks.
+    </p>
+    <p>
+      <strong>Step two: your list to the front of the queue.</strong>
+      <span class="hl">What you get is the table above, for your accounts</span>, plus the same pass on the ones you
+      already hold. The documents are largely collected already; what the engagement buys is the order they get
+      opened in, and once a town is processed it stays processed, so this compounds rather than repeating.
+    </p>
+    <p>
+      Priced as a build plus blocks, because that is how the work actually behaves. The build happens once whether
+      your list is five hundred accounts or two thousand.
+    </p>
+    <div class="table-wrap">
+      <table class="rows price">
+        <thead><tr><th>What</th><th>Price</th><th>Why</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="town">The build, once</td>
+            <td class="amt">$12,000</td>
+            <td>Calibration against your competitor set, the verification, the reading pass, the output format. Never charged twice.</td>
+          </tr>
+          <tr>
+            <td class="town">Each block, up to 500 accounts</td>
+            <td class="amt">$8,000&ndash;$10,000</td>
+            <td>Firmed once I have seen the map. Accounts we already read deeply cost the low end; ones we have never touched cost the high end, because they need recovery and extraction first.</td>
+          </tr>
+          <tr class="pick">
+            <td class="town"><strong>First engagement</strong><br>build plus one block</td>
+            <td class="amt">$20,000</td>
+            <td>Fixed, invoiced on delivery.</td>
+          </tr>
+          <tr>
+            <td class="town">All 2,000<br>build plus four blocks</td>
+            <td class="amt">$44,000&ndash;$52,000</td>
+            <td>Rather than the $80,000 you would get by multiplying the first engagement, which is the number I would rather you not have to infer.</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-    <p class="detail">Read that asymmetry carefully rather than flatteringly. You appear more often than your competitors partly because you have more municipal clients and partly because our coverage is uneven by state. It is evidence about the record, not a market-share estimate, and I will not dress it up as one.</p>
+    <p>
+      So if you want five hundred, that is $20,000, and the next five hundred is $8,000 to $10,000 rather than
+      another twenty. <span class="hl">The second block is cheaper because the build is already paid for</span>, not
+      because the work is thinner.
+    </p>
+    <p>
+      We agree the bar before I start, in writing rather than leaving it to how the result feels on the day. You
+      mentioned five to ten percent as a rough sense of what your own agent returns; whatever number the two of you
+      settle on is the number. If the result comes back under it, you have your answer and you do not pay for it.
+    </p>
   </div>
 
   <div class="section">
-    <h2>The layer underneath: what towns actually pay, to whom</h2>
-    <p>Accounts payable is the largest structured thing we hold. <strong>15,440 check registers across 132 municipalities in 36 states.</strong> Every vendor a town paid, and how much.</p>
-    <p>For a payments company that is two different products depending on which question you are asking, and I do not know which one you are here for:</p>
-    <div class="facts">
-      <div class="fact">
-        <div class="fact-k">Where is a contract coming up</div>
-        <div class="fact-v">The deliberative layer, agendas and minutes, read for renewal and award language. This is the pre-decision window and it is the hardest of the three.</div>
-      </div>
-      <div class="fact">
-        <div class="fact-k">Who holds it today</div>
-        <div class="fact-v">The AP layer, read as an incumbency census. Which town pays which processor, at what cadence, and when a payment stream to one vendor stops and another begins.</div>
-      </div>
-      <div class="fact">
-        <div class="fact-k">What is inside the terms</div>
-        <div class="fact-v">Fee schedules, convenience-fee ordinances, and the finance-committee arguments around them. Partially reachable, and the least even of the three.</div>
-      </div>
-    </div>
+    <h2>Three things from you</h2>
+    <ul>
+      <li><strong>The top 2,000 prospects Nicholas offered.</strong> It turns every rate above into a measurement
+      against your targets instead of our coverage, and it is what step one runs on. Sending it commits you to
+      nothing.</li>
+      <li><strong>Whether you want one block or the whole 2,000.</strong> The table above prices both. I only need
+      to know which, and the map may well decide it for you.</li>
+      <li><strong>A dozen municipalities you already know cold.</strong> Not to check whether I can repeat what you
+      already have. I will send back the <em>full row</em> for each of the twelve, every column in the table above,
+      and you can mark every cell right, wrong or blank. The interesting result is not the cells where we agree.
+      <span class="hl">It is whether twelve towns you know well contain even one thing you did not know</span>, and
+      those tend to be the in-play rows rather than the incumbent ones.</li>
+    </ul>
+    <p class="mode-cue">Gary offered five won deals for a back-trace and Nicholas offered to confirm the InvoiceCloud
+    accounts we detect. Both are useful and neither is needed yet, so I have left them out of the ask rather than
+    padding the list.</p>
   </div>
 
-  <div class="section">
-    <h2>What I will not claim</h2>
-    <p>The number that matters most on this page is the one that limits every other number on it.</p>
-    <div class="facts">
-      <div class="fact">
-        <div class="fact-k">Coverage denominator</div>
-        <div class="fact-v">Counts here describe the searchable slice of what we hold, not the United States. Nationally about a quarter of collected documents are full-text searchable today. Every figure above is a floor, and I will always give you the denominator next to the count.</div>
-      </div>
-      <div class="fact">
-        <div class="fact-k">Absence is not evidence</div>
-        <div class="fact-v">A town where I find no processor is a town where I have not found one. It is not a town without one, and I will never hand you a prospect list built on that confusion.</div>
-      </div>
-      <div class="fact">
-        <div class="fact-k">Homonyms are the real work</div>
-        <div class="fact-v">In an adjacent search this month, &#8220;Spectrum&#8221; resolved to a sign company and &#8220;Grande&#8221; to a legal-aid nonprofit. A keyword count that has not been read is a guess with a number attached to it.</div>
-      </div>
-      <div class="fact">
-        <div class="fact-k">Verb licence</div>
-        <div class="fact-v">An agenda item reading &#8220;Approving an Application for...&#8221; is a proposal, not an approval. Municipal agendas state the intended disposition in the title, so every agenda-sourced signal reads like a completed decision unless something stops it. We gate that.</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="section">
-    <h2>What I would like to learn on our call</h2>
-    <p>In rough order of how much it would change what I build for you:</p>
-    <ol>
-      <li><strong>Which of the three questions above is the live one.</strong> Contracts coming up, incumbency today, or terms. They are different products and I would rather build one properly.</li>
-      <li><strong>Whether this is an InvoiceCloud question or your own.</strong> You booked from a personal address, which is entirely normal at the exploratory stage, and it changes who I should be writing for.</li>
-      <li><strong>What you use today to see this, and where it stops.</strong> The gap is more useful to me than the requirement.</li>
-      <li><strong>Which geographies matter.</strong> Our coverage is uneven and I would rather point the next crawl at your map than at ours.</li>
-    </ol>
-  </div>
-
-  <div class="section">
-    <h2>How to use this page</h2>
-    <p>It is unlisted and not indexed, so it is yours to share internally or ignore. If a claim on it does not survive contact with what you know about your own municipal book, that is the most useful thing you could tell me, and I will say so in writing when I am wrong.</p>
-    <p class="detail">Every figure was pulled from full document text on 2026-08-12, not from search snippets, and can be traced to the specific municipal document it came from on request.</p>
+  <div class="footer">
+    <p>Municipal Alpha &middot; Prepared for Gary Novoson and Nicholas Lisac after our call on 2026-08-12.</p>
   </div>
 
 </div>
-
-<script>
-  (function () {
-    var btn = document.getElementById('toggle');
-    function set(on) {
-      document.body.classList.toggle('show-details', on);
-      btn.textContent = on ? 'Quick read ◂' : 'Show details ▸';
-      btn.setAttribute('aria-pressed', on ? 'true' : 'false');
-      try { localStorage.setItem('ma_details', on ? '1' : '0'); } catch (e) {}
-    }
-    btn.addEventListener('click', function () {
-      var on = !document.body.classList.contains('show-details');
-      set(on);
-      if (on && window.goatcounter && window.goatcounter.count) {
-        try { window.goatcounter.count({ path: 'schola-show-details', title: 'show details', event: true }); } catch (e) {}
-      }
-    });
-    try { if (localStorage.getItem('ma_details') === '1') set(true); } catch (e) {}
-  })();
-</script>
 </body>
 </html>
