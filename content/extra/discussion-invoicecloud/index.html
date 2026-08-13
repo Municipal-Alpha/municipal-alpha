@@ -76,6 +76,9 @@
   }
   /* Footnote. Deliberately NOT uppercased: these run to three lines and all-caps
      at 10.5px is both shouty and slow to read at that length. */
+  .mode-cue a { color: var(--signal); text-decoration: none;
+                border-bottom: 1px solid rgba(232, 81, 45, 0.35); }
+  .mode-cue a:hover { border-bottom-color: var(--signal); }
   .mode-cue {
     font-family: var(--font-body); font-size: 12.5px; line-height: 1.6;
     color: var(--ink-60); margin: 18px 0 0 0; max-width: 62ch;
@@ -286,8 +289,11 @@
       it once, $8,000 to $10,000 per 500 accounts, $20,000 for the first engagement.</strong> Step one, the overlap
       map against your 2,000, is free and yours whether or not you buy a block.
     </p>
-    <p class="mode-cue">Everything below is the evidence for those four sentences, including where it is thin. If
-    you only read one more section, make it the sample rows.</p>
+    <p class="mode-cue">Everything below is the evidence for those four sentences, including where it is thin.
+    If you only read one more section, make it <a href="#rows">the sample rows</a>. Otherwise:
+    <a href="#migration">the migration signal</a> &middot; <a href="#rates">the rates</a> &middot;
+    <a href="#depth">what they depend on</a> &middot; <a href="#propose">what this costs</a> &middot;
+    <a href="#ask">what I need from you</a>.</p>
   </div>
 
   <div class="section">
@@ -323,7 +329,7 @@
   </div>
 
   <div class="section">
-    <h2>The system migration is the signal, and it arrives first</h2>
+    <h2 id="migration">The system migration is the signal, and it arrives first</h2>
     <div class="said">
       <p>&#8220;if somebody is changing their CIS or changing any other major software, um that&#39;s something that we
       would like to know about because oftentimes if you change your CIS, you&#39;re going to have to change all of the
@@ -397,7 +403,7 @@
       </div>
 
   <div class="section">
-    <h2>How often we can tell you, and how that compares to what you get now</h2>
+    <h2 id="rates">How often we can tell you, and how that compares to what you get now</h2>
     <p>
       All four measured in the same place: the <strong>115 municipalities where we hold 250 or more readable
       documents</strong>. Each line is one of the things you asked for.
@@ -450,7 +456,7 @@
   </div>
 
   <div class="section">
-    <h2>What those rates depend on</h2>
+    <h2 id="depth">What those rates depend on</h2>
     <p>
       One thing, and it is measurable the day your list arrives: <strong>depth</strong>. We have reached 5,139
       municipalities. <span class="hl">We already hold a hundred or more documents for 983 of them, and can read that
@@ -490,7 +496,7 @@
   </div>
 
   <div class="section">
-    <h2>What a row looks like</h2>
+    <h2 id="rows">What a row looks like</h2>
     <p>
       Real rows from towns we already hold, since I do not have your list yet. <strong>This is the deliverable</strong>,
       one row per account, and the blanks are as much the point as the entries.
@@ -641,7 +647,7 @@
   </div>
 
   <div class="section">
-    <h2>What I propose</h2>
+    <h2 id="propose">What I propose</h2>
     <p>
       <strong>Two steps, and the first one is free.</strong>
     </p>
@@ -712,7 +718,7 @@
   </div>
 
   <div class="section">
-    <h2>Three things from you</h2>
+    <h2 id="ask">Three things from you</h2>
     <ul>
       <li><strong>The top 2,000 prospects Nicholas offered.</strong> It turns every rate above into a measurement
       against your targets instead of our coverage, and it is what step one runs on. Sending it commits you to
