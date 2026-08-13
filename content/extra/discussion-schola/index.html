@@ -180,6 +180,15 @@
     .section { page-break-inside: avoid; }
     .question, .said { page-break-inside: avoid; }
   }
+
+  .recs { font-family: var(--font-mono); font-size: 12px; background: var(--ink-06);
+          border-radius: 2px; padding: 6px 14px; margin: 12px 0 14px 0; }
+  .rec { display: grid; grid-template-columns: 108px 1fr; gap: 16px;
+         align-items: baseline; padding: 9px 0; }
+  .rec + .rec { border-top: 1px solid var(--ink-12); }
+  .rec-d { color: var(--ink-60); white-space: nowrap; }
+  .rec-t { line-height: 1.65; word-break: break-word; }
+  @media (max-width: 560px) { .rec { grid-template-columns: 1fr; gap: 3px; } }
 </style>
 </head>
 <body>
@@ -417,6 +426,118 @@ Project Purpose: Improve efficiency</div>
       <div class="fact"><div class="fact-k">I owe you</div><div class="fact-v">This page, which is the sample, and the note to Kinsey. The readout across all twenty-two towns is the screen itself, so that one is a decision rather than a debt.</div></div>
       <div class="fact"><div class="fact-k">Your move</div><div class="fact-v">Reply with a yes and I will run the screen across all twenty-two towns and send it back as a single document: the incumbent, the budget line, the program and waitlist numbers, and a named contact per town. One fixed fee, quoted in the email this page came with, invoiced on delivery rather than up front. If it does not tell you where to start, do not pay it.</div></div>
     </div>
+  </div>
+
+
+  <div class="section">
+    <h2>Outside Maine, the same four questions, answered wider</h2>
+    <p>The Maine rows above are the ones I could work end to end. Since we spoke I pointed the same
+    reading at everything we hold, so you can see the shape of the answer at the scale you would
+    actually buy. <strong>119 municipalities name a recreation platform in their own records.</strong></p>
+    <div class="table-wrap">
+      <table class="rows">
+        <thead><tr><th>Platform</th><th class="num">Municipalities</th><th>&nbsp;</th></tr></thead>
+        <tbody>
+          <tr><td class="town">ActiveNet</td><td class="num">30</td><td>Active Network</td></tr>
+          <tr><td class="town">MyRec</td><td class="num">28</td><td>MyRec.com</td></tr>
+          <tr><td class="town">RecTrac</td><td class="num">24</td><td>Vermont Systems</td></tr>
+          <tr><td class="town">RecDesk</td><td class="num">19</td><td>&nbsp;</td></tr>
+          <tr><td class="town">CivicRec</td><td class="num">16</td><td>CivicPlus</td></tr>
+          <tr><td class="town">Community Pass</td><td class="num">10</td><td>&nbsp;</td></tr>
+          <tr><td class="town">Capturepoint, Amilia, TeamSideline, Daxko</td><td class="num">10</td><td>combined</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="detail">Same denominator discipline as the Maine section. This is the slice we can read
+    in full text, and a town absent from it is a town we have not found a vendor in, not a town
+    without one.</p>
+  </div>
+
+  <div class="section">
+    <h2>The half you actually asked for is the absence</h2>
+    <p>You said it plainly: <strong>towns that do not have some obnoxious incumbent whose contract
+    you have to deal with.</strong> So the useful number is not the 119. It is the inverse.</p>
+    <p><strong>250 municipalities run a parks or recreation board that files into the record.
+    53 of them name a platform we can detect. 197 do not.</strong></p>
+    <p>I want to be exact about what that second number is and is not. It is not 197 towns with no
+    software. It is 197 towns running recreation programming publicly where nobody has written a
+    vendor&#39;s name into a document we hold. Some of them have an incumbent that simply never
+    appears in minutes. What it does give you is a list ordered by how much programming a town runs
+    rather than by whether we happened to catch a renewal, and that is a prospecting list rather
+    than a guess.</p>
+  </div>
+
+  <div class="section">
+    <h2>The budget allocation, since you asked whether we could see it</h2>
+    <p>You asked directly: <em>are you able to actually identify the budget allocation for kind of
+    what we&#39;re doing in some cases.</em> Sometimes, and when we can it is because the town
+    published it, not because we inferred it. Hamden, Connecticut publishes its entire software
+    inventory with the owning department and the annual cost, and your category is a line in it.</p>
+    <div class="recs" data-src="Hamden CT">
+      <div class="rec"><div class="rec-d">Hamden CT</div><span class="rec-t">us Mayor $30,000
+      CivicEngage CivicPlus Mayor $15,000 Constant Contact Constant Contact Mayor $1,500 PADS
+      (CivicOptimize) CivicPlus Mayor $20,000 SeeClickFix GivicPlus Mayor $10,000 MyRec MyRec
+      Recreation $5,000 QDS QDS Tax $98,500 Total $1,648,500</span></div>
+    </div>
+    <p>Read what that gives you beyond the five thousand dollars. It names the owning department,
+    which is Recreation and not IT. It sets your line against the neighbours a town is already
+    comfortable paying, which is thirty thousand for one CivicPlus product and ninety eight thousand
+    for tax software. And it puts a total on the town&#39;s whole software budget, which is the
+    denominator you would need to know whether five thousand is a floor or a ceiling in that town.</p>
+    <p>Two more, plainer, both invoice lines rather than budget tables:</p>
+    <div class="recs" data-src="Powhatan County VA">
+      <div class="rec"><div class="rec-d">Powhatan Co VA</div><span class="rec-t">8439 MYREC.COM
+      032180435 3,295.00 0.00 3,295.00 3,295.00</span></div>
+    </div>
+    <div class="recs" data-src="Cape Elizabeth ME">
+      <div class="rec"><div class="rec-d">Cape Elizabeth ME</div><span class="rec-t">2980 MYREC.COM
+      03217037S 2/12/2024 2,850.00 School</span></div>
+    </div>
+    <p class="detail">Across the 119, <strong>49 towns carry payment evidence</strong> for their
+    platform. That is the population where a dollar figure is reachable. It is a minority, and I
+    would rather say so than quote you the 119 as if all of them were priced.</p>
+  </div>
+
+  <div class="section">
+    <h2>And one town explains the pricing model, which is the harder question you raised</h2>
+    <p>You said the challenge is that you have figured out several ways to monetise and cannot tell
+    which fits a given buyer. Trumbull, Connecticut answers that question about its own incumbent, in
+    its budget narrative, without being asked.</p>
+    <div class="recs" data-src="Trumbull CT">
+      <div class="rec"><div class="rec-d">Trumbull CT</div><span class="rec-t">Annual fees for
+      recreation software (myRec) increase of $1540 Fees are based on the fees we charge and received
+      from registration and field use. As our fees increase so will our cost for this software.</span></div>
+    </div>
+    <p>That is a town writing down that its recreation software is priced against registration
+    revenue, and that the town understands its own cost will rise as its programme revenue rises.
+    <strong>A town that already accepts a revenue linked fee for this category is a different sales
+    conversation from a town that buys a flat annual licence</strong>, and the record tells you which
+    one you are walking into before you walk in.</p>
+    <p>I found this one town. I am not going to tell you it generalises until I have looked for the
+    pattern deliberately, which is a thing I can do and have not yet done.</p>
+  </div>
+
+  <div class="section">
+    <h2>Where the conversation starts, which is the thing you said you did not know</h2>
+    <p>Your words were that you do not yet know where to start. Across every town where we can see a
+    recreation platform enter the record, this is the body it enters through and the role the
+    document names.</p>
+    <div class="table-wrap">
+      <table class="rows">
+        <thead><tr><th>Body the item first appears before</th><th>Role the record names</th></tr></thead>
+        <tbody>
+          <tr><td class="town">Recreation Commission</td><td>recreation director</td></tr>
+          <tr><td class="town">Town Council</td><td>town manager</td></tr>
+          <tr><td class="town">Parks and Recreation Board</td><td>recreation superintendent</td></tr>
+          <tr><td class="town">Select Board</td><td>parks and recreation director</td></tr>
+          <tr><td class="town">City Council</td><td>city manager</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>The useful part is the pairing rather than either column. A recreation director can raise it
+    at a Recreation Commission and it will still need a town manager to reach the council, and the
+    towns where it moved fastest are the ones where the manager, not the director, is named on the
+    item. That is who to open with.</p>
   </div>
 
   <div class="section">
