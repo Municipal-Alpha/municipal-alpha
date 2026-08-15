@@ -2,7 +2,7 @@ Title: Business Retention Runs on the Worst Information. The Public Record Alrea
 Slug: research/business-retention-signals
 Sortorder: 16
 Header_image: story-business-retention.png
-Summary: Economic developers say retaining an existing employer is far easier than attracting a new one, yet most learn a local employer is in trouble from the news, after the window to act has closed. Municipal Alpha reads town and county records across 4,200+ US municipalities, where the distress, the closure, and the decade of aftermath are written down first. Every example links to its source record.
+Summary: Economic developers say retaining an existing employer is far easier than attracting a new one, yet most learn a local employer is in trouble from the news, after the window to act has closed. Municipal Alpha reads town and county records across 4,300+ US municipalities, where the distress, the closure, and the decade of aftermath are written down first. Every example links to its source record.
 
 <style>
 .chart{ border:1px solid #E8E4DF; border-radius:10px; background:#fff; padding:22px 24px; margin:34px 0; }
@@ -86,7 +86,7 @@ Two boundaries worth stating plainly. Formal layoff notices under the WARN Act a
 
 ## Methodology and sources
 
-Municipal records come from agendas, minutes, packets, and budgets we monitor across 4,200+ US municipalities in all 50 states. Every dated example is taken from the document's own date, not from when we discovered it. The records:
+Municipal records come from agendas, minutes, packets, and budgets we monitor across 4,300+ US municipalities in all 50 states. Every dated example is taken from the document's own date, not from when we discovered it. The records:
 
 - Old Town, ME · FY 2025&ndash;2026 General Budget · [budget document](https://old-town.org/vertical/sites/%7BF7FABD96-D29C-4681-A9ED-8F3156759DC9%7D/uploads/FY_2025-2026_General_Budget_06.16.25.pdf)
 - Bucksport, ME · Finance Committee, December 2024 · [agenda packet](https://bucksportmaine.gov/Meetings/Finance%20Committee/2024/2024-1212%20Finance%20Committee%20Agenda.pdf)

@@ -45,7 +45,7 @@ Here's what Geneva's check registers map to when you run entity resolution at sc
 
 That's ten companies, all publicly traded, all receiving regular payments from a single municipality. This is recurring revenue from government operations, visible in public documents that nobody in the market is reading.
 
-Now multiply by 4,200+ municipalities. Then by 19,500.
+Now multiply by 4,300+ municipalities. Then by 19,500.
 
 ## Pipeline Activity
 
@@ -61,7 +61,7 @@ Week 1 was the initial backfill -- Geneva has deep archives. The Accounts Payabl
 
 Check registers are the only municipal document type where we've measured positive alpha against the broader market. The signal is straightforward: if a public company is receiving payments from dozens of municipalities that are growing quarter over quarter, that's a revenue signal that isn't in the company's reported numbers yet.
 
-The entity resolution is the hard part. "CORE & MAIN LP" in one check register is the same company as "Core and Main" in another and "C&M" in a third. Our pipeline handles this across 4,200+ municipalities, resolving vendor names to canonical entities and tickers. Geneva alone has 15+ distinct name variants that resolve to the same set of national companies.
+The entity resolution is the hard part. "CORE & MAIN LP" in one check register is the same company as "Core and Main" in another and "C&M" in a third. Our pipeline handles this across 4,300+ municipalities, resolving vendor names to canonical entities and tickers. Geneva alone has 15+ distinct name variants that resolve to the same set of national companies.
 
 One city's check register is a curiosity. A thousand cities' check registers, entity-resolved and longitudinally tracked, is an alternative dataset.
 
@@ -96,7 +96,7 @@ Nobody at Grainger's investor relations desk knows how often Geneva, Illinois pa
 
 ### Want this data?
 
-Geneva's check register data is a sample of what entity resolution produces at scale. The full dataset spans 4,200+ municipalities and 100+ public tickers.
+Geneva's check register data is a sample of what entity resolution produces at scale. The full dataset spans 4,300+ municipalities and 100+ public tickers.
 
 - **[Download a sample of our signal data (CSV)](/sample-data/signals-sample.csv)** -- 50 entity-resolved signals including Geneva check register entries
 - **[See our alt data product](/solutions/alt-data/)** -- how we deliver municipal vendor data

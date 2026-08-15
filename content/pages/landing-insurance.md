@@ -1,7 +1,7 @@
 Title: Municipal Infrastructure Risk
 Slug: solutions/infrastructure-risk
 Sortorder: 34
-Summary: Pre-event risk intelligence. Infrastructure spending patterns, deferred maintenance signals, and contagion tracking from 4,200+ municipalities. Risk indicators visible in public records months before they become claims.
+Summary: Pre-event risk intelligence. Infrastructure spending patterns, deferred maintenance signals, and contagion tracking from 4,300+ municipalities. Risk indicators visible in public records months before they become claims.
 
 <style>
 .lp-hero { display: flex; gap: 40px; margin-bottom: 48px; align-items: flex-start; }
@@ -63,7 +63,7 @@ Summary: Pre-event risk intelligence. Infrastructure spending patterns, deferred
 <div class="lp-tag">Insurance & Risk</div>
 <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #888; letter-spacing: 1px; margin-bottom: 10px;">Before the vote. Before the permit. Before the RFP.</div>
 <h2>You see the risk before it becomes a claim</h2>
-<p>Claims history tells you what already went wrong. Municipal spending data tells you what's about to. Deferred maintenance, stalled capital projects, and emergency spending spikes are visible in public records months before they become claims. I read these records daily across 4,200+ municipalities.</p>
+<p>Claims history tells you what already went wrong. Municipal spending data tells you what's about to. Deferred maintenance, stalled capital projects, and emergency spending spikes are visible in public records months before they become claims. I read these records daily across 4,300+ municipalities.</p>
 </div>
 <img class="lp-hero-img" src="/images/story-pfas.png" alt="PFAS and infrastructure risk signal">
 </div>
@@ -87,7 +87,7 @@ Summary: Pre-event risk intelligence. Infrastructure spending patterns, deferred
 <span class="lp-metric-label">Contagion topics</span>
 </div>
 <div class="lp-metric">
-<span class="lp-metric-value">4,200+</span>
+<span class="lp-metric-value">4,300+</span>
 <span class="lp-metric-label">Municipalities</span>
 </div>
 <div class="lp-metric">

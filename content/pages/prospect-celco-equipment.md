@@ -11,7 +11,7 @@ drill rigs, excavators, railcars, hauling trucks. That need shows up in
 municipal planning board minutes and permit approvals months before the
 operator contacts a dealer or leasing company.
 
-We monitor 4,200+ municipalities daily across 50 states, plus federal
+We monitor 4,300+ municipalities daily across 50 states, plus federal
 solicitations from SAM.gov. Mining permits, quarry approvals, mineral
 rights activity, and heavy equipment bids all flow through our pipeline.
 For an equipment leasing operation, each approved permit is a potential

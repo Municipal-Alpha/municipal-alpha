@@ -12,7 +12,7 @@ schema_type: Organization
 
 ## S.W. Cole Engineering in New England
 
-S.W. Cole Engineering, Inc. is a Gray, Maine-headquartered firm specializing in geotechnical engineering, environmental services, and construction materials testing for municipal, transportation, and private clients across New England. Based on our coverage of 4,200+ US municipalities, the firm appears in **9 New England municipalities** across Maine, New Hampshire, and Vermont, with documented activity from 2013 through February 2026.
+S.W. Cole Engineering, Inc. is a Gray, Maine-headquartered firm specializing in geotechnical engineering, environmental services, and construction materials testing for municipal, transportation, and private clients across New England. Based on our coverage of 4,300+ US municipalities, the firm appears in **9 New England municipalities** across Maine, New Hampshire, and Vermont, with documented activity from 2013 through February 2026.
 
 The deepest documented engagements are in Nashua, NH (77 mentions), Bedford, NH (21), and Montpelier, VT (10). Most volume comes from check-register records, public AP data showing payment cadence, with named geotechnical and slope-stability projects documented in meeting minutes for several other municipalities.
 
@@ -78,7 +78,7 @@ These are the kinds of gaps that the [Claim This Profile](#claim-this-profile) f
 
 ## Methodology
 
-This profile is compiled automatically from public municipal records. Municipal Alpha monitors 4,200+ US municipalities daily across 15+ government CMS platforms. Vendor names are extracted from meeting minutes, agendas, check registers, RFPs, engineering reports, and bid tabulations, then aggregated by entity.
+This profile is compiled automatically from public municipal records. Municipal Alpha monitors 4,300+ US municipalities daily across 15+ government CMS platforms. Vendor names are extracted from meeting minutes, agendas, check registers, RFPs, engineering reports, and bid tabulations, then aggregated by entity.
 
 **What this profile is:** A factual aggregation of where S.W. Cole Engineering has been documented in public municipal records. Every cited document is publicly available from the source municipality.
 
@@ -104,7 +104,7 @@ Corrections are processed within one business day. Disputed pages can be removed
 
 ## About Municipal Alpha
 
-Municipal Alpha builds a structured knowledge graph of US public municipal records, meeting minutes, agendas, check registers, RFPs, capital plans, and assessor data, across 4,200+ municipalities in 50 states. We provide alt-data products to financial firms, infrastructure analysts, and engineering consultancies. [Learn more →](/about/)
+Municipal Alpha builds a structured knowledge graph of US public municipal records, meeting minutes, agendas, check registers, RFPs, capital plans, and assessor data, across 4,300+ municipalities in 50 states. We provide alt-data products to financial firms, infrastructure analysts, and engineering consultancies. [Learn more →](/about/)
 
 <script type="application/ld+json">
 {

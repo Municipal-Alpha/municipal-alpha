@@ -106,7 +106,7 @@ Specific projects referenced in meeting minutes and supporting documents where S
 
 ## Methodology
 
-Municipal Alpha monitors 4,200+ US municipalities daily across 15+ government content management platforms, with extending coverage of quasi-public authorities (BRAC redevelopment authorities, port authorities, special districts). Engineering firm names are extracted from meeting minutes, agendas, planning attachments, RFPs, and engineering reports, then aggregated by entity. Authority-class records are extracted from board minutes, agendas, RFPs, financial audits, and environmental monitoring reports.
+Municipal Alpha monitors 4,300+ US municipalities daily across 15+ government content management platforms, with extending coverage of quasi-public authorities (BRAC redevelopment authorities, port authorities, special districts). Engineering firm names are extracted from meeting minutes, agendas, planning attachments, RFPs, and engineering reports, then aggregated by entity. Authority-class records are extracted from board minutes, agendas, RFPs, financial audits, and environmental monitoring reports.
 
 **What this profile is:** A factual aggregation of currently active opportunities at Northeast quasi-public authorities relevant to Sevee & Maher's practice areas, plus the firm's documented activity in Maine municipalities. Every cited document is publicly available from the source municipality or authority.
 
@@ -133,7 +133,7 @@ Corrections are processed within one business day. Disputed pages can be removed
 
 ## About Municipal Alpha
 
-Municipal Alpha builds a structured knowledge graph of US public municipal records and quasi-public authority data, meeting minutes, agendas, check registers, RFPs, capital plans, environmental monitoring data, and assessor records, across 4,200+ municipalities and a growing set of quasi-public authorities. We provide alt-data products to financial firms, infrastructure analysts, and engineering and environmental consultancies. [Learn more →](/about/)
+Municipal Alpha builds a structured knowledge graph of US public municipal records and quasi-public authority data, meeting minutes, agendas, check registers, RFPs, capital plans, environmental monitoring data, and assessor records, across 4,300+ municipalities and a growing set of quasi-public authorities. We provide alt-data products to financial firms, infrastructure analysts, and engineering and environmental consultancies. [Learn more →](/about/)
 
 <script type="application/ld+json">
 {
