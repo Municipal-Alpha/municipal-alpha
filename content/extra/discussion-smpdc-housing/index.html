@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Municipal Alpha &amp; SMPDC, the southern Maine housing record</title>
+<script data-goatcounter="https://stats.municipalalpha.com/count" async src="//gc.zgo.at/count.js"></script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,500&family=DM+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+  :root {
+    --ink:#0C0C0C; --paper:#F7F4F0; --signal:#E8512D; --edge:#1B4332;
+    --ink-80:rgba(12,12,12,.80); --ink-60:rgba(12,12,12,.60); --ink-40:rgba(12,12,12,.40);
+    --ink-12:rgba(12,12,12,.12); --ink-06:rgba(12,12,12,.06); --signal-06:rgba(232,81,45,.06);
+    --font-display:'Newsreader',Georgia,serif; --font-body:'DM Sans',-apple-system,sans-serif; --font-mono:'IBM Plex Mono',ui-monospace,monospace;
+  }
+  *,*::before,*::after{box-sizing:border-box;}
+  html,body{margin:0;padding:0;background:var(--paper);color:var(--ink);font-family:var(--font-body);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+  .container{max-width:780px;margin:0 auto;padding:0 36px 80px 36px;}
+  .header{position:sticky;top:0;z-index:10;background:var(--paper);display:flex;justify-content:space-between;align-items:center;padding:22px 0 16px 0;border-bottom:1px solid var(--ink-12);margin-bottom:32px;}
+  .wordmark{font-family:var(--font-display);font-weight:500;font-size:22px;letter-spacing:-.005em;}
+  .header-meta{font-family:var(--font-mono);font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-60);text-align:right;line-height:1.4;}
+  .hero{margin-bottom:18px;}
+  .hero .eyebrow{font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--signal);margin-bottom:14px;}
+  .hero h1{font-family:var(--font-display);font-weight:500;font-size:38px;line-height:1.1;letter-spacing:-.01em;margin:0 0 14px 0;}
+  .hero .lede{font-family:var(--font-body);font-size:15.5px;line-height:1.55;color:var(--ink-60);margin:0;max-width:64ch;}
+  .hero .lede strong{color:var(--ink);font-weight:600;}
+  .stat-strip{margin-top:22px;padding:16px 18px;background:var(--ink);color:var(--paper);border-radius:2px;display:flex;flex-wrap:wrap;gap:22px;}
+  .stat{flex:1 1 110px;}
+  .stat .num{font-family:var(--font-display);font-size:28px;font-weight:500;line-height:1;color:var(--signal);}
+  .stat .lab{font-family:var(--font-mono);font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:rgba(247,244,240,.6);margin-top:6px;}
+  .section{margin-top:48px;padding-top:28px;border-top:1px solid var(--ink-12);}
+  .kicker{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--signal);margin:0 0 10px 0;}
+  .section h2{font-family:var(--font-display);font-weight:500;font-size:26px;line-height:1.2;letter-spacing:-.005em;margin:0 0 8px 0;}
+  .section .section-sub{font-family:var(--font-body);font-size:14px;color:var(--ink-60);line-height:1.5;margin:0 0 20px 0;max-width:62ch;}
+  .section p{font-family:var(--font-body);font-size:14.5px;line-height:1.65;color:var(--ink);margin:0 0 14px 0;max-width:62ch;}
+  .section p strong{font-weight:600;}
+  .quote{font-family:var(--font-display);font-style:italic;font-size:15px;line-height:1.55;color:var(--ink-80);border-left:2px solid var(--signal);padding:2px 0 2px 16px;margin:0 0 14px 0;max-width:60ch;}
+  .quote .attr{display:block;font-family:var(--font-mono);font-style:normal;font-size:10.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-40);margin-top:8px;}
+  .facts{display:grid;gap:13px;margin-top:4px;}
+  .fact{display:grid;grid-template-columns:120px 1fr;gap:16px;align-items:baseline;}
+  .fact-k{font-family:var(--font-mono);font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:var(--signal);padding-top:2px;}
+  .fact-v{font-family:var(--font-body);font-size:14px;line-height:1.55;color:var(--ink);}
+  .fact-v strong{font-weight:600;}
+  .source-link{display:inline-block;font-family:var(--font-mono);font-size:11px;letter-spacing:.03em;color:var(--signal);text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:1px;margin-top:2px;}
+  .source-link:hover{color:var(--ink);}
+  .turn{margin-top:56px;padding:30px 28px;background:var(--ink);color:var(--paper);border-radius:2px;}
+  .turn .eyebrow{font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--signal);margin-bottom:14px;}
+  .turn h2{font-family:var(--font-display);font-weight:500;font-size:27px;line-height:1.15;margin:0 0 14px 0;color:var(--paper);}
+  .turn p{font-family:var(--font-body);font-size:14.5px;line-height:1.65;color:rgba(247,244,240,.82);margin:0 0 12px 0;max-width:62ch;}
+  .turn p strong{color:var(--paper);font-weight:600;}
+  .split{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-top:24px;}
+  @media (max-width:680px){.split{grid-template-columns:1fr;}.fact{grid-template-columns:90px 1fr;}}
+  .card{border:1px solid var(--ink-12);border-radius:2px;padding:18px 18px 20px;background:var(--paper);}
+  .card .card-label{font-family:var(--font-mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--signal);margin-bottom:6px;}
+  .card h3{font-family:var(--font-display);font-weight:500;font-size:18px;line-height:1.2;margin:0 0 8px 0;color:var(--ink);}
+  .card p{font-family:var(--font-body);font-size:13px;line-height:1.55;color:var(--ink-80);margin:0;}
+  .complist{display:grid;gap:10px;margin-top:6px;}
+  .comp{display:grid;grid-template-columns:30px 1fr;gap:14px;align-items:baseline;}
+  .comp .n{font-family:var(--font-mono);font-size:12px;color:var(--signal);}
+  .comp .d{font-family:var(--font-body);font-size:13.5px;line-height:1.5;color:var(--ink);}
+  .comp .d strong{font-weight:600;}
+  .flow{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;font-family:var(--font-mono);font-size:11px;}
+  .flow .step{padding:7px 11px;background:var(--ink-06);border-radius:2px;color:var(--ink-80);}
+  .flow .arr{color:var(--signal);align-self:center;}
+  .probes{display:grid;gap:14px;margin-top:8px;}
+  .probe{border-left:2px solid var(--ink-12);padding:2px 0 2px 16px;}
+  .probe .q{font-family:var(--font-display);font-size:16px;line-height:1.4;color:var(--ink);margin:0 0 4px 0;}
+  .probe .why{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.03em;text-transform:uppercase;color:var(--ink-40);}
+  .footer{margin-top:56px;padding-top:24px;border-top:1px solid var(--ink-12);font-family:var(--font-mono);font-size:11px;line-height:1.6;color:var(--ink-40);}
+</style>
+</head>
+<body>
+<div class="header">
+  <div>Municipal Alpha</div>
+  <div class="header-meta">Prepared for James Rather &middot; SMPDC &middot; 18 August 2026</div>
+</div>
+
+<div class="container">
+  <div class="hero">
+    <div class="eyebrow">Starting from what you said you were trying to do, on 25 June</div>
+    <h1>The data LD 184 asks your towns to dig out is already in their minutes</h1>
+    <p class="lede">You described an existing-conditions analysis of the region's affordable housing stock, and the specific thing the state survey does not reach. This is a first pass at whether the public record can get you there, run across your 39 towns and Greater Portland's 25 with the same measure.</p>
+  </div>
+
+  <div class="section">
+    <p class="kicker">Your framing, not mine</p>
+    <h2>What you said you needed</h2>
+    <p class="quote">What we want to know is what is the breakdown between &hellip; those with affordable housing tax credits or other forms of subsidy versus those that are nonsubsidized, that they are affordable housing being built pursuant to density bonuses.
+      <span class="attr">James Rather, recorded call, 25 June 2026</span></p>
+    <p>And on why the survey does not answer it:</p>
+    <p class="quote">What that survey does is it requires communities over 4,000 population and up to provide survey data on CFOs, building permits issued. But one of the things it doesn't capture are some of the nuances of affordable housing that we want to better understand. For example, what is the use of subsidy in these projects?
+      <span class="attr">James Rather, on LD 184, 25 June 2026</span></p>
+    <p>And what it costs the towns that do answer it:</p>
+    <p class="quote">Some of them reported, we had to spend eight hours going through hard copy files to find the stuff you need. We had to [go] back to the public works, into the archives of project approvals, to a bunch of manila folders &hellip; It's very very rudimentary in a lot of our smaller communities, the way they catch the data.
+      <span class="attr">James Rather, 25 June 2026</span></p>
+    <p><strong>That is the problem I went looking for in the record.</strong> Not whether housing is happening, which you already know, but whether the subtypes you cannot get from the survey are sitting in the minutes anyway.</p>
+  </div>
+
+  <div class="section">
+    <p class="kicker">The answer, partly</p>
+    <h2>Cumberland reads its own permit census into the minutes, unprompted</h2>
+    <p class="quote">Approved projects under construction: Oceanview phase II &middot; 33/52 permits have been issued; Orchard Road &middot; Cortland Court &middot; 8 of 10 building permits issued as of this date; Snowy Owl off Old Gray Road &middot; 10 units approved &hellip; Mineral Springs off Blackstrap Rd &middot; 26/72 permits issued
+      <span class="attr">Cumberland Lands &amp; Conservation Commission minutes, 4 March 2026</span></p>
+    <p>Approvals against permits actually pulled, project by project, in a town's own minutes. <strong>That is the LD 184 numerator and denominator, published voluntarily, eight hours of manila folders already done.</strong> One town in one month, so treat it as an existence proof rather than a regional dataset. The question worth answering on the call is how many of the 64 towns do this, and how consistently, because that number decides whether this replaces the survey or merely supplements it.</p>
+    <p>What the minutes will not give you is the subsidy question directly. Very few boards write "low-income housing tax credit" into a decision. My read is that you reach it by elimination, cross-referencing approvals against the MaineHousing and LIHTC award lists so the non-subsidised projects surface without anyone disclosing anything. That is a method, not a finding, and I would rather test it against your judgement than build it and hope.</p>
+  </div>
+
+  <div class="section">
+    <p class="kicker">Where the paper actually is</p>
+    <h2>Saco is carrying two thirds of your region's housing record</h2>
+    <p class="section-sub">188 of your 293 entitlement documents in twelve months. Falmouth is 251 of Greater Portland's 504. Two regions, same measure, one town carrying the paper in each.</p>
+    <div class="facts">
+      <div class="fact"><div class="fact-k">Moving</div><div class="fact-v"><strong>Saco, Biddeford, the Berwicks and Eliot.</strong> Saco 188, Biddeford 43, Acton 18, Eliot 15, South Berwick 12.</div></div>
+      <div class="fact"><div class="fact-k">Quiet, provably</div><div class="fact-v"><strong>Kennebunk and York.</strong> Four hits each across 223 and 136 readable documents. On a denominator that size the quiet is real.</div></div>
+    </div>
+    <p>Kittery shows zero, and that one is a gap on my side rather than Kittery's, I hold over 400 of its documents and can read five of them today. It is also the town you named first, so it is first in the queue.</p>
+  </div>
+
+  <div class="section">
+    <p class="kicker">One more, because it is your keyword</p>
+    <h2>Gorham approved a subdivision and adopted a moratorium inside 24 hours</h2>
+    <p class="quote">ITEM 1 Public Hearing &middot; Final Subdivision and Site Plan Review &middot; Troiano Properties LLC &middot; Gorham Fairways South &middot; A request for final review of a plan for phases 1 and 2 for a mixed-use development
+      <span class="attr">Gorham Planning Board minutes, 1 June 2026</span></p>
+    <p>The following day the Town Council adopted a moratorium on <em>"the issuance of any development permit, license, or other regulatory approval &hellip; related to any new or expanded Data Center."</em> Moratorium is on your sheet. This one is data centers rather than housing, which is the interesting part, the reflex arrives in a town before the subject does.</p>
+  </div>
+
+  <div class="section">
+    <p class="kicker">This morning</p>
+    <h2>Three questions</h2>
+    <div class="probes">
+      <div class="probe"><p class="q">Does the Cumberland shape appear across your towns, or is it one diligent commission?</p><p class="why">That number decides whether this replaces LD 184 for you or supplements it</p></div>
+      <div class="probe"><p class="q">Is elimination against MaineHousing and LIHTC lists the right route to the subsidy split?</p><p class="why">It is my method, not yours, and I would rather hear it is wrong now</p></div>
+      <div class="probe"><p class="q">Your corrections to the calibration sheet.</p><p class="why">Still running on the 6 August version, until it comes back the watch list is my guess at your intent</p></div>
+    </div>
+  </div>
+
+  <div class="footer">
+    Municipal Alpha &middot; Quotations from James Rather are from the recorded call of 25 June 2026. Every municipal figure and quotation is read from the named town's own published record, from full document text, for the twelve months ending 15 August 2026. No records requests, no insider access. The measure counts documents rather than projects, and the approval column locates language rather than certifying an outcome. Fifteen of your 39 towns are not yet in the corpus, so the read says nothing about them either way.
+  </div>
+</div>
+</body>
+</html>
