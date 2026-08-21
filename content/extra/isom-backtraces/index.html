@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Three California districts, traced backwards</title>
+<script data-goatcounter="https://stats.municipalalpha.com/count" async src="//gc.zgo.at/count.js"></script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,500&family=DM+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+  :root {
+    --ink:#0C0C0C; --paper:#F7F4F0; --signal:#E8512D; --edge:#1B4332;
+    --ink-80:rgba(12,12,12,.80); --ink-60:rgba(12,12,12,.60); --ink-40:rgba(12,12,12,.40);
+    --ink-12:rgba(12,12,12,.12); --ink-06:rgba(12,12,12,.06); --signal-06:rgba(232,81,45,.06);
+    --font-display:'Newsreader',Georgia,serif; --font-body:'DM Sans',-apple-system,sans-serif; --font-mono:'IBM Plex Mono',ui-monospace,monospace;
+  }
+  *,*::before,*::after{box-sizing:border-box;}
+  html,body{margin:0;padding:0;background:var(--paper);color:var(--ink);font-family:var(--font-body);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+  .container{max-width:780px;margin:0 auto;padding:0 36px 80px 36px;}
+  .header{position:sticky;top:0;z-index:10;background:var(--paper);display:flex;justify-content:space-between;align-items:center;padding:22px 0 16px 0;border-bottom:1px solid var(--ink-12);margin-bottom:32px;}
+  .wordmark{font-family:var(--font-display);font-weight:500;font-size:22px;letter-spacing:-.005em;}
+  .header-meta{font-family:var(--font-mono);font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-60);text-align:right;line-height:1.4;}
+  .hero{margin-bottom:18px;}
+  .hero .eyebrow{font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--signal);margin-bottom:14px;}
+  .hero h1{font-family:var(--font-display);font-weight:500;font-size:38px;line-height:1.1;letter-spacing:-.01em;margin:0 0 14px 0;}
+  .hero .lede{font-family:var(--font-body);font-size:15.5px;line-height:1.55;color:var(--ink-60);margin:0;max-width:64ch;}
+  .hero .lede strong{color:var(--ink);font-weight:600;}
+  .stat-strip{margin-top:22px;padding:16px 18px;background:var(--ink);color:var(--paper);border-radius:2px;display:flex;flex-wrap:wrap;gap:22px;}
+  .stat{flex:1 1 110px;}
+  .stat .num{font-family:var(--font-display);font-size:28px;font-weight:500;line-height:1;color:var(--signal);}
+  .stat .lab{font-family:var(--font-mono);font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:rgba(247,244,240,.6);margin-top:6px;}
+  .section{margin-top:48px;padding-top:28px;border-top:1px solid var(--ink-12);}
+  .kicker{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--signal);margin:0 0 10px 0;}
+  .section h2{font-family:var(--font-display);font-weight:500;font-size:26px;line-height:1.2;letter-spacing:-.005em;margin:0 0 8px 0;}
+  .section .section-sub{font-family:var(--font-body);font-size:14px;color:var(--ink-60);line-height:1.5;margin:0 0 20px 0;max-width:62ch;}
+  .section p{font-family:var(--font-body);font-size:14.5px;line-height:1.65;color:var(--ink);margin:0 0 14px 0;max-width:62ch;}
+  .section p strong{font-weight:600;}
+  .quote{font-family:var(--font-display);font-style:italic;font-size:15px;line-height:1.55;color:var(--ink-80);border-left:2px solid var(--signal);padding:2px 0 2px 16px;margin:0 0 14px 0;max-width:60ch;}
+  .quote .attr{display:block;font-family:var(--font-mono);font-style:normal;font-size:10.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-40);margin-top:8px;}
+  .facts{display:grid;gap:13px;margin-top:4px;}
+  .fact{display:grid;grid-template-columns:120px 1fr;gap:16px;align-items:baseline;}
+  .fact-k{font-family:var(--font-mono);font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:var(--signal);padding-top:2px;}
+  .fact-v{font-family:var(--font-body);font-size:14px;line-height:1.55;color:var(--ink);}
+  .fact-v strong{font-weight:600;}
+  .source-link{display:inline-block;font-family:var(--font-mono);font-size:11px;letter-spacing:.03em;color:var(--signal);text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:1px;margin-top:2px;}
+  .source-link:hover{color:var(--ink);}
+  .turn{margin-top:56px;padding:30px 28px;background:var(--ink);color:var(--paper);border-radius:2px;}
+  .turn .eyebrow{font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--signal);margin-bottom:14px;}
+  .turn h2{font-family:var(--font-display);font-weight:500;font-size:27px;line-height:1.15;margin:0 0 14px 0;color:var(--paper);}
+  .turn p{font-family:var(--font-body);font-size:14.5px;line-height:1.65;color:rgba(247,244,240,.82);margin:0 0 12px 0;max-width:62ch;}
+  .turn p strong{color:var(--paper);font-weight:600;}
+  .split{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-top:24px;}
+  @media (max-width:680px){.split{grid-template-columns:1fr;}.fact{grid-template-columns:90px 1fr;}}
+  .card{border:1px solid var(--ink-12);border-radius:2px;padding:18px 18px 20px;background:var(--paper);}
+  .card .card-label{font-family:var(--font-mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--signal);margin-bottom:6px;}
+  .card h3{font-family:var(--font-display);font-weight:500;font-size:18px;line-height:1.2;margin:0 0 8px 0;color:var(--ink);}
+  .card p{font-family:var(--font-body);font-size:13px;line-height:1.55;color:var(--ink-80);margin:0;}
+  .complist{display:grid;gap:10px;margin-top:6px;}
+  .comp{display:grid;grid-template-columns:30px 1fr;gap:14px;align-items:baseline;}
+  .comp .n{font-family:var(--font-mono);font-size:12px;color:var(--signal);}
+  .comp .d{font-family:var(--font-body);font-size:13.5px;line-height:1.5;color:var(--ink);}
+  .comp .d strong{font-weight:600;}
+  .flow{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;font-family:var(--font-mono);font-size:11px;}
+  .flow .step{padding:7px 11px;background:var(--ink-06);border-radius:2px;color:var(--ink-80);}
+  .flow .arr{color:var(--signal);align-self:center;}
+  .probes{display:grid;gap:14px;margin-top:8px;}
+  .probe{border-left:2px solid var(--ink-12);padding:2px 0 2px 16px;}
+  .probe .q{font-family:var(--font-display);font-size:16px;line-height:1.4;color:var(--ink);margin:0 0 4px 0;}
+  .probe .why{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.03em;text-transform:uppercase;color:var(--ink-40);}
+  .footer{margin-top:56px;padding-top:24px;border-top:1px solid var(--ink-12);font-family:var(--font-mono);font-size:11px;line-height:1.6;color:var(--ink-40);}
+</style>
+<style id="backtrace-additions">
+  .comp{grid-template-columns:76px 1fr;}
+  .comp .n{white-space:nowrap;}
+  @media (max-width:680px){.comp{grid-template-columns:64px 1fr;}}
+  .tablewrap{overflow-x:auto;margin:4px 0 14px 0;-webkit-overflow-scrolling:touch;}
+  table.grid{border-collapse:collapse;width:100%;min-width:600px;font-family:var(--font-body);font-size:12.5px;line-height:1.45;}
+  table.grid th{font-family:var(--font-mono);font-size:9.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--signal);text-align:left;font-weight:500;padding:0 10px 7px 0;border-bottom:1px solid var(--ink-12);vertical-align:bottom;}
+  table.grid td{padding:7px 10px 7px 0;border-bottom:1px solid var(--ink-06);color:var(--ink-80);vertical-align:top;}
+  table.grid td strong{color:var(--ink);font-weight:600;}
+  table.grid td.num,table.grid th.num{text-align:right;font-family:var(--font-mono);font-size:11.5px;padding-right:14px;}
+  table.grid tr.hit td{background:var(--signal-06);}
+  .note{border-left:2px solid var(--ink-12);padding:2px 0 2px 16px;margin:0 0 16px 0;max-width:62ch;}
+  .note p{font-size:13.5px;line-height:1.6;color:var(--ink-60);margin:0 0 8px 0;}
+  .note p:last-child{margin-bottom:0;}
+  .note p strong{color:var(--ink);font-weight:600;}
+  .leadnum{font-family:var(--font-display);font-size:44px;font-weight:500;line-height:1;color:var(--signal);margin:0 0 4px 0;}
+  .leadnum small{font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-40);display:block;margin-top:8px;}
+  .srcrow{margin-top:2px;}
+  .srcrow .sep{color:var(--ink-40);font-family:var(--font-mono);font-size:11px;padding:0 6px;}
+</style>
+</head><body>
+<div class="container">
+
+  <div class="header">
+    <div class="wordmark">Municipal Alpha</div>
+    <div class="header-meta">Prepared for Randy Merritt &middot; Isom Advisors<br>20 August 2026</div>
+  </div>
+
+  <div class="hero">
+    <div class="eyebrow">Three California districts, traced backwards</div>
+    <h1>Three lead-time numbers, and the signals that produced them.</h1>
+    <p class="lede">You named the early signal: the workshop, the master plan, the bond authorization running out. I scored fourteen districts on those signals blind, then traced the top three back to the day each became visible. <strong>The ranking is the part I am asking you to argue with.</strong> The chains are only there to show it works.</p>
+
+    <div class="stat-strip">
+      <div class="stat"><div class="num">1,029</div><div class="lab">Days, Vista Unified</div></div>
+      <div class="stat"><div class="num">539</div><div class="lab">Days, Norwalk-La Mirada</div></div>
+      <div class="stat"><div class="num">162</div><div class="lab">Days, Paramount Unified</div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <p class="kicker">Example one, the one you already saw</p>
+    <h2>Vista Unified</h2>
+    <p class="leadnum">1,029 days<small>20 July 2023 to 14 May 2026</small></p>
+
+    <p>Gap between the night the board adopted its Long Range Facility Master Plan and paid for a survey on bond support, and the night it approved Resolution 26-25 ordering a <strong>$543 million</strong> bond election for 3 November 2026.</p>
+
+    <div class="complist">
+      <div class="comp"><div class="n">1,393 d</div><div class="d"><strong>The State said no, in writing.</strong> Resolution 23-04, 21 July 2022: remaining School Facility Program bond authority exhausted, State neither expected nor obligated to fund the projects</div></div>
+      <div class="comp"><div class="n">1,317 d</div><div class="d"><strong>The master plan process opened.</strong> 5 October 2022, agendised as a process spanning multiple workshops. Took fifteen months, came out at 451 pages</div></div>
+      <div class="comp"><div class="n">1,029 d</div><div class="d"><strong>Someone paid for a survey about a future bond.</strong> 20 July 2023, $28,850 to True North Research. Happens again at $30,000 in March 2024 and $47,500 (TeamCivX) in October 2025</div></div>
+      <div class="comp"><div class="n">98 d</div><div class="d"><strong>The prior authorization ran out.</strong> Resolution 26-21, 5 February 2026: Series C is the third and final series under the 2018 authorization, no authorization for issuance will remain after it</div></div>
+    </div>
+
+    <p>On the advisory seat, you were right: Piper Jaffray won it by RFP in 2018, Piper Sandler still held it in 2021, and it was never open. Where this is live is construction, not advisory , the resolution closes one window and opens another.</p>
+
+    <p class="srcrow"><a class="source-link" href="https://go.boarddocs.com/ca/vusd/Board.nsf/Download-AgendaDetailed?open&amp;id=CSCVUC826AEB&amp;current_committee_id=AB9AFB277205">Vista agenda, 20 Jul 2023</a><span class="sep">&middot;</span><a class="source-link" href="https://go.boarddocs.com/ca/vusd/Board.nsf/Download-AgendaDetailed?open&amp;id=DQHUKC7C6919&amp;current_committee_id=AB9AFB277205">14 May 2026</a></p>
+  </div>
+
+  <div class="section">
+    <p class="kicker">Example two, a completed arc you can check end to end</p>
+    <h2>Paramount Unified, Los Angeles County</h2>
+    <p class="leadnum">162 days<small>13 February 2024 to 24 July 2024 &middot; 266 days to the vote</small></p>
+
+    <p>A February 2024 consultant deck tabled the district's three prior bond measures, each fully issued, under one line: <strong>"Remaining Bond Authorization = NONE NONE NONE."</strong> Five months later the board ordered the election. Nine months after that, voters approved it.</p>
+
+    <div class="complist">
+      <div class="comp"><div class="n">13 Feb 24</div><div class="d">Report item 8.2, <strong>2024 Bond Measure Opportunity</strong>. The exhaustion slide above</div></div>
+      <div class="comp"><div class="n">24 Jul 24</div><div class="d">Resolution 24-08, <strong>Ordering a School Bond Election</strong>. Over $250 million of Phase 3 need identified</div></div>
+      <div class="comp"><div class="n">18 Dec 24</div><div class="d">PBK Architects engaged for a master facility plan, not to exceed <strong>$305,655</strong></div></div>
+      <div class="comp"><div class="n">15 Jan 25</div><div class="d">Resolution 24-41 declaring results. <strong>Measure Q approved by over 74 percent</strong>, up to $190 million</div></div>
+      <div class="comp"><div class="n">10 Dec 25</div><div class="d">Board accepts the completed Facilities Master Plan</div></div>
+      <div class="comp"><div class="n">21 Jan 26</div><div class="d">Resolution 25-56 waives the statutory bonding limit. Motion carries</div></div>
+      <div class="comp"><div class="n">13 May 26</div><div class="d">Resolution 25-82, issuance and sale not to exceed <strong>$50,000,000</strong></div></div>
+      <div class="comp"><div class="n">22 Jul 26</div><div class="d">Actual costs of issuance reported. The bonds sold</div></div>
+    </div>
+
+    <p>Not municipal advisory , that seat is filled (California Financial Services, named in the May 2026 issuance resolution). This one is live on the construction side: a high-school reunification decision and an aquatics-centre build, both moving on enrollment data that's shifted since the master plan was written.</p>
+
+    <p class="srcrow"><a class="source-link" href="https://go.boarddocs.com/ca/paramount/Board.nsf/Download-AgendaDetailed?open&amp;id=CYHNQZ60CD1B&amp;current_committee_id=A4EP6J588C05">Paramount agenda, 13 Feb 2024</a><span class="sep">&middot;</span><a class="source-link" href="https://go.boarddocs.com/ca/paramount/Board.nsf/Download-AgendaDetailed?open&amp;id=CZC9XX24B1D4&amp;current_committee_id=A4EP6J588C05">24 Jul 2024</a></p>
+  </div>
+
+  <div class="section">
+    <p class="kicker">Example three, the live one</p>
+    <h2>Norwalk-La Mirada Unified, Los Angeles County</h2>
+    <p class="leadnum">539 days<small>27 January 2025 to 20 July 2026</small></p>
+
+    <p>From a board study session that named a bond phase that didn't exist yet, to the 2026-2031 facilities master plan reaching the board for adoption. No funding ask has happened yet. Checked against the board's own calendar on 21 August 2026: the only business posted since the master plan came up for adoption is a superintendent evaluation committee and a Saturday special session. That is what the record showed that day, not a forecast.</p>
+
+    <div class="complist">
+      <div class="comp"><div class="n">27 Jan 25</div><div class="d">Study session. Piper Sandler briefs the board; agenda names <strong>Phase 1E</strong>, not yet a funded thing</div></div>
+      <div class="comp"><div class="n">4 Aug 25</div><div class="d"><strong>$497,000</strong> agreement with LPA to write the district-wide facilities master plan</div></div>
+      <div class="comp"><div class="n">Dec 25</div><div class="d">Authorising resolution, <strong>seventh series</strong> under a 2014, $375M authorization</div></div>
+      <div class="comp"><div class="n">Feb 26</div><div class="d">Report of final sale. The $20 million was issued</div></div>
+      <div class="comp"><div class="n">20 Jul 26</div><div class="d">2026-2031 Facilities Master Plan on the board for adoption</div></div>
+    </div>
+
+    <p>The plan exists because the State requires one before it will consider funding anything, on top of an authorization that's seven series deep. Whether it turns into an ask isn't something the record says yet; you told me yourself the master plan isn't a perfect signal.</p>
+
+    <p class="srcrow"><a class="source-link" href="https://go.boarddocs.com/ca/nlmusd/Board.nsf/Download-AgendaDetailed?open&amp;id=DB2U2K79F466&amp;current_committee_id=AB99Y7253B33">Norwalk-La Mirada study session, 27 Jan 2025</a><span class="sep">&middot;</span><a class="source-link" href="https://go.boarddocs.com/ca/nlmusd/Board.nsf/Download-AgendaDetailed?open&amp;id=DV3KZK544E7C&amp;current_committee_id=AB99Y7253B33">20 Jul 2026</a></p>
+  </div>
+
+  <div class="section">
+    <p class="kicker">The signals we would build against</p>
+    <h2>Six precursor classes</h2>
+    <div class="flow">
+      <span class="step">Workshop</span>
+      <span class="step">Master plan</span>
+      <span class="step">Exhaustion</span>
+      <span class="step">Bond election</span>
+      <span class="step">Ground need</span>
+      <span class="step">State gap</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <p class="kicker">Before you lean on any of it</p>
+    <h2>What these chains do and do not license</h2>
+    <p class="section-sub">Every line here is a bound on a claim above it, said next to the claim rather than buried.</p>
+    <div class="complist">
+      <div class="comp" style="grid-template-columns:1fr"><div class="d"><strong>Agendas, mostly.</strong> Where a recorded vote exists I quoted it. Where it does not, the row says what staff recommended and means it. I pulled minutes on Vista specifically because an outcome was claimed. Doing it systematically is a fetch away, not a capability gap</div></div>
+      <div class="comp" style="grid-template-columns:1fr"><div class="d"><strong>Thirty-two agendas failed to fetch.</strong> Twenty-nine at Cajon Valley and three at Norwalk-La Mirada, across the four districts I read back to 2019. If a chain above looks like it has a gap, that gap could be the record or it could be my fetch, and those thirty-two are where I would look first</div></div>
+      <div class="comp" style="grid-template-columns:1fr"><div class="d"><strong>Attachments and images.</strong> The Vista chain reads agendas and attached minutes, not every attachment behind every item. Two of the most important Cajon Valley documents, a seventeen page bond workshop deck and a twenty two page Dale Scott presentation, are image only. I can tell you those documents exist, on those dates, attached to those items. Nothing on this page quotes them</div></div>
+      <div class="comp" style="grid-template-columns:1fr"><div class="d"><strong>Paramount's arc is historical.</strong> I chose it partly because it is checkable end to end, which is also its limitation. It proves the model held once, in one district. It is not evidence about the other 599</div></div>
+      <div class="comp" style="grid-template-columns:1fr"><div class="d"><strong>Lead time is not a promise, and not a claim of exclusivity.</strong> 1,029 days is what Vista's record shows for this bond. Vista's prior cycle ran 742 days from plan to resolution and the failed 2024 attempt ran 357. One district is not a distribution. All of these agendas are published openly, so the claim is about aggregation and attention, not about being the only one who could have seen it</div></div>
+    </div>
+  </div>
+
+  <div class="footer">Municipal Alpha &middot; Read directly off each district's own BoardDocs portal and parsed by hand for this pack. Every row links to the district's own record so any figure can be checked against the district rather than against me. Agendas show what staff recommended; only minutes and paid warrants show what happened.</div>
+
+</div>
+</body>
+</html>
