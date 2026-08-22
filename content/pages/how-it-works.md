@@ -47,10 +47,10 @@ The coverage gap is the product.
 **Where the system is today (as of July 2026):**
 
 - **4,300+** municipalities monitored daily, all 50 states
-- **963,000+** documents ingested and classified
+- **969,000+** documents ingested and classified
 - **44,000+** building permits structured
 - **100+** public company tickers resolved from municipal vendor names
-- **427,000+** classified signals
+- **430,000+** classified signals
 - Adding new municipalities weekly, with infrastructure built to scale past 5,000
 
 **Where this goes:**

@@ -10,7 +10,7 @@ There is no new dashboard to learn and no export to wrangle. The intelligence sh
 
 ## What is behind it
 
-Records from 4,300+ municipalities, 963,000+ public records, and 427,000+ classified signals, across all 50 states.
+Records from 4,300+ municipalities, 969,000+ public records, and 430,000+ classified signals, across all 50 states.
 
 The corpus spans the documents local governments actually produce: meeting minutes and agendas, where the discussion and the draft first appear, building permits (44,000+ records), ordinances and resolutions, municipal budgets, audits and financial reports, RFPs and procurement notices, and specialized layers including cell-tower and FAA filings and vendor payment records. Municipal Alpha connects these across thousands of municipalities and reads them for the signal upstream of the decision.
 
