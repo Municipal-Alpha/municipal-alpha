@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Municipal Alpha, built for Black By God</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,500&family=DM+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+  :root {
+    --ink: #0C0C0C;
+    --paper: #F7F4F0;
+    --signal: #E8512D;
+    --edge: #1B4332;
+    --ink-80: rgba(12, 12, 12, 0.80);
+    --ink-60: rgba(12, 12, 12, 0.60);
+    --ink-40: rgba(12, 12, 12, 0.40);
+    --ink-12: rgba(12, 12, 12, 0.12);
+    --ink-06: rgba(12, 12, 12, 0.06);
+    --signal-06: rgba(232, 81, 45, 0.06);
+    --font-display: 'Newsreader', Georgia, serif;
+    --font-body: 'DM Sans', -apple-system, sans-serif;
+    --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    background: var(--paper); color: var(--ink);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+  }
+  .container { max-width: 780px; margin: 0 auto; padding: 0 36px 90px 36px; }
+
+  .header {
+    display: flex; justify-content: space-between; align-items: baseline;
+    padding: 24px 0 16px 0; border-bottom: 1px solid var(--ink-12); margin-bottom: 36px;
+  }
+  .wordmark { font-family: var(--font-display); font-weight: 500; font-size: 22px; }
+  .header-meta {
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.04em;
+    text-transform: uppercase; color: var(--ink-60); text-align: right; line-height: 1.5;
+  }
+
+  h1 { font-family: var(--font-display); font-weight: 500; font-size: 38px; line-height: 1.1; margin: 0 0 16px 0; }
+  .lede { font-size: 16px; line-height: 1.6; color: var(--ink-80); margin: 0 0 10px 0; max-width: 64ch; }
+
+  .note {
+    background: var(--signal-06); border-left: 2px solid var(--signal);
+    padding: 20px 24px; margin: 32px 0 0 0;
+  }
+  .note p { font-size: 15px; line-height: 1.65; margin: 0 0 12px 0; max-width: 62ch; }
+  .note p:last-child { margin-bottom: 0; }
+
+  .section { margin-top: 54px; padding-top: 30px; border-top: 1px solid var(--ink-12); }
+  .kicker {
+    font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.08em;
+    text-transform: uppercase; color: var(--signal); margin: 0 0 10px 0;
+  }
+  h2 { font-family: var(--font-display); font-weight: 500; font-size: 27px; line-height: 1.2; margin: 0 0 12px 0; }
+  h3 { font-family: var(--font-display); font-weight: 500; font-size: 19px; line-height: 1.3; margin: 32px 0 10px 0; }
+  p { font-size: 15px; line-height: 1.65; color: var(--ink); margin: 0 0 14px 0; max-width: 64ch; }
+  a { color: var(--signal); text-decoration: none; border-bottom: 1px solid rgba(232,81,45,0.35); }
+  a:hover { border-bottom-color: var(--signal); }
+
+  .artifact {
+    background: #FFFFFF; border: 1px solid var(--ink-12); border-radius: 2px;
+    padding: 0; margin: 22px 0; overflow: hidden;
+  }
+  .artifact-label {
+    font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--ink-60); background: var(--ink-06); padding: 9px 18px; border-bottom: 1px solid var(--ink-12);
+  }
+  .artifact-body { padding: 20px 22px; }
+  .artifact-body p { font-size: 14.5px; max-width: none; }
+  .artifact-body p:last-child { margin-bottom: 0; }
+
+  .item { padding: 14px 0; border-top: 1px dashed var(--ink-12); }
+  .item:first-child { border-top: none; padding-top: 0; }
+  .item-head { font-family: var(--font-mono); font-size: 11.5px; color: var(--ink-60); margin-bottom: 5px; letter-spacing: 0.02em; }
+  .item-title { font-weight: 600; font-size: 14.5px; margin-bottom: 5px; }
+  .item-body { font-size: 14px; line-height: 1.55; color: var(--ink-80); margin-bottom: 6px; }
+  .item-src { font-family: var(--font-mono); font-size: 11px; }
+
+  .timeline { margin: 26px 0 0 0; }
+  .beat { display: grid; grid-template-columns: 116px 1fr; gap: 20px; padding: 20px 0; border-top: 1px solid var(--ink-12); }
+  .beat:last-child { border-bottom: 1px solid var(--ink-12); }
+  .beat-date { font-family: var(--font-mono); font-size: 11.5px; color: var(--signal); letter-spacing: 0.03em; line-height: 1.5; padding-top: 3px; }
+  .beat-date span { display: block; color: var(--ink-40); text-transform: uppercase; font-size: 10px; margin-top: 4px; }
+  .beat-body p { font-size: 14.5px; margin-bottom: 9px; }
+  .beat-body p:last-child { margin-bottom: 0; }
+  blockquote {
+    margin: 0 0 10px 0; padding: 10px 0 10px 16px; border-left: 2px solid var(--ink-12);
+    font-family: var(--font-display); font-size: 15px; line-height: 1.55; color: var(--ink-80); font-style: italic;
+  }
+  .src { font-family: var(--font-mono); font-size: 11px; color: var(--ink-60); }
+
+  .callout {
+    border: 1px solid var(--signal); background: var(--signal-06);
+    padding: 20px 24px; margin: 26px 0;
+  }
+  .callout p { margin-bottom: 10px; }
+  .callout p:last-child { margin-bottom: 0; }
+
+  ul.plain { list-style: none; padding: 0; margin: 6px 0 16px 0; display: grid; gap: 11px; }
+  ul.plain li { font-size: 15px; line-height: 1.55; padding-left: 18px; position: relative; max-width: 64ch; }
+  ul.plain li::before { content: ""; position: absolute; left: 0; top: 8px; width: 6px; height: 6px; background: var(--signal); border-radius: 1px; }
+
+  .footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--ink-12); }
+  .footer p { font-size: 13.5px; color: var(--ink-60); }
+
+  @media (max-width: 620px) {
+    .container { padding: 0 20px 60px 20px; }
+    h1 { font-size: 30px; }
+    .beat { grid-template-columns: 1fr; gap: 6px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <div class="wordmark">municip&alpha;l alpha</div>
+    <div class="header-meta">Built for Black By God<br>via John Davidow &middot; August 21, 2026</div>
+  </div>
+
+  <h1>Morgantown, the week six boards met and one had a reporter in the room</h1>
+  <p class="lede">Black By God's folk reporter covered the August 11 Morgantown City Council meeting. Five other city boards met the same week, and the council packet carried the minutes of the meeting before. This is what was in the record that nobody had to attend to read, every line linked to the document it came from.</p>
+
+  <div class="note">
+    <p>John, this is the Black By God version of the page I sent you on August 11. I picked Morgantown because the Civics page already runs "What You Missed at Morgantown City Council," so the test is simple: does the record hold anything the person in the room did not get. Nothing here has been sent to the newsroom.</p>
+    <p>Part one is the week. Part two follows one subject, Flock cameras, from a Morgantown council remark in July to the public record in four Kentucky cities. Part three is what we could not read, which for this audience is the part that matters.</p>
+  </div>
+
+  <!-- ============ PART ONE ============ -->
+  <div class="section">
+    <p class="kicker">Part one &middot; the week</p>
+    <h2>Morgantown, August 11 to 20, 2026</h2>
+    <p>Agendas record what a body scheduled, not what it decided. Where a line below comes from an agenda it says so, and the verb is "scheduled" or "on the agenda," not "approved." Where it comes from minutes, the vote is quoted.</p>
+
+    <div class="artifact">
+      <div class="artifact-label">This week's items &middot; each with its source document</div>
+      <div class="artifact-body">
+
+        <div class="item">
+          <div class="item-head">Civilian Police Review and Advisory Board &middot; agenda &middot; 2026-08-13</div>
+          <div class="item-title">Bodycam policy revisions, and an executive session about an executive session</div>
+          <div class="item-body">Old business on the August 13 agenda: "Discussion of Revisions to MPD Bodycam Policy" and "Aligning Officer Elections with Fiscal, rather than Calendar Year." The executive-session item reads, in full: "Discussion of August 12 working meeting with City Council representatives, which itself was held in Executive Session." The board's June 11 minutes, in the same record, note that its survey work stalled because "we requested $9,000 and only received $1,000," and list "our inability to reach a working relationship with the FoP" as a challenge for the annual report.</div>
+          <div class="item-src"><a href="https://www.morgantownwv.gov/AgendaCenter/ViewFile/Agenda/_08132026-3836">open the August 13 agenda &#8594;</a> &middot; <a href="https://www.morgantownwv.gov/AgendaCenter/ViewFile/Minutes/_06112026-3787">open the June 11 minutes &#8594;</a></div>
+        </div>
+
+        <div class="item">
+          <div class="item-head">Ward Boundary Commission &middot; agenda &middot; 2026-08-17</div>
+          <div class="item-title">Adjusted ward maps, after two public input sessions</div>
+          <div class="item-body">Unfinished business on the August 17 agenda: "Review and Discuss Public Input" and "Review and Discuss Adjusted Ward Maps." The council minutes of July 21 record the mayor announcing the two input sessions, one at Wiles Hill Community Center and one at the library. Who ends up in which ward is a civics story that is decided in rooms like this one, with a new-meeting date as the only item of new business.</div>
+          <div class="item-src"><a href="https://www.morgantownwv.gov/AgendaCenter/ViewFile/Agenda/_08172026-3845">open the agenda &#8594;</a></div>
+        </div>
+
+        <div class="item">
+          <div class="item-head">Morgantown Utility Board &middot; special meeting agenda &middot; 2026-08-13</div>
+          <div class="item-title">"Agreement Negotiations," then a closed session</div>
+          <div class="item-body">A special meeting at 10 a.m. on a weekday with two items of business: "New Business: Agreement Negotiations" and an executive session under W.Va. Code 6-9A-4(b)(12). The agenda was posted twice, once for Tuesday and once corrected to Thursday. The record does not say what agreement. It does say the board called a special meeting for it.</div>
+          <div class="item-src"><a href="https://www.morgantownwv.gov/AgendaCenter/ViewFile/Agenda/_08132026-3844">open the corrected agenda &#8594;</a></div>
+        </div>
+
+        <div class="item">
+          <div class="item-head">Board of Zoning Appeals &middot; agenda &middot; 2026-08-19</div>
+          <div class="item-title">Three cases, and a letter about the board read into the council record</div>
+          <div class="item-body">On the August 19 agenda: a Class 2 home-occupation conditional use at 645 E Brockway Ave and two setback variances, at 464 W Virginia Ave and 1043 Ridgeway Ave. The context is in the council minutes of July 21, where Councilor Selin read a letter from the board president of Abundant Life Recovery Housing Network about his experience at a BZA meeting, describing a plan to house 33 people in recovery and objections from St. John's Catholic Church and West Virginia University, and Councilor Butcher "criticized the conduct of the Board of Zoning Appeals."</div>
+          <div class="item-src"><a href="https://www.morgantownwv.gov/AgendaCenter/ViewFile/Agenda/_08192026-3846">open the agenda &#8594;</a> &middot; <a href="https://www.morgantownwv.gov/AgendaCenter/ViewFile/Agenda/_08112026-3842">open the council packet with the July 21 minutes &#8594;</a></div>
+        </div>
+
+        <div class="item">
+          <div class="item-head">Human Rights Commission &middot; agenda &middot; 2026-08-20</div>
+          <div class="item-title">"Brian Leaving Council," two vacancies, and a vacant police liaison seat</div>
+          <div class="item-body">Under communications on the August 20 agenda: "Brian Leaving Council." Brian Butcher is listed on the same agenda as the commission's City Council liaison. The commission shows two vacancies, the MPD LGBTQ+ liaison seat is marked vacant, and the 2025 annual report is listed as "given extended time due to change of Commission Chair."</div>
+          <div class="item-src"><a href="https://www.morgantownwv.gov/AgendaCenter/ViewFile/Agenda/_08202026-3847">open the agenda &#8594;</a></div>
+        </div>
+
+        <div class="item">
+          <div class="item-head">BOPARC &middot; amended agenda &middot; 2026-08-12</div>
+          <div class="item-title">Heritage Park lease renewal with the DOH</div>
+          <div class="item-body">One item of new business: "Renewal of the Heritage park/South University lease with the DOH," alongside an election of officers.</div>
+          <div class="item-src"><a href="https://www.morgantownwv.gov/AgendaCenter/ViewFile/Agenda/_08122026-3840">open the agenda &#8594;</a></div>
+        </div>
+
+        <div class="item">
+          <div class="item-head">City Council &middot; amended agenda and packet &middot; 2026-08-11</div>
+          <div class="item-title">The meeting Black By God attended, and the minutes it carried</div>
+          <div class="item-body">The folk reporter's column has this meeting. What the packet adds is the minutes of July 21. That night the council held a public hearing on an ordinance authorizing eminent domain proceedings "as needed for acquisition of property in the Greenmont neighborhood." The minutes record: "There being no appearances, Mayor Trumble declared the Public Hearing closed." The ordinance then passed its second reading, "Motion carried 7-0." The same minutes carry the first reading of the charter amendment moving city elections to the May primary date, also 7-0, which came back for its second reading on August 11.</div>
+          <div class="item-src"><a href="https://www.morgantownwv.gov/AgendaCenter/ViewFile/Agenda/_08112026-3839">open the agenda &#8594;</a> &middot; <a href="https://www.morgantownwv.gov/AgendaCenter/ViewFile/Agenda/_08112026-3842">open the packet &#8594;</a> &middot; <a href="https://blackbygod.org/articles/folk-reporters/morgantown_city_council_august_11/">Black By God's column &#8594;</a></div>
+        </div>
+
+      </div>
+    </div>
+
+    <p>Six bodies, eleven days, one reporter. The council meeting was covered. An eminent-domain hearing with nobody in the room, a police review board meeting in private about a meeting held in private, and a redistricting commission finishing its maps were not, and none of them required being there to read.</p>
+  </div>
+
+  <!-- ============ PART TWO ============ -->
+  <div class="section">
+    <p class="kicker">Part two &middot; one subject, read across towns</p>
+    <h2>Flock cameras, from a council remark in Morgantown to four Kentucky cities</h2>
+    <p>Black By God's Civics page leads with Huntington's Flock surveillance contract. The same subject is in the Morgantown record, and it is in the public record of four Kentucky cities this spring, each at a different stage. Read together, they show what a city says when residents ask, what it budgets, and what it says once the cameras are up.</p>
+
+    <div class="timeline">
+
+      <div class="beat">
+        <div class="beat-date">May 11, 2026<span>Newport, KY &middot; commission minutes</span></div>
+        <div class="beat-body">
+          <p>The commission voted 5-0 to take public comment on a police technology presentation. The minutes record the city manager's answer to residents before the demonstration.</p>
+          <blockquote>City Manager Hayden addressed public concerns regarding the proposed Flock Camera system. He explained that the cameras capture only license plate information, do not use facial recognition, and will not be used for traffic enforcement. He stated that the system has been tested through a free pilot program, all searches are audited, and the City will not share data with federal immigration authorities unless required by court order.</blockquote>
+          <p>Then a resident, Max Long, asked whether police would need a plate number to use it. The chief said no: "the system can identify and search for vehicles using characteristics such as make, model, color, and other distinguishing features. The cameras create a 'fingerprint' of each vehicle."</p>
+          <p class="src">City of Newport &middot; Board of Commissioners minutes &middot; <a href="https://newportky.gov/AgendaCenter/ViewFile/Minutes/_05112026-278">open the minutes &#8594;</a></p>
+        </div>
+      </div>
+
+      <div class="beat">
+        <div class="beat-date">May 12, 2026<span>Henderson, KY &middot; work session budget</span></div>
+        <div class="beat-body">
+          <p>A line in the police department's contractual services budget for the coming year, next to the body camera and Taser contracts.</p>
+          <blockquote>Flock Camera Systems ($2,500 X 15), ($3,000 X 7) 58,500</blockquote>
+          <p>Twenty-two cameras at two price points. The number is in a budget work-session packet, which is where it appears before it appears anywhere else.</p>
+          <p class="src">City of Henderson &middot; Board of Commissioners called work session agenda &middot; <a href="https://hendersonky.gov/ArchiveCenter/ViewFile/Item/3397">open the packet &#8594;</a></p>
+        </div>
+      </div>
+
+      <div class="beat">
+        <div class="beat-date">May 28, 2026<span>Dayton, KY &middot; general fund check detail</span></div>
+        <div class="beat-body">
+          <p>The payment is in the check register the council receives.</p>
+          <blockquote>Accounts Payable 128222 05/28/2026 12270 Flock Safety (Flock Group Inc) -6,000.00</blockquote>
+          <p class="src">City of Dayton &middot; General Fund Check Detail Report, June 2026 council packet &middot; <a href="https://daytonky.com/wp-content/uploads/2026/06/Gen-Fund-Check-Detail-Report.pdf">open the report &#8594;</a></p>
+        </div>
+      </div>
+
+      <div class="beat">
+        <div class="beat-date">Jun 11, 2026<span>Bellevue, KY &middot; council minutes (May meeting)</span></div>
+        <div class="beat-body">
+          <p>After installation, the police report to council is one sentence.</p>
+          <blockquote>All but 2 flock cameras are up &ndash; already solved one crime at One Stop Liquor.</blockquote>
+          <p>Flock cameras were already on Bellevue's list: a council priorities session recorded in the March 6 packet names them among the topics discussed for 2026, alongside short-term rental regulations and grant funding.</p>
+          <p class="src">City of Bellevue &middot; council minutes &middot; <a href="https://bellevueky.org/wp-content/uploads/2026/06/2.-May-Minutes.pdf">open the minutes &#8594;</a></p>
+        </div>
+      </div>
+
+      <div class="beat">
+        <div class="beat-date">Jul 21, 2026<span>Morgantown, WV &middot; council minutes</span></div>
+        <div class="beat-body">
+          <p>In the report from council members, as recorded in the minutes carried in the August 11 packet:</p>
+          <blockquote>Councilor Butcher: addressed two main issues: the concern over flock cameras, a significant issue in the state and county, and the need for enhanced connectivity, which will be discussed at the next meeting on July 28th.</blockquote>
+          <p>That is a sitting councilor, on the record, calling Flock cameras a significant issue in the state and the county, the day before Black By God's Huntington piece ran on July 22. The July 28 workshop minutes are in the same packet.</p>
+          <p class="src">City of Morgantown &middot; Regular Meeting minutes, July 21, 2026 &middot; <a href="https://www.morgantownwv.gov/AgendaCenter/ViewFile/Agenda/_08112026-3842">open the packet &#8594;</a> &middot; <a href="https://blackbygod.org/articles/civics/huntington-wv-flock-safety-surveillance-contract/">Black By God on Huntington &#8594;</a></p>
+        </div>
+      </div>
+
+    </div>
+
+    <p>Four stages of the same purchase in four cities: what a city promises when asked, what it budgets, what it pays, and what it says once the cameras are up. None of these towns are in Black By God's coverage area, and that is the point. A city about to vote on Flock has a record to be measured against, and it is sitting in other cities' minutes.</p>
+  </div>
+
+  <!-- ============ PART THREE ============ -->
+  <div class="section">
+    <p class="kicker">Part three &middot; what we did not see</p>
+    <h2>What it refuses to do, and where the record is thin</h2>
+    <p>It does not infer. If a document says a hearing is scheduled, the brief says scheduled. It does not say a vote happened unless minutes record the vote. It does not quote a document it could not read. And it does not claim a town is quiet when the truth is that we could not reach the town's server.</p>
+
+    <div class="artifact">
+      <div class="artifact-label">Coverage, as of August 21, 2026 &middot; the part that can go red</div>
+      <div class="artifact-body">
+        <div class="item">
+          <div class="item-head">Morgantown &middot; 620 documents held &middot; latest meeting 2026-08-20</div>
+          <div class="item-body">The city's server refuses requests from datacenter addresses, so its August agendas arrived as corrupted downloads. Fourteen of eighteen were recovered today over a residential connection; four are scanned images awaiting OCR. Everything quoted above was read in full after recovery. This is a known class of failure with a standing fix, not a gap in what the city publishes.</div>
+        </div>
+        <div class="item">
+          <div class="item-head">Charleston &middot; 24 documents held &middot; newest meeting 2024-12-01</div>
+          <div class="item-body">Our Charleston configuration pointed at the wrong platform and had been returning nothing current since December 2024. The city council runs on CivicClerk; the configuration was corrected today and a backfill is queued. Until it lands, nothing on this page speaks for Charleston, and "Charleston City Council advances bill for West Side rezoning" is a story the record would have carried and we did not.</div>
+        </div>
+        <div class="item">
+          <div class="item-head">Huntington &middot; 3 documents held</div>
+          <div class="item-body">Not readable. The Flock contract story is Black By God's, and we could not have surfaced it. Named here so the Flock thread above is read for what it is: other cities' records, not Huntington's.</div>
+        </div>
+        <div class="item">
+          <div class="item-head">Kanawha County &middot; onboarded today</div>
+          <div class="item-body">The county commission posts its meeting PDFs in a form we can read directly. First crawl queued; no documents held yet.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="note">
+    <p>John, the honest read: Morgantown works today, Charleston will work next week, Huntington needs a different approach. If Black By God's editors want this, the version they get is a Monday email, one town per section, with the coverage footer above on every issue so they always know which towns we are actually reading.</p>
+  </div>
+
+  <div class="footer">
+    <p>Municipal Alpha reads what cities and towns publish, every weekday, and routes it to the people who need it early. Built and run by Matt MacDonald in Portland, Maine. Every claim on this page links to the public document it came from; documents were retrieved and read in full on August 21, 2026. Dates are the meeting dates printed on the documents.</p>
+    <p>matt@municipalalpha.com &middot; <a href="https://municipalalpha.com">municipalalpha.com</a></p>
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Municipal Alpha, built for the Appalachia + Mid-South Newsroom</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,500&family=DM+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+  :root {
+    --ink: #0C0C0C;
+    --paper: #F7F4F0;
+    --signal: #E8512D;
+    --edge: #1B4332;
+    --ink-80: rgba(12, 12, 12, 0.80);
+    --ink-60: rgba(12, 12, 12, 0.60);
+    --ink-40: rgba(12, 12, 12, 0.40);
+    --ink-12: rgba(12, 12, 12, 0.12);
+    --ink-06: rgba(12, 12, 12, 0.06);
+    --signal-06: rgba(232, 81, 45, 0.06);
+    --font-display: 'Newsreader', Georgia, serif;
+    --font-body: 'DM Sans', -apple-system, sans-serif;
+    --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    background: var(--paper); color: var(--ink);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+  }
+  .container { max-width: 780px; margin: 0 auto; padding: 0 36px 90px 36px; }
+
+  .header {
+    display: flex; justify-content: space-between; align-items: baseline;
+    padding: 24px 0 16px 0; border-bottom: 1px solid var(--ink-12); margin-bottom: 36px;
+  }
+  .wordmark { font-family: var(--font-display); font-weight: 500; font-size: 22px; }
+  .header-meta {
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.04em;
+    text-transform: uppercase; color: var(--ink-60); text-align: right; line-height: 1.5;
+  }
+
+  h1 { font-family: var(--font-display); font-weight: 500; font-size: 38px; line-height: 1.1; margin: 0 0 16px 0; }
+  .lede { font-size: 16px; line-height: 1.6; color: var(--ink-80); margin: 0 0 10px 0; max-width: 64ch; }
+
+  .note {
+    background: var(--signal-06); border-left: 2px solid var(--signal);
+    padding: 20px 24px; margin: 32px 0 0 0;
+  }
+  .note p { font-size: 15px; line-height: 1.65; margin: 0 0 12px 0; max-width: 62ch; }
+  .note p:last-child { margin-bottom: 0; }
+
+  .section { margin-top: 54px; padding-top: 30px; border-top: 1px solid var(--ink-12); }
+  .kicker {
+    font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.08em;
+    text-transform: uppercase; color: var(--signal); margin: 0 0 10px 0;
+  }
+  h2 { font-family: var(--font-display); font-weight: 500; font-size: 27px; line-height: 1.2; margin: 0 0 12px 0; }
+  h3 { font-family: var(--font-display); font-weight: 500; font-size: 19px; line-height: 1.3; margin: 32px 0 10px 0; }
+  p { font-size: 15px; line-height: 1.65; color: var(--ink); margin: 0 0 14px 0; max-width: 64ch; }
+  a { color: var(--signal); text-decoration: none; border-bottom: 1px solid rgba(232,81,45,0.35); }
+  a:hover { border-bottom-color: var(--signal); }
+
+  .artifact {
+    background: #FFFFFF; border: 1px solid var(--ink-12); border-radius: 2px;
+    padding: 0; margin: 22px 0; overflow: hidden;
+  }
+  .artifact-label {
+    font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--ink-60); background: var(--ink-06); padding: 9px 18px; border-bottom: 1px solid var(--ink-12);
+  }
+  .artifact-body { padding: 20px 22px; }
+  .artifact-body p { font-size: 14.5px; max-width: none; }
+  .artifact-body p:last-child { margin-bottom: 0; }
+
+  .item { padding: 14px 0; border-top: 1px dashed var(--ink-12); }
+  .item:first-child { border-top: none; padding-top: 0; }
+  .item-head { font-family: var(--font-mono); font-size: 11.5px; color: var(--ink-60); margin-bottom: 5px; letter-spacing: 0.02em; }
+  .item-title { font-weight: 600; font-size: 14.5px; margin-bottom: 5px; }
+  .item-body { font-size: 14px; line-height: 1.55; color: var(--ink-80); margin-bottom: 6px; }
+  .item-src { font-family: var(--font-mono); font-size: 11px; }
+
+  .timeline { margin: 26px 0 0 0; }
+  .beat { display: grid; grid-template-columns: 116px 1fr; gap: 20px; padding: 20px 0; border-top: 1px solid var(--ink-12); }
+  .beat:last-child { border-bottom: 1px solid var(--ink-12); }
+  .beat-date { font-family: var(--font-mono); font-size: 11.5px; color: var(--signal); letter-spacing: 0.03em; line-height: 1.5; padding-top: 3px; }
+  .beat-date span { display: block; color: var(--ink-40); text-transform: uppercase; font-size: 10px; margin-top: 4px; }
+  .beat-body p { font-size: 14.5px; margin-bottom: 9px; }
+  .beat-body p:last-child { margin-bottom: 0; }
+  blockquote {
+    margin: 0 0 10px 0; padding: 10px 0 10px 16px; border-left: 2px solid var(--ink-12);
+    font-family: var(--font-display); font-size: 15px; line-height: 1.55; color: var(--ink-80); font-style: italic;
+  }
+  .src { font-family: var(--font-mono); font-size: 11px; color: var(--ink-60); }
+
+  .callout {
+    border: 1px solid var(--signal); background: var(--signal-06);
+    padding: 20px 24px; margin: 26px 0;
+  }
+  .callout p { margin-bottom: 10px; }
+  .callout p:last-child { margin-bottom: 0; }
+
+  ul.plain { list-style: none; padding: 0; margin: 6px 0 16px 0; display: grid; gap: 11px; }
+  ul.plain li { font-size: 15px; line-height: 1.55; padding-left: 18px; position: relative; max-width: 64ch; }
+  ul.plain li::before { content: ""; position: absolute; left: 0; top: 8px; width: 6px; height: 6px; background: var(--signal); border-radius: 1px; }
+
+  .footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--ink-12); }
+  .footer p { font-size: 13.5px; color: var(--ink-60); }
+
+  @media (max-width: 620px) {
+    .container { padding: 0 20px 60px 20px; }
+    h1 { font-size: 30px; }
+    .beat { grid-template-columns: 1fr; gap: 6px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <div class="wordmark">municip&alpha;l alpha</div>
+    <div class="header-meta">Built for the Appalachia + Mid-South Newsroom<br>via John Davidow &middot; August 21, 2026</div>
+  </div>
+
+  <h1>Three Kentucky towns the data center story did not name</h1>
+  <p class="lede">On August 17 Kentucky Public Radio reported bipartisan outrage over hyperscale data centers, naming Mercer County, Burgin, Louisville and Oldham County. The same fight was already in the public record of three other Kentucky towns, the earliest in June. Every line below links to the document it came from.</p>
+
+  <div class="note">
+    <p>John, this is the version for the seven-station collaborative. Their beat this month is data centers, so the test is whether the municipal record adds towns, dates or documents to a story they are already reporting well. Part one is that. Part two is a second subject, Flock cameras, read the same way. Part three is what we do not hold, which across three states is a lot, and it is named rather than hidden.</p>
+  </div>
+
+  <!-- ============ PART ONE ============ -->
+  <div class="section">
+    <p class="kicker">Part one &middot; one subject, read across towns</p>
+    <h2>Data center moratoria in Oak Grove, Georgetown and Shelbyville</h2>
+    <p>Agendas record what a body scheduled, not what it decided. Where a line comes from an agenda the verb is "scheduled" or "on the agenda." Where it comes from minutes, the record is quoted.</p>
+
+    <div class="timeline">
+
+      <div class="beat">
+        <div class="beat-date">Jun 2, 2026<span>Oak Grove, KY &middot; council minutes</span></div>
+        <div class="beat-body">
+          <p>Under old business, in a discussion about RV parks, the record turns to data centers and to the neighboring city.</p>
+          <blockquote>Council Member Edward Cook also stated that the City of Hopkinsville is developing language regarding AI data centers and will share that information with Oak Grove for consideration in determining how the city wishes to proceed.</blockquote>
+          <p>Two days later the committee of the whole took it up again: "Committee Member Isaiah Spencer inquired about AI data centers. Committee Members Leavell and Cook reported that the City of Hopkinsville is currently developing language related to this topic. The committee will review the proposed language once Tom Britton with CDS completes the draft."</p>
+          <p class="src">City of Oak Grove &middot; Regular City Council minutes, June 2 &middot; <a href="https://oakgroveky.org/wp-content/uploads/2026/06/06.02.26-Regular-City-Council-Minutes.pdf">open the minutes &#8594;</a> &middot; Committee of the Whole minutes, June 4 &middot; <a href="https://oakgroveky.org/wp-content/uploads/2026/06/06.04.26-Regular-C.O.W.-Meeting-Minutes.pdf">open the minutes &#8594;</a></p>
+        </div>
+      </div>
+
+      <div class="beat">
+        <div class="beat-date">Jun 22, 2026<span>Georgetown, KY &middot; council agenda</span></div>
+        <div class="beat-body">
+          <p>The last item of council discussion on the June 22 agenda:</p>
+          <blockquote>New Business &ndash; Discussion &ndash; Data Center Moratorium</blockquote>
+          <p>An agenda line, nothing more, and that is what it is presented as. It puts the word "moratorium" in Georgetown's record eight weeks before the August 17 story.</p>
+          <p class="src">City of Georgetown &middot; City Council agenda, June 22 &middot; <a href="https://www.georgetownky.gov/AgendaCenter/ViewFile/Agenda/_06222026-377">open the agenda &#8594;</a></p>
+        </div>
+      </div>
+
+      <div class="beat">
+        <div class="beat-date">Jul 16, 2026<span>Shelbyville, KY &middot; council minutes</span></div>
+        <div class="beat-body">
+          <p>The council reaches a consensus and sets a date.</p>
+          <blockquote>There was a discussion on Data Centers between council and the mayor. A workshop will be in place to discuss further activities. It was a consensus of the council members to recommend that a moratorium on future data centers be established for the City of Shelbyville with a first reading to be placed on the agenda at the council meeting on August 6, 2026.</blockquote>
+          <p>Then, under public comments: "Denise Vandevelde is concerned that a gas pipeline going through her yard and the pipeline will be given to data centers." A named resident, a pipeline, a data center, in the minutes, a month before the story.</p>
+          <p class="src">City of Shelbyville &middot; Council meeting minutes, July 16 &middot; <a href="https://www.shelbyvillekentucky.com/AgendaCenter/ViewFile/Minutes/_07162026-309">open the minutes &#8594;</a></p>
+        </div>
+      </div>
+
+      <div class="beat">
+        <div class="beat-date">Aug 6, 2026<span>Shelbyville, KY &middot; council agenda</span></div>
+        <div class="beat-body">
+          <p>The first reading is on the agenda as promised, with an ordinance number.</p>
+          <blockquote>Ordinance No. 2026-08-20(A)/An Ordinance Establishing a Temporary Moratorium on the Acceptance, Processing, Review, and Approval of Applications for Data Centers and Similar Large-Scale Information Technology Infrastructure Within the City's Jurisdictional Boundaries, 1st Reading &ndash; Steven Gregory, City Attorney</blockquote>
+          <p class="src">City of Shelbyville &middot; Council meeting agenda, August 6 &middot; <a href="https://www.shelbyvillekentucky.com/AgendaCenter/ViewFile/Agenda/_08062026-310">open the agenda &#8594;</a></p>
+        </div>
+      </div>
+
+      <div class="beat">
+        <div class="beat-date">Aug 20, 2026<span>Shelbyville, KY &middot; council agenda</span></div>
+        <div class="beat-body">
+          <p>The same ordinance is on the August 20 agenda for second reading. We hold the agenda, not the minutes, so whether it passed is not something this page can say. It can say when the vote was scheduled, three days after the story ran.</p>
+          <p class="src">City of Shelbyville &middot; Council meeting agenda, August 20 &middot; <a href="https://www.shelbyvillekentucky.com/AgendaCenter/ViewFile/Agenda/_08202026-312">open the agenda &#8594;</a> &middot; <a href="https://www.lpm.org/news/2026-08-17/hyperscale-data-centers-provoke-bipartisan-outrage-across-kentucky">the August 17 story &#8594;</a></p>
+        </div>
+      </div>
+
+    </div>
+
+    <p>Three towns, none of them in the story, on the record between 32 and 76 days before it ran. Shelbyville is a five-week arc with a resident's name and a pipeline in it. Oak Grove's minutes point at a fourth town, Hopkinsville, drafting the language. None of this is a correction of the reporting. It is the next three phone calls.</p>
+  </div>
+
+  <!-- ============ PART TWO ============ -->
+  <div class="section">
+    <p class="kicker">Part two &middot; a second subject, same method</p>
+    <h2>Flock cameras in four Kentucky cities, at four stages</h2>
+    <p>What a city says when residents ask, what it budgets, what it pays, and what it reports once the cameras are up.</p>
+
+    <div class="artifact">
+      <div class="artifact-label">Four documents &middot; each with its source</div>
+      <div class="artifact-body">
+        <div class="item">
+          <div class="item-head">Newport &middot; commission minutes &middot; 2026-05-11</div>
+          <div class="item-body">"City Manager Hayden addressed public concerns regarding the proposed Flock Camera system. He explained that the cameras capture only license plate information, do not use facial recognition, and will not be used for traffic enforcement. He stated that the system has been tested through a free pilot program, all searches are audited, and the City will not share data with federal immigration authorities unless required by court order." A resident, Max Long, then asked whether police need a plate number to search. The chief: "a license plate number is not required. ... The cameras create a 'fingerprint' of each vehicle."</div>
+          <div class="item-src"><a href="https://newportky.gov/AgendaCenter/ViewFile/Minutes/_05112026-278">open the minutes &#8594;</a></div>
+        </div>
+        <div class="item">
+          <div class="item-head">Henderson &middot; budget work session packet &middot; 2026-05-12</div>
+          <div class="item-body">Police contractual services, next to body cameras and Tasers: "Flock Camera Systems ($2,500 X 15), ($3,000 X 7) 58,500." Twenty-two cameras at two price points.</div>
+          <div class="item-src"><a href="https://hendersonky.gov/ArchiveCenter/ViewFile/Item/3397">open the packet &#8594;</a></div>
+        </div>
+        <div class="item">
+          <div class="item-head">Dayton &middot; general fund check detail &middot; 2026-05-28</div>
+          <div class="item-body">"Accounts Payable 128222 05/28/2026 12270 Flock Safety (Flock Group Inc) -6,000.00."</div>
+          <div class="item-src"><a href="https://daytonky.com/wp-content/uploads/2026/06/Gen-Fund-Check-Detail-Report.pdf">open the report &#8594;</a></div>
+        </div>
+        <div class="item">
+          <div class="item-head">Bellevue &middot; council minutes (May meeting) &middot; 2026-06-11</div>
+          <div class="item-body">The police report to council, after installation: "All but 2 flock cameras are up &ndash; already solved one crime at One Stop Liquor." Flock cameras were already on Bellevue's list in a council priorities session recorded in the March 6 packet.</div>
+          <div class="item-src"><a href="https://bellevueky.org/wp-content/uploads/2026/06/2.-May-Minutes.pdf">open the minutes &#8594;</a></div>
+        </div>
+      </div>
+    </div>
+
+    <p>Across the state line, the Morgantown, WV council minutes of July 21 record Councilor Brian Butcher raising "the concern over flock cameras, a significant issue in the state and county." Huntington's $2.1M Flock contract was reported by Black By God the next day. A newsroom covering three states can see the purchase arriving city by city, because each city writes it down.</p>
+  </div>
+
+  <!-- ============ PART THREE ============ -->
+  <div class="section">
+    <p class="kicker">Part three &middot; what we did not see</p>
+    <h2>What it refuses to do, and where the record is thin</h2>
+    <p>It does not infer. If a document says a reading is scheduled, the page says scheduled. It does not say a moratorium passed unless minutes record the vote. It does not quote a document it could not read. And a town that is absent here is absent because we do not read it yet, not because it was quiet.</p>
+
+    <div class="artifact">
+      <div class="artifact-label">Coverage, as of August 21, 2026 &middot; the part that can go red</div>
+      <div class="artifact-body">
+        <div class="item">
+          <div class="item-head">Kentucky &middot; 92 municipalities with documents &middot; 879 meetings in the last 90 days</div>
+          <div class="item-body">Dense in northern Kentucky and the Louisville suburbs, thin elsewhere. We do not hold Mercer County, Burgin or Oldham County, the places the August 17 story names, and Louisville Metro is three documents. Lexington was configured today; first crawl queued.</div>
+        </div>
+        <div class="item">
+          <div class="item-head">West Virginia &middot; 42 municipalities &middot; 300 meetings in the last 90 days</div>
+          <div class="item-body">Morgantown is readable as of today after a recovery pass. Charleston's configuration had been dead since December 2024 and was corrected today; backfill queued. Huntington is three documents. Kanawha and Pocahontas counties were configured today.</div>
+        </div>
+        <div class="item">
+          <div class="item-head">Tennessee &middot; 22 municipalities &middot; 48 meetings in the last 90 days</div>
+          <div class="item-body">Murfreesboro and Bartlett carry almost all of it. Nashville is five documents, Knoxville none. For WPLN and WUOT this page has nothing to offer yet, and it says so.</div>
+        </div>
+        <div class="item">
+          <div class="item-head">Two documents were recovered today to make Part one complete</div>
+          <div class="item-body">Shelbyville's July 16 minutes and August 20 agenda had arrived as corrupted downloads because the city's server refuses datacenter traffic. Both were re-fetched over a residential connection and read in full. A fifth Kentucky Flock document, Berea's April 21 minutes, was dropped from Part two because the city's link no longer resolves.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="note">
+    <p>John, the honest read for this one: Kentucky is usable now, West Virginia is a week out, Tennessee is not there. If the collaborative wanted this, the shape would be one statewide email per week per state, subject-led the way Part one is, with the coverage table on every issue so an editor in Nashville is never shown a quiet Tennessee and told it is news.</p>
+  </div>
+
+  <div class="footer">
+    <p>Municipal Alpha reads what cities and towns publish, every weekday, and routes it to the people who need it early. Built and run by Matt MacDonald in Portland, Maine. Every claim on this page links to the public document it came from; documents were retrieved and read in full on August 21, 2026. Dates are the meeting dates printed on the documents.</p>
+    <p>matt@municipalalpha.com &middot; <a href="https://municipalalpha.com">municipalalpha.com</a></p>
+  </div>
+
+</div>
+</body>
+</html>
