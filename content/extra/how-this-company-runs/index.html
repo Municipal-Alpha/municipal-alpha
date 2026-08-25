@@ -255,7 +255,6 @@ body{margin:0}
   [data-mode="crunch"] ul.beats ul,
   [data-mode="point"] ul.beats ul { display:none; }
 
-  [data-mode="point"] .say,
 
   /* the commercial read is the verdict on each lane, so it survives every mode.
      without this it is caught by the rule above and renders as a bare label. */
@@ -263,7 +262,6 @@ body{margin:0}
 
   /* Tier 2's lede says "here are five", so the five have to be there in every mode */
   [data-mode="point"] .tw.keeppoint { display:block; }
-  [data-mode="point"] .say.keeppoint { display:block; }
 
   /* pure stage direction: useful to me live, noise on a page I forward */
 
@@ -372,22 +370,6 @@ body{margin:0}
     border-left-color: var(--accent);
   }
 
-  .say {
-    border-left: 3px solid var(--accent);
-    background: var(--accent-soft);
-    padding: 15px 18px;
-    margin: 24px 0;
-  }
-  .say p:last-child { margin-bottom: 0; }
-  .say .k {
-    font-family: var(--f-mono);
-    font-size: 10.5px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--accent);
-    display: block;
-    margin-bottom: 7px;
-  }
 
   blockquote {
     margin: 24px 0;
