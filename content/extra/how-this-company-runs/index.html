@@ -1,0 +1,2621 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>How This Company Runs &middot; Municipal Alpha</title>
+<meta name="description" content="The prep doc for a founders' session on running Municipal Alpha with an agent system: the operating procedure, the gates, and what broke.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0}
+
+  :root {
+    --ground:        #F7F8FA;
+    --surface:       #FFFFFF;
+    --surface-sunk:  #EEF1F5;
+    --ink:           #171A1F;
+    --ink-soft:      #3B434D;
+    --muted:         #5C6570;
+    --hairline:      #DDE2E9;
+    --accent:        #2A4B7C;
+    --accent-soft:   #E6ECF5;
+    --refuse:        #B5451F;
+    --refuse-soft:   #FBECEA;
+    --refuse-line:   #E8C4BF;
+
+    --measure: 68ch;
+    --f-display: "Newsreader", Georgia, "Times New Roman", serif;
+    --f-body: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --f-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground:       #101317;
+      --surface:      #171B21;
+      --surface-sunk: #1D222A;
+      --ink:          #E8EBEF;
+      --ink-soft:     #C2C9D2;
+      --muted:        #939CA8;
+      --hairline:     #272E38;
+      --accent:       #8FB2E0;
+      --accent-soft:  #1B2635;
+      --refuse:       #FFA26B;
+      --refuse-soft:  #2A1917;
+      --refuse-line:  #4A2A26;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --ground:       #101317;
+    --surface:      #171B21;
+    --surface-sunk: #1D222A;
+    --ink:          #E8EBEF;
+    --ink-soft:     #C2C9D2;
+    --muted:        #939CA8;
+    --hairline:     #272E38;
+    --accent:       #8FB2E0;
+    --accent-soft:  #1B2635;
+    --refuse:       #FFA26B;
+    --refuse-soft:  #2A1917;
+    --refuse-line:  #4A2A26;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--ground);
+    color: var(--ink);
+    font-family: var(--f-body);
+    font-size: 16.5px;
+    line-height: 1.62;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 28px 120px;
+  }
+
+  /* ── sticky clock rail ─────────────────────────────── */
+  .rail {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: color-mix(in srgb, var(--ground) 92%, transparent);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--hairline);
+    margin-bottom: 56px;
+  }
+  .rail-inner {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 10px 28px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 6px 22px;
+    font-family: var(--f-mono);
+    font-size: 12px;
+    letter-spacing: 0.01em;
+  }
+  .rail a {
+    color: var(--muted);
+    text-decoration: none;
+    white-space: nowrap;
+    padding: 3px 0;
+    border-bottom: 1.5px solid transparent;
+  }
+  .rail a:hover, .rail a:focus-visible { color: var(--ink); border-bottom-color: var(--accent); }
+  .rail a b { color: var(--ink); font-weight: 500; font-variant-numeric: tabular-nums; }
+  .rail .rail-tag {
+    color: var(--accent);
+    font-weight: 500;
+    margin-right: 4px;
+  }
+
+  /* ── masthead ──────────────────────────────────────── */
+  header.top { padding-top: 8px; max-width: var(--measure); }
+  .eyebrow {
+    font-family: var(--f-mono);
+    font-size: 11.5px;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 20px;
+  }
+  h1 {
+    font-family: var(--f-display);
+    font-weight: 500;
+    font-size: clamp(2.1rem, 5.2vw, 3.15rem);
+    line-height: 1.1;
+    letter-spacing: -0.017em;
+    text-wrap: balance;
+    margin: 0 0 22px;
+  }
+  .standfirst {
+    font-size: 1.13rem;
+    color: var(--ink-soft);
+    margin: 0 0 30px;
+  }
+  .standfirst em { font-style: italic; color: var(--ink); }
+
+  .factbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    border-top: 1px solid var(--hairline);
+    border-bottom: 1px solid var(--hairline);
+    margin: 0 0 12px;
+  }
+  .factbar div {
+    padding: 14px 26px 14px 0;
+    margin-right: 26px;
+    border-right: 1px solid var(--hairline);
+  }
+  .factbar div:last-child { border-right: 0; margin-right: 0; padding-right: 0; }
+  .factbar dt {
+    font-family: var(--f-mono);
+    font-size: 10.5px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 4px;
+  }
+  .factbar dd {
+    margin: 0;
+    font-family: var(--f-display);
+    font-size: 1.32rem;
+    font-weight: 500;
+    font-variant-numeric: tabular-nums;
+  }
+
+
+  /* ── sections ──────────────────────────────────────── */
+  section { margin: 0 0 72px; scroll-margin-top: 62px; }
+
+  /* the running order ends at 12:40; everything after it is reference, and the
+     gap should say so rather than letting the appendix crowd the last questions */
+  #vendor, #cuts, #rails { margin-top: 140px; }
+  #vendor::before, #cuts::before, #rails::before {
+    content: ""; display: block; width: 72px; margin: 0 0 44px;
+    border-top: 1px solid var(--hairline);
+  }
+  @media (max-width: 760px) { #vendor, #cuts, #rails { margin-top: 96px; } }
+
+  .sec-head {
+    display: grid;
+    grid-template-columns: 96px 1fr;
+    gap: 24px;
+    align-items: baseline;
+    border-top: 2px solid var(--ink);
+    padding-top: 14px;
+    margin-bottom: 26px;
+  }
+  .clock {
+    font-family: var(--f-mono);
+    font-size: 12.5px;
+    font-variant-numeric: tabular-nums;
+    color: var(--accent);
+    letter-spacing: 0.02em;
+    line-height: 1.5;
+  }
+  .clock span { display: block; color: var(--muted); font-size: 11px; }
+  h2 {
+    font-family: var(--f-display);
+    font-weight: 500;
+    font-size: clamp(1.5rem, 3.1vw, 1.95rem);
+    line-height: 1.18;
+    letter-spacing: -0.012em;
+    text-wrap: balance;
+    margin: 0;
+  }
+  .sec-body { max-width: var(--measure); }
+  .sec-body.wide { max-width: 100%; }
+
+  h3 {
+    font-family: var(--f-body);
+    font-size: 0.98rem;
+    font-weight: 600;
+    letter-spacing: 0.005em;
+    margin: 38px 0 10px;
+  }
+  h3:first-child { margin-top: 0; }
+  h4 {
+    font-family: var(--f-mono);
+    font-size: 11.5px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 500;
+    margin: 34px 0 12px;
+  }
+  p { margin: 0 0 17px; }
+  strong { font-weight: 600; }
+  em { font-style: italic; }
+
+  .modebar { display:flex; align-items:center; gap:8px; margin-left:auto; }
+  .modebtn { font-family:var(--f-mono); font-size:10.5px; letter-spacing:.06em; text-transform:uppercase;
+             padding:4px 10px; border:1px solid var(--hairline); background:var(--surface);
+             color:var(--muted); cursor:pointer; border-radius:2px; }
+  .modebtn[aria-pressed="true"] { border-color:var(--refuse); color:var(--refuse); font-weight:500; }
+  #mode-time { display:none; }
+  [data-mode-full] #mode-time { display:inline-block; }
+  .modebtn:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+
+  .cuttable { position:relative; }
+  [data-mode="crunch"] .cuttable,
+  [data-mode="point"] .cuttable { display:none; }
+  [data-mode="crunch"] ul.beats ul,
+  [data-mode="point"] ul.beats ul { display:none; }
+
+  [data-mode="point"] .say,
+
+  /* the commercial read is the verdict on each lane, so it survives every mode.
+     without this it is caught by the rule above and renders as a bare label. */
+  [data-mode="point"] .sec-body > div.cread > p { display:block; }
+
+  /* Tier 2's lede says "here are five", so the five have to be there in every mode */
+  [data-mode="point"] .tw.keeppoint { display:block; }
+  [data-mode="point"] .say.keeppoint { display:block; }
+
+  /* pure stage direction: useful to me live, noise on a page I forward */
+
+  /* the pull quotes ARE the payoff of their block, not commentary on it */
+  [data-mode="point"] .sec-body > div > p.line { display:block; }
+
+  [data-mode="crunch"] .keepalways { outline:0; }
+  .qa { display:grid; grid-template-columns:196px 1fr; gap:0; margin:4px 0 26px;
+        border-top:1px solid var(--hairline); }
+  .qa > dt { grid-column:1; padding:15px 0 15px 0; border-bottom:1px solid var(--hairline);
+             font-family:var(--f-mono); font-size:11.5px; letter-spacing:.03em; line-height:1.5;
+             color:var(--accent); }
+  .qa > dd { grid-column:2; margin:0; padding:15px 0 15px 22px; border-bottom:1px solid var(--hairline); }
+  .qa > dd > p { margin:0; font-size:1.02rem; line-height:1.5; }
+  .qa > dd > p.sub { margin-top:7px; font-size:.9rem; color:var(--muted); line-height:1.5; }
+  .qa > dt.hot { color:var(--refuse); font-weight:500; }
+  [data-mode="crunch"] .qa > dd > p.sub,
+  [data-mode="point"] .qa > dd > p.sub { display:none; }
+  @media (max-width:700px) {
+    .qa { grid-template-columns:1fr; }
+    .qa > dt { padding:14px 0 2px; border-bottom:0; }
+    .qa > dd { grid-column:1; padding:0 0 14px 0; }
+  }
+  .qlabel { font-family: var(--f-mono); font-size:10.5px; letter-spacing:.08em; text-transform:uppercase;
+            color: var(--refuse); margin:0 0 5px; }
+  .sec-head > div:last-child { min-width: 0; }
+  .lede {
+    font-family: var(--f-display);
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: var(--ink-soft);
+    margin: 0 0 24px;
+  }
+
+  ul { margin: 0 0 18px; padding-left: 1.15em; }
+  li { margin-bottom: 9px; }
+  li::marker { color: var(--muted); }
+
+  code {
+    font-family: var(--f-mono);
+    font-size: 0.85em;
+    background: var(--surface-sunk);
+    padding: 1px 5px;
+    border-radius: 3px;
+  }
+
+  /* ── source chips ──────────────────────────────────── */
+  .src {
+    font-family: var(--f-mono);
+    font-size: 11px;
+    color: var(--muted);
+    background: transparent;
+    border: 1px solid var(--hairline);
+    border-radius: 2px;
+    padding: 1px 5px;
+    white-space: nowrap;
+  }
+
+  /* ── refusal blocks: the one bold spend ────────────── */
+  .demo {
+    border: 1px solid var(--hairline);
+    background: var(--surface);
+    margin: 22px 0 30px;
+  }
+  .demo-hd {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 10px;
+    padding: 11px 16px;
+    border-bottom: 1px solid var(--hairline);
+    background: var(--surface-sunk);
+  }
+  .demo-hd b {
+    font-family: var(--f-mono);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 500;
+  }
+  .demo-hd span { font-size: 0.88rem; color: var(--muted); }
+  .cmd, .out {
+    font-family: var(--f-mono);
+    font-size: 12.5px;
+    line-height: 1.62;
+    padding: 14px 16px;
+    margin: 0;
+    overflow-x: auto;
+    white-space: pre;
+  }
+  .cmd { color: var(--ink-soft); border-bottom: 1px dashed var(--hairline); }
+  .cmd::before {
+    content: "$ ";
+    color: var(--muted);
+  }
+  .out {
+    background: var(--refuse-soft);
+    color: var(--refuse);
+    border-left: 3px solid var(--refuse);
+    white-space: pre-wrap;
+  }
+  .out.plain {
+    background: var(--accent-soft);
+    color: var(--ink-soft);
+    border-left-color: var(--accent);
+  }
+
+  .say {
+    border-left: 3px solid var(--accent);
+    background: var(--accent-soft);
+    padding: 15px 18px;
+    margin: 24px 0;
+  }
+  .say p:last-child { margin-bottom: 0; }
+  .say .k {
+    font-family: var(--f-mono);
+    font-size: 10.5px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 7px;
+  }
+
+  blockquote {
+    margin: 24px 0;
+    padding: 0 0 0 20px;
+    border-left: 2px solid var(--hairline);
+    font-family: var(--f-display);
+    font-size: 1.16rem;
+    font-style: italic;
+    color: var(--ink-soft);
+  }
+
+  /* ── tables ────────────────────────────────────────── */
+  .tw { overflow-x: auto; margin: 22px 0 26px; }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 0.92rem;
+    min-width: 560px;
+  }
+  th {
+    text-align: left;
+    font-family: var(--f-mono);
+    font-size: 10.5px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 500;
+    border-bottom: 1px solid var(--ink);
+    padding: 0 18px 9px 0;
+    vertical-align: bottom;
+  }
+  td {
+    border-bottom: 1px solid var(--hairline);
+    padding: 12px 18px 12px 0;
+    vertical-align: top;
+  }
+  td:last-child, th:last-child { padding-right: 0; }
+  .num { font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+  /* ── guardrail list ────────────────────────────────── */
+  .rails { list-style: none; padding: 0; margin: 22px 0 0; }
+  .rails li {
+    display: grid;
+    grid-template-columns: 78px 1fr;
+    gap: 20px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--hairline);
+    margin: 0;
+  }
+  .rails li:first-child { border-top: 1px solid var(--hairline); }
+  .rails .no {
+    font-family: var(--f-mono);
+    font-size: 10.5px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--refuse);
+    padding-top: 3px;
+  }
+
+  footer {
+    border-top: 1px solid var(--hairline);
+    padding-top: 22px;
+    margin-top: 84px;
+    font-size: 0.85rem;
+    color: var(--muted);
+    max-width: var(--measure);
+  }
+
+  a { color: var(--accent); }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  @media (max-width: 700px) {
+    .wrap { padding: 0 16px 80px; }
+    .rail-inner { padding: 8px 16px; gap: 6px 12px; justify-content: space-between; }
+    .rail a:not(.turn) { display: none; }
+    .rail .rail-tag { font-size: 11px; }
+    .modebar { margin-left: 0; gap: 6px; }
+    .modebtn { padding: 5px 8px; font-size: 10px; }
+    h1 { font-size: 2rem; }
+    .factbar div { padding: 10px 18px 10px 0; margin-right: 18px; }
+    .demo .cmd, .demo .out { font-size: 11.5px; padding: 12px; }
+    .sec-head { grid-template-columns: 1fr; gap: 8px; border-top-width: 1.5px; }
+    .rails li { grid-template-columns: 1fr; gap: 4px; }
+    .factbar div { border-right: 0; padding-right: 0; margin-right: 22px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+  }
+
+</style>
+</head>
+<body>
+<style>
+  hr.tierrule { border:0; border-top:1px solid var(--hairline); margin:46px 0 30px; }
+  .tiernum { display:inline-block; font-family: var(--f-mono); font-size:.66rem; letter-spacing:.1em;
+             text-transform:uppercase; color: var(--accent); background: var(--accent-soft);
+             padding:.24em .6em; border-radius:2px; margin-right:.7em; vertical-align:.16em; font-weight:600; }
+  .qpair { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; align-items:stretch; margin:20px 0 0; }
+  .qpair .said { margin:0; display:flex; flex-direction:column; }
+  .qpair .said .then { margin-top:auto; }
+  @media (max-width: 900px) { .qpair { grid-template-columns:1fr; } }
+
+  details.showme { margin:20px 0 0; border:1px solid var(--hairline); background: var(--surface-sunk); }
+  details.showme > summary { cursor:pointer; padding:13px 18px; list-style:none;
+    display:flex; align-items:baseline; gap:14px; flex-wrap:wrap;
+    font-family: var(--f-mono); font-size:0.8rem; letter-spacing:.03em; color: var(--ink); }
+  details.showme > summary::-webkit-details-marker { display:none; }
+  details.showme > summary::before { content:"\25B8"; color: var(--accent); font-size:.9rem; line-height:1; }
+  details.showme[open] > summary::before { content:"\25BE"; }
+  details.showme > summary:hover { background: var(--accent-soft); }
+  details.showme > summary:focus-visible { outline:2px solid var(--accent); outline-offset:-2px; }
+  details.showme > summary .lab { font-weight:600; }
+  details.showme > summary .hint { color: var(--muted); font-family: var(--f-body); font-size:0.86rem; letter-spacing:0; }
+  details.showme[open] > summary { border-bottom:1px solid var(--hairline); }
+  .showme-bd { padding:20px 18px 4px; background: var(--ground); }
+
+  .rec { border:1px solid var(--hairline); background: var(--surface); padding:18px 20px 16px;
+         display:flex; flex-direction:column; }
+  .rec .for { font-family: var(--f-mono); font-size:10px; letter-spacing:.09em; text-transform:uppercase;
+              color: var(--accent); margin-bottom:11px; font-weight:600; }
+  .rec .where { font-size:0.95rem; font-weight:600; color: var(--ink); line-height:1.3; }
+  .rec .when { font-size:0.84rem; color: var(--muted); margin-bottom:15px; }
+  .rec blockquote { margin:0; font-family: var(--f-display); font-size:1.04rem; line-height:1.52; color: var(--ink); }
+  .rec blockquote + blockquote { margin-top:11px; }
+  .rec .src { margin-top:auto; padding-top:14px; margin-top:16px; border-top:1px solid var(--hairline);
+              font-family: var(--f-mono); font-size:0.71rem; line-height:1.55; color: var(--muted);
+              overflow-wrap:anywhere; }
+  .twoup { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; align-items:stretch; }
+  @media (max-width: 900px) { .twoup { grid-template-columns:1fr; } }
+  .princ { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; margin:24px 0 0; }
+  .princ .p { border:1px solid var(--hairline); border-top:3px solid var(--ink); background: var(--surface); padding:18px 20px; }
+  .princ .lbl { display:block; font-family: var(--f-mono); font-size:10.5px; letter-spacing:.08em;
+                text-transform:uppercase; color: var(--muted); margin-bottom:10px; }
+  .princ .st { font-family: var(--f-display); font-size:1.14rem; line-height:1.45; color: var(--ink); margin:0; }
+  .princ .sub { font-size:0.9rem; color: var(--ink-soft); margin:12px 0 0; padding-top:10px; border-top:1px solid var(--hairline); }
+  @media (max-width: 860px) { .princ { grid-template-columns:1fr; } }
+  .hd { cursor: help; }
+  .pop-bg { fill: var(--ground); }
+  ol.cmds li.lead { border-top-color: var(--refuse); }
+  ol.cmds li.lead span { color: var(--refuse); font-weight:600; }
+  .cmdfeature { border:1px solid var(--refuse-line); border-left:3px solid var(--refuse);
+                background: var(--refuse-soft); padding:20px 22px; margin:26px 0 0; }
+  .cf-head { display:flex; align-items:baseline; gap:14px; }
+  .cf-n { font-family: var(--f-mono); font-size:1.05rem; color: var(--refuse); font-weight:600; letter-spacing:.06em; }
+  .cf-t { font-family: var(--f-display); font-size:1.34rem; color: var(--ink); line-height:1.25; }
+  .cf-body { font-family: var(--f-display); font-size:1.08rem; line-height:1.55; color: var(--ink); margin:14px 0 0; max-width:var(--measure); }
+  .cf-sub { font-size:0.9rem; line-height:1.55; color: var(--ink-soft); margin:14px 0 0; padding-top:12px;
+            border-top:1px solid var(--refuse-line); max-width:var(--measure); }
+  .cf-sub b { color: var(--ink); font-weight:600; }
+  details.pdet { margin-top:12px; border-top:1px solid var(--hairline); padding-top:10px; }
+  details.pdet > summary { cursor:pointer; list-style:none; font-family: var(--f-mono);
+    font-size:0.72rem; letter-spacing:.05em; text-transform:uppercase; color: var(--accent); font-weight:600; }
+  details.pdet > summary::-webkit-details-marker { display:none; }
+  details.pdet > summary::before { content:"\25B8 "; }
+  details.pdet[open] > summary::before { content:"\25BE "; }
+  details.pdet > summary:hover { text-decoration:underline; }
+  details.pdet p { font-size:0.88rem; line-height:1.5; color: var(--ink-soft); margin:10px 0 0; }
+  details.pdet p b { color: var(--ink); font-weight:600; }
+  .hd .hd-pop { opacity:0; transition: opacity .12s ease; pointer-events:none; }
+  .hd:hover .hd-pop, .hd:focus-within .hd-pop { opacity:1; }
+  .cread { border-left:3px solid var(--accent); background: var(--accent-soft);
+           padding:16px 20px; margin:20px 0 0; }
+  .cread p { max-width:none; }
+  .cread .lbl { display:block; font-family: var(--f-mono); font-size:10.5px; letter-spacing:.08em;
+                text-transform:uppercase; color: var(--accent); margin-bottom:7px; font-weight:600; }
+  .cread p { margin:0; font-size:0.95rem; color: var(--ink-soft); line-height:1.55; }
+  .cread p strong { color: var(--ink); }
+  ol.cmds { list-style:none; padding:0; margin:16px 0 0; display:grid;
+            grid-template-columns:repeat(2,minmax(0,1fr)); gap:0 40px; }
+  ol.cmds li { display:grid; grid-template-columns:2.4rem 1fr; gap:.4rem; align-items:baseline;
+               padding:.46rem 0; border-top:1px solid var(--hairline); font-size:.95rem; }
+  ol.cmds li .n { font-family: var(--f-mono); font-size:.72rem; color: var(--muted); letter-spacing:.05em; }
+  @media (max-width: 760px) { ol.cmds { grid-template-columns:1fr; } }
+  ul.beats { list-style: none; padding: 0; margin: 0 0 22px; }
+  ul.beats > li { position: relative; padding: 0 0 0 22px; margin: 0 0 13px; line-height: 1.55; }
+  ul.beats > li::before { content:""; position:absolute; left:2px; top:0.62em; width:7px; height:1.5px; background: var(--accent); }
+  ul.beats > li.q::before { background: var(--refuse); height:3px; top:0.58em; }
+  ul.beats ul { list-style:none; padding:0; margin:9px 0 0 0; }
+  ul.beats ul li { position:relative; padding-left:18px; margin-bottom:6px; color: var(--ink-soft); font-size:0.95em; }
+  ul.beats ul li::before { content:""; position:absolute; left:0; top:0.66em; width:4px; height:4px; border-radius:50%; background: var(--muted); }
+
+  .line { font-family: var(--f-display); font-size:1.14rem; font-style:italic; color: var(--ink);
+          border-left:2px solid var(--accent); padding-left:16px; margin:20px 0 24px; }
+  .aside { font-size:0.9rem; color: var(--muted); border-top:1px solid var(--hairline); padding-top:12px; margin:26px 0 0; }
+
+  /* their words */
+  .said { border:1px solid var(--hairline); background: var(--surface); padding:20px 22px; margin:22px 0; }
+  .said .who { font-family: var(--f-mono); font-size:10.5px; letter-spacing:0.08em; text-transform:uppercase;
+               color: var(--muted); display:block; margin-bottom:12px; }
+  .said q, .said .q-text { font-family: var(--f-display); font-size:1.16rem; line-height:1.5; color: var(--ink); display:block; }
+  .said .then { font-size:0.93rem; color: var(--ink-soft); margin:14px 0 0; padding-top:12px; border-top:1px solid var(--hairline); }
+  .said .then b { color: var(--accent); font-weight:600; }
+
+  /* outline card */
+  .outline { border:1px solid var(--hairline); background: var(--surface); padding:22px 24px; margin:30px 0 0; }
+  .outline ol { list-style:none; counter-reset:o; padding:0; margin:0; }
+  .outline li { counter-increment:o; display:grid; grid-template-columns:58px 1fr; gap:16px;
+                padding:9px 0; border-bottom:1px solid var(--hairline); }
+  .outline li:last-child { border-bottom:0; }
+  .outline li .t { font-family: var(--f-mono); font-size:12px; color: var(--accent); font-variant-numeric:tabular-nums; padding-top:2px; }
+  .outline li .w b { font-weight:600; }
+  .outline li .w span { display:block; color: var(--muted); font-size:0.9rem; margin-top:2px; }
+
+  .rail a.turn b, .rail a.turn { color: var(--refuse); }
+  .turnrow .t { color:var(--refuse) !important; }
+  .turnrow .w b { color:var(--refuse); }
+  section.turnsec .sec-head { border-top-color:var(--refuse); }
+  section.turnsec .clock { color:var(--refuse); }
+  .seed { border:1px dashed var(--accent); background: var(--accent-soft); padding:20px 22px; margin:0 0 22px; }
+  .seed .k { font-family: var(--f-mono); font-size:10.5px; letter-spacing:0.08em; text-transform:uppercase;
+             color: var(--accent); display:block; margin-bottom:12px; }
+  .seed ol { margin:0; padding-left:1.3em; }
+  .seed ol li { font-family: var(--f-display); font-size:1.14rem; line-height:1.4; margin-bottom:11px; color: var(--ink); }
+  section.seedsec .sec-head { border-top-color: var(--accent); }
+  .ask { border:2px solid var(--refuse); background: var(--surface); padding:22px 24px; margin:0 0 22px; }
+  .ask .k { font-family: var(--f-mono); font-size:10.5px; letter-spacing:0.08em; text-transform:uppercase;
+            color:var(--refuse); display:block; margin-bottom:10px; }
+  .board { list-style:none; padding:0; margin:0; }
+  .board li { display:grid; grid-template-columns:26px 1fr; gap:10px; align-items:baseline;
+              font-family: var(--f-display); font-size:1.16rem; line-height:1.38; margin-bottom:12px; color: var(--ink); }
+  .board li:last-child { margin-bottom:0; }
+  .board li b { font-family: var(--f-mono); font-size:11px; color: var(--refuse); font-weight:500; }
+  .ask .askq { font-family: var(--f-display); font-size:1.3rem; line-height:1.35; color: var(--ink); margin:0; }
+  .cutlist { border:1px solid var(--hairline); background: var(--surface-sunk); padding:20px 22px; margin:30px 0 0; }
+  .cutlist h3 { margin-top:0; }
+  .mock { border:1px solid var(--hairline); background: var(--surface); margin:0; }
+  .mock .hdr { padding:12px 18px; border-bottom:1px solid var(--hairline); background: var(--surface-sunk); }
+  .mock .hdr .sub { font-family: var(--f-body); font-size:0.95rem; font-weight:600; color: var(--ink); }
+  .mock .hdr .meta { font-family: var(--f-mono); font-size:10.5px; color: var(--muted); margin-top:4px; }
+  .mock .bd { padding:18px; font-family: var(--f-mono); font-size:12px; line-height:1.62; color: var(--ink-soft); }
+  .mock .bd .dt { color: var(--ink); font-weight:500; }
+  .mock .bd .url { color: var(--accent); word-break:break-all; font-size:11px; display:block; margin:3px 0 7px; }
+  .mock .bd .read { color:var(--refuse); display:block; margin-top:7px; }
+  .mock .bd hr { border:0; border-top:1px solid var(--hairline); margin:16px 0; }
+  .mock .foot { padding:10px 18px; border-top:1px solid var(--hairline); font-family: var(--f-mono);
+                font-size:10px; color: var(--muted); }
+  .split { display:grid; grid-template-columns: 1fr 1fr; gap:32px; align-items:start; }
+  @media (max-width: 900px) { .split { grid-template-columns: 1fr; } }
+  .legs { display:grid; grid-template-columns:repeat(3,1fr); gap:0; border-top:1px solid var(--hairline);
+          border-bottom:1px solid var(--hairline); margin:22px 0 24px; }
+  .legs > div { padding:16px 20px 16px 0; margin-right:20px; border-right:1px solid var(--hairline); }
+  .legs > div:last-child { border-right:0; margin-right:0; padding-right:0; }
+  .legs h5 { font-family: var(--f-mono); font-size:10.5px; letter-spacing:0.08em; text-transform:uppercase;
+             color: var(--accent); margin:0 0 7px; font-weight:500; }
+  .legs p { font-size:0.93rem; margin:0; color: var(--ink-soft); }
+  .legs p b { color: var(--ink); }
+  @media (max-width: 700px) { .legs { grid-template-columns:1fr; } .legs > div { border-right:0; margin-right:0; padding-right:0; border-bottom:1px solid var(--hairline); } .legs > div:last-child { border-bottom:0; } }
+  svg .em { fill: var(--refuse); }
+  svg .emstroke { stroke: var(--refuse); fill: none; }
+  svg text.em { font-weight: 500; }
+  figure { margin:26px 0 30px; }
+  figure svg { max-width:100%; height:auto; display:block; }
+  figcaption { font-size:0.88rem; color: var(--muted); margin-top:12px; max-width: var(--measure); }
+</style>
+<nav class="rail">
+  <div class="rail-inner">
+    <span class="rail-tag">TUE 25 AUG</span>
+    <a href="#handoff"><b>12:00</b> &nbsp;handoff</a>
+    <a href="#seed"><b>12:02</b> &nbsp;plant 5 questions</a>
+    <a href="#what"><b>12:04</b> &nbsp;what it is</a>
+    <a href="#native"><b>12:09</b> &nbsp;Q1+Q3, the operating procedure</a>
+    <a href="#broke"><b>12:23</b> &nbsp;Q3, what broke</a>
+    <a href="#live"><b>12:30</b> &nbsp;Q2, terminal</a>
+    <a href="#christian"><b>12:33</b> &nbsp;Q2, Christian</a>
+    <a href="#why" class="turn"><b>12:36</b> &nbsp;Q4+Q5, worth it?</a>
+    <a href="#turnB" class="turn"><b>12:40</b> &nbsp;THEM, 20 min</a>
+    
+    <a href="#software"><b>··</b> &nbsp;who writes the code</a>
+    
+    <span class="modebar">
+      <button class="modebtn" id="mode-crunch" aria-pressed="false">Full</button>
+      <button class="modebtn" id="mode-point" aria-pressed="true">The point</button>
+    </span>
+  </div>
+</nav>
+
+<div class="wrap">
+
+<header class="top">
+  <p class="eyebrow">Run of show · a founders' session on running a company this way · 25 August 2026</p>
+  <h1>The case study is the prep&nbsp;doc</h1>
+  <p class="standfirst">An hour on how this company is actually operated, which is mostly by the agent system, guided by me and now by Christian too, with the goal of reducing how much either of us has to guide it. <em>That system wrote this page about itself</em>, so the page is on the screen rather than in a drawer, including the parts I would normally keep to myself. <strong>It is the same system that writes all the code.</strong></p>
+
+  <dl class="factbar">
+    <div><dt>Session</dt><dd>Tue 25 Aug, 12:00 ET</dd></div>
+    <div><dt>Documents held</dt><dd>979,681</dd></div>
+    <div><dt>Municipalities</dt><dd>4,895</dd></div>
+    <div><dt>People</dt><dd>2</dd></div>
+    <div><dt>Paying customers</dt><dd>2</dd></div>
+  </dl>
+  
+
+    
+</header>
+
+<section id="handoff">
+  <div class="sec-head">
+    <div class="clock">12:00<span>2 min</span></div>
+    <h2>The handoff, and what the hour is</h2>
+  </div>
+  <div class="sec-body">
+    
+
+    <div class="say">
+      <span class="k">The handoff, roughly this</span>
+      <p>A quick frame before I start, because I want you to know what you are getting and what you are not.</p>
+      <p>I am not going to pitch you and there is no deck. Municipal Alpha is a real company with two paying customers, and I run it with an agent system that has written essentially all of the code and does most of the daily operating work. <strong>That is not vibe coding</strong>, and the difference is most of what I want to show you. I was asked to open that up as a case study for a founders' session, so that is what this is. I will show you what the company delivers, then how it is actually built and run, then the failures, because those are the useful part.</p>
+      <p>Two things about how I want to run it. Interrupt me whenever, you do not need to wait for a gap, and I would rather lose my own material than have you sit on a question. And I am going to put five questions up in a minute and then not ask you about them for half an hour, because the last twenty minutes are yours and I would rather you had a real answer than a fast one.</p>
+    </div>
+
+    
+
+    <div class="outline">
+      <ol>
+        <li><span class="t">12:02</span><span class="w"><b>Five questions, planted</b><span>Said out loud, not discussed. Every block after this answers one.</span></span></li>
+        <li><span class="t">12:04</span><span class="w"><b>What the company is</b><span>Five minutes. Context, so the rest means something.</span></span></li>
+        <li><span class="t">12:09</span><span class="w"><b>An operating procedure that is written, versioned and enforced</b><span>Q1, the judgment nobody wrote down. Q3, what it takes to trust it.</span></span></li>
+        <li><span class="t">12:23</span><span class="w"><b>What broke</b><span>Q3 again, from the other side. One failure, and the loop it bought.</span></span></li>
+        <li><span class="t">12:30</span><span class="w"><b>Terminal, live</b><span>Q2, where work waits on one person. One prompt, then straight to him.</span></span></li>
+        <li><span class="t">12:33</span><span class="w"><b>Christian</b><span>Q2 answered by the person who was the bottleneck.</span></span></li>
+        <li class="turnrow"><span class="t">12:36</span><span class="w"><b>Why do this, and is it worth it</b><span>Q4 and Q5. Half of Q5 I am sure of, half I am not, and that is the point.</span></span></li>
+        <li class="turnrow"><span class="t">12:40</span><span class="w"><b>Over to them, twenty minutes</b><span>The four questions come back here.</span></span></li>
+      </ol>
+      
+    </div>
+
+  </div>
+</section>
+
+<section id="seed" class="seedsec">
+  <div class="sec-head">
+    <div class="clock">12:02<span>2 min</span></div>
+    <h2>Plant five questions and keep going</h2>
+  </div>
+  <div class="sec-body">
+    
+
+    <div class="seed">
+      <span class="k">Say them, do not stop</span>
+      <ol>
+        <li>What is a judgment you make over and over that nobody has written down?</li>
+        <li>Where does work in your company stop and wait for one specific person?</li>
+        <li>What would have to be true before you let something else make a call you make today?</li>
+        <li>And the one I would ask if I were sitting where you are, why the heck would anyone decide to do this?</li>
+        <li>Then the one I can only half answer, is what I am showing you worth it?</li>
+      </ol>
+    </div>
+
+  </div>
+</section>
+
+<section id="what">
+  <div class="sec-head">
+    <div class="clock">12:04<span>5 min</span></div>
+    <div>
+      <p class="qlabel">Context, not an answer</p>
+      <h2>What the company is, in five minutes, because it is not the subject</h2>
+    </div>
+  </div>
+  <div class="sec-body">
+    
+
+    <dl class="qa">
+      <dt>The problem</dt>
+      <dd><p>Municipal records are scattered across thousands of separate systems, so getting intelligence out of them is very hard.</p></dd>
+
+      <dt>How do I solve it?</dt>
+      <dd><p>Aggregate it, normalise it, and build a graph, so you can ask a question about municipal government and get an answer.</p>
+          <p class="sub">979,681 documents across 4,895 municipalities, crawled nightly.</p></dd>
+
+      <dt>Who pays?</dt>
+      <dd><p>Two live customers, a newspaper group and an economic development organisation. <strong>Both four figures a year, and that is the small end on purpose.</strong></p>
+          <p class="sub">Six thousand six hundred contracted, first signed in June. Those two are newsrooms and a non-profit, which is where I started because they would tell me the truth about the product.</p>
+          <p class="sub">The commercial buyers in the pipeline are a different order. The proposal out right now converts a free six-week calibration to three thousand a month, and the segments I have sized sit between five and low six figures a year depending on how deeply we read their towns. One of those buyers is in conversation at that scale, not paying yet.</p></dd>
+
+      <dt>Who else would?</dt>
+      <dd><p>Any business where a decision made in municipal government hits their bottom line.</p>
+          <p class="sub">Newsrooms, engineering and construction, people selling software into towns, bond analysts, developers. Different questions, one graph.</p></dd>
+
+      <dt>Is anyone else doing this?</dt>
+      <dd><p>Yes. Starbridge raised fifty-two million, and there are others.</p>
+          <p class="sub">They built the full commercial surface, CRM sync, a browser extension, an RFP writer, buyer attributes joined out of federal datasets. That is a real product and I am not going to pretend otherwise.</p></dd>
+
+      <dt class="hot">And I can compete?</dt>
+      <dd><p>Yes, with the system I am about to walk you through.</p>
+          <p class="sub">Founder capital and two people, so competing on surface area is not available. Reading the primary record deeply enough to find what a joined dataset cannot contain is, and depth per document at two people is an automation problem.</p></dd>
+
+      <dt>What lands</dt>
+      <dd><p>An email, weekly, per customer. No dashboard, no search box, nobody logs in.</p></dd>
+    </dl>
+
+    
+  </div>
+
+  <div class="sec-body wide">
+
+    <hr class="tierrule">
+    <div style="max-width:var(--measure)">
+      <h4><span class="tiernum">Lane 1</span> Newsrooms and economic development organisations</h4>
+      <p class="lede">The intelligence we deliver to newsrooms on a Monday.</p>
+    </div>
+
+    <div class="qpair">
+      <div class="said">
+      <span class="who">Lane 1 &middot; the need, from a managing editor at a newspaper group, 20 August &middot; paying customer &middot; unprompted</span>
+      <span class="q-text">"Most of our industry leans too heavily into update-me style stories and &hellip; we're no different. And part of this exercise is trying to get us to think about some of those other categories beyond update me, and not just do update-me stories all the time, because that leads to news burnout. People get burned out with just constant updates on a thing happening."</span>
+      <p class="then"><b>What that is asking for</b> is for the update-me tier to be handled well enough that his staff can spend their week on the other five. He grades every story against a six-part framework, and the one MA can automate is the one he least wants his reporters spending time on.</p>
+    </div>
+      <div class="said">
+      <span class="who">The same editor, same call &middot; confirming my framing rather than volunteering it</span>
+      <span class="q-text">"That's correct. I mean, some of these reporters, yeah, they don't have that institutional knowledge &hellip; they've been covering the community for only a couple of months or a year or two."</span>
+      <p class="then"><b>That is the panel above in one sentence.</b> What a reporter would know after fifteen years on the beat, handed to someone who has been there three months. <b>Say that he was agreeing with me here</b>, because the quote at the top of this lane and the two below it are ones nobody prompted, and that difference is the whole reason to bother quoting anyone.</p>
+    </div>
+    </div>
+
+    <details class="showme">
+      <summary><span class="lab">Show the brief that answers this</span><span class="hint">one item, three meetings, eleven weeks</span></summary>
+      <div class="showme-bd">
+
+    <div style="max-width:var(--measure)">
+      <p>One item from the edition that went out yesterday morning, customer name removed.</p>
+      
+    </div>
+
+    <div class="split">
+      <div class="mock">
+        <div class="hdr">
+          <div class="sub">Falmouth, coverage note, week of 24 August</div>
+          <div class="meta">plain text &middot; one town per email &middot; Monday morning</div>
+        </div>
+        <div class="bd"><span class="dt">WHAT'S BEEN MOVING</span>
+Each of these has been on the record at more than one meeting over several weeks.
+
+<span class="dt">1. Falmouth Council to weigh Route 88 sidewalk funding</span>Town Council. On the record 28 May to 10 August, 3 meetings over 11 weeks.
+On your calibration sheet as: budget.
+
+<span class="dt">WHAT THE RECORD SAYS</span>The Falmouth Town Council will consider an order on August 10, 2026, to accept
+$569,348 in Maine DOT / Portland Area Comprehensive Transportation System Urban
+Partnership Initiative Monies to construct a sidewalk on Route 88 and move
+forward with preliminary engineering. Town staff recommended separating the Town
+Landing/Johnson Road intersection improvements from the sidewalk project. The
+Council agreed on a two-meeting process for deciding whether to move forward,
+holding a public forum on July 13, 2026.
+
+  "The Council agreed on a two-meeting process for deciding whether to
+   move forward with the sidewalk project. The Council held a public
+   forum at the July 13, 2026 meeting."
+  Town Council packet, 10 August
+
+<span class="read">OUR READ
+If you walk or bike along Route 88, this could affect your safety and access. If
+you drive through the Town Landing or Johnson Road intersection, future changes
+there will be considered separately. Serves: Update me, Help me.</span>
+- 10 August, Town Council   <span class="url">play.champds.com/falmouthme/agendapdf/3394</span>- 13 July, Town Council     <span class="url">play.champds.com/falmouthme/agendapdf/3384</span>- 28 May, Town Council      <span class="url">play.champds.com/falmouthme/agendapacketpdf/3370</span></div>
+        <div class="foot">format=v2 &middot; generator=94505769 &middot; profile=d0c07959 &middot; rendered=2026-08-23T12:35</div>
+      </div>
+
+      <div>
+        <p>Six things to point at, and the first two are the ones that matter.</p>
+        <ul class="beats">
+          <li class="q"><strong>This is one item, and it is three meetings over eleven weeks</strong> rather than a document that turned up this week. That is the difference between the two things he just described.</li>
+          <li><strong>The last line of our read names which of his six categories it serves.</strong>
+          <ul><li>"Serves: Update me, Help me." His framework, not mine, applied to every item. That is what it looks like when a customer hands you their spec and you actually build to it.</li></ul>
+        </li>
+          <li><strong>The date and the town lead every item</strong>, because a reporter's first question is always when and where.</li>
+          <li><strong>The link is the document itself</strong>, not a citation of it. They can open the PDF and check me inside a minute, and they do.</li>
+          <li><strong>The middle paragraph is what the record says</strong>, not my characterisation. If it is wrong, they can tell me it is wrong by reading one document.</li>
+          <li class="q"><strong>"Our read" is a separate labelled line, always, and that label is the most load-bearing punctuation in the product.</strong>
+          <ul>
+            <li>Above it is the record, below it is me. A newsroom cannot buy something that blurs those two, and the label is what lets them use it without surrendering editorial judgment.</li>
+          </ul>
+        </li>
+        </ul>
+        <p>The footer carries the format version, the generator hash and the profile hash, so any edition they still have in an inbox can be traced back to exactly what produced it.</p>
+      </div>
+    </div>
+
+    </div>
+    </details>
+
+    <div class="cread">
+      <span class="lbl">The commercial read</span>
+      <p>It works, and it is where I started, because <strong>they tell me the truth</strong>. It is also <strong>not very lucrative</strong>, four figures a year, in a sector with no money. What it buys instead is <strong>distribution</strong>. Both of these customers put what we produce in front of exactly the people the other two lanes sell to.</p>
+    </div>
+
+    <hr class="tierrule">
+    <div style="max-width:var(--measure)">
+      <h4><span class="tiernum">Lane 2</span> Infrastructure, and the firms that sell into it</h4>
+      <p class="lede">The intelligence we deliver to developers, before a town closes the door.</p>
+    </div>
+
+    <div class="qpair">
+      <div class="said">
+      <span class="who">Lane 2 &middot; the need, from a solar developer, on a recorded call in June &middot; not a customer</span>
+      <span class="q-text">"Sometimes we get instances where they tell us, hey, just put the application in, no problem. And then we find out a couple of weeks later they have a moratorium and the guy never said a word &hellip; we go back and we find out through meeting minutes that the dude we were talking to was weeks away from having a moratorium put in place and didn't say anything."</span>
+      <span class="q-text" style="margin-top:12px">"It's not a few thousand bucks to get an option on a site, and you find out that the town, there's no way that you're going to get it approved."</span>
+      <p class="then"><b>Nobody hid this from him.</b> It was in the minutes the whole time, and he found it weeks late, after paying for site control. He is describing a thread he had to assemble by hand, after it had already cost him. The one below is the same arc, assembled while it happens.</p>
+      <p class="then" style="border-top:0;padding-top:0;margin-top:6px"><span style="font-size:.85rem;color:var(--muted)">Auto-transcript, lightly corrected for a mis-heard word and one marked elision. Nothing else changed.</span></p>
+    </div>
+      <div class="said">
+      <span class="who">A far larger developer, on how they find this out today, June &middot; not a customer</span>
+      <span class="q-text">"When we send land agents out to a certain location to do the initial screening of a location, they physically have to go to the town offices and pull the documents and write it down on a piece of paper."</span>
+      <span class="q-text" style="margin-top:12px">"The secret sauce is getting there before anybody else does."</span>
+      <p class="then"><b>That is the state of the art at a firm that finances utility-scale projects.</b> A person, in a car, at a counter, with a notepad. Nobody in this lane needs the product explained to them, they need it to exist.</p>
+    </div>
+    </div>
+
+    <details class="showme">
+      <summary><span class="lab">Show the thread that answers this</span><span class="hint">the arc he had to assemble by hand, assembled as it happens</span></summary>
+      <div class="showme-bd">
+
+    <figure>
+        <svg viewBox="0 0 880 268" role="img" aria-label="A timeline of Brunswick data centre decisions. A draft ordinance appears 18 May, the moratorium is adopted 1 June, a committee asks its own role 23 June, a planning memo enters the packet 28 July, and on 3 August the council weighs an outright ban. The 180 day moratorium adopted on 1 June expires in late November.">
+          <defs>
+            <marker id="tl" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <polygon points="0,1 9,5 0,9" class="em"/>
+            </marker>
+          </defs>
+          <g fill="currentColor" font-family="IBM Plex Sans, sans-serif" font-size="11">
+            <text x="0" y="14" font-size="10.5" opacity="0.6">BRUNSWICK TOWN COUNCIL, DATA CENTRES</text>
+
+            <line x1="50" y1="150" x2="830" y2="150" stroke="currentColor" stroke-width="1.4"/>
+
+            <circle cx="60" cy="150" r="4" fill="currentColor"/>
+            <line x1="60" y1="150" x2="60" y2="122" stroke="currentColor" stroke-width="1"/>
+            <text x="60" y="112" text-anchor="middle" font-size="11.5" font-weight="600">18 May</text>
+            <text x="60" y="98" text-anchor="middle" font-size="10.5" opacity="0.75">draft appears</text>
+
+            <circle cx="114" cy="150" r="5.5" class="em"/>
+            <line x1="114" y1="150" x2="114" y2="178" stroke-width="1.2" class="emstroke"/>
+            <text x="114" y="192" text-anchor="middle" font-size="11.5" font-weight="600" class="em">1 June</text>
+            <text x="114" y="206" text-anchor="middle" font-size="10.5" class="em" opacity="0.9">adopted</text>
+
+            <circle cx="200" cy="150" r="4" fill="currentColor"/>
+            <line x1="200" y1="150" x2="200" y2="122" stroke="currentColor" stroke-width="1"/>
+            <text x="200" y="112" text-anchor="middle" font-size="11.5" font-weight="600">23 June</text>
+            <text x="200" y="98" text-anchor="middle" font-size="10.5" opacity="0.75">committee asks its role</text>
+
+            <circle cx="335" cy="150" r="4" fill="currentColor"/>
+            <line x1="335" y1="150" x2="335" y2="178" stroke="currentColor" stroke-width="1"/>
+            <text x="335" y="192" text-anchor="middle" font-size="11.5" font-weight="600">28 July</text>
+            <text x="335" y="206" text-anchor="middle" font-size="10.5" opacity="0.75">planning memo</text>
+
+            <circle cx="420" cy="150" r="4" fill="currentColor"/>
+            <line x1="420" y1="150" x2="420" y2="122" stroke="currentColor" stroke-width="1"/>
+            <text x="420" y="112" text-anchor="middle" font-size="11.5" font-weight="600">3 August</text>
+            <text x="420" y="98" text-anchor="middle" font-size="10.5" opacity="0.75">ban, or conditions?</text>
+
+            <line x1="114" y1="238" x2="806" y2="238" stroke-width="1.4" class="emstroke" stroke-dasharray="5 3" marker-end="url(#tl)"/>
+            <line x1="114" y1="232" x2="114" y2="244" stroke-width="1.4" class="emstroke"/>
+            <text x="450" y="230" text-anchor="middle" font-size="10.5" class="em" opacity="0.9">the 180 day moratorium runs from here</text>
+
+            <circle cx="812" cy="150" r="4" class="em"/>
+            <line x1="812" y1="150" x2="812" y2="122" stroke-width="1.2" class="emstroke"/>
+            <text x="812" y="112" text-anchor="middle" font-size="11.5" font-weight="600" class="em">late Nov</text>
+            <text x="812" y="98" text-anchor="middle" font-size="10.5" class="em" opacity="0.9">it expires</text>
+          </g>
+        </svg>
+        <figcaption>Five meetings across eleven weeks, and a deadline nobody published. The expiry is not written in any document, it follows from a date and a number sitting in a staff memo, and it is when this becomes a story again.</figcaption>
+      </figure>
+
+    <div style="max-width:var(--measure)">
+      <ul class="beats">
+          <li class="q"><strong>No single document contains that, and nobody had to know what to search for.</strong>
+            <ul><li>It assembled itself because the same subject kept reappearing on the record, and every line is checkable at the town's own URL.</li></ul>
+          </li>
+          <li><strong>Now the scale, because this is not a zoning footnote.</strong>
+            <ul>
+              <li>The state tried first. A bill would have limited data centres at <strong>twenty megawatts or more</strong>, the Governor vetoed it, and towns started writing their own.</li>
+              <li>Brunswick adopted <strong>one megawatt or greater</strong>. Twenty times stricter than the state bill that failed, decided by a town council in eleven weeks.</li>
+            </ul>
+          </li>
+          <li class="q"><strong>What a threshold like that governs, from another county in the same corpus.</strong>
+            <ul>
+              <li>Louisa County, Virginia. A data centre developer bought the county's business park from its development authority for <strong>forty-two million</strong> and announced plans to invest <strong>seventeen billion</strong>. Amazon separately announced <strong>eleven billion</strong> by 2040 for two campuses in the same county.</li>
+              <li>Those figures are in the county's own annual financial reports and its proposed budget, which is to say a town clerk published them and nobody needed to leak anything.</li>
+            </ul>
+          </li>
+          <li><strong>That is the argument for early, in one line.</strong>
+            <ul><li>By the time this is a headline the threshold is set. Eleven weeks earlier it was a draft with a number in it that could still move, and that number decides whether a project of that size is possible in your town at all.</li></ul>
+          </li>
+        </ul>
+    </div>
+
+</div>
+    </details>
+
+    <div class="cread">
+      <span class="lbl">The commercial read</span>
+      <p><strong>Lucrative per customer, smallish market.</strong> A few thousand developers and firms nationally, and they already know they need this. The man above is not being sold to, he is describing a cost he has already paid more than once.</p>
+    </div>
+
+    <hr class="tierrule">
+    <div style="max-width:var(--measure)">
+      <h4><span class="tiernum">Lane 3</span> Vendor procurement</h4>
+      <p class="lede">The intelligence we deliver to vendors, before a town starts shopping.</p>
+    </div>
+
+    <div class="qpair">
+      <div class="said">
+      <span class="who">Lane 3 &middot; the need, from a company that sells into towns, on a recorded call in August &middot; in conversation, not a customer &middot; sector redacted</span>
+      <span class="q-text">"Our holy grail is our competitor's contract renewal dates. We would pay thousands of dollars for our competitor's contract renewal dates."</span>
+      <span class="q-text" style="margin-top:12px">"The dates of the contract, competitor who's in there, sentiment around it, when there's upcoming meetings talking about it, all that stuff is gold for our selling team."</span>
+      <p class="then"><b>He named a price before I quoted one.</b> Note what he is not asking for. Not the contract value, which he says is misleading, and not a lead list, because he already knows every town. He wants the clock. <span style="color:var(--muted)">His sector is redacted here; the quote is verbatim otherwise.</span></p>
+    </div>
+      <div class="said">
+      <span class="who">Another firm in the same lane, on a recorded call in August &middot; not a customer &middot; sector redacted</span>
+      <span class="q-text">"We pride ourselves on sort of just having good information. For what we do, we're the number one firm for what we do, [sector redacted], and I think a lot of that has been our ability just to know what's going on. And right now, historically that's been just a lot of talking to [redacted], a lot of talking to people, having partnerships in the industry, but it's a lot of talk, and it doesn't scale that great."</span>
+      <p class="then"><b>The number one firm in their category says their edge is knowing what is going on, and that the way they get it does not scale.</b> That is the whole business, described by somebody who does not work here.</p>
+    </div>
+    </div>
+
+    <details class="showme">
+      <summary><span class="lab">Show the two records that answer this</span><span class="hint">one signal per buyer, both from the town&rsquo;s own record</span></summary>
+      <div class="showme-bd">
+
+    <div class="twoup">
+      <div class="rec">
+        <div class="for">Buyer one</div>
+        <div class="where">Henderson, Kentucky</div>
+        <div class="when">Board of Commissioners work session, 12 May 2026</div>
+        <blockquote>"Work with IT department to review the current utility billing process and complete a feasibility study on in-house services vs. continue outsourcing the mailing &amp; printing services of utility bills."</blockquote>
+        <blockquote>"Promote electronic payment methods for customers and our vendors."</blockquote>
+        <div class="src">items 5 and 6, departmental goals<br>hendersonky.gov/ArchiveCenter/ViewFile/Item/3397</div>
+      </div>
+      <div class="rec">
+        <div class="for">Buyer two</div>
+        <div class="where">Vista Unified School District, California</div>
+        <div class="when">Board of Education agenda, 14 May 2026</div>
+        <blockquote>"In 2023, the District conducted and adopted a comprehensive Long Range Facilities Master Plan &hellip; The State does not provide regular funding to address such facilities needs. As such, the District must identify a local funding source. While Measure LL bond funds made a significant impact, our local schools still have urgent needs"</blockquote>
+        <blockquote>"a maximum principal amount of $543 million"</blockquote>
+        <div class="src">item 9A, Resolution 26-25<br>ordering a bond election for 3 November 2026</div>
+      </div>
+    </div>
+
+</div>
+    </details>
+
+    <div class="cread">
+      <span class="lbl">The commercial read</span>
+      <p><strong>Large contracts, a large number of buyers.</strong> This is the lane Starbridge is in, which is the clearest evidence the market is real.</p>
+    </div>
+
+    <hr class="tierrule">
+
+<figure>
+      <svg viewBox="0 0 900 316" role="img" aria-label="One graph of every municipality we read and the entities around them. Three buyers ask it three different questions and get three different products: a newsroom asks what changed and why its reader cares and gets the Monday brief; a developer asks who is in the room and when this started and gets the thread; a vendor asks which town is about to buy and gets the dated record. The graph is the expensive part and the three products are queries against it.">
+        <defs>
+          <marker id="og" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <polygon points="0,1 9,5 0,9" fill="currentColor"/>
+          </marker>
+        </defs>
+        <g fill="currentColor" font-family="IBM Plex Sans, sans-serif" font-size="12">
+          <text x="0" y="13" font-size="10.5" opacity="0.6">BUILT ONCE</text>
+          <text x="262" y="13" font-size="10.5" opacity="0.6">ASKED THREE DIFFERENT QUESTIONS</text>
+          <text x="668" y="13" font-size="10.5" opacity="0.6">THREE DIFFERENT PRODUCTS</text>
+
+          <rect x="0" y="64" width="196" height="164" fill="none" stroke="currentColor" stroke-width="2"/>
+          <text x="16" y="98" font-size="14" font-weight="600">One graph</text>
+          <text x="16" y="126" font-size="11.5" opacity="0.8">every municipality</text>
+          <text x="16" y="144" font-size="11.5" opacity="0.8">we read, and the</text>
+          <text x="16" y="162" font-size="11.5" opacity="0.8">entities around</text>
+          <text x="16" y="180" font-size="11.5" opacity="0.8">them</text>
+          <text x="16" y="208" font-size="10.5" opacity="0.55">THE EXPENSIVE PART</text>
+
+          <polyline points="196,146 226,146 226,92 250,92" fill="none" stroke="currentColor" stroke-width="1.4" marker-end="url(#og)"/>
+          <text x="262" y="88" font-size="12.5">"What changed here, and why does my reader care?"</text>
+          <text x="668" y="88" font-size="12.5" font-weight="600">A newsroom</text>
+          <text x="668" y="106" font-size="11" opacity="0.75">gets the Monday brief</text>
+
+          <line x1="196" y1="146" x2="250" y2="146" stroke="currentColor" stroke-width="1.4" marker-end="url(#og)"/>
+          <text x="262" y="150" font-size="12.5">"Who is in the room, and when did this start?"</text>
+          <text x="668" y="150" font-size="12.5" font-weight="600">A developer</text>
+          <text x="668" y="168" font-size="11" opacity="0.75">gets the thread</text>
+
+          <polyline points="196,146 226,146 226,212 250,212" fill="none" stroke="currentColor" stroke-width="1.4" marker-end="url(#og)"/>
+          <text x="262" y="208" font-size="12.5">"Which town is about to buy what I sell?"</text>
+          <text x="668" y="208" font-size="12.5" font-weight="600" class="em">A vendor</text>
+          <text x="668" y="226" font-size="11" class="em" opacity="0.85">gets the dated record</text>
+
+          <line x1="0" y1="256" x2="900" y2="256" stroke="currentColor" stroke-width="1" opacity="0.2"/>
+          <text x="0" y="280" font-size="12.5" opacity="0.9">Build a fourth product by asking a fourth question. Nothing underneath has to change.</text>
+          <text x="0" y="304" font-size="11.5" opacity="0.7">Which is why the poorest lane is still worth running, and why the vendor lane did not need anything new built to exist.</text>
+        </g>
+      </svg>
+      <figcaption>The reason these are three lanes and not three companies. The graph is built once, the questions are cheap, and a new buyer type is a new question rather than a new pipeline.</figcaption>
+    </figure>
+
+    <div style="max-width:var(--measure)">
+      
+    </div>
+  </div>
+</section>
+
+<section id="native">
+  <div class="sec-head">
+    <div class="clock">12:09<span>14 min</span></div>
+    <div>
+      <p class="qlabel">Answers Q1 and Q3</p>
+      <h2>The company runs on an operating procedure that is written down, versioned and enforced, the same as its code</h2>
+    </div>
+  </div>
+  <div class="sec-body wide">
+        <div class="say">
+        <span class="k">Say this first, it is the point of the hour</span>
+        <p>People hear "AI company" and think of two things, AI in the product or AI tools for the team, <strong>and this is neither.</strong></p>
+        <p><strong>How this company operates is written as instructions a machine reads before it does anything, versioned beside the product, and enforced where it matters.</strong> Not in my head, not in a wiki.</p>
+        <p class="q">So the question is not whether the model does good work. It is what a company looks like when its rules have to be legible to something that forgets everything between sessions.</p>
+      </div>
+
+    <div style="max-width:var(--measure)">
+      <p class="lede">Four tiers. A practice, a rule, a principle, a commandment, and the gates that give exactly one of those tiers teeth. <strong>Nothing moves up a tier for being a good idea.</strong> A practice becomes a rule on the day it fails and the failure costs something real, a fabricated claim reaching my own website or an email going out broken to a customer, and from that day the rule carries the date and the incident that bought it. The rest of this block walks down them in order.</p>
+      
+    </div>
+
+    <figure>
+      <svg viewBox="0 0 900 400" role="img" aria-label="Four tiers stacked bottom to top: practice, rules, principles, commandments. A practice becomes a rule when it fails, four rules of one shape become a principle, and a principle rarely becomes a commandment. All four load before any work happens and together shape what gets written. Only the rule tier also acts afterwards, as a gate that refuses what was written.">
+        <defs>
+          <marker id="up" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <polygon points="0,1 9,5 0,9" fill="currentColor"/>
+          </marker>
+          <marker id="side" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <polygon points="0,1 9,5 0,9" class="em"/>
+          </marker>
+        </defs>
+        <g fill="currentColor" font-family="IBM Plex Sans, sans-serif" font-size="12">
+
+          <text x="0" y="16" font-size="10.5" opacity="0.6">BEFORE ANY WORK HAPPENS</text>
+          <text x="392" y="16" font-size="10.5" opacity="0.6">THE WORK</text>
+          <text x="610" y="16" font-size="10.5" class="em" opacity="0.9">AFTER IT IS WRITTEN</text>
+
+          <rect x="0" y="40" width="228" height="50" fill="none" stroke="currentColor" stroke-width="2"/>
+          <text x="16" y="61" font-size="13" font-weight="600">Commandments</text>
+          <text x="16" y="79" font-size="10.5" opacity="0.75">twelve, and they break ties</text>
+
+          <line x1="34" y1="118" x2="34" y2="96" stroke="currentColor" stroke-width="1.3" marker-end="url(#up)"/>
+          <text x="50" y="112" font-size="10" opacity="0.7">rare, and never casually</text>
+
+          <rect x="0" y="122" width="228" height="50" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <text x="16" y="143" font-size="13" font-weight="600">Principles</text>
+          <text x="16" y="161" font-size="10.5" opacity="0.75">cover what no rule was written for</text>
+
+          <line x1="34" y1="200" x2="34" y2="178" stroke="currentColor" stroke-width="1.3" marker-end="url(#up)"/>
+          <text x="50" y="194" font-size="10" opacity="0.7">four rules, one shape</text>
+
+          <rect x="0" y="204" width="228" height="50" fill="none" stroke-width="1.5" class="emstroke"/>
+          <text x="16" y="225" font-size="13" font-weight="600" class="em">Rules</text>
+          <text x="16" y="243" font-size="10.5" class="em" opacity="0.9">twenty-nine, loaded every turn</text>
+
+          <line x1="34" y1="282" x2="34" y2="260" stroke="currentColor" stroke-width="1.3" marker-end="url(#up)"/>
+          <text x="50" y="276" font-size="10" opacity="0.7">it failed, so I dated it</text>
+
+          <rect x="0" y="286" width="228" height="50" fill="none" stroke="currentColor" stroke-width="1" opacity="0.55"/>
+          <text x="16" y="307" font-size="13" font-weight="600">Practice</text>
+          <text x="16" y="325" font-size="10.5" opacity="0.75">worked once, undated, no teeth</text>
+
+          <line x1="228" y1="65" x2="256" y2="65" stroke="currentColor" stroke-width="1.2" opacity="0.7"/>
+          <line x1="228" y1="147" x2="256" y2="147" stroke="currentColor" stroke-width="1.2" opacity="0.7"/>
+          <line x1="228" y1="229" x2="256" y2="229" stroke="currentColor" stroke-width="1.2" opacity="0.7"/>
+          <line x1="228" y1="311" x2="256" y2="311" stroke="currentColor" stroke-width="1.2" opacity="0.7"/>
+          <line x1="256" y1="65" x2="256" y2="311" stroke="currentColor" stroke-width="1.2" opacity="0.7"/>
+
+          <line x1="256" y1="188" x2="386" y2="188" stroke="currentColor" stroke-width="1.6" marker-end="url(#up)"/>
+          <text x="266" y="179" font-size="10.5" opacity="0.85">shapes what I write</text>
+
+          <rect x="392" y="162" width="156" height="52" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 3"/>
+          <text x="470" y="184" text-anchor="middle" font-size="12.5">I write something</text>
+          <text x="470" y="202" text-anchor="middle" font-size="10.5" opacity="0.75">code, a claim, an email</text>
+
+          <line x1="548" y1="188" x2="604" y2="188" stroke-width="1.6" class="emstroke" marker-end="url(#side)"/>
+
+          <rect x="610" y="162" width="190" height="52" fill="none" stroke-width="2" class="emstroke"/>
+          <text x="705" y="184" text-anchor="middle" font-size="12.5" font-weight="600" class="em">A gate that refuses</text>
+          <text x="705" y="202" text-anchor="middle" font-size="10.5" class="em" opacity="0.9">it does not go out</text>
+
+          <polyline points="228,240 300,240 300,372 705,372 705,218" fill="none" stroke-width="1.4" class="emstroke" stroke-dasharray="5 3" marker-end="url(#side)"/>
+          <text x="500" y="364" text-anchor="middle" font-size="10.5" class="em" opacity="0.9">and only rules also run afterwards, as the gate</text>
+        </g>
+      </svg>
+      <figcaption>A practice is a habit nobody dated. A rule is a practice that failed once and got a date. A principle is what several rules turn out to have had in common. A commandment settles it when two rules disagree. Only rules are concrete enough for a gate to check, which is why the other three have to shape the work before it happens rather than refuse it after.</figcaption>
+    </figure>
+
+    <hr class="tierrule">
+    <div style="max-width:var(--measure)">
+      <h3><span class="tiernum">First</span> How anything gets onto the ladder without me writing it down</h3>
+      <p class="lede">Wikis get stale and intranets go cold, because both need somebody to stop working and go file something. <strong>So nothing here asks me to.</strong> The capture is a byproduct of work that was going to happen anyway.</p>
+      
+    </div>
+
+<figure>
+      <svg viewBox="0 0 900 300" role="img" aria-label="Four things that happen anyway each produce a durable record without anyone filing it: a call becomes a transcript the same night, a session ends and the agent writes the decision shard, an override in conversation is logged at the moment it happens, and an edit to a file the agent wrote is caught by a diff hook. The fourth has produced nothing, which is a real gap. All of them feed the ladder.">
+        <defs>
+          <marker id="cp" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <polygon points="0,1 9,5 0,9" fill="currentColor"/>
+          </marker>
+          <marker id="cpr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <polygon points="0,1 9,5 0,9" class="em"/>
+          </marker>
+        </defs>
+        <g fill="currentColor" font-family="IBM Plex Sans, sans-serif" font-size="12">
+          <text x="0" y="13" font-size="10.5" opacity="0.6">SOMETHING THAT WAS GOING TO HAPPEN ANYWAY</text>
+          <text x="356" y="13" font-size="10.5" opacity="0.6">WHAT IT LEAVES BEHIND, WITH NO STEP FOR ME</text>
+          <text x="836" y="13" font-size="10.5" opacity="0.6" text-anchor="end">SO FAR</text>
+
+          <text x="0" y="48" font-size="12.5">A call happens</text>
+          <line x1="150" y1="44" x2="344" y2="44" stroke="currentColor" stroke-width="1.3" marker-end="url(#cp)"/>
+          <text x="356" y="48" font-size="12.5">transcript, imported the same night</text>
+          <text x="836" y="48" font-size="12.5" text-anchor="end" font-weight="600">48</text>
+
+          <text x="0" y="88" font-size="12.5">A session ends</text>
+          <line x1="150" y1="84" x2="344" y2="84" stroke="currentColor" stroke-width="1.3" marker-end="url(#cp)"/>
+          <text x="356" y="88" font-size="12.5">the agent writes what it decided, and why not</text>
+          <text x="836" y="88" font-size="12.5" text-anchor="end" font-weight="600">356</text>
+
+          <text x="0" y="128" font-size="12.5">I overrule it in conversation</text>
+          <line x1="204" y1="124" x2="344" y2="124" stroke="currentColor" stroke-width="1.3" marker-end="url(#cp)"/>
+          <text x="356" y="128" font-size="12.5">logged at the moment I do it, not later</text>
+          <text x="836" y="128" font-size="12.5" text-anchor="end" font-weight="600">24</text>
+
+          <text x="0" y="168" font-size="12.5" class="em">I edit a file it wrote</text>
+          <line x1="150" y1="164" x2="344" y2="164" stroke-width="1.3" class="emstroke" marker-end="url(#cpr)"/>
+          <text x="356" y="168" font-size="12.5" class="em">a diff hook is supposed to notice</text>
+          <text x="836" y="168" font-size="12.5" text-anchor="end" font-weight="600" class="em">0</text>
+          <text x="356" y="185" font-size="10.5" class="em" opacity="0.9">it does not block, so producing nothing looks exactly like working</text>
+
+          <line x1="0" y1="212" x2="900" y2="212" stroke="currentColor" stroke-width="1" opacity="0.2"/>
+          <text x="0" y="238" font-size="12" opacity="0.9">Not one of these asked me to write a document. Three of them work. The fourth is the one that needed me to notice.</text>
+          <text x="0" y="266" font-size="11.5" opacity="0.7">A wiki would have needed all four to be a habit, and habits are what go stale first.</text>
+        </g>
+      </svg>
+      <figcaption>How anything gets onto the ladder. The capture has to be a byproduct of work that was going to happen, because the moment it needs a person to file something, it stops happening.</figcaption>
+    </figure>
+
+    <div style="max-width:var(--measure)">
+            
+    </div>
+
+<figure>
+      <svg viewBox="0 0 900 340" role="img" aria-label="Session shards roll up into a searchable ledger, which rolls up weekly, monthly and quarterly. Each cadence has a job and only some of them have something that refuses when they are skipped. The monthly retro is nagged by a hook every session until it exists, because two months in a row were silently missed when it was only advisory.">
+        <defs>
+          <marker id="ru" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+            <polygon points="0,1 9,5 0,9" fill="currentColor"/>
+          </marker>
+        </defs>
+        <g fill="currentColor" font-family="IBM Plex Sans, sans-serif" font-size="12">
+          <text x="0" y="13" font-size="10.5" opacity="0.6">CADENCE</text>
+          <text x="150" y="13" font-size="10.5" opacity="0.6">WHAT ROLLS UP</text>
+          <text x="600" y="13" font-size="10.5" opacity="0.6" text-anchor="end">SO FAR</text>
+          <text x="628" y="13" font-size="10.5" opacity="0.6">WHAT HAPPENS IF I SKIP IT</text>
+
+          <line x1="118" y1="28" x2="118" y2="286" stroke="currentColor" stroke-width="1" opacity="0.25"/>
+
+          <text x="0" y="52" font-size="11.5" opacity="0.8">every session</text>
+          <rect x="150" y="34" width="404" height="26" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <text x="162" y="52" font-size="12">a shard, written by the agent, not by me</text>
+          <text x="600" text-anchor="end" y="52" font-size="12" font-weight="600">356</text>
+          <text x="628" y="52" font-size="11.5" opacity="0.85">nothing to roll up</text>
+          <line x1="352" y1="60" x2="352" y2="76" stroke="currentColor" stroke-width="1.3" marker-end="url(#ru)"/>
+
+          <text x="0" y="98" font-size="11.5" opacity="0.8">every commit</text>
+          <rect x="150" y="80" width="404" height="26" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <text x="162" y="98" font-size="12">one searchable index of every decision ever made</text>
+          <text x="600" text-anchor="end" y="98" font-size="12" font-weight="600">4,338</text>
+          <text x="628" y="98" font-size="11.5" class="em">the commit is refused</text>
+          <line x1="352" y1="106" x2="352" y2="122" stroke="currentColor" stroke-width="1.3" marker-end="url(#ru)"/>
+
+          <text x="0" y="144" font-size="11.5" opacity="0.8">Friday</text>
+          <rect x="150" y="126" width="404" height="26" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <text x="162" y="144" font-size="12">the week, summarised, plus an audit of my own process</text>
+          <text x="600" text-anchor="end" y="144" font-size="12" font-weight="600">21</text>
+          <text x="628" y="144" font-size="11.5" opacity="0.85">I notice, eventually</text>
+          <line x1="352" y1="152" x2="352" y2="168" stroke="currentColor" stroke-width="1.3" marker-end="url(#ru)"/>
+
+          <text x="0" y="190" font-size="11.5" opacity="0.8">Sunday</text>
+          <rect x="150" y="172" width="404" height="26" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <text x="162" y="190" font-size="12">memory swept for stale, orphaned and unsourced notes</text>
+          <text x="628" y="190" font-size="11.5" opacity="0.85">notes rot quietly</text>
+          <line x1="352" y1="198" x2="352" y2="214" stroke="currentColor" stroke-width="1.3" marker-end="url(#ru)"/>
+
+          <text x="0" y="236" font-size="11.5" opacity="0.8" class="em">first of month</text>
+          <rect x="150" y="218" width="404" height="26" fill="none" stroke-width="2" class="emstroke"/>
+          <text x="162" y="236" font-size="12" class="em">what actually changed, and what I got wrong</text>
+          <text x="600" text-anchor="end" y="236" font-size="12" font-weight="600" class="em">8</text>
+          <text x="628" y="236" font-size="11.5" class="em" font-weight="600">every session says OVERDUE</text>
+          <line x1="352" y1="244" x2="352" y2="260" stroke="currentColor" stroke-width="1.3" marker-end="url(#ru)"/>
+
+          <text x="0" y="282" font-size="11.5" opacity="0.8">first of quarter</text>
+          <rect x="150" y="264" width="404" height="26" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <text x="162" y="282" font-size="12">which rules earned their place, and which get deleted</text>
+          <text x="600" text-anchor="end" y="282" font-size="12" font-weight="600">2</text>
+          <text x="628" y="282" font-size="11.5" opacity="0.85">the rules outlive their reasons</text>
+
+          <line x1="0" y1="304" x2="900" y2="304" stroke="currentColor" stroke-width="1" opacity="0.2"/>
+          <text x="0" y="328" font-size="11.5" opacity="0.9">The two in the right-hand column that refuse are the two that have never been skipped. That is the whole argument for gates, drawn on my own calendar.</text>
+        </g>
+      </svg>
+      <figcaption>The roll-up, and which rungs have teeth. The monthly retro is nagged by a hook at every session start until the file exists, because when it was only a good intention two months in a row went missing without anyone noticing.</figcaption>
+    </figure>
+
+        <hr class="tierrule">
+    <div style="max-width:var(--measure)">
+      <h3><span class="tiernum">Tier 1</span> A practice is something that worked once</h3>
+      <p class="lede">Written down, no date, and nothing enforces it. <strong>Three hundred and forty-seven of them.</strong></p>
+      <ul class="beats">
+        <li><strong>Price the aim, not the effort. Lead with their pain, neutrally, and pivot only once they answer.</strong>
+          <ul><li>Both are commercial judgment that cost me something to learn, both are loaded before anything gets drafted, and if the system ignores one, nothing happens. No check, no gate, no consequence.</li></ul>
+        </li>
+      </ul>
+    </div>
+
+<figure>
+      <svg viewBox="0 0 900 388" role="img" aria-label="Three hundred and forty-seven pieces of captured judgment, one dot each, in the order they were written down between March and August 2026. Two are ringed and named, one from May and one from August, and hovering either reveals what that file says. Below them, twenty-nine rules, each dated by the failure that bought it and loaded before every turn; about a third of those also refuse.">
+        <g font-family="IBM Plex Sans, sans-serif">
+          <text x="0" y="14" font-size="10.5" fill="currentColor" opacity="0.6">EVERY JUDGMENT WRITTEN DOWN, OLDEST FIRST</text>
+          <text x="592" y="14" font-size="13" fill="currentColor" font-weight="600" text-anchor="end">347</text>
+          <text x="56" y="54" font-size="10" fill="currentColor" opacity="0.55" text-anchor="end">Mar/Apr</text>
+          <text x="56" y="108" font-size="10" fill="currentColor" opacity="0.55" text-anchor="end">May</text>
+          <text x="56" y="144" font-size="10" fill="currentColor" opacity="0.55" text-anchor="end">Jun</text>
+          <text x="56" y="216" font-size="10" fill="currentColor" opacity="0.55" text-anchor="end">Jul</text>
+          <text x="56" y="234" font-size="10" fill="currentColor" opacity="0.55" text-anchor="end">Aug</text>
+          <circle cx="70" cy="50" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="88" cy="50" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="106" cy="50" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="124" cy="50" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="142" cy="50" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="160" cy="50" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="178" cy="50" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="196" cy="50" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="214" cy="50" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="232" cy="50" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="250" cy="50" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="268" cy="50" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="286" cy="50" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="304" cy="50" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="322" cy="50" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="340" cy="50" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="358" cy="50" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="376" cy="50" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="394" cy="50" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="412" cy="50" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="430" cy="50" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="448" cy="50" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="466" cy="50" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="484" cy="50" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="502" cy="50" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="520" cy="50" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="538" cy="50" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="556" cy="50" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="574" cy="50" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="592" cy="50" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="70" cy="68" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="88" cy="68" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="106" cy="68" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="124" cy="68" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="142" cy="68" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="160" cy="68" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="178" cy="68" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="196" cy="68" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="214" cy="68" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="232" cy="68" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="250" cy="68" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="268" cy="68" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="286" cy="68" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="304" cy="68" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="322" cy="68" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="340" cy="68" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="358" cy="68" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="376" cy="68" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="394" cy="68" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="412" cy="68" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="430" cy="68" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="448" cy="68" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="466" cy="68" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="484" cy="68" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="502" cy="68" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="520" cy="68" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="538" cy="68" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="556" cy="68" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="574" cy="68" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="592" cy="68" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="70" cy="86" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="88" cy="86" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="106" cy="86" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="124" cy="86" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="142" cy="86" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="160" cy="86" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="178" cy="86" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="196" cy="86" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="214" cy="86" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="232" cy="86" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="250" cy="86" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="268" cy="86" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="286" cy="86" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="304" cy="86" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="322" cy="86" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="340" cy="86" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="358" cy="86" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="376" cy="86" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="394" cy="86" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="412" cy="86" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="430" cy="86" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="448" cy="86" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="466" cy="86" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="484" cy="86" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="502" cy="86" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="520" cy="86" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="538" cy="86" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="556" cy="86" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="574" cy="86" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="592" cy="86" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="70" cy="104" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="88" cy="104" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="106" cy="104" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="124" cy="104" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="142" cy="104" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="160" cy="104" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="178" cy="104" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="196" cy="104" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="214" cy="104" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="232" cy="104" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="250" cy="104" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="268" cy="104" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="286" cy="104" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="304" cy="104" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="322" cy="104" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="340" cy="104" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="358" cy="104" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="376" cy="104" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="394" cy="104" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="412" cy="104" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="430" cy="104" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="448" cy="104" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="466" cy="104" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="484" cy="104" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="502" cy="104" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="520" cy="104" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="538" cy="104" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="556" cy="104" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="574" cy="104" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="592" cy="104" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="70" cy="122" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="88" cy="122" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="106" cy="122" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="124" cy="122" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="142" cy="122" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="160" cy="122" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="178" cy="122" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="196" cy="122" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="214" cy="122" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="232" cy="122" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="250" cy="122" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="268" cy="122" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="286" cy="122" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="304" cy="122" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="322" cy="122" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="340" cy="122" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="358" cy="122" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="376" cy="122" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="394" cy="122" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="412" cy="122" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="430" cy="122" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="448" cy="122" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="466" cy="122" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="484" cy="122" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="502" cy="122" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="520" cy="122" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="538" cy="122" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="556" cy="122" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="574" cy="122" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="592" cy="122" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="70" cy="140" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="88" cy="140" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="106" cy="140" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="124" cy="140" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="142" cy="140" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="160" cy="140" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="196" cy="140" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="214" cy="140" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="232" cy="140" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="250" cy="140" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="268" cy="140" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="286" cy="140" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="304" cy="140" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="322" cy="140" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="340" cy="140" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="358" cy="140" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="376" cy="140" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="394" cy="140" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="412" cy="140" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="430" cy="140" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="448" cy="140" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="466" cy="140" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="484" cy="140" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="502" cy="140" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="520" cy="140" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="538" cy="140" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="556" cy="140" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="574" cy="140" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="592" cy="140" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="70" cy="158" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="88" cy="158" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="106" cy="158" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="124" cy="158" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="142" cy="158" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="160" cy="158" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="178" cy="158" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="196" cy="158" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="214" cy="158" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="232" cy="158" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="250" cy="158" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="268" cy="158" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="286" cy="158" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="304" cy="158" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="322" cy="158" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="340" cy="158" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="358" cy="158" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="376" cy="158" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="394" cy="158" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="412" cy="158" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="430" cy="158" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="448" cy="158" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="466" cy="158" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="484" cy="158" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="502" cy="158" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="520" cy="158" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="538" cy="158" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="556" cy="158" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="574" cy="158" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="592" cy="158" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="70" cy="176" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="88" cy="176" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="106" cy="176" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="124" cy="176" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="142" cy="176" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="160" cy="176" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="178" cy="176" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="196" cy="176" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="214" cy="176" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="232" cy="176" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="250" cy="176" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="268" cy="176" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="286" cy="176" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="304" cy="176" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="322" cy="176" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="340" cy="176" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="358" cy="176" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="376" cy="176" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="394" cy="176" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="412" cy="176" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="430" cy="176" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="448" cy="176" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="466" cy="176" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="484" cy="176" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="502" cy="176" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="520" cy="176" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="538" cy="176" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="556" cy="176" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="574" cy="176" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="592" cy="176" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="70" cy="194" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="88" cy="194" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="106" cy="194" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="124" cy="194" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="142" cy="194" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="160" cy="194" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="178" cy="194" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="196" cy="194" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="214" cy="194" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="232" cy="194" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="250" cy="194" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="268" cy="194" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="286" cy="194" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="304" cy="194" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="322" cy="194" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="340" cy="194" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="358" cy="194" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="376" cy="194" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="394" cy="194" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="412" cy="194" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="430" cy="194" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="448" cy="194" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="466" cy="194" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="484" cy="194" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="502" cy="194" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="520" cy="194" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="538" cy="194" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="556" cy="194" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="574" cy="194" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="592" cy="194" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="70" cy="212" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="88" cy="212" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="106" cy="212" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="124" cy="212" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="142" cy="212" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="160" cy="212" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="178" cy="212" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="196" cy="212" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="214" cy="212" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="232" cy="212" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="250" cy="212" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="268" cy="212" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="286" cy="212" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="304" cy="212" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="322" cy="212" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="340" cy="212" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="358" cy="212" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="376" cy="212" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="394" cy="212" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="412" cy="212" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="430" cy="212" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="448" cy="212" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="466" cy="212" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="484" cy="212" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="502" cy="212" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="520" cy="212" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="538" cy="212" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="556" cy="212" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="574" cy="212" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="592" cy="212" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="70" cy="230" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="88" cy="230" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="106" cy="230" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="124" cy="230" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="142" cy="230" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="160" cy="230" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="178" cy="230" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="196" cy="230" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="214" cy="230" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="232" cy="230" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="250" cy="230" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="268" cy="230" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="286" cy="230" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="304" cy="230" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="322" cy="230" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="340" cy="230" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="358" cy="230" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="376" cy="230" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="394" cy="230" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="412" cy="230" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="430" cy="230" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="448" cy="230" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="466" cy="230" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="484" cy="230" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="520" cy="230" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="538" cy="230" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="556" cy="230" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="574" cy="230" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="592" cy="230" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="70" cy="248" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="88" cy="248" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="106" cy="248" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="124" cy="248" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="142" cy="248" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="160" cy="248" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="178" cy="248" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="196" cy="248" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="214" cy="248" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="232" cy="248" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="250" cy="248" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="268" cy="248" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="286" cy="248" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="304" cy="248" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="322" cy="248" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="340" cy="248" r="3.1" fill="currentColor" opacity="0.34"/>
+          <circle cx="358" cy="248" r="3.1" fill="currentColor" opacity="0.34"/>
+          <g class="hd"><circle cx="178" cy="140" r="11" fill="transparent"/><circle cx="178" cy="140" r="5.5" fill="none" class="emstroke" stroke-width="1.6"/><circle cx="178" cy="140" r="3.1" class="em"/><polyline points="185,140 616,140 616,92 632,92" fill="none" class="emstroke" stroke-width="1.2" opacity="0.85"/><text x="640" y="88" font-size="11.5" font-weight="600" class="em">Lead with their pain, neutrally</text><text x="640" y="103" font-size="10" class="em" opacity="0.8">written down 2026-05-20 &#183; hover for what it says</text><g class="hd-pop"><text x="640" y="120" font-size="10" class="em" opacity="0.75">Cold outreach leads with the buyer's pain as a</text><text x="640" y="134" font-size="10" class="em" opacity="0.75">neutral fact; pivot from pain to solution once they</text><text x="640" y="148" font-size="10" class="em" opacity="0.75">respond.</text></g></g>
+          <g class="hd"><circle cx="502" cy="230" r="11" fill="transparent"/><circle cx="502" cy="230" r="5.5" fill="none" class="emstroke" stroke-width="1.6"/><circle cx="502" cy="230" r="3.1" class="em"/><polyline points="509,230 616,230 616,208 632,208" fill="none" class="emstroke" stroke-width="1.2" opacity="0.85"/><text x="640" y="204" font-size="11.5" font-weight="600" class="em">Price the aim, not the effort</text><text x="640" y="219" font-size="10" class="em" opacity="0.8">written down 2026-08-12 &#183; hover for what it says</text><g class="hd-pop"><text x="640" y="236" font-size="10" class="em" opacity="0.75">Price and pitch on knowing where to hit, not on how</text><text x="640" y="250" font-size="10" class="em" opacity="0.75">much work the swing takes; itemised effort is a</text><text x="640" y="264" font-size="10" class="em" opacity="0.75">drafting error in buyer-facing copy.</text></g></g>
+
+          <text x="0" y="292" font-size="10.5" class="em" opacity="0.9">EACH ONE DATED BY THE FAILURE THAT BOUGHT IT, AND LOADED BEFORE EVERY TURN</text>
+          <text x="592" y="292" font-size="13" font-weight="600" text-anchor="end" class="em">29</text>
+          <circle cx="70" cy="322" r="3.1" class="em"/>
+          <circle cx="88" cy="322" r="3.1" class="em"/>
+          <circle cx="106" cy="322" r="3.1" class="em"/>
+          <circle cx="124" cy="322" r="3.1" class="em"/>
+          <circle cx="142" cy="322" r="3.1" class="em"/>
+          <circle cx="160" cy="322" r="3.1" class="em"/>
+          <circle cx="178" cy="322" r="3.1" class="em"/>
+          <circle cx="196" cy="322" r="3.1" class="em"/>
+          <circle cx="214" cy="322" r="3.1" class="em"/>
+          <circle cx="232" cy="322" r="3.1" class="em"/>
+          <circle cx="250" cy="322" r="3.1" class="em"/>
+          <circle cx="268" cy="322" r="3.1" class="em"/>
+          <circle cx="286" cy="322" r="3.1" class="em"/>
+          <circle cx="304" cy="322" r="3.1" class="em"/>
+          <circle cx="322" cy="322" r="3.1" class="em"/>
+          <circle cx="340" cy="322" r="3.1" class="em"/>
+          <circle cx="358" cy="322" r="3.1" class="em"/>
+          <circle cx="376" cy="322" r="3.1" class="em"/>
+          <circle cx="394" cy="322" r="3.1" class="em"/>
+          <circle cx="412" cy="322" r="3.1" class="em"/>
+          <circle cx="430" cy="322" r="3.1" class="em"/>
+          <circle cx="448" cy="322" r="3.1" class="em"/>
+          <circle cx="466" cy="322" r="3.1" class="em"/>
+          <circle cx="484" cy="322" r="3.1" class="em"/>
+          <circle cx="502" cy="322" r="3.1" class="em"/>
+          <circle cx="520" cy="322" r="3.1" class="em"/>
+          <circle cx="538" cy="322" r="3.1" class="em"/>
+          <circle cx="556" cy="322" r="3.1" class="em"/>
+          <circle cx="574" cy="322" r="3.1" class="em"/>
+
+          <line x1="0" y1="350" x2="900" y2="350" stroke="currentColor" stroke-width="1" opacity="0.2"/>
+          <text x="0" y="370" font-size="11.5" fill="currentColor" opacity="0.9">If every one of these had earned a rule, the rule set would be too big to load, and I would obey none of it. About a third of the twenty-nine also refuse.</text>
+        </g>
+      </svg>
+      <figcaption>Every dot is a real file, placed in the order it was written, 2026-03-23 to 2026-08-24. The two ringed ones are the practices named above, three months apart, and hovering either shows what that file actually says. <strong>The rows are counted separately on purpose:</strong> the twenty-nine are not twenty-nine of the three hundred and forty-seven, they live elsewhere, and drawing them as a highlighted subset would claim a lineage the record does not support.</figcaption>
+    </figure>
+
+    <div style="max-width:var(--measure)">
+      <ul class="beats">
+        <li class="q"><strong>A failure is not a tier on this ladder. It is the thing that pushes one practice up.</strong></li>
+      </ul>
+      <p class="line">The day a practice fails and the failure costs something, it gets a date. That is the whole promotion.</p>
+    </div>
+
+    <hr class="tierrule">
+    <div style="max-width:var(--measure)">
+      <h3><span class="tiernum">Tier 2</span> A rule is a practice that failed, with the date still on it</h3>
+      <p class="lede">Twenty-nine of them load before I write a line. Every one names the incident that bought it, so I can argue with the rule by arguing with the incident. <strong>Here are five.</strong></p>
+      
+    </div>
+
+        <div class="tw keeppoint">
+      <table>
+        <thead><tr><th style="width:44%">A rule that loads every turn</th><th>What bought it</th></tr></thead>
+        <tbody>
+          <tr><td>Never infer where I worked from companies I use as analogies</td><td>A false employment claim reached my own website</td></tr>
+          <tr><td>A claim is verified against the whole source, or it is not verified</td><td>Twenty emails self-certified clean, five were fabricated</td></tr>
+          <tr><td>A check whose healthy output looks like its broken output needs something that can go red</td><td>Five incidents in forty-eight hours, one introduced while fixing the other four</td></tr>
+                                                                                <tr><td>Internal identifiers never appear on anything I screen-share or send</td><td>Yesterday. Three leaks on this page, none caught by tooling</td></tr>
+          <tr><td>At least one full day a week with no session at all</td><td>Not technical, and the only one on this list that protects me rather than the work</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+        <div style="max-width:var(--measure)">
+      <h4><span class="tiernum">Q1</span> The judgment I made over and over and never wrote down</h4>
+      <ul class="beats">
+        <li><strong>Should a new rule stop me, or just tell me?</strong>
+          <ul><li>I decided that case by case for months and never wrote it down, so I got it wrong in both directions. Rules that should have blocked only warned, and warnings I could not skip blocked work worth doing.</li></ul>
+        </li>
+        <li class="q"><strong>It broke in May.</strong> A rule I proposed would have blocked three of the best sessions this company has had.</li>
+        <li><strong>Now it is one sentence, and it decides the shape of everything written since.</strong></li>
+      </ul>
+      <p class="line">"If I want to do this anyway, should the system stop me?" Yes means it fails closed. No means it shows the cost and gets out of the way.</p>
+      <p class="line">"Founders need guardrails, and pushback, but when they push through those pushbacks, sometimes you get the novel stuff."</p>
+      
+    </div>
+
+    <div style="max-width:var(--measure)">
+      <h4>And how twenty-nine stays twenty-nine</h4>
+      <ul class="beats">
+        <li><strong>They get eaten by better ones.</strong> When several incidents turn out to be one shape, the shape replaces them rather than joining them.</li>
+      </ul>
+    </div>
+
+        <figure>
+      <svg viewBox="0 0 880 268" role="img" aria-label="Five separate incidents in five different subsystems, each of which looked healthy while broken, converge into one principle. Five rules avoided, one written, and it catches shapes none of those five would have named.">
+        <defs>
+          <marker id="cv" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <polygon points="0,1 9,5 0,9" fill="currentColor"/>
+          </marker>
+        </defs>
+        <g fill="currentColor" font-family="IBM Plex Sans, sans-serif" font-size="11">
+          <text x="0" y="12" font-size="10.5" opacity="0.6">FIVE INCIDENTS &#183; FORTY-EIGHT HOURS &#183; FIVE SUBSYSTEMS &#183; ALL FIVE LOOKED HEALTHY WHILE BROKEN</text>
+
+          <rect x="0" y="26" width="150" height="54" fill="none" stroke="currentColor" stroke-width="1" opacity="0.75"/>
+          <text x="12" y="45" font-size="11.5" font-weight="600">a detector</text>
+          <text x="12" y="63" font-size="10" opacity="0.75">fewer findings</text>
+
+          <rect x="172" y="26" width="150" height="54" fill="none" stroke="currentColor" stroke-width="1" opacity="0.75"/>
+          <text x="184" y="45" font-size="11.5" font-weight="600">an auth path</text>
+          <text x="184" y="63" font-size="10" opacity="0.75">login says hello</text>
+
+          <rect x="344" y="26" width="150" height="54" fill="none" stroke="currentColor" stroke-width="1" opacity="0.75"/>
+          <text x="356" y="45" font-size="11.5" font-weight="600">a git hook</text>
+          <text x="356" y="63" font-size="10" opacity="0.75">exits successfully</text>
+
+          <rect x="516" y="26" width="150" height="54" fill="none" stroke="currentColor" stroke-width="1" opacity="0.75"/>
+          <text x="528" y="45" font-size="11.5" font-weight="600">a shell script</text>
+          <text x="528" y="63" font-size="10" opacity="0.75">prints nothing</text>
+
+          <rect x="688" y="26" width="150" height="54" fill="none" stroke="currentColor" stroke-width="1" opacity="0.75"/>
+          <text x="700" y="45" font-size="11.5" font-weight="600">an unbuilt audit</text>
+          <text x="700" y="63" font-size="10" opacity="0.75">zero findings</text>
+
+          <polyline points="75,80 75,112 440,112 440,140" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.6"/>
+          <polyline points="247,80 247,112" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.6"/>
+          <polyline points="419,80 419,112" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.6"/>
+          <polyline points="591,80 591,112" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.6"/>
+          <polyline points="763,80 763,112 440,112" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.6"/>
+          <line x1="440" y1="112" x2="440" y2="142" stroke-width="1.6" class="emstroke" marker-end="url(#cv)"/>
+
+          <rect x="96" y="150" width="688" height="58" fill="none" stroke-width="2" class="emstroke"/>
+          <text x="440" y="174" text-anchor="middle" font-size="12.5" font-weight="600" class="em">A mechanism whose healthy output looks exactly like its broken output</text>
+          <text x="440" y="194" text-anchor="middle" font-size="12.5" font-weight="600" class="em">needs something attached to it that can go red</text>
+
+          <text x="0" y="240" font-size="11.5" opacity="0.9">Five rules avoided, one written.</text>
+          <text x="0" y="258" font-size="11" opacity="0.75">And it names shapes none of those five would have covered, which is the part that keeps twenty-nine from becoming two hundred.</text>
+        </g>
+      </svg>
+      <figcaption>Five incidents in five different subsystems, each of which looked healthy while broken. What they had in common outlived all five.</figcaption>
+    </figure>
+
+    <hr class="tierrule">
+    <div style="max-width:var(--measure)">
+      <h3><span class="tiernum">Tier 3</span> A principle is what four rules turn out to have been all along</h3>
+      <p class="lede">The box at the bottom of that diagram is a principle. <strong>Nobody sat down to write it.</strong> It was the only thing five unrelated incidents had in common.</p>
+      <ul class="beats">
+        <li><strong>It covers cases no rule was written for, which is the entire point.</strong>
+          <ul><li>Five rules would each have named one subsystem. The principle names the shape, so it fires on the sixth case nobody had seen yet.</li></ul>
+        </li>
+        <li class="q"><strong>A principle cannot have a gate.</strong> It works by being loaded before I write anything, not by refusing after.</li>
+      </ul>
+    </div>
+
+    <div style="max-width:var(--measure)">
+      <ul class="beats">
+        <li class="q"><strong>Neither of these was written on purpose.</strong> Both are what was left over after several rules turned out to be saying the same thing in different subsystems.</li>
+      </ul>
+    </div>
+
+    <div class="princ">
+      <div class="p">
+        <span class="lbl">Principle one &middot; what five incidents had in common</span>
+        <p class="st">A mechanism whose healthy output looks exactly like its broken output needs something attached to it that can go red.</p>
+        <p class="sub">The box at the bottom of the diagram above. It now fires on shapes none of those five rules would have named, which is the whole reason it is worth more than the five.</p>
+        <details class="pdet"><summary>What it actually says</summary>
+          <p><b>The test.</b> Of any guard, gate, filter, detector or probe: if this were broken right now, what would its output look like? If the answer is "the same as when it is working", it needs a witness.</p>
+          <p><b>Three states, and all three print nothing.</b> Ran and found nothing, which is genuine health. Ran but examined nothing, meaning wrong population or empty query. Did not run at all. Only the first is good news.</p>
+          <p><b>A witness</b> is a count of what it examined, kept across runs, that can drop. Read it as a trend, not a zero check: four thousand falling to three thousand two hundred never trips an alarm and is exactly how the detector that produced this rule failed.</p></details>
+      </div>
+      <div class="p">
+        <span class="lbl">Principle two &middot; what this entire block is built on</span>
+        <p class="st">Enforcement is the substance of a rule. The text is only the specification of the enforcement.</p>
+        <p class="sub">A rule nothing enforces is a reminder, and reminders decay. Every gate further down this page descends from it, and it is the closest thing here to a thirteenth commandment.</p>
+        <details class="pdet"><summary>What it actually says</summary>
+          <p><b>The test.</b> If this rule were violated right now, would any tool catch it? Yes and it fails closed is load-bearing. Yes but it only warns is partial. No, only a human would notice, is advisory.</p>
+          <p><b>The correction is never "be more careful."</b> It is "why didn't the tool catch this, and what needs to change." If the answer is that the tool would have to be built, decide whether to build it or admit the rule is advisory and mark it so.</p>
+          <p><b>The fork.</b> Block when I could not reliably catch it myself. Surface and get out of the way when pushing through is the point, because a judgment rule made mechanical removes the override that produces the interesting work.</p></details>
+      </div>
+    </div>
+
+<figure>
+      <svg viewBox="0 0 900 274" role="img" aria-label="A timeline from April to August 2026. Sixteen rules gained enforcement, twelve of them in the first seven weeks. The two principles emerged at either end of that period: enforcement is the substance of a rule in April, and healthy output must not look like broken output at the end of July.">
+        <g font-family="IBM Plex Sans, sans-serif">
+          <text x="0" y="14" font-size="10.5" fill="currentColor" opacity="0.6">EACH MARK IS A RULE THE DAY IT STOPPED BEING ADVICE AND STARTED REFUSING THINGS</text>
+          <line x1="30" y1="196" x2="30" y2="106" stroke-width="1.5" class="emstroke" stroke-dasharray="3 3"/>
+          <circle cx="30" cy="100" r="4.5" class="em"/>
+          <text x="44" y="92" font-size="11.5" font-weight="600" class="em" text-anchor="start">Enforcement is the substance of a rule</text>
+          <text x="44" y="107" font-size="10" class="em" opacity="0.8" text-anchor="start">principle 1, 2026-04-13</text>
+          <line x1="718" y1="196" x2="718" y2="70" stroke-width="1.5" class="emstroke" stroke-dasharray="3 3"/>
+          <circle cx="718" cy="64" r="4.5" class="em"/>
+          <text x="704" y="56" font-size="11.5" font-weight="600" class="em" text-anchor="end">A mechanism needs a witness that can go red</text>
+          <text x="704" y="71" font-size="10" class="em" opacity="0.8" text-anchor="end">principle 2, 2026-07-31</text>
+          <line x1="30" y1="196" x2="870" y2="196" stroke="currentColor" stroke-width="1" opacity="0.35"/>
+          <line x1="30" y1="196" x2="30" y2="218" stroke="currentColor" stroke-width="2.5" opacity="0.75"/>
+          <line x1="36" y1="196" x2="36" y2="218" stroke="currentColor" stroke-width="2.5" opacity="0.75"/>
+          <line x1="42" y1="196" x2="42" y2="218" stroke="currentColor" stroke-width="2.5" opacity="0.75"/>
+          <line x1="131" y1="196" x2="131" y2="218" stroke="currentColor" stroke-width="2.5" opacity="0.75"/>
+          <line x1="163" y1="196" x2="163" y2="218" stroke="currentColor" stroke-width="2.5" opacity="0.75"/>
+          <line x1="175" y1="196" x2="175" y2="218" stroke="currentColor" stroke-width="2.5" opacity="0.75"/>
+          <line x1="188" y1="196" x2="188" y2="218" stroke="currentColor" stroke-width="2.5" opacity="0.75"/>
+          <line x1="207" y1="196" x2="207" y2="218" stroke="currentColor" stroke-width="2.5" opacity="0.75"/>
+          <line x1="264" y1="196" x2="264" y2="218" stroke="currentColor" stroke-width="2.5" opacity="0.75"/>
+          <line x1="270" y1="196" x2="270" y2="218" stroke="currentColor" stroke-width="2.5" opacity="0.75"/>
+          <line x1="308" y1="196" x2="308" y2="218" stroke="currentColor" stroke-width="2.5" opacity="0.75"/>
+          <line x1="314" y1="196" x2="314" y2="218" stroke="currentColor" stroke-width="2.5" opacity="0.75"/>
+          <line x1="396" y1="196" x2="396" y2="218" stroke="currentColor" stroke-width="2.5" opacity="0.75"/>
+          <line x1="718" y1="196" x2="718" y2="218" stroke="currentColor" stroke-width="2.5" opacity="0.75"/>
+          <line x1="851" y1="196" x2="851" y2="218" stroke="currentColor" stroke-width="2.5" opacity="0.75"/>
+          <line x1="857" y1="196" x2="857" y2="218" stroke="currentColor" stroke-width="2.5" opacity="0.75"/>
+          <text x="30" y="240" font-size="10.5" fill="currentColor" opacity="0.55">April</text>
+          <text x="144" y="240" font-size="10.5" fill="currentColor" opacity="0.55">May</text>
+          <text x="339" y="240" font-size="10.5" fill="currentColor" opacity="0.55">June</text>
+          <text x="529" y="240" font-size="10.5" fill="currentColor" opacity="0.55">July</text>
+          <text x="725" y="240" font-size="10.5" fill="currentColor" opacity="0.55">August</text>
+          <line x1="0" y1="252" x2="900" y2="252" stroke="currentColor" stroke-width="1" opacity="0.2"/>
+          <text x="0" y="270" font-size="11.5" fill="currentColor" opacity="0.9">Sixteen rules have teeth. Twelve of them arrived in the first seven weeks, which is when I was making the mistakes that bought them.</text>
+        </g>
+      </svg>
+      <figcaption>Both principles were named on days that already had rule promotions on them, which is the point: a principle is what you notice while writing the fourth rule of a shape, not something you sit down to invent.</figcaption>
+    </figure>
+
+    <div style="max-width:var(--measure)">
+      
+    </div>
+
+        <div class="cuttable" data-cut="3" data-label="The deploy-key worked example">
+    <p>One of those five incidents, made concrete.</p>
+
+    <figure>
+      <svg viewBox="0 0 800 208" role="img" aria-label="A repository access key was moved to a new server. Testing the login reported success. Every real use of it failed with repository not found. The check was rebuilt to require proving it can actually read something, not just log in.">
+        <defs>
+          <marker id="ar4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <polygon points="0,1 9,5 0,9" fill="currentColor"/>
+          </marker>
+        </defs>
+        <g fill="currentColor" font-family="IBM Plex Mono, monospace" font-size="12">
+          <text x="0" y="14" font-size="11" opacity="0.65">WHAT THE CHECK REPORTED</text>
+          <rect x="0" y="28" width="356" height="70" fill="none" stroke="currentColor" stroke-width="1" opacity="0.4"/>
+          <text x="14" y="52" font-size="13">"Hi, you're in."</text>
+          <text x="14" y="74" font-size="11" opacity="0.7">"ssh -T", the standard way to test a key</text>
+
+          <text x="424" y="14" font-size="11" opacity="0.65">WHAT WAS ACTUALLY TRUE</text>
+          <rect x="424" y="28" width="356" height="70" fill="none" class="emstroke" stroke-width="1" opacity="0.6"/>
+          <text x="438" y="52" font-size="13" class="em">"Repository not found."</text>
+          <text x="438" y="74" font-size="11" class="em" opacity="0.85">every actual fetch, from the moment the key was moved</text>
+
+          <line x1="0" y1="122" x2="800" y2="122" stroke="currentColor" stroke-width="1" opacity="0.22"/>
+
+          <text x="0" y="150" font-size="12" opacity="0.85">The key could log in and read nothing. Logging in was never the question that mattered.</text>
+          <line x1="0" y1="168" x2="380" y2="168" stroke="currentColor" stroke-width="1.4" marker-end="url(#ar4)"/>
+          <text x="0" y="192" font-size="12" opacity="0.85">Fixed: the check now has to prove it can read something real, not just log in.</text>
+        </g>
+      </svg>
+      <figcaption>One of five incidents found within a single day, behind the rule that a healthy check and a broken one must never look the same. The key authenticated cleanly and had no grant, so a working login and a broken one produced the identical result.</figcaption>
+    </figure>
+    </div>
+
+    <hr class="tierrule">
+    <div style="max-width:var(--measure)">
+      <h3><span class="tiernum">Tier 4</span> Twelve commandments, and they exist to break ties</h3>
+      <p class="lede">When two rules disagree, something has to settle it. <strong>These do.</strong> They are also what a novel situation gets read against when no rule applies at all.</p>
+      <ul class="beats">
+        <li><strong>Changing one takes a written argument and a review by a different model.</strong> That expense is deliberate. A tie-breaker I can edit casually is not a tie-breaker.</li>
+      </ul>
+      
+      <ol class="cmds">
+        <li class="lead"><span class="n">I</span><span>Every claim traces to a source.</span></li>
+        <li><span class="n">II</span><span>Guard the trust.</span></li>
+        <li><span class="n">III</span><span>The system runs without you.</span></li>
+        <li><span class="n">IV</span><span>Market signal outranks internal signal.</span></li>
+        <li><span class="n">V</span><span>Ship, then compound.</span></li>
+        <li><span class="n">VI</span><span>Match the weight of the solution to the weight of the problem.</span></li>
+        <li><span class="n">VII</span><span>Diagnose before you prescribe.</span></li>
+        <li><span class="n">VIII</span><span>Fix at the most general level the evidence supports, but no further.</span></li>
+        <li><span class="n">IX</span><span>Be wrong fast.</span></li>
+        <li><span class="n">X</span><span>Capture what you learn or lose it.</span></li>
+        <li><span class="n">XI</span><span>Every repeated judgment is a failure of encoding.</span></li>
+        <li><span class="n">XII</span><span>The work compounds.</span></li>
+      </ol>
+      <div style="max-width:var(--measure)">
+        <ul class="beats" style="margin-top:20px">
+          <li class="q"><strong>Eleven is the one this whole hour is about.</strong> If I am still making a decision the system should be making, that is a missing rule, not a necessary human input.</li>
+        </ul>
+      </div>
+
+      <div class="cmdfeature">
+        <div class="cf-head"><span class="cf-n">I</span><span class="cf-t">Every claim traces to a source.</span></div>
+        <p class="cf-body">If it leaves the building, it is verified or it is labelled. No exceptions for "illustrative" or "realistic." Verify before you act on assumptions, about data, about system state, about what day it is.</p>
+        <p class="cf-sub"><b>What it settles.</b> Whether a number can be said out loud. Whether a second model has to read something before it ships. Whether a status comes from the system or from a document describing the system. Whether the day of the week gets checked before something dated goes out. Seven separate rules answer to it, and when two of them disagree this is what breaks the tie.</p>
+        <p class="cf-sub"><b>This page is an instance of it.</b> Everything on it traces to a file, a record or a transcript. Where something could not be traced, it came off the page rather than being softened.</p>
+      </div>
+    </div>
+
+    <hr class="tierrule">
+    <div style="max-width:var(--measure)">
+      <h3><span class="tiernum">The teeth</span> A gate is the subset of rules that refuse</h3>
+      <p class="lede">Only rules can have one. A gate needs something concrete enough to check, <strong>which a principle deliberately is not.</strong></p>
+
+      
+      
+    </div>
+
+    <div class="cuttable" data-cut="1" data-label="Where the gates run, the five surfaces">
+          <div class="tw">
+      <table>
+        <thead><tr><th style="width:22%">Surface</th><th style="width:26%">Fires</th><th>What it can refuse, and how to get past it</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>Tool interception</strong><br><span style="font-size:.85rem;color:var(--muted)">6 matchers</span></td>
+            <td>Before a tool call runs at all</td>
+            <td>The strongest one, because the action never happens. Every mail-composing tool my partner uses is matched, and a failing body denies the call. <strong>Nothing has to remember to run it</strong>, which is the property the fifth hard-wrap instance bought.</td>
+          </tr>
+          <tr>
+            <td><strong>Inside the function</strong><br><span style="font-size:.85rem;color:var(--muted)">fail-closed</span></td>
+            <td>At the moment of composing or writing</td>
+            <td>Raises rather than returns, so every caller is refused, not just the careful ones. Sending mail and writing parcel data both work this way. Bypassing takes an explicit argument, and the bypass is itself logged.</td>
+          </tr>
+          <tr>
+            <td><strong>A spend ceiling</strong><br><span style="font-size:.85rem;color:var(--muted)">daily, per service</span></td>
+            <td>Before any model call that costs money</td>
+            <td>Not about correctness at all. A hard daily ceiling, dropping to two dollars on a laptop unless I say otherwise, and work reserves budget before it runs rather than discovering afterwards that it overspent. <strong>This is the one that fired on me while I was building this page.</strong></td>
+          </tr>
+          <tr>
+            <td><strong>Pre-commit</strong><br><span style="font-size:.85rem;color:var(--muted)">26 checks</span></td>
+            <td>On every commit, locally</td>
+            <td>Ledger freshness, session collisions, decision-shard shape, derivative coherence, database access routing, timeout budgets. Escapable with one flag, which is why it is not the last line.</td>
+          </tr>
+          <tr>
+            <td><strong>Pre-push, then CI</strong><br><span style="font-size:.85rem;color:var(--muted)">6 blocking paths</span></td>
+            <td>On push, then again on the server</td>
+            <td>Code health, the external-content scan, municipality schema, agent-report coverage. <strong>CI is the one I cannot skip</strong>, because it does not run on my machine. That is the whole reason it exists.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    </div>
+
+        <div class="cuttable" data-cut="3" data-label="The bio gate, live">
+      <div style="max-width:var(--measure)"><p><strong>One of them, live.</strong></p></div>
+      <div class="demo">
+      <div class="demo-hd"><b>Demo A</b> <span>The claim that reached my website once and cannot now</span></div>
+      <div class="cmd">check_external_content(
+  "Matt led engineering and data leadership at [TWO COMPANIES
+   THIS PROJECT USES AS BUSINESS-MODEL ANALOGIES]
+   before founding Municipal Alpha."
+)</div>
+      <div class="out">BLOCK: '[COMPANY A]' mentioned without analogy framing. Matt did NOT work at
+       [COMPANY A]. See business/bio.md 'What Matt did NOT do' section.
+BLOCK: '[COMPANY B]' mentioned without analogy framing. Matt did NOT work at
+       [COMPANY B]. See business/bio.md 'What Matt did NOT do' section.</div>
+    </div><ul class="beats">
+        <li><strong>It invented that out of two true things sitting next to each other, and it reached my website.</strong>
+          <ul>
+            <li>Those two companies are analogies I use constantly, and I know people who worked at them, so it concluded I had.</li>
+          </ul>
+        </li>
+        <li class="q"><strong>Now the push fails.</strong>
+          <ul>
+            <li>Same claim, same words, but the check runs before code can ship, so it cannot reach the site at all.</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div class="cuttable" data-cut="1" data-label="The override audit log">
+      <div style="max-width:var(--measure)"><p>Which raises the only question that matters about a gate. <strong>How do you know it was not switched off?</strong></p></div>
+      <div class="demo">
+      <div class="demo-hd"><b>Demo B′</b> <span>Every override on the record. Last two rows, yesterday</span></div>
+      <div class="cmd">tail -2 storage/gmail_bypass_audit.jsonl</div>
+      <div class="out plain">{"ts": "2026-08-24T13:34:58Z", "path": "send_email",
+ "to": "&lt;customer address redacted for this slide&gt;",
+ "subject": "&lt;town&gt;, coverage note, week of 24 August",
+ "body_hash": "sha256:76ce6e0e…", "skip_checks": ["rate_limit", "tracked_link"],
+ "caller_file": …, "caller_line": … }</div>
+    </div>
+      <div style="max-width:var(--measure)">
+        <ul class="beats">
+          <li>The recipient and subject are masked on this slide only.</li>
+          <li><strong>The 17 August send to you also carried a deliberate override, logged.</strong>
+            <ul><li>Twenty-seven of the recipients had no inbound history, which is what the recipient check exists to stop. I overrode it because they were the invitees to a session I was speaking at.</li></ul>
+          </li>
+          <li class="q"><strong>The machine refuses, a human overrides on the record, and the record is what makes it a decision instead of a habit.</strong></li>
+        </ul>
+      </div>
+    </div>
+
+    <div style="max-width:var(--measure)">
+      <div class="say keeppoint">
+        <span class="k">The gate story from building this page</span>
+        <p><strong>The adversarial review is a second model reading the whole page, and every run of it costs money.</strong> I ran it eleven times today. <strong>The twelfth refused.</strong> The review has its own daily budget, separate from everything else, and it was spent.</p>
+        <p><strong>I could have pushed through, and the mechanism for that is deliberately not a shrug.</strong> Raise the review's budget, or lift the lower ceiling this laptop runs under. Each is one explicit act, and each leaves a mark. What I could <em>not</em> have done is get past the twenty-dollar-a-day hard ceiling sitting above both, which has no override at all.</p>
+        <p class="q">A gate about <em>money</em> rather than truth, and it made me tell you the review did not re-run instead of quietly saying it passed.</p>
+      </div>
+    </div>
+
+    <hr class="tierrule">
+    <div class="cuttable" data-cut="2" data-label="The four adversarial triggers">
+    <div style="max-width:var(--measure)">
+      <h3><span class="tiernum">Q3</span> Where a second model comes in, and when</h3>
+      <p class="lede">Gates catch the classes somebody already encoded. <strong>They cannot tell me an argument is weak, or that a number measures the wrong thing.</strong></p>
+      <ul class="beats">
+        <li><strong>It does not run on everything. Four triggers, and they share one property.</strong> If this is wrong, the error survives past the moment I made it.</li>
+      </ul>
+    </div>
+
+        <figure>
+      <svg viewBox="0 0 900 316" role="img" aria-label="A vertical barrier marks the moment work is made. Four kinds of work send errors past that moment, ordinary work does not. Copy that leaves the building is found by a buyer before I find it. A plan whose mistakes compound is wrong every day until someone notices. Code from outside runs where mine never does. A rule about to be enforced has no reviewer but me, so its error can survive indefinitely.">
+        <defs>
+          <marker id="rv" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <polygon points="0,1 9,5 0,9" class="em"/>
+          </marker>
+        </defs>
+        <g fill="currentColor" font-family="IBM Plex Sans, sans-serif" font-size="11">
+
+          <text x="308" y="18" font-size="10.5" class="em" opacity="0.9">A SECOND MODEL ATTACKS IT HERE</text>
+          <line x1="300" y1="28" x2="300" y2="252" stroke-width="2.5" class="emstroke"/>
+          <text x="292" y="18" text-anchor="end" font-size="10.5" opacity="0.6">THE MOMENT I MAKE IT</text>
+
+          <text x="292" y="66" text-anchor="end" font-size="11.5">Anything leaving the building</text>
+          <line x1="308" y1="62" x2="516" y2="62" stroke-width="1.5" class="emstroke" marker-end="url(#rv)"/>
+          <text x="528" y="66" font-size="11" opacity="0.85">a buyer finds it before I do</text>
+
+          <text x="292" y="122" text-anchor="end" font-size="11.5">A plan whose mistakes compound</text>
+          <line x1="308" y1="118" x2="694" y2="118" stroke-width="1.5" class="emstroke" marker-end="url(#rv)"/>
+          <text x="706" y="122" font-size="11" opacity="0.85">wrong every day until noticed</text>
+
+          <text x="292" y="178" text-anchor="end" font-size="11.5">Code from outside</text>
+          <line x1="308" y1="174" x2="596" y2="174" stroke-width="1.5" class="emstroke" marker-end="url(#rv)"/>
+          <text x="608" y="178" font-size="11" opacity="0.85">runs where mine never does</text>
+
+          <text x="292" y="234" text-anchor="end" font-size="11.5">A rule about to get teeth</text>
+          <line x1="308" y1="230" x2="756" y2="230" stroke-width="1.5" class="emstroke" marker-end="url(#rv)"/>
+          <text x="768" y="234" font-size="11" opacity="0.85">nobody finds it but me</text>
+
+          <line x1="0" y1="272" x2="900" y2="272" stroke="currentColor" stroke-width="1" opacity="0.2"/>
+          <text x="0" y="294" font-size="11.5" opacity="0.85">Everything else I do sits to the left of that line. The error dies when I notice it, so no second model runs.</text>
+        </g>
+      </svg>
+      <figcaption>The four triggers are not a list of important things, they are the work whose errors outlive the moment I made them. The arrow length is how long the error survives, and the last one is the worst because the only reviewer is me.</figcaption>
+    </figure>
+
+    <div style="max-width:var(--measure)">
+      
+    </div>
+    </div>
+
+    <hr class="tierrule">
+    <div style="max-width:var(--measure)">
+      <h3><span class="tiernum">All of it</span> One failure moving through the whole ladder</h3>
+      
+    </div>
+
+        <figure>
+      <svg viewBox="0 0 860 300" role="img" aria-label="A failure is captured by the system as a dated rule the same day, with no filing step. The rule then forks: if I could miss the violation myself it becomes a gate that refuses, and if pushing through is the point it becomes a rule that only shows the cost. Both feed back to the next failure.">
+        <defs>
+          <marker id="ar2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <polygon points="0,1 9,5 0,9" fill="currentColor"/>
+          </marker>
+          <marker id="ar3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <polygon points="0,1 9,5 0,9" class="em"/>
+          </marker>
+        </defs>
+        <g fill="currentColor" font-family="IBM Plex Sans, sans-serif" font-size="12">
+
+          <rect x="0" y="120" width="124" height="46" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <text x="62" y="139" text-anchor="middle" font-size="12.5">Something</text>
+          <text x="62" y="156" text-anchor="middle" font-size="12.5">goes wrong</text>
+
+          <line x1="124" y1="143" x2="164" y2="143" stroke="currentColor" stroke-width="1.5" marker-end="url(#ar2)"/>
+          <text x="144" y="110" text-anchor="middle" font-size="10.5" opacity="0.9">same day</text>
+
+          <rect x="170" y="120" width="128" height="46" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <text x="234" y="139" text-anchor="middle" font-size="12.5">Dated rule,</text>
+          <text x="234" y="156" text-anchor="middle" font-size="12.5">logged, not filed</text>
+
+          <line x1="298" y1="143" x2="330" y2="143" stroke="currentColor" stroke-width="1.5"/>
+          <circle cx="336" cy="143" r="5.5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <text x="316" y="182" text-anchor="middle" font-size="10.5" opacity="0.62">CAN I MISS THIS MYSELF?</text>
+
+          <polyline points="341,140 400,140 400,66 444,66" fill="none" stroke="currentColor" stroke-width="1.5" marker-end="url(#ar2)"/>
+          <text x="408" y="112" font-size="10.5" opacity="0.75">yes, I will miss it</text>
+
+          <polyline points="341,146 400,146 400,224 444,224" fill="none" stroke="currentColor" stroke-width="1.5" marker-end="url(#ar2)"/>
+          <text x="408" y="194" font-size="10.5" opacity="0.75">no, pushing through is the point</text>
+
+          <rect x="450" y="42" width="176" height="48" fill="none" class="emstroke" stroke-width="1.5"/>
+          <text x="538" y="62" text-anchor="middle" font-size="12.5" class="em">A gate that refuses</text>
+          <text x="538" y="79" text-anchor="middle" font-size="11" class="em">no way past it</text>
+          <line x1="626" y1="66" x2="664" y2="66" class="emstroke" stroke-width="1.5" marker-end="url(#ar3)"/>
+          <text x="672" y="62" font-size="11.5" class="em">The send</text>
+          <text x="672" y="78" font-size="11.5" class="em">will not send.</text>
+
+          <rect x="450" y="200" width="176" height="48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="5 3"/>
+          <text x="538" y="220" text-anchor="middle" font-size="12.5">A rule that only asks</text>
+          <text x="538" y="237" text-anchor="middle" font-size="11" opacity="0.85">never blocks</text>
+          <line x1="626" y1="224" x2="664" y2="224" stroke="currentColor" stroke-width="1.5" marker-end="url(#ar2)"/>
+          <text x="672" y="220" font-size="11.5">I see the cost</text>
+          <text x="672" y="236" font-size="11.5">and decide.</text>
+
+          <polyline points="538,248 538,274 62,274 62,166" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="3 3" opacity="0.5" marker-end="url(#ar2)"/>
+          <text x="300" y="291" text-anchor="middle" font-size="10.5" opacity="0.68">every time I override, it is written down, and I read that list at the next failure</text>
+        </g>
+      </svg>
+      <figcaption>One failure, all the way through. It arrives on the left, gets dated the same day, and hits the fork. The failure itself is not a tier, it is the force that pushes something up one.</figcaption>
+    </figure>
+
+      </div>
+</section>
+
+<section id="broke">
+  <div class="sec-head">
+    <div class="clock">12:23<span>7 min</span></div>
+    <div>
+      <p class="qlabel">Answers Q3</p>
+      <h2>The failure that produced the loop, and it ran again yesterday</h2>
+    </div>
+  </div>
+  <div class="sec-body wide">
+    <div style="max-width:var(--measure)">
+      <p class="lede">A system cannot check its own work. That is the failure worth telling, because the fix is the only thing on this page that catches what no gate can.</p>
+      <ul class="beats">
+        <li class="q"><strong>Twenty outbound emails, checked by the layer that wrote them, reported nineteen of nineteen clean. An independent check found five fabrications, and the self-check had scored those five highest.</strong>
+          <ul><li>It did not miss the errors so much as launder them. A rumour being knocked down and a live debate read identically to something checking for keywords, so confidence ran highest on the worst ones.</li></ul>
+        </li>
+        <li><strong>So now a second model attacks the work, and it is pointed at the assumption rather than the code.</strong> Here is what that did yesterday.</li>
+      </ul>
+      
+    </div>
+
+<figure>
+      <svg viewBox="0 0 900 250" role="img" aria-label="A rule I proposed is challenged by a second model, which refuses the premise rather than finding a bug. Measuring against the whole corpus falsifies it. Narrowing and re-measuring produces a version that ships. The loop can also end in the rule being abandoned.">
+        <defs>
+          <marker id="lp" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <polygon points="0,1 9,5 0,9" fill="currentColor"/>
+          </marker>
+          <marker id="lpr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <polygon points="0,1 9,5 0,9" class="em"/>
+          </marker>
+        </defs>
+        <g fill="currentColor" font-family="IBM Plex Sans, sans-serif" font-size="11">
+          <rect x="0" y="54" width="150" height="52" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <text x="75" y="76" text-anchor="middle" font-size="12">I write a rule</text>
+          <text x="75" y="93" text-anchor="middle" font-size="10" opacity="0.75">dates from filenames</text>
+
+          <line x1="150" y1="80" x2="196" y2="80" stroke="currentColor" stroke-width="1.5" marker-end="url(#lp)"/>
+
+          <rect x="202" y="54" width="164" height="52" fill="none" stroke-width="1.5" class="emstroke"/>
+          <text x="284" y="76" text-anchor="middle" font-size="12" class="em">A second model</text>
+          <text x="284" y="93" text-anchor="middle" font-size="10" class="em" opacity="0.9">refuses the premise</text>
+
+          <line x1="366" y1="80" x2="412" y2="80" stroke-width="1.5" class="emstroke" marker-end="url(#lpr)"/>
+          <text x="389" y="70" text-anchor="middle" font-size="9.5" opacity="0.7">prove it</text>
+
+          <rect x="418" y="54" width="164" height="52" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <text x="500" y="76" text-anchor="middle" font-size="12">I measure it</text>
+          <text x="500" y="93" text-anchor="middle" font-size="10" opacity="0.75">against the whole corpus</text>
+
+          <text x="500" y="30" text-anchor="middle" font-size="10.5" opacity="0.65">THE STEP THAT DOES THE WORK</text>
+          <line x1="500" y1="36" x2="500" y2="50" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+
+          <polyline points="582,68 640,68 640,40 700,40" fill="none" stroke-width="1.5" class="emstroke" marker-end="url(#lpr)"/>
+          <text x="592" y="60" font-size="9.5" class="em" opacity="0.85">12% wrong</text>
+          <text x="708" y="36" font-size="11.5" class="em">It killed my rule</text>
+          <text x="708" y="52" font-size="10" opacity="0.75">as written</text>
+
+          <polyline points="582,92 640,92 640,124 700,124" fill="none" stroke="currentColor" stroke-width="1.5" marker-end="url(#lp)"/>
+          <text x="592" y="112" font-size="9.5" opacity="0.75">narrow it</text>
+          <text x="708" y="120" font-size="11.5">Re-measure, 32 of 32 right</text>
+          <text x="708" y="136" font-size="10" opacity="0.75">that version shipped</text>
+
+          <polyline points="500,106 500,180 75,180 75,110" fill="none" stroke="currentColor" stroke-width="1.2" stroke-dasharray="4 3" opacity="0.6" marker-end="url(#lp)"/>
+          <text x="288" y="196" text-anchor="middle" font-size="10.5" opacity="0.7">or the measurement says abandon it, which is also a result</text>
+
+          <line x1="0" y1="212" x2="900" y2="212" stroke="currentColor" stroke-width="1" opacity="0.2"/>
+          <text x="0" y="234" font-size="11.5" opacity="0.9">It did not find a bug in my rule. It refused to accept that the rule should exist, and made me prove it first.</text>
+        </g>
+      </svg>
+      <figcaption>The adversarial loop, run yesterday. A reviewer that only hunts bugs inside what you built has already accepted that it should exist.</figcaption>
+    </figure>
+
+    <div style="max-width:var(--measure)">
+      <ul class="beats">
+        <li><strong>I wrote a rule that pulled dates out of filenames.</strong> It looked obviously right. The reviewer would not argue about it, it told me to go measure it first.</li>
+        <li class="q"><strong>The measurement killed my own idea.</strong> Twelve percent of rows came back rewritten, and the biggest ones were all wrong.</li>
+        <li><strong>Narrowed to one case, re-measured, thirty-two out of thirty-two.</strong> That version shipped. The first version would have quietly corrupted dates.</li>
+      </ul>
+      
+    </div>
+
+    <div style="max-width:var(--measure)">
+      <div class="say">
+        <span class="k">If somebody looks sceptical, name it before they do</span>
+        <p>A fair reading is that I described an elaborate system then told you how it failed last week. <strong>Correct reading, wrong objection.</strong> The failures do not stop, each one becomes something that refuses next time, so it costs once rather than every time.</p>
+      </div>
+
+      <div class="say">
+        <span class="k">Close the block on this</span>
+        <p>This is how a rule gets built, <strong>but only if the failure gets captured and codified into something that acts.</strong> A failure that produced a wiser person produced nothing, because the wiser person forgets or leaves.</p>
+        <p class="q">The point is not that I stop making mistakes. It is that I stop making <em>these</em> ones.</p>
+      </div>
+
+      <div class="say">
+        <span class="k">Then the limit</span>
+        <p>Somebody asked what I would want measured before believing any of this works. <strong>I could produce retention and conversion by Friday and every number would be decoration</strong>, because I have two customers and both are months old. The measurement that means something is the near-miss rate, and yesterday it was two.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="live">
+  <div class="sec-head">
+    <div class="clock">12:30<span>3 min</span></div>
+    <div>
+      <p class="qlabel">Answers Q2</p>
+      <h2>Ask it something I do not know the answer to</h2>
+    </div>
+  </div>
+  <div class="sec-body">
+    
+
+    <div class="demo">
+      <div class="demo-hd"><b>The whole prompt</b> <span>Type it, do not paste it</span></div>
+      <div class="cmd">Where am I blocking Christian?</div>
+    </div>
+
+    <ul class="beats cuttable" data-cut="4" data-label="Terminal narration, keep the query itself">
+      <li><strong>It takes a few seconds. Do not wait in silence, use them to start the pivot.</strong>
+        <ul>
+          <li>Six checks already exist, each written after I got that specific thing wrong on a specific day, sitting there doing nothing until this question made them relevant.</li>
+          <li>That is a clean line into who Christian actually is.</li>
+        </ul>
+      </li>
+      <li class="q">When it returns, point at the second list before the first one. <strong>What it checked and found clear, with what it looked at in each case.</strong> A system that only reports problems is indistinguishable from one that quietly stopped looking.</li>
+    </ul>
+
+    <div style="max-width:var(--measure)">
+      <p class="lede">Everything up to this point was built by one person working alone. This is the question that tests whether any of it survives a second one.</p>
+      <ul class="beats">
+        <li class="q"><strong>It asks the system where I am the bottleneck for somebody else</strong>, which is a question a solo operator never has to ask and never notices going unanswered.</li>
+        <li><strong>The answer moves every day, so I am running it rather than quoting it.</strong>
+          <ul><li>On 20 August it came back with five finished changes waiting on my review and the build red since the 19th. Late on the 24th, two open pull requests with their checks passing. It will be different now, and that is the point.</li></ul>
+        </li>
+      </ul>
+      
+    </div>
+  </div>
+</section>
+<section id="christian">
+  <div class="sec-head">
+    <div class="clock">12:33<span>4 min</span></div>
+    <div>
+      <p class="qlabel">Answers Q2, and shows the room what an answer sounds like</p>
+      <h2>OK Christian, where did I miss the mark?</h2>
+    </div>
+  </div>
+  <div class="sec-body">
+    
+    
+
+    <div class="say">
+      <span class="k">The handoff line</span>
+      <p>Christian joined on the sixth of August doing go-to-market. <strong>Every rule you just saw was written by me, for me, and he walked into it cold.</strong> He is also the answer to my own question two, because most of what waits on one person around here waits on me.</p>
+      <p>Before I hand it to all of you, I want you to hear somebody other than me answer these.</p>
+    </div>
+
+    
+
+    <p>Six topics to put to him, and the last one is the one I most want answered in front of the room.</p>
+    
+
+    <dl class="qa">
+      <dt>Legibility</dt>
+      <dd><p>What were you deciding over and over, on artifact after artifact, that nobody had written down?</p>
+          <p class="sub">His is legibility. "If I, as a new partner, do not understand what is being said, a prospect never will." He made that call on artifact after artifact until it became a written rule that now binds me too.</p></dd>
+
+      <dt class="hot">Where you wait on me</dt>
+      <dd><p>Where does your work stop and wait for me, and how long does it usually sit there?</p>
+          <p class="sub">This is the one only he can answer honestly, because the answer is me. Database writes, data pulls, a credential he asked for and waited on, approvals. He has a list and I would rather it were said out loud than summarised by me.</p></dd>
+
+      <dt>Speaking for the company</dt>
+      <dd><p>What had to be true before you would let it write something that went out in your name?</p>
+          <p class="sub">The voice review graded every draft he wrote against a spec mined from my transcripts, so it kept telling him to sound like me until that was fixed. Two always-loaded rules told him never to use the only mail path he has.</p></dd>
+
+      <dt>Why join this</dt>
+      <dd><p>Why would anyone join a company that works this way, and what did you think you were walking into?</p>
+          <p class="sub">He described himself, unprompted, as "your non-AI voice trying to encode itself into the system." That is a better answer than mine and it is his to give.</p></dd>
+
+      <dt>Worth it, from your seat</dt>
+      <dd><p>From the seat that did not build any of this, is it worth it? Where has it cost you rather than helped?</p>
+          <p class="sub">He is the only real evidence either way. The counterweight is his own, his cold outbound sits at 0 of 22 while the accounts he actually carries are 3 of 5, and the diagnosis points at deliverability rather than writing but is not settled.</p></dd>
+
+      <dt>Where we fall short</dt>
+      <dd><p>Where are we not actually doing what these rules say we do?</p>
+          <p class="sub">The most useful thing he can say in four minutes. A second operator who inherited the rules is the only person positioned to say which of them are theatre.</p></dd>
+    </dl>
+
+    
+  </div>
+</section>
+
+<section id="why" class="turnsec">
+  <div class="sec-head">
+    <div class="clock">12:36<span>4 min</span></div>
+    <div>
+      <p class="qlabel">Answers Q4 and Q5</p>
+      <h2>Why do this, and is it worth it</h2>
+    </div>
+  </div>
+  <div class="sec-body">
+    
+    
+
+    <ul class="beats">
+        <li><strong>The first three questions I opened with are how I built an organisation of people.</strong>
+          <ul><li>Where work stops and waits for one person, what judgment is repeated but never written down, what would have to be true before someone else could make that call.</li></ul>
+        </li>
+      </ul>
+    </div>
+
+<figure>
+      <svg viewBox="0 0 900 318" role="img" aria-label="Three answers to why, arranged by how much of it was a decision. The first, I got cornered, was not a decision at all: every piece was bought by something going wrong. The second is arithmetic: two people, 4,895 municipalities, and customers who need something specific on a Monday. The third is the only one that is a choice: move to the part of the problem the system cannot handle yet. Below, the fair objection and the answer to it.">
+        <defs>
+          <marker id="wy" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <polygon points="0,1 9,5 0,9" fill="currentColor"/>
+          </marker>
+        </defs>
+        <g fill="currentColor" font-family="IBM Plex Sans, sans-serif">
+          <text x="0" y="14" font-size="10.5" opacity="0.6">NONE OF THIS WAS A DECISION</text>
+          <text x="900" y="14" font-size="10.5" text-anchor="end" class="em" opacity="0.9">THIS PART IS</text>
+          <line x1="0" y1="30" x2="880" y2="30" stroke="currentColor" stroke-width="1" opacity="0.3" marker-end="url(#wy)"/>
+
+          <rect x="0" y="48" width="278" height="104" fill="none" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+          <text x="16" y="76" font-size="13.5" font-weight="600">I got cornered</text>
+          <text x="16" y="100" font-size="11" opacity="0.8">Every piece of this was bought</text>
+          <text x="16" y="117" font-size="11" opacity="0.8">by something going wrong. Nobody</text>
+          <text x="16" y="134" font-size="11" opacity="0.8">sat down and designed it.</text>
+
+          <rect x="300" y="48" width="278" height="104" fill="none" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+          <text x="316" y="76" font-size="13.5" font-weight="600">Then arithmetic</text>
+          <text x="316" y="100" font-size="11" opacity="0.8">Two people, 4,895 municipalities,</text>
+          <text x="316" y="117" font-size="11" opacity="0.8">customers who need a specific</text>
+          <text x="316" y="134" font-size="11" opacity="0.8">thing on a Monday morning.</text>
+
+          <rect x="600" y="48" width="300" height="104" fill="none" stroke-width="2" class="emstroke"/>
+          <text x="616" y="76" font-size="13.5" font-weight="600" class="em">What I actually believe</text>
+          <text x="616" y="100" font-size="11" class="em" opacity="0.9">Not removing myself. Moving to the</text>
+          <text x="616" y="117" font-size="11" class="em" opacity="0.9">part the system cannot handle yet,</text>
+          <text x="616" y="134" font-size="11" class="em" opacity="0.9">so my hours go where only I can.</text>
+
+          <text x="616" y="170" font-size="10.5" class="em" opacity="0.75">THE WORD DOING THE WORK IS &#8220;YET&#8221;</text>
+
+          <line x1="0" y1="196" x2="900" y2="196" stroke="currentColor" stroke-width="1" opacity="0.2"/>
+          <text x="0" y="222" font-size="10.5" opacity="0.6">THE FAIR OBJECTION, WHICH I WOULD RAISE MYSELF</text>
+          <text x="0" y="248" font-size="12.5">Balancing time spent on the operating system against selling is a real risk at our size.</text>
+          <text x="0" y="276" font-size="12.5" opacity="0.85">It is not preparation for scale. It is what lets two people operate this at all, at great margins,</text>
+          <text x="0" y="298" font-size="12.5" opacity="0.85">and get meetings with buyers who are already talking to the funded competitors.</text>
+        </g>
+      </svg>
+      <figcaption>Two of the three were forced and one was chosen, which is the order they actually arrived in. The objection is real and the answer is not that the risk is small, it is that the alternative was not operating at all, let alone at these margins.</figcaption>
+    </figure>
+
+    <div style="max-width:var(--measure)">
+
+    <div class="said" style="max-width:var(--measure)">
+      <span class="who">The buyer from lane three, on the same call in August &middot; not a customer &middot; sector redacted</span>
+      <span class="q-text">"Just so for your competitive analysis: Starbridge, we've talked to Gather, Civic IQ, you guys."</span>
+      <span class="q-text" style="margin-top:12px">"That's a slightly different approach than Starbridge. Starbridge asked me, hey, give me some keywords and then we'll build these bridges, and the bridges will go off and look for those keywords. This is a little bit more contextual &hellip; I'm not going to give you the keywords specifically, but what are the things within some area that are worthwhile to look at."</span>
+      <span class="q-text" style="margin-top:12px">"Where do you stop?"</span>
+      <p class="then"><b>That is the answer to the objection, from someone with no reason to be kind about it.</b> We are in the consideration set with the funded firms, and the reason he is talking to us is the thing the operating system buys: he does not have to bring the query. <b>"Where do you stop"</b> is the keyword problem in three words, and he got there on his own.</p>
+    </div>
+
+    <h3>Is it worth it, in two halves</h3>
+    <p class="lede">Is any of this worth it? There is a part I am sure of and a part I am not, and running them together would be dishonest in either direction.</p>
+
+    <div class="say">
+      <span class="k">The part I am sure of</span>
+      <p><strong>It lets me work the way I actually think</strong>, which is worth more than the time it saves. Most tooling makes you translate a thought into the shape it accepts and you lose something every time. This does not.</p>
+      <p><strong>More done, and better</strong>, which is not the trade I expected, because usually one costs you the other.</p>
+    </div>
+
+    <p><strong>What I do not know is whether that converts.</strong> Working better is a claim about me. A company is a claim about outcomes, and I would rather say the honest thing than sell you a conclusion I have not earned. So here is what would settle it, which is the same discipline as everything else in this hour.</p>
+    </div>
+
+<figure>
+      <svg viewBox="0 0 900 348" role="img" aria-label="What I am sure of sits on the left and is a claim about me: it lets me work the way I actually think, and more gets done and better. What would settle it sits on the right and is a claim about outcomes: does the near-miss rate fall, do the rules start costing more than they save, did the second person get productive faster, and revenue, which is the one that actually settles it. None of the four has enough data yet.">
+        <g fill="currentColor" font-family="IBM Plex Sans, sans-serif">
+          <text x="0" y="14" font-size="10.5" opacity="0.6">WHAT I AM SURE OF</text>
+          <text x="0" y="32" font-size="11.5" font-style="italic" opacity="0.8">a claim about me</text>
+
+          <text x="404" y="14" font-size="10.5" class="em" opacity="0.9">WHAT WOULD SETTLE IT</text>
+          <text x="404" y="32" font-size="11.5" font-style="italic" class="em" opacity="0.8">a claim about outcomes</text>
+          <text x="900" y="14" font-size="10.5" text-anchor="end" opacity="0.6">DATA SO FAR</text>
+
+          <line x1="376" y1="0" x2="376" y2="252" stroke="currentColor" stroke-width="1" opacity="0.3"/>
+
+          <text x="0" y="76" font-size="12.5" font-weight="600">It lets me work the way I think</text>
+          <text x="0" y="96" font-size="11" opacity="0.78">Most tooling makes you translate a thought</text>
+          <text x="0" y="113" font-size="11" opacity="0.78">into the shape it accepts. This does not.</text>
+
+          <text x="0" y="152" font-size="12.5" font-weight="600">More done, and better</text>
+          <text x="0" y="172" font-size="11" opacity="0.78">Not the trade I expected, because usually</text>
+          <text x="0" y="189" font-size="11" opacity="0.78">one of those costs you the other.</text>
+
+          <text x="0" y="228" font-size="11" opacity="0.6">Both true. Neither is evidence.</text>
+
+          <text x="404" y="70" font-size="12" font-weight="600">Does the near-miss rate fall?</text>
+          <text x="900" y="70" font-size="11" text-anchor="end" opacity="0.6">none yet</text>
+          <line x1="404" y1="84" x2="900" y2="84" stroke="currentColor" stroke-width="1" opacity="0.15"/>
+
+          <text x="404" y="114" font-size="12" font-weight="600">Do the rules cost more than they save?</text>
+          <text x="900" y="114" font-size="11" text-anchor="end" opacity="0.6">29 today</text>
+          <line x1="404" y1="128" x2="900" y2="128" stroke="currentColor" stroke-width="1" opacity="0.15"/>
+
+          <text x="404" y="158" font-size="12" font-weight="600">Did the second person get productive faster?</text>
+          <text x="900" y="158" font-size="11" text-anchor="end" opacity="0.6">3 weeks old</text>
+          <line x1="404" y1="172" x2="900" y2="172" stroke="currentColor" stroke-width="1" opacity="0.15"/>
+
+          <text x="404" y="202" font-size="12" font-weight="600" class="em">Revenue, and this is the one that settles it</text>
+          <text x="900" y="202" font-size="11" text-anchor="end" class="em" opacity="0.9">does not exist</text>
+          <text x="404" y="222" font-size="11" class="em" opacity="0.8">A two-person company should carry more customers than two people can.</text>
+
+          <line x1="0" y1="266" x2="900" y2="266" stroke="currentColor" stroke-width="1" opacity="0.2"/>
+          <text x="0" y="288" font-size="10.5" class="em" opacity="0.9">AND THE THING THAT IS NEITHER, WHICH IS NOW TWO</text>
+          <text x="0" y="312" font-size="12.5" class="em">Both buyers in the third lane came to us, and both because of how the thing works rather than how much of it there is.</text>
+          <text x="0" y="334" font-size="11.5" opacity="0.75">One of them is already talking to the funded firms. Neither is revenue, and neither is a claim about me.</text>
+        </g>
+      </svg>
+      <figcaption>The split is the answer. Everything on the left is true and none of it is evidence, and revenue is the only line that would settle it outright. The band underneath is the exception. Both of the third-lane buyers arrived inbound, one of them already shopping the funded firms, and in both cases what brought them was the approach rather than the size of the corpus. Two data points is not proof and it is not nothing.</figcaption>
+    </figure>
+
+    <div style="max-width:var(--measure)">
+
+    <div class="say">
+      <span class="k">If it lands, this is the strongest thing in the block</span>
+      <p><strong>If I could have designed Acast from the start, it would have looked a lot like this.</strong> Push context down as far as it sensibly goes, autonomy with guardrails.</p>
+      <p>I was CPO there and could only ever retrofit it. <strong>This is the same design from day zero, written as code rather than as an org chart.</strong></p>
+    </div>
+  </div>
+</section>
+
+<section id="turnB" class="turnsec">
+  <div class="sec-head">
+    <div class="clock">12:40<span>20 min</span></div>
+    <div>
+      <p class="qlabel">All five, back on screen</p>
+      <h2>Over to you now</h2>
+    </div>
+  </div>
+  <div class="sec-body">
+        
+
+    <div class="ask">
+      <span class="k">Leave this on the screen for twenty minutes</span>
+      <ol class="board">
+        <li><b>1</b> What is a judgment you make over and over that nobody has written down?</li>
+        <li><b>2</b> Where does work in your company stop and wait for one specific person?</li>
+        <li><b>3</b> What would have to be true before you let something else make a call you make today?</li>
+        <li><b>4</b> Why the heck would anyone decide to do this?</li>
+        <li><b>5</b> Is what I just showed you worth it?</li>
+      </ol>
+    </div>
+
+    
+
+    <div class="say">
+      <span class="k">Two spares, if the board runs dry</span>
+      <p><strong>Where is your version of the silent failure?</strong> A check that would look exactly the same today whether it was working or dead. Lands straight off the three failures, and every engineer in the room has one they have never said out loud.</p>
+      <p><strong>What is the thing you would not write down?</strong> All of this compounds only because failures get recorded in full, including the embarrassing ones, and that is a cultural problem long before it is a technical one.</p>
+    </div>
+
+    <p class="aside">Let it run to the hour. There is nothing after this, which is the point of putting it last rather than saving five minutes for it.</p>
+  </div>
+</section>
+
+<section id="software">
+  <div class="sec-head">
+    <div class="clock">&middot;&middot;<span>if asked</span></div>
+    <h2>Who writes the code, and whether this is just vibe coding</h2>
+  </div>
+  <div class="sec-body wide">
+    <div style="max-width:var(--measure)">
+            <p class="lede">The agent system writes essentially all of it. The difference between that and vibe coding is not how much I read, it is what has to be true before anything lands.</p>
+      <ul class="beats">
+        <li class="q"><strong>Vibe coding is accepting output you have no way to evaluate.</strong> Everything below exists to make the output evaluable without me reading every line, because reading every line does not scale to two people and would not catch the failures that actually happen anyway.</li>
+      </ul>
+    </div>
+
+    <div class="tw keeppoint">
+      <table>
+        <thead><tr><th style="width:25%">The question</th><th>What is actually there</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Do you write PRDs?</strong></td>
+          <td><strong>No.</strong> There are 149 written plans, but only for the class of change whose mistakes compound, and each carries a field saying whether a second model reviewed it. 109 say passed, with the findings and my disposition of each written into the plan. Ordinary changes get no plan at all.</td></tr>
+          <tr><td><strong>Where is the spec?</strong></td>
+          <td>It is a <strong>completion contract, one per kind of change rather than one per feature</strong>, which is why it does not rot. Twenty of them. A code change is not done until every modified file parses, imports are updated, the smoke tests pass and the decision is written down. A parser change adds two data-integrity gates. A new gate has to be shown failing on the real defect first.</td></tr>
+          <tr><td><strong>Test-driven?</strong></td>
+          <td><strong>Not in the usual sense, and stricter where it counts.</strong> 5,786 tests across 302 files, but the rule is not coverage. A test is evidence only if it could have failed on the real defect, and only about the thing it actually examined. That came from one day with four passing checks that each proved nothing.</td></tr>
+          <tr><td><strong>What stops bad code landing?</strong></td>
+          <td>Twenty-six checks before a commit, more before a push, then CI. <strong>CI is the one that matters because it does not run on my machine</strong>, so it is the only one I cannot skip in a hurry.</td></tr>
+          <tr><td><strong>Where do skills fit?</strong></td>
+          <td>Nine, and they are the archetype layer. A job I would otherwise re-explain every time becomes a named procedure the system loads when the work matches: onboard a town, triage a records response, prep for a buyer call. <strong>Not code and not a prompt, a written-down way of doing a recurring job.</strong></td></tr>
+          <tr><td><strong>Why not use an off-the-shelf agent framework?</strong></td>
+          <td><strong>The harness is off the shelf.</strong> I did not build the thing that writes code, and I would not. What no framework ships is the part that makes it trustworthy here, because every rule in it is dated to an incident that happened to this company. You can copy the shape, which is what this hour is. You cannot buy the contents, and a corpus of somebody else's incidents would be worse than none.</td></tr>
+          <tr><td><strong>Is this Claude-specific?</strong></td>
+          <td><strong>The harness is. Almost none of the enforcement is.</strong> Twenty-six commit checks, a CI workflow, two push gates and thirty-seven refusal functions all run in git and Python, and none of them knows or cares what wrote the code. What is Claude-specific is how thirty rule files get loaded into context, which is a file convention, not a mechanism. Move harness and that is the part I would rewrite; everything that actually refuses would carry over untouched. <strong>That split is deliberate.</strong> A gate that lives inside the agent's context can be forgotten, argued with, or lost when the context resets. A gate in a commit hook cannot. And the adversarial reviewer is deliberately a different vendor's model, because a second opinion from the same family is not a second opinion.</td></tr>
+          <tr><td><strong>How did you design it?</strong></td>
+          <td><strong>I did not.</strong> Every row above was bought by something going wrong, which is the same answer as the rest of this page and the reason I trust it more than a design I had reasoned out in advance.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div style="max-width:var(--measure)">
+      <ul class="beats">
+        <li class="q"><strong>The shape of the work matters here, and that shape was a decision rather than luck.</strong> No dashboard, no search box, nobody logs in, an email arrives. I scoped it that way on purpose, because an interface is the rat hole I am most prone to and it would have eaten the year without producing a single signal. What that choice also bought is a system with no component library, no state across screens, no accessibility surface, none of the interaction complexity that makes most software hard to verify. <strong>Some of what makes code hard to trust, I chose not to have.</strong></li>
+        <li class="q"><strong>The other limit is that none of this makes the code good, it makes it checkable.</strong> A bad decision that passes every gate still ships. What the gates buy is that the same bad decision does not ship twice.</li>
+      </ul>
+    </div>
+
+      </div>
+</section>
+
+
+
+
+
+<footer>
+  <p>Municipal Alpha · Run of show for a founders' session on running a company this way, August 2026 · Assembled by COCOA, the agent system the session is about, from the company's own live state, with me choosing what it looked at and checking what came back · Corpus counts read from production on 24 August</p>
+</footer>
+
+</div>
+
+<script>
+(function () {
+  var root = document.documentElement;
+  var KEY = 'runofshow-mode-v2';
+  var buttons = {
+    time: document.getElementById('mode-time'),
+    crunch: document.getElementById('mode-crunch'),
+    point: document.getElementById('mode-point')
+  };
+
+  function apply(mode) {
+    if (mode !== 'crunch' && mode !== 'point') { mode = 'time'; }
+    if (mode === 'time') {
+      root.removeAttribute('data-mode');
+      root.setAttribute('data-mode-full', '1');
+    } else {
+      root.setAttribute('data-mode', mode);
+      root.removeAttribute('data-mode-full');
+    }
+    Object.keys(buttons).forEach(function (key) {
+      if (buttons[key]) { buttons[key].setAttribute('aria-pressed', String(key === mode)); }
+    });
+    try { localStorage.setItem(KEY, mode); } catch (e) {}
+  }
+
+  var saved = 'point';
+  try { saved = localStorage.getItem(KEY) || 'point'; } catch (e) {}
+  apply(saved);
+
+  Object.keys(buttons).forEach(function (key) {
+    if (buttons[key]) { buttons[key].addEventListener('click', function () { apply(key); }); }
+  });
+})();
+</script>
+
+</body>
+</html>
