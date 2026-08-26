@@ -57,13 +57,13 @@ The Northeast concentration is partly real (the regional grid is constrained, an
 
 ## The August 2026 Update
 
-Buyers who track data-center siting deals describe the same moment a project usually reaches a town too late to matter: once a developer has already signed the utility load application. A platform decision-maker who evaluates these deals put it bluntly, about a data-center siting case directly:
+A platform decision-maker who evaluates data-center siting deals described the moment his own business usually finds out too late to matter, once a developer has already signed the utility load application:
 
 > *"He's too far past the ball already. By the time that load application happens, it's too late. They've already been working with the developers. I want to see something before that."*
 
-Municipal Alpha exists to move that line earlier. The same information is visible months before a load application, in a planning-board minute instead of a utility filing.
+That complaint is really about a town's disposition toward the project, whether it will fight it or compete for it, and that decision is visible earlier still. It shows up in committee, in zoning language, in incentive votes, months before any load application, any lawsuit, or any press coverage.
 
-That data centers are running into local resistance is not news; it is a national story by now. What national coverage does not do is the drill-down: which board, which meeting, which vote, and how long before the moratorium or the lawsuit reaches the press. That is the layer below.
+That data centers are running into local resistance is not news; it is a national story by now. What national coverage does not do is the drill-down: which board, which meeting, which vote, and how long before the moratorium or the lawsuit reaches the press. This piece tracks that disposition in both directions, towns moving to restrict, and towns moving to compete.
 
 ### What happened in August
 
@@ -97,14 +97,15 @@ Same corpus, same method, the other half of the picture: not just which board is
 
 ### The welcome-mat pipeline, stage by stage
 
-The moratorium side of this record runs from a committee question to a vote to, sometimes, a lawsuit. The welcome-mat side runs its own pipeline, and the corpus catches towns at each stage of it, not just the two that reached a public vote:
+The leading part of this pipeline runs the same way the moratorium side does: visible in committee records months earlier.
 
 - **Institutional readiness, before any project is named.** Hermitage, Pennsylvania wrote a full data-center zoning ordinance, definitions, siting standards, setbacks, environmental review, decommissioning terms, with no developer anywhere in the record. A town does not write decommissioning rules for a use case it is not expecting to show up.
 - **Early-stage talks.** McAlester, Oklahoma's city manager reported to Council in June 2025: *"New Data Center: Early-stage talks with a potential data center."* Many months before Sand Springs and Los Lunas reached their public votes, that language, a staff report flagging a conversation with no name attached yet, was already sitting in a routine monthly update.
 - **Formal commitment.** Sand Springs' incentive districts and Los Lunas' unanimous vote, above, both public, both on the record, months before either reached this piece.
-- **Construction.** Stillwater, Oklahoma pulled a $14.7 million data-center building permit in March 2026, issued to Manhattan Construction, part of $293 million in commercial and industrial permits that month.
 
-Four towns, four stages of one pipeline. It is the same read as the moratorium side, run in the other direction: the record shows you the decision before the decision is news, whether the town is about to say yes or no.
+Three towns, three stages of the same read the moratorium side already proves: the record shows the decision before it is news.
+
+One more data point, of a different kind. Stillwater, Oklahoma pulled a $14.7 million data-center building permit in March 2026, issued to Manhattan Construction. That is not a leading signal, it is the opposite: the point where a project stops being a signal and becomes a fact. Its value here is different, it is proof the earlier stages are real. A town that shows institutional readiness, then early talks, then a formal incentive vote, is a town where construction follows.
 
 ### What's next
 
