@@ -57,15 +57,30 @@ The Northeast concentration is partly real (the regional grid is constrained, an
 
 ## The August 2026 Update
 
-A platform decision-maker at a renewables developer described what buyers on this side of the market actually want: *"By the time that load application happens, it's too late. They've already been working with the developers. I want to see something before that."*
+Data centers are not the only large-load buyer running into this wall. Renewables developers, competing for the same grid capacity, describe the identical frustration from their own side of the siting process. A platform decision-maker at one put it this way:
 
-August gave a clean test of that want. The Town of Utica, Wisconsin voted 3-0 on August 10 to adopt Winnebago County's data-center moratorium. Scarborough, Maine's moratorium is now being tested in court: a developer is suing over both the moratorium and an "incomplete application" finding, and the town's motion to dismiss has already been denied. Brunswick, Maine brought a tiered zoning framework back to Council for review, built around the 180-day moratorium it adopted in June. The Town of Lockport, New York noticed its own 18-month moratorium for an August 5 public hearing.
+> *"By the time that load application happens, it's too late. They've already been working with the developers. I want to see something before that."*
 
-None of it started in August. A resident asked Utica's board directly on July 13 whether the town would recommend a moratorium "next month"; the chairman said the town would look into it. By the next meeting, it had, unanimously. Brunswick set its June 1 public hearing on May 18, two weeks out. The May edition of this analysis had already logged Maine's cluster building, eight jurisdictions, months before any of August's outcomes landed.
+Data centers hit that same wall, just earlier: in a planning-board minute, months before anything reaches a utility as a load application.
 
-That is the actual claim this corpus supports: every adopted moratorium and every lawsuit that made news in August was already sitting in a committee minute earlier in the year, for anyone reading municipal agendas closely enough to see it.
+### What happened in August
 
-Bellefonte, Delaware and Douglas County, Wisconsin are at that stage right now. Read them the way Utica's July 13 minutes read in hindsight, not news yet, evidence of what September will look like.
+- **Utica, Wisconsin.** The town board voted 3-0 on August 10 to adopt Winnebago County's data-center moratorium.
+- **Scarborough, Maine.** Its moratorium is now in court. A developer is suing over both the moratorium and the town's "incomplete application" finding; the town's motion to dismiss has already been denied, and the case is in discovery.
+- **Brunswick, Maine.** Council reviewed a tiered zoning framework built around the 180-day moratorium it adopted in June.
+- **Lockport, New York (the Town, not the neighboring City).** Noticed an 18-month moratorium on data-center permitting for an August 5 public hearing.
+
+### None of it started in August
+
+- In Utica, a resident asked the board directly on July 13 whether it would recommend a moratorium "next month." The chairman said the town would look into it. The board adopted one unanimously at its very next meeting, August 10.
+- In Brunswick, the June 1 public hearing was set on the town's own May 18 agenda, two weeks ahead of the vote.
+- Across Maine more broadly, the May edition of this analysis had already logged eight Maine jurisdictions building this cluster, months before any of August's outcomes landed.
+
+**The claim this corpus supports:** every moratorium adopted and every lawsuit filed in August was already sitting in a committee minute earlier in the year, for anyone reading municipal agendas closely enough to see it.
+
+### What's next
+
+Bellefonte, Delaware and Douglas County, Wisconsin are where Utica was in July: a committee weighing whether to recommend a moratorium, not yet a vote. Read them the same way, as evidence of what September's outcomes will look like, not as news yet.
 
 ## The Iowa Specifics: One Ordinance, Many Meetings
 
