@@ -91,9 +91,20 @@ That executive order is this analysis's own thesis, one level up. Pennsylvania j
 As restriction rises, state by state and town by town, the harder question for a developer is not only where not to build. It is which town is actively competing to win the project.
 
 - **Sand Springs, Oklahoma** is running a formal economic-development process for a $1 billion-per-phase, multi-phase data center, structured around three Incentive Districts offering a full, 25-year exemption from property tax. Two public hearings ran in May, and the city was still moving the deal through committee as of its June 22 meeting.
-- **Los Lunas, New Mexico** already won one. The village's own comprehensive plan credits its Local Economic Development Act incentives with helping land Meta's data center, now the state's largest, six buildings operating and two more under construction, alongside an Amazon warehouse and two solar sites on the same 2,000-acre business park.
+- **Los Lunas, New Mexico** already won one, and is still winning more. The village's own comprehensive plan credits its Local Economic Development Act incentives with helping land Meta's data center, now the state's largest, six buildings operating and two more under construction, alongside an Amazon warehouse and two solar sites on the same 2,000-acre business park. In March 2026, the Village Council approved a further LEDA agreement, unanimously and without recorded debate, funding an expansion of that same facility from local gross receipts tax revenue.
 
 Same corpus, same method, the other half of the picture: not just which board is about to say no, but which one already said yes, and on what terms.
+
+### The welcome-mat pipeline, stage by stage
+
+The moratorium side of this record runs from a committee question to a vote to, sometimes, a lawsuit. The welcome-mat side runs its own pipeline, and the corpus catches towns at each stage of it, not just the two that reached a public vote:
+
+- **Institutional readiness, before any project is named.** Hermitage, Pennsylvania wrote a full data-center zoning ordinance, definitions, siting standards, setbacks, environmental review, decommissioning terms, with no developer anywhere in the record. A town does not write decommissioning rules for a use case it is not expecting to show up.
+- **Early-stage talks.** McAlester, Oklahoma's city manager reported to Council in June 2025: *"New Data Center: Early-stage talks with a potential data center."* Many months before Sand Springs and Los Lunas reached their public votes, that language, a staff report flagging a conversation with no name attached yet, was already sitting in a routine monthly update.
+- **Formal commitment.** Sand Springs' incentive districts and Los Lunas' unanimous vote, above, both public, both on the record, months before either reached this piece.
+- **Construction.** Stillwater, Oklahoma pulled a $14.7 million data-center building permit in March 2026, issued to Manhattan Construction, part of $293 million in commercial and industrial permits that month.
+
+Four towns, four stages of one pipeline. It is the same read as the moratorium side, run in the other direction: the record shows you the decision before the decision is news, whether the town is about to say yes or no.
 
 ### What's next
 
