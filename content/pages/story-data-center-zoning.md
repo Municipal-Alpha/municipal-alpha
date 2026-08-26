@@ -57,11 +57,13 @@ The Northeast concentration is partly real (the regional grid is constrained, an
 
 ## The August 2026 Update
 
-Data centers are not the only large-load buyer running into this wall. Renewables developers, competing for the same grid capacity, describe the identical frustration from their own side of the siting process. A platform decision-maker at one put it this way:
+Buyers who track data-center siting deals describe the same moment a project usually reaches a town too late to matter: once a developer has already signed the utility load application. A platform decision-maker who evaluates these deals put it bluntly, about a data-center siting case directly:
 
-> *"By the time that load application happens, it's too late. They've already been working with the developers. I want to see something before that."*
+> *"He's too far past the ball already. By the time that load application happens, it's too late. They've already been working with the developers. I want to see something before that."*
 
-Data centers hit that same wall, just earlier: in a planning-board minute, months before anything reaches a utility as a load application.
+Municipal Alpha exists to move that line earlier. The same information is visible months before a load application, in a planning-board minute instead of a utility filing.
+
+That data centers are running into local resistance is not news; it is a national story by now. What national coverage does not do is the drill-down: which board, which meeting, which vote, and how long before the moratorium or the lawsuit reaches the press. That is the layer below.
 
 ### What happened in August
 
@@ -77,6 +79,12 @@ Data centers hit that same wall, just earlier: in a planning-board minute, month
 - Across Maine more broadly, the May edition of this analysis had already logged eight Maine jurisdictions building this cluster, months before any of August's outcomes landed.
 
 **The claim this corpus supports:** every moratorium adopted and every lawsuit filed in August was already sitting in a committee minute earlier in the year, for anyone reading municipal agendas closely enough to see it.
+
+### The state layer, for balance
+
+Municipal moratoria are not the only thing moving. Pennsylvania is the most aggressive state right now, though not with an outright ban. On August 18, Governor Josh Shapiro signed Executive Order 2026-05, which blocks new data-center permitting statewide unless a developer meets new electricity and water limits, hires locally, and has already secured local government approval; it also pulls AI data centers out of the state's fast-track review and bars developers from using NDAs on these projects (state government sources: [pa.gov](https://www.pa.gov/governor/newsroom/2026-press-releases/governor-shapiro-signs-executive-order-on-data-center-developmen), reported by [The Philadelphia Inquirer](https://www.inquirer.com/politics/pennsylvania/josh-shapiro-data-center-order-20260818.html) and [The Washington Post](https://www.washingtonpost.com/nation/2026/08/18/pennsylvania-gov-josh-shapiro-set-order-new-limits-data-center-development/)). The legislature has bills moving in parallel: a bipartisan regulatory framework (PUC oversight, clean-energy minimums) already passed the House, and a Senate bill letting municipalities, not the state, impose their own 18-month moratoriums cleared committee in July. Nothing at the state level has passed as an outright ban.
+
+That executive order is this analysis's own thesis, one level up. Pennsylvania just made local government approval a precondition for state permitting, which means the record this piece tracks is now, formally, part of the state's own process too.
 
 ### What's next
 
