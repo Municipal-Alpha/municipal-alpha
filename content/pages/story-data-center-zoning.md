@@ -86,6 +86,15 @@ Municipal moratoria are not the only thing moving. Pennsylvania is the most aggr
 
 That executive order is this analysis's own thesis, one level up. Pennsylvania just made local government approval a precondition for state permitting, which means the record this piece tracks is now, formally, part of the state's own process too.
 
+### Where the welcome mat is out
+
+As restriction rises, state by state and town by town, the harder question for a developer is not only where not to build. It is which town is actively competing to win the project.
+
+- **Sand Springs, Oklahoma** is running a formal economic-development process for a $1 billion-per-phase, multi-phase data center, structured around three Incentive Districts offering a full, 25-year exemption from property tax. Two public hearings ran in May, and the city was still moving the deal through committee as of its June 22 meeting.
+- **Los Lunas, New Mexico** already won one. The village's own comprehensive plan credits its Local Economic Development Act incentives with helping land Meta's data center, now the state's largest, six buildings operating and two more under construction, alongside an Amazon warehouse and two solar sites on the same 2,000-acre business park.
+
+Same corpus, same method, the other half of the picture: not just which board is about to say no, but which one already said yes, and on what terms.
+
 ### What's next
 
 Bellefonte, Delaware and Douglas County, Wisconsin are where Utica was in July: a committee weighing whether to recommend a moratorium, not yet a vote. Read them the same way, as evidence of what September's outcomes will look like, not as news yet.
