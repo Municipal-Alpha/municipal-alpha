@@ -8,7 +8,7 @@ OUTPUTDIR=$(BASEDIR)/output
 CONFFILE=$(BASEDIR)/pelicanconf.py
 PUBLISHCONF=$(BASEDIR)/publishconf.py
 
-.PHONY: html clean serve publish copy-static-html noindex-extra goatcounter-extra llms-full metrics-drift
+.PHONY: html clean serve publish copy-static-html noindex-extra goatcounter-extra llms-full metrics-drift no-diffview
 
 html: metrics-drift
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
@@ -16,6 +16,7 @@ html: metrics-drift
 	$(MAKE) noindex-extra
 	$(MAKE) goatcounter-extra
 	$(MAKE) llms-full
+	$(MAKE) no-diffview
 
 clean:
 	rm -rf $(OUTPUTDIR)
@@ -29,6 +30,7 @@ publish: metrics-drift
 	$(MAKE) noindex-extra
 	$(MAKE) goatcounter-extra
 	$(MAKE) llms-full
+	$(MAKE) no-diffview
 
 # Fail the build when a content page carries a platform-scale claim (N
 # municipalities / documents / signals / tickers) that diverges from
@@ -80,3 +82,11 @@ copy-static-html:
 			echo "Copied $$d/ (recursive)" ; \
 		fi ; \
 	done
+
+# Refuse to publish a review-scaffolding page. annotate_html_diff.py renders a
+# page with its changes highlighted for reading; that artifact carries a legend
+# and a nav script and is not the page. The generator already refuses to write
+# inside a git tree; this is the detector half, run against the BUILT output
+# because that is what Pages serves. See tools/check_no_diffview.py.
+no-diffview:
+	$(PY) tools/check_no_diffview.py $(OUTPUTDIR)
