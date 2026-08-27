@@ -1,0 +1,23 @@
+# CODEOWNERS — municipalalpha.com
+#
+# Ownership, not gatekeeping. Push to `main` in this repo IS publish to
+# production (see CONTRIBUTING.md), so the point of this file is that every
+# published surface has a name attached and nobody has to guess who to ask.
+#
+# Added 2026-08-27 as a precondition of opening push access beyond the founder.
+
+# Default: the founder owns anything not named below.
+*                               @driki
+
+# Marketing and buyer-facing copy — the GTM surface.
+/content/                       @driki @Christian-Milz
+/content/extra/                 @driki @Christian-Milz
+
+# Build, deploy and the gates that guard what ships. Changes here alter what
+# is possible to publish, not just what is published, so they stay with the
+# founder until the second operator has run a full publish cycle unaided.
+/.github/                       @driki
+/Makefile                       @driki
+/tools/                         @driki
+/publishconf.py                 @driki
+/pelicanconf.py                 @driki

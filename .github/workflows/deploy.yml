@@ -45,3 +45,26 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+
+  # Verify what a reader actually receives, not what we uploaded. A green
+  # deploy means the artifact went up; it is not evidence that the served page
+  # is correct. This runs AFTER deploy, so it reports rather than gates — a red
+  # run here means the live site is wrong and needs a fix forward.
+  #
+  # Fast half of a two-part witness. The slow half is a daily sweep in
+  # muni-scraper (tools/check_live_assertions.py), and both are needed: a
+  # deploy-triggered check is silent for exactly as long as nothing is
+  # deployed, and "nobody deployed and nobody noticed" is the failure that
+  # actually happened. See muni-scraper docs/plans/deploy-witness-scope.md §M1.
+  verify:
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Verify the live surface
+        run: python3 tools/check_live_surface.py https://municipalalpha.com

@@ -8,7 +8,7 @@ Sortorder: 5
 
 **Email:** [matt@municipalalpha.com](mailto:matt@municipalalpha.com?subject=Inquiry%20%28via%20contact%20page%29)
 
-**LinkedIn:** [Matt MacDonald](https://www.linkedin.com/in/matthewmacdonald/)
+**LinkedIn:** [Matt MacDonald](https://www.linkedin.com/in/mattmacdonald2/)
 
 We typically respond within one business day.
 
