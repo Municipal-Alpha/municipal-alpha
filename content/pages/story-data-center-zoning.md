@@ -2,9 +2,9 @@ Title: Data Centers Are Contested in 24 States, and the Friction Curve Is Steepe
 Slug: research/data-center-zoning
 Sortorder: 25
 Header_image: story-data-center-zoning.png
-Summary: Municipal Alpha tracks data-center zoning and siting activity across US municipalities, surfacing it from planning-board minutes and committee agendas months before national reporting. As of May 2026, 80 distinct municipal and state records across 47 jurisdictions in 24 states show the pattern forming, up roughly 6x in three months within a fixed pre-March coverage cohort (the apples-to-apples market-acceleration metric). Every figure is sourced.
+Summary: Municipal Alpha tracks data-center zoning and siting activity across US municipalities, surfacing it from planning-board minutes and committee agendas months before national reporting. As of May 2026, 80 distinct municipal and state records across 47 jurisdictions in 24 states showed the pattern forming. By August, the same pattern had moved from committee talk to adopted moratoria in New York, Maine, and Wisconsin, and into active litigation over one of them in Maine. Every figure is sourced.
 
-*Updated May 2026. Analysis based on 80 distinct municipal and state records currently flagged in the production pipeline as data-center-zoning-related, spanning 47 jurisdictions across 24 states, plus state-legislature monitoring across 50 states.*
+*Updated August 2026. Original analysis (below) current to May 14, 2026, based on 80 distinct municipal and state records then flagged in the production pipeline as data-center-zoning-related, spanning 47 jurisdictions across 24 states. See "The August 2026 Update" for what changed since.*
 
 ## What This Piece Is, and What It Isn't
 
@@ -54,6 +54,62 @@ Top states by distinct documents in the current dataset:
 | Seventeen other states | ~23 | 20 |
 
 The Northeast concentration is partly real (the regional grid is constrained, and state public-records frameworks make the discussion legible) and partly coverage-side (our corpus has the most depth in that region because that is where buyer interest has pulled it). We have not yet run a stratified scan across all 50 states with uniform sampling density, so we cannot fully separate those two factors. That is a real limit and we name it.
+
+## The August 2026 Update
+
+A platform decision-maker who evaluates data-center siting deals described the moment his own business usually finds out too late to matter, once a developer has already signed the utility load application:
+
+> *"He's too far past the ball already. By the time that load application happens, it's too late. They've already been working with the developers. I want to see something before that."*
+
+That complaint is really about a town's disposition toward the project, whether it will fight it or compete for it, and that decision is visible earlier still. It shows up in committee, in zoning language, in incentive votes, months before any load application, any lawsuit, or any press coverage.
+
+That data centers are running into local resistance is not news; it is a national story by now. What national coverage does not do is the drill-down: which board, which meeting, which vote, and how long before the moratorium or the lawsuit reaches the press. This piece tracks that disposition in both directions, towns moving to restrict, and towns moving to compete.
+
+### What happened in August
+
+- **Utica, Wisconsin.** The town board voted 3-0 on August 10 to adopt Winnebago County's data-center moratorium.
+- **Scarborough, Maine.** Its moratorium is now in court. A developer is suing over both the moratorium and the town's "incomplete application" finding; the town's motion to dismiss has already been denied, and the case is in discovery.
+- **Brunswick, Maine.** Council reviewed a tiered zoning framework built around the 180-day moratorium it adopted in June.
+- **Lockport, New York (the Town, not the neighboring City).** Noticed an 18-month moratorium on data-center permitting for an August 5 public hearing.
+
+### None of it started in August
+
+- In Utica, a resident asked the board directly on July 13 whether it would recommend a moratorium "next month." The chairman said the town would look into it. The board adopted one unanimously at its very next meeting, August 10.
+- In Brunswick, the June 1 public hearing was set on the town's own May 18 agenda, two weeks ahead of the vote.
+- Across Maine more broadly, the May edition of this analysis had already logged eight Maine jurisdictions building this cluster, months before any of August's outcomes landed.
+
+**The claim this corpus supports:** every moratorium adopted and every lawsuit filed in August was already sitting in a committee minute earlier in the year, for anyone reading municipal agendas closely enough to see it.
+
+### The state layer, for balance
+
+Municipal moratoria are not the only thing moving. Pennsylvania is the most aggressive state right now, though not with an outright ban. On August 18, Governor Josh Shapiro signed Executive Order 2026-05, which blocks new data-center permitting statewide unless a developer meets new electricity and water limits, hires locally, and has already secured local government approval; it also pulls AI data centers out of the state's fast-track review and bars developers from using NDAs on these projects (state government sources: [pa.gov](https://www.pa.gov/governor/newsroom/2026-press-releases/governor-shapiro-signs-executive-order-on-data-center-developmen), reported by [The Philadelphia Inquirer](https://www.inquirer.com/politics/pennsylvania/josh-shapiro-data-center-order-20260818.html) and [The Washington Post](https://www.washingtonpost.com/nation/2026/08/18/pennsylvania-gov-josh-shapiro-set-order-new-limits-data-center-development/)). The legislature has bills moving in parallel: a bipartisan regulatory framework (PUC oversight, clean-energy minimums) already passed the House, and a Senate bill letting municipalities, not the state, impose their own 18-month moratoriums cleared committee in July. Nothing at the state level has passed as an outright ban.
+
+That executive order is this analysis's own thesis, one level up. Pennsylvania just made local government approval a precondition for state permitting, which means the record this piece tracks is now, formally, part of the state's own process too.
+
+### Where the welcome mat is out
+
+As restriction rises, state by state and town by town, the harder question for a developer is not only where not to build. It is which town is actively competing to win the project.
+
+- **Sand Springs, Oklahoma** is running a formal economic-development process for a $1 billion-per-phase, multi-phase data center, structured around three Incentive Districts offering a full, 25-year exemption from property tax. Two public hearings ran in May, and the city was still moving the deal through committee as of its June 22 meeting.
+- **Los Lunas, New Mexico** already won one, and is still winning more. The village's own comprehensive plan credits its Local Economic Development Act incentives with helping land Meta's data center, now the state's largest, six buildings operating and two more under construction, alongside an Amazon warehouse and two solar sites on the same 2,000-acre business park. In March 2026, the Village Council approved a further LEDA agreement, unanimously and without recorded debate, funding an expansion of that same facility from local gross receipts tax revenue.
+
+Same corpus, same method, the other half of the picture: not just which board is about to say no, but which one already said yes, and on what terms.
+
+### The welcome-mat pipeline, stage by stage
+
+The leading part of this pipeline runs the same way the moratorium side does: visible in committee records months earlier.
+
+- **Institutional readiness, before any project is named.** Hermitage, Pennsylvania wrote a full data-center zoning ordinance, definitions, siting standards, setbacks, environmental review, decommissioning terms, with no developer anywhere in the record. A town does not write decommissioning rules for a use case it is not expecting to show up.
+- **Early-stage talks.** McAlester, Oklahoma's city manager reported to Council in June 2025: *"New Data Center: Early-stage talks with a potential data center."* Many months before Sand Springs and Los Lunas reached their public votes, that language, a staff report flagging a conversation with no name attached yet, was already sitting in a routine monthly update.
+- **Formal commitment.** Sand Springs' incentive districts and Los Lunas' unanimous vote, above, both public, both on the record, months before either reached this piece.
+
+Three towns, three stages of the same read the moratorium side already proves: the record shows the decision before it is news.
+
+One more data point, of a different kind. Stillwater, Oklahoma pulled a $14.7 million data-center building permit in March 2026, issued to Manhattan Construction. That is not a leading signal, it is the opposite: the point where a project stops being a signal and becomes a fact. Its value here is different, it is proof the earlier stages are real. A town that shows institutional readiness, then early talks, then a formal incentive vote, is a town where construction follows.
+
+### What's next
+
+Bellefonte, Delaware and Douglas County, Wisconsin are where Utica was in July: a committee weighing whether to recommend a moratorium, not yet a vote. Read them the same way, as evidence of what September's outcomes will look like, not as news yet.
 
 ## The Iowa Specifics: One Ordinance, Many Meetings
 
@@ -131,7 +187,7 @@ The records counted here are documents flagged by the production pipeline as rel
 
 **State-legislative outcomes, partial coverage.** The pipeline captured Maine's LD307 House vote (April 6) via earlier LegiScan extraction. It did not capture the subsequent Governor's veto (April 24), the failed House override (April 29), or the parallel LD713 signing (April 29) at the time those events happened. LegiScan now serves a Cloudflare challenge to headless server-side requests, which is the platform-consolidation shape we list in the falsification section above. Live status checks need either a JavaScript-executing approach (the ScraperAPI rendering tier or a residential-proxy browser) or the paid LegiScan API. We are building a bill-watchlist mechanism that polls status changes on the subset of bills already flagged through municipal contagion signal, rather than blanket state-legislative tracking. Until that lands, state-level outcomes on bills in this piece should be verified against primary sources (state government, established reporting outlets) at read time.
 
-All quoted document text is sourced. Every link goes to the original municipal, state-government, or news document. Data current to May 14, 2026.
+All quoted document text is sourced. Every link goes to the original municipal, state-government, or news document. Original analysis data current to May 14, 2026; the "August 2026 Update" section is current to August 26, 2026 and is sourced by a full-text corpus search rather than the production pipeline's data-center-zoning tag, so its figures are a different measurement lens on the same pattern, not a continuation of the 80/47/24 count above.
 
 ## If You'd Like the Underlying Records
 
