@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Municipal Alpha for Point and Pay</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+  :root {
+    --bg: oklch(0.15 0.012 50);
+    --surface: oklch(0.18 0.012 50);
+    --band: oklch(0.19 0.014 50);
+    --border: oklch(0.3 0.01 50);
+    --border-strong: oklch(0.34 0.01 50);
+    --accent: oklch(0.78 0.14 75);
+    --accent-hover: oklch(0.86 0.14 75);
+    --accent-muted: oklch(0.7 0.12 75);
+    --text: oklch(0.93 0.01 60);
+    --text-2: oklch(0.78 0.01 60);
+    --text-3: oklch(0.72 0.01 60);
+    --text-muted: oklch(0.63 0.01 60);
+    --text-faint: oklch(0.55 0.01 60);
+
+    --font-display: 'Source Serif 4', Georgia, serif;
+    --font-body: 'IBM Plex Sans', -apple-system, sans-serif;
+    --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container { max-width: 760px; margin: 0 auto; padding: 0 32px 90px; }
+
+  .header {
+    position: sticky; top: 0; z-index: 10;
+    background: var(--bg);
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 22px 0 16px; border-bottom: 1px solid var(--border);
+    margin-bottom: 40px;
+  }
+  .wordmark { font-family: var(--font-display); font-weight: 500; font-size: 21px; color: var(--text); }
+  .toggle {
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--accent); background: transparent; border: 1px solid var(--border-strong);
+    border-radius: 3px; padding: 8px 14px; cursor: pointer;
+  }
+  .toggle:hover { border-color: var(--accent); }
+
+  .eyebrow {
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--accent-muted); margin-bottom: 14px;
+  }
+  h1 {
+    font-family: var(--font-display); font-weight: 500;
+    font-size: clamp(30px, 4.4vw, 44px); line-height: 1.14; letter-spacing: -0.01em;
+    margin: 0 0 18px;
+  }
+  h1 em { color: var(--accent); font-style: italic; font-weight: 400; }
+  .lead { font-size: 17px; line-height: 1.55; color: var(--text-2); margin: 0 0 8px; max-width: 62ch; }
+
+  h2 {
+    font-family: var(--font-display); font-weight: 500;
+    font-size: clamp(24px, 3.2vw, 32px); line-height: 1.18; margin: 0 0 6px;
+  }
+  h2 em { color: var(--accent); font-style: italic; font-weight: 400; }
+  .section-sub { font-size: 15px; color: var(--text-3); margin: 0 0 22px; max-width: 58ch; }
+
+  .section { margin: 56px 0; }
+  .section.band { background: var(--band); margin-left: -32px; margin-right: -32px; padding: 40px 32px; }
+
+  p { font-size: 15px; line-height: 1.6; color: var(--text-3); margin: 0 0 14px; }
+  .mono-label {
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  .hook {
+    border: 1px solid var(--border-strong); border-left: 3px solid var(--accent);
+    border-radius: 4px; padding: 22px 24px; background: var(--surface);
+  }
+  .hook .mono-label { color: var(--accent-muted); margin-bottom: 10px; }
+  .hook p { color: var(--text-2); font-size: 16px; margin-bottom: 10px; }
+  .hook .src { font-family: var(--font-mono); font-size: 12px; color: var(--text-muted); }
+
+  .hook-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 22px 0 30px; }
+  @media (max-width: 640px) { .hook-grid { grid-template-columns: 1fr; } }
+
+  .fit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 4px; overflow: hidden; }
+  @media (max-width: 640px) { .fit-grid { grid-template-columns: 1fr; } }
+  .fit-card { background: var(--surface); padding: 26px 24px; }
+  .fit-tag {
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--accent); margin-bottom: 12px;
+  }
+  .fit-headline { font-family: var(--font-display); font-size: 21px; line-height: 1.25; margin: 0 0 14px; color: var(--text); }
+  .fit-card p { font-size: 14px; margin-bottom: 10px; }
+  .fit-card .cite {
+    font-family: var(--font-mono); font-size: 11.5px; color: var(--text-muted);
+    border-top: 1px solid var(--border); padding-top: 10px; margin-top: 14px;
+  }
+  .fit-card .cite a { color: var(--accent-muted); }
+  .caveat { font-size: 13px; color: var(--text-faint); font-style: italic; margin-top: 10px; }
+
+  .detail { display: none; }
+  body.show-detail .detail { display: block; }
+  body.show-detail .quick-only { display: none; }
+
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { color: var(--accent-hover); text-decoration: underline; }
+
+  .paths { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 4px; overflow: hidden; margin-top: 18px; }
+  @media (max-width: 640px) { .paths { grid-template-columns: 1fr; } }
+  .path { background: var(--surface); padding: 22px; }
+  .path .mono-label { color: var(--accent-muted); margin-bottom: 8px; }
+  .path p { font-size: 14px; margin-bottom: 0; }
+
+  footer { border-top: 1px solid var(--border); margin-top: 70px; padding-top: 26px; }
+  footer p { font-size: 12.5px; color: var(--text-faint); }
+</style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="header">
+      <div class="wordmark">Municipal Alpha</div>
+      <button class="toggle" onclick="document.body.classList.toggle('show-detail'); this.textContent = document.body.classList.contains('show-detail') ? 'Quick read' : 'Show details';">Show details</button>
+    </div>
+
+    <div class="eyebrow">Revenue operations for municipal payment contracts</div>
+    <h1>Grow the book. <em>Protect it too.</em></h1>
+    <p class="lead">A first look at what our corpus of municipal public records turns up for a payments company specifically, one live opportunity and one account worth a closer look. Both are real, dated, and checkable against the towns' own published records.</p>
+
+    <div class="section">
+      <h2>Two ways this fits your team</h2>
+      <p class="section-sub">Every B2B SaaS has both a pipeline problem and a retention problem. Here's one real example of each.</p>
+
+      <div class="fit-grid">
+        <div class="fit-card">
+          <div class="fit-tag">Grow the book</div>
+          <div class="fit-headline">A town that has to move, four months out.</div>
+          <p>Skokie's mandate is dated and specific. The same budget names a second, parallel review (outsourcing bill production and lockbox collection) in the same department.</p>
+          <p class="caveat">Checked live on 2026-08-27: no Skokie payment-processor RFP is currently posted on their public bids page, and no later record supersedes the March budget message. That doesn't confirm it's still open, only that nothing we can see says otherwise. We also haven't confirmed Illinois is inside your current service area. Worth checking both before this goes anywhere.</p>
+          <div class="cite">Source: Skokie, IL FY2027 Budget Message</div>
+        </div>
+        <div class="fit-card">
+          <div class="fit-tag">Protect the book</div>
+          <div class="fit-headline">Catching a vendor switch before it's signed.</div>
+          <p>Grafton, Massachusetts' own Treasurer/Collector office has documented a lockbox-address problem causing misdirected resident payments since 2023, still being tracked as of 2026. The office got a new Treasurer/Collector in May 2026, with no personal history in the original vendor decision.</p>
+          <p class="caveat">We have no contract on file for the term or renewal date, only the relationship. That's exactly the kind of gap a standing watch would close.</p>
+          <div class="cite">Source: Grafton, MA Treasurer/Collector weekly reports, 2025-2026</div>
+        </div>
+      </div>
+
+      <div class="hook-grid">
+        <div class="hook">
+          <div class="mono-label">Found in a public budget document, dated 2026-03-27</div>
+          <p>The Village of Skokie, Illinois told its own Board in writing they need to <em>&#8220;Implement new payment processor by January 1, 2027 (mandated by ERP cloud upgrade).&#8221;</em> The same finance department is separately evaluating whether to outsource its bill production and lockbox collection.</p>
+          <div class="src">Skokie FY2027 Budget Message, Finance Department objectives, <a href="https://www.skokie.org/ArchiveCenter/ViewFile/Item/987" target="_blank" rel="noopener">public record</a></div>
+        </div>
+        <div class="hook">
+          <div class="mono-label">Found in a town's own weekly report, dated 2026-01-23</div>
+          <p>Grafton, Massachusetts' Treasurer/Collector is still telling the Select Board that <em>&#8220;our lockbox address was changed in November 2023, USPS forwarding has expired,&#8221;</em> and residents have to fix their online banking themselves, more than two years after the change.</p>
+          <div class="src">Grafton Treasurer/Collector Weekly Report, <a href="https://www.grafton-ma.gov/ArchiveCenter/ViewFile/Item/503" target="_blank" rel="noopener">public record</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>What we actually do</h2>
+      <p>We trace the full chain of events that leads up to a town switching payment vendors, or picking one for the first time, not just the moment right before it happens, back to the earliest point in the record a revenue team could actually act on it. Then we watch for that same early point showing up elsewhere, so the lead reaches you as early as the record allows, not after a competitor already has it. Skokie and Grafton, above, are both that early point showing up, not just documents we happened to find.</p>
+      <!-- claim: point-and-pay-coverage-2026-08-27 -->
+      <p>That comes from the public record of over 4,500 municipalities, all of it technically public, almost none of it searchable at the scale a revenue team would need to act on it consistently.</p>
+    </div>
+
+    <div class="detail">
+      <div class="section">
+        <h2>How this would actually work</h2>
+        <p>A standing watch reads new public filings across your footprint every day, things like budget objectives that name a processor by name, board packets naming a competitor mid-decision, operational complaints tied to a specific vendor, and the account-level pattern that tends to precede either a renewal fight or a genuine switch. Each finding links back to the source document, dated, so it's a lead you can act on the same week, not a summary you have to take on faith.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Where this could go</h2>
+      <div class="paths">
+        <div class="path">
+          <div class="mono-label">A short call</div>
+          <p>Fifteen minutes, and we'll bring three more accounts like Skokie's, scoped to states you've confirmed you serve.</p>
+        </div>
+        <div class="path">
+          <div class="mono-label">A sample pull</div>
+          <p>Send your current footprint (even roughly), and we'll run it against the corpus and send back what's actually there.</p>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>Municipal Alpha is public-record intelligence for revenue teams selling into local government. This page and everything on it traces to a public document; nothing here is confidential.</p>
+    </footer>
+
+  </div>
+</body>
+</html>
