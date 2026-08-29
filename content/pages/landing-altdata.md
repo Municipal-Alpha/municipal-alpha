@@ -1,7 +1,7 @@
 Title: Municipal Alt Data
 Slug: solutions/alt-data
 Sortorder: 31
-Summary: Pre-earnings municipal signals. Vendor payments and building permits resolved to 100+ public company tickers from 4,300+ municipalities. Updated daily.
+Summary: Pre-earnings municipal signals. Vendor payments and building permits resolved to 100+ public company tickers from 4,400+ municipalities. Updated daily.
 
 <style>
 .lp-hero { display: flex; gap: 40px; margin-bottom: 48px; align-items: flex-start; }
@@ -63,7 +63,7 @@ Summary: Pre-earnings municipal signals. Vendor payments and building permits re
 <div class="lp-tag">Quant & Fundamental</div>
 <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #888; letter-spacing: 1px; margin-bottom: 10px;">Before the vote. Before the permit. Before the RFP.</div>
 <h2>You see the revenue before quarterly reports</h2>
-<p>When Grainger ships to Geneva, Illinois, it shows up in their check register weeks before it shows up in quarterly earnings. I built a system that reads municipal payment records daily across 4,300+ municipalities and resolves vendor names to 100+ public company tickers. You see the transaction before it becomes an earnings surprise.</p>
+<p>When Grainger ships to Geneva, Illinois, it shows up in their check register weeks before it shows up in quarterly earnings. I built a system that reads municipal payment records daily across 4,400+ municipalities and resolves vendor names to 100+ public company tickers. You see the transaction before it becomes an earnings surprise.</p>
 </div>
 <img class="lp-hero-img" src="/images/story-company-footprint.png" alt="Company footprint signal">
 </div>
@@ -91,7 +91,7 @@ Summary: Pre-earnings municipal signals. Vendor payments and building permits re
 <span class="lp-metric-label">Signal-ticker pairs</span>
 </div>
 <div class="lp-metric">
-<span class="lp-metric-value">4,300+</span>
+<span class="lp-metric-value">4,400+</span>
 <span class="lp-metric-label">Municipalities</span>
 </div>
 <div class="lp-metric">

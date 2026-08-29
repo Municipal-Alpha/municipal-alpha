@@ -197,7 +197,7 @@ No FCC Antenna Structure Registration. No FAA obstruction filing. No permit in a
 
 <div class="cs-cta">
 <h3>Want the record on a town you're bidding?</h3>
-<p>This is one town. We monitor 4,300+ — and the same chain, citizen complaint to signed lease, is forming right now in towns you're bidding, leasing, or screening. Name the town and I'll send you what its record says: who's involved, how far along it is, and how long the window has been open.</p>
+<p>This is one town. We monitor 4,400+ — and the same chain, citizen complaint to signed lease, is forming right now in towns you're bidding, leasing, or screening. Name the town and I'll send you what its record says: who's involved, how far along it is, and how long the window has been open.</p>
 <a href="mailto:matt@municipalalpha.com?subject=Record%20request%3A%20%5Byour%20town%5D" class="cta-button">Name your town</a>
 </div>
 

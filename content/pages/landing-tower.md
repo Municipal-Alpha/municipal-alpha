@@ -1,7 +1,7 @@
 Title: Tower & Infrastructure Leads
 Slug: solutions/tower-leads
 Sortorder: 30
-Summary: Pre-listing lease intelligence. 7,700+ qualified tower lease prospects with parcel data, owner identification, and FCC/FAA cross-reference, across 4,300+ municipalities.
+Summary: Pre-listing lease intelligence. 7,700+ qualified tower lease prospects with parcel data, owner identification, and FCC/FAA cross-reference, across 4,400+ municipalities.
 
 <style>
 .lp-hero { display: flex; gap: 40px; margin-bottom: 48px; align-items: flex-start; }

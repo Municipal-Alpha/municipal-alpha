@@ -63,7 +63,7 @@ Geneva, Illinois publishes bi-weekly check registers listing every payment the c
 <div class="cs-stat"><span class="cs-stat-value">9</span><span class="cs-stat-label">years of check registers</span></div>
 <div class="cs-stat"><span class="cs-stat-value">15+</span><span class="cs-stat-label">public company tickers</span></div>
 <div class="cs-stat"><span class="cs-stat-value">~200</span><span class="cs-stat-label">bi-weekly registers</span></div>
-<div class="cs-stat"><span class="cs-stat-value">4,300+</span><span class="cs-stat-label">municipalities at scale</span></div>
+<div class="cs-stat"><span class="cs-stat-value">4,400+</span><span class="cs-stat-label">municipalities at scale</span></div>
 </div>
 
 <div class="cs-window">

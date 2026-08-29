@@ -46,11 +46,11 @@ The coverage gap is the product.
 
 **Where the system is today (as of July 2026):**
 
-- **4,300+** municipalities monitored daily, all 50 states
-- **969,000+** documents ingested and classified
+- **4,400+** municipalities monitored daily, all 50 states
+- **1,011,000+** documents ingested and classified
 - **44,000+** building permits structured
 - **100+** public company tickers resolved from municipal vendor names
-- **430,000+** classified signals
+- **434,000+** classified signals
 - Adding new municipalities weekly, with infrastructure built to scale past 5,000
 
 **Where this goes:**
@@ -109,7 +109,7 @@ A competitor can read the statute. They can't replicate what we've learned from 
 
 Building permits are one of the most underrated public data sources. Every commercial construction project, infrastructure upgrade, and development phase starts with a permit. The data tells you which contractors are winning work, which developers are active in a geography, where infrastructure spending is accelerating, and how local construction activity maps to public company revenue -- months before any of it shows up in earnings or analyst reports.
 
-Small and mid-sized municipalities issue the same permits as large cities, just on worse websites with less standardization. That's where the coverage gap is widest. We monitor 4,300+ municipalities and structure the permit records they publish into entity- and ticker-resolved time series, 44,000+ records and growing.
+Small and mid-sized municipalities issue the same permits as large cities, just on worse websites with less standardization. That's where the coverage gap is widest. We monitor 4,400+ municipalities and structure the permit records they publish into entity- and ticker-resolved time series, 44,000+ records and growing.
 
 ## The Pipeline
 

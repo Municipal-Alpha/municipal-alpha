@@ -2,15 +2,15 @@ Title: The Company That Shows Up in 123 Towns
 Slug: research/company-footprint
 Sortorder: 21
 Header_image: story-company-footprint.png
-Summary: Entity resolution across 4,300+ municipalities reveals which public companies have the deepest municipal government footprint.
+Summary: Entity resolution across 4,400+ municipalities reveals which public companies have the deepest municipal government footprint.
 
-*Analysis based on entity resolution across 4,300+ municipalities.*
+*Analysis based on entity resolution across 4,400+ municipalities.*
 
 ## Municipal Government Revenue Is Hiding in Plain Sight
 
 Every municipality in America pays vendors. Phone companies, waste haulers, equipment suppliers, software providers, utilities. These payments are recorded in public documents -- check registers, budgets, RFPs, contracts, meeting minutes. The documents are public. The vendors are often publicly traded. And nobody is connecting the dots at scale.
 
-We are. Our pipeline resolves vendor names to public company tickers across 4,300+ municipalities. The result is a dataset that shows which companies have the deepest municipal government footprint in America, sourced from the actual payment records.
+We are. Our pipeline resolves vendor names to public company tickers across 4,400+ municipalities. The result is a dataset that shows which companies have the deepest municipal government footprint in America, sourced from the actual payment records.
 
 ## The Scale
 
@@ -37,7 +37,7 @@ Showing 10 of 100+ resolved tickers:
 
 Verizon appears in 110+ municipalities with 6,100+ individual sightings -- check register payments, RFP mentions, contract references, budget line items. That's recurring government revenue from the actual source documents.
 
-And this is from 4,300+ municipalities. The United States has 19,500.
+And this is from 4,400+ municipalities. The United States has 19,500.
 
 ## What the Breadth Tells You
 
@@ -61,7 +61,7 @@ This is why nobody else has this dataset. The documents are public. The entity r
 
 ## What You Can Do With This
 
-One check register from one town is a curiosity. Entity-resolved vendor payment data across 4,300+ municipalities is an alternative dataset that tracks public company government revenue from the source documents, in near-real-time, before it shows up in quarterly earnings.
+One check register from one town is a curiosity. Entity-resolved vendor payment data across 4,400+ municipalities is an alternative dataset that tracks public company government revenue from the source documents, in near-real-time, before it shows up in quarterly earnings.
 
 The applications are straightforward:
 

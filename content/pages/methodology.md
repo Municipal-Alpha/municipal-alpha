@@ -5,11 +5,11 @@ Summary: Coverage, data freshness, classification, entity resolution, alpha meas
 
 ## Coverage
 
-We have records from 4,300+ municipalities across 50 states (as of July 2026). The United States has 19,500 municipalities. <!-- metrics-ok: total US --> Coverage density follows buyer demand, not capability: our earliest buyers were concentrated in New England, so coverage is deepest there today, with substantial footprints in the Midwest and Mountain West. Onboarding is by publishing platform, and the platforms are national (CivicPlus, Granicus, BoardDocs, and others), so a new buyer's footprint anywhere in the country onboards the same way. Coverage expands weekly through automated onboarding.
+We have records from 4,400+ municipalities across 50 states (as of July 2026). The United States has 19,500 municipalities. <!-- metrics-ok: total US --> Coverage density follows buyer demand, not capability: our earliest buyers were concentrated in New England, so coverage is deepest there today, with substantial footprints in the Midwest and Mountain West. Onboarding is by publishing platform, and the platforms are national (CivicPlus, Granicus, BoardDocs, and others), so a new buyer's footprint anywhere in the country onboards the same way. Coverage expands weekly through automated onboarding.
 
 **What we cover well today:**
 
-- Municipal meeting documents (agendas, minutes, packets) from 4,300+ municipalities
+- Municipal meeting documents (agendas, minutes, packets) from 4,400+ municipalities
 - Check registers and accounts payable data from 200+ municipalities
 - Building permits (44,000+ structured records, entity-resolved)
 - Tower and infrastructure lease data from assessor records (13,000+ sites screened)
@@ -65,7 +65,7 @@ Vendor names in municipal documents are messy. "Waste Management of Maine," "WM,
 - **Tier 1 (Watchlist):** Curated ticker-company pairs. Exact string matching. High confidence. Primary source for trading signals.
 - **Tier 2 (Discovery):** Broader matching against subsidiary names, DBAs, and known aliases. Substring and fuzzy matching. Medium confidence. Stored for validation and portfolio expansion.
 
-Current resolution covers 100+ public company tickers across 4,300+ municipalities. Resolution accuracy varies by entity -- large, frequently-appearing companies (AT&T, Verizon, Waste Management) resolve at high accuracy. Smaller or regional companies may not resolve on first appearance and are queued for review.
+Current resolution covers 100+ public company tickers across 4,400+ municipalities. Resolution accuracy varies by entity -- large, frequently-appearing companies (AT&T, Verizon, Waste Management) resolve at high accuracy. Smaller or regional companies may not resolve on first appearance and are queued for review.
 
 **Known limitation:** Entity confidence is currently expressed as a tier label, not a numeric probability score. Numeric confidence scoring is planned.
 

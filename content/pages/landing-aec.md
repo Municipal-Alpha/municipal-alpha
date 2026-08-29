@@ -1,7 +1,7 @@
 Title: AEC & Professional Services Signals
 Slug: solutions/aec
 Sortorder: 37
-Summary: See the design work forming before the RFP is written. Master plans, capital votes, and facility studies signal engineering and environmental work 6-24 months early. 4,300+ municipalities, updated daily.
+Summary: See the design work forming before the RFP is written. Master plans, capital votes, and facility studies signal engineering and environmental work 6-24 months early. 4,400+ municipalities, updated daily.
 
 <style>
 .lp-hero { display: flex; gap: 40px; margin-bottom: 48px; align-items: flex-start; }
@@ -63,7 +63,7 @@ Summary: See the design work forming before the RFP is written. Master plans, ca
 <div class="lp-tag">AEC &amp; Professional Services</div>
 <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #888; letter-spacing: 1px; margin-bottom: 10px;">Before the vote. Before the permit. Before the RFP.</div>
 <h2>See the design work forming before the RFP is written</h2>
-<p>Municipal master plans, capital improvement votes, facility studies, and resilience assessments signal future design and engineering work 6 to 24 months before a formal RFP is issued. By the time the solicitation posts, the incumbent has usually been in the room for a year. I read the documents where that work first appears, daily, across 4,300+ municipalities, so your business development starts at the study, not at the solicitation.</p>
+<p>Municipal master plans, capital improvement votes, facility studies, and resilience assessments signal future design and engineering work 6 to 24 months before a formal RFP is issued. By the time the solicitation posts, the incumbent has usually been in the room for a year. I read the documents where that work first appears, daily, across 4,400+ municipalities, so your business development starts at the study, not at the solicitation.</p>
 </div>
 </div>
 
@@ -77,11 +77,11 @@ Summary: See the design work forming before the RFP is written. Master plans, ca
 
 <div class="lp-metrics">
 <div class="lp-metric">
-<span class="lp-metric-value">4,300+</span>
+<span class="lp-metric-value">4,400+</span>
 <span class="lp-metric-label">Municipalities</span>
 </div>
 <div class="lp-metric">
-<span class="lp-metric-value">969,000+</span>
+<span class="lp-metric-value">1,011,000+</span>
 <span class="lp-metric-label">Documents</span>
 </div>
 <div class="lp-metric">
