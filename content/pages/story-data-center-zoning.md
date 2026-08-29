@@ -2,7 +2,7 @@ Title: Data Centers Are Contested in 24 States, and the Friction Curve Is Steepe
 Slug: research/data-center-zoning
 Sortorder: 25
 Header_image: story-data-center-zoning.png
-Summary: Municipal Alpha tracks data-center zoning and siting activity across US municipalities, surfacing it from planning-board minutes and committee agendas months before national reporting. As of May 2026, 80 distinct municipal and state records across 47 jurisdictions in 24 states showed the pattern forming. By August, the same pattern had moved from committee talk to adopted moratoria in New York, Maine, and Wisconsin, and into active litigation over one of them in Maine. Every figure is sourced.
+Summary: Municipal Alpha tracks data-center zoning and siting activity across US municipalities, surfacing it from planning-board minutes and committee agendas months before national reporting. As of May 2026, 80 distinct municipal and state records across 47 jurisdictions in 24 states showed the pattern forming. By August, the same pattern had moved from committee talk to adopted moratoria in Maine and Wisconsin, a noticed one in New York, and into active litigation over one of them in Maine. Every figure is sourced.
 
 *Updated August 2026. Original analysis (below) current to May 14, 2026, based on 80 distinct municipal and state records then flagged in the production pipeline as data-center-zoning-related, spanning 47 jurisdictions across 24 states. See "The August 2026 Update" for what changed since.*
 
@@ -57,9 +57,9 @@ The Northeast concentration is partly real (the regional grid is constrained, an
 
 ## The August 2026 Update
 
-A platform decision-maker who evaluates data-center siting deals described the moment his own business usually finds out too late to matter, once a developer has already signed the utility load application:
+A platform decision-maker at a renewables developer described the moment his own business usually finds out too late to matter, once a data-center developer has already signed the utility load application:
 
-> *"He's too far past the ball already. By the time that load application happens, it's too late. They've already been working with the developers. I want to see something before that."*
+> *"He's too far past the ball already. ... I want to see something before that."*
 
 That complaint is really about a town's disposition toward the project, whether it will fight it or compete for it, and that decision is visible earlier still. It shows up in committee, in zoning language, in incentive votes, months before any load application, any lawsuit, or any press coverage.
 
@@ -67,7 +67,7 @@ That data centers are running into local resistance is not news; it is a nationa
 
 ### What happened in August
 
-- **Utica, Wisconsin.** The town board voted 3-0 on August 10 to adopt Winnebago County's data-center moratorium.
+- **Utica, Wisconsin.** The town board voted 3-0 on August 10 to approve Winnebago County's data-center text amendment and 12-month moratorium for the town. The chairman, in the minutes: "it's keeping them out of our town."
 - **Scarborough, Maine.** Its moratorium is now in court. A developer is suing over both the moratorium and the town's "incomplete application" finding; the town's motion to dismiss has already been denied, and the case is in discovery.
 - **Brunswick, Maine.** Council reviewed a tiered zoning framework built around the 180-day moratorium it adopted in June.
 - **Lockport, New York (the Town, not the neighboring City).** Noticed an 18-month moratorium on data-center permitting for an August 5 public hearing.
@@ -75,10 +75,10 @@ That data centers are running into local resistance is not news; it is a nationa
 ### None of it started in August
 
 - In Utica, a resident asked the board directly on July 13 whether it would recommend a moratorium "next month." The chairman said the town would look into it. The board adopted one unanimously at its very next meeting, August 10.
-- In Brunswick, the June 1 public hearing was set on the town's own May 18 agenda, two weeks ahead of the vote.
+- In Brunswick, the item to set a June 1 public hearing on the moratorium was already on the town's May 18 agenda, two weeks ahead of the vote.
 - Across Maine more broadly, the May edition of this analysis had already logged eight Maine jurisdictions building this cluster, months before any of August's outcomes landed.
 
-**The claim this corpus supports:** every moratorium adopted and every lawsuit filed in August was already sitting in a committee minute earlier in the year, for anyone reading municipal agendas closely enough to see it.
+**The claim this corpus supports:** for each of the August outcomes tracked here, the moratoria and the lawsuit alike, the decision was already sitting in a committee record earlier in the year, for anyone reading municipal agendas closely enough to see it. That is a statement about these cases, not a law of the corpus. A moratorium can surface without a visible run-up, and where that happens we will say so.
 
 ### The state layer, for balance
 
@@ -90,26 +90,26 @@ That executive order is this analysis's own thesis, one level up. Pennsylvania j
 
 As restriction rises, state by state and town by town, the harder question for a developer is not only where not to build. It is which town is actively competing to win the project.
 
-- **Sand Springs, Oklahoma** is running a formal economic-development process for a $1 billion-per-phase, multi-phase data center, structured around three Incentive Districts offering a full, 25-year exemption from property tax. Two public hearings ran in May, and the city was still moving the deal through committee as of its June 22 meeting.
-- **Los Lunas, New Mexico** already won one, and is still winning more. The village's own comprehensive plan credits its Local Economic Development Act incentives with helping land Meta's data center, now the state's largest, six buildings operating and two more under construction, alongside an Amazon warehouse and two solar sites on the same 2,000-acre business park. In March 2026, the Village Council approved a further LEDA agreement, unanimously and without recorded debate, funding an expansion of that same facility from local gross receipts tax revenue.
+- **Sand Springs, Oklahoma** is running a formal economic-development process for a $1 billion-per-phase, multi-phase data center, structured around three Incentive Districts offering a full, 25-year exemption from property tax. Two public hearings ran in May, and on May 15 the Council approved the project plan, all three districts, and a development agreement, 5-0, with Google's representatives on the record.
+- **Los Lunas, New Mexico** already won one, and is still winning more. The village's 2022 comprehensive plan credits its Local Economic Development Act incentives with helping land Meta's data center, the state's largest, alongside an Amazon warehouse and two solar sites on the same 2,000-acre business park. In March 2026, the Village Council approved a further LEDA agreement 4-0, funding an expansion of the existing data center there from local gross receipts tax revenue.
 
 Same corpus, same method, the other half of the picture: not just which board is about to say no, but which one already said yes, and on what terms.
 
 ### The welcome-mat pipeline, stage by stage
 
-The leading part of this pipeline runs the same way the moratorium side does: visible in committee records months earlier.
+The leading part of this pipeline runs the same way the moratorium side does: visible in committee records months earlier. These are softer signals than an adopted moratorium. An ordinance is intent, a staff note is a conversation, and only the incentive vote is a binding act; read them in that order.
 
-- **Institutional readiness, before any project is named.** Hermitage, Pennsylvania wrote a full data-center zoning ordinance, definitions, siting standards, setbacks, environmental review, decommissioning terms, with no developer anywhere in the record. A town does not write decommissioning rules for a use case it is not expecting to show up.
+- **Institutional readiness, before any project is named.** Hermitage, Pennsylvania drafted a full data-center zoning ordinance, definitions, siting standards, setbacks, environmental review, decommissioning terms, and noticed it for a final vote in July, with no developer named anywhere in the ordinance. A town does not write decommissioning rules for a use case it is not expecting to show up.
 - **Early-stage talks.** McAlester, Oklahoma's city manager reported to Council in June 2025: *"New Data Center: Early-stage talks with a potential data center."* Many months before Sand Springs and Los Lunas reached their public votes, that language, a staff report flagging a conversation with no name attached yet, was already sitting in a routine monthly update.
 - **Formal commitment.** Sand Springs' incentive districts and Los Lunas' unanimous vote, above, both public, both on the record, months before either reached this piece.
 
 Three towns, three stages of the same read the moratorium side already proves: the record shows the decision before it is news.
 
-One more data point, of a different kind. Stillwater, Oklahoma pulled a $14.7 million data-center building permit in March 2026, issued to Manhattan Construction. That is not a leading signal, it is the opposite: the point where a project stops being a signal and becomes a fact. Its value here is different, it is proof the earlier stages are real. A town that shows institutional readiness, then early talks, then a formal incentive vote, is a town where construction follows.
+One more data point, of a different kind. Stillwater, Oklahoma's March 2026 building-permit report lists a new data-center building among three new commercial permits totaling $293 million that month. That is not a leading signal, it is the opposite: the point where a project stops being a signal and becomes a fact. Its value here is different, it is proof the earlier stages are real. A town that shows institutional readiness, then early talks, then a formal incentive vote, is a town where construction follows.
 
 ### What's next
 
-Bellefonte, Delaware and Douglas County, Wisconsin are where Utica was in July: a committee weighing whether to recommend a moratorium, not yet a vote. Read them the same way, as evidence of what September's outcomes will look like, not as news yet.
+Shelbyville, Kentucky's council reached consensus on July 16 to recommend a moratorium, with a first reading set for August 6. Bellefonte, Pennsylvania and Douglas County, Wisconsin are a step earlier, where Utica was in July: the question is on a committee agenda, not yet a vote. Bellefonte's ordinance committee spent July on how the state's pending moratorium bills would apply to a borough with little land left to zone, leaning toward an intermunicipal agreement for hyperscale sites and local conditional-use rules for smaller ones; Douglas County's board chair asked the land-and-water committee to list its environmental concerns before it takes up either a moratorium or a data-center rezoning. Read them the same way, as evidence of what September's outcomes will look like, not as news yet.
 
 ## The Iowa Specifics: One Ordinance, Many Meetings
 
