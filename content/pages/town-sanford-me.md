@@ -11,19 +11,18 @@ This is a record of what Municipal Alpha holds from Sanford's own published docu
 
 It is deliberately not a narrative. Where a narrative appears on a page like this one, every sentence in it is read from the full text of a named document and the document is cited. Until that reading has been done for this city, this page states the shape of the record rather than describing it.
 
-**Last built:** 2026-08-01.
+**Last built:** 2026-08-30.
 
 ## What we hold
 
 - **408 documents** in total.
-- **3** carry a meeting date in 2026.
-- **199** (49 percent) had their text extracted successfully and are readable to us. The rest are held as a title and a link only. Nothing can be said about the contents of those.
+- **4** carry a meeting date in 2026.
+- **279** (68 percent) had their text extracted successfully and are readable to us. The rest are held as a title and a link only. Nothing can be said about the contents of those.
 - **9 boards and committees** appear in the record.
 - **7** have aged out of local storage. We know they exist and where they were; we no longer hold their text.
 - **11** are scanned images awaiting text recognition.
 - The most recent document was discovered on **2026-06-11**. Anything the city published after that date is outside this page.
-- **60** documents carry no usable meeting date, so they do not appear in any date-ordered view below.
-- **2** documents carry a meeting date far in the future, which is a date-parsing artifact rather than a scheduled meeting. They are excluded from the list below.
+- **67** documents carry no usable meeting date, so they do not appear in any date-ordered view below.
 
 ## Boards and committees in the record
 
@@ -35,7 +34,7 @@ It is deliberately not a narrative. Where a narrative appears on a page like thi
 | Finance Committee | 8 | 2015-01-01 | 2020-01-01 |
 | Town Council | 8 | unknown | unknown |
 | School Board | 3 | unknown | unknown |
-| Budget Committee | 1 | unknown | unknown |
+| Budget Committee | 1 | 2026-03-06 | 2026-03-06 |
 | Conservation Commission | 1 | unknown | unknown |
 | Maine PUC — Central Maine Power | 1 | 2026-05-28 | 2026-05-28 |
 
@@ -46,6 +45,7 @@ A board with an old last-meeting date is a statement about our coverage of it, n
 | Meeting date | Board | Records held | Agenda or minutes |
 |---|---|---|---|
 | 2026-05-28 | Maine PUC — Central Maine Power | 1 | not held |
+| 2026-03-06 | Budget Committee | 1 | not held |
 | 2026-01-01 | Unknown | 2 | not held |
 | 2025-08-07 | Unknown | 29 | not held |
 | 2025-06-17 | Unknown | 11 | not held |
@@ -64,7 +64,6 @@ A board with an old last-meeting date is a statement about our coverage of it, n
 | 2023-07-18 | Agendas - Minutes | 2 | [view](https://www.sanfordmaine.org/7-18-23 City Council Minutes.pdf?t=202308300834550) |
 | 2023-07-11 | Agendas - Minutes | 4 | [view](https://www.sanfordmaine.org/7-11-23 City Council Minutes.pdf?t=202308300834160) |
 | 2023-07-03 | Agendas - Minutes | 2 | [view](https://www.sanfordmaine.org/7-3-23 Emergency Executive Session Minutes.pdf?t=202308300830490) |
-| 2023-06-20 | Agendas - Minutes | 2 | [view](https://www.sanfordmaine.org/6-20-23 City Council Minutes.pdf?t=202308300833040) |
 
 Links go to the city's own copy. Where a link no longer resolves, the document has moved or been removed at the source. Meetings are listed rather than individual files, because a single meeting's packet can run to dozens of attachments, and those attachments routinely name private residents and their home addresses. Those are public records and we do not republish them here.
 

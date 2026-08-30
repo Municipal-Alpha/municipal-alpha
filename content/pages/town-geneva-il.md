@@ -11,18 +11,18 @@ This is a record of what Municipal Alpha holds from Geneva's own published docum
 
 It is deliberately not a narrative. Where a narrative appears on a page like this one, every sentence in it is read from the full text of a named document and the document is cited. Until that reading has been done for this city, this page states the shape of the record rather than describing it.
 
-**Last built:** 2026-08-01.
+**Last built:** 2026-08-30.
 
 ## What we hold
 
-- **2,151 documents** in total.
-- **11** carry a meeting date in 2026.
+- **2,170 documents** in total.
+- **186** carry a meeting date in 2026.
 - **264** (12 percent) had their text extracted successfully and are readable to us. The rest are held as a title and a link only. Nothing can be said about the contents of those.
 - **49 boards and committees** appear in the record.
 - **937** have aged out of local storage. We know they exist and where they were; we no longer hold their text.
 - **1** is a scanned image awaiting text recognition.
-- The most recent document was discovered on **2026-07-24**. Anything the city published after that date is outside this page.
-- **923** documents carry no usable meeting date, so they do not appear in any date-ordered view below.
+- The most recent document was discovered on **2026-08-07**. Anything the city published after that date is outside this page.
+- **675** documents carry no usable meeting date, so they do not appear in any date-ordered view below.
 
 ## Boards and committees in the record
 
@@ -30,18 +30,18 @@ It is deliberately not a narrative. Where a narrative appears on a page like thi
 |---|---|---|---|
 | Approved Vendor Contracts | 535 | 2017-04-17 | 2019-01-01 |
 | Committee of the Whole | 252 | 2001-01-01 | 2012-01-01 |
-| Accounts Payable Invoice Reports | 228 | 2017-01-03 | 2026-02-17 |
+| Accounts Payable Invoice Reports | 229 | 2017-01-03 | 2026-02-17 |
 | City Council | 130 | 2007-01-01 | 2012-01-01 |
-| Cultural Arts Commission Agendas &amp; | 98 | 2013-03-05 | 2013-03-19 |
+| Cultural Arts Commission Agendas &amp; | 98 | 2009-01-08 | 2013-03-19 |
 | Plan Commission Agendas &amp; | 63 | 2008-01-01 | 2013-01-01 |
 | Committee Of The Whole Agendas &amp; | 62 | 2011-01-01 | 2012-01-01 |
 | City Council Agendas &amp; | 59 | 2011-01-01 | 2012-01-01 |
 | Zoning Board Of Appeals Agendas &amp; | 47 | 2013-01-01 | 2019-01-01 |
 | Zoning Board Of Appeals | 41 | 2013-01-01 | 2019-01-01 |
+| Police Reports | 39 | unknown | unknown |
 | Mental Health Board | 37 | 2009-01-01 | 2013-01-01 |
-| Staff Responses To City Council Questions | 35 | unknown | unknown |
+| Staff Responses To City Council Questions | 36 | unknown | unknown |
 | Fire &amp; Police Commission | 34 | 2009-01-01 | 2013-01-01 |
-| Police Reports | 33 | unknown | unknown |
 | Historic Preservation Commission | 29 | 2010-01-01 | 2012-01-01 |
 | Annual Comprehensive Financial Reports | 28 | 2000-01-01 | 2024-01-01 |
 | Broadband | 24 | unknown | unknown |
@@ -56,7 +56,7 @@ It is deliberately not a narrative. Where a narrative appears on a page like thi
 | State Required Letter On Internal Controls | 11 | 2015-01-01 | 2022-01-01 |
 | Firefighters’ Pension Municipal Compliance | 10 | 2015-01-01 | 2022-01-01 |
 | Popular Annual Financial Report | 10 | 2016-01-01 | 2022-01-01 |
-| Economic Development Commission Agendas &amp; M | 9 | unknown | unknown |
+| Economic Development Commission Agendas &amp; M | 9 | 2011-11-10 | 2012-11-08 |
 | Firefighters Pension Fund Actuarial Reports | 8 | 2018-01-01 | 2022-01-01 |
 | Police Pension Fund Actuarial Reports | 8 | 2018-01-01 | 2022-01-01 |
 | Government Finance Officers Association (GF | 7 | 2010-01-01 | 2016-01-01 |

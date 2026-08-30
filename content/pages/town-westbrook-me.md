@@ -11,18 +11,18 @@ This is a record of what Municipal Alpha holds from Westbrook's own published do
 
 It is deliberately not a narrative. Where a narrative appears on a page like this one, every sentence in it is read from the full text of a named document and the document is cited. Until that reading has been done for this city, this page states the shape of the record rather than describing it.
 
-**Last built:** 2026-08-01.
+**Last built:** 2026-08-30.
 
 ## What we hold
 
-- **611 documents** in total.
-- **61** carry a meeting date in 2026.
-- **128** (21 percent) had their text extracted successfully and are readable to us. The rest are held as a title and a link only. Nothing can be said about the contents of those.
+- **619 documents** in total.
+- **92** carry a meeting date in 2026.
+- **191** (31 percent) had their text extracted successfully and are readable to us. The rest are held as a title and a link only. Nothing can be said about the contents of those.
 - **24 boards and committees** appear in the record.
 - **209** have aged out of local storage. We know they exist and where they were; we no longer hold their text.
-- **11** are scanned images awaiting text recognition.
-- The most recent document was discovered on **2026-07-27**. Anything the city published after that date is outside this page.
-- **77** documents carry no usable meeting date, so they do not appear in any date-ordered view below.
+- **25** are scanned images awaiting text recognition.
+- The most recent document was discovered on **2026-08-28**. Anything the city published after that date is outside this page.
+- **41** documents carry no usable meeting date, so they do not appear in any date-ordered view below.
 
 ## Boards and committees in the record
 
@@ -32,16 +32,16 @@ It is deliberately not a narrative. Where a narrative appears on a page like thi
 | City Council | 35 | 2026-01-05 | 2026-06-01 |
 | Approved City Budgets | 32 | unknown | unknown |
 | Audit Reports | 31 | 2010-01-01 | 2025-01-01 |
-| Personal Property Tax Bills | 26 | 2013-01-01 | 2025-01-01 |
+| Personal Property Tax Bills | 27 | 2013-01-01 | 2026-01-01 |
 | Document Center / Economic Development | 25 | 2018-01-01 | 2024-08-26 |
 | Document Center / Finance | 25 | 2018-01-01 | 2025-01-01 |
-| Document Center / Planning | 25 | 2007-01-01 | 2023-05-20 |
+| Document Center / Planning | 25 | 2007-01-01 | 2023-10-03 |
 | Real Estate Tax Commitment Books | 20 | 2014-01-01 | 2023-01-01 |
 | All Boards | 19 | 2020-01-16 | 2026-02-19 |
 | Personal Property Tax Commitment Books | 18 | 2014-01-01 | 2023-01-01 |
 | Document Center / City Charter & Code of Ordinances | 16 | 2018-01-01 | 2020-01-01 |
 | Stormwater Program Management Plan Annual R | 16 | 2009-01-01 | 2019-01-01 |
-| Real Estate Tax Bills | 14 | 2019-01-01 | 2025-01-01 |
+| Real Estate Tax Bills | 15 | 2019-01-01 | 2026-01-01 |
 | Library Advisory Committee | 12 | 2024-03-26 | 2024-12-03 |
 | Document Center / Downtown RFP | 10 | 2017-01-01 | 2023-04-25 |
 | Planning Board Chairman&amp;#39s Reports | 10 | 2013-01-01 | 2017-01-01 |
