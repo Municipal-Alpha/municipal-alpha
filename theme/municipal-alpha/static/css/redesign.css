@@ -1,0 +1,149 @@
+/* Municipal Alpha site redesign — shared design system.
+   Scoped entirely under .rd-page (applied to <body> on redesigned pages only)
+   so this file can be linked without risk of colliding with theme/css/style.css,
+   which every other page on the site still uses unmodified. */
+
+.rd-page {
+  --rd-bg: oklch(0.15 0.012 50);
+  --rd-surface: oklch(0.18 0.012 50);
+  --rd-band: oklch(0.19 0.014 50);
+  --rd-border: oklch(0.3 0.01 50);
+  --rd-border-strong: oklch(0.34 0.01 50);
+  --rd-accent: oklch(0.78 0.14 75);
+  --rd-accent-hover: oklch(0.86 0.14 75);
+  --rd-accent-muted: oklch(0.7 0.12 75);
+  --rd-text: oklch(0.93 0.01 60);
+  --rd-text-secondary: oklch(0.78 0.01 60);
+  --rd-text-tertiary: oklch(0.72 0.01 60);
+  --rd-text-muted: oklch(0.62 0.01 60);
+  --rd-text-faint: oklch(0.5 0.01 60);
+  --rd-error: oklch(0.72 0.17 30);
+  --rd-error-border: oklch(0.55 0.14 30);
+
+  background: var(--rd-bg);
+  color: var(--rd-text);
+  font-family: 'IBM Plex Sans', sans-serif;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.rd-page * { box-sizing: border-box; }
+.rd-page a { color: var(--rd-accent); text-decoration: none; }
+.rd-page a:hover { color: var(--rd-accent-hover); }
+.rd-page ::selection { background: var(--rd-accent); color: var(--rd-bg); }
+.rd-page input, .rd-page select, .rd-page textarea { font-family: 'IBM Plex Sans', sans-serif; }
+.rd-page input::placeholder, .rd-page textarea::placeholder { color: oklch(0.5 0.01 60); }
+.rd-page input:focus, .rd-page select:focus, .rd-page textarea:focus { outline: none; border-color: var(--rd-accent); }
+
+/* ---- layout ---- */
+.rd-wrap { max-width: 1120px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px); }
+.rd-section { padding: clamp(56px, 8vw, 100px) clamp(20px, 4vw, 48px); }
+.rd-section-tight { padding: clamp(40px, 6vw, 72px) clamp(20px, 4vw, 48px); }
+.rd-band { background: var(--rd-band); }
+
+/* ---- type ---- */
+.rd-page h1, .rd-page h2, .rd-page h3 { font-family: 'Source Serif 4', serif; font-weight: 500; margin: 0; text-wrap: pretty; }
+.rd-page h1 { font-size: clamp(32px, 5.2vw, 54px); line-height: 1.1; letter-spacing: -0.01em; }
+.rd-page h1.rd-h1-sector { font-size: clamp(32px, 4.8vw, 50px); line-height: 1.12; }
+.rd-page h1.rd-h1-small { font-size: clamp(30px, 4.2vw, 44px); line-height: 1.14; }
+.rd-page h2 { font-size: clamp(26px, 3.7vw, 36px); line-height: 1.15; }
+.rd-page h3 { font-size: clamp(21px, 2.6vw, 26px); }
+.rd-page em { color: var(--rd-accent); font-style: italic; font-weight: 400; }
+.rd-eyebrow { font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--rd-accent-muted); margin: 0 0 20px; }
+.rd-eyebrow-tight { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--rd-accent-muted); }
+.rd-lead { font-size: 17px; color: var(--rd-text-secondary); }
+.rd-page p { font-size: 15px; color: var(--rd-text-tertiary); }
+.rd-mono { font-family: 'IBM Plex Mono', monospace; }
+
+/* ---- nav ---- */
+.rd-nav { position: sticky; top: 0; z-index: 50; display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 16px clamp(20px, 4vw, 48px); background: oklch(0.15 0.012 50 / 0.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--rd-border); flex-wrap: wrap; }
+.rd-nav-brand { display: flex; flex-direction: column; gap: 2px; }
+.rd-nav-brand img { height: 20px; }
+.rd-nav-brand .rd-tagline { font-family: 'Source Serif 4', serif; font-size: 12px; font-style: italic; color: var(--rd-text-muted); }
+.rd-nav-right { display: flex; gap: clamp(14px, 2.2vw, 32px); align-items: center; flex-wrap: wrap; justify-content: flex-end; }
+.rd-nav-trigger { display: flex; align-items: center; gap: 6px; font-family: 'IBM Plex Sans', sans-serif; font-size: 14px; padding: 6px 0; border: none; background: transparent; cursor: pointer; color: var(--rd-text-secondary); }
+.rd-nav-trigger:hover, .rd-nav-trigger[aria-expanded="true"] { color: var(--rd-text); }
+.rd-nav-trigger .rd-caret { font-size: 10px; color: var(--rd-accent-muted); }
+.rd-page a.rd-nav-link { font-size: 14px; color: var(--rd-text-secondary); }
+.rd-page a.rd-nav-cta { font-size: 14px; padding: 9px 18px; border: 1px solid var(--rd-accent); border-radius: 2px; color: var(--rd-accent); }
+.rd-dropdown-wrap { position: relative; }
+.rd-dropdown { position: absolute; top: 100%; right: 0; padding-top: 10px; min-width: 290px; display: none; }
+.rd-dropdown.rd-open { display: block; }
+.rd-dropdown-cases { min-width: 330px; }
+.rd-dropdown-inner { border: 1px solid var(--rd-border-strong); background: var(--rd-surface); box-shadow: 0 18px 40px oklch(0.08 0.01 50 / 0.6); display: flex; flex-direction: column; gap: 1px; }
+.rd-page a.rd-dropdown-item { display: block; padding: 14px 18px; background: var(--rd-surface); font-size: 14px; font-weight: 600; color: var(--rd-text); }
+.rd-page a.rd-dropdown-case { display: flex; flex-direction: column; gap: 3px; padding: 13px 18px; background: var(--rd-surface); color: var(--rd-text); }
+.rd-dropdown-case .rd-case-note { font-size: 12px; color: var(--rd-text-muted); font-weight: 400; }
+
+/* ---- buttons ----
+   Specificity note: `.rd-page a` (element+class, 0-1-1) outranks a bare
+   `.rd-btn-primary` (0-1-0), so button color rules are written as
+   `.rd-page a.rd-btn-*` to win over the base link color — without this,
+   CTA button text renders the same color as its own background. */
+.rd-btn { display: inline-block; font-size: 15px; font-weight: 600; padding: 14px 26px; border-radius: 2px; cursor: pointer; font-family: 'IBM Plex Sans', sans-serif; border: none; }
+.rd-page a.rd-btn-primary { background: var(--rd-accent); color: var(--rd-bg); }
+.rd-page a.rd-btn-primary:hover { background: var(--rd-accent-hover); color: var(--rd-bg); }
+.rd-page a.rd-btn-outline { border: 1px solid oklch(0.4 0.01 50); color: var(--rd-text); background: transparent; }
+.rd-page a.rd-btn-outline:hover { color: var(--rd-text); border-color: var(--rd-accent); }
+.rd-cta-note { font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: var(--rd-text-muted); }
+
+/* ---- grids / cards ----
+   Seams are drawn as per-card borders, not a background-color bleeding
+   through `gap`, because `grid-template-columns: repeat(auto-fit, ...)`
+   leaves genuinely empty cells in an incomplete last row (item count not a
+   multiple of the fitted column count) — a container background fills those
+   empty cells too, rendering as a stray blank box. Per-card borders can't
+   do that: an empty cell has no card in it, so nothing draws there. */
+.rd-seam-grid { display: grid; gap: 0; background: transparent; border: 1px solid var(--rd-border); border-right: 0; border-bottom: 0; }
+.rd-card { background: var(--rd-bg); padding: clamp(20px, 3vw, 32px); border-right: 1px solid var(--rd-border); border-bottom: 1px solid var(--rd-border); }
+.rd-card-band { background: var(--rd-bg); padding: clamp(22px, 3vw, 32px); display: flex; flex-direction: column; gap: 12px; border-right: 1px solid var(--rd-border); border-bottom: 1px solid var(--rd-border); }
+.rd-card-tag { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.08em; color: var(--rd-accent-muted); margin: 0; text-transform: uppercase; }
+.rd-panel { border: 1px solid var(--rd-border); background: var(--rd-surface); padding: clamp(22px, 3vw, 36px); }
+
+/* ---- stat band ---- */
+.rd-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 20px; }
+.rd-stat-value { font-family: 'Source Serif 4', serif; font-size: clamp(24px, 3vw, 30px); margin: 0; color: var(--rd-accent); }
+.rd-stat-label { font-size: 13px; color: var(--rd-text-muted); margin: 4px 0 0; }
+.rd-vocab-chip { font-family: 'IBM Plex Mono', monospace; font-size: 11px; padding: 5px 10px; border: 1px solid var(--rd-border-strong); border-radius: 2px; color: var(--rd-text-secondary); display: inline-block; }
+
+/* ---- sample data table ---- */
+.rd-table-wrap { border: 1px solid var(--rd-border); overflow-x: auto; }
+.rd-table { display: grid; grid-template-columns: 1.1fr 0.8fr 0.5fr 0.9fr 1.5fr; gap: 1px; background: var(--rd-border); min-width: 820px; }
+.rd-table-head { background: var(--rd-bg); padding: 12px 16px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.06em; color: var(--rd-accent-muted); text-transform: uppercase; }
+.rd-table-cell { background: var(--rd-surface); padding: 16px; font-size: 14px; color: var(--rd-text); }
+.rd-table-cell-mono { font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: var(--rd-text-tertiary); }
+.rd-table-foot { font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: var(--rd-text-muted); margin: 20px 0 0; }
+
+/* ---- quotes ---- */
+.rd-quote { font-family: 'Source Serif 4', serif; font-size: clamp(19px, 2.2vw, 22px); font-style: italic; color: var(--rd-text); margin: 0 0 18px; text-wrap: pretty; }
+.rd-quote-attr { font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: var(--rd-text-muted); }
+
+/* ---- form ---- */
+.rd-field { display: flex; flex-direction: column; gap: 7px; }
+.rd-field-label { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.06em; color: var(--rd-text-tertiary); text-transform: uppercase; }
+.rd-field input, .rd-field select, .rd-field textarea {
+  width: 100%; font-size: 15px; padding: 12px 14px;
+  background: var(--rd-bg); color: var(--rd-text);
+  border: 1px solid var(--rd-border-strong); border-radius: 2px; resize: vertical;
+}
+.rd-field input.rd-invalid, .rd-field textarea.rd-invalid { border-color: var(--rd-error-border); }
+.rd-chip-row { display: flex; gap: 8px; flex-wrap: wrap; }
+.rd-chip { font-family: 'IBM Plex Sans', sans-serif; font-size: 13px; padding: 8px 14px; border-radius: 2px; cursor: pointer; border: 1px solid var(--rd-border-strong); background: transparent; color: var(--rd-text-secondary); }
+.rd-chip[aria-pressed="true"] { border-color: var(--rd-accent); background: var(--rd-accent); color: var(--rd-bg); }
+.rd-form-error { font-size: 13px; color: var(--rd-error); margin: 0; }
+.rd-form-note { font-size: 12px; color: var(--rd-text-faint); margin: 0; }
+
+/* ---- footer ---- */
+.rd-footer { border-top: 1px solid var(--rd-border); padding: 40px clamp(20px, 4vw, 48px); }
+.rd-footer-inner { max-width: 1120px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+.rd-footer-tagline { font-family: 'Source Serif 4', serif; font-size: 16px; font-style: italic; margin: 0; color: var(--rd-text-muted); }
+.rd-footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
+.rd-footer-links a { font-size: 13px; color: var(--rd-text-muted); }
+.rd-footer-copy { max-width: 1120px; margin: 24px auto 0; font-size: 12px; color: var(--rd-text-faint); }
+.rd-footer-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 24px; margin-bottom: 32px; }
+.rd-footer-stat-value { font-family: 'Source Serif 4', serif; font-size: 28px; margin: 0; color: var(--rd-text); }
+.rd-footer-stat-label { font-size: 12px; color: var(--rd-text-muted); margin: 4px 0 0; }
+
+@media (max-width: 720px) {
+  .rd-table { min-width: 760px; }
+}

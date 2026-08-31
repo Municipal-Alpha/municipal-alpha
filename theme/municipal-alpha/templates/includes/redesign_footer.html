@@ -1,0 +1,26 @@
+{# Shared footer for redesigned pages. Set `footer_variant = "full"` before
+   including to get the homepage's 6-up stat band above the tagline row;
+   omit (or any other value) for the plain tagline-row footer used on
+   sector/contact/intake/case-study pages. #}
+<footer class="rd-footer">
+  {% if footer_variant == "full" %}
+  <div class="rd-wrap rd-footer-stats">
+    <div><p class="rd-footer-stat-value">{{ METRICS.municipalities }}</p><p class="rd-footer-stat-label">municipalities</p></div>
+    <div><p class="rd-footer-stat-value">{{ METRICS.documents }}</p><p class="rd-footer-stat-label">documents ingested</p></div>
+    <div><p class="rd-footer-stat-value">{{ METRICS.signals }}</p><p class="rd-footer-stat-label">classified signals</p></div>
+    <div><p class="rd-footer-stat-value">{{ METRICS.tower_sites }}</p><p class="rd-footer-stat-label">tower sites screened</p></div>
+    <div><p class="rd-footer-stat-value">{{ METRICS.tickers }}</p><p class="rd-footer-stat-label">tickers resolved</p></div>
+    <div><p class="rd-footer-stat-value">{{ METRICS.states }}</p><p class="rd-footer-stat-label">states</p></div>
+  </div>
+  {% endif %}
+  <div class="rd-footer-inner">
+    <p class="rd-footer-tagline">The decision is coming. We see it first.</p>
+    <div class="rd-footer-links">
+      <a href="{{ SITEURL }}/about/">About</a>
+      <a href="{{ SITEURL }}/methodology/">Methodology</a>
+      <a href="{{ SITEURL }}/legal/privacy/">Privacy</a>
+      <a href="{{ SITEURL }}/legal/terms/">Terms</a>
+    </div>
+  </div>
+  <p class="rd-footer-copy">© 2026 Municipal Alpha LLC · NSIH · Roux Institute, Northeastern University</p>
+</footer>

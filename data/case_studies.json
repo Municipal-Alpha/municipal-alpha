@@ -1,0 +1,80 @@
+{
+  "order": ["amherst-tower", "company-footprint", "pfas-contagion", "housing-density-wave", "la-marque-credit", "data-center-zoning"],
+  "articles": {
+    "amherst-tower": {
+      "url_slug": "amherst-tower",
+      "title": "Case Study: 32 Months of Signal in Amherst, New Hampshire",
+      "dek": "No FCC Antenna Structure Registration. No FAA obstruction filing. No permit in any federal database. When American Tower signed a 30-year ground lease in Amherst, New Hampshire, the only record of the deal forming was in the meeting minutes of a town of 12,000.",
+      "nav_note": "Amherst, NH · 23-month window",
+      "card_title": "Infrastructure Lease Intelligence",
+      "card_body": "A citizen complaint becomes a 30-year ground lease. 23-month window, 17 signals, zero federal records.",
+      "has_stats": true,
+      "stats": [
+        { "value": "32", "label": "months, first signal to award" },
+        { "value": "17", "label": "signals detected" },
+        { "value": "15", "label": "public meetings" },
+        { "value": "23", "label": "months of competitive window" }
+      ]
+    },
+    "company-footprint": {
+      "url_slug": "company-footprint",
+      "title": "The Company That Shows Up in 123 Towns",
+      "dek": "Analysis based on entity resolution across 4,300+ municipalities.",
+      "nav_note": "100+ tickers in vendor payments",
+      "card_title": "Pre-Earnings Municipal Signals",
+      "card_body": "Entity resolution shows which public companies appear in municipal vendor payments weeks before quarterly earnings.",
+      "has_stats": false,
+      "stats": []
+    },
+    "pfas-contagion": {
+      "url_slug": "pfas-contagion",
+      "title": "PFAS Is Spreading Through Municipal Agendas Faster Than Groundwater",
+      "dek": "Analysis based on 190+ PFAS-related events detected across 80+ municipalities in 22 states.",
+      "nav_note": "PFAS · 80+ municipalities",
+      "card_title": "Pre-RFP Environmental Signals",
+      "card_body": "190+ PFAS events across 80+ municipalities. A council vote on remediation typically leads the state RFP by about 90 days.",
+      "has_stats": false,
+      "stats": []
+    },
+    "housing-density-wave": {
+      "url_slug": "housing-density-wave",
+      "title": "The Housing Density Wave Is Rewriting Municipal Zoning in Real Time",
+      "dek": "Analysis based on 390+ housing policy events detected across 130+ municipalities in 27 states.",
+      "nav_note": "Housing density · 130+ municipalities",
+      "card_title": "Project Awareness Intelligence",
+      "card_body": "390+ zoning events across 130+ municipalities. ADU mandates and STR regulation at the workshop stage, not the bid stage.",
+      "has_stats": false,
+      "stats": []
+    },
+    "la-marque-credit": {
+      "url_slug": "la-marque-credit",
+      "title": "Case Study: 13 Months of Warning in La Marque, Texas",
+      "dek": "Moody's downgraded La Marque, Texas from A1 to A3 in October 2025. Two notches. The rating action cited administrative turnover, declining financial position, and delayed debt service payments. Every one of those signals was visible in public documents over a year earlier.",
+      "nav_note": "La Marque, TX · 13 months early",
+      "card_title": "Municipal Credit Early Warning",
+      "card_body": "A two-notch downgrade in October 2025. The governance signals were in the minutes 13 months earlier.",
+      "has_stats": true,
+      "stats": [
+        { "value": "13", "label": "months of early warning" },
+        { "value": "4", "label": "governance stress categories" },
+        { "value": "2-notch", "label": "downgrade" },
+        { "value": "492", "label": "documents monitored" }
+      ]
+    },
+    "data-center-zoning": {
+      "url_slug": "maine-data-center-moratorium",
+      "title": "Maine's Data Center Fight Was Visible in Town Halls Five Months Before the State Vote",
+      "dek": "Six Maine town halls, out of 173 we monitor in the state, were already discussing data center restrictions five months before LD 307 reached the Maine House. The House passed it, the Governor vetoed it, the override failed, and a different shape of restriction landed on the same day.",
+      "nav_note": "Maine data centers · 5 months early",
+      "card_title": "Data Center Zoning Fights",
+      "card_body": "6 of 173 monitored Maine towns were on the record before the state legislature took up LD 307. Every source document linked.",
+      "has_stats": true,
+      "stats": [
+        { "value": "6", "label": "towns signaling" },
+        { "value": "173", "label": "Maine towns monitored" },
+        { "value": "3.5%", "label": "of towns discussing it" },
+        { "value": "5 mo", "label": "first signal to state vote" }
+      ]
+    }
+  }
+}
