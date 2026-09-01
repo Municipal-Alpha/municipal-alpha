@@ -187,6 +187,7 @@
 .rd-prose th, .rd-prose td { border: 1px solid var(--rd-border); padding: 10px 14px; font-size: 14px; text-align: left; }
 .rd-prose th { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--rd-accent-muted); background: var(--rd-surface); }
 .rd-prose td { color: var(--rd-text-tertiary); }
+.rd-prose img { max-width: 100%; height: auto; display: block; margin: 24px 0; border-radius: 2px; }
 
 /* ---- case-study components, shared across every reskinned research
    article (Maine data-center, Hartford PFAS, Geneva altdata, solar
