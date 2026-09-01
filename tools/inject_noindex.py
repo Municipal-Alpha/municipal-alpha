@@ -28,7 +28,8 @@ copy-static-html are covered automatically.
 
 PUBLIC_EXTRA_DIRS exists because content/extra/ stopped being a synonym for
 "buyer-only" on 2026-08-30, when the public record layer (towns/, topics/,
-scope/) shipped into it so copy-static-html would carry it. Without the
+scope/) shipped into it so copy-static-html would carry it. scope/ is currently
+held OUT of the index by founder decision — see HELD_BACK_EXTRA_DIRS. Without the
 exclusion this tool noindexed all 538 of those pages, and — because it walks
 output/<dir>/**.html for any dir with an extra source — it also reached the 221
 dated Pelican town data stories under output/towns/, which have no extra source
@@ -55,10 +56,28 @@ OUTPUT_DIR = BASEDIR / "output"
 
 NOINDEX_TAG = '<meta name="robots" content="noindex">'
 
-# content/extra/ dirs that are PUBLIC surfaces, not buyer pages: skip them
-# entirely. These are linked, in a sitemap, and meant to be found. Adding a dir
-# here is a deliberate decision to expose it to search; removing one hides it.
-PUBLIC_EXTRA_DIRS = frozenset({"towns", "topics", "scope"})
+# content/extra/ dirs that are PUBLIC surfaces, not buyer pages. Their pages get
+# any noindex STRIPPED. Adding a dir here is a deliberate decision to expose it
+# to search; removing one hides it.
+PUBLIC_EXTRA_DIRS = frozenset({"towns", "topics"})
+
+# Public-by-construction dirs that are deliberately held OUT of the search index.
+# They stay live, stay linked from the desk, and keep the noindex their generator
+# writes — obscurity plus an explicit directive, the same posture as a buyer page.
+#
+# scope/ is held back by founder decision, 2026-09-01. The class-* pages carry
+# the names of private individuals taken from the municipal record — the person
+# who applied for an ADU permit, by name. Those names are public in the sense
+# that the minutes are public; making them SEARCHABLE BY NAME on our own domain
+# is a different act, and it would be the first time this company did it
+# (Commandment II — guard the trust; adjacent to memory/project_buyer_exclusions).
+# Towns and topics ship; scope waits on a separate call.
+#
+# This is not a comment. tools/check_index_coherence.py asserts that every page
+# under these dirs still carries noindex and appears in no sitemap, and BLOCKS
+# the build otherwise — so moving a dir from here to PUBLIC_EXTRA_DIRS is a
+# visible decision rather than a quiet one.
+HELD_BACK_EXTRA_DIRS = frozenset({"scope"})
 
 # First <head ...> opening tag, case-insensitive.
 HEAD_OPEN_RE = re.compile(r"<head\b[^>]*>", re.IGNORECASE)
@@ -163,6 +182,8 @@ def main() -> int:
     print(f"[noindex] public dirs ({', '.join(sorted(PUBLIC_EXTRA_DIRS))}): "
           f"{stripped_verb} noindex from {counts['stripped']} page(s); "
           f"{counts['already-indexable']} already indexable.")
+    print(f"[noindex] held back by decision ({', '.join(sorted(HELD_BACK_EXTRA_DIRS))}): "
+          f"left noindexed; see HELD_BACK_EXTRA_DIRS for why.")
     print(
         f"[noindex] {verb} into {counts['injected']} unlinked extra page(s); "
         f"{counts['skipped-has-robots']} already had a robots meta; "

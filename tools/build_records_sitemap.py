@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 build_records_sitemap.py — emit output/sitemap-records.xml for the public record
-layer (towns/, topics/, scope/).
+layer (towns/, topics/ — scope/ is held back, see HELD_BACK_DIRS).
 
 WHY A SECOND SITEMAP
 
@@ -51,11 +51,19 @@ BASEDIR = Path(__file__).resolve().parent.parent
 OUTPUT_DIR = BASEDIR / "output"
 SITE_URL = "https://municipalalpha.com"
 
-# Directories of the public record layer, relative to output/. Mirrors
-# PUBLIC_EXTRA_DIRS in tools/inject_noindex.py — the same set, seen from the
-# other side: those are the dirs we refuse to noindex, these are the dirs we
-# advertise. If one list changes the other almost certainly should.
-RECORD_DIRS = ("towns", "topics", "scope")
+# Directories of the public record layer we ADVERTISE, relative to output/.
+# Mirrors PUBLIC_EXTRA_DIRS in tools/inject_noindex.py — the same set seen from
+# the other side: those are the dirs we refuse to noindex, these are the dirs we
+# put in a sitemap. If one list changes the other almost certainly should.
+RECORD_DIRS = ("towns", "topics")
+
+# Live and linked, but deliberately NOT advertised. Mirrors
+# HELD_BACK_EXTRA_DIRS in tools/inject_noindex.py — scope/ is held out of the
+# index by founder decision (2026-09-01) because its class-* pages name private
+# individuals from the municipal record. Listing them here would contradict the
+# noindex they still carry, which is exactly what check_index_coherence.py
+# refuses.
+HELD_BACK_DIRS = ("scope",)
 
 LOC_RE = re.compile(r"<loc>\s*([^<\s]+)\s*</loc>", re.IGNORECASE)
 NOINDEX_RE = re.compile(
