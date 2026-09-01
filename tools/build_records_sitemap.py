@@ -41,35 +41,28 @@ Usage:
     python3 tools/build_records_sitemap.py --check    # print to stdout, write nothing
 """
 
-import re
 import sys
 from datetime import date
 from pathlib import Path
 from urllib.parse import urlsplit, quote
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
 BASEDIR = Path(__file__).resolve().parent.parent
 OUTPUT_DIR = BASEDIR / "output"
 SITE_URL = "https://municipalalpha.com"
 
-# Directories of the public record layer we ADVERTISE, relative to output/.
-# Mirrors PUBLIC_EXTRA_DIRS in tools/inject_noindex.py — the same set seen from
-# the other side: those are the dirs we refuse to noindex, these are the dirs we
-# put in a sitemap. If one list changes the other almost certainly should.
-RECORD_DIRS = ("towns", "topics")
-
-# Live and linked, but deliberately NOT advertised. Mirrors
-# HELD_BACK_EXTRA_DIRS in tools/inject_noindex.py — scope/ is held out of the
-# index by founder decision (2026-09-01) because its class-* pages name private
-# individuals from the municipal record. Listing them here would contradict the
-# noindex they still carry, which is exactly what check_index_coherence.py
-# refuses.
-HELD_BACK_DIRS = ("scope",)
-
-LOC_RE = re.compile(r"<loc>\s*([^<\s]+)\s*</loc>", re.IGNORECASE)
-NOINDEX_RE = re.compile(
-    r"""<meta\s+[^>]*name\s*=\s*['"]robots['"][^>]*content\s*=\s*['"][^'"]*\bnoindex\b""",
-    re.IGNORECASE,
+# Policy lives in tools/index_policy.py — one definition, three consumers.
+from index_policy import (  # noqa: E402
+    PUBLIC_EXTRA_DIRS,
+    SITEMAP_MAX_URLS,
+    SITEMAP_MAX_BYTES,
+    NOINDEX_META_RE,
+    LOC_RE,
 )
+
+RECORD_DIRS = tuple(sorted(PUBLIC_EXTRA_DIRS))
+
 
 
 def existing_locs() -> set[str]:
@@ -105,7 +98,7 @@ def collect():
             if url_path in already:
                 skipped["already-in-sitemap"] += 1
                 continue
-            if NOINDEX_RE.search(html_path.read_text(encoding="utf-8", errors="replace")):
+            if NOINDEX_META_RE.search(html_path.read_text(encoding="utf-8", errors="replace")):
                 skipped["noindex"] += 1
                 continue
             lastmod = date.fromtimestamp(html_path.stat().st_mtime).isoformat()
@@ -138,6 +131,19 @@ def main() -> int:
         sys.stdout.write(xml)
     else:
         (OUTPUT_DIR / "sitemap-records.xml").write_text(xml, encoding="utf-8")
+
+    # sitemaps.org caps one file at 50,000 URLs / 50MB uncompressed. Refuse well
+    # short of it so sharding is a decision we make, not one a crawler makes for
+    # us by rejecting the file (class-2 review, 2026-09-01). The record layer
+    # grows with every town onboarded, so this will matter.
+    if len(rows) > SITEMAP_MAX_URLS or len(xml.encode("utf-8")) > SITEMAP_MAX_BYTES:
+        print(f"[records-sitemap] BLOCKED — {len(rows):,} URLs / "
+              f"{len(xml.encode('utf-8')):,} bytes exceeds the safe single-sitemap "
+              f"limit ({SITEMAP_MAX_URLS:,} URLs / {SITEMAP_MAX_BYTES:,} bytes).")
+        print("[records-sitemap] Shard this into multiple maps behind a sitemap "
+              "index before it is served; a sitemap over the protocol limit is "
+              "rejected whole, not truncated.")
+        return 1
 
     verb = "would write" if check_only else "wrote"
     per_dir = {d: sum(1 for u, _ in rows if u.startswith(f"/{d}/")) for d in RECORD_DIRS}

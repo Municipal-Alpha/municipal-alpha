@@ -50,45 +50,25 @@ import re
 import sys
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
 BASEDIR = Path(__file__).resolve().parent.parent
 EXTRA_DIR = BASEDIR / "content" / "extra"
 OUTPUT_DIR = BASEDIR / "output"
 
 NOINDEX_TAG = '<meta name="robots" content="noindex">'
 
-# content/extra/ dirs that are PUBLIC surfaces, not buyer pages. Their pages get
-# any noindex STRIPPED. Adding a dir here is a deliberate decision to expose it
-# to search; removing one hides it.
-PUBLIC_EXTRA_DIRS = frozenset({"towns", "topics"})
-
-# Public-by-construction dirs that are deliberately held OUT of the search index.
-# They stay live, stay linked from the desk, and keep the noindex their generator
-# writes — obscurity plus an explicit directive, the same posture as a buyer page.
-#
-# scope/ is held back by founder decision, 2026-09-01. The class-* pages carry
-# the names of private individuals taken from the municipal record — the person
-# who applied for an ADU permit, by name. Those names are public in the sense
-# that the minutes are public; making them SEARCHABLE BY NAME on our own domain
-# is a different act, and it would be the first time this company did it
-# (Commandment II — guard the trust; adjacent to memory/project_buyer_exclusions).
-# Towns and topics ship; scope waits on a separate call.
-#
-# This is not a comment. tools/check_index_coherence.py asserts that every page
-# under these dirs still carries noindex and appears in no sitemap, and BLOCKS
-# the build otherwise — so moving a dir from here to PUBLIC_EXTRA_DIRS is a
-# visible decision rather than a quiet one.
-HELD_BACK_EXTRA_DIRS = frozenset({"scope"})
+# Policy and shared patterns live in tools/index_policy.py so the tool that
+# STRIPS and the tool that VERIFIES the strip cannot drift apart.
+from index_policy import (  # noqa: E402
+    PUBLIC_EXTRA_DIRS,
+    HELD_BACK_EXTRA_DIRS,
+    NOINDEX_META_RE,
+    ROBOTS_META_RE,
+)
 
 # First <head ...> opening tag, case-insensitive.
 HEAD_OPEN_RE = re.compile(r"<head\b[^>]*>", re.IGNORECASE)
-# Any existing robots meta — if present, leave the page alone.
-ROBOTS_META_RE = re.compile(r"""<meta\s+[^>]*name\s*=\s*['"]robots['"]""", re.IGNORECASE)
-# A robots meta that actually says noindex — the only kind stripped from public
-# pages. A page carrying e.g. `noarchive` alone keeps it.
-NOINDEX_META_RE = re.compile(
-    r"""\s*<meta\s+[^>]*name\s*=\s*['"]robots['"][^>]*content\s*=\s*['"][^'"]*\bnoindex\b[^'"]*['"][^>]*>""",
-    re.IGNORECASE,
-)
 
 
 def extra_output_pages():

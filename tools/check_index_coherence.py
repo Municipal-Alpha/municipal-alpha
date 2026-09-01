@@ -47,31 +47,31 @@ Usage:
     python3 tools/check_index_coherence.py --quiet  # findings + totals only
 """
 
-import re
 import sys
 from pathlib import Path
 from urllib.parse import urlsplit
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
 BASEDIR = Path(__file__).resolve().parent.parent
 OUTPUT_DIR = BASEDIR / "output"
 
-# Public-by-construction surfaces deliberately held OUT of the index. Every page
-# under these MUST still carry noindex and MUST appear in no sitemap. Mirrors
-# HELD_BACK_EXTRA_DIRS in tools/inject_noindex.py.
-#
-# Without this check the founder decision behind scope/ (2026-09-01: its class-*
-# pages name private individuals from the municipal record, and making those
-# names searchable on our domain is a separate call) survives only as a comment
-# and a frozenset — and a later session widening PUBLIC_EXTRA_DIRS to "the whole
-# record layer" would be indistinguishable from a tidy-up. Asserting the hold
-# positively is what makes reversing it a visible act rather than a silent one.
-HELD_BACK_DIRS = ("scope",)
-
-LOC_RE = re.compile(r"<loc>\s*([^<\s]+)\s*</loc>", re.IGNORECASE)
-NOINDEX_RE = re.compile(
-    r"""<meta\s+[^>]*name\s*=\s*['"]robots['"][^>]*content\s*=\s*['"][^'"]*\bnoindex\b""",
-    re.IGNORECASE,
+# Policy lives in tools/index_policy.py. Importing rather than restating it is
+# what makes 'the assertion list drifted from the strip list' unrepresentable
+# rather than merely detectable — see that module's header for the review
+# finding behind it.
+from index_policy import (  # noqa: E402
+    HELD_BACK_EXTRA_DIRS,
+    SITEMAP_MAX_URLS,
+    SITEMAP_MAX_BYTES,
+    NOINDEX_META_RE,
+    CANONICAL_LINK_RE,
+    HREF_RE,
+    LOC_RE,
 )
+
+HELD_BACK_DIRS = tuple(sorted(HELD_BACK_EXTRA_DIRS))
+
 
 
 def sitemap_files():
@@ -118,7 +118,7 @@ def main() -> int:
             if not fp.is_file():
                 missing.append((loc, sm.name))
                 continue
-            if NOINDEX_RE.search(fp.read_text(encoding="utf-8", errors="replace")):
+            if NOINDEX_META_RE.search(fp.read_text(encoding="utf-8", errors="replace")):
                 conflicts.append((loc, sm.name))
 
     # Population witness: what was examined, always, including the boring case.
@@ -137,7 +137,63 @@ def main() -> int:
     if len(missing) > 10:
         print(f"[index-coherence] WARNING ... and {len(missing) - 10} more dead entries")
 
+    # A sitemapped URL whose canonical points somewhere else is the same
+    # contradiction as noindex, in a form the noindex check cannot see: the
+    # sitemap says "index this URL", the page says "no, index that one".
+    # Measured on the 2026-09-01 build: 127 sitemapped pages carry a
+    # self-canonical, 150 carry none, 0 point elsewhere — so this gate starts
+    # green, which is the cheap moment to add it. Raised by the class-2 review.
+    # A page with NO canonical tag is fine and common; only a mismatch is a
+    # finding.
+    canonical_mismatches: list[tuple[str, str]] = []
+    canonical_checked = 0
+    for loc, sm in seen.items():
+        fp = url_to_path(loc)
+        if not fp.is_file():
+            continue
+        text = fp.read_text(encoding="utf-8", errors="replace")
+        tag = CANONICAL_LINK_RE.search(text)
+        if not tag:
+            continue
+        href = HREF_RE.search(tag.group(0))
+        if not href:
+            continue
+        canonical_checked += 1
+        if urlsplit(href.group(1)).path.rstrip("/") != urlsplit(loc).path.rstrip("/"):
+            canonical_mismatches.append((loc, href.group(1)))
+    print(f"[index-coherence] canonicals: {canonical_checked} sitemapped page(s) "
+          f"declare one, {len(canonical_mismatches)} point elsewhere")
+
+    if canonical_mismatches:
+        print(f"[index-coherence] BLOCKED — {len(canonical_mismatches)} sitemapped "
+              f"URL(s) declare a canonical pointing at a different URL.")
+        print("[index-coherence] The sitemap says index this; the page says index "
+              "something else. Fix one side.")
+        for loc, href in canonical_mismatches[:20]:
+            print(f"[index-coherence]   {loc}\n[index-coherence]     -> {href}")
+        return 1
+
+    # Sitemap size, per sitemaps.org: 50,000 URLs / 50MB per file.
+    for sm in maps:
+        n = len(LOC_RE.findall(sm.read_text(encoding="utf-8", errors="replace")))
+        size = sm.stat().st_size
+        if n > SITEMAP_MAX_URLS or size > SITEMAP_MAX_BYTES:
+            print(f"[index-coherence] BLOCKED — {sm.name} has {n:,} URLs / "
+                  f"{size:,} bytes, past the safe single-file limit "
+                  f"({SITEMAP_MAX_URLS:,} / {SITEMAP_MAX_BYTES:,}). Shard it "
+                  f"behind a sitemap index.")
+            return 1
+
     # The hold, asserted positively rather than assumed.
+    #
+    # An empty HELD_BACK_DIRS is a real state ("nothing is held back") and must
+    # not print as a quiet pass, because it is also what removing a dir from the
+    # list looks like — and one of those is a privacy decision being reversed.
+    # Say it out loud either way.
+    if not HELD_BACK_DIRS:
+        print("[index-coherence] held back: NOTHING — no surface is being kept "
+              "out of the index. If that is a change, it is a decision "
+              "(see HELD_BACK_EXTRA_DIRS in tools/index_policy.py).")
     held_examined = 0
     held_indexable: list[str] = []
     for d in HELD_BACK_DIRS:
@@ -148,7 +204,7 @@ def main() -> int:
             continue
         for html_path in sorted(base.rglob("*.html")):
             held_examined += 1
-            if not NOINDEX_RE.search(html_path.read_text(encoding="utf-8", errors="replace")):
+            if not NOINDEX_META_RE.search(html_path.read_text(encoding="utf-8", errors="replace")):
                 held_indexable.append(str(html_path.relative_to(OUTPUT_DIR)))
     print(f"[index-coherence] held back ({', '.join(HELD_BACK_DIRS)}): "
           f"{held_examined} page(s) examined, {len(held_indexable)} missing noindex")
