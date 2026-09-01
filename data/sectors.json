@@ -14,7 +14,7 @@
       "hub_blurb": "Territory coverage and renewal risk from the same weekly pull.",
       "eyebrow": "FOR SAAS REVENUE TEAMS SELLING INTO LOCAL GOVERNMENT",
       "headline": "Your pipeline starts in the minutes, not the RFP.",
-      "sub": "Net-new accounts entering procurement, and the early signs a municipal contract is being re-opened — sourced from 4,300+ jurisdictions and refreshed weekly.",
+      "sub": "Net-new accounts entering procurement, and the early signs a municipal contract is being re-opened, sourced from 4,300+ jurisdictions and refreshed weekly.",
       "stats": [
         {
           "value": "{{METRICS_MUNICIPALITIES}}",
@@ -43,7 +43,7 @@
         {
           "tag": "PIPELINE",
           "title": "Find towns funding what you sell, before procurement opens",
-          "body": "Budget lines, warrant articles, and committee discussion of the capability you already ship — reached while there is still time to shape the requirements."
+          "body": "Budget lines, warrant articles, and committee discussion of the capability you already ship, reached while there is still time to shape the requirements."
         },
         {
           "tag": "RETENTION",
@@ -53,7 +53,7 @@
         {
           "tag": "ENABLEMENT",
           "title": "Give AEs a reason to call that is not a cold list",
-          "body": "Every record carries the signal, the decision maker on record, and the reasoning — so the first line of the email is about them."
+          "body": "Every record carries the signal, the decision maker on record, and the reasoning, so the first line of the email is about them."
         }
       ],
       "sample_title": "Exactly what your team receives",
@@ -61,7 +61,7 @@
       "why_header": "WHY IT'S ACTIONABLE",
       "rows": [
         {
-          "signal": "Vendor replacement discussed — parks & rec software",
+          "signal": "Vendor replacement discussed, parks & rec software",
           "place": "Windham, NH",
           "date": "2026-07-14",
           "contact": "Rec Director",
@@ -106,10 +106,10 @@
     "newsrooms": {
       "slug": "for-newsroom-teams",
       "label": "Newsrooms",
-      "hub_blurb": "Not the update — the thread underneath it, connected across every meeting it touched.",
+      "hub_blurb": "Not the update, the thread underneath it, connected across every meeting it touched.",
       "eyebrow": "FOR NEWSROOMS AND INVESTIGATIVE DESKS",
       "headline": "You already cover the update. We connect what it's part of.",
-      "sub": "A newsroom we work with told us directly: the first version of this was “update me” — things that happened, most of which they already knew. That's their strength already, and it's not where they needed help. So we rebuilt around threads: a topic on the record across multiple meetings and several weeks, with the date it started — the material perspective and explainer pieces are actually made of, not another item on the list.",
+      "sub": "A newsroom we work with told us directly: the first version of this was “update me”, things that happened, most of which they already knew. That's their strength already, and it's not where they needed help. So we rebuilt around threads: a topic on the record across multiple meetings and several weeks, with the date it started, the material perspective and explainer pieces are actually made of, not another item on the list.",
       "stats": [
         {
           "value": "99%",
@@ -121,7 +121,7 @@
         },
         {
           "value": "0",
-          "label": "records requests needed — all already public"
+          "label": "records requests needed, all already public"
         }
       ],
       "vocab": [
@@ -133,17 +133,17 @@
         "dateline"
       ],
       "jobs_title": "A thread is not a document. It's where a story started.",
-      "jobs_sub": "One meeting is an item. The same topic returning meeting after meeting, over weeks, dated from the first time it appeared — that's a thread, and it's closer to the shape a real story has.",
+      "jobs_sub": "One meeting is an item. The same topic returning meeting after meeting, over weeks, dated from the first time it appeared, that's a thread, and it's closer to the shape a real story has.",
       "jobs": [
         {
           "tag": "THE THREAD",
           "title": "The topic connected across meetings, not one at a time",
-          "body": "A budget line, a zoning question, a grant application — the same subject returning meeting after meeting, with the date each one starts. One document is an item. Three meetings over nine weeks is a thread, and it reads as one."
+          "body": "A budget line, a zoning question, a grant application, the same subject returning meeting after meeting, with the date each one starts. One document is an item. Three meetings over nine weeks is a thread, and it reads as one."
         },
         {
           "tag": "BEYOND THE UPDATE",
           "title": "Built for the coverage you don't already have",
-          "body": "Every thread we surface is tagged by which of your own reader needs it actually serves. We're not trying to beat you at “this happened” — you already do that well. We're pointed at what's harder to staff: perspective, connection, the deeper piece."
+          "body": "Every thread we surface is tagged by which of your own reader needs it actually serves. We're not trying to beat you at “this happened”, you already do that well. We're pointed at what's harder to staff: perspective, connection, the deeper piece."
         },
         {
           "tag": "THE RECORD, READ FORWARD",
@@ -178,7 +178,7 @@
       "hub_blurb": "Districts and cities weighing a bond, a year before the resolution.",
       "eyebrow": "FOR MUNICIPAL ADVISORS AND PUBLIC FINANCE FIRMS",
       "headline": "The board discusses a bond long before it calls an election.",
-      "sub": "Facility studies, deferred maintenance findings, and feasibility discussion across every district and city we cover — so you are in the room while the program is still forming, typically 18–24 months ahead of an RFQ for financial advisor.",
+      "sub": "Facility studies, deferred maintenance findings, and feasibility discussion across every district and city we cover, so you are in the room while the program is still forming, typically 18–24 months ahead of an RFQ for financial advisor.",
       "stats": [
         {
           "value": "{{METRICS_MUNICIPALITIES}}",
@@ -212,7 +212,7 @@
         {
           "tag": "TIMING",
           "title": "Election calendar pressure, tracked per district",
-          "body": "Resolution deadlines, expiring authorizations, and prior measures approaching their last series — all on the public record."
+          "body": "Resolution deadlines, expiring authorizations, and prior measures approaching their last series, all on the public record."
         },
         {
           "tag": "RELATIONSHIPS",
@@ -273,7 +273,7 @@
       "hub_blurb": "Local risk and demand signal under a thesis, before diligence closes.",
       "eyebrow": "FOR DEAL AND PORTFOLIO OPS TEAMS",
       "headline": "The local risk in your thesis is public. It is just not searchable.",
-      "sub": "Jurisdiction-level demand and opposition signal for the geographies in a deal — during diligence, and every week after you own the asset.",
+      "sub": "Jurisdiction-level demand and opposition signal for the geographies in a deal, during diligence, and every week after you own the asset.",
       "stats": [
         {
           "value": "19,500",

@@ -1,5 +1,12 @@
 {
-  "order": ["amherst-tower", "company-footprint", "pfas-contagion", "housing-density-wave", "la-marque-credit", "data-center-zoning"],
+  "order": [
+    "amherst-tower",
+    "company-footprint",
+    "pfas-contagion",
+    "housing-density-wave",
+    "la-marque-credit",
+    "data-center-zoning"
+  ],
   "articles": {
     "amherst-tower": {
       "url_slug": "amherst-tower",
@@ -10,10 +17,22 @@
       "card_body": "A citizen complaint becomes a 30-year ground lease. 23-month window, 17 signals, zero federal records.",
       "has_stats": true,
       "stats": [
-        { "value": "32", "label": "months, first signal to award" },
-        { "value": "17", "label": "signals detected" },
-        { "value": "15", "label": "public meetings" },
-        { "value": "23", "label": "months of competitive window" }
+        {
+          "value": "32",
+          "label": "months, first signal to award"
+        },
+        {
+          "value": "17",
+          "label": "signals detected"
+        },
+        {
+          "value": "15",
+          "label": "public meetings"
+        },
+        {
+          "value": "23",
+          "label": "months of competitive window"
+        }
       ]
     },
     "company-footprint": {
@@ -24,7 +43,8 @@
       "card_title": "Pre-Earnings Municipal Signals",
       "card_body": "Entity resolution shows which public companies appear in municipal vendor payments weeks before quarterly earnings.",
       "has_stats": false,
-      "stats": []
+      "stats": [],
+      "header_image": "story-company-footprint.png"
     },
     "pfas-contagion": {
       "url_slug": "pfas-contagion",
@@ -34,7 +54,8 @@
       "card_title": "Pre-RFP Environmental Signals",
       "card_body": "190+ PFAS events across 80+ municipalities. A council vote on remediation typically leads the state RFP by about 90 days.",
       "has_stats": false,
-      "stats": []
+      "stats": [],
+      "header_image": "story-pfas.png"
     },
     "housing-density-wave": {
       "url_slug": "housing-density-wave",
@@ -44,7 +65,8 @@
       "card_title": "Project Awareness Intelligence",
       "card_body": "390+ zoning events across 130+ municipalities. ADU mandates and STR regulation at the workshop stage, not the bid stage.",
       "has_stats": false,
-      "stats": []
+      "stats": [],
+      "header_image": "story-housing-wave.png"
     },
     "la-marque-credit": {
       "url_slug": "la-marque-credit",
@@ -55,10 +77,22 @@
       "card_body": "A two-notch downgrade in October 2025. The governance signals were in the minutes 13 months earlier.",
       "has_stats": true,
       "stats": [
-        { "value": "13", "label": "months of early warning" },
-        { "value": "4", "label": "governance stress categories" },
-        { "value": "2-notch", "label": "downgrade" },
-        { "value": "492", "label": "documents monitored" }
+        {
+          "value": "13",
+          "label": "months of early warning"
+        },
+        {
+          "value": "4",
+          "label": "governance stress categories"
+        },
+        {
+          "value": "2-notch",
+          "label": "downgrade"
+        },
+        {
+          "value": "492",
+          "label": "documents monitored"
+        }
       ]
     },
     "data-center-zoning": {
@@ -68,13 +102,26 @@
       "nav_note": "Maine data centers · 5 months early",
       "card_title": "Data Center Zoning Fights",
       "card_body": "6 of 173 monitored Maine towns were on the record before the state legislature took up LD 307. Every source document linked.",
-      "has_stats": true,
+      "has_stats": false,
       "stats": [
-        { "value": "6", "label": "towns signaling" },
-        { "value": "173", "label": "Maine towns monitored" },
-        { "value": "3.5%", "label": "of towns discussing it" },
-        { "value": "5 mo", "label": "first signal to state vote" }
-      ]
+        {
+          "value": "6",
+          "label": "towns signaling"
+        },
+        {
+          "value": "173",
+          "label": "Maine towns monitored"
+        },
+        {
+          "value": "3.5%",
+          "label": "of towns discussing it"
+        },
+        {
+          "value": "5 mo",
+          "label": "first signal to state vote"
+        }
+      ],
+      "header_image": "story-maine-data-center-moratorium.png"
     }
   }
 }

@@ -1,63 +1,74 @@
 Title: Maine's Data Center Fight Was Visible in Town Halls Five Months Before the State Vote
 Slug: research/maine-data-center-moratorium
+Template: redesign_case_study
+Article_Key: data-center-zoning
 Sortorder: 11
 Header_image: story-maine-data-center-moratorium.png
 Summary: Municipal Alpha tracks US data-center siting and zoning from municipal meeting records, often months before a state vote or public reporting. Six Maine town halls (out of 173 we monitor in Maine) were already discussing data center restrictions five months before LD 307 reached the Maine House. The House passed it, the Governor vetoed it, the override failed, and a different shape of restriction landed on the same day. Every source document is linked.
 
+<!-- Retheme note (2026-08-31, site redesign): every rule below is a direct
+     color-value substitution against the site's new dark oklch() palette --
+     same selectors, same structure, same content, so the timeline/quote/
+     town-badge component this article already had keeps working exactly as
+     built. Only the two "raised panel" blocks (cs-window, cs-cta) got a
+     background swap to rd-surface instead of a literal page-background
+     color, since a dark-on-dark page can't reuse "the page background" as a
+     panel fill the way the light theme's near-white page could. -->
 <style>
-.cs-intro { font-size: 19px; color: #333; max-width: 640px; line-height: 1.7; margin-bottom: 40px; }
-.cs-intro strong { color: #0C0C0C; }
+.cs-intro { font-size: 19px; color: oklch(0.82 0.01 60); max-width: 640px; line-height: 1.7; margin-bottom: 40px; }
+.cs-intro strong { color: oklch(0.93 0.01 60); }
 
 .cs-stats { display: flex; gap: 40px; margin: 40px 0; flex-wrap: wrap; }
 .cs-stat { text-align: center; }
-.cs-stat-value { display: block; font-family: 'Newsreader', serif; font-size: 36px; font-weight: 600; color: #0C0C0C; }
-.cs-stat-label { display: block; font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #888; text-transform: uppercase; letter-spacing: 1px; margin-top: 4px; }
+.cs-stat-value { display: block; font-family: 'Newsreader', serif; font-size: 36px; font-weight: 600; color: oklch(0.93 0.01 60); }
+.cs-stat-label { display: block; font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: oklch(0.62 0.01 60); text-transform: uppercase; letter-spacing: 1px; margin-top: 4px; }
 
 .timeline { margin: 48px 0; position: relative; padding-left: 32px; }
-.timeline::before { content: ''; position: absolute; left: 8px; top: 0; bottom: 0; width: 2px; background: #E8E4DF; }
+.timeline::before { content: ''; position: absolute; left: 8px; top: 0; bottom: 0; width: 2px; background: oklch(0.3 0.01 50); }
 
 .tl-event { position: relative; margin-bottom: 28px; }
-.tl-event::before { content: ''; position: absolute; left: -28px; top: 6px; width: 12px; height: 12px; border-radius: 50%; border: 2px solid #E8E4DF; background: #fff; z-index: 1; }
-.tl-event.tl-hot::before { border-color: #E8512D; background: #E8512D; }
-.tl-event.tl-warm::before { border-color: #E8512D; background: #fff; }
-.tl-event.tl-cool::before { border-color: #ccc; background: #fff; }
+.tl-event::before { content: ''; position: absolute; left: -28px; top: 6px; width: 12px; height: 12px; border-radius: 50%; border: 2px solid oklch(0.3 0.01 50); background: oklch(0.18 0.012 50); z-index: 1; }
+.tl-event.tl-hot::before { border-color: oklch(0.78 0.14 75); background: oklch(0.78 0.14 75); }
+.tl-event.tl-warm::before { border-color: oklch(0.78 0.14 75); background: oklch(0.18 0.012 50); }
+.tl-event.tl-cool::before { border-color: oklch(0.4 0.01 50); background: oklch(0.18 0.012 50); }
 
-.tl-date { font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #E8512D; font-weight: 500; margin-bottom: 4px; }
-.tl-cool .tl-date { color: #888; }
+.tl-date { font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: oklch(0.78 0.14 75); font-weight: 500; margin-bottom: 4px; }
+.tl-cool .tl-date { color: oklch(0.62 0.01 60); }
 .tl-town { display: inline-block; font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; padding: 3px 10px; border-radius: 3px; margin-bottom: 6px; }
 .tl-town-gorham { background: #1B4332; color: #fff; }
 .tl-town-rockland { background: #2563EB; color: #fff; }
 .tl-town-bangor { background: #7C3AED; color: #fff; }
 .tl-town-lewiston { background: #E8512D; color: #fff; }
-.tl-town-sidney { background: #888; color: #fff; }
+.tl-town-sidney { background: oklch(0.5 0.01 60); color: #fff; }
 .tl-town-winthrop { background: #D97706; color: #fff; }
-.tl-town-state { background: #0C0C0C; color: #fff; }
-.tl-town-wiscasset { background: #0C0C0C; color: #666; border: 1px dashed #666; }
-.tl-board { font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #888; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
-.tl-text { font-size: 15px; color: #333; line-height: 1.6; max-width: 600px; }
-.tl-text strong { color: #0C0C0C; }
+.tl-town-state { background: oklch(0.32 0.01 50); color: #fff; }
+.tl-town-wiscasset { background: oklch(0.18 0.012 50); color: oklch(0.6 0.01 60); border: 1px dashed oklch(0.5 0.01 60); }
+.tl-board { font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: oklch(0.62 0.01 60); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
+.tl-text { font-size: 15px; color: oklch(0.82 0.01 60); line-height: 1.6; max-width: 600px; }
+.tl-text strong { color: oklch(0.93 0.01 60); }
 .tl-source { font-family: 'IBM Plex Mono', monospace; font-size: 11px; margin-top: 6px; }
-.tl-source a { color: #E8512D; text-decoration: none; }
+.tl-source a { color: oklch(0.78 0.14 75); text-decoration: none; }
 .tl-source a:hover { text-decoration: underline; }
 
 .tl-gap { margin: 32px 0 32px 0; padding: 16px 0 16px 0; position: relative; }
-.tl-gap::before { content: ''; position: absolute; left: -28px; top: 0; bottom: 0; width: 12px; border-left: 2px dashed #E8E4DF; margin-left: 3px; }
-.tl-gap-text { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #E8512D; text-transform: uppercase; letter-spacing: 2px; }
+.tl-gap::before { content: ''; position: absolute; left: -28px; top: 0; bottom: 0; width: 12px; border-left: 2px dashed oklch(0.3 0.01 50); margin-left: 3px; }
+.tl-gap-text { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: oklch(0.78 0.14 75); text-transform: uppercase; letter-spacing: 2px; }
 
-.cs-window { background: #0C0C0C; color: #F7F4F0; border-radius: 6px; padding: 32px 40px; margin: 48px 0; max-width: 640px; }
-.cs-window h3 { font-family: 'Newsreader', serif; font-size: 22px; font-weight: 500; color: #F7F4F0; margin-bottom: 12px; }
-.cs-window p { font-size: 14px; color: #aaa; line-height: 1.7; margin-bottom: 8px; }
-.cs-window .cs-highlight { color: #E8512D; font-weight: 600; }
+.cs-window { background: oklch(0.18 0.012 50); color: oklch(0.93 0.01 60); border-radius: 2px; border: 1px solid oklch(0.3 0.01 50); padding: 32px 40px; margin: 48px 0; max-width: 640px; }
+.cs-window h3 { font-family: 'Newsreader', serif; font-size: 22px; font-weight: 500; color: oklch(0.93 0.01 60); margin-bottom: 12px; }
+.cs-window p { font-size: 14px; color: oklch(0.72 0.01 60); line-height: 1.7; margin-bottom: 8px; }
+.cs-window .cs-highlight { color: oklch(0.78 0.14 75); font-weight: 600; }
 
-.cs-quote { background: rgba(232,81,45,0.04); border-left: 3px solid #E8512D; padding: 16px 20px; margin: 16px 0; max-width: 600px; }
-.cs-quote p { font-size: 15px; color: #333; line-height: 1.65; margin: 0; }
-.cs-quote .cs-attribution { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #888; margin-top: 8px; display: block; }
+.cs-quote { background: oklch(0.78 0.14 75 / 0.08); border-left: 3px solid oklch(0.78 0.14 75); padding: 16px 20px; margin: 16px 0; max-width: 600px; }
+.cs-quote p { font-size: 15px; color: oklch(0.85 0.01 60); line-height: 1.65; margin: 0; }
+.cs-quote .cs-attribution { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: oklch(0.62 0.01 60); margin-top: 8px; display: block; }
 
-.cs-cta { background: #F7F4F0; border-radius: 6px; padding: 40px; margin: 48px 0; text-align: center; max-width: 640px; }
-.cs-cta h3 { font-family: 'Newsreader', serif; font-size: 22px; font-weight: 500; color: #0C0C0C; margin-bottom: 12px; }
-.cs-cta p { font-size: 15px; color: #555; margin-bottom: 20px; line-height: 1.6; }
+.cs-cta { background: oklch(0.18 0.012 50); border: 1px solid oklch(0.7 0.12 75); border-radius: 2px; padding: 40px; margin: 48px 0; text-align: center; max-width: 640px; }
+.cs-cta h3 { font-family: 'Newsreader', serif; font-size: 22px; font-weight: 500; color: oklch(0.93 0.01 60); margin-bottom: 12px; }
+.cs-cta p { font-size: 15px; color: oklch(0.78 0.01 60); margin-bottom: 20px; line-height: 1.6; }
+.cs-cta .cta-button { display: inline-block; font-family: 'IBM Plex Sans', sans-serif; font-size: 15px; font-weight: 600; padding: 14px 26px; background: oklch(0.78 0.14 75); color: oklch(0.15 0.012 50); border-radius: 2px; text-decoration: none; }
 
-.cs-note { font-size: 13px; color: #888; line-height: 1.6; margin-top: 48px; padding-top: 24px; border-top: 1px solid #E8E4DF; max-width: 640px; }
+.cs-note { font-size: 13px; color: oklch(0.62 0.01 60); line-height: 1.6; margin-top: 48px; padding-top: 24px; border-top: 1px solid oklch(0.3 0.01 50); max-width: 640px; }
 </style>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">

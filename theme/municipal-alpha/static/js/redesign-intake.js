@@ -6,7 +6,7 @@
   // This is an unofficial-but-standard technique: POSTing straight to a Google
   // Form's own response endpoint lets this page keep its fully custom design
   // instead of embedding Google's own form UI. Tradeoff, stated plainly: the
-  // request is sent with `mode: "no-cors"`, so the response is opaque — this
+  // request is sent with `mode: "no-cors"`, so the response is opaque, this
   // page cannot actually confirm Google accepted the submission, only that
   // the request didn't fail at the network level. A one-time real test
   // submission (confirming a row lands in the linked Sheet) is the mitigation,
@@ -112,18 +112,18 @@
     fetch(FORM_ACTION, { method: "POST", mode: "no-cors", body: payload })
       .then(function () { showSuccess(); })
       .catch(function () {
-        errorLine.textContent = "Something went wrong sending this — please try again, or email matt@municipalalpha.com directly.";
+        errorLine.textContent = "Something went wrong sending this, please try again, or email matt@municipalalpha.com directly.";
         errorLine.hidden = false;
       });
   });
 
   // Panels use inline `display` (not the `hidden` attribute/property) because
   // an inline `style="display:flex"` in the markup always outranks the
-  // browser's `[hidden]{display:none}` UA rule — toggling `.hidden` alone
+  // browser's `[hidden]{display:none}` UA rule, toggling `.hidden` alone
   // left both panels visible at once. See PR #11 notes.
   function showSuccess() {
     var first = fieldEl("name").value.trim().split(" ")[0];
-    successLine.textContent = first ? "Thanks, " + first + " — we are on it." : "Thanks — we are on it.";
+    successLine.textContent = first ? "Thanks, " + first + ", we are on it." : "Thanks, we are on it.";
     editingPanel.style.display = "none";
     successPanel.style.display = "flex";
   }
