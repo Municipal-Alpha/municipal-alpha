@@ -18,6 +18,36 @@ else:
         "updated": "2026-03-29",
     }
 
+# Site-redesign content data (2026-08-31) — sector-page and case-studies-hub
+# copy, mirrors the METRICS loading pattern above. See
+# docs/plans/site-redesign-implementation.md in muni-scraper for the build spec.
+def _substitute_metrics_tokens(obj, metrics):
+    """Recursively replace {{METRICS_<KEY>}} tokens in string values so
+    corpus-scale figures in data/sectors.json stay pinned to the live
+    data/metrics.json rather than drifting as separate hardcoded literals."""
+    if isinstance(obj, dict):
+        return {k: _substitute_metrics_tokens(v, metrics) for k, v in obj.items()}
+    if isinstance(obj, list):
+        return [_substitute_metrics_tokens(v, metrics) for v in obj]
+    if isinstance(obj, str):
+        for key, value in metrics.items():
+            obj = obj.replace("{{METRICS_" + key.upper() + "}}", str(value))
+        return obj
+    return obj
+
+
+_sectors_file = Path(__file__).parent / "data" / "sectors.json"
+with open(_sectors_file) as f:
+    _sectors_data = json.load(f)
+SECTORS = _substitute_metrics_tokens(_sectors_data["sectors"], METRICS)
+SECTOR_ORDER = _sectors_data["order"]
+
+_case_studies_file = Path(__file__).parent / "data" / "case_studies.json"
+with open(_case_studies_file) as f:
+    _case_studies_data = json.load(f)
+CASE_STUDIES = _case_studies_data["articles"]
+CASE_STUDY_ORDER = _case_studies_data["order"]
+
 AUTHOR = "Municipal Alpha"
 SITENAME = "Municipal Alpha"
 SITEURL = ""

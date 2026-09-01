@@ -1,58 +1,10 @@
 Title: Case Study: Solar Siting Intelligence, From Moratorium to Permit
 Slug: research/solar-siting
+Template: redesign_case_study
+Article_Key: solar-siting
 Sortorder: 14
 Header_image: story-solar-backlash.png
 Summary: Municipal Alpha tracks US solar and renewable-energy siting from town and county meeting records, surfacing moratoria, setbacks, and denials months before they pass or a project reaches the permit stage. This case study traces one project's full regulatory pipeline, from the first planning-board signal to the permit, across Caribou ME, Litchfield ME, Enfield CT, and Bangor ME, with every source document linked.
-
-<style>
-.cs-intro { font-size: 19px; color: #333; max-width: 640px; line-height: 1.7; margin-bottom: 40px; }
-.cs-intro strong { color: #0C0C0C; }
-
-.cs-stats { display: flex; gap: 40px; margin: 40px 0; flex-wrap: wrap; }
-.cs-stat { text-align: center; }
-.cs-stat-value { display: block; font-family: 'Newsreader', serif; font-size: 36px; font-weight: 600; color: #0C0C0C; }
-.cs-stat-label { display: block; font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #888; text-transform: uppercase; letter-spacing: 1px; margin-top: 4px; }
-
-.timeline { margin: 48px 0; position: relative; padding-left: 32px; }
-.timeline::before { content: ''; position: absolute; left: 8px; top: 0; bottom: 0; width: 2px; background: #E8E4DF; }
-
-.tl-event { position: relative; margin-bottom: 28px; }
-.tl-event::before { content: ''; position: absolute; left: -28px; top: 6px; width: 12px; height: 12px; border-radius: 50%; border: 2px solid #E8E4DF; background: #fff; z-index: 1; }
-.tl-event.tl-hot::before { border-color: #E8512D; background: #E8512D; }
-.tl-event.tl-warm::before { border-color: #E8512D; background: #fff; }
-.tl-event.tl-cool::before { border-color: #ccc; background: #fff; }
-
-.tl-date { font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #E8512D; font-weight: 500; margin-bottom: 4px; }
-.tl-cool .tl-date { color: #888; }
-.tl-board { font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #888; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
-.tl-text { font-size: 15px; color: #333; line-height: 1.6; max-width: 600px; }
-.tl-text strong { color: #0C0C0C; }
-.tl-source { font-family: 'IBM Plex Mono', monospace; font-size: 11px; margin-top: 6px; }
-.tl-source a { color: #E8512D; text-decoration: none; }
-.tl-source a:hover { text-decoration: underline; }
-
-.tl-gap { margin: 32px 0 32px 0; padding: 16px 0 16px 0; position: relative; }
-.tl-gap::before { content: ''; position: absolute; left: -28px; top: 0; bottom: 0; width: 12px; border-left: 2px dashed #E8E4DF; margin-left: 3px; }
-.tl-gap-text { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #E8512D; text-transform: uppercase; letter-spacing: 2px; }
-
-.tl-section { margin: 36px 0 20px 0; }
-.tl-section-title { font-family: 'Newsreader', serif; font-size: 20px; font-weight: 500; color: #0C0C0C; margin-bottom: 4px; }
-.tl-section-sub { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #888; text-transform: uppercase; letter-spacing: 1px; }
-
-.cs-window { background: #0C0C0C; color: #F7F4F0; border-radius: 6px; padding: 32px 40px; margin: 48px 0; max-width: 640px; }
-.cs-window h3 { font-family: 'Newsreader', serif; font-size: 22px; font-weight: 500; color: #F7F4F0; margin-bottom: 12px; }
-.cs-window p { font-size: 14px; color: #aaa; line-height: 1.7; margin-bottom: 8px; }
-.cs-window .cs-highlight { color: #E8512D; font-weight: 600; }
-
-.cs-cta { background: #F7F4F0; border-radius: 6px; padding: 40px; margin: 48px 0; text-align: center; max-width: 640px; }
-.cs-cta h3 { font-family: 'Newsreader', serif; font-size: 22px; font-weight: 500; color: #0C0C0C; margin-bottom: 12px; }
-.cs-cta p { font-size: 15px; color: #555; margin-bottom: 20px; line-height: 1.6; }
-
-.cs-note { font-size: 13px; color: #888; line-height: 1.6; margin-top: 48px; padding-top: 24px; border-top: 1px solid #E8E4DF; max-width: 640px; }
-</style>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
 <p class="cs-intro">
 Renewable energy developers face a fragmented regulatory landscape. Solar ordinances are written at the municipal level, evolve through public meetings, and aren't published in any central registry until they're already adopted. <strong>By then, the competitive window is closed.</strong> Municipal Alpha tracks the regulatory pipeline across 4,400+ municipalities. This case study traces the moratorium-to-permit pattern through four towns where solar development was debated, restricted, and eventually regulated. Every citation links to a verifiable public document.

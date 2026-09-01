@@ -1,5 +1,6 @@
 Title: About
 Slug: about
+Template: redesign_content_page
 Sortorder: 4
 
 ## The Shift

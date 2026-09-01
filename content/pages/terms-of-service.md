@@ -1,5 +1,6 @@
 Title: Terms of Service
 Slug: legal/terms
+Template: redesign_content_page
 Sortorder: 91
 Summary: Terms governing use of Municipal Alpha's website and data products.
 

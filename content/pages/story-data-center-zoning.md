@@ -1,5 +1,7 @@
 Title: Data Centers Are Contested in 24 States, and the Friction Curve Is Steepening
 Slug: research/data-center-zoning
+Template: redesign_case_study
+Article_Key: data-center-zoning-national
 Sortorder: 25
 Header_image: story-data-center-zoning.png
 Summary: Municipal Alpha tracks data-center zoning and siting activity across US municipalities, surfacing it from planning-board minutes and committee agendas months before national reporting. As of May 2026, 80 distinct municipal and state records across 47 jurisdictions in 24 states showed the pattern forming. By August, the same pattern had moved from committee talk to adopted moratoria in Maine and Wisconsin, a noticed one in New York, and into active litigation over one of them in Maine. Every figure is sourced.

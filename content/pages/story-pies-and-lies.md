@@ -1,5 +1,6 @@
 Title: Pies and Lies: America's 250th, from the town records
 Slug: stories/pies-and-lies
+Template: redesign_content_page
 Sortorder: 31
 Header_image: story-pies-and-lies.png
 Header_image_width: 1408

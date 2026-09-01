@@ -1,67 +1,27 @@
 Title: Maine's Data Center Fight Was Visible in Town Halls Five Months Before the State Vote
 Slug: research/maine-data-center-moratorium
+Template: redesign_case_study
+Article_Key: data-center-zoning
 Sortorder: 11
 Header_image: story-maine-data-center-moratorium.png
 Summary: Municipal Alpha tracks US data-center siting and zoning from municipal meeting records, often months before a state vote or public reporting. Six Maine town halls (out of 173 we monitor in Maine) were already discussing data center restrictions five months before LD 307 reached the Maine House. The House passed it, the Governor vetoed it, the override failed, and a different shape of restriction landed on the same day. Every source document is linked.
 
+<!-- Retheme note (2026-08-31, site redesign): this article's shared
+     components (cs-intro, cs-stats, timeline, cs-window, cs-cta, ...) were
+     originally rethemed here per-file; that CSS is now in the shared
+     redesign.css (case-study components section) since 6 more articles
+     turned out to need the identical treatment. Only this article's own
+     per-town badge palette is unique enough to keep here. -->
 <style>
-.cs-intro { font-size: 19px; color: #333; max-width: 640px; line-height: 1.7; margin-bottom: 40px; }
-.cs-intro strong { color: #0C0C0C; }
-
-.cs-stats { display: flex; gap: 40px; margin: 40px 0; flex-wrap: wrap; }
-.cs-stat { text-align: center; }
-.cs-stat-value { display: block; font-family: 'Newsreader', serif; font-size: 36px; font-weight: 600; color: #0C0C0C; }
-.cs-stat-label { display: block; font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #888; text-transform: uppercase; letter-spacing: 1px; margin-top: 4px; }
-
-.timeline { margin: 48px 0; position: relative; padding-left: 32px; }
-.timeline::before { content: ''; position: absolute; left: 8px; top: 0; bottom: 0; width: 2px; background: #E8E4DF; }
-
-.tl-event { position: relative; margin-bottom: 28px; }
-.tl-event::before { content: ''; position: absolute; left: -28px; top: 6px; width: 12px; height: 12px; border-radius: 50%; border: 2px solid #E8E4DF; background: #fff; z-index: 1; }
-.tl-event.tl-hot::before { border-color: #E8512D; background: #E8512D; }
-.tl-event.tl-warm::before { border-color: #E8512D; background: #fff; }
-.tl-event.tl-cool::before { border-color: #ccc; background: #fff; }
-
-.tl-date { font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #E8512D; font-weight: 500; margin-bottom: 4px; }
-.tl-cool .tl-date { color: #888; }
-.tl-town { display: inline-block; font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; padding: 3px 10px; border-radius: 3px; margin-bottom: 6px; }
 .tl-town-gorham { background: #1B4332; color: #fff; }
 .tl-town-rockland { background: #2563EB; color: #fff; }
 .tl-town-bangor { background: #7C3AED; color: #fff; }
 .tl-town-lewiston { background: #E8512D; color: #fff; }
-.tl-town-sidney { background: #888; color: #fff; }
+.tl-town-sidney { background: oklch(0.5 0.01 60); color: #fff; }
 .tl-town-winthrop { background: #D97706; color: #fff; }
-.tl-town-state { background: #0C0C0C; color: #fff; }
-.tl-town-wiscasset { background: #0C0C0C; color: #666; border: 1px dashed #666; }
-.tl-board { font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #888; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
-.tl-text { font-size: 15px; color: #333; line-height: 1.6; max-width: 600px; }
-.tl-text strong { color: #0C0C0C; }
-.tl-source { font-family: 'IBM Plex Mono', monospace; font-size: 11px; margin-top: 6px; }
-.tl-source a { color: #E8512D; text-decoration: none; }
-.tl-source a:hover { text-decoration: underline; }
-
-.tl-gap { margin: 32px 0 32px 0; padding: 16px 0 16px 0; position: relative; }
-.tl-gap::before { content: ''; position: absolute; left: -28px; top: 0; bottom: 0; width: 12px; border-left: 2px dashed #E8E4DF; margin-left: 3px; }
-.tl-gap-text { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #E8512D; text-transform: uppercase; letter-spacing: 2px; }
-
-.cs-window { background: #0C0C0C; color: #F7F4F0; border-radius: 6px; padding: 32px 40px; margin: 48px 0; max-width: 640px; }
-.cs-window h3 { font-family: 'Newsreader', serif; font-size: 22px; font-weight: 500; color: #F7F4F0; margin-bottom: 12px; }
-.cs-window p { font-size: 14px; color: #aaa; line-height: 1.7; margin-bottom: 8px; }
-.cs-window .cs-highlight { color: #E8512D; font-weight: 600; }
-
-.cs-quote { background: rgba(232,81,45,0.04); border-left: 3px solid #E8512D; padding: 16px 20px; margin: 16px 0; max-width: 600px; }
-.cs-quote p { font-size: 15px; color: #333; line-height: 1.65; margin: 0; }
-.cs-quote .cs-attribution { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #888; margin-top: 8px; display: block; }
-
-.cs-cta { background: #F7F4F0; border-radius: 6px; padding: 40px; margin: 48px 0; text-align: center; max-width: 640px; }
-.cs-cta h3 { font-family: 'Newsreader', serif; font-size: 22px; font-weight: 500; color: #0C0C0C; margin-bottom: 12px; }
-.cs-cta p { font-size: 15px; color: #555; margin-bottom: 20px; line-height: 1.6; }
-
-.cs-note { font-size: 13px; color: #888; line-height: 1.6; margin-top: 48px; padding-top: 24px; border-top: 1px solid #E8E4DF; max-width: 640px; }
+.tl-town-state { background: oklch(0.32 0.01 50); color: #fff; }
+.tl-town-wiscasset { background: oklch(0.18 0.012 50); color: oklch(0.6 0.01 60); border: 1px dashed oklch(0.5 0.01 60); }
 </style>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
 <p class="cs-intro">
 On April 6, 2026, Maine's House passed LD 307, what would have become the country's first state-level moratorium on large-scale data centers, on an 82-62 vote. Eighteen days later Governor Janet Mills vetoed it. On April 29 the House attempted to override and failed 72-65. The moratorium died, but on the same day Mills signed LD 713, which prohibits data centers from claiming tax incentives under Maine's business development programs, and issued an executive order establishing the Maine Data Center Advisory Council. Maine ended up with a different shape of restriction. <strong>What's worth showing is that the signal of what was coming sat in the record long before any of those state-level votes. Starting five months earlier, six Maine town halls began discussing the same thing, with no sign of coordination anywhere in the record.</strong>

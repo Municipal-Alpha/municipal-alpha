@@ -1,5 +1,6 @@
 Title: Privacy Policy
 Slug: legal/privacy
+Template: redesign_content_page
 Sortorder: 90
 Summary: How Municipal Alpha handles visitor data and public records.
 

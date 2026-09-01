@@ -1,206 +1,36 @@
 Title: Case Study: 32 Months of Signal in Amherst, New Hampshire
 Slug: research/amherst-tower
+Template: redesign_case_study
+Article_Key: amherst-tower
 Sortorder: 10
 Summary: A citizen complained about cell coverage. 32 months later, American Tower signed a ground lease. 17 signals across 15 meetings. Every document is public record. Nobody was reading Amherst.
 
-<style>
-.cs-intro { font-size: 19px; color: #333; max-width: 640px; line-height: 1.7; margin-bottom: 40px; }
-.cs-intro strong { color: #0C0C0C; }
-
-.cs-stats { display: flex; gap: 40px; margin: 40px 0; flex-wrap: wrap; }
-.cs-stat { text-align: center; }
-.cs-stat-value { display: block; font-family: 'Newsreader', serif; font-size: 36px; font-weight: 600; color: #0C0C0C; }
-.cs-stat-label { display: block; font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #888; text-transform: uppercase; letter-spacing: 1px; margin-top: 4px; }
-
-.timeline { margin: 48px 0; position: relative; padding-left: 32px; }
-.timeline::before { content: ''; position: absolute; left: 8px; top: 0; bottom: 0; width: 2px; background: #E8E4DF; }
-
-.tl-event { position: relative; margin-bottom: 28px; }
-.tl-event::before { content: ''; position: absolute; left: -28px; top: 6px; width: 12px; height: 12px; border-radius: 50%; border: 2px solid #E8E4DF; background: #fff; z-index: 1; }
-.tl-event.tl-hot::before { border-color: #E8512D; background: #E8512D; }
-.tl-event.tl-warm::before { border-color: #E8512D; background: #fff; }
-.tl-event.tl-cool::before { border-color: #ccc; background: #fff; }
-
-.tl-date { font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #E8512D; font-weight: 500; margin-bottom: 4px; }
-.tl-cool .tl-date { color: #888; }
-.tl-board { font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #888; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
-.tl-text { font-size: 15px; color: #333; line-height: 1.6; max-width: 600px; }
-.tl-text strong { color: #0C0C0C; }
-.tl-source { font-family: 'IBM Plex Mono', monospace; font-size: 11px; margin-top: 6px; }
-.tl-source a { color: #E8512D; text-decoration: none; }
-.tl-source a:hover { text-decoration: underline; }
-
-.tl-gap { margin: 32px 0 32px 0; padding: 16px 0 16px 0; position: relative; }
-.tl-gap::before { content: ''; position: absolute; left: -28px; top: 0; bottom: 0; width: 12px; border-left: 2px dashed #E8E4DF; margin-left: 3px; }
-.tl-gap-text { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #E8512D; text-transform: uppercase; letter-spacing: 2px; }
-
-.cs-window { background: #0C0C0C; color: #F7F4F0; border-radius: 6px; padding: 32px 40px; margin: 48px 0; max-width: 640px; }
-.cs-window h3 { font-family: 'Newsreader', serif; font-size: 22px; font-weight: 500; color: #F7F4F0; margin-bottom: 12px; }
-.cs-window p { font-size: 14px; color: #aaa; line-height: 1.7; margin-bottom: 8px; }
-.cs-window .cs-highlight { color: #E8512D; font-weight: 600; }
-
-.cs-cta { background: #F7F4F0; border-radius: 6px; padding: 40px; margin: 48px 0; text-align: center; max-width: 640px; }
-.cs-cta h3 { font-family: 'Newsreader', serif; font-size: 22px; font-weight: 500; color: #0C0C0C; margin-bottom: 12px; }
-.cs-cta p { font-size: 15px; color: #555; margin-bottom: 20px; line-height: 1.6; }
-
-.cs-note { font-size: 13px; color: #888; line-height: 1.6; margin-top: 48px; padding-top: 24px; border-top: 1px solid #E8E4DF; max-width: 640px; }
-</style>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-
-<p class="cs-intro">
-No FCC Antenna Structure Registration. No FAA obstruction filing. No permit in any federal database. When American Tower signed a 30-year ground lease in Amherst, New Hampshire, <strong>the only record of the deal forming was in the meeting minutes of a town of 12,000.</strong> It started with a citizen complaint about cell coverage in July 2023 — 32 months, 17 signals, 15 public meetings. Every link below goes to the source document on amherstnh.gov.
-</p>
-
-<div class="cs-stats">
-<div class="cs-stat"><span class="cs-stat-value">32</span><span class="cs-stat-label">months, first signal to award</span></div>
-<div class="cs-stat"><span class="cs-stat-value">17</span><span class="cs-stat-label">signals detected</span></div>
-<div class="cs-stat"><span class="cs-stat-value">15</span><span class="cs-stat-label">public meetings</span></div>
-<div class="cs-stat"><span class="cs-stat-value">23</span><span class="cs-stat-label">months of competitive window</span></div>
+<p style="font-size:16px; color:oklch(0.78 0.01 60); margin:0 0 32px;">It started with a citizen complaint about cell coverage in July 2023. Every link below goes to the source document on amherstnh.gov.</p>
+<h2 style="font-family:'Source Serif 4',serif; font-size:24px; font-weight:500; margin:0 0 14px;">The competitive window</h2>
+<p style="font-size:15px; color:oklch(0.75 0.01 60); margin:0 0 16px;">23 months. From the first vendor engagement (February 2024) to American Tower being named (January 2026). During that window, any infrastructure company reading Amherst's meeting minutes would have known a tower deal was forming. The town was actively seeking a partner. The RFP never existed as a formal document. The opportunity was only visible in meeting minutes.</p>
+<p style="font-family:'Source Serif 4',serif; font-style:italic; font-size:17px; color:oklch(0.93 0.01 60); margin:0 0 40px;">If you weren't reading Amherst's Board of Selectmen minutes, you would not have known this deal existed until construction started.</p>
+<h2 style="font-family:'Source Serif 4',serif; font-size:24px; font-weight:500; margin:0 0 20px;">The signal chain</h2>
+<div style="display:flex; flex-direction:column; gap:1px; background:oklch(0.3 0.01 50); border:1px solid oklch(0.3 0.01 50); margin-bottom:20px;">
+  <div style="background:oklch(0.18 0.012 50); padding:16px 20px;"><p style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:oklch(0.7 0.12 75); margin:0 0 4px;">JULY 24, 2023 · BOARD OF SELECTMEN</p><p style="font-size:14px; color:oklch(0.85 0.01 60); margin:0;">Citizen George Coddington raises cell phone service in the Village as a safety concern. Cannot text or call. Chairman Lyon acknowledges the town "does not have the ability to install a tower or to get carriers to place service on a tower." Board agrees to investigate.</p></div>
+  <div style="background:oklch(0.18 0.012 50); padding:16px 20px;"><p style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:oklch(0.7 0.12 75); margin:0 0 4px;">AUGUST 14, 2023 · BOARD OF SELECTMEN</p><p style="font-size:14px; color:oklch(0.85 0.01 60); margin:0;">Town Administrator contacts T-Mobile district representative, who agrees to review the town's cell towers.</p></div>
+  <div style="background:oklch(0.18 0.012 50); padding:16px 20px;"><p style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:oklch(0.7 0.12 75); margin:0 0 4px;">AUGUST 28, 2023 · BOARD OF SELECTMEN</p><p style="font-size:14px; color:oklch(0.85 0.01 60); margin:0;">T-Mobile reports four towers in town, none with direct line of sight to the Village. Selectman D'Angelo suggests reaching out to third-party companies that build towers and lease space to carriers.</p></div>
+  <div style="background:oklch(0.18 0.012 50); padding:16px 20px;"><p style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:oklch(0.7 0.12 75); margin:0 0 4px;">OCTOBER 23, 2023 · BOARD OF SELECTMEN</p><p style="font-size:14px; color:oklch(0.85 0.01 60); margin:0;">Town considering "collaborating with a cell company to improve cell service and get a new communications center antennae mast." Town Administrator will find an independent agent.</p></div>
+  <div style="background:oklch(0.21 0.014 50); padding:14px 20px; border-top:1px solid oklch(0.7 0.12 75); border-bottom:1px solid oklch(0.7 0.12 75);"><p style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:oklch(0.78 0.14 75); margin:0;">THE COMPETITIVE WINDOW OPENS</p></div>
+  <div style="background:oklch(0.18 0.012 50); padding:16px 20px;"><p style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:oklch(0.7 0.12 75); margin:0 0 4px;">FEBRUARY 12, 2024 · BOARD OF SELECTMEN</p><p style="font-size:14px; color:oklch(0.85 0.01 60); margin:0;">Chairman Lyon reports discussions with "a company that erects towers while leasing space to cell carriers." Company interested in building at the emergency services complex at no cost to the town. Long-term lease on top 10 feet. Company representative has reviewed three potential spots on the site.</p></div>
+  <div style="background:oklch(0.18 0.012 50); padding:16px 20px;"><p style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:oklch(0.7 0.12 75); margin:0 0 4px;">APRIL 15, 2024 · BOARD OF SELECTMEN</p><p style="font-size:14px; color:oklch(0.85 0.01 60); margin:0;">Selectman Stoughton has reviewed a draft cell tower agreement. Board to circulate for comments.</p></div>
+  <div style="background:oklch(0.18 0.012 50); padding:16px 20px;"><p style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:oklch(0.7 0.12 75); margin:0 0 4px;">AUGUST 12, 2024 · BOARD OF SELECTMEN</p><p style="font-size:14px; color:oklch(0.85 0.01 60); margin:0;">Cell tower project still in progress. Cost for town to build independently: approximately $1M.</p></div>
+  <div style="background:oklch(0.18 0.012 50); padding:16px 20px;"><p style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:oklch(0.7 0.12 75); margin:0 0 4px;">SEPTEMBER 16, 2024 · BOARD OF SELECTMEN</p><p style="font-size:14px; color:oklch(0.85 0.01 60); margin:0;">Cell providers still being sought. Building the tower "less expensive than" initially expected.</p></div>
+  <div style="background:oklch(0.18 0.012 50); padding:16px 20px;"><p style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:oklch(0.7 0.12 75); margin:0 0 4px;">OCTOBER 28, 2024 · BOARD OF SELECTMEN</p><p style="font-size:14px; color:oklch(0.85 0.01 60); margin:0;">Chief Ciampoli: funding needed for construction drawings and architectural layout. Asks Board if ready to move forward.</p></div>
+  <div style="background:oklch(0.18 0.012 50); padding:16px 20px;"><p style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:oklch(0.7 0.12 75); margin:0 0 4px;">NOVEMBER 18, 2024 · BOARD OF SELECTMEN</p><p style="font-size:14px; color:oklch(0.85 0.01 60); margin:0;">Two separate vendors/consultants seeking to attract cell providers. Tower to be on Police property, also hosting Police/Fire communications.</p></div>
+  <div style="background:oklch(0.18 0.012 50); padding:16px 20px;"><p style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:oklch(0.7 0.12 75); margin:0 0 4px;">JANUARY 13, 2025 · BOARD OF SELECTMEN</p><p style="font-size:14px; color:oklch(0.85 0.01 60); margin:0;">Design pivot: combining cellular tower with communications tower confirmed "not viable." Standalone communications tower proposed. Two-Way Communications awarded the communications component.</p></div>
+  <div style="background:oklch(0.18 0.012 50); padding:16px 20px;"><p style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:oklch(0.7 0.12 75); margin:0 0 4px;">OCTOBER 6, 2025 · BOARD OF SELECTMEN</p><p style="font-size:14px; color:oklch(0.85 0.01 60); margin:0;">Monopole option selected. Existing tower in structural failure since 2001, overloaded 200-300%. Board deciding between town-owned vs. third-party built.</p></div>
+  <div style="background:oklch(0.18 0.012 50); padding:16px 20px;"><p style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:oklch(0.7 0.12 75); margin:0 0 4px;">OCTOBER 15, 2025 · PLANNING BOARD</p><p style="font-size:14px; color:oklch(0.85 0.01 60); margin:0;">Full discussion of new monopole at rear of Police Department property. Third party installs at no cost. Cell lease revenue opportunity. 175-foot tower. Planning Board and Historic District Commission approval needed.</p></div>
+  <div style="background:oklch(0.18 0.012 50); padding:16px 20px;"><p style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:oklch(0.7 0.12 75); margin:0 0 4px;">DECEMBER 22, 2025 · BOARD OF SELECTMEN</p><p style="font-size:14px; color:oklch(0.85 0.01 60); margin:0;">Town working with third-party tower company for monopole on Fire and Police property. Town communications plus carrier co-location. No cost to town plus potential revenue.</p></div>
+  <div style="background:oklch(0.18 0.012 50); padding:16px 20px;"><p style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:oklch(0.7 0.12 75); margin:0 0 4px;">JANUARY 12, 2026 · BOARD OF SELECTMEN</p><p style="font-size:14px; color:oklch(0.85 0.01 60); margin:0;">American Tower Company named for the first time. Warrant article read. Town negotiating no-cost access for its equipment plus revenue sharing.</p></div>
+  <div style="background:oklch(0.18 0.012 50); padding:16px 20px;"><p style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:oklch(0.7 0.12 75); margin:0 0 4px;">JANUARY 20, 2026 · BOARD OF SELECTMEN</p><p style="font-size:14px; color:oklch(0.85 0.01 60); margin:0;">Article 41: American Tower Company Ground Lease. 30-year lease including renewals. Monopole up to 180 feet. Tax Map 6, Lot 94. No town funds. Vote: 5-0-0.</p></div>
+  <div style="background:oklch(0.21 0.014 50); padding:14px 20px; border-top:1px solid oklch(0.7 0.12 75); border-bottom:1px solid oklch(0.7 0.12 75);"><p style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:oklch(0.78 0.14 75); margin:0;">THE COMPETITIVE WINDOW CLOSES</p></div>
+  <div style="background:oklch(0.18 0.012 50); padding:16px 20px;"><p style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:oklch(0.7 0.12 75); margin:0 0 4px;">MARCH 23, 2026 · BOARD OF SELECTMEN</p><p style="font-size:14px; color:oklch(0.85 0.01 60); margin:0;">Article 41 passed at town vote. Board continuing discussions with American Tower on lease agreement and construction timeline.</p></div>
 </div>
-
-<div class="cs-window">
-<h3>The competitive window</h3>
-<p><span class="cs-highlight">23 months.</span> From the first vendor engagement (February 2024) to American Tower being named (January 2026). During that window, any infrastructure company reading Amherst's meeting minutes would have known a tower deal was forming. The town was actively seeking a partner. <span class="cs-highlight">The RFP never existed as a formal document.</span> The opportunity was only visible in meeting minutes.</p>
-<p>If you weren't reading Amherst's Board of Selectmen minutes, you would not have known this deal existed until construction started.</p>
-</div>
-
-## The Signal Chain
-
-<div class="timeline">
-
-<div class="tl-event tl-cool">
-<div class="tl-date">July 24, 2023</div>
-<div class="tl-board">Board of Selectmen</div>
-<div class="tl-text">Citizen George Coddington raises cell phone service in the Village as a safety concern. Cannot text or call. Chairman Lyon acknowledges the town <strong>"does not have the ability to install a tower or to get carriers to place service on a tower."</strong> Board agrees to investigate.</div>
-<div class="tl-source"><a href="https://www.amherstnh.gov/board-selectmen/minutes/board-selectmen-meeting-minutes-approved-5">Source: amherstnh.gov &rarr;</a></div>
-</div>
-
-<div class="tl-event tl-cool">
-<div class="tl-date">August 14, 2023</div>
-<div class="tl-board">Board of Selectmen</div>
-<div class="tl-text">Town Administrator contacts T-Mobile district representative, who agrees to review the town's cell towers.</div>
-<div class="tl-source"><a href="https://www.amherstnh.gov/board-selectmen/minutes/bos-meeting-minutes-approved">Source: amherstnh.gov &rarr;</a></div>
-</div>
-
-<div class="tl-event tl-cool">
-<div class="tl-date">August 28, 2023</div>
-<div class="tl-board">Board of Selectmen</div>
-<div class="tl-text">T-Mobile reports four towers in town, none with direct line of sight to the Village. Selectman D'Angelo suggests reaching out to <strong>third-party companies that build towers and lease space to carriers.</strong></div>
-<div class="tl-source"><a href="https://www.amherstnh.gov/board-selectmen/minutes/board-selectmen-meeting-minutes-approved-7">Source: amherstnh.gov &rarr;</a></div>
-</div>
-
-<div class="tl-event tl-warm">
-<div class="tl-date">October 23, 2023</div>
-<div class="tl-board">Board of Selectmen</div>
-<div class="tl-text">Town considering <strong>"collaborating with a cell company to improve cell service and get a new communications center antennae mast."</strong> Town Administrator will find an independent agent.</div>
-<div class="tl-source"><a href="https://www.amherstnh.gov/board-selectmen/minutes/board-selectmen-meeting-minutes-final-20">Source: amherstnh.gov &rarr;</a></div>
-</div>
-
-<div class="tl-gap"><div class="tl-gap-text">The competitive window opens</div></div>
-
-<div class="tl-event tl-warm">
-<div class="tl-date">February 12, 2024</div>
-<div class="tl-board">Board of Selectmen</div>
-<div class="tl-text">Chairman Lyon reports discussions with <strong>"a company that erects towers while leasing space to cell carriers."</strong> Company interested in building at the emergency services complex at no cost to the town. Long-term lease on top 10 feet. Company representative has reviewed three potential spots on the site.</div>
-<div class="tl-source"><a href="https://www.amherstnh.gov/board-selectmen/minutes/board-selectmen-meeting-minutes-approved-22">Source: amherstnh.gov &rarr;</a></div>
-</div>
-
-<div class="tl-event tl-warm">
-<div class="tl-date">April 15, 2024</div>
-<div class="tl-board">Board of Selectmen</div>
-<div class="tl-text">Selectman Stoughton has reviewed a draft cell tower agreement. Board to circulate for comments.</div>
-<div class="tl-source"><a href="https://www.amherstnh.gov/board-selectmen/minutes/bos-meeting-minutes-approved-0">Source: amherstnh.gov &rarr;</a></div>
-</div>
-
-<div class="tl-event tl-cool">
-<div class="tl-date">August 12, 2024</div>
-<div class="tl-board">Board of Selectmen</div>
-<div class="tl-text">Cell tower project still in progress. Cost for town to build independently: approximately <strong>$1M.</strong></div>
-<div class="tl-source"><a href="https://www.amherstnh.gov/board-selectmen/minutes/board-selectmen-meeting-minutes-approved-35">Source: amherstnh.gov &rarr;</a></div>
-</div>
-
-<div class="tl-event tl-cool">
-<div class="tl-date">September 16, 2024</div>
-<div class="tl-board">Board of Selectmen</div>
-<div class="tl-text">Cell providers still being sought. Building the tower "less expensive than" initially expected.</div>
-<div class="tl-source"><a href="https://www.amherstnh.gov/board-selectmen/minutes/board-selectmen-metting-minutes-approved">Source: amherstnh.gov &rarr;</a></div>
-</div>
-
-<div class="tl-event tl-warm">
-<div class="tl-date">October 28, 2024</div>
-<div class="tl-board">Board of Selectmen</div>
-<div class="tl-text">Chief Ciampoli: <strong>funding needed for construction drawings and architectural layout.</strong> Asks Board if ready to move forward.</div>
-<div class="tl-source"><a href="https://www.amherstnh.gov/board-selectmen/minutes/board-selectmen-meeting-minutes-approved-38">Source: amherstnh.gov &rarr;</a></div>
-</div>
-
-<div class="tl-event tl-cool">
-<div class="tl-date">November 18, 2024</div>
-<div class="tl-board">Board of Selectmen</div>
-<div class="tl-text">Two separate vendors/consultants seeking to attract cell providers. Tower to be on Police property, also hosting Police/Fire communications.</div>
-<div class="tl-source"><a href="https://www.amherstnh.gov/board-selectmen/minutes/board-selectmen-meeting-minutes-approved-40">Source: amherstnh.gov &rarr;</a></div>
-</div>
-
-<div class="tl-event tl-cool">
-<div class="tl-date">January 13, 2025</div>
-<div class="tl-board">Board of Selectmen</div>
-<div class="tl-text">Design pivot: combining cellular tower with communications tower confirmed <strong>"not viable."</strong> Standalone communications tower proposed. Two-Way Communications awarded the communications component.</div>
-<div class="tl-source"><a href="https://www.amherstnh.gov/board-selectmen/minutes/board-selectmen-meeting-minutes-approved-48">Source: amherstnh.gov &rarr;</a></div>
-</div>
-
-<div class="tl-event tl-warm">
-<div class="tl-date">October 6, 2025</div>
-<div class="tl-board">Board of Selectmen</div>
-<div class="tl-text">Monopole option selected. Existing tower in <strong>structural failure since 2001, overloaded 200-300%.</strong> Board deciding between town-owned vs. third-party built.</div>
-<div class="tl-source"><a href="https://www.amherstnh.gov/board-selectmen/minutes/board-selectmen-meeting-minutes-approved-62">Source: amherstnh.gov &rarr;</a></div>
-</div>
-
-<div class="tl-event tl-warm">
-<div class="tl-date">October 15, 2025</div>
-<div class="tl-board">Planning Board</div>
-<div class="tl-text">Full discussion of new monopole at rear of Police Department property. Third party installs at no cost. Cell lease revenue opportunity. <strong>175-foot tower.</strong> Planning Board and Historic District Commission approval needed.</div>
-<div class="tl-source"><a href="https://www.amherstnh.gov/planning-board/minutes/planning-board-minutes-65">Source: amherstnh.gov &rarr;</a></div>
-</div>
-
-<div class="tl-event tl-warm">
-<div class="tl-date">December 22, 2025</div>
-<div class="tl-board">Board of Selectmen</div>
-<div class="tl-text">Town working with third-party tower company for monopole on Fire and Police property. Town communications plus carrier co-location. <strong>No cost to town plus potential revenue.</strong></div>
-<div class="tl-source"><a href="https://www.amherstnh.gov/board-selectmen/minutes/bos-minutes-approved-3">Source: amherstnh.gov &rarr;</a></div>
-</div>
-
-<div class="tl-event tl-hot">
-<div class="tl-date">January 12, 2026</div>
-<div class="tl-board">Board of Selectmen</div>
-<div class="tl-text"><strong>American Tower Company named for the first time.</strong> Warrant article read. Town negotiating no-cost access for its equipment plus revenue sharing.</div>
-<div class="tl-source"><a href="https://www.amherstnh.gov/board-selectmen/minutes/bos-minutes-approved-1">Source: amherstnh.gov &rarr;</a></div>
-</div>
-
-<div class="tl-event tl-hot">
-<div class="tl-date">January 20, 2026</div>
-<div class="tl-board">Board of Selectmen</div>
-<div class="tl-text"><strong>Article 41: American Tower Company Ground Lease.</strong> 30-year lease including renewals. Monopole up to 180 feet. Tax Map 6, Lot 94. No town funds. <strong>Vote: 5-0-0.</strong></div>
-<div class="tl-source"><a href="https://www.amherstnh.gov/board-selectmen/minutes/bos-minutes-approved-2">Source: amherstnh.gov &rarr;</a></div>
-</div>
-
-<div class="tl-gap"><div class="tl-gap-text">The competitive window closes</div></div>
-
-<div class="tl-event tl-hot">
-<div class="tl-date">March 23, 2026</div>
-<div class="tl-board">Board of Selectmen</div>
-<div class="tl-text">Article 41 passed at town vote. Board continuing discussions with American Tower on lease agreement and construction timeline.</div>
-<div class="tl-source"><a href="https://www.amherstnh.gov/board-selectmen/minutes/bos-minutes-draft">Source: amherstnh.gov &rarr;</a></div>
-</div>
-
-</div>
-
-<div class="cs-cta">
-<h3>Want the record on a town you're bidding?</h3>
-<p>This is one town. We monitor 4,400+ — and the same chain, citizen complaint to signed lease, is forming right now in towns you're bidding, leasing, or screening. Name the town and I'll send you what its record says: who's involved, how far along it is, and how long the window has been open.</p>
-<a href="mailto:matt@municipalalpha.com?subject=Record%20request%3A%20%5Byour%20town%5D" class="cta-button">Name your town</a>
-</div>
-
-<div class="cs-note">
-<strong>Methodology note:</strong> This signal chain was assembled from public meeting minutes available on amherstnh.gov. Every link above goes to the original source document published by the Town of Amherst. No proprietary data sources were used. The documents have always been public. They were just sitting on a town website, unread. A retrospective chain like this proves the method and the lead time, not a hit rate; the forward call is what a pilot is for.
-</div>
+<h2 style="font-family:'Source Serif 4',serif; font-size:24px; font-weight:500; margin:40px 0 14px;">Want the record on a town you're bidding?</h2>
+<p style="font-size:15px; color:oklch(0.75 0.01 60); margin:0 0 32px;">This is one town. We monitor 4,300+, and the same chain, citizen complaint to signed lease, is forming right now in towns you're bidding, leasing, or screening. Name the town and we'll send you what its record says: who's involved, how far along it is, and how long the window has been open.</p>
+<p style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:oklch(0.55 0.01 60); margin:0; border-top:1px solid oklch(0.3 0.01 50); padding-top:24px;">METHODOLOGY: This signal chain was assembled from public meeting minutes available on amherstnh.gov. Every link above goes to the original source document published by the Town of Amherst. No proprietary data sources were used. The documents have always been public, they were just sitting on a town website, unread. A retrospective chain like this proves the method and the lead time, not a hit rate; the forward call is what a pilot is for.</p>

@@ -1,0 +1,556 @@
+{
+  "order": [
+    "revenue",
+    "newsrooms",
+    "advisors",
+    "pe",
+    "reits",
+    "banks"
+  ],
+  "sectors": {
+    "revenue": {
+      "slug": "for-saas-revenue-teams",
+      "label": "SaaS Revenue Teams",
+      "hub_blurb": "Territory coverage and renewal risk from the same weekly pull.",
+      "eyebrow": "FOR SAAS REVENUE TEAMS SELLING INTO LOCAL GOVERNMENT",
+      "headline": "Your pipeline starts in the minutes, not the RFP.",
+      "sub": "Net-new accounts entering procurement, and the early signs a municipal contract is being re-opened, sourced from 4,300+ jurisdictions and refreshed weekly.",
+      "stats": [
+        {
+          "value": "{{METRICS_MUNICIPALITIES}}",
+          "label": "jurisdictions in territory coverage"
+        },
+        {
+          "value": "{{METRICS_DOCUMENTS}}",
+          "label": "documents ingested for signal"
+        },
+        {
+          "value": "Weekly",
+          "label": "refresh on new and existing accounts"
+        }
+      ],
+      "vocab": [
+        "ICP",
+        "territory coverage",
+        "pipeline sourcing",
+        "renewal risk",
+        "book of business",
+        "win-back"
+      ],
+      "jobs_title": "Three things your team is already trying to do by hand",
+      "jobs_sub": "",
+      "jobs": [
+        {
+          "tag": "PIPELINE",
+          "title": "Find towns funding what you sell, before procurement opens",
+          "body": "Budget lines, warrant articles, and committee discussion of the capability you already ship, reached while there is still time to shape the requirements."
+        },
+        {
+          "tag": "RETENTION",
+          "title": "Catch a renewal going fragile while you can still work it",
+          "body": "A competitor named in minutes, a draft RFP for a service you are already delivering, or your champion leaving the department."
+        },
+        {
+          "tag": "ENABLEMENT",
+          "title": "Give AEs a reason to call that is not a cold list",
+          "body": "Every record carries the signal, the decision maker on record, and the reasoning, so the first line of the email is about them."
+        }
+      ],
+      "sample_title": "Exactly what your team receives",
+      "sample_sub": "Same five fields every week. Filtered to your territory and your installed base.",
+      "why_header": "WHY IT'S ACTIONABLE",
+      "rows": [
+        {
+          "signal": "Vendor replacement discussed, parks & rec software",
+          "place": "Windham, NH",
+          "date": "2026-07-14",
+          "contact": "Rec Director",
+          "why": "Incumbent named with a motion to solicit alternatives. Renewal risk on an account you hold."
+        },
+        {
+          "signal": "Appropriation added for permitting software",
+          "place": "Ayer, MA",
+          "date": "2026-06-02",
+          "contact": "Town Administrator",
+          "why": "Funding confirmed, procurement not yet open. Best window to shape the spec."
+        },
+        {
+          "signal": "Committee asks staff to evaluate online payments",
+          "place": "Wake Forest, NC",
+          "date": "2026-05-11",
+          "contact": "Finance Director",
+          "why": "Pre-RFP evaluation stage. No public solicitation exists yet."
+        }
+      ],
+      "quote": "“That would be very interesting if we could get in beforehand and understand, hey, this contract’s up for renewal after it’s been there for five years. That’d be fantastic.”",
+      "quote_attr": "Go-to-market lead, public-notice automation platform",
+      "workflow": [
+        {
+          "n": "01",
+          "text": "You send us what you sell, your ICP, and your territory."
+        },
+        {
+          "n": "02",
+          "text": "We write the query and run it weekly against the corpus."
+        },
+        {
+          "n": "03",
+          "text": "You get a spreadsheet your ops team can load into your own CRM."
+        }
+      ],
+      "cta_label": "Get One Free Lead",
+      "cta_note": "One intake form. One qualified lead in your territory. No cost.",
+      "cta_title": "One free assessment. At least one lead worth your time.",
+      "cta_body": "Tell us what you sell, your ICP, and your territory. We come back with a live signal, the decision maker on record, and why it is the one to act on."
+    },
+    "newsrooms": {
+      "slug": "for-newsroom-teams",
+      "label": "Newsrooms",
+      "hub_blurb": "Not the update, the thread underneath it, connected across every meeting it touched.",
+      "eyebrow": "FOR NEWSROOMS AND INVESTIGATIVE DESKS",
+      "headline": "You already cover the update. We connect what it's part of.",
+      "sub": "A newsroom we work with told us directly: the first version of this was “update me”, things that happened, most of which they already knew. That's their strength already, and it's not where they needed help. So we rebuilt around threads: a topic on the record across multiple meetings and several weeks, with the date it started, the material perspective and explainer pieces are actually made of, not another item on the list.",
+      "stats": [
+        {
+          "value": "99%",
+          "label": "of these documents are invisible to search"
+        },
+        {
+          "value": "{{METRICS_MUNICIPALITIES}}",
+          "label": "jurisdictions on continuous watch"
+        },
+        {
+          "value": "0",
+          "label": "records requests needed, all already public"
+        }
+      ],
+      "vocab": [
+        "beat",
+        "sourcing",
+        "document trail",
+        "thread",
+        "records",
+        "dateline"
+      ],
+      "jobs_title": "A thread is not a document. It's where a story started.",
+      "jobs_sub": "One meeting is an item. The same topic returning meeting after meeting, over weeks, dated from the first time it appeared, that's a thread, and it's closer to the shape a real story has.",
+      "jobs": [
+        {
+          "tag": "THE THREAD",
+          "title": "The topic connected across meetings, not one at a time",
+          "body": "A budget line, a zoning question, a grant application, the same subject returning meeting after meeting, with the date each one starts. One document is an item. Three meetings over nine weeks is a thread, and it reads as one."
+        },
+        {
+          "tag": "BEYOND THE UPDATE",
+          "title": "Built for the coverage you don't already have",
+          "body": "Every thread we surface is tagged by which of your own reader needs it actually serves. We're not trying to beat you at “this happened”, you already do that well. We're pointed at what's harder to staff: perspective, connection, the deeper piece."
+        },
+        {
+          "tag": "THE RECORD, READ FORWARD",
+          "title": "Where a thread started, before you had to go looking",
+          "body": "By the time a topic is obviously a story, the record already shows where it began. We hand you that starting point and every meeting since, so the reporting time goes into the piece, not into reconstructing the timeline."
+        }
+      ],
+      "quote": "",
+      "quote_attr": "",
+      "workflow": [
+        {
+          "n": "01",
+          "text": "You define the beat: topics, states, and the jurisdictions you cover."
+        },
+        {
+          "n": "02",
+          "text": "We run the classification weekly and connect what returns across meetings."
+        },
+        {
+          "n": "03",
+          "text": "You get threads with source links and dates, ready to report against."
+        }
+      ],
+      "cta_label": "Get One Free Tip",
+      "cta_note": "One intake form. One live thread on your beat. No cost, no call required.",
+      "cta_title": "Tell us your beat. We will find one thread already forming in the record.",
+      "cta_body": "Newsroom budgets are not our pricing model. Send us the beat and the geography and we will run one assessment free, source links included."
+    },
+    "advisors": {
+      "slug": "for-municipal-advisors",
+      "label": "Municipal Advisors",
+      "hub_blurb": "Districts and cities weighing a bond, a year before the resolution.",
+      "eyebrow": "FOR MUNICIPAL ADVISORS AND PUBLIC FINANCE FIRMS",
+      "headline": "The board discusses a bond long before it calls an election.",
+      "sub": "Facility studies, deferred maintenance findings, and feasibility discussion across every district and city we cover, so you are in the room while the program is still forming, typically 18–24 months ahead of an RFQ for financial advisor.",
+      "stats": [
+        {
+          "value": "{{METRICS_MUNICIPALITIES}}",
+          "label": "jurisdictions read for financing signal"
+        },
+        {
+          "value": "18–24 mo",
+          "label": "typical runway from study to bond resolution"
+        },
+        {
+          "value": "Weekly",
+          "label": "refresh on your service footprint"
+        }
+      ],
+      "vocab": [
+        "GO bond",
+        "facility master plan",
+        "board resolution",
+        "assessed valuation",
+        "debt capacity",
+        "RFQ for FA"
+      ],
+      "jobs_title": "Where a bond program becomes visible",
+      "jobs_sub": "By the time a district issues an RFQ for a financial advisor, the relationship is usually already decided. The signals that predict that RFQ are public a year or more earlier.",
+      "jobs": [
+        {
+          "tag": "ORIGINATION",
+          "title": "Facility studies and needs assessments, as they are commissioned",
+          "body": "A district authorizing a facilities assessment or demographic study is the earliest public sign a capital program is being scoped."
+        },
+        {
+          "tag": "TIMING",
+          "title": "Election calendar pressure, tracked per district",
+          "body": "Resolution deadlines, expiring authorizations, and prior measures approaching their last series, all on the public record."
+        },
+        {
+          "tag": "RELATIONSHIPS",
+          "title": "Know which board is frustrated with its current program",
+          "body": "Deferred maintenance backlogs, failed measures, and audit findings tell you where a conversation is welcome."
+        }
+      ],
+      "sample_title": "What lands with your origination team",
+      "sample_sub": "Structured records for the districts and cities in your service area, with the board and staff contact on record.",
+      "why_header": "WHY IT SIGNALS A FINANCING",
+      "rows": [
+        {
+          "signal": "Board authorizes facilities master plan update",
+          "place": "Tracy USD, CA",
+          "date": "2026-06-09",
+          "contact": "Assistant Superintendent, Business",
+          "why": "Earliest public step toward a capital program. Typically 18–24 months ahead of a bond resolution."
+        },
+        {
+          "signal": "Deferred maintenance backlog presented at $41M",
+          "place": "Chico USD, CA",
+          "date": "2026-05-12",
+          "contact": "Chief Business Official",
+          "why": "Backlog disclosed with no funding source identified. General fund cannot absorb it."
+        },
+        {
+          "signal": "Final series of 2016 authorization issued",
+          "place": "Vacaville, CA",
+          "date": "2026-02-24",
+          "contact": "Finance Director",
+          "why": "Authorization exhausted. Districts in this position return to the ballot within two cycles."
+        }
+      ],
+      "quote": "",
+      "quote_attr": "",
+      "workflow": [
+        {
+          "n": "01",
+          "text": "You send your service area: states, counties, district types."
+        },
+        {
+          "n": "02",
+          "text": "We classify financing precursors weekly across every one of them."
+        },
+        {
+          "n": "03",
+          "text": "You get a spreadsheet of districts to reach, with the document behind each."
+        }
+      ],
+      "cta_label": "Get One Free District",
+      "cta_note": "One county or service area. One district worth a call. No cost.",
+      "cta_title": "Name your service area. We will find one district already scoping a program.",
+      "cta_body": "Send the counties you cover and the type of issuer you serve. We come back with a district where the record shows a capital program forming, and the staff contact on it."
+    },
+    "pe": {
+      "slug": "for-private-equity",
+      "label": "Private Equity",
+      "hub_blurb": "Local risk and demand signal under a thesis, before diligence closes.",
+      "eyebrow": "FOR DEAL AND PORTFOLIO OPS TEAMS",
+      "headline": "The local risk in your thesis is public. It is just not searchable.",
+      "sub": "Jurisdiction-level demand and opposition signal for the geographies in a deal, during diligence, and every week after you own the asset.",
+      "stats": [
+        {
+          "value": "19,500",
+          "label": "US municipalities exist; {{METRICS_MUNICIPALITIES}} under our active coverage"
+        },
+        {
+          "value": "390+",
+          "label": "zoning events caught pre-bid"
+        },
+        {
+          "value": "13 months",
+          "label": "earliest credit warning we have documented"
+        }
+      ],
+      "vocab": [
+        "deal sourcing",
+        "diligence",
+        "value creation plan",
+        "add-on targets",
+        "portfolio ops",
+        "downside case"
+      ],
+      "jobs_title": "Where the municipal record moves a number in your model",
+      "jobs_sub": "Same corpus, pointed at the assumptions that actually break: siting, permitting speed, local opposition, and municipal demand.",
+      "jobs": [
+        {
+          "tag": "DILIGENCE",
+          "title": "Moratoria and opposition before you sign",
+          "body": "A pattern of denials or a pending moratorium in the target geography is on an agenda long before it is in a data room."
+        },
+        {
+          "tag": "PORTFOLIO OPS",
+          "title": "Demand signal for the companies you already own",
+          "body": "The same query that sources leads for a strategic works for a portfolio company selling into local government."
+        },
+        {
+          "tag": "THESIS",
+          "title": "Test the roll-up map against the record",
+          "body": "Where is permitting actually accelerating? Which counties are funding the category and which just talked about it?"
+        }
+      ],
+      "sample_title": "What lands in the deal folder",
+      "sample_sub": "Structured records, source-linked, for the jurisdictions in scope.",
+      "why_header": "WHY IT MATTERS TO THE MODEL",
+      "rows": [
+        {
+          "signal": "Utility-scale solar moratorium adopted",
+          "place": "Madison Cty, OH",
+          "date": "2026-04-08",
+          "contact": "Board of Commissioners",
+          "why": "Kills the siting assumption in the target pipeline for at least one cycle."
+        },
+        {
+          "signal": "ADU density mandate passed at second reading",
+          "place": "Bend, OR",
+          "date": "2026-03-24",
+          "contact": "Community Development Director",
+          "why": "Expands the buildable universe for a residential services roll-up."
+        },
+        {
+          "signal": "Governance failures in monthly financial reporting",
+          "place": "La Marque, TX",
+          "date": "2024-09-17",
+          "contact": "City Secretary",
+          "why": "Municipal counterparty risk visible 13 months before the downgrade."
+        }
+      ],
+      "quote": "",
+      "quote_attr": "",
+      "workflow": [
+        {
+          "n": "01",
+          "text": "You give us the thesis geography and the categories in scope."
+        },
+        {
+          "n": "02",
+          "text": "We run a custom query and return a jurisdiction-level read."
+        },
+        {
+          "n": "03",
+          "text": "The same query stays on weekly after close, for portfolio ops."
+        }
+      ],
+      "cta_label": "Run One Free Diligence Query",
+      "cta_note": "One geography, one category. We return the read at no cost.",
+      "cta_title": "Pick a live deal geography. We will run the query free.",
+      "cta_body": "Send one target market and the category. We come back with what the municipal record already says about demand, opposition, and permitting speed there."
+    },
+    "reits": {
+      "slug": "for-real-estate",
+      "label": "Real Estate",
+      "hub_blurb": "Entitlement and opposition risk months ahead of the hearing.",
+      "eyebrow": "FOR REAL ESTATE ACQUISITIONS AND ASSET MANAGEMENT",
+      "headline": "Entitlement risk shows up at the workshop, not the hearing.",
+      "sub": "Site-level signal for the jurisdictions where you hold or want assets: ground leases, moratoria, abatements, and the opposition forming before an application is filed.",
+      "stats": [
+        {
+          "value": "{{METRICS_TOWER_SITES}}",
+          "label": "tower sites screened against FCC records"
+        },
+        {
+          "value": "23 months",
+          "label": "window ahead of one signed ground lease"
+        },
+        {
+          "value": "130,000+",
+          "label": "registered structures in the addressable set"
+        }
+      ],
+      "vocab": [
+        "entitlement",
+        "siting",
+        "ground lease",
+        "NOI",
+        "abatement",
+        "asset management"
+      ],
+      "jobs_title": "The part of the deal that happens before anyone files",
+      "jobs_sub": "By the time there is a permit application, the local politics are already set. This is the months before that.",
+      "jobs": [
+        {
+          "tag": "SITE PIPELINE",
+          "title": "Coverage complaints and siting discussion, early",
+          "body": "A citizen complaint at a selectmen meeting became a 30-year ground lease. There was no FCC or FAA record for 23 months."
+        },
+        {
+          "tag": "RISK",
+          "title": "Moratoria and hostile zoning in your footprint",
+          "body": "Know which jurisdictions are drafting restrictions before you commit capital or a lease term to them."
+        },
+        {
+          "tag": "ASSET MGMT",
+          "title": "Tax and abatement changes on assets you hold",
+          "body": "Valuation appeals, abatement expirations, and utility rate discussion, per jurisdiction, per week."
+        }
+      ],
+      "sample_title": "What your acquisitions team receives",
+      "sample_sub": "Site-relevant records with the municipal body and contact on record.",
+      "why_header": "WHY IT MOVES A SITE",
+      "rows": [
+        {
+          "signal": "Coverage complaint → board directed to investigate siting",
+          "place": "Amherst, NH",
+          "date": "2023-07-24",
+          "contact": "Board of Selectmen chair",
+          "why": "Earliest public trace of what became a 30-year ground lease, 5-0-0."
+        },
+        {
+          "signal": "Wireless facility overlay ordinance under review",
+          "place": "Chapel Hill, NC",
+          "date": "2026-02-18",
+          "contact": "Planning Director",
+          "why": "Setback and height rules being rewritten. Affects every pending site in town."
+        },
+        {
+          "signal": "Tax abatement expiration on industrial parcel",
+          "place": "Kenosha, WI",
+          "date": "2026-01-27",
+          "contact": "City Assessor",
+          "why": "NOI impact on a held asset, one budget cycle of notice."
+        }
+      ],
+      "quote": "“A utility-scale solar moratorium tells me someone applied at the planning board and they already don’t like it.”",
+      "quote_attr": "Platform lead, renewable-energy investment firm",
+      "workflow": [
+        {
+          "n": "01",
+          "text": "You send the footprint: markets held, markets targeted."
+        },
+        {
+          "n": "02",
+          "text": "We screen the corpus against it and classify by site relevance."
+        },
+        {
+          "n": "03",
+          "text": "Weekly records land with source links, per jurisdiction."
+        }
+      ],
+      "cta_label": "Screen One Free Market",
+      "cta_note": "One market, screened at no cost, source-linked.",
+      "cta_title": "Name one market. We will screen it free.",
+      "cta_body": "Pick a county or a metro where you hold or want assets. We come back with the siting, entitlement, and abatement signal already sitting in the record."
+    },
+    "banks": {
+      "slug": "for-financial-institutions",
+      "label": "Financial Institutions",
+      "hub_blurb": "Credit surveillance and ticker exposure from the primary record.",
+      "eyebrow": "FOR CREDIT, RESEARCH, AND ALTERNATIVE DATA TEAMS",
+      "headline": "Primary-source municipal data, before it reaches a rating action.",
+      "sub": "Governance and budget signal on the obligors you cover, plus public-company exposure resolved out of municipal vendor payments.",
+      "stats": [
+        {
+          "value": "{{METRICS_TICKERS}}",
+          "label": "tickers resolved in municipal payments"
+        },
+        {
+          "value": "13 months",
+          "label": "lead time on a documented 2-notch downgrade"
+        },
+        {
+          "value": "$3.9T",
+          "label": "annual municipal spending in scope"
+        }
+      ],
+      "vocab": [
+        "coverage universe",
+        "obligor",
+        "credit surveillance",
+        "alternative data",
+        "pre-earnings",
+        "entity resolution"
+      ],
+      "jobs_title": "Two uses, one corpus",
+      "jobs_sub": "Credit teams read the obligor. Research teams read the vendor. Both are in the same meeting minutes.",
+      "jobs": [
+        {
+          "tag": "SURVEILLANCE",
+          "title": "Governance stress before the rating agency",
+          "body": "Late audits, reserve draws, and management turnover appear in minutes and monthly financials well before an agency acts."
+        },
+        {
+          "tag": "RESEARCH",
+          "title": "Ticker exposure in municipal vendor payments",
+          "body": "Entity resolution shows which public companies appear in check registers, and in how many jurisdictions."
+        },
+        {
+          "tag": "COVERAGE",
+          "title": "The names nobody else reads",
+          "body": "Small issuers with real spreads and no sell-side coverage still publish everything. It just is not indexed anywhere."
+        }
+      ],
+      "sample_title": "What your desk receives",
+      "sample_sub": "Structured, source-linked records against your coverage universe.",
+      "why_header": "WHY IT MATTERS TO THE CREDIT",
+      "rows": [
+        {
+          "signal": "Audit delayed a second consecutive year",
+          "place": "La Marque, TX",
+          "date": "2024-09-17",
+          "contact": "City Secretary",
+          "why": "Two-notch downgrade followed in October 2025. Signal was public 13 months earlier."
+        },
+        {
+          "signal": "Vendor payments resolved to a covered ticker",
+          "place": "123 municipalities",
+          "date": "2026-06-30",
+          "contact": "Finance departments",
+          "why": "Municipal footprint of a public company, aggregated ahead of quarterly earnings."
+        },
+        {
+          "signal": "Reserve transfer to cover operating deficit",
+          "place": "Chester, PA",
+          "date": "2026-04-15",
+          "contact": "Receiver / Finance",
+          "why": "Structural imbalance on the record before the next disclosure cycle."
+        }
+      ],
+      "quote": "",
+      "quote_attr": "",
+      "workflow": [
+        {
+          "n": "01",
+          "text": "You send the coverage universe or the ticker list."
+        },
+        {
+          "n": "02",
+          "text": "We map it to jurisdictions and classify weekly."
+        },
+        {
+          "n": "03",
+          "text": "You receive structured records with links to each primary document."
+        }
+      ],
+      "cta_label": "Test One Free Obligor",
+      "cta_note": "One obligor or one ticker, run at no cost.",
+      "cta_title": "Name one obligor or one ticker. We will run it free.",
+      "cta_body": "Pick a credit you already cover, or a company you already model. We come back with what the municipal record holds on it, with links to every document."
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{# Shared nav for redesigned pages. Set `nav_variant = "intake"` before including
+   to get the simplified intake-page nav (no CTA button, "Back to site" link). #}
+<nav class="rd-nav" aria-label="Primary">
+  <a href="{{ SITEURL }}/" class="rd-nav-brand">
+    <img src="{{ SITEURL }}/images/wordmark-nav.png" alt="municipαl">
+    <span class="rd-tagline">Alpha, extracted.</span>
+  </a>
+  <div class="rd-nav-right">
+    <div class="rd-dropdown-wrap" data-rd-dropdown>
+      <button type="button" class="rd-nav-trigger" aria-haspopup="true" aria-expanded="false" data-rd-trigger>
+        Who We Serve<span class="rd-caret">▾</span>
+      </button>
+      <div class="rd-dropdown" data-rd-panel>
+        <div class="rd-dropdown-inner">
+          {% for key in SECTOR_ORDER %}
+          {% set s = SECTORS[key] %}
+          <a href="{{ SITEURL }}/{{ s.slug }}/" class="rd-dropdown-item">{{ s.label }}</a>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    <div class="rd-dropdown-wrap" data-rd-dropdown>
+      <button type="button" class="rd-nav-trigger" aria-haspopup="true" aria-expanded="false" data-rd-trigger>
+        Case Studies<span class="rd-caret">▾</span>
+      </button>
+      <div class="rd-dropdown rd-dropdown-cases" data-rd-panel>
+        <div class="rd-dropdown-inner">
+          {% for key in CASE_STUDY_ORDER[:6] %}
+          {% set c = CASE_STUDIES[key] %}
+          <a href="{{ SITEURL }}/research/{{ c.url_slug }}/" class="rd-dropdown-case">
+            <span>{{ c.card_title }}</span>
+          </a>
+          {% endfor %}
+          <a href="{{ SITEURL }}/case-studies/" class="rd-dropdown-case" style="color:var(--rd-accent); font-weight:600;">
+            <span>See all case studies →</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <a href="{{ SITEURL }}/contact/" class="rd-nav-link">Contact</a>
+    {% if nav_variant == "intake" %}
+    <a href="{{ SITEURL }}/" class="rd-nav-link">← Back to site</a>
+    {% else %}
+    <a href="{{ SITEURL }}/free-lead-intake/" class="rd-nav-cta">Get One Free Lead</a>
+    {% endif %}
+  </div>
+</nav>

@@ -1,0 +1,185 @@
+{# One template, six real routes — selected by `page.sector_key` metadata
+   (set per content/pages/for-*.md stub) rather than the prototype's
+   client-side hash switcher. Content is entirely data-driven from
+   data/sectors.json (SECTORS context var, loaded in pelicanconf.py). #}
+{% extends "redesign_page.html" %}
+{% set s = SECTORS[page.sector_key] %}
+
+{% block title %}{{ s.headline }} · Municipal Alpha{% endblock %}
+
+{% block meta %}
+<meta name="description" content="{{ s.sub|e }}">
+<meta property="og:title" content="{{ s.headline|e }}">
+<meta property="og:description" content="{{ s.sub|e }}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{ SITENAME }}">
+<meta property="og:image" content="{{ SITEURL }}/images/default-og.png">
+<meta name="twitter:card" content="summary_large_image">
+{% endblock %}
+
+{% block content %}
+<div>
+
+  <!-- HERO -->
+  <div class="rd-wrap" style="padding-top:clamp(56px,8vw,104px); padding-bottom:clamp(40px,6vw,72px); display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:clamp(36px,5vw,64px); align-items:start;">
+    <div>
+      <p class="rd-eyebrow">{{ s.eyebrow }}</p>
+      <h1 class="rd-h1-sector">{{ s.headline }}</h1>
+      <p class="rd-lead" style="max-width:520px; margin:0 0 32px;">{{ s.sub }}</p>
+      <div style="display:flex; gap:14px; flex-wrap:wrap; margin-bottom:18px;">
+        <a href="{{ SITEURL }}/free-lead-intake/" class="rd-btn rd-btn-primary">{{ s.cta_label }}</a>
+        <a href="#sample" class="rd-btn rd-btn-outline">See Sample Data</a>
+      </div>
+      <p class="rd-cta-note">{{ s.cta_note }}</p>
+    </div>
+    <div class="rd-panel">
+      <p class="rd-eyebrow-tight" style="margin:0 0 20px;">WHAT THIS LOOKS LIKE FOR YOU</p>
+      <div class="rd-stats" style="margin-bottom:26px;">
+        {% for st in s.stats %}
+        <div>
+          <p class="rd-stat-value">{{ st.value }}</p>
+          <p class="rd-stat-label">{{ st.label }}</p>
+        </div>
+        {% endfor %}
+      </div>
+      <p class="rd-eyebrow-tight" style="margin:0 0 12px;">IN YOUR VOCABULARY</p>
+      <div style="display:flex; gap:8px; flex-wrap:wrap;">
+        {% for v in s.vocab %}
+        <span class="rd-vocab-chip">{{ v }}</span>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  <!-- JOBS -->
+  <div class="rd-band rd-section">
+    <div class="rd-wrap" style="padding:0;">
+      <h2 style="margin:0 0 12px; max-width:760px;">{{ s.jobs_title }}</h2>
+      {% if s.jobs_sub %}
+      <p style="font-size:16px; color:var(--rd-text-muted); max-width:640px; margin:0 0 44px;">{{ s.jobs_sub }}</p>
+      {% endif %}
+      <div class="rd-seam-grid" style="grid-template-columns:repeat(auto-fit,minmax(270px,1fr));">
+        {% for j in s.jobs %}
+        <div class="rd-card-band">
+          <p class="rd-card-tag">{{ j.tag }}</p>
+          <p style="font-family:'Source Serif 4',serif; font-size:21px; margin:0; color:var(--rd-text);">{{ j.title }}</p>
+          <p style="font-size:14px; color:var(--rd-text-tertiary); margin:0;">{{ j.body }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  {% if page.sector_key == "newsrooms" %}
+  <!-- NEWSROOMS: A REAL THREAD, NOT A MOCKUP -->
+  <div id="sample" class="rd-wrap rd-section">
+    <p class="rd-eyebrow-tight" style="margin:0 0 12px;">A REAL THREAD, NOT A MOCKUP</p>
+    <h2 style="margin:0 0 12px; max-width:760px;">This is what a thread actually looks like.</h2>
+    <p style="font-size:16px; color:var(--rd-text-muted); max-width:680px; margin:0 0 40px;">One town, one topic, pulled straight from a real weekly delivery, not a constructed example. Three meetings, nine weeks, before most readers knew a moratorium was even being discussed.</p>
+    <div class="rd-panel" style="padding:clamp(24px,3.5vw,40px);">
+      <h3 style="margin:0 0 6px; color:var(--rd-text);">Brunswick Data Center Moratorium</h3>
+      <p class="rd-eyebrow-tight" style="margin:0 0 24px; text-transform:none; letter-spacing:0.04em;">Town Council · Brunswick, ME · on the record 1 June – 3 August · 3 meetings over 9 weeks</p>
+      <p class="rd-eyebrow-tight" style="margin:0 0 8px;">WHAT THE RECORD SAYS</p>
+      <p style="font-size:15px; color:var(--rd-text-secondary); margin:0 0 28px;">The Town Council will hear public comments to approve a Data Center moratorium and will take any appropriate action. The moratorium would take effect immediately upon adoption and remain for 180 days to allow for drafting an amendment to the Brunswick Land Use Ordinance and other Town codes. Staff are seeking direction on whether a contract zoning approach would provide sufficient oversight or if additional resources should evaluate an outright prohibition.</p>
+      <p class="rd-eyebrow-tight" style="margin:0 0 12px;">THE THREAD, MEETING BY MEETING</p>
+      <div class="rd-seam-grid" style="grid-template-columns:1fr; margin-bottom:28px;">
+        <div class="rd-card">
+          <p class="rd-eyebrow-tight" style="margin:0 0 4px;">JUNE 1 · TOWN COUNCIL · PUBLIC HEARING</p>
+          <p style="font-size:14px; color:var(--rd-text-secondary); margin:0;">The Council hears public comment on a proposed 180-day moratorium on certain data centers, to give staff time to research and draft ordinance language.</p>
+        </div>
+        <div class="rd-card">
+          <p class="rd-eyebrow-tight" style="margin:0 0 4px;">JUNE 23 · SUSTAINABILITY COMMITTEE</p>
+          <p style="font-size:14px; color:var(--rd-text-secondary); margin:0;">The Sustainability Committee takes up the AI Data Center Moratorium and its own role in the matter, the thread widens to a second body before the Council acts.</p>
+        </div>
+        <div class="rd-card" style="background:oklch(0.21 0.014 50);">
+          <p class="rd-eyebrow-tight" style="margin:0 0 4px; color:var(--rd-accent);">AUGUST 3 · TOWN COUNCIL</p>
+          <p style="font-size:14px; color:var(--rd-text); margin:0;">The moratorium comes back for a vote, the thread's third meeting, nine weeks after the first, and the point where most coverage of this would actually start.</p>
+        </div>
+      </div>
+      <p class="rd-eyebrow-tight" style="margin:0 0 8px;">OUR READ</p>
+      <p style="font-size:15px; font-style:italic; font-family:'Source Serif 4',serif; color:var(--rd-text); margin:0 0 10px;">If you are a resident of Brunswick, this affects you because the Town Council is considering a temporary ban on data centers while they decide how to regulate them.</p>
+      <p class="rd-eyebrow-tight" style="margin:0; color:var(--rd-text-faint);">SERVES: UPDATE ME · EDUCATE ME</p>
+    </div>
+    <p style="font-size:13px; color:var(--rd-text-faint); margin:24px 0 0; max-width:680px;">Real town, real meetings, real dates, condensed from an actual weekly delivery. Every claim above traces to a public agenda; none of it is a mockup.</p>
+  </div>
+  {% else %}
+  <!-- SAMPLE DATA -->
+  <div id="sample" class="rd-wrap rd-section">
+    <h2 style="margin:0 0 12px; max-width:760px;">{{ s.sample_title }}</h2>
+    <p style="font-size:16px; color:var(--rd-text-muted); max-width:640px; margin:0 0 36px;">{{ s.sample_sub }}</p>
+    <div class="rd-table-wrap">
+      <div class="rd-table">
+        <div class="rd-table-head">SIGNAL</div>
+        <div class="rd-table-head">JURISDICTION</div>
+        <div class="rd-table-head">DATE</div>
+        <div class="rd-table-head">CONTACT ON RECORD</div>
+        <div class="rd-table-head">{{ s.why_header }}</div>
+        {% for r in s.rows %}
+        <div class="rd-table-cell">{{ r.signal }}</div>
+        <div class="rd-table-cell">{{ r.place }}</div>
+        <div class="rd-table-cell rd-table-cell-mono">{{ r.date }}</div>
+        <div class="rd-table-cell" style="font-size:13px;">{{ r.contact }}</div>
+        <div class="rd-table-cell" style="font-size:13px; color:var(--rd-text-tertiary);">{{ r.why }}</div>
+        {% endfor %}
+      </div>
+    </div>
+    <p class="rd-table-foot">EVERY ROW LINKS BACK TO THE SOURCE DOCUMENT · DELIVERED AS A SPREADSHEET</p>
+  </div>
+  {% endif %}
+
+  <!-- QUOTE + WORKFLOW -->
+  <div class="rd-band rd-section">
+    <div class="rd-wrap" style="padding:0; display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:clamp(32px,4vw,56px); align-items:start;">
+      {% if s.quote %}
+      <div>
+        <p class="rd-quote">{{ s.quote }}</p>
+        <p class="rd-quote-attr">{{ s.quote_attr }}</p>
+      </div>
+      {% endif %}
+      <div>
+        <p class="rd-eyebrow-tight" style="margin:0 0 18px;">WHERE IT PLUGS IN</p>
+        <div class="rd-seam-grid" style="grid-template-columns:1fr;">
+          {% for w in s.workflow %}
+          <div class="rd-card" style="display:flex; gap:16px; align-items:baseline;">
+            <span class="rd-mono" style="font-size:11px; color:var(--rd-accent-muted); min-width:22px;">{{ w.n }}</span>
+            <span style="font-size:14px; color:var(--rd-text-secondary);">{{ w.text }}</span>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div id="cta" class="rd-wrap rd-section">
+    <div class="rd-panel" style="border-color:var(--rd-accent-muted); padding:clamp(24px,4vw,48px);">
+      <p class="rd-eyebrow-tight" style="margin:0 0 14px;">START HERE · NO COST</p>
+      <h2 style="margin:0 0 16px; max-width:720px;">{{ s.cta_title }}</h2>
+      <p style="font-size:16px; color:var(--rd-text-secondary); margin:0 0 26px; max-width:560px;">{{ s.cta_body }}</p>
+      <div style="display:flex; gap:14px; flex-wrap:wrap;">
+        <a href="{{ SITEURL }}/free-lead-intake/" class="rd-btn rd-btn-primary">{{ s.cta_label }}</a>
+        <a href="{{ SITEURL }}/" class="rd-btn rd-btn-outline">See the Full Platform</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- HUB: WHO WE SERVE -->
+  <div class="rd-band rd-section">
+    <div class="rd-wrap" style="padding:0;">
+      <p class="rd-eyebrow-tight" style="margin:0 0 12px;">WHO WE SERVE</p>
+      <h2 style="margin:0 0 40px; max-width:760px;">One corpus. Read a different way for every buyer.</h2>
+      <div class="rd-seam-grid" style="grid-template-columns:repeat(auto-fit,minmax(270px,1fr));">
+        {% for key in SECTOR_ORDER %}
+        {% set hs = SECTORS[key] %}
+        <a href="{{ SITEURL }}/{{ hs.slug }}/" class="rd-card-band" style="color:var(--rd-text);">
+          <span style="font-family:'Source Serif 4',serif; font-size:22px;">{{ hs.label }}</span>
+          <span style="font-size:14px; color:var(--rd-text-tertiary);">{{ hs.hub_blurb }}</span>
+          <span style="font-size:13px; font-weight:600; color:var(--rd-accent);">Open this page →</span>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+</div>
+{% endblock %}

@@ -1,30 +1,10 @@
 Title: How Cell-Tower Leases Get Decided Before a Broker Ever Sees Them
 Slug: research/cell-tower-leasing
+Template: redesign_case_study
+Article_Key: cell-tower-leasing
 Sortorder: 12
 Header_image: story-cell-tower-leasing.png
 Summary: Municipal Alpha tracks US cell-tower and wireless-siting decisions from town and county meeting records, surfacing lease approvals, small-cell siting, and ordinance changes weeks before they reach a broker or an RFP. Drawn from 161,492 FCC-registered towers and wireless decisions across 1,105 municipalities in all 50 states. Every example links to its source record.
-
-<style>
-.chart{ border:1px solid #E8E4DF; border-radius:10px; background:#fff; padding:22px 24px; margin:34px 0; }
-.chart .ctitle{ font-family:"IBM Plex Mono",monospace; font-size:11px; letter-spacing:1px; text-transform:uppercase; color:#888; margin-bottom:18px; }
-.bar-row{ display:flex; align-items:center; gap:12px; margin-bottom:9px; font-size:14px; }
-.bar-row .lbl{ width:34px; text-align:right; font-family:"IBM Plex Mono",monospace; color:#444; }
-.bar-row .track{ display:block; flex:1; background:#f0ece7; border-radius:3px; height:18px; position:relative; }
-.bar-row .fill{ display:block; background:#E8512D; height:18px; border-radius:3px; }
-.bar-row .val{ width:62px; font-family:"IBM Plex Mono",monospace; font-size:12px; color:#444; }
-.cnote{ font-size:12px; color:#888; margin-top:14px; font-family:"IBM Plex Mono",monospace; }
-.timeline{ position:relative; padding-left:30px; }
-.timeline::before{ content:''; position:absolute; left:7px; top:4px; bottom:30px; width:2px; background:#E8E4DF; }
-.tl{ position:relative; margin-bottom:18px; }
-.tl::before{ content:''; position:absolute; left:-30px; top:5px; width:12px; height:12px; border-radius:50%; border:2px solid #E8512D; background:#fff; }
-.tl.lease::before{ background:#E8512D; }
-.tl .d{ font-family:"IBM Plex Mono",monospace; font-size:12px; color:#E8512D; }
-.tl .t{ font-size:15px; }
-.tl .tag{ font-family:"IBM Plex Mono",monospace; font-size:10px; text-transform:uppercase; letter-spacing:.5px; color:#888; border:1px solid #E8E4DF; border-radius:3px; padding:1px 6px; margin-left:6px; }
-.tl-end{ position:relative; margin-top:6px; }
-.tl-end::before{ content:''; position:absolute; left:-31px; top:4px; width:14px; height:14px; background:#1a1a1a; border-radius:2px; transform:rotate(45deg); }
-.tl-end .t{ font-size:15px; font-weight:600; }
-</style>
 
 On May 5, 2026, the Freeport, Maine town council took up an unglamorous line item. The order, in the council's own words, authorized the town manager "to execute a Structure Lease Agreement with New Cingular Wireless PCS, LLC to lease a portion of Town controlled property located at 55 Quarry Lane." New Cingular Wireless is AT&T. The vote put a carrier on town land for years. It never appeared on a broker's list, because by the time it would have, the location, the carrier, and the landowner were already settled.
 
