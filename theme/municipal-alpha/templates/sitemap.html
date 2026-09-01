@@ -5,6 +5,7 @@
     <changefreq>daily</changefreq>
   </url>
 {% for page in pages %}
+{%- if not (page.robots and 'noindex' in page.robots|lower) %}
   <url>
     <loc>{{ SITEURL }}/{{ page.url }}</loc>
 {%- if page.modified %}
@@ -13,6 +14,7 @@
     <lastmod>{{ page.date.strftime('%Y-%m-%d') }}</lastmod>
 {%- endif %}
   </url>
+{%- endif %}
 {% endfor %}
 {%- for article in articles %}
   <url>

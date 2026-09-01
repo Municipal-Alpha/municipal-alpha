@@ -8,7 +8,7 @@ OUTPUTDIR=$(BASEDIR)/output
 CONFFILE=$(BASEDIR)/pelicanconf.py
 PUBLISHCONF=$(BASEDIR)/publishconf.py
 
-.PHONY: html clean serve publish copy-static-html noindex-extra goatcounter-extra llms-full metrics-drift no-diffview
+.PHONY: html clean serve publish copy-static-html noindex-extra goatcounter-extra llms-full records-sitemap index-coherence metrics-drift no-diffview
 
 html: metrics-drift
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
@@ -16,6 +16,8 @@ html: metrics-drift
 	$(MAKE) noindex-extra
 	$(MAKE) goatcounter-extra
 	$(MAKE) llms-full
+	$(MAKE) records-sitemap
+	$(MAKE) index-coherence
 	$(MAKE) no-diffview
 
 clean:
@@ -30,6 +32,8 @@ publish: metrics-drift
 	$(MAKE) noindex-extra
 	$(MAKE) goatcounter-extra
 	$(MAKE) llms-full
+	$(MAKE) records-sitemap
+	$(MAKE) index-coherence
 	$(MAKE) no-diffview
 
 # Fail the build when a content page carries a platform-scale claim (N
@@ -57,6 +61,22 @@ noindex-extra:
 # to base.html. See tools/inject_goatcounter.py header for the full rationale.
 goatcounter-extra:
 	$(PY) tools/inject_goatcounter.py
+
+# Emit output/sitemap-records.xml for the public record layer (towns/, topics/,
+# scope/). Those pages are copied into output/ by copy-static-html, not built by
+# Pelican, so the sitemap template cannot see them and never will. Runs after
+# copy-static-html + noindex-extra so it reads the final bytes. robots.txt
+# carries a Sitemap: line for each map. See tools/build_records_sitemap.py.
+records-sitemap:
+	$(PY) tools/build_records_sitemap.py
+
+# Refuse to publish a build where a URL is in a sitemap AND carries a noindex
+# meta — a crawler told to fetch it and then to drop it. Runs last of the
+# index-related steps so it sees every sitemap and every injected meta. This is
+# the witness for noindex-extra, whose healthy and broken output are the same
+# line. See tools/check_index_coherence.py.
+index-coherence:
+	$(PY) tools/check_index_coherence.py
 
 # Generate output/llms-full.txt (full-text concatenation for AI agents) from the
 # freshly-built output. Runs after pelican + copy-static-html on every build.
