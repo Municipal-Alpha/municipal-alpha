@@ -15,7 +15,11 @@
   var ENTRY = {
     name: "entry.834810311",
     email: "entry.742667339",
-    company: "entry.652650228",
+    // The Google Form question behind this id is still titled "Company"; this
+    // page now asks for the company website and posts the URL into it. Renaming
+    // the question in the form does NOT change its entry id, so that rename is
+    // safe to make independently of this file (asked of Christian 2026-09-01).
+    website: "entry.652650228",
     buyerType: "entry.645215840",
     offer: "entry.1255949052",
     jurisdictions: "entry.1995577041",
@@ -36,11 +40,15 @@
   var REQUIRED = [
     { key: "name", label: "name" },
     { key: "email", label: "a valid work email" },
-    { key: "company", label: "company" },
+    { key: "website", label: "a company website" },
     { key: "offer", label: "what you sell or are looking for" },
     { key: "territory", label: "territory or geography" }
   ];
   var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  // Deliberately forgiving: no scheme required, no TLD allowlist. It only rules
+  // out a plain company name ("Acme Inc"), which is the answer this field used
+  // to ask for and the one people will keep typing out of habit.
+  var WEBSITE_RE = /^(https?:\/\/)?[^\s\/?#.]+(\.[^\s\/?#.]+)+([\/?#]\S*)?$/i;
 
   function fieldEl(key) { return form.querySelector('[name="' + key + '"]'); }
 
@@ -55,6 +63,8 @@
       var val = (el.value || "").trim();
       if (r.key === "email") {
         if (!EMAIL_RE.test(val)) missing.push({ key: r.key, label: r.label, el: el });
+      } else if (r.key === "website") {
+        if (!WEBSITE_RE.test(val)) missing.push({ key: r.key, label: r.label, el: el });
       } else if (!val) {
         missing.push({ key: r.key, label: r.label, el: el });
       }
@@ -87,7 +97,7 @@
     var params = new URLSearchParams();
     params.append(ENTRY.name, fieldEl("name").value.trim());
     params.append(ENTRY.email, fieldEl("email").value.trim());
-    params.append(ENTRY.company, fieldEl("company").value.trim());
+    params.append(ENTRY.website, fieldEl("website").value.trim());
     params.append(ENTRY.buyerType, fieldEl("buyerType").value);
     params.append(ENTRY.offer, fieldEl("offer").value.trim());
     checkedChipValues("jurisdictions").forEach(function (v) { params.append(ENTRY.jurisdictions, v); });
