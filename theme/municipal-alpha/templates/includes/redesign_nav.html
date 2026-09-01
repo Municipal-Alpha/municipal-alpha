@@ -37,6 +37,11 @@
         </div>
       </div>
     </div>
+    {# The public record layer's desk: 538 town/topic/scope pages, fully
+       cross-linked to each other and reachable from this one page. Nothing on
+       the public site linked it until 2026-09-01, so it had no entry edge from
+       the site graph. See tools/build_records_sitemap.py. #}
+    <a href="{{ SITEURL }}/topics/" class="rd-nav-link">On the Record</a>
     <a href="{{ SITEURL }}/contact/" class="rd-nav-link">Contact</a>
     {% if nav_variant == "intake" %}
     <a href="{{ SITEURL }}/" class="rd-nav-link">← Back to site</a>

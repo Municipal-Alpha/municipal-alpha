@@ -66,3 +66,7 @@ User-agent: DuckAssistBot
 Allow: /
 
 Sitemap: https://municipalalpha.com/sitemap.xml
+# The public record layer (towns/, topics/, scope/) is static HTML copied into
+# output/ after the Pelican build, so it cannot appear in the template-rendered
+# sitemap above. Written by tools/build_records_sitemap.py on every build.
+Sitemap: https://municipalalpha.com/sitemap-records.xml

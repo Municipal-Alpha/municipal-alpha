@@ -67,6 +67,21 @@ The decision is coming; we see it first, before the vote, before the permit, bef
 
 A single-file concatenation of the core informational pages, case studies, and data stories (plain text) is available at: {{ SITEURL }}/llms-full.txt
 
+## The Public Record Layer
+
+What we hold for a place, a topic, or a state, built from the corpus and stated as counts of documents we actually have. Where our coverage of a place is thin, its page is short and says so. Every page cites the source documents behind it, and the three views cross-link: a town page lists the topics that appear in its record, a topic page lists the towns where it appears, and a scope page collects a topic across a state or the country.
+
+Start here; it links every town and topic page we publish:
+
+- The desk (every town and topic on the record): {{ SITEURL }}/topics/
+- Town page example (Portland, Maine): {{ SITEURL }}/towns/portland-me/
+- Topic page example (housing density, across the towns we read): {{ SITEURL }}/topics/housing-density/
+- Topic in one state (housing density in Maine): {{ SITEURL }}/scope/class-housing-density-state-me.html
+- Topic nationally (housing density across the country): {{ SITEURL }}/scope/class-housing-density-national.html
+- One state's record (Maine): {{ SITEURL }}/scope/scope-state-me.html
+
+These pages are indexed and in {{ SITEURL }}/sitemap-records.xml, separate from {{ SITEURL }}/sitemap.xml because they are generated from the corpus rather than authored. They are not included in llms-full.txt: the full-text file is the core informational pages, and concatenating the record layer into it would bury them.
+
 ## Vendor & Municipality Profiles
 
 Municipal Alpha publishes public profiles for vendors and municipalities documented in our corpus. Profiles are factual aggregations of public-record activity, not opinions or rankings. Each profile cites source documents. Firms named in profiles may claim them or request corrections.

@@ -37,6 +37,13 @@
                 <a href="{{ SITEURL }}/{{ p.url }}"{% if p == page %} class="active"{% endif %}>{{ p.title }}</a>
                 {% endif %}
                 {% endfor %}
+                {# The public record layer's desk. Static HTML copied into output/ by
+                   copy-static-html, so it is not in `pages` and cannot be reached by the
+                   loop above. Until 2026-09-01 nothing on the public site linked it, which
+                   left its 538 town/topic/scope pages with no entry edge from the site
+                   graph — they are fully cross-linked to each other and reachable from
+                   this one page, so this link is what connects them. #}
+                <a href="{{ SITEURL }}/topics/">On the record</a>
             </div>
         </div>
     </nav>
