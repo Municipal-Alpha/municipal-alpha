@@ -81,6 +81,15 @@
    `.rd-page a.rd-btn-*` to win over the base link color — without this,
    CTA button text renders the same color as its own background. */
 .rd-btn { display: inline-block; font-size: 15px; font-weight: 600; padding: 14px 26px; border-radius: 2px; cursor: pointer; font-family: 'IBM Plex Sans', sans-serif; border: none; }
+/* Base rule covers <button> (no competing `.rd-page a` color rule applies to
+   it); the `.rd-page a.rd-btn-*` rules below re-win the same colors for <a>,
+   which `.rd-page a` would otherwise outrank. Both are needed — CTAs on
+   these pages are a mix of real buttons (the intake form) and link-styled
+   buttons (everywhere else). */
+.rd-btn-primary { background: var(--rd-accent); color: var(--rd-bg); }
+.rd-btn-primary:hover { background: var(--rd-accent-hover); color: var(--rd-bg); }
+.rd-btn-outline { border: 1px solid oklch(0.4 0.01 50); color: var(--rd-text); background: transparent; }
+.rd-btn-outline:hover { color: var(--rd-text); border-color: var(--rd-accent); }
 .rd-page a.rd-btn-primary { background: var(--rd-accent); color: var(--rd-bg); }
 .rd-page a.rd-btn-primary:hover { background: var(--rd-accent-hover); color: var(--rd-bg); }
 .rd-page a.rd-btn-outline { border: 1px solid oklch(0.4 0.01 50); color: var(--rd-text); background: transparent; }
@@ -126,6 +135,19 @@
   background: var(--rd-bg); color: var(--rd-text);
   border: 1px solid var(--rd-border-strong); border-radius: 2px; resize: vertical;
 }
+/* Browsers paint a native control chrome under a <select>'s closed box that
+   `background`/`color` alone doesn't fully replace — appearance:none plus a
+   hand-drawn arrow is needed or it renders with the OS's default (usually
+   white) background regardless of the rule above. */
+.rd-field select {
+  appearance: none; -webkit-appearance: none; -moz-appearance: none;
+  padding-right: 34px;
+  background-image: linear-gradient(45deg, transparent 50%, var(--rd-text-muted) 50%), linear-gradient(135deg, var(--rd-text-muted) 50%, transparent 50%);
+  background-position: calc(100% - 20px) calc(50% - 3px), calc(100% - 15px) calc(50% - 3px);
+  background-size: 5px 5px, 5px 5px;
+  background-repeat: no-repeat;
+}
+.rd-field select option { background: var(--rd-bg); color: var(--rd-text); }
 .rd-field input.rd-invalid, .rd-field textarea.rd-invalid { border-color: var(--rd-error-border); }
 .rd-chip-row { display: flex; gap: 8px; flex-wrap: wrap; }
 .rd-chip { font-family: 'IBM Plex Sans', sans-serif; font-size: 13px; padding: 8px 14px; border-radius: 2px; cursor: pointer; border: 1px solid var(--rd-border-strong); background: transparent; color: var(--rd-text-secondary); }

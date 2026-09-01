@@ -1,0 +1,133 @@
+{% extends "redesign_page.html" %}
+{% set nav_variant = "intake" %}
+
+{% block title %}Free Lead Assessment · Municipal Alpha{% endblock %}
+
+{% block meta %}
+<meta name="description" content="Tell us what you sell and where you sell it. We run a custom query against the municipal record and come back with at least one live signal, at no cost.">
+<meta property="og:title" content="One free lead from the municipal record">
+<meta property="og:description" content="Tell us what you sell and where you sell it. We run a custom query against the municipal record and come back with at least one live signal, at no cost.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{ SITENAME }}">
+<meta property="og:image" content="{{ SITEURL }}/images/default-og.png">
+<meta name="twitter:card" content="summary_large_image">
+{% endblock %}
+
+{% block extra_head %}
+{{ super() }}
+<script defer src="{{ SITEURL }}/theme/js/redesign-intake.js"></script>
+{% endblock %}
+
+{% block content %}
+<div class="rd-wrap" style="padding-top:clamp(40px,6vw,72px); padding-bottom:clamp(56px,8vw,96px); display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:clamp(32px,4vw,64px); align-items:start;">
+
+  <!-- LEFT: framing -->
+  <div>
+    <p class="rd-eyebrow">FREE ASSESSMENT · NO COST, NO CALL REQUIRED</p>
+    <h1 class="rd-h1-small">One free lead from the municipal record.</h1>
+    <p class="rd-lead" style="max-width:460px; margin:0 0 32px;">Tell us what you sell and where you sell it. We run a custom query against 4,300+ jurisdictions and come back with at least one live signal, the decision maker on record, and why it is worth acting on now.</p>
+    <div class="rd-seam-grid" style="grid-template-columns:1fr; margin-bottom:28px;">
+      <div class="rd-card">
+        <span class="rd-mono" style="font-size:11px; color:var(--rd-accent-muted);">01</span>
+        <span style="font-size:14px; color:var(--rd-text-secondary); margin-left:12px;">You fill this out. Three minutes, no call.</span>
+      </div>
+      <div class="rd-card">
+        <span class="rd-mono" style="font-size:11px; color:var(--rd-accent-muted);">02</span>
+        <span style="font-size:14px; color:var(--rd-text-secondary); margin-left:12px;">We write the query and run it against the corpus.</span>
+      </div>
+      <div class="rd-card">
+        <span class="rd-mono" style="font-size:11px; color:var(--rd-accent-muted);">03</span>
+        <span style="font-size:14px; color:var(--rd-text-secondary); margin-left:12px;">You get the lead and a short sector read, source-linked. Within five business days.</span>
+      </div>
+    </div>
+    <p style="font-family:'Source Serif 4',serif; font-style:italic; font-size:15px; color:var(--rd-text-muted); margin:0; max-width:420px;">We never ask for your customer list, your CRM, or anything about your existing accounts. Everything we work from is public record.</p>
+  </div>
+
+  <!-- RIGHT: form -->
+  <div class="rd-panel">
+
+    <div id="rd-intake-success" style="display:none; flex-direction:column; gap:18px; padding:20px 0;">
+      <p class="rd-eyebrow-tight" style="margin:0;">REQUEST RECEIVED</p>
+      <p id="rd-intake-success-line" style="font-family:'Source Serif 4',serif; font-size:clamp(22px,2.6vw,28px); margin:0; color:var(--rd-text);">Thanks — we are on it.</p>
+      <p style="font-size:15px; color:var(--rd-text-secondary); margin:0;">We will come back within five business days with at least one live signal, or we will tell you plainly that we could not find one worth your time.</p>
+      <div style="display:flex; gap:14px; flex-wrap:wrap; margin-top:6px;">
+        <a href="{{ SITEURL }}/#sample" class="rd-btn rd-btn-primary">See Sample Data</a>
+        <button type="button" id="rd-intake-reset" class="rd-btn rd-btn-outline" style="cursor:pointer;">Submit another</button>
+      </div>
+    </div>
+
+    <form id="rd-intake-form" novalidate>
+      <div id="rd-intake-editing" style="display:flex; flex-direction:column; gap:22px;">
+
+        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:18px;">
+          <div class="rd-field">
+            <label class="rd-field-label" for="rd-f-name">Your Name *</label>
+            <input type="text" id="rd-f-name" name="name" placeholder="Jane Whitfield">
+          </div>
+          <div class="rd-field">
+            <label class="rd-field-label" for="rd-f-email">Work Email *</label>
+            <input type="email" id="rd-f-email" name="email" placeholder="jane@company.com">
+          </div>
+        </div>
+
+        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:18px;">
+          <div class="rd-field">
+            <label class="rd-field-label" for="rd-f-company">Company *</label>
+            <input type="text" id="rd-f-company" name="company" placeholder="Company name">
+          </div>
+          <div class="rd-field">
+            <label class="rd-field-label" for="rd-f-buyer-type">Which Describes You</label>
+            <select id="rd-f-buyer-type" name="buyerType">
+              <option>SaaS revenue team</option>
+              <option>Newsroom</option>
+              <option>Municipal advisor / public finance</option>
+              <option>Private equity</option>
+              <option>Real estate</option>
+              <option>Financial institution</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="rd-field">
+          <label class="rd-field-label" for="rd-f-offer">What do you sell, or what are you looking for? *</label>
+          <textarea id="rd-f-offer" name="offer" rows="3" placeholder="e.g. Permitting and licensing software for towns under 50,000 people"></textarea>
+        </div>
+
+        <div>
+          <p class="rd-field-label" style="margin:0 0 10px;">Which jurisdictions matter to you?</p>
+          <div class="rd-chip-row">
+            {% for opt in ["Cities & towns", "Counties", "School districts", "Utilities & special districts", "State agencies"] %}
+            <button type="button" class="rd-chip" data-group="jurisdictions" data-value="{{ opt }}" aria-pressed="false">{{ opt }}</button>
+            {% endfor %}
+          </div>
+        </div>
+
+        <div class="rd-field">
+          <label class="rd-field-label" for="rd-f-territory">Territory or Geography *</label>
+          <input type="text" id="rd-f-territory" name="territory" placeholder="e.g. New England, or Ohio + Indiana, or nationwide">
+        </div>
+
+        <div>
+          <p class="rd-field-label" style="margin:0 0 10px;">What signals would be worth knowing about?</p>
+          <div class="rd-chip-row">
+            {% for opt in ["Budget appropriations", "Pre-RFP discussion", "Vendor changes", "Zoning & permits", "Credit & governance", "Capital projects"] %}
+            <button type="button" class="rd-chip" data-group="signals" data-value="{{ opt }}" aria-pressed="false">{{ opt }}</button>
+            {% endfor %}
+          </div>
+        </div>
+
+        <div class="rd-field">
+          <label class="rd-field-label" for="rd-f-notes">Anything else we should know?</label>
+          <textarea id="rd-f-notes" name="notes" rows="2" placeholder="Optional. A named jurisdiction, a ticker, a competitor to watch."></textarea>
+        </div>
+
+        <p id="rd-intake-error" class="rd-form-error" hidden></p>
+
+        <button type="submit" class="rd-btn rd-btn-primary" style="border:none; cursor:pointer;">Get My Free Lead</button>
+        <p class="rd-form-note">We use this only to run your assessment. No list sharing, no sequence, no newsletter.</p>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}
