@@ -1,5 +1,6 @@
 Title: Of Moose, Men and Minutes
 Slug: stories/of-moose-men-and-minutes
+Template: redesign_content_page
 Sortorder: 30
 Header_image: story-of-moose-men-and-minutes.jpg
 Header_image_width: 1280

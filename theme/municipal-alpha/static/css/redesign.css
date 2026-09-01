@@ -72,8 +72,7 @@
 .rd-dropdown-cases { min-width: 330px; }
 .rd-dropdown-inner { border: 1px solid var(--rd-border-strong); background: var(--rd-surface); box-shadow: 0 18px 40px oklch(0.08 0.01 50 / 0.6); display: flex; flex-direction: column; gap: 1px; }
 .rd-page a.rd-dropdown-item { display: block; padding: 14px 18px; background: var(--rd-surface); font-size: 14px; font-weight: 600; color: var(--rd-text); }
-.rd-page a.rd-dropdown-case { display: flex; flex-direction: column; gap: 3px; padding: 13px 18px; background: var(--rd-surface); color: var(--rd-text); }
-.rd-dropdown-case .rd-case-note { font-size: 12px; color: var(--rd-text-muted); font-weight: 400; }
+.rd-page a.rd-dropdown-case { display: block; padding: 14px 18px; background: var(--rd-surface); font-size: 14px; font-weight: 600; color: var(--rd-text); }
 
 /* ---- buttons ----
    Specificity note: `.rd-page a` (element+class, 0-1-1) outranks a bare
@@ -169,3 +168,125 @@
 @media (max-width: 720px) {
   .rd-table { min-width: 760px; }
 }
+
+/* ---- generic markdown prose (About, Methodology, Privacy, Terms) ----
+   Copy on these pages is unchanged from the old theme; this just gives
+   plain python-markdown output (lists, tables, blockquotes) a baseline
+   that reads correctly on the dark palette instead of bare browser
+   defaults. */
+.rd-prose h2 { font-size: clamp(22px, 3vw, 28px); margin: 40px 0 14px; }
+.rd-prose h3 { font-size: clamp(19px, 2.4vw, 22px); margin: 28px 0 12px; }
+.rd-prose p { font-size: 15px; line-height: 1.65; color: var(--rd-text-tertiary); margin: 0 0 16px; }
+.rd-prose ul, .rd-prose ol { padding-left: 22px; margin: 0 0 16px; }
+.rd-prose li { font-size: 15px; line-height: 1.6; color: var(--rd-text-tertiary); margin-bottom: 6px; }
+.rd-prose strong, .rd-prose b { color: var(--rd-text); }
+.rd-prose blockquote { margin: 16px 0; padding: 4px 20px; border-left: 3px solid var(--rd-border-strong); color: var(--rd-text-secondary); font-style: italic; }
+.rd-prose hr { border: none; border-top: 1px solid var(--rd-border); margin: 32px 0; }
+.rd-prose code { font-family: 'IBM Plex Mono', monospace; font-size: 0.9em; background: var(--rd-surface); padding: 2px 6px; border-radius: 2px; }
+.rd-prose table { width: 100%; border-collapse: collapse; margin: 0 0 24px; overflow-x: auto; display: block; }
+.rd-prose th, .rd-prose td { border: 1px solid var(--rd-border); padding: 10px 14px; font-size: 14px; text-align: left; }
+.rd-prose th { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--rd-accent-muted); background: var(--rd-surface); }
+.rd-prose td { color: var(--rd-text-tertiary); }
+
+/* ---- case-study components, shared across every reskinned research
+   article (Maine data-center, Hartford PFAS, Geneva altdata, solar
+   siting, WM entity resolution, business retention, cell-tower leasing).
+   Extracted once here instead of duplicating a per-file <style> block
+   with the same classes seven times — each article's own <style> block
+   now only needs the handful of classes genuinely unique to it (a
+   per-town badge palette, an extra table variant, etc). Same color
+   mapping used for the Maine retheme: #0C0C0C-family ink -> light text,
+   #F7F4F0/#fff-family paper -> dark surfaces, #E8512D -> the site accent,
+   #888/#333/#E8E4DF -> the muted/border scale. */
+.cs-intro { font-size: 19px; color: oklch(0.82 0.01 60); max-width: 640px; line-height: 1.7; margin-bottom: 40px; }
+.cs-intro strong { color: oklch(0.93 0.01 60); }
+
+.cs-stats { display: flex; gap: 40px; margin: 40px 0; flex-wrap: wrap; }
+.cs-stat { text-align: center; }
+.cs-stat-value { display: block; font-family: 'Newsreader', serif; font-size: 36px; font-weight: 600; color: oklch(0.93 0.01 60); }
+.cs-stat-label { display: block; font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: oklch(0.62 0.01 60); text-transform: uppercase; letter-spacing: 1px; margin-top: 4px; }
+
+.timeline { margin: 48px 0; position: relative; padding-left: 32px; }
+.timeline::before { content: ''; position: absolute; left: 8px; top: 0; bottom: 0; width: 2px; background: oklch(0.3 0.01 50); }
+
+.tl-event { position: relative; margin-bottom: 28px; }
+.tl-event::before { content: ''; position: absolute; left: -28px; top: 6px; width: 12px; height: 12px; border-radius: 50%; border: 2px solid oklch(0.3 0.01 50); background: oklch(0.18 0.012 50); z-index: 1; }
+.tl-event.tl-hot::before { border-color: oklch(0.78 0.14 75); background: oklch(0.78 0.14 75); }
+.tl-event.tl-warm::before { border-color: oklch(0.78 0.14 75); background: oklch(0.18 0.012 50); }
+.tl-event.tl-cool::before { border-color: oklch(0.4 0.01 50); background: oklch(0.18 0.012 50); }
+
+.tl-date { font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: oklch(0.78 0.14 75); font-weight: 500; margin-bottom: 4px; }
+.tl-cool .tl-date { color: oklch(0.62 0.01 60); }
+.tl-board { font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: oklch(0.62 0.01 60); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
+.tl-text { font-size: 15px; color: oklch(0.82 0.01 60); line-height: 1.6; max-width: 600px; }
+.tl-text strong { color: oklch(0.93 0.01 60); }
+.tl-source { font-family: 'IBM Plex Mono', monospace; font-size: 11px; margin-top: 6px; }
+.tl-source a { color: oklch(0.78 0.14 75); text-decoration: none; }
+.tl-source a:hover { text-decoration: underline; }
+
+.tl-gap { margin: 32px 0 32px 0; padding: 16px 0 16px 0; position: relative; }
+.tl-gap::before { content: ''; position: absolute; left: -28px; top: 0; bottom: 0; width: 12px; border-left: 2px dashed oklch(0.3 0.01 50); margin-left: 3px; }
+.tl-gap-text { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: oklch(0.78 0.14 75); text-transform: uppercase; letter-spacing: 2px; }
+
+.cs-window { background: oklch(0.18 0.012 50); color: oklch(0.93 0.01 60); border-radius: 2px; border: 1px solid oklch(0.3 0.01 50); padding: 32px 40px; margin: 48px 0; max-width: 640px; }
+.cs-window h3 { font-family: 'Newsreader', serif; font-size: 22px; font-weight: 500; color: oklch(0.93 0.01 60); margin-bottom: 12px; }
+.cs-window p { font-size: 14px; color: oklch(0.72 0.01 60); line-height: 1.7; margin-bottom: 8px; }
+.cs-window .cs-highlight { color: oklch(0.78 0.14 75); font-weight: 600; }
+
+.cs-quote { background: oklch(0.78 0.14 75 / 0.08); border-left: 3px solid oklch(0.78 0.14 75); padding: 16px 20px; margin: 16px 0; max-width: 600px; }
+.cs-quote p { font-size: 15px; color: oklch(0.85 0.01 60); line-height: 1.65; margin: 0; }
+.cs-quote .cs-attribution { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: oklch(0.62 0.01 60); margin-top: 8px; display: block; }
+
+.cs-model { background: oklch(0.18 0.012 50); border: 1px solid oklch(0.3 0.01 50); border-radius: 2px; padding: 32px 40px; margin: 48px 0; max-width: 640px; }
+.cs-model h3 { font-family: 'Newsreader', serif; font-size: 22px; font-weight: 500; color: oklch(0.93 0.01 60); margin-bottom: 12px; }
+.cs-model p { font-size: 14px; color: oklch(0.72 0.01 60); line-height: 1.7; margin-bottom: 8px; }
+.cs-model .model-stat { font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: oklch(0.78 0.14 75); font-weight: 600; }
+
+.signal-cat { display: inline-block; font-family: 'IBM Plex Mono', monospace; font-size: 10px; background: oklch(0.32 0.01 50); color: oklch(0.93 0.01 60); padding: 2px 8px; border-radius: 3px; margin-right: 6px; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+.signal-cat.high { background: oklch(0.78 0.14 75); color: oklch(0.15 0.012 50); }
+.signal-cat.mod { background: oklch(0.4 0.01 50); }
+
+.cs-cta { background: oklch(0.18 0.012 50); border: 1px solid oklch(0.7 0.12 75); border-radius: 2px; padding: 40px; margin: 48px 0; text-align: center; max-width: 640px; }
+.cs-cta h3 { font-family: 'Newsreader', serif; font-size: 22px; font-weight: 500; color: oklch(0.93 0.01 60); margin-bottom: 12px; }
+.cs-cta p { font-size: 15px; color: oklch(0.78 0.01 60); margin-bottom: 20px; line-height: 1.6; }
+.cs-cta .cta-button { display: inline-block; font-family: 'IBM Plex Sans', sans-serif; font-size: 15px; font-weight: 600; padding: 14px 26px; background: oklch(0.78 0.14 75); color: oklch(0.15 0.012 50); border-radius: 2px; text-decoration: none; }
+
+.cs-note { font-size: 13px; color: oklch(0.62 0.01 60); line-height: 1.6; margin-top: 48px; padding-top: 24px; border-top: 1px solid oklch(0.3 0.01 50); max-width: 640px; }
+
+.tl-section { margin: 36px 0 20px 0; }
+.tl-section-title { font-family: 'Newsreader', serif; font-size: 20px; font-weight: 500; color: oklch(0.93 0.01 60); margin-bottom: 4px; }
+.tl-section-sub { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: oklch(0.62 0.01 60); text-transform: uppercase; letter-spacing: 1px; }
+
+.ticker-table, .cs-entity-table { margin: 32px 0 48px; max-width: 640px; }
+.cs-entity-table h3 { font-family: 'Newsreader', serif; font-size: 22px; font-weight: 500; margin-bottom: 16px; color: oklch(0.93 0.01 60); }
+.ticker-table table, .cs-entity-table table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.ticker-table th, .cs-entity-table th { font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: oklch(0.62 0.01 60); text-transform: uppercase; letter-spacing: 1px; text-align: left; padding: 8px 12px; border-bottom: 2px solid oklch(0.3 0.01 50); }
+.ticker-table td, .cs-entity-table td { padding: 8px 12px; border-bottom: 1px solid oklch(0.3 0.01 50); color: oklch(0.82 0.01 60); }
+.ticker-table td:nth-child(2) { font-family: 'IBM Plex Mono', monospace; font-weight: 500; color: oklch(0.78 0.14 75); }
+.cs-entity-table td:last-child { font-family: 'IBM Plex Mono', monospace; font-weight: 600; color: oklch(0.78 0.14 75); }
+
+/* ---- family B: business-retention / cell-tower-leasing's bar-chart +
+   compact-timeline + bottom-CTA components ---- */
+.chart { border: 1px solid oklch(0.3 0.01 50); border-radius: 2px; background: oklch(0.18 0.012 50); padding: 22px 24px; margin: 34px 0; }
+.chart .ctitle { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: oklch(0.62 0.01 60); margin-bottom: 18px; }
+.bar-row { display: flex; align-items: center; gap: 12px; margin-bottom: 9px; font-size: 14px; }
+.bar-row .lbl { width: 200px; text-align: right; font-family: 'IBM Plex Mono', monospace; color: oklch(0.72 0.01 60); font-size: 12px; }
+.bar-row .track { display: block; flex: 1; background: oklch(0.25 0.012 50); border-radius: 3px; height: 18px; position: relative; }
+.bar-row .fill { display: block; background: oklch(0.78 0.14 75); height: 18px; border-radius: 3px; }
+.bar-row .val { width: 150px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: oklch(0.72 0.01 60); }
+.cnote { font-size: 12px; color: oklch(0.62 0.01 60); margin-top: 14px; font-family: 'IBM Plex Mono', monospace; }
+.tl { position: relative; margin-bottom: 18px; }
+.tl::before { content: ''; position: absolute; left: -30px; top: 5px; width: 12px; height: 12px; border-radius: 50%; border: 2px solid oklch(0.78 0.14 75); background: oklch(0.18 0.012 50); }
+.tl.hot::before { background: oklch(0.78 0.14 75); }
+.tl .d { font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: oklch(0.78 0.14 75); }
+.tl .t { font-size: 15px; color: oklch(0.85 0.01 60); }
+.tl .tag { font-family: 'IBM Plex Mono', monospace; font-size: 10px; text-transform: uppercase; letter-spacing: 0.5px; color: oklch(0.62 0.01 60); border: 1px solid oklch(0.3 0.01 50); border-radius: 3px; padding: 1px 6px; margin-left: 6px; }
+.tl-end { position: relative; margin-top: 6px; }
+.tl-end::before { content: ''; position: absolute; left: -31px; top: 4px; width: 14px; height: 14px; background: oklch(0.78 0.14 75); border-radius: 2px; transform: rotate(45deg); }
+.tl-end .t { font-size: 15px; font-weight: 600; color: oklch(0.93 0.01 60); }
+.lp-bottom-cta { text-align: center; padding: 40px 0 8px; border-top: 1px solid oklch(0.3 0.01 50); margin-top: 42px; }
+.lp-bottom-cta h3 { font-family: 'Newsreader', serif; font-size: 24px; font-weight: 500; color: oklch(0.93 0.01 60); margin-bottom: 12px; }
+.lp-bottom-cta p { font-size: 15px; color: oklch(0.78 0.01 60); margin-bottom: 24px; }
+.lp-bottom-cta .lp-or { display: block; margin: 16px 0; font-size: 13px; color: oklch(0.62 0.01 60); }
+.lp-bottom-cta a.lp-email { color: oklch(0.78 0.14 75); text-decoration: none; font-size: 14px; font-weight: 600; }
+.lp-bottom-cta a.lp-email:hover { text-decoration: underline; }

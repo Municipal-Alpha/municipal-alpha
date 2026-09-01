@@ -5,7 +5,16 @@
     "pfas-contagion",
     "housing-density-wave",
     "la-marque-credit",
-    "data-center-zoning"
+    "data-center-zoning",
+    "data-center-zoning-national",
+    "business-retention",
+    "cell-tower-leasing",
+    "geneva-altdata",
+    "hartford-pfas",
+    "solar-siting",
+    "wm-entity-resolution",
+    "lead-pipes",
+    "pickleball"
   ],
   "articles": {
     "amherst-tower": {
@@ -122,6 +131,96 @@
         }
       ],
       "header_image": "story-maine-data-center-moratorium.png"
+    },
+    "data-center-zoning-national": {
+      "url_slug": "data-center-zoning",
+      "title": "Data Centers Are Contested in 24 States, and the Friction Curve Is Steepening",
+      "dek": "Municipal Alpha tracks data-center zoning and siting activity across US municipalities, surfacing it from planning-board minutes and committee agendas months before national reporting. As of May 2026, 80 distinct municipal and state records across 47 jurisdictions in 24 states showed the pattern forming.",
+      "nav_note": "24 states · 47 jurisdictions",
+      "card_title": "Data Center Zoning, Nationally",
+      "card_body": "Municipal Alpha tracks data-center zoning and siting activity across US municipalities, surfacing it months before national reporting. 80 records across 47 jurisdictions in 24 states.",
+      "has_stats": false,
+      "stats": []
+    },
+    "business-retention": {
+      "url_slug": "business-retention-signals",
+      "title": "Business Retention Runs on the Worst Information. The Public Record Already Has Better.",
+      "dek": "Economic developers say retaining an existing employer is far easier than attracting a new one, yet most learn a local employer is in trouble from the news, after the window to act has closed.",
+      "nav_note": "Employer distress · early signal",
+      "card_title": "Business Retention Signals",
+      "card_body": "Most economic developers learn a local employer is in trouble from the news. Municipal Alpha reads town and county records across 4,400+ municipalities, where it's written down first.",
+      "has_stats": false,
+      "stats": []
+    },
+    "cell-tower-leasing": {
+      "url_slug": "cell-tower-leasing",
+      "title": "How Cell-Tower Leases Get Decided Before a Broker Ever Sees Them",
+      "dek": "Municipal Alpha tracks US cell-tower and wireless-siting decisions from town and county meeting records, surfacing lease approvals, small-cell siting, and ordinance changes weeks before they reach a broker or an RFP.",
+      "nav_note": "161,492 FCC-registered towers",
+      "card_title": "Cell-Tower Lease Timing",
+      "card_body": "Lease approvals, small-cell siting, and ordinance changes surface in town and county meeting records, weeks ahead of typical RFP timing. Drawn from 161,492 FCC-registered towers across 1,105 municipalities.",
+      "has_stats": false,
+      "stats": []
+    },
+    "geneva-altdata": {
+      "url_slug": "geneva-altdata",
+      "title": "Case Study: One Town's Check Register, 15 Public Company Tickers",
+      "dek": "Geneva, Illinois publishes bi-weekly check registers. Municipal Alpha resolves vendor names to stock tickers automatically. 9 years of data, 15+ tickers, from a single town.",
+      "nav_note": "Geneva, IL · 15+ tickers",
+      "card_title": "One Town, 15 Tickers",
+      "card_body": "Geneva, Illinois publishes bi-weekly check registers. Municipal Alpha resolves vendor names to stock tickers automatically — 9 years of data, 15+ tickers, from a single town.",
+      "has_stats": false,
+      "stats": []
+    },
+    "hartford-pfas": {
+      "url_slug": "hartford-pfas",
+      "title": "Case Study: Hartford, VT PFAS Remediation Chain",
+      "dek": "8 signals over 2.5 years trace Hartford's PFAS response from routine biosolids testing to expanding remediation scope. Each signal was a window for environmental services firms.",
+      "nav_note": "Hartford, VT · 8 signals, 2.5 years",
+      "card_title": "Hartford, VT PFAS Chain",
+      "card_body": "8 signals over 2.5 years trace Hartford's PFAS response from routine biosolids testing to expanding remediation scope — each one a window for environmental services firms.",
+      "has_stats": false,
+      "stats": []
+    },
+    "solar-siting": {
+      "url_slug": "solar-siting",
+      "title": "Case Study: Solar Siting Intelligence, From Moratorium to Permit",
+      "dek": "Municipal Alpha tracks US solar and renewable-energy siting from town and county meeting records, surfacing moratoria, setbacks, and denials months before they pass or a project reaches the permit stage.",
+      "nav_note": "Solar siting · moratorium to permit",
+      "card_title": "Solar Siting, Full Lifecycle",
+      "card_body": "One project's full regulatory pipeline, from the first planning-board signal to the permit, across Caribou ME, Litchfield ME, Enfield CT, and Bangor ME. Every source document linked.",
+      "has_stats": false,
+      "stats": []
+    },
+    "wm-entity-resolution": {
+      "url_slug": "wm-entity-resolution",
+      "title": "Case Study: Waste Management (WM) Across 111 Municipalities",
+      "dek": "1,099 sightings across 28 states. Contract extensions, competitive displacement, recurring payments, and regulatory signals for a single ticker extracted from public records.",
+      "nav_note": "WM · 111 municipalities",
+      "card_title": "One Ticker, 111 Municipalities",
+      "card_body": "1,099 sightings across 28 states — contract extensions, competitive displacement, recurring payments, and regulatory signals for a single ticker extracted from public records.",
+      "has_stats": false,
+      "stats": []
+    },
+    "lead-pipes": {
+      "url_slug": "lead-pipes",
+      "title": "Lead Pipes Are a $50B Problem Hiding in Municipal Agendas",
+      "dek": "75+ lead service line events across 39 municipalities in 13 states. The EPA's Lead and Copper Rule is creating a predictable cascade of municipal spending.",
+      "nav_note": "Lead pipes · $50B problem",
+      "card_title": "The $50B Lead Pipe Problem",
+      "card_body": "75+ lead service line events across 39 municipalities in 13 states. The EPA's Lead and Copper Rule is creating a predictable cascade of municipal spending.",
+      "has_stats": false,
+      "stats": []
+    },
+    "pickleball": {
+      "url_slug": "pickleball-wave",
+      "title": "The Pickleball Boom Is Now a Line Item in Municipal Budgets",
+      "dek": "29 pickleball-related signals across 14 municipalities in 9 states. From federal grants to tennis court conversions, the pickleball boom is now a capital improvement line item.",
+      "nav_note": "Pickleball · budget line item",
+      "card_title": "The Pickleball Line Item",
+      "card_body": "29 pickleball-related signals across 14 municipalities in 9 states. From federal grants to tennis court conversions, now a capital improvement line item.",
+      "has_stats": false,
+      "stats": []
     }
   }
 }

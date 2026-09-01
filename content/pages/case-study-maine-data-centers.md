@@ -6,35 +6,13 @@ Sortorder: 11
 Header_image: story-maine-data-center-moratorium.png
 Summary: Municipal Alpha tracks US data-center siting and zoning from municipal meeting records, often months before a state vote or public reporting. Six Maine town halls (out of 173 we monitor in Maine) were already discussing data center restrictions five months before LD 307 reached the Maine House. The House passed it, the Governor vetoed it, the override failed, and a different shape of restriction landed on the same day. Every source document is linked.
 
-<!-- Retheme note (2026-08-31, site redesign): every rule below is a direct
-     color-value substitution against the site's new dark oklch() palette --
-     same selectors, same structure, same content, so the timeline/quote/
-     town-badge component this article already had keeps working exactly as
-     built. Only the two "raised panel" blocks (cs-window, cs-cta) got a
-     background swap to rd-surface instead of a literal page-background
-     color, since a dark-on-dark page can't reuse "the page background" as a
-     panel fill the way the light theme's near-white page could. -->
+<!-- Retheme note (2026-08-31, site redesign): this article's shared
+     components (cs-intro, cs-stats, timeline, cs-window, cs-cta, ...) were
+     originally rethemed here per-file; that CSS is now in the shared
+     redesign.css (case-study components section) since 6 more articles
+     turned out to need the identical treatment. Only this article's own
+     per-town badge palette is unique enough to keep here. -->
 <style>
-.cs-intro { font-size: 19px; color: oklch(0.82 0.01 60); max-width: 640px; line-height: 1.7; margin-bottom: 40px; }
-.cs-intro strong { color: oklch(0.93 0.01 60); }
-
-.cs-stats { display: flex; gap: 40px; margin: 40px 0; flex-wrap: wrap; }
-.cs-stat { text-align: center; }
-.cs-stat-value { display: block; font-family: 'Newsreader', serif; font-size: 36px; font-weight: 600; color: oklch(0.93 0.01 60); }
-.cs-stat-label { display: block; font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: oklch(0.62 0.01 60); text-transform: uppercase; letter-spacing: 1px; margin-top: 4px; }
-
-.timeline { margin: 48px 0; position: relative; padding-left: 32px; }
-.timeline::before { content: ''; position: absolute; left: 8px; top: 0; bottom: 0; width: 2px; background: oklch(0.3 0.01 50); }
-
-.tl-event { position: relative; margin-bottom: 28px; }
-.tl-event::before { content: ''; position: absolute; left: -28px; top: 6px; width: 12px; height: 12px; border-radius: 50%; border: 2px solid oklch(0.3 0.01 50); background: oklch(0.18 0.012 50); z-index: 1; }
-.tl-event.tl-hot::before { border-color: oklch(0.78 0.14 75); background: oklch(0.78 0.14 75); }
-.tl-event.tl-warm::before { border-color: oklch(0.78 0.14 75); background: oklch(0.18 0.012 50); }
-.tl-event.tl-cool::before { border-color: oklch(0.4 0.01 50); background: oklch(0.18 0.012 50); }
-
-.tl-date { font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: oklch(0.78 0.14 75); font-weight: 500; margin-bottom: 4px; }
-.tl-cool .tl-date { color: oklch(0.62 0.01 60); }
-.tl-town { display: inline-block; font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; padding: 3px 10px; border-radius: 3px; margin-bottom: 6px; }
 .tl-town-gorham { background: #1B4332; color: #fff; }
 .tl-town-rockland { background: #2563EB; color: #fff; }
 .tl-town-bangor { background: #7C3AED; color: #fff; }
@@ -43,36 +21,7 @@ Summary: Municipal Alpha tracks US data-center siting and zoning from municipal 
 .tl-town-winthrop { background: #D97706; color: #fff; }
 .tl-town-state { background: oklch(0.32 0.01 50); color: #fff; }
 .tl-town-wiscasset { background: oklch(0.18 0.012 50); color: oklch(0.6 0.01 60); border: 1px dashed oklch(0.5 0.01 60); }
-.tl-board { font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: oklch(0.62 0.01 60); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
-.tl-text { font-size: 15px; color: oklch(0.82 0.01 60); line-height: 1.6; max-width: 600px; }
-.tl-text strong { color: oklch(0.93 0.01 60); }
-.tl-source { font-family: 'IBM Plex Mono', monospace; font-size: 11px; margin-top: 6px; }
-.tl-source a { color: oklch(0.78 0.14 75); text-decoration: none; }
-.tl-source a:hover { text-decoration: underline; }
-
-.tl-gap { margin: 32px 0 32px 0; padding: 16px 0 16px 0; position: relative; }
-.tl-gap::before { content: ''; position: absolute; left: -28px; top: 0; bottom: 0; width: 12px; border-left: 2px dashed oklch(0.3 0.01 50); margin-left: 3px; }
-.tl-gap-text { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: oklch(0.78 0.14 75); text-transform: uppercase; letter-spacing: 2px; }
-
-.cs-window { background: oklch(0.18 0.012 50); color: oklch(0.93 0.01 60); border-radius: 2px; border: 1px solid oklch(0.3 0.01 50); padding: 32px 40px; margin: 48px 0; max-width: 640px; }
-.cs-window h3 { font-family: 'Newsreader', serif; font-size: 22px; font-weight: 500; color: oklch(0.93 0.01 60); margin-bottom: 12px; }
-.cs-window p { font-size: 14px; color: oklch(0.72 0.01 60); line-height: 1.7; margin-bottom: 8px; }
-.cs-window .cs-highlight { color: oklch(0.78 0.14 75); font-weight: 600; }
-
-.cs-quote { background: oklch(0.78 0.14 75 / 0.08); border-left: 3px solid oklch(0.78 0.14 75); padding: 16px 20px; margin: 16px 0; max-width: 600px; }
-.cs-quote p { font-size: 15px; color: oklch(0.85 0.01 60); line-height: 1.65; margin: 0; }
-.cs-quote .cs-attribution { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: oklch(0.62 0.01 60); margin-top: 8px; display: block; }
-
-.cs-cta { background: oklch(0.18 0.012 50); border: 1px solid oklch(0.7 0.12 75); border-radius: 2px; padding: 40px; margin: 48px 0; text-align: center; max-width: 640px; }
-.cs-cta h3 { font-family: 'Newsreader', serif; font-size: 22px; font-weight: 500; color: oklch(0.93 0.01 60); margin-bottom: 12px; }
-.cs-cta p { font-size: 15px; color: oklch(0.78 0.01 60); margin-bottom: 20px; line-height: 1.6; }
-.cs-cta .cta-button { display: inline-block; font-family: 'IBM Plex Sans', sans-serif; font-size: 15px; font-weight: 600; padding: 14px 26px; background: oklch(0.78 0.14 75); color: oklch(0.15 0.012 50); border-radius: 2px; text-decoration: none; }
-
-.cs-note { font-size: 13px; color: oklch(0.62 0.01 60); line-height: 1.6; margin-top: 48px; padding-top: 24px; border-top: 1px solid oklch(0.3 0.01 50); max-width: 640px; }
 </style>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
 <p class="cs-intro">
 On April 6, 2026, Maine's House passed LD 307, what would have become the country's first state-level moratorium on large-scale data centers, on an 82-62 vote. Eighteen days later Governor Janet Mills vetoed it. On April 29 the House attempted to override and failed 72-65. The moratorium died, but on the same day Mills signed LD 713, which prohibits data centers from claiming tax incentives under Maine's business development programs, and issued an executive order establishing the Maine Data Center Advisory Council. Maine ended up with a different shape of restriction. <strong>What's worth showing is that the signal of what was coming sat in the record long before any of those state-level votes. Starting five months earlier, six Maine town halls began discussing the same thing, with no sign of coordination anywhere in the record.</strong>

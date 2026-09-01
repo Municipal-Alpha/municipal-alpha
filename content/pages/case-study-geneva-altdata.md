@@ -1,59 +1,9 @@
 Title: Case Study: One Town's Check Register, 15 Public Company Tickers
 Slug: research/geneva-altdata
+Template: redesign_case_study
+Article_Key: geneva-altdata
 Sortorder: 12
 Summary: Geneva, Illinois publishes bi-weekly check registers. Municipal Alpha resolves vendor names to stock tickers automatically. 9 years of data, 15+ tickers, from a single town.
-
-<style>
-.cs-intro { font-size: 19px; color: #333; max-width: 640px; line-height: 1.7; margin-bottom: 40px; }
-.cs-intro strong { color: #0C0C0C; }
-
-.cs-stats { display: flex; gap: 40px; margin: 40px 0; flex-wrap: wrap; }
-.cs-stat { text-align: center; }
-.cs-stat-value { display: block; font-family: 'Newsreader', serif; font-size: 36px; font-weight: 600; color: #0C0C0C; }
-.cs-stat-label { display: block; font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #888; text-transform: uppercase; letter-spacing: 1px; margin-top: 4px; }
-
-.timeline { margin: 48px 0; position: relative; padding-left: 32px; }
-.timeline::before { content: ''; position: absolute; left: 8px; top: 0; bottom: 0; width: 2px; background: #E8E4DF; }
-
-.tl-event { position: relative; margin-bottom: 28px; }
-.tl-event::before { content: ''; position: absolute; left: -28px; top: 6px; width: 12px; height: 12px; border-radius: 50%; border: 2px solid #E8E4DF; background: #fff; z-index: 1; }
-.tl-event.tl-hot::before { border-color: #E8512D; background: #E8512D; }
-.tl-event.tl-warm::before { border-color: #E8512D; background: #fff; }
-.tl-event.tl-cool::before { border-color: #ccc; background: #fff; }
-
-.tl-date { font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #E8512D; font-weight: 500; margin-bottom: 4px; }
-.tl-cool .tl-date { color: #888; }
-.tl-board { font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #888; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
-.tl-text { font-size: 15px; color: #333; line-height: 1.6; max-width: 600px; }
-.tl-text strong { color: #0C0C0C; }
-.tl-source { font-family: 'IBM Plex Mono', monospace; font-size: 11px; margin-top: 6px; }
-.tl-source a { color: #E8512D; text-decoration: none; }
-.tl-source a:hover { text-decoration: underline; }
-
-.tl-gap { margin: 32px 0 32px 0; padding: 16px 0 16px 0; position: relative; }
-.tl-gap::before { content: ''; position: absolute; left: -28px; top: 0; bottom: 0; width: 12px; border-left: 2px dashed #E8E4DF; margin-left: 3px; }
-.tl-gap-text { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #E8512D; text-transform: uppercase; letter-spacing: 2px; }
-
-.cs-window { background: #0C0C0C; color: #F7F4F0; border-radius: 6px; padding: 32px 40px; margin: 48px 0; max-width: 640px; }
-.cs-window h3 { font-family: 'Newsreader', serif; font-size: 22px; font-weight: 500; color: #F7F4F0; margin-bottom: 12px; }
-.cs-window p { font-size: 14px; color: #aaa; line-height: 1.7; margin-bottom: 8px; }
-.cs-window .cs-highlight { color: #E8512D; font-weight: 600; }
-
-.cs-cta { background: #F7F4F0; border-radius: 6px; padding: 40px; margin: 48px 0; text-align: center; max-width: 640px; }
-.cs-cta h3 { font-family: 'Newsreader', serif; font-size: 22px; font-weight: 500; color: #0C0C0C; margin-bottom: 12px; }
-.cs-cta p { font-size: 15px; color: #555; margin-bottom: 20px; line-height: 1.6; }
-
-.cs-note { font-size: 13px; color: #888; line-height: 1.6; margin-top: 48px; padding-top: 24px; border-top: 1px solid #E8E4DF; max-width: 640px; }
-
-.ticker-table { max-width: 640px; margin: 32px 0; }
-.ticker-table table { width: 100%; border-collapse: collapse; font-size: 14px; }
-.ticker-table th { font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #888; text-transform: uppercase; letter-spacing: 1px; text-align: left; padding: 8px 12px; border-bottom: 2px solid #E8E4DF; }
-.ticker-table td { padding: 8px 12px; border-bottom: 1px solid #E8E4DF; color: #333; }
-.ticker-table td:nth-child(2) { font-family: 'IBM Plex Mono', monospace; font-weight: 500; color: #E8512D; }
-</style>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
 <p class="cs-intro">
 Geneva, Illinois publishes bi-weekly check registers listing every payment the city makes. <strong>Municipal Alpha resolves vendor names to stock tickers automatically.</strong> A single check register contains payments to 10-15 publicly traded companies. Across 9 years of bi-weekly reports, that builds a continuous revenue signal for companies like Grainger, Tyler Technologies, Comcast, Waste Management, and others. Nobody else is reading 2,500 municipal check registers bi-weekly.

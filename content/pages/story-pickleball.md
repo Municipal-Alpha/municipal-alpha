@@ -1,5 +1,7 @@
 Title: The Pickleball Boom Is Now a Line Item in Municipal Budgets
 Slug: research/pickleball-wave
+Template: redesign_case_study
+Article_Key: pickleball
 Sortorder: 24
 Header_image: story-pickleball.png
 Summary: 29 pickleball-related signals across 14 municipalities in 9 states. From federal grants to tennis court conversions, the pickleball boom is now a capital improvement line item.

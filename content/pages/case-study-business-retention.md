@@ -1,36 +1,10 @@
 Title: Business Retention Runs on the Worst Information. The Public Record Already Has Better.
 Slug: research/business-retention-signals
+Template: redesign_case_study
+Article_Key: business-retention
 Sortorder: 16
 Header_image: story-business-retention.png
 Summary: Economic developers say retaining an existing employer is far easier than attracting a new one, yet most learn a local employer is in trouble from the news, after the window to act has closed. Municipal Alpha reads town and county records across 4,400+ US municipalities, where the distress, the closure, and the decade of aftermath are written down first. Every example links to its source record.
-
-<style>
-.chart{ border:1px solid #E8E4DF; border-radius:10px; background:#fff; padding:22px 24px; margin:34px 0; }
-.chart .ctitle{ font-family:"IBM Plex Mono",monospace; font-size:11px; letter-spacing:1px; text-transform:uppercase; color:#888; margin-bottom:18px; }
-.bar-row{ display:flex; align-items:center; gap:12px; margin-bottom:9px; font-size:14px; }
-.bar-row .lbl{ width:200px; text-align:right; font-family:"IBM Plex Mono",monospace; color:#444; font-size:12px; }
-.bar-row .track{ display:block; flex:1; background:#f0ece7; border-radius:3px; height:18px; position:relative; }
-.bar-row .fill{ display:block; background:#E8512D; height:18px; border-radius:3px; }
-.bar-row .val{ width:150px; font-family:"IBM Plex Mono",monospace; font-size:12px; color:#444; }
-.cnote{ font-size:12px; color:#888; margin-top:14px; font-family:"IBM Plex Mono",monospace; }
-.timeline{ position:relative; padding-left:30px; }
-.timeline::before{ content:''; position:absolute; left:7px; top:4px; bottom:30px; width:2px; background:#E8E4DF; }
-.tl{ position:relative; margin-bottom:18px; }
-.tl::before{ content:''; position:absolute; left:-30px; top:5px; width:12px; height:12px; border-radius:50%; border:2px solid #E8512D; background:#fff; }
-.tl.hot::before{ background:#E8512D; }
-.tl .d{ font-family:"IBM Plex Mono",monospace; font-size:12px; color:#E8512D; }
-.tl .t{ font-size:15px; }
-.tl .tag{ font-family:"IBM Plex Mono",monospace; font-size:10px; text-transform:uppercase; letter-spacing:.5px; color:#888; border:1px solid #E8E4DF; border-radius:3px; padding:1px 6px; margin-left:6px; }
-.tl-end{ position:relative; margin-top:6px; }
-.tl-end::before{ content:''; position:absolute; left:-31px; top:4px; width:14px; height:14px; background:#1a1a1a; border-radius:2px; transform:rotate(45deg); }
-.tl-end .t{ font-size:15px; font-weight:600; }
-.lp-bottom-cta{ text-align:center; padding:40px 0 8px; border-top:1px solid #E8E4DF; margin-top:42px; }
-.lp-bottom-cta h3{ font-family:'Newsreader',serif; font-size:24px; font-weight:500; color:#0C0C0C; margin-bottom:12px; }
-.lp-bottom-cta p{ font-size:15px; color:#555; margin-bottom:24px; }
-.lp-bottom-cta .lp-or{ display:block; margin:16px 0; font-size:13px; color:#888; }
-.lp-bottom-cta a.lp-email{ color:#E8512D; text-decoration:none; font-size:14px; font-weight:600; }
-.lp-bottom-cta a.lp-email:hover{ text-decoration:underline; }
-</style>
 
 Old Town, Maine's current city budget contains a line that explains the whole problem in four words. A revenue line for BETE, the state program that reimburses towns for tax-exempt business equipment, drops by $1,500,000, and the published budget notes give the reason: "reduced $1,500,000, due to mill closure." The same document trims another $91,204 from a tax-increment district "due to mill closure," and adjusts revenue sharing by $259,828 under a state provision whose formal name says everything about how often this happens to Maine towns: the adjustment for [sudden and severe disruption of valuation](https://legislature.maine.gov/statutes/36/title36sec208-A.html). Maine property-tax law has a standing form for losing your biggest taxpayer.
 

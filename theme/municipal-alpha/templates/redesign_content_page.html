@@ -1,0 +1,16 @@
+{# Generic wrapper for plain content pages (About, Methodology, Privacy,
+   Terms, ...) whose copy is not changing -- only the surrounding nav/
+   footer/typography. Extends redesign_page.html (not overriding `meta`)
+   so page.html's existing slug-based JSON-LD conditionals (methodology,
+   research/, solutions/, etc.) keep working unchanged. #}
+{% extends "redesign_page.html" %}
+
+{% block content %}
+<div class="rd-wrap rd-section rd-prose" style="max-width:820px;">
+  <h1 class="rd-h1-small" style="margin-bottom:8px;">{{ page.title }}</h1>
+  {% if page.header_image %}
+  <img src="{{ SITEURL }}/images/{{ page.header_image }}" alt="{{ page.title|e }}" style="width:100%; height:auto; display:block; border:1px solid var(--rd-border); border-radius:2px; margin:20px 0 28px;">
+  {% endif %}
+  {{ page.content|safe }}
+</div>
+{% endblock %}
