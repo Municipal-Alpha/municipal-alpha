@@ -73,21 +73,6 @@
     text-align: right;
     line-height: 1.4;
   }
-  .toggle-btn {
-    font-family: var(--font-mono);
-    font-size: 11px;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    color: var(--signal);
-    background: var(--signal-06);
-    border: 1px solid var(--signal);
-    border-radius: 2px;
-    padding: 7px 13px;
-    cursor: pointer;
-    white-space: nowrap;
-  }
-  .toggle-btn:hover { background: var(--signal); color: var(--paper); }
-
   .hero { margin-bottom: 18px; }
   .hero h1 {
     font-family: var(--font-display);
@@ -104,16 +89,6 @@
     color: var(--ink-60);
     margin: 0;
     max-width: 64ch;
-  }
-  .mode-cue {
-    font-family: var(--font-mono);
-    font-size: 10.5px;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: var(--ink-40);
-    margin: 16px 0 0 0;
-    padding-top: 12px;
-    border-top: 1px dashed var(--ink-12);
   }
 
   .section {
@@ -145,25 +120,6 @@
     margin: 0 0 14px 0;
     max-width: 62ch;
   }
-
-  .quick-points { list-style: none; padding: 0; margin: 4px 0 0 0; display: grid; gap: 10px; }
-  .quick-points li {
-    font-family: var(--font-body);
-    font-size: 14.5px;
-    line-height: 1.5;
-    color: var(--ink);
-    padding-left: 18px;
-    position: relative;
-  }
-  .quick-points li::before {
-    content: "";
-    position: absolute;
-    left: 0; top: 8px;
-    width: 7px; height: 7px;
-    background: var(--signal);
-    border-radius: 1px;
-  }
-  .quick-points li strong { font-weight: 600; }
 
   .two-rel {
     display: grid;
@@ -198,41 +154,6 @@
     color: var(--ink-80);
   }
 
-  .chain {
-    margin: 18px 0;
-    padding: 22px 24px;
-    background: var(--signal-06);
-    border-left: 3px solid var(--signal);
-  }
-  .chain-steps { list-style: none; padding: 0; margin: 0 0 14px 0; position: relative; }
-  .chain-steps::before { content: ""; position: absolute; left: 5px; top: 16px; bottom: 16px; width: 2px; background: var(--ink-12); }
-  .chain-steps li { padding: 12px 0 12px 26px; border-bottom: 1px dashed var(--ink-12); position: relative; }
-  .chain-steps li::before { content: ""; position: absolute; left: 0; top: 18px; width: 12px; height: 12px; border-radius: 50%; background: var(--signal); border: 2px solid var(--paper); }
-  .chain-steps li:last-child { border-bottom: none; padding-bottom: 4px; }
-  .step-meta {
-    font-family: var(--font-mono);
-    font-size: 10.5px;
-    color: var(--signal);
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    margin-bottom: 4px;
-  }
-  .step-text {
-    font-family: var(--font-display);
-    font-size: 15.5px;
-    line-height: 1.5;
-    color: var(--ink);
-    margin-bottom: 6px;
-  }
-  .chain-summary {
-    font-family: var(--font-body);
-    font-size: 13.5px;
-    color: var(--ink-60);
-    margin: 10px 0 0 0;
-    padding-top: 12px;
-    border-top: 1px solid var(--ink-12);
-  }
-
   .source-link {
     display: inline-block;
     font-family: var(--font-mono);
@@ -245,44 +166,6 @@
   }
   .source-link:hover { color: var(--ink); }
 
-  .signal-list { list-style: none; padding: 0; margin: 16px 0 0 0; display: grid; gap: 12px; }
-  .signal-list li {
-    padding: 14px 16px;
-    background: var(--paper);
-    border: 1px solid var(--ink-12);
-    border-radius: 2px;
-  }
-  .signal-list .sig-title {
-    font-family: var(--font-display);
-    font-size: 16px;
-    font-weight: 500;
-    color: var(--ink);
-    margin-bottom: 4px;
-  }
-  .signal-list .sig-body {
-    font-family: var(--font-body);
-    font-size: 13px;
-    line-height: 1.5;
-    color: var(--ink-80);
-    margin-bottom: 6px;
-  }
-  .signal-list .sig-quote {
-    font-family: var(--font-display);
-    font-style: italic;
-    font-size: 13.5px;
-    line-height: 1.5;
-    color: var(--ink);
-    margin: 0 0 6px 0;
-    padding-left: 12px;
-    border-left: 2px solid var(--ink-12);
-  }
-  .signal-list .sig-where {
-    color: var(--ink-60);
-    font-family: var(--font-mono);
-    font-size: 10.5px;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-  }
 
   .stat-strip {
     margin-top: 16px;
@@ -367,6 +250,12 @@
     .lt-gap { align-self: flex-start; }
   }
 
+  .quote-block {
+    margin: 4px 0 0 0;
+    background: var(--signal-06);
+    border-left: 5px solid var(--signal);
+    border-radius: 0 3px 3px 0;
+  }
   .problem-quote {
     font-family: var(--font-display);
     font-style: italic;
@@ -375,19 +264,22 @@
     line-height: 1.18;
     letter-spacing: -0.02em;
     color: var(--ink);
-    margin: 4px 0 0 0;
-    padding: 26px 28px 22px;
-    background: var(--signal-06);
-    border-left: 5px solid var(--signal);
-    border-radius: 0 3px 3px 0;
+    margin: 0;
+    padding: 24px 28px 10px;
   }
   .problem-cite {
+    font-family: var(--font-body);
+    font-size: 13px;
+    color: var(--ink-60);
+    margin: 0;
+    padding: 0 28px 18px;
+  }
+  .problem-cite-label {
     font-family: var(--font-mono);
-    font-size: 11px;
+    font-size: 10px;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-    color: var(--ink-60);
-    margin: 13px 0 22px 28px;
+    color: var(--signal);
   }
 
   .facts { display: grid; gap: 13px; margin-top: 16px; }
@@ -399,56 +291,13 @@
   .chip { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.03em; text-transform: uppercase; color: var(--ink-80); background: var(--ink-06); border: 1px solid var(--ink-12); border-radius: 2px; padding: 4px 9px; }
   .chip.sig { color: var(--signal); border-color: var(--signal); background: var(--signal-06); }
 
-  .block-label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-60); margin: 22px 0 0; }
-
-  .custody { display: flex; align-items: center; margin: 14px 0 4px; flex-wrap: wrap; gap: 4px 0; }
-  .custody-step { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink); background: var(--ink-06); border: 1px solid var(--ink-12); border-radius: 2px; padding: 7px 12px; }
-  .custody-step.last { color: var(--signal); border-color: var(--signal); background: var(--signal-06); }
-  .custody-arrow { color: var(--signal); padding: 0 8px; }
 
   @media (max-width: 560px) {
     .fact { grid-template-columns: 1fr; gap: 3px; }
     .chips { margin-left: 0; }
-    .problem-quote { font-size: 29px; line-height: 1.22; padding: 20px 20px 18px; }
+    .problem-quote { font-size: 29px; line-height: 1.22; padding: 20px 20px 14px; }
+    .problem-cite { padding: 0 20px 16px; }
   }
-
-  .objection { margin: 22px 0 4px; padding: 22px 24px; border: 1px solid var(--ink-12); border-radius: 2px; background: #fff; }
-  .obj-label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--signal); margin-bottom: 10px; }
-  .obj-q { font-family: var(--font-display); font-style: italic; font-size: 20px; line-height: 1.35; color: var(--ink); margin: 0 0 14px 0; }
-  .objection p { margin: 0 0 12px 0; }
-  .objection .blist { margin-top: 6px; }
-
-  .blist { margin: 8px 0 14px; padding-left: 20px; }
-  .blist li { font-family: var(--font-body); font-size: 14px; line-height: 1.55; color: var(--ink); margin-bottom: 7px; }
-  .blist li::marker { color: var(--signal); }
-
-  .scale {
-    margin: 22px 0 4px;
-    padding: 24px 28px;
-    background: var(--ink);
-    color: var(--paper);
-    border-radius: 2px;
-    display: flex;
-    align-items: baseline;
-    gap: 22px;
-    flex-wrap: wrap;
-  }
-  .scale-num {
-    font-family: var(--font-display);
-    font-size: 48px;
-    font-weight: 500;
-    line-height: 0.95;
-    color: var(--signal);
-    flex: 0 0 auto;
-  }
-  .scale-text {
-    font-family: var(--font-display);
-    font-size: 19px;
-    line-height: 1.35;
-    color: var(--paper);
-    flex: 1 1 260px;
-  }
-  @media (max-width: 560px) { .scale-num { font-size: 38px; } }
 
   .teaser { margin: 22px 0 4px; padding: 18px 20px; background: var(--signal-06); border-left: 3px solid var(--signal); border-radius: 0 2px 2px 0; }
   .teaser-label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--signal); margin-bottom: 8px; }
@@ -465,29 +314,16 @@
     -webkit-box-decoration-break: clone;
   }
 
-  .detail { display: none; }
-  body.show-details .detail { display: block; }
-  .detail-cue {
-    font-family: var(--font-mono);
-    font-size: 10.5px;
-    letter-spacing: 0.03em;
-    color: var(--ink-40);
-    margin: 8px 0 0 0;
-  }
-  body.show-details .detail-cue { display: none; }
-
   @media (max-width: 560px) {
     .container { padding: 0 20px 60px 20px; }
     .two-rel { grid-template-columns: 1fr; }
     .hero h1 { font-size: 30px; }
   }
   @media print {
-    .detail { display: block !important; }
-    .detail-cue, .toggle-btn { display: none !important; }
     .header { position: static; }
     .container { max-width: none; padding: 24px; }
     .section { page-break-inside: avoid; }
-    .rel-card, .path, .question, .chain { page-break-inside: avoid; }
+    .rel-card, .path, .question { page-break-inside: avoid; }
   }
 </style>
 </head>
@@ -498,259 +334,79 @@
     <div class="wordmark">municipαl</div>
     <div class="header-right">
       <div class="header-meta">Prepared for Kite Realty Group<br>Tom McGowan</div>
-      <button id="toggle" class="toggle-btn" type="button" aria-pressed="false">Show details &#9656;</button>
     </div>
   </div>
 
   <div class="hero">
     <h1>Municipal Alpha for Kite Realty Group</h1>
-    <p class="lede">
-      You asked what this costs. Better to show what you would be buying, in your own markets. I read the planning, zoning, and council records across roughly three thousand municipalities every day, and surface the moves that change a shopping-center's value: corridor rezonings, redevelopments, the ordinance rewrites that reset what you can do with a parcel. Below is a week of that signal in your Sun Belt and gateway markets, caught the night the agenda posted, months before it reaches a tax bill, a leasing report, or the trade press.
-    </p>
-    <p class="mode-cue">Quick read by default. Show details for the full chain, every source link, and how the pilot would run &#9656;</p>
   </div>
 
-  <!-- ───────── 0. THE PROBLEM (in a holder's words) ───────── -->
+  <!-- ───────── 0. THE PROBLEM ───────── -->
   <div class="section">
     <h2>The problem</h2>
-    <p class="problem-quote">"You'll find out about them, it closed two months ago. We didn't know about it. So it's really about getting in early."</p>
-    <p class="problem-cite">Competitive-intelligence lead at a national REIT, on the signal he kept missing</p>
+    <div class="quote-block">
+      <p class="problem-quote">"You'll find out about them, it closed two months ago. We didn't know about it. So it's really about getting in early."</p>
+      <p class="problem-cite"><span class="problem-cite-label">Who said it:</span> Competitive-intelligence lead at a national REIT, on the signal he kept missing</p>
+    </div>
+
     <p>
-      The decisions that move a center's value get made in town rooms long before they move the value: a commercial corridor rezoned for residential, an office park converted to mixed use, a town rewriting the standards for how any parcel gets rezoned at all. It is all public, in the narrowest sense of the word, a handful of people in a half-empty room, and only if you happened to know the item was on the agenda. After that the record sits unread on one of twenty thousand separate town websites. So the owner, the operator, and the developer across the street find out at the public event, <span class="hl">on the same day as everyone else, or never</span>.
-    </p>
-
-    <div class="scale">
-      <span class="scale-num">90,000+</span>
-      <span class="scale-text">local governments in this country publish their decisions in public, the night they happen. No field team could read them all. Municipal Alpha does.</span>
-    </div>
-
-    <div class="teaser">
-      <div class="teaser-label">One Municipal Alpha caught in your market this spring</div>
-      <div class="teaser-body">An Atlanta-metro city council is rezoning a downtown commercial block, <strong>General Commercial to Downtown Core, with roughly 35,000 square feet of new retail and restaurant</strong>. Unless you were in the room, or read the agenda packet, you would learn it when the leasing comps move. The system read it the night it posted.</div>
-      <div class="teaser-where">Alpharetta, GA &middot; City Council &middot; Apr 27, 2026 &middot; <a class="source-link" href="https://alpharettaga.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=11176,plainText=false)" target="_blank" rel="noopener">view the agenda &#8594;</a></div>
-    </div>
-  </div>
-
-  <!-- ───────── 1. WHAT MUNICIPAL ALPHA IS ───────── -->
-  <div class="section">
-    <h2>What Municipal Alpha is</h2>
-    <p>
-      Every city, town, and county in the country publishes the decisions that move property, capital, and credit before they happen: the rezoning, the redevelopment, the variance, the comprehensive-plan amendment, the budget line that funds an interchange. Those records land months ahead of the public event, and they sit on roughly twenty thousand separate town websites, in incompatible formats, where <span class="hl">ninety-nine percent of them never reach a search engine</span>. So the people those decisions affect find out late, on the same day as everyone else, or they never find out at all.
-    </p>
-    <p>
-      Municipal Alpha reads all of them the night they post, across more than three thousand municipalities in multiple states, classifies what matters, verifies every signal against the source document, and routes it to whoever needs it early. The thing you would otherwise catch late, or never catch, arrives <span class="hl">while there is still time to do something with it</span>: to plan a redevelopment, defend an entitlement, time a disposition, or get in the room before the rules change.
-    </p>
-
-    <div class="leadtime">
-      <div class="lt-head">The lead time</div>
-      <div class="lt-rail">
-        <div class="lt-end left">
-          <span class="lt-dot"></span>
-          <div class="lt-when">Municipal Alpha enters</div>
-          <div class="lt-what">Comp-plan amendment &middot; rezoning petition &middot; master-plan session &middot; ordinance rewrite</div>
-        </div>
-        <div class="lt-gap">6 to 24 months</div>
-        <div class="lt-end right">
-          <span class="lt-dot"></span>
-          <div class="lt-when">Everyone else enters</div>
-          <div class="lt-what">Public event &middot; redevelopment announced &middot; anchor signs &middot; revaluation &middot; press release</div>
-        </div>
-      </div>
-    </div>
-
-    <p class="detail-cue">Show details for the two-minute version: what it reads, who else buys it, and the question every sophisticated buyer asks &#9656;</p>
-
-    <div class="detail">
-      <div class="facts">
-        <div class="fact">
-          <div class="fact-k">What it reads</div>
-          <div class="fact-v">Planning and zoning agendas, council minutes, comprehensive plans, site plans, variances, budgets and capital plans, the night they post.</div>
-        </div>
-        <div class="fact">
-          <div class="fact-k">What it produces</div>
-          <div class="fact-v">Classified signals, each scored for confidence and linked back to the source record.</div>
-        </div>
-        <div class="fact">
-          <div class="fact-k">Who pays</div>
-          <div class="fact-v">Several segments buy the same upstream signal, each cutting it for their own geography:</div>
-        </div>
-      </div>
-      <div class="chips">
-        <span class="chip sig">Retail / REITs</span>
-        <span class="chip">Infrastructure / tower REITs</span>
-        <span class="chip">Hedge funds / quant</span>
-        <span class="chip">Insurance</span>
-        <span class="chip">Environmental labs</span>
-        <span class="chip">Broadband</span>
-      </div>
-
-      <div class="objection">
-        <div class="obj-label">The obvious question</div>
-        <div class="obj-q">"My team could pull this themselves, and in a year an AI agent does it for nothing. Why pay for it?"</div>
-        <p>Fair, and the honest answer starts by conceding the part that is true: reading one town's agenda and classifying it is the cheap step, and that step probably does commoditize. The value is in the four layers underneath it that an analyst with a news alert, or a model starting from a prompt, does not have.</p>
-        <ul class="blist">
-          <li><strong>The corpus.</strong> A system with perfect extraction skills starting today still does not have 2010 through 2026 on Monday. The history of what each town decided, and what came before it, has to have been accumulating to exist at all. It has been.</li>
-          <li><strong>The hard part is upstream, and it is not AI work.</strong> Step zero is a registry mapping each local government to its actual digital footprint, the specific site or portal where its records live. Then you fingerprint that footprint to know which platform it runs and how to pull from it. Then you extract, often from behind authenticated portals or scanned PDFs indexed nowhere. Registry, fingerprinting, extraction: these are workflow and data-engineering problems across thousands of inconsistent sites, not a prompt.</li>
-          <li><strong>A feed, not a search.</strong> You do not want to remember to check a town. You want something that fires the night the agenda posts for every jurisdiction your portfolio touches. The product is a continuously running pipeline, not a query.</li>
-          <li><strong>The specific signal, and an honest one.</strong> Ask any model today which towns near your centers opened a commercial-corridor rezoning this month. It cannot answer without the corpus and the resolved entities behind it, and if you ask anyway it will not tell you it does not know. It will confidently invent a town, a date, a citation. That is worse than no answer, because it looks like one. <span class="hl">Every Municipal Alpha signal links back to the source document, so you get an answer you can defend, not one you have to trust.</span></li>
-        </ul>
-        <p>And if the bet is wrong and this commoditizes, the corpus accumulated by then is still the one a later entrant does not have. The cost of being early is overhead. The cost of being late is no corpus.</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- ───────── 2. WHAT THE SIGNAL LOOKS LIKE ───────── -->
-  <div class="section">
-    <h2>What the signal looks like for a holder</h2>
-    <ul class="quick-points">
-      <li><strong>Corridor rezonings.</strong> Commercial land moving to residential or mixed use, and the reverse, near your trade areas, before it shows up as a comp or a competitor's groundbreaking.</li>
-      <li><strong>The rules that govern your centers.</strong> Zoning-ordinance rewrites, parking-minimum changes, use-table amendments, the standards a town quietly resets that change what you can build, lease, or convert.</li>
-      <li><strong>Redevelopment and tenant moves.</strong> Site plans, special permits, and conditional uses at named shopping centers, the redevelopments and use changes that reshape a trade area.</li>
-      <li><strong>The money behind it.</strong> TIF districts, capital plans, and incentive votes that signal where a municipality is steering growth, and where it is pulling back.</li>
-    </ul>
-
-    <div class="custody">
-      <span class="custody-step">Discovery</span>
-      <span class="custody-arrow">&#8594;</span>
-      <span class="custody-step">Classification</span>
-      <span class="custody-arrow">&#8594;</span>
-      <span class="custody-step">Verification</span>
-      <span class="custody-arrow">&#8594;</span>
-      <span class="custody-step last">Delivery</span>
-    </div>
-
-    <p class="detail-cue">Show details for how the system follows it forward &#9656;</p>
-    <div class="detail">
-      <p style="margin-top:18px">
-        Most of these documents never get read by anyone outside the meeting room. The decisions that determine what a corridor becomes, which centers gain or lose an anchor's trade area, and where a town is steering its tax base, almost all start there. A broker's market report, a revaluation notice, and the local paper describe the result. Municipal Alpha reads those meetings the night the agenda drops, classifies them, and follows the chain forward. A corridor rezoning shows up first as a comprehensive-plan amendment, then a planning-commission hearing, then a council vote. <span class="hl">The system reads all of it, links it together, and surfaces the chain itself as the signal, tagged to the town and dated to the meeting.</span>
-      </p>
-    </div>
-  </div>
-
-  <!-- ───────── 3. WORKED EXAMPLE ───────── -->
-  <div class="section">
-    <h2>A worked example: the chain shape</h2>
-    <p class="section-sub">
-      One town, thirty-two months, from a single citizen comment to a unanimous vote authorizing a thirty-year infrastructure ground lease. The example is a tower, because it is the cleanest fully-documented chain I have. Swap the tower for a grocery-anchored redevelopment or a corridor rezoning and the shape is identical: an early precursor, a long quiet middle, a public vote at the end. The system enters at the top.
-    </p>
-
-    <div class="chain">
-      <ul class="chain-steps">
-        <li>
-          <div class="step-meta">Jul 24, 2023 &middot; Board of Selectmen</div>
-          <div class="step-text">A resident raises coverage as a public-safety issue. The chair's response: the town "does not have the ability to install a tower." That sentence is the entire institutional position on the day.</div>
-          <a class="detail source-link" href="https://www.amherstnh.gov/board-selectmen/minutes/board-selectmen-meeting-minutes-approved-5" target="_blank" rel="noopener">View minutes &#8594;</a>
-        </li>
-        <li class="detail">
-          <div class="step-meta">Feb 12, 2024 &middot; Board of Selectmen</div>
-          <div class="step-text">Six months later. A company has approached the town with a no-cost build at the emergency-services complex. The fire chief has reviewed three siting candidates.</div>
-          <a class="source-link" href="https://www.amherstnh.gov/board-selectmen/minutes/board-selectmen-meeting-minutes-approved-22" target="_blank" rel="noopener">View minutes &#8594;</a>
-        </li>
-        <li class="detail">
-          <div class="step-meta">Jan 13, 2025 &middot; Board of Selectmen</div>
-          <div class="step-text">The design pivots. The combined approach is "not viable." A standalone build is now the path. A second vendor wins a separate component.</div>
-          <a class="source-link" href="https://www.amherstnh.gov/board-selectmen/minutes/board-selectmen-meeting-minutes-approved-48" target="_blank" rel="noopener">View minutes &#8594;</a>
-        </li>
-        <li class="detail">
-          <div class="step-meta">Oct 15, 2025 &middot; Planning Board</div>
-          <div class="step-text">A 175-foot structure at the rear of the municipal property goes to public hearing. Third-party build at no cost. Lease revenue accrues to the town.</div>
-          <a class="source-link" href="https://www.amherstnh.gov/planning-board/minutes/planning-board-minutes-65" target="_blank" rel="noopener">View minutes &#8594;</a>
-        </li>
-        <li>
-          <div class="step-meta">Jan 20, 2026 &middot; Board of Selectmen</div>
-          <div class="step-text">Article 41. Thirty-year ground lease, 180-foot structure, specific tax map and lot, no town funds. Vote: 5-0-0.</div>
-          <a class="detail source-link" href="https://www.amherstnh.gov/board-selectmen/minutes/bos-minutes-approved-2" target="_blank" rel="noopener">View minutes &#8594;</a>
-        </li>
-      </ul>
-      <p class="chain-summary">
-        No federal filing. The only public record of this thirty-year infrastructure deal lived in municipal meeting minutes, and the system read it twenty-three months before the vote. The live signal below is that same chain at step one, in your markets: the Alpharetta downtown rezoning, the Iredell corridor conversion, the Mount Airy rule rewrite.
-      </p>
-    </div>
-  </div>
-
-  <!-- ───────── 4. LIVE SIGNAL IN YOUR MARKETS ───────── -->
-  <div class="section">
-    <h2>Live signal in your markets this spring</h2>
-    <p class="section-sub">
-      Pulled from the corpus on the morning of this note, dated to the meeting, every link checked. Across the Sun Belt and gateway markets where you operate. The point is depth and currency, not "we cover retail."
-    </p>
-
-    <div class="stat-strip">
-      <div class="stat"><div class="num">38</div><div class="lab">municipalities with retail-corridor &amp; rezoning activity</div></div>
-      <div class="stat"><div class="num">141</div><div class="lab">signals, Mar to Jun 2026</div></div>
-      <div class="stat"><div class="num">10</div><div class="lab">states across your footprint</div></div>
-    </div>
-
-    <ul class="signal-list">
-      <li>
-        <div class="sig-title">Alpharetta, GA: a downtown commercial block rezoned for retail and residential</div>
-        <p class="sig-quote">"A rezoning is requested from C-2 (General Commercial) to DT-C (Downtown Core)... approximately 35,000 square feet of retail/restaurant on 3.02 acres in the Downtown."</p>
-        <div class="sig-body">An Atlanta-metro submarket reshaping its downtown retail base. <span class="detail">The same City Council is separately weighing a comprehensive-plan amendment to convert the Portman Brookside office park from "Corporate Office" to "Mixed Use," a second corridor-reshaping move in the same town, the same season.</span></div>
-        <div class="sig-where">Alpharetta GA &middot; City Council &middot; Apr 27, 2026</div>
-        <a class="source-link" href="https://alpharettaga.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=11176,plainText=false)" target="_blank" rel="noopener">View agenda &#8594;</a>
-      </li>
-      <li>
-        <div class="sig-title">Iredell County, NC: a commercial parcel rezoned back to residential</div>
-        <p class="sig-quote">"a request to rezone a parcel of land along Wilkesboro Highway, approximately 3.5 acres, from Neighborhood Business Conditional Use District (NBCUD) back to Single-Family Residential (R-20)."</p>
-        <div class="sig-body detail">Commercial land leaving the retail base in a Charlotte-metro county. The kind of corridor erosion, or repositioning opportunity, that shows up first as a single rezoning case on a planning-board agenda.</div>
-        <div class="sig-where">Iredell County NC &middot; Planning Board &middot; May 6, 2026</div>
-        <a class="source-link" href="https://www.iredellcountync.gov/AgendaCenter/ViewFile/Agenda/_05062026-445?packet=true" target="_blank" rel="noopener">View packet &#8594;</a>
-      </li>
-      <li>
-        <div class="sig-title">Mount Airy, MD: a town rewriting its own rezoning process</div>
-        <p class="sig-quote">"Ordinance 2026-2, Related to Rezoning of Properties, for public hearing and adoption on 6/1/26."</p>
-        <div class="sig-body">Not a single parcel, the rules themselves. A town changing the standards and process for how any property gets rezoned changes the ground under every owner in it. The kind of jurisdictional shift that resets entitlement risk, and never makes the news.</div>
-        <div class="sig-where">Mount Airy MD &middot; Town Council &middot; Jun 1, 2026</div>
-        <a class="source-link" href="https://mountairymd.gov/AgendaCenter/ViewFile/Item/4526?fileID=76137" target="_blank" rel="noopener">View record &#8594;</a>
-      </li>
-      <li>
-        <div class="sig-title">Brighton, NY: a use change at a named shopping center</div>
-        <p class="sig-quote">"a Conditional Use Permit allowing for the use of packaging coffee bean storefront at Winton Place, a shopping center property located at 3450 Winton Pl."</p>
-        <div class="sig-body detail">Tenant and use changes at a named center, on the planning-board record before they reach a leasing report. Small on its own, the texture of what is moving inside a shopping center, parcel by parcel.</div>
-        <div class="sig-where">Brighton NY &middot; Planning Board &middot; May 20, 2026</div>
-        <a class="source-link" href="https://www.brightonny.gov/DocumentCenter/View/17440/PB-26-5-Combined" target="_blank" rel="noopener">View decision &#8594;</a>
-      </li>
-      <li class="detail">
-        <div class="sig-title">League City, TX: a retail anchor pushing for visibility on a Houston-metro corridor</div>
-        <p class="sig-quote">"2640 S. State Highway 3 (Tractor Supply)... increase the maximum allowable height from 20 feet to 30 feet."</p>
-        <div class="sig-body">A national retailer asking a Houston-metro suburb for sign relief on an arterial. The kind of corridor-level retail-operations signal that aggregates into a picture of where tenants are pressing and where they are pulling back.</div>
-        <div class="sig-where">League City TX &middot; Zoning Board of Adjustments &middot; May 21, 2026</div>
-        <a class="source-link" href="https://www.leaguecitytx.gov/DocumentCenter/View/51871/4A-VA-26-0002-Staff-Rpt-Pkt---Remediated" target="_blank" rel="noopener">View staff report &#8594;</a>
-      </li>
-      <li class="detail">
-        <div class="sig-title">Saratoga Springs, NY: a vacant facility redeveloped</div>
-        <p class="sig-quote">"site improvements to redevelop the vacant Quad Graphics facility for use as a Regeneron pharmaceutical manufacturing facility."</p>
-        <div class="sig-body">A large vacant building re-entering use, the kind of redevelopment that reshapes the trade area and the daytime population around it.</div>
-        <div class="sig-where">Saratoga Springs NY &middot; Planning Board &middot; May 21, 2026</div>
-        <a class="source-link" href="https://ny-saratogasprings.civicplus.com/AgendaCenter/ViewFile/Agenda/_05212026-3677?html=true" target="_blank" rel="noopener">View agenda &#8594;</a>
-      </li>
-    </ul>
-
-    <div class="detail">
-      <p class="chain-summary" style="border:none;padding-top:14px">
-        Coverage note: 141 retail-corridor and rezoning signals across 38 municipalities and 10 states in your footprint, March through early June 2026. Honest caveat, that count is the portion of the corpus with fully extracted text behind it, so the true footprint is larger, the system is still backfilling text on older documents. The methodology is more than three thousand municipalities read the night their agendas post, classified, and linked back to the original record.
-      </p>
-    </div>
-  </div>
-
-  <!-- ───────── 5. THE PILOT ───────── -->
-  <div class="section">
-    <h2>What the 90-day pilot would deliver</h2>
-    <p class="section-sub">
-      The shape we discussed, made concrete. You pick the markets, I do the work, you judge it against your own portfolio.
+      What moves a shopping center's value happens in a town room first, not a leasing report.
     </p>
 
     <div class="two-rel">
       <div class="rel-card">
-        <div class="rel-label">You choose</div>
-        <div class="rel-title">Five states</div>
+        <div class="rel-label">New business</div>
+        <div class="rel-title">A new center forming</div>
+        <div class="rel-body">A pre-development meeting, a special use permit, a rezoning to Neighborhood Commercial, months before it's a groundbreaking or a broker's listing. Right now, that's a retail center under construction in your own Clear Lake corridor, <a class="source-link" href="https://www.leaguecitytx.gov/DocumentCenter/View/51094/5D-SUP-25-0014_Staff-Report---Remediated" target="_blank" rel="noopener">pre-development meeting to hearing in six months &#8594;</a></div>
+      </div>
+      <div class="rel-card">
+        <div class="rel-label">Risk monitoring</div>
+        <div class="rel-title">Risk to one you already hold</div>
+        <div class="rel-body">A rezoning at the edge of a trade area, a parking or use-table change resetting what a neighboring parcel can become, before it's a comp, a competitor's announcement, or a threat to the center next door.</div>
+      </div>
+    </div>
+
+    <p style="margin-top:16px">
+      Both sit unread on one of twenty thousand separate town websites, decided in a half-empty room the night the agenda posts. <span class="hl">You find out on the same day as everyone else, or never.</span>
+    </p>
+  </div>
+
+  <!-- ───────── 1. CAUGHT THIS WEEK ───────── -->
+  <div class="section">
+    <h2>One free lead</h2>
+    <p class="section-sub">
+      because it demonstrates the pitch better than we could explain it.
+    </p>
+
+    <div class="teaser">
+      <div class="teaser-label">A small retail plaza, recommended in January, no vote since</div>
+      <div class="teaser-body">A property owner wants to rezone 2 acres from Public/Semi-Public to Neighborhood Commercial for a small retail plaza, a dental practice anchoring it with the remaining spaces leased for office and retail use. <strong>Planning Commission recommended approval, unanimously, in January.</strong> Nothing in anything we've read since shows a City Council vote, no site plan, no tenant list, nothing a leasing report would ever pick up.</div>
+      <div class="teaser-where">League City, TX &middot; Planning &amp; Zoning Commission &middot; Jan 8, 2026 &middot; <a class="source-link" href="https://www.leaguecitytx.gov/AgendaCenter/ViewFile/Minutes/_01082026-1035?html=true" target="_blank" rel="noopener">view the minutes &#8594;</a></div>
+    </div>
+
+    <p style="margin-top:18px">
+      That eight-month silence is the pitch, not a stale example. The lead time between a town room and a leasing report runs six to twenty-four months, and this is what the middle of it looks like: recommended, then quiet, for as long as it takes to become a fact on the ground. Whatever this becomes is still ahead of you, not behind you.
+    </p>
+  </div>
+
+  <!-- ───────── 3. THE PILOT ───────── -->
+  <div class="section">
+    <h2>What the 90-day pilot would deliver</h2>
+    <p class="section-sub">
+      The shape we already discussed, made concrete. No homework on your side, since Texas is where the read is heaviest already.
+    </p>
+
+    <div class="two-rel">
+      <div class="rel-card">
+        <div class="rel-label">Already scoped</div>
+        <div class="rel-title">Texas</div>
         <div class="rel-body">
-          The five states where your centers, your redevelopment pipeline, or your acquisition watchlist sit. I scope the read to the jurisdictions inside them, the towns and counties your portfolio actually touches.
+          Your single largest state, and where your DFW and Houston-Galveston centers sit. We read every jurisdiction your portfolio touches there, not a generic state dump. Expand it to more states later if the pilot proves out.
         </div>
       </div>
       <div class="rel-card">
         <div class="rel-label">You receive</div>
-        <div class="rel-title">A running feed</div>
+        <div class="rel-title">A weekly running feed</div>
         <div class="rel-body">
           Corridor rezonings, comp-plan and ordinance changes, redevelopments, and incentive votes in those jurisdictions, tagged by town and dated to the meeting, the day they surface. Each one linked to the source record, an answer you can defend.
         </div>
@@ -759,75 +415,9 @@
     <p style="margin-top:18px">
       Ninety days is long enough to catch real chains forming and to test the read against what you already know on the ground. A signal is only an edge if you have it before the operator across the street does, so the pilot is built to prove the timing, not just the coverage.
     </p>
-    <div class="detail">
-      <p><strong>How I would run it.</strong> You name the five states. I confirm the jurisdiction list with you so we are reading the towns your portfolio actually touches, not a generic state dump. From there it is the live feed plus a short weekly read of what moved and why it matters, in your words by the end, not mine. No build cost on your side, no integration to stand up, just the signal in a form your team can act on.</p>
-    </div>
-  </div>
-
-  <!-- ───────── 6. QUESTIONS / RE-OPEN ───────── -->
-  <div class="section">
-    <h2>Questions</h2>
-    <p class="section-sub">
-      Your answers decide what the pilot reads first. Worth a reply even before a call.
-    </p>
-
-    <div class="question">
-      <div class="q-text">Which five states matter most right now, your operating core, your redevelopment pipeline, or where you are looking to acquire?</div>
-      <div class="why">This is the load-bearing one. It scopes the pilot to the jurisdictions your portfolio actually touches, and it tells me whether you are buying signal to defend what you hold or to find what you would buy.</div>
-    </div>
-
-    <div class="question detail">
-      <div class="q-text">What is the document that, three months earlier, would have changed a hold, redevelop, or disposition call you made in the last year?</div>
-      <div class="why">Different owners act on different rungs. Some need the comp-plan amendment, some the rezoning petition, some the revaluation. Your answer calibrates how far upstream the feed should reach to be useful rather than just early.</div>
-    </div>
-
-    <div class="question detail">
-      <div class="q-text">Would a sample cut for one market, before the full pilot, be the faster way to judge this?</div>
-      <div class="why">If you would rather see one metro proven cold before committing to five states, I can cut a single market this week. Lower friction, same test.</div>
-    </div>
-  </div>
-
-  <!-- ───────── 7. PATHS FORWARD ───────── -->
-  <div class="section">
-    <h2>Two ways to take the next step</h2>
-    <p class="section-sub">Whichever is the lower-friction test from where you sit.</p>
-
-    <div class="path">
-      <div class="path-title">Name your five states, and the pilot starts</div>
-      <div class="path-body">Reply with the five, I confirm the jurisdiction list with you, and the feed begins. The 90-day window we discussed, scoped to your portfolio.</div>
-    </div>
-
-    <div class="path">
-      <div class="path-title">Or a single-market sample first</div>
-      <div class="path-body">Name one metro, Atlanta, Dallas, Houston, Charlotte, wherever the read matters most, and I cut a month of corridor, rezoning, and redevelopment signal across it this week. No commitment, just proof in a market you know cold.</div>
-    </div>
-  </div>
-
-  <div class="footer">
-    <span>Municipal Alpha &middot; prepared for Kite Realty Group &middot; Tom McGowan</span>
-    <span><a href="https://municipalalpha.com">municipalalpha.com</a></span>
+    <p><b>The one thing we need from you to start:</b> thirty minutes to walk through the jurisdiction list and calibrate what counts as signal versus noise for your portfolio. That call is the whole setup cost.</p>
   </div>
 
 </div>
-
-<script>
-  (function () {
-    var btn = document.getElementById('toggle');
-    function set(on) {
-      document.body.classList.toggle('show-details', on);
-      btn.textContent = on ? 'Quick read ◂' : 'Show details ▸';
-      btn.setAttribute('aria-pressed', on ? 'true' : 'false');
-      try { localStorage.setItem('ma_details', on ? '1' : '0'); } catch (e) {}
-    }
-    btn.addEventListener('click', function () {
-      var on = !document.body.classList.contains('show-details');
-      set(on);
-      if (on && window.goatcounter && window.goatcounter.count) {
-        try { window.goatcounter.count({ path: 'kiterealty-show-details', title: 'show details', event: true }); } catch (e) {}
-      }
-    });
-    try { if (localStorage.getItem('ma_details') === '1') set(true); } catch (e) {}
-  })();
-</script>
 </body>
 </html>
