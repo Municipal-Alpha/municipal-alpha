@@ -169,6 +169,33 @@
   .rd-table { min-width: 760px; }
 }
 
+/* Nav dropdowns: `.rd-nav-right` is `justify-content: flex-end`, so the
+   FIRST trigger ("Who We Serve") sits mid-row with siblings (the second
+   trigger, Contact, the CTA) still to its right — it is not anchored at the
+   nav's true right edge even before the row visibly wraps. A 290-330px
+   panel anchored `right: 0` to that trigger's own `.rd-dropdown-wrap`
+   overflows past the viewport's left edge whenever there isn't ~300px of
+   room to the trigger's left. Measured live (Playwright, this repo's own
+   build): broken from 721px through ~772px — a range that includes iPad
+   Mini portrait (768px) — and clear from ~775px up. 800px gives that a
+   safety margin without touching how the dropdown looks at any width a
+   laptop/desktop window realistically sits at.
+   Fix: below the breakpoint, `.rd-dropdown-wrap` stops being the
+   positioning context (`position: static`), so `.rd-dropdown`'s
+   `position: absolute` resolves against `.rd-nav` (position: sticky, the
+   next positioned ancestor) instead. Anchoring left/right to the nav's own
+   padding edges keeps the panel fully on-screen regardless of which
+   trigger, or which wrapped row, opened it. */
+@media (max-width: 800px) {
+  .rd-dropdown-wrap { position: static; }
+  .rd-dropdown {
+    left: clamp(20px, 4vw, 48px);
+    right: clamp(20px, 4vw, 48px);
+    min-width: 0;
+  }
+  .rd-dropdown-cases { min-width: 0; }
+}
+
 /* ---- generic markdown prose (About, Methodology, Privacy, Terms) ----
    Copy on these pages is unchanged from the old theme; this just gives
    plain python-markdown output (lists, tables, blockquotes) a baseline
