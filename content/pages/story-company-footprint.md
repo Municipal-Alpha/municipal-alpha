@@ -4,7 +4,7 @@ Template: redesign_case_study
 Article_Key: company-footprint
 Sortorder: 21
 Header_image: story-company-footprint.png
-Summary: Entity resolution across 4,400+ municipalities reveals which public companies have the deepest municipal government footprint.
+Summary: Entity resolution across 4,500+ municipalities reveals which public companies have the deepest municipal government footprint.
 
 <h2 style="font-family:'Source Serif 4',serif; font-size:24px; font-weight:500; margin:0 0 14px;">Municipal government revenue is hiding in plain sight</h2>
 <p style="font-size:15px; color:oklch(0.75 0.01 60); margin:0 0 16px;">Every municipality in America pays vendors. Phone companies, waste haulers, equipment suppliers, software providers, utilities. These payments are recorded in public documents, check registers, budgets, RFPs, contracts, meeting minutes. The documents are public. The vendors are often publicly traded. And nobody is connecting the dots at scale.</p>

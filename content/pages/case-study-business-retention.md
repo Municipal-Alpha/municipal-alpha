@@ -4,7 +4,7 @@ Template: redesign_case_study
 Article_Key: business-retention
 Sortorder: 16
 Header_image: story-business-retention.png
-Summary: Economic developers say retaining an existing employer is far easier than attracting a new one, yet most learn a local employer is in trouble from the news, after the window to act has closed. Municipal Alpha reads town and county records across 4,400+ US municipalities, where the distress, the closure, and the decade of aftermath are written down first. Every example links to its source record.
+Summary: Economic developers say retaining an existing employer is far easier than attracting a new one, yet most learn a local employer is in trouble from the news, after the window to act has closed. Municipal Alpha reads town and county records across 4,500+ US municipalities, where the distress, the closure, and the decade of aftermath are written down first. Every example links to its source record.
 
 Old Town, Maine's current city budget contains a line that explains the whole problem in four words. A revenue line for BETE, the state program that reimburses towns for tax-exempt business equipment, drops by $1,500,000, and the published budget notes give the reason: "reduced $1,500,000, due to mill closure." The same document trims another $91,204 from a tax-increment district "due to mill closure," and adjusts revenue sharing by $259,828 under a state provision whose formal name says everything about how often this happens to Maine towns: the adjustment for [sudden and severe disruption of valuation](https://legislature.maine.gov/statutes/36/title36sec208-A.html). Maine property-tax law has a standing form for losing your biggest taxpayer.
 
@@ -60,7 +60,7 @@ Two boundaries worth stating plainly. Formal layoff notices under the WARN Act a
 
 ## Methodology and sources
 
-Municipal records come from agendas, minutes, packets, and budgets we monitor across 4,400+ US municipalities in all 50 states. Every dated example is taken from the document's own date, not from when we discovered it. The records:
+Municipal records come from agendas, minutes, packets, and budgets we monitor across 4,500+ US municipalities in all 50 states. Every dated example is taken from the document's own date, not from when we discovered it. The records:
 
 - Old Town, ME · FY 2025&ndash;2026 General Budget · [budget document](https://old-town.org/vertical/sites/%7BF7FABD96-D29C-4681-A9ED-8F3156759DC9%7D/uploads/FY_2025-2026_General_Budget_06.16.25.pdf)
 - Bucksport, ME · Finance Committee, December 2024 · [agenda packet](https://bucksportmaine.gov/Meetings/Finance%20Committee/2024/2024-1212%20Finance%20Committee%20Agenda.pdf)

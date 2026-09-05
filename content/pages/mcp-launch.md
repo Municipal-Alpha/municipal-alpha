@@ -1,7 +1,7 @@
 Title: Ask your own AI what is happening in local government, before it happens
 Slug: mcp-launch
 Status: hidden
-Summary: Query municipal precursor intelligence across 4,400+ U.S. municipalities, from inside your own AI.
+Summary: Query municipal precursor intelligence across 4,500+ U.S. municipalities, from inside your own AI.
 header_image: mcp-launch-hero.png
 
 Municipal Alpha is opening a first-of-its-kind integration: a Model Context Protocol (MCP) connector that lets you query Municipal Alpha's municipal precursor-signal corpus directly from your own AI assistant. Ask a question in Claude, or any MCP-capable client, and Municipal Alpha answers with source-cited, dated signals pulled straight from local government records.
@@ -10,7 +10,7 @@ There is no new dashboard to learn and no export to wrangle. The intelligence sh
 
 ## What is behind it
 
-Records from 4,400+ municipalities, 1,011,000+ public records, and 434,000+ classified signals, across all 50 states.
+Records from 4,500+ municipalities, 1,184,000+ public records, and 444,000+ classified signals, across all 50 states.
 
 The corpus spans the documents local governments actually produce: meeting minutes and agendas, where the discussion and the draft first appear, building permits (44,000+ records), ordinances and resolutions, municipal budgets, audits and financial reports, RFPs and procurement notices, and specialized layers including cell-tower and FAA filings and vendor payment records. Municipal Alpha connects these across thousands of municipalities and reads them for the signal upstream of the decision.
 

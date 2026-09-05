@@ -19,7 +19,7 @@ The big data vendors cover New York and Chicago. Nobody is systematically readin
 
 ## How the System Learns
 
-The system is good at finding things because it has spent a year learning the system it operates in. Which CMS platforms hide documents behind JavaScript. Which FOIA statutes require which language. Which assessor offices respond to email and which require certified mail. Which board names mean "check registers" in which towns. None of this was designed upfront. It was learned through contact with 4,400+ jurisdictions, thousands of FOIA interactions, and hundreds of dead ends that each taught the system something. Every interaction produces a recipe. The recipes accumulate.
+The system is good at finding things because it has spent a year learning the system it operates in. Which CMS platforms hide documents behind JavaScript. Which FOIA statutes require which language. Which assessor offices respond to email and which require certified mail. Which board names mean "check registers" in which towns. None of this was designed upfront. It was learned through contact with 4,500+ jurisdictions, thousands of FOIA interactions, and hundreds of dead ends that each taught the system something. Every interaction produces a recipe. The recipes accumulate.
 
 ## Two Precedents
 
@@ -31,7 +31,7 @@ The system is good at finding things because it has spent a year learning the sy
 
 | What exists nationally | Volume | What's structured today |
 |---|---|---|
-| US municipalities | 19,500 | 4,400+ monitored daily |
+| US municipalities | 19,500 | 4,500+ monitored daily |
 | Building permits issued annually | ~1.5 million (Census Bureau) | 44,000+ structured in our pipeline |
 | Annual municipal government spending | $3.9 trillion (Census of Governments) | Vendor payments from 230+ towns, 100+ resolved tickers |
 | Municipal bond market | $4 trillion (SIFMA) | Credit signals from source spending documents |
@@ -80,7 +80,7 @@ Municipal Alpha is built and operated by Matt MacDonald.
 
 Previously: Chief Product Officer at Acast (podcast infrastructure, $200M revenue, NASDAQ IPO), co-founder of RadioPublic (raised $3.5M, grew to acquisition). Two decades building data products from fragmented, unstructured sources at scale, first in audio, now in public records.
 
-The pipeline runs autonomously: 4,400+ municipalities crawled daily, documents classified and entity-resolved same-day, self-healing infrastructure that detects and adapts to website changes without human intervention. One person built it. The automation operates it.
+The pipeline runs autonomously: 4,500+ municipalities crawled daily, documents classified and entity-resolved same-day, self-healing infrastructure that detects and adapts to website changes without human intervention. One person built it. The automation operates it.
 
 Embedded at the Roux Institute NSIH (National Security Innovation Hub, Northeastern University, Portland ME).
 

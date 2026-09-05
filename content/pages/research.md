@@ -1,7 +1,7 @@
 Title: Data Stories
 Slug: data-stories
 Sortorder: 2
-Summary: Cross-municipal patterns from live pipeline data. Each story is built entirely from public records across 4,400+ municipalities.
+Summary: Cross-municipal patterns from live pipeline data. Each story is built entirely from public records across 4,500+ municipalities.
 
 <style>
 .ds-hero {
@@ -263,7 +263,7 @@ Summary: Cross-municipal patterns from live pipeline data. Each story is built e
 </style>
 
 <div class="ds-hero">
-<h2>Patterns only visible at 4,400+ municipalities</h2>
+<h2>Patterns only visible at 4,500+ municipalities</h2>
 <p>Each story is built entirely from public records. The pipeline classifies every document, resolves vendor names to public company tickers, and tracks policy contagion across jurisdictions. These are the patterns that fall out.</p>
 </div>
 
@@ -285,7 +285,7 @@ Summary: Cross-municipal patterns from live pipeline data. Each story is built e
 <div class="ds-card-body">
 <h3>The Company That Shows Up in 123 Towns</h3>
 <div class="ds-card-desc">Entity resolution reveals which public companies have the deepest municipal government footprint. Verizon: 6,183 sightings.</div>
-<div class="ds-card-stat"><strong>4,400+</strong> municipalities &middot; <strong>100+</strong> resolved tickers</div>
+<div class="ds-card-stat"><strong>4,500+</strong> municipalities &middot; <strong>100+</strong> resolved tickers</div>
 </div>
 </a>
 
@@ -370,7 +370,7 @@ Summary: Cross-municipal patterns from live pipeline data. Each story is built e
 <div class="ds-dataset">
 <h4>Credit Quality Indicators</h4>
 <p>Budget trends, fund balances, debt service patterns, and fiscal stress signals from source financial documents. Structured daily instead of annually.</p>
-<div class="ds-dataset-meta"><strong>4,400+</strong> municipalities &middot; daily updates</div>
+<div class="ds-dataset-meta"><strong>4,500+</strong> municipalities &middot; daily updates</div>
 <a href="/sample-data/credit-sample.csv">Download sample CSV &rarr;</a>
 </div>
 
@@ -411,7 +411,7 @@ Summary: Cross-municipal patterns from live pipeline data. Each story is built e
 
 <div class="ds-bottom-cta">
 <h3>What should we investigate next?</h3>
-<p>The pipeline monitors 4,400+ municipalities in real time. If there's a trend, policy wave, or spending pattern you want us to dig into, we'll build the data story.</p>
+<p>The pipeline monitors 4,500+ municipalities in real time. If there's a trend, policy wave, or spending pattern you want us to dig into, we'll build the data story.</p>
 <a href="https://calendar.app.google/HkZk29hxj7Cdtvuc9" class="cta-button">Book a Data Review</a>
 <span class="ds-or">or</span>
 <a href="mailto:matt@municipalalpha.com?subject=Data%20story%20request" class="ds-email">matt@municipalalpha.com</a>

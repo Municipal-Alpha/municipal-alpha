@@ -103,7 +103,7 @@ Waste Management (NYSE: WM) appears in municipal documents under dozens of name 
 </div>
 
 <div class="cs-cta">
-<h3>WM is one company. We monitor 4,400+ municipalities.</h3>
+<h3>WM is one company. We monitor 4,500+ municipalities.</h3>
 <p>The same entity resolution runs across every document for every company that does business with local government. Waste haulers, engineering firms, construction companies, insurers, law firms, IT vendors. Tell me what ticker you're watching and I'll show you what the municipal record says.</p>
 <a href="https://calendar.app.google/HkZk29hxj7Cdtvuc9" class="cta-button">Book a Data Review</a>
 </div>

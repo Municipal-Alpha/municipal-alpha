@@ -12,7 +12,7 @@ schema_type: Organization
 
 ## Wright-Pierce in New England
 
-Wright-Pierce is a Topsham, Maine-headquartered engineering firm specializing in water, wastewater, and civil infrastructure for municipal clients across New England. Based on public municipal records across our coverage of 4,400+ US municipalities, the firm appears in **22 distinct New England municipalities** across Maine, New Hampshire, Connecticut, Vermont, and Massachusetts, with documented activity from 2008 through April 2026.
+Wright-Pierce is a Topsham, Maine-headquartered engineering firm specializing in water, wastewater, and civil infrastructure for municipal clients across New England. Based on public municipal records across our coverage of 4,500+ US municipalities, the firm appears in **22 distinct New England municipalities** across Maine, New Hampshire, Connecticut, Vermont, and Massachusetts, with documented activity from 2008 through April 2026.
 
 The deepest engagements are in Nashua, NH and Trumbull, CT, where Wright-Pierce shows up regularly in check-register records (vendor payment data) and meeting minutes across multiple boards.
 
@@ -69,7 +69,7 @@ Comparable cadence is documented in Trumbull, CT (individual checks ranging $116
 
 ## Methodology
 
-This profile is compiled automatically from public municipal records. Municipal Alpha monitors 4,400+ US municipalities daily across 15+ government content management platforms. Vendor names are extracted from meeting minutes, agendas, check registers, RFPs, engineering reports, and bid tabulations, then aggregated by entity.
+This profile is compiled automatically from public municipal records. Municipal Alpha monitors 4,500+ US municipalities daily across 15+ government content management platforms. Vendor names are extracted from meeting minutes, agendas, check registers, RFPs, engineering reports, and bid tabulations, then aggregated by entity.
 
 **What this profile is:** A factual aggregation of where Wright-Pierce has been documented as an engineering consultant in public municipal records. Every cited document is publicly available from the source municipality.
 
@@ -96,7 +96,7 @@ Corrections are processed within one business day. Disputed pages can be removed
 
 ## About Municipal Alpha
 
-Municipal Alpha builds a structured knowledge graph of US public municipal records, meeting minutes, agendas, check registers, RFPs, capital plans, and assessor data, across 4,400+ municipalities in 50 states. We provide alt-data products to financial firms, infrastructure analysts, and engineering consultancies. [Learn more →](/about/)
+Municipal Alpha builds a structured knowledge graph of US public municipal records, meeting minutes, agendas, check registers, RFPs, capital plans, and assessor data, across 4,500+ municipalities in 50 states. We provide alt-data products to financial firms, infrastructure analysts, and engineering consultancies. [Learn more →](/about/)
 
 <script type="application/ld+json">
 {

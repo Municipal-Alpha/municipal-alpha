@@ -17,7 +17,7 @@ public navigation link. A notice of decision gets uploaded to a portal
 the day it's issued, but nothing on the site links to it. We built
 connectors that reach into each platform's document store directly,
 across 15+ CMS vendors, and read them the day they're published.
-Across 4,400+ municipalities in 50 states.
+Across 4,500+ municipalities in 50 states.
 
 ## What We're Tracking
 
