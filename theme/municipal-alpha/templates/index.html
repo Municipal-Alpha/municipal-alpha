@@ -184,11 +184,13 @@
         <div class="rd-tabpanels">
           {% for s in STEPS %}
           <div class="rd-tabpanel">
-            <p style="font-size:15px; color:var(--rd-text-secondary); max-width:680px; margin:0 0 18px;">{{ s.body }}</p>
+            <div class="rd-tabcopy">
+              <p style="font-size:16px; color:var(--rd-text-secondary); margin:0 0 18px;">{{ s.body }}</p>
+              <p class="rd-table-foot" style="margin:0;">{{ s.note }}</p>
+            </div>
             <div class="rd-figure">
               <img src="{{ SITEURL }}/images/{{ s.img }}" width="{{ s.w }}" height="{{ s.h }}" loading="lazy" alt="{{ s.alt }}">
             </div>
-            <p class="rd-table-foot" style="margin:14px 0 0;">{{ s.note }}</p>
           </div>
           {% endfor %}
         </div>
