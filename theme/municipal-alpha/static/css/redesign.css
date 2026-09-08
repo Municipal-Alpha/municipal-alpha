@@ -382,3 +382,30 @@ a.rd-qcard:hover .rd-qmeta { color: var(--rd-accent-muted); }
 a.rd-qcard:focus-visible { outline: 2px solid var(--rd-accent); outline-offset: -2px; }
 .rd-qcard .rd-qcount { color: var(--rd-accent); font-weight: 500; }
 .rd-qfoot { margin: 22px 0 0; font-size: 14px; color: var(--rd-text-muted); max-width: 720px; }
+
+/* --- "Works where you already work" band -----------------------------------
+   The positioning line was an 11px right-aligned footnote under the hero art.
+   It is the differentiator, so it gets its own band, at readable size, with
+   the connector chip from the real session as the proof. Client names are set
+   as wordmarks, NOT third-party logos: "works in" is a compatibility statement
+   and MCP is an open protocol, but a rendered logo row reads as endorsement,
+   which we do not have. Swapping in real marks is a founder call. */
+.rd-works { border-top: 1px solid var(--rd-border); border-bottom: 1px solid var(--rd-border); background: var(--rd-band); }
+.rd-works-inner { display: grid; grid-template-columns: minmax(280px, 1fr) minmax(300px, 1.05fr); gap: clamp(32px, 5vw, 72px); align-items: center; padding: clamp(38px, 5vw, 62px) 0; }
+@media (max-width: 860px) { .rd-works-inner { grid-template-columns: 1fr; } }
+.rd-works h2 { margin: 0 0 12px; }
+.rd-works .rd-works-sub { font-size: 17px; line-height: 1.55; color: var(--rd-text-secondary); margin: 0 0 26px; max-width: 460px; }
+.rd-clients { display: flex; flex-wrap: wrap; gap: 10px; align-items: stretch; }
+.rd-client {
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 11px 18px; border: 1px solid var(--rd-border-strong);
+  background: var(--rd-bg); min-width: 108px;
+}
+.rd-client .rd-client-name { font-size: 16px; font-weight: 600; color: var(--rd-text); line-height: 1.2; letter-spacing: -0.01em; }
+.rd-client .rd-client-note { font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 10.5px; letter-spacing: .1em; color: var(--rd-text-faint); margin-top: 5px; }
+.rd-clients-foot { font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11.5px; letter-spacing: .08em; color: var(--rd-text-faint); margin: 16px 0 0; }
+.rd-connector { border: 1px solid var(--rd-border); background: var(--rd-surface); padding: 18px 18px 16px; }
+.rd-connector img { width: 100%; height: auto; display: block; border: 1px solid var(--rd-border); }
+.rd-connector .rd-connector-cap { font-size: 14px; line-height: 1.5; color: var(--rd-text-secondary); margin: 14px 0 0; }
+.rd-connector .rd-connector-cap strong { color: var(--rd-text); font-weight: 600; }
+.rd-connector .rd-connector-eyebrow { font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 10.5px; letter-spacing: .12em; color: var(--rd-text-faint); margin: 0 0 12px; }

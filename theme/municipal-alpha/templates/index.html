@@ -84,8 +84,8 @@
    "img": "demo-signals.png", "w": 1400, "h": 1003,
    "alt": "Six municipalities with budgeted permitting software projects, each showing the dollar amount, the procurement stage and the quoted language from the town's own record. Town names are redacted."},
   {"n": "03",
-   "label": "Move what you find into your CRM",
-   "body": "That step runs through your CRM's own connector, so it is not an integration we built or one you wait on us for.",
+   "label": "Move what you find into your CRM and your tools",
+   "body": "That step runs through your own tools' connectors: your CRM, your sheets, your docs. Not an integration we built, or one you wait on us for.",
    "note": "The same six, created as company records in the same session, each carrying the budget line that surfaced it.",
    "img": "demo-crm.png", "w": 1400, "h": 788,
    "alt": "A CRM company list showing six municipalities created as records within the same session, each with a description field carrying the budgeted amount and the funding source. Town names are redacted; the state is left visible."}
@@ -110,10 +110,38 @@
     </div>
     <div>
       <img src="{{ SITEURL }}/images/hero-record-to-ai.png" width="1100" height="564" alt="The public record of thousands of US municipalities, converging into a single AI chat window." style="width:100%; height:auto; display:block;">
-      <p class="rd-mono" style="margin:10px 0 0; text-align:right; font-size:11px; letter-spacing:0.08em; color:var(--rd-text-muted);">WORKS IN <span style="color:var(--rd-text-secondary);">CLAUDE</span> · <span style="color:var(--rd-text-secondary);">CHATGPT</span> · <span style="color:var(--rd-text-secondary);">GEMINI</span></p>
+      <p class="rd-mono" style="margin:14px 0 0; text-align:right; font-size:13px; letter-spacing:0.09em; color:var(--rd-text-secondary);">WORKS IN <span style="color:var(--rd-accent); font-weight:500;">CLAUDE</span> · <span style="color:var(--rd-accent); font-weight:500;">CHATGPT</span> · <span style="color:var(--rd-accent); font-weight:500;">GEMINI</span></p>
     </div>
   </div>
 
+
+
+  <!-- WORKS WHERE YOU ALREADY WORK -->
+  {# The positioning line, promoted out of an 11px footnote under the hero art.
+     Client names are wordmarks, not third-party logos: MCP is an open protocol
+     so "works in" is a true compatibility statement, but a logo row reads as
+     endorsement and we have no such agreement. See redesign.css. #}
+  <div class="rd-works">
+    <div class="rd-wrap rd-works-inner">
+      <div>
+        <p class="rd-eyebrow-tight" style="margin:0 0 14px;">NOTHING TO INSTALL &middot; NO NEW LOGIN &middot; NO SEATS</p>
+        <h2>Built for the way your team already works.</h2>
+        <p class="rd-works-sub">Municipal Alpha was built from the ground up for the reality your team is already in. They want the answer and the outcome, not another interface to learn, so the record shows up in the assistant they already have open, in the thread they were already working in.</p>
+        <div class="rd-clients">
+          <div class="rd-client"><span class="rd-client-name">Claude</span><span class="rd-client-note">CONNECTED</span></div>
+          <div class="rd-client"><span class="rd-client-name">ChatGPT</span><span class="rd-client-note">CONNECTED</span></div>
+          <div class="rd-client"><span class="rd-client-name">Gemini</span><span class="rd-client-note">CONNECTED</span></div>
+          <div class="rd-client"><span class="rd-client-name">Copilot</span><span class="rd-client-note">MCP CLIENT</span></div>
+        </div>
+        <p class="rd-clients-foot">ANY MCP-CAPABLE CLIENT &middot; ONE CONNECTOR SERVES THE WHOLE TEAM</p>
+      </div>
+      <div class="rd-connector">
+        <p class="rd-connector-eyebrow">WHAT YOUR TEAM ACTUALLY SEES</p>
+        <img src="{{ SITEURL }}/images/mcp-connector-chip.png" width="686" height="72" alt="A line inside an AI assistant reading &ldquo;Used Corpus MCP integration, ran a command&rdquo;, the assistant&rsquo;s own indicator that it queried the Municipal Alpha connector.">
+        <p class="rd-connector-cap">One line in their own assistant. <strong>That is the entire interface.</strong> No dashboard, no export, no tab to keep open. They ask in the thread they were already in, and the municipal record answers with the town, the board, the date and a path back to the document.</p>
+      </div>
+    </div>
+  </div>
 
   <!-- QUESTION GRID -->
   {# The 51 real buyer questions from docs/plans/corpus-job-api.md, sorted into
@@ -142,16 +170,16 @@
   ] %}
   {% set QUESTIONS_BUILD = [
     {"q": "Which towns are most likely to buy what I sell?",
-     "note": "The components are measured; the scorer is not built. It needs a definition of \"a lead\" we are willing to commit to, agreed with you first."},
+     "note": "We build the scorer against your definition of a lead, agreed with you first, rather than a generic fit score you are asked to trust."},
     {"q": "Where are my competitors winning, and who did they displace?",
-     "note": "Blocked on entity resolution — the record spells one vendor five ways in a single town. This is the highest-leverage thing on our own build list."},
+     "note": "Takes resolving the vendor names in the record to real companies, since one town can spell a single vendor five ways. It is top of our build list, and your accounts set the order."},
     {"q": "What have you NOT found in my accounts?",
      "note": "The gap list, priced per blank. It is the same object as our extraction queue, which is why naming your accounts is what moves them up it."}
   ] %}
   {% set QUESTIONS_NEVER = [
     {"q": "Which of these contracts come up for renewal next year?",
      "note": "We read 1,010 utility agreements. Thirteen carry a term you could quote. We will not pad the rest with fiscal-year labels and call them contract dates.",
-     "adj": "What we can tell you instead: 38% carry a migration signal — and a migration usually picks the vendor before any renewal date arrives."},
+     "adj": "What we can tell you instead: 38% carry a migration signal, and a migration usually picks the vendor before any renewal date arrives."},
     {"q": "How are residents spending their state relief checks?",
      "note": "Municipal minutes never record it. A keyword search returns hundreds of real, correctly-quoted, entirely irrelevant documents about housing and water affordability.",
      "adj": "We refuse this rather than weave those into a fluent answer. That refusal is the product working."}
@@ -160,7 +188,7 @@
   <div id="ask" class="rd-wrap rd-section" style="padding-top:0;">
     <p class="rd-eyebrow-tight" style="margin:0 0 14px;">NO FORM · NOTHING TO INSTALL</p>
     <h2 style="margin:0 0 14px; max-width:760px;">Ask it something now</h2>
-    <p class="rd-lead" style="max-width:700px; margin:0 0 4px;">These are real questions buyers have put to us, sorted by what we can actually do about them today. The ones on the left are a page, not a form &mdash; click one.</p>
+    <p class="rd-lead" style="max-width:700px; margin:0 0 4px;">These are real questions buyers have put to us, sorted by what we can actually do about them today. The ones on the left are a page, not a form. Click one.</p>
 
     <div class="rd-qgrid">
       <div class="rd-qcol is-now">
@@ -178,8 +206,8 @@
 
       <div class="rd-qcol is-build">
         <div class="rd-qcolhead">
-          <span class="rd-qstate">WE&rsquo;D HAVE TO BUILD IT</span>
-          <p>Answerable, not yet answered. We tell you what it takes and what it costs before you commit.</p>
+          <span class="rd-qstate">BRING YOUR OWN QUESTION</span>
+          <p>Not on the list? Ask it. We come back with what it takes, what it costs and when, before you commit to anything.</p>
         </div>
         {% for x in QUESTIONS_BUILD %}
         <div class="rd-qcard">
@@ -216,7 +244,7 @@
     <div class="rd-panel" style="border-color:var(--rd-accent); display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:clamp(32px,4vw,56px); align-items:start; padding:clamp(24px,4vw,48px);">
       <div>
         <p class="rd-eyebrow-tight" style="margin:0 0 14px;">START HERE · 20 MINUTES</p>
-        <h2 style="margin:0 0 16px;">See it work, on your territory, in the tool you already use.</h2>
+        <h2 style="margin:0 0 16px;">See it work. Your product, your territory, in the tool you already use.</h2>
         <p class="rd-lead" style="max-width:520px; margin:0 0 24px;">The demo is the product. We open an AI chatbot, ask the municipal record about your market, and pull up a live lead. Then we follow that same lead as far as you want to take it, while you watch. Nothing to install and nothing to connect on your side.</p>
         <div style="display:flex; gap:16px; flex-wrap:wrap;">
           <a href="https://calendar.app.google/TeT9KujoL6CDbxRy8" target="_blank" rel="noopener" class="rd-btn rd-btn-primary">Book a Demo</a>
@@ -347,7 +375,7 @@
   <div id="how-it-works" class="rd-wrap rd-section">
     <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:clamp(32px,5vw,64px); margin-bottom:clamp(40px,5vw,64px);">
       <div style="max-width:440px;">
-      <svg viewBox="0 0 420 358" style="width:100%; height:auto; display:block;" role="img" aria-label="Municipal Alpha and your CRM both connect into the AI assistant your team already uses.">
+      <svg viewBox="0 0 420 358" style="width:100%; height:auto; display:block;" role="img" aria-label="Municipal Alpha and your own tools, including your CRM, both connect into the AI assistant your team already uses.">
         <!-- MUNICIPAL ALPHA -->
         <rect x="60" y="12" width="300" height="96" fill="none" stroke="oklch(0.7 0.12 75)" stroke-width="1.5"></rect>
         <text x="210" y="40" text-anchor="middle" fill="oklch(0.78 0.14 75)" font-family="IBM Plex Mono, monospace" font-size="12" letter-spacing="0.5">MUNICIPAL ALPHA</text>
@@ -371,9 +399,10 @@
         <polygon points="171,280 175,290 179,280" fill="oklch(0.45 0.01 50)"></polygon>
         <line x1="245" y1="290" x2="245" y2="260" stroke="oklch(0.45 0.01 50)" stroke-width="1.5"></line>
         <polygon points="241,262 245,252 249,262" fill="oklch(0.45 0.01 50)"></polygon>
-        <!-- YOUR CRM -->
+        <!-- YOUR CRM & TOOLS -->
         <rect x="60" y="292" width="300" height="52" fill="none" stroke="oklch(0.5 0.01 60)" stroke-width="1.5"></rect>
-        <text x="210" y="324" text-anchor="middle" fill="oklch(0.85 0.01 60)" font-family="IBM Plex Mono, monospace" font-size="12" letter-spacing="0.5">YOUR CRM</text>
+        <text x="210" y="316" text-anchor="middle" fill="oklch(0.85 0.01 60)" font-family="IBM Plex Mono, monospace" font-size="12" letter-spacing="0.5">YOUR CRM &amp; TOOLS</text>
+        <text x="210" y="333" text-anchor="middle" fill="oklch(0.62 0.01 60)" font-family="IBM Plex Mono, monospace" font-size="9" letter-spacing="0.06em">VIA THEIR OWN CONNECTORS</text>
       </svg>
         <p style="font-family:'Source Serif 4',serif; font-style:italic; font-size:13px; color:var(--rd-text-muted); margin:16px 0 0; text-align:center;">How deep you go is your call, lead by lead.</p>
       </div>
