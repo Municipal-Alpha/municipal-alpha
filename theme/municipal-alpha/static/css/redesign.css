@@ -430,3 +430,13 @@ a.rd-qcard:focus-visible { outline: 2px solid var(--rd-accent); outline-offset: 
 .rd-askline { border-left: 3px solid var(--rd-accent); padding: 4px 0 4px 18px; margin: 0 0 26px; max-width: 760px; }
 .rd-askline-label { font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 10.5px; letter-spacing: .13em; color: var(--rd-text-faint); margin: 0 0 7px; }
 .rd-askline-q { font-family: 'Source Serif 4', Georgia, serif; font-size: clamp(19px, 2.2vw, 24px); line-height: 1.4; color: var(--rd-text); margin: 0; }
+
+/* The DIY objection: concede, name the two gaps, invite the comparison. */
+.rd-diy { display: grid; grid-template-columns: minmax(300px, 1.35fr) minmax(280px, 0.95fr); gap: clamp(30px, 4vw, 60px); align-items: start; }
+@media (max-width: 860px) { .rd-diy { grid-template-columns: 1fr; } }
+.rd-diy-p { font-size: 16.5px; line-height: 1.62; color: var(--rd-text-secondary); margin: 0 0 16px; max-width: 640px; }
+.rd-diy-p:last-child { margin-bottom: 0; }
+.rd-diy-p strong { color: var(--rd-text); font-weight: 600; }
+.rd-diy-cta { border: 1px solid var(--rd-accent); background: var(--rd-surface); padding: 24px 24px 26px; display: flex; flex-direction: column; gap: 12px; }
+.rd-diy-cta-h { font-family: 'Source Serif 4', Georgia, serif; font-size: 23px; line-height: 1.25; color: var(--rd-text); margin: 0; }
+.rd-diy-cta-b { font-size: 14.5px; line-height: 1.55; color: var(--rd-text-secondary); margin: 0; }
