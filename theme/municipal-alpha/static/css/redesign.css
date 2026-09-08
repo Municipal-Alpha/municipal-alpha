@@ -410,3 +410,18 @@ a.rd-qcard:focus-visible { outline: 2px solid var(--rd-accent); outline-offset: 
 .rd-connector .rd-connector-cap strong { color: var(--rd-text); font-weight: 600; }
 .rd-connector .rd-connector-eyebrow { font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 10.5px; letter-spacing: .12em; color: var(--rd-text-faint); margin: 0 0 12px; }
 .rd-works-join { font-size: 14.5px; line-height: 1.55; color: var(--rd-text-secondary); margin: 18px 0 0; max-width: 470px; padding-left: 13px; border-left: 2px solid var(--rd-accent-muted); }
+
+/* --- "What your team never has to do" strip --------------------------------
+   Claims here are about US, deliberately. Per docs/competitive-landscape.md
+   (muni-scraper) the pricing shape of the named cohort is either not
+   discoverable (Starbridge) or not per-seat (NationGraph is usage-based), and
+   that file explicitly forbids a price-undercut posture on a buyer surface.
+   The one comparative claim made is about SHAPE, checkable on their own sites:
+   they are platforms you log into. */
+.rd-nots { border-top: 1px solid var(--rd-border); }
+.rd-notgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 1px; background: var(--rd-border); border: 1px solid var(--rd-border); margin-top: 20px; }
+.rd-not { background: var(--rd-bg); padding: 16px 18px; }
+.rd-not .rd-not-h { font-size: 15px; font-weight: 600; color: var(--rd-text); margin: 0; line-height: 1.3; }
+.rd-not .rd-not-b { font-size: 13.5px; line-height: 1.5; color: var(--rd-text-secondary); margin: 7px 0 0; }
+.rd-not-shape { font-size: 15px; line-height: 1.6; color: var(--rd-text-secondary); margin: 22px 0 0; max-width: 700px; }
+.rd-not-shape strong { color: var(--rd-text); font-weight: 600; }
