@@ -391,7 +391,7 @@ a.rd-qcard:focus-visible { outline: 2px solid var(--rd-accent); outline-offset: 
    and MCP is an open protocol, but a rendered logo row reads as endorsement,
    which we do not have. Swapping in real marks is a founder call. */
 .rd-works { border-top: 1px solid var(--rd-border); border-bottom: 1px solid var(--rd-border); background: var(--rd-band); }
-.rd-works-inner { display: grid; grid-template-columns: minmax(280px, 1fr) minmax(300px, 1.05fr); gap: clamp(32px, 5vw, 72px); align-items: center; padding: clamp(38px, 5vw, 62px) 0; }
+.rd-works-inner { display: grid; grid-template-columns: minmax(260px, 0.82fr) minmax(340px, 1.28fr); gap: clamp(32px, 5vw, 72px); align-items: center; padding: clamp(38px, 5vw, 62px) 0; }
 @media (max-width: 860px) { .rd-works-inner { grid-template-columns: 1fr; } }
 .rd-works h2 { margin: 0 0 12px; }
 .rd-works .rd-works-sub { font-size: 17px; line-height: 1.55; color: var(--rd-text-secondary); margin: 0 0 26px; max-width: 460px; }
@@ -425,3 +425,4 @@ a.rd-qcard:focus-visible { outline: 2px solid var(--rd-accent); outline-offset: 
 .rd-not .rd-not-b { font-size: 13.5px; line-height: 1.5; color: var(--rd-text-secondary); margin: 7px 0 0; }
 .rd-not-shape { font-size: 15px; line-height: 1.6; color: var(--rd-text-secondary); margin: 22px 0 0; max-width: 700px; }
 .rd-not-shape strong { color: var(--rd-text); font-weight: 600; }
+.rd-not-lede { font-size: 17px; line-height: 1.6; color: var(--rd-text-secondary); margin: 0; max-width: 720px; }
