@@ -6,66 +6,41 @@ Sortorder: 90
 
 We mean it. The question every serious buyer asks, out loud or quietly in a budget meeting, is "can't we just do this with AI?" It deserves a real answer, not a sales answer.
 
-So here is the evaluation prompt we hand prospective buyers. Paste it into Claude, Gemini, ChatGPT, whatever your team uses. Run it against your whole exposed footprint, not a sample of two towns. Refine it however you want. Then put what you get next to what we deliver every week, and decide. We would rather you buy this knowing exactly what it is worth.
+So we will send you the evaluation prompt we hand prospective buyers. Paste it into Claude, Gemini, ChatGPT, whatever your team uses. Run it against your whole exposed footprint, not a sample of two towns. Refine it however you want. Then put what you get next to what we deliver every week, and decide. We would rather you buy this knowing exactly what it is worth.
 
 One honest note on scope before you start. The answer depends on your footprint. If your exposure is a few dozen towns you already know by name, with people in them you already talk to, a scripted watch of your own is a reasonable build and we will tell you so. The economics flip when the footprint is broad, hundreds or thousands of jurisdictions, refreshed weekly, with misses that cost you money, in towns where nobody would think to call you.
 
 ## The prompt
 
-Replace the bracketed line with your own exposure, then run it.
+We will send it to you. One email address, no call, no sequence, and you get the
+full prompt back at that address within the hour.
 
-```
-I am evaluating a vendor, Municipal Alpha, that reads precursor signals out of
-municipalities' own meeting minutes, agendas, and spending records: the zoning change,
-the draft moratorium, the budget line, the vendor payment, months before the decision
-is on record. Before I pay for it, I want to decide honestly whether I can produce
-this myself. An example of their published output:
-https://municipalalpha.com/research/amherst-tower/
+That is the trade, and it is a fair one: the prompt took real work, it is written
+to be run *against* us, and we would rather know who is evaluating us than not.
 
-Act as my analyst and evaluate BUILD vs BUY for my WHOLE exposed footprint, not a
-sample. [Describe your business and where municipal decisions touch it, e.g. "I
-develop solar projects across six states" or "my revenue depends on local government
-activity in 900 towns."] Evaluate the real thing: continuous, low-miss coverage across
-my whole footprint, refreshed weekly, early enough to catch a change while it is still
-an agenda item, not a one-time look at a few towns.
+**What arrives.** The full evaluation prompt, hardened so a lazy run cannot fake
+its way to an easy answer. It forces verifiable hands-on work with fetched source
+URLs, labels every number as fetched, derived or prior knowledge, makes the model
+audit our own framing for bias and rewrite it neutrally, and asks it to steelman
+building it yourself before it recommends anything. Paste it into Claude, Gemini
+or ChatGPT, point it at your own footprint, and see what it concludes.
 
-Rules, so this is honest and not a demo:
-- You do NOT have the vendor's method, town list, or sources. Use only public web
-  tools and your own knowledge, which is exactly the position I'd be in building it.
-- VERIFIABLE HANDS-ON ONLY. If you try specific towns, paste the exact source URL you
-  fetched and one verbatim quoted sentence with its location. If you cannot actually
-  open a document, write "UNVERIFIED, could not fetch" and do not describe its
-  contents from memory. Facts you know from training do not count as "found it."
-- LABEL EVERY NUMBER inline: [FETCHED] (from a source you opened), [DERIVED]
-  (computed from numbers you fetched), or [PRIOR] (training knowledge or assumption).
-  For the three numbers your recommendation depends on most, state what would prove
-  each one wrong and how I could check it myself in 15 minutes.
+<div class="rd-gate" style="border:1px solid #C8891F; background:#FBF9F5; padding:24px; margin:26px 0; max-width:620px;">
+  <form id="rd-gate-form" novalidate>
+    <label style="font-family:ui-monospace,Menlo,monospace; font-size:11px; letter-spacing:.12em; color:#6B6355; display:block; margin-bottom:8px;" for="rd-gate-email">WORK EMAIL</label>
+    <div style="display:flex; gap:10px; flex-wrap:wrap;">
+      <input type="email" id="rd-gate-email" name="email" placeholder="you@company.com" autocomplete="email" style="flex:1 1 240px; padding:12px 14px; border:1px solid #C9C2B4; font-size:15px; font-family:inherit;">
+      <button type="submit" style="padding:12px 22px; background:#C8891F; color:#1A1713; border:none; font-size:15px; font-weight:600; font-family:inherit; cursor:pointer;">Send Me the Prompt</button>
+    </div>
+    <input type="text" id="rd-gate-name" name="name" placeholder="Your name (optional)" autocomplete="name" style="display:block; width:100%; box-sizing:border-box; margin-top:10px; padding:12px 14px; border:1px solid #C9C2B4; font-size:15px; font-family:inherit;">
+    <p id="rd-gate-error" style="color:#A33B22; font-size:14px; margin:12px 0 0;" hidden></p>
+    <p style="font-size:13px; color:#6B6355; margin:14px 0 0;">We use this to send you the prompt and nothing else. No list sharing, no sequence, no newsletter.</p>
+  </form>
+  <p id="rd-gate-success" style="border-left:3px solid #C8891F; padding-left:16px; font-size:16px; line-height:1.55; margin:0;" hidden>Thanks. The prompt is on its way to that address. If it has not arrived within the hour, email matt@municipalalpha.com and we will send it straight over.</p>
+</div>
 
-Do this:
-1. Reverse-engineer their pipeline end to end.
-2. Try it hands-on on 3-4 towns (verifiable, per the rule above). Report what you
-   found, what you couldn't, and how long each took.
-3. Scope the REAL build: continuous, low-miss coverage across thousands of
-   heterogeneous town sites, weekly, with OCR on scanned PDFs and ongoing breakage
-   maintenance. Derive the cost and timeline FROM your hands-on attempt (how many site
-   platforms you hit, what fraction were scanned image PDFs, how many towns you failed
-   on), as a range, not a point estimate.
-4. Separate what is cheap to DIY from what is hard or infeasible (the historical
-   corpus, the registry of where each town publishes, recall-at-scale, continuous ops).
-5. PROMPT AUDIT: the vendor wrote this prompt. Assume it is engineered to make BUY
-   look good. Identify every way the framing, rules, or scope tilt the conclusion in
-   the vendor's favor, rewrite the prompt to remove that tilt, and say whether your
-   recommendation changes under your neutral version.
-6. SELF-AUDIT: list every claim you verified from a fetched source vs. inferred from
-   prior knowledge, and the three assumptions most likely to make your recommendation
-   wrong.
-7. STEELMAN the case for building it ourselves, then give a clear BUILD vs BUY
-   recommendation with a rough cost/time comparison and what I should make the vendor
-   prove on a pilot before committing.
+<script src="/theme/js/redesign-promptgate.js" defer></script>
 
-Output as a build-vs-buy memo. Be skeptical of the vendor AND honest about the real
-cost of doing it ourselves.
-```
 
 ## How to read what comes back
 
