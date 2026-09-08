@@ -129,18 +129,18 @@
     <h2 style="margin:0 0 18px; max-width:740px;">Why not just ask ChatGPT this yourself?</h2>
     <div class="rd-diy">
       <div>
-        <p class="rd-diy-p">For one town, where you already know to look, it will do a reasonable job. We would rather say that than pretend otherwise. Pick a jurisdiction you care about, ask the assistant you already have what is happening there, and you will get something usable back.</p>
-        <p class="rd-diy-p"><strong>Two things it cannot do.</strong> You had to name the town, and that was the hard part: knowing which of several thousand to watch before there is an outcome to point at. And it can only reach what has been indexed, while the documents that decide these things sit on town servers at URLs nothing links to, with no menu pointing at them and no sitemap listing them.</p>
-        <p class="rd-diy-p">That second gap is a quiet one. A document your assistant cannot see does not come back as a blank space. It comes back as a confident answer with the missing part simply absent from it, and nothing in the reply tells you which part that was.</p>
-        <p class="rd-diy-p">One honest note on scope, the same one we put on our build-vs-buy page. If your exposure is a few dozen towns you already know by name, a scripted watch of your own is a reasonable build and we will tell you so. The economics change when the footprint is hundreds or thousands of jurisdictions, refreshed weekly, in towns where nobody would think to call you.</p>
+        <p class="rd-diy-p">For one town you already know to watch, it will do a reasonable job. We would rather say so than pretend otherwise.</p>
+        <p class="rd-diy-p"><strong>But you had to name the town.</strong> That was the hard part. And it reaches only what is indexed, while these documents sit on town servers at URLs nothing links to.</p>
+        <p class="rd-diy-p"><strong>And the gap is silent.</strong> What it cannot see does not come back as a blank. It comes back as a confident answer with the missing part quietly absent.</p>
+        <p class="rd-diy-p">A few dozen towns you know by name? Build it yourself, and we will say so. Hundreds or thousands, refreshed weekly, is a different problem.</p>
       </div>
       <div class="rd-diy-cta">
         <p class="rd-diy-cta-h">So we will hand you the prompt to come after us with.</p>
-        <p class="rd-diy-cta-b">We are confident enough in what we built to give you a good one, for free, and point it straight at ourselves. Paste it into whatever your team uses, run it honestly across your whole footprint, and see what it concludes about building this instead of buying it.</p>
+        <p class="rd-diy-cta-b">A good one, free, pointed straight at us. Run it across your whole footprint and see what it concludes.</p>
         <p class="rd-diy-cta-b"><strong>Because the hard part isn't writing the prompt, it's building the connectors into the municipalities, collecting the documents, extracting the text, and then trusting that what you've actually collected can be verified back to the source documents and not fabricated.</strong></p>
-        <p class="rd-diy-cta-b">The prompt is written to be run against us, not for us. It tells your AI to audit the prompt itself for our bias, rewrite it neutrally, and say whether the answer changes.</p>
+        <p class="rd-diy-cta-b">It even tells your AI to audit our framing for bias and rewrite it neutrally.</p>
         <a href="{{ SITEURL }}/build-vs-buy/" class="rd-btn rd-btn-primary" style="margin-top:6px;">Take the Prompt</a>
-        <p class="rd-diy-cta-b" style="margin-top:8px;">Already ran your own? <a href="{{ SITEURL }}/free-lead-intake/?q={{ 'Here is the prompt I already ran in my own AI tool. Run it against the corpus and send me back what comes out, so I can compare the two.'|urlencode }}" style="color:var(--rd-accent); font-weight:600;">Send it to us</a> and we will run it against the corpus, so you can put the two answers side by side and ask your own tool which is better sourced.</p>
+        <p class="rd-diy-cta-b" style="margin-top:8px;">Already ran your own? <a href="{{ SITEURL }}/free-lead-intake/?q={{ 'Here is the prompt I already ran in my own AI tool. Run it against the corpus and send me back what comes out, so I can compare the two.'|urlencode }}" style="color:var(--rd-accent); font-weight:600;">Send it over</a> and we will run it too.</p>
       </div>
     </div>
   </div>
@@ -172,23 +172,23 @@
   ] %}
   {% set QUESTIONS_BUILD = [
     {"q": "Which towns are most likely to buy what I sell?",
-     "note": "We build the scorer against your definition of a lead, agreed with you first, rather than a generic fit score you are asked to trust."},
+     "note": "Scored against your definition of a lead, agreed first. Not a generic fit score."},
     {"q": "Where are my competitors winning, and who did they displace?",
-     "note": "Takes resolving the vendor names in the record to real companies, since one town can spell a single vendor five ways. It is top of our build list, and your accounts set the order."},
+     "note": "Needs the record\u2019s vendor names resolved to real companies. One town can spell a vendor five ways."},
     {"q": "What have you NOT found in my accounts?",
-     "note": "The gap list, priced per blank. It is the same object as our extraction queue, which is why naming your accounts is what moves them up it."}
+     "note": "The gap list, priced per blank. Naming your accounts is what moves them up the queue."}
   ] %}
 
   <div id="ask" class="rd-wrap rd-section" style="padding-top:0;">
     <p class="rd-eyebrow-tight" style="margin:0 0 14px;">NO FORM · NOTHING TO INSTALL</p>
     <h2 style="margin:0 0 14px; max-width:760px;">Ask it something now</h2>
-    <p class="rd-lead" style="max-width:700px; margin:0 0 4px;">These are real questions buyers have put to us, sorted by what we can actually do about each one. The ones on the left are a page, not a form. Click one.</p>
+    <p class="rd-lead" style="max-width:640px; margin:0 0 4px;">Real questions buyers have asked us. The ones on the left are a page, not a form.</p>
 
     <div class="rd-qgrid">
       <div class="rd-qcol is-now">
         <div class="rd-qcolhead">
           <span class="rd-qstate">ANSWERED NOW</span>
-          <p>A page already exists. Each says how many towns it stands on, before you click.</p>
+          <p>Each says how many towns it stands on, before you click.</p>
         </div>
         {% for x in QUESTIONS_NOW %}
         <a class="rd-qcard" href="{{ SITEURL }}{{ x.url }}">
@@ -201,7 +201,7 @@
       <div class="rd-qcol is-build">
         <div class="rd-qcolhead">
           <span class="rd-qstate">BRING YOUR OWN QUESTION</span>
-          <p>Not on the list? Ask it. We come back with what it takes, what it costs and when, before you commit to anything.</p>
+          <p>Not on the list? Ask it. We come back with the cost and the timing first.</p>
         </div>
         {% for x in QUESTIONS_BUILD %}
         <a class="rd-qcard" href="{{ SITEURL }}/free-lead-intake/?q={{ x.q|urlencode }}">
@@ -212,13 +212,13 @@
         {% endfor %}
         <a class="rd-qcard" href="{{ SITEURL }}/free-lead-intake/">
           <p class="rd-qmeta" style="color:var(--rd-accent);">NAME YOUR ACCOUNTS &rarr;</p>
-          <p class="rd-qnote" style="margin-top:6px;">Tell us the towns you sell into and we will come back with what we hold, what is missing, and what closing each blank takes. No call required.</p>
+          <p class="rd-qnote" style="margin-top:6px;">What we hold, what is missing, what each blank costs to close. No call.</p>
         </a>
       </div>
 
     </div>
 
-    <p class="rd-qfoot">Every count on this page is the count of towns whose own documents we hold and have read. It is never an estimate of the market, and a topic that looks thin here is at least as likely to be thin in our coverage as in the country. And where a question is one the towns never put on the record at all, we say so plainly and point you at the nearest one that is answerable, rather than assembling a fluent answer out of documents that do not bear on it.</p>
+    <p class="rd-qfoot">Every count is towns whose documents we hold and have read, never an estimate of the market. Where the towns never put something on the record at all, we say so and point you at the nearest question that is answerable.</p>
   </div>
 
   <!-- REAL SESSION -->
@@ -277,47 +277,47 @@
       <div>
         <p class="rd-eyebrow-tight" style="margin:0 0 14px;">NOTHING TO INSTALL &middot; NO NEW LOGIN &middot; NO SEATS</p>
         <h2>Built for the way AI-powered teams already work.</h2>
-        <p class="rd-works-sub">Municipal Alpha was built from the ground up for the reality your team is already in. They want the answer and the outcome, not another interface to learn, so the record shows up in the assistant they already have open, in the thread they were already working in.</p>
+        <p class="rd-works-sub">Your team wants the answer and the outcome, not another interface to learn. So the record shows up in the assistant they already have open.</p>
         <div class="rd-clients">
           <div class="rd-client"><span class="rd-client-name">Claude</span><span class="rd-client-note">CONNECTED</span></div>
           <div class="rd-client"><span class="rd-client-name">ChatGPT</span><span class="rd-client-note">CONNECTED</span></div>
           <div class="rd-client"><span class="rd-client-name">Gemini</span><span class="rd-client-note">CONNECTED</span></div>
           <div class="rd-client"><span class="rd-client-name">Copilot</span><span class="rd-client-note">MCP CLIENT</span></div>
         </div>
-        <p class="rd-works-join">And because the assistant is the one asking, it can set our record beside whatever else your team has already connected. Your CRM, your spreadsheets, your own datasets, joined inside the conversation rather than inside an integration project. Your data answers to your assistant, not to us. It stays in your systems, and we never ingest it.</p>
-        <p class="rd-works-join">And if the work happens in a spreadsheet or a warehouse rather than a chat window, the same record arrives as a file or into your own systems. The rule is that it lands where your team already works, not that it lands in a chat.</p>
+        <p class="rd-works-join">The assistant can set our record beside whatever else your team has connected: your CRM, your spreadsheets, your own datasets. Your data answers to your assistant, not to us.</p>
+        <p class="rd-works-join">Work in a spreadsheet instead? Same record, delivered as a file. It lands where your team already works.</p>
         <p class="rd-clients-foot">ANY MCP-CAPABLE CLIENT &middot; PRICED ON COVERAGE, RECENCY AND DEPTH</p>
       </div>
       <div class="rd-connector">
         <p class="rd-connector-eyebrow">WHAT COMES BACK</p>
         <img src="{{ SITEURL }}/images/mcp-answer.png" width="1378" height="369" alt="An answer inside an AI assistant naming a Massachusetts town whose FY2027-2031 capital improvements program lists an online electronic permitting system as a Priority 2 project, covering the Conservation Commission, Planning Board and ZBA, with the vendor question still open. The town name is redacted.">
-        <p class="rd-connector-cap">One question, asked in the thread they were already working in. <strong>Back comes a town that has not picked a vendor yet, the stage it has reached, the boards that decide it, and the date it lands on.</strong> The money is there too, but the timing and the open seat are the part a sales team can act on this week.</p>
+        <p class="rd-connector-cap"><strong>A town that has not picked a vendor yet, the stage, the boards that decide it, the date.</strong> One question, asked in the thread they were already in.</p>
       </div>
     </div>
     <div class="rd-wrap rd-nots" style="padding-top:clamp(34px,4vw,52px); padding-bottom:clamp(38px,5vw,60px);">
       <p class="rd-eyebrow-tight" style="margin:0 0 14px;">THE THING YOU WERE ACTUALLY BUYING</p>
       <p class="rd-not-kicker">Nobody ever wanted the interface.</p>
-      <p class="rd-not-lede">Software asks the same thing of every team that buys it: learn this, adopt this, get into the habit of opening this. That was never the thing you were buying, though. You were buying an answer to a question, and the outcome on the other side of it, and the interface was only what the technology of the day needed in order to hand it to you. That requirement has gone away, and Municipal Alpha is built for the world where it has.</p>
+      <p class="rd-not-lede">You were buying an answer and an outcome. The interface was only what the technology of the day needed to hand it to you. That requirement is gone.</p>
       <p class="rd-eyebrow-tight" style="margin:26px 0 0;">SO YOUR TEAM NEVER HAS TO</p>
       <div class="rd-notgrid">
         <div class="rd-not">
           <p class="rd-not-h">Learn a new interface</p>
-          <p class="rd-not-b">There is no Municipal Alpha screen. The record arrives in the assistant they already have open.</p>
+          <p class="rd-not-b">There is no Municipal Alpha screen to open.</p>
         </div>
         <div class="rd-not">
           <p class="rd-not-h">Buy seats</p>
-          <p class="rd-not-b">We price on coverage, recency and depth. One connector serves the team, however many of them use it.</p>
+          <p class="rd-not-b">Priced on coverage, recency and depth. One connector serves everyone.</p>
         </div>
         <div class="rd-not">
           <p class="rd-not-h">Run an onboarding project</p>
-          <p class="rd-not-b">Nothing to install, nothing to configure on your side, no data for your team to load before it is useful.</p>
+          <p class="rd-not-b">Nothing to install, nothing to configure, no data to load first.</p>
         </div>
         <div class="rd-not">
           <p class="rd-not-h">Hand us your data</p>
-          <p class="rd-not-b">Your CRM answers to your assistant, not to us. Your records stay in your systems and we never ingest them, so there is less of your data in scope from the day you start.</p>
+          <p class="rd-not-b">Your records stay in your systems. We never ingest them.</p>
         </div>
       </div>
-      <p class="rd-not-shape"><strong>The older bargain was that the product is a place you go, and the work is getting your team to go there.</strong> It is a perfectly good bargain when the interface is the product. Here the answer is the product, so it comes to the place they already are. And what makes that worth connecting to is not the connection: it is the {{ METRICS.municipalities }} municipalities on the other end of it, read down to the small towns that publish to no one.</p>
+      <p class="rd-not-shape"><strong>The old bargain was that the product is a place you go.</strong> Here the answer is the product, so it comes to you. What makes that worth connecting to is the {{ METRICS.municipalities }} municipalities on the other end, read down to the small towns that publish to no one.</p>
     </div>
   </div>
 
