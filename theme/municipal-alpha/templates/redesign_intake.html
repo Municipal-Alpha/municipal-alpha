@@ -124,6 +124,21 @@
         </div>
 
         <p id="rd-intake-error" class="rd-form-error" hidden></p>
+      {# A question clicked on the homepage arrives as ?q= and lands in notes,
+         so the ask travels with the lead instead of being lost at the click. #}
+      <script>
+      (function () {
+        try {
+          var q = new URLSearchParams(window.location.search).get('q');
+          if (!q) return;
+          var notes = document.getElementById('rd-f-notes');
+          if (!notes || notes.value) return;
+          notes.value = q;
+          var lbl = document.getElementById('rd-intake-q-echo');
+          if (lbl) { lbl.textContent = q; lbl.parentNode.hidden = false; }
+        } catch (e) {}
+      })();
+      </script>
 
         <button type="submit" class="rd-btn rd-btn-primary" style="border:none; cursor:pointer;">Get My Free Lead</button>
         <p class="rd-form-note">We use this only to run your assessment. No list sharing, no sequence, no newsletter.</p>

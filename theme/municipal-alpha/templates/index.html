@@ -96,8 +96,8 @@
   <div class="rd-wrap" style="padding-top:clamp(56px,8vw,110px); padding-bottom:clamp(48px,7vw,90px); display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:clamp(36px,5vw,64px); align-items:center;">
     <div>
       <p class="rd-eyebrow">MUNICIPAL SIGNAL IN THE AI TOOLS YOUR REVENUE TEAMS ALREADY USE</p>
-      <h1>Win more <em>public contracts</em></h1>
-      <p class="rd-lead" style="max-width:520px; margin:24px 0 20px; font-size:21px; line-height:1.4; color:var(--rd-text); font-weight:500;">Get the full municipal record straight in your <span style="white-space:nowrap;">AI-tool:</span></p>
+      <h1>Win and retain more <em>public contracts</em></h1>
+      <p class="rd-lead" style="max-width:520px; margin:24px 0 20px; font-size:21px; line-height:1.4; color:var(--rd-text); font-weight:500;">What towns are planning and buying, in the AI tool your team already has open:</p>
       <ul style="list-style:none; padding:0; margin:0 0 32px; max-width:500px; display:flex; flex-direction:column; gap:10px;">
         {% for s in STEPS %}
         <li style="display:flex; gap:12px; align-items:baseline; font-size:17px; color:var(--rd-text-secondary);"><span class="rd-mono" style="color:var(--rd-accent); font-size:13px;">{{ s.n }}</span>{{ s.label }}</li>
@@ -125,7 +125,7 @@
     <div class="rd-wrap rd-works-inner">
       <div>
         <p class="rd-eyebrow-tight" style="margin:0 0 14px;">NOTHING TO INSTALL &middot; NO NEW LOGIN &middot; NO SEATS</p>
-        <h2>Built for the way your team already works.</h2>
+        <h2>Built for the way AI-powered teams already work.</h2>
         <p class="rd-works-sub">Municipal Alpha was built from the ground up for the reality your team is already in. They want the answer and the outcome, not another interface to learn, so the record shows up in the assistant they already have open, in the thread they were already working in.</p>
         <div class="rd-clients">
           <div class="rd-client"><span class="rd-client-name">Claude</span><span class="rd-client-note">CONNECTED</span></div>
@@ -229,10 +229,11 @@
           <p>Not on the list? Ask it. We come back with what it takes, what it costs and when, before you commit to anything.</p>
         </div>
         {% for x in QUESTIONS_BUILD %}
-        <div class="rd-qcard">
+        <a class="rd-qcard" href="{{ SITEURL }}/free-lead-intake/?q={{ x.q|urlencode }}">
           <p class="rd-q">{{ x.q }}</p>
           <p class="rd-qnote">{{ x.note }}</p>
-        </div>
+          <p class="rd-qmeta" style="color:var(--rd-accent);">ASK THIS ONE &rarr;</p>
+        </a>
         {% endfor %}
         <a class="rd-qcard" href="{{ SITEURL }}/free-lead-intake/">
           <p class="rd-qmeta" style="color:var(--rd-accent);">NAME YOUR ACCOUNTS &rarr;</p>
@@ -273,7 +274,15 @@
   <div id="sample" class="rd-band rd-section">
     <div class="rd-wrap" style="padding:0;">
       <h2 style="margin:0 0 12px; max-width:760px;">What comes back when you ask</h2>
-      <p style="font-size:16px; color:var(--rd-text-muted); max-width:680px; margin:0 0 12px;">One session end to end. A permitting software vendor asked which New England towns had budgeted for what they sell.</p>
+      <p style="font-size:16px; color:var(--rd-text-muted); max-width:680px; margin:0 0 20px;">One session end to end, run for a permitting software vendor.</p>
+      {# The ask, shown as what was asked. This is our description of the
+         question, not a transcript of the operator's keystrokes: the three
+         captures are all assistant output and none contains the prompt. If the
+         verbatim prompt is recovered, put it here and mark it as quoted. #}
+      <div class="rd-askline">
+        <p class="rd-askline-label">THE ASK</p>
+        <p class="rd-askline-q">Which New England towns have budgeted for what we sell, and which of them have not picked a vendor yet?</p>
+      </div>
       <p class="rd-table-foot" style="margin:0 0 32px;">RUN 8 SEPTEMBER 2026 · TOWN NAMES REDACTED · EVERYTHING ELSE IS THE UNEDITED SESSION</p>
 
       <div class="rd-tabs">
