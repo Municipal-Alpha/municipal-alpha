@@ -12,8 +12,8 @@ One honest note on scope before you start. The answer depends on your footprint.
 
 ## The prompt
 
-We will send it to you. One email address, no call, no sequence, and you get the
-full prompt back at that address within the hour.
+We will send it to you. One email address, no call, no sequence, and the full
+prompt comes back to that address the same day.
 
 That is the trade, and it is a fair one: the prompt took real work, it is written
 to be run *against* us, and we would rather know who is evaluating us than not.
@@ -36,7 +36,7 @@ or ChatGPT, point it at your own footprint, and see what it concludes.
     <p id="rd-gate-error" style="color:#A33B22; font-size:14px; margin:12px 0 0;" hidden></p>
     <p style="font-size:13px; color:#6B6355; margin:14px 0 0;">We use this to send you the prompt and nothing else. No list sharing, no sequence, no newsletter.</p>
   </form>
-  <p id="rd-gate-success" style="border-left:3px solid #C8891F; padding-left:16px; font-size:16px; line-height:1.55; margin:0;" hidden>Thanks. The prompt is on its way to that address. If it has not arrived within the hour, email matt@municipalalpha.com and we will send it straight over.</p>
+  <p id="rd-gate-success" style="border-left:3px solid #C8891F; padding-left:16px; font-size:16px; line-height:1.55; margin:0;" hidden>Thanks. The prompt is on its way to that address. If it has not arrived by the end of the day, email matt@municipalalpha.com and we will send it straight over.</p>
 </div>
 
 <script src="/theme/js/redesign-promptgate.js" defer></script>
