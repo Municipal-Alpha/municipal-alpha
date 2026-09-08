@@ -409,3 +409,4 @@ a.rd-qcard:focus-visible { outline: 2px solid var(--rd-accent); outline-offset: 
 .rd-connector .rd-connector-cap { font-size: 14px; line-height: 1.5; color: var(--rd-text-secondary); margin: 14px 0 0; }
 .rd-connector .rd-connector-cap strong { color: var(--rd-text); font-weight: 600; }
 .rd-connector .rd-connector-eyebrow { font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 10.5px; letter-spacing: .12em; color: var(--rd-text-faint); margin: 0 0 12px; }
+.rd-works-join { font-size: 14.5px; line-height: 1.55; color: var(--rd-text-secondary); margin: 18px 0 0; max-width: 470px; padding-left: 13px; border-left: 2px solid var(--rd-accent-muted); }

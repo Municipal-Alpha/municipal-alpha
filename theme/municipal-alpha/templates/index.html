@@ -85,7 +85,7 @@
    "alt": "Six municipalities with budgeted permitting software projects, each showing the dollar amount, the procurement stage and the quoted language from the town's own record. Town names are redacted."},
   {"n": "03",
    "label": "Move what you find into your CRM and your tools",
-   "body": "That step runs through your own tools' connectors: your CRM, your sheets, your docs. Not an integration we built, or one you wait on us for.",
+   "body": "That step runs through your own tools' connectors, your CRM, your sheets, your docs, so it is not an integration we built or one you wait on us for.",
    "note": "The same six, created as company records in the same session, each carrying the budget line that surfaced it.",
    "img": "demo-crm.png", "w": 1400, "h": 788,
    "alt": "A CRM company list showing six municipalities created as records within the same session, each with a description field carrying the budgeted amount and the funding source. Town names are redacted; the state is left visible."}
@@ -133,7 +133,9 @@
           <div class="rd-client"><span class="rd-client-name">Gemini</span><span class="rd-client-note">CONNECTED</span></div>
           <div class="rd-client"><span class="rd-client-name">Copilot</span><span class="rd-client-note">MCP CLIENT</span></div>
         </div>
-        <p class="rd-clients-foot">ANY MCP-CAPABLE CLIENT &middot; ONE CONNECTOR SERVES THE WHOLE TEAM</p>
+        <p class="rd-works-join">And because the assistant is the one asking, it can set our record beside whatever else your team has already connected. Your CRM, your spreadsheets, your own datasets, joined inside the conversation rather than inside an integration project.</p>
+        <p class="rd-works-join">No seat based pricing. One connector serves the whole team, so the tenth person who asks a question costs the same as the first, and nobody has to be talked out of using it.</p>
+        <p class="rd-clients-foot">ANY MCP-CAPABLE CLIENT &middot; PRICED ON COVERAGE, RECENCY AND DEPTH</p>
       </div>
       <div class="rd-connector">
         <p class="rd-connector-eyebrow">WHAT YOUR TEAM ACTUALLY SEES</p>
@@ -176,19 +178,11 @@
     {"q": "What have you NOT found in my accounts?",
      "note": "The gap list, priced per blank. It is the same object as our extraction queue, which is why naming your accounts is what moves them up it."}
   ] %}
-  {% set QUESTIONS_NEVER = [
-    {"q": "Which of these contracts come up for renewal next year?",
-     "note": "We read 1,010 utility agreements. Thirteen carry a term you could quote. We will not pad the rest with fiscal-year labels and call them contract dates.",
-     "adj": "What we can tell you instead: 38% carry a migration signal, and a migration usually picks the vendor before any renewal date arrives."},
-    {"q": "How are residents spending their state relief checks?",
-     "note": "Municipal minutes never record it. A keyword search returns hundreds of real, correctly-quoted, entirely irrelevant documents about housing and water affordability.",
-     "adj": "We refuse this rather than weave those into a fluent answer. That refusal is the product working."}
-  ] %}
 
   <div id="ask" class="rd-wrap rd-section" style="padding-top:0;">
     <p class="rd-eyebrow-tight" style="margin:0 0 14px;">NO FORM · NOTHING TO INSTALL</p>
     <h2 style="margin:0 0 14px; max-width:760px;">Ask it something now</h2>
-    <p class="rd-lead" style="max-width:700px; margin:0 0 4px;">These are real questions buyers have put to us, sorted by what we can actually do about them today. The ones on the left are a page, not a form. Click one.</p>
+    <p class="rd-lead" style="max-width:700px; margin:0 0 4px;">These are real questions buyers have put to us, sorted by what we can actually do about each one. The ones on the left are a page, not a form. Click one.</p>
 
     <div class="rd-qgrid">
       <div class="rd-qcol is-now">
@@ -221,22 +215,9 @@
         </a>
       </div>
 
-      <div class="rd-qcol is-never">
-        <div class="rd-qcolhead">
-          <span class="rd-qstate">NOT ON THE RECORD</span>
-          <p>Towns never published it. We say so, and hand you the nearest question that is answerable.</p>
-        </div>
-        {% for x in QUESTIONS_NEVER %}
-        <div class="rd-qcard">
-          <p class="rd-q">{{ x.q }}</p>
-          <p class="rd-qnote">{{ x.note }}</p>
-          <p class="rd-qnote" style="color:var(--rd-text-muted);">{{ x.adj }}</p>
-        </div>
-        {% endfor %}
-      </div>
     </div>
 
-    <p class="rd-qfoot">Every count on this page is the count of towns whose own documents we hold and have read. It is never an estimate of the market, and a topic that looks thin here is at least as likely to be thin in our coverage as in the country.</p>
+    <p class="rd-qfoot">Every count on this page is the count of towns whose own documents we hold and have read. It is never an estimate of the market, and a topic that looks thin here is at least as likely to be thin in our coverage as in the country. And where a question is one the towns never put on the record at all, we say so plainly and point you at the nearest one that is answerable, rather than assembling a fluent answer out of documents that do not bear on it.</p>
   </div>
 
   <!-- DEMO -->
