@@ -169,39 +169,11 @@
         </div>
       </div>
 
-      <div style="margin-top:32px;">
+      <div style="display:flex; gap:28px; flex-wrap:wrap; align-items:center; margin-top:32px;">
         <a href="https://calendar.app.google/TeT9KujoL6CDbxRy8" target="_blank" rel="noopener" style="font-size:15px; font-weight:600;">Ask these questions of your own territory →</a>
+        <p class="rd-table-foot" style="margin:0;">EVERY SIGNAL LINKS BACK TO ITS SOURCE DOCUMENT</p>
       </div>
     </div>
-  </div>
-
-  <!-- SAMPLE DATA -->
-  <div class="rd-wrap rd-section">
-      <h2 style="margin:0 0 12px; max-width:760px;">Five fields behind every signal</h2>
-      <p style="font-size:16px; color:var(--rd-text-muted); max-width:640px; margin:0 0 40px;">Every signal carries the same five: what happened, where, the date it became public, the contact on record, and why it is worth acting on. Ask for four of them or four hundred, and take any one further in the same conversation.</p>
-      <div class="rd-table-wrap">
-        <div class="rd-table">
-          <div class="rd-table-head">SIGNAL</div>
-          <div class="rd-table-head">JURISDICTION</div>
-          <div class="rd-table-head">DATE</div>
-          <div class="rd-table-head">CONTACT ON RECORD</div>
-          <div class="rd-table-head">WHY IT'S ACTIONABLE</div>
-          {% set sample_rows = [
-            {"signal": "Vendor replacement discussed, parks & rec software", "place": "Windham, NH", "date": "2026-07-14", "contact": "Rec Director (name, email on record)", "why": "Incumbent named in minutes with a motion to solicit alternatives. Renewal risk on an account you hold."},
-            {"signal": "Coverage complaint → board directed to investigate siting", "place": "Amherst, NH", "date": "2023-07-24", "contact": "Board of Selectmen chair", "why": "Earliest public trace of what became a 30-year ground lease. No FCC or FAA record existed yet."},
-            {"signal": "PFAS remediation appropriation added to warrant", "place": "Ayer, MA", "date": "2026-06-02", "contact": "DPW Superintendent", "why": "Funding precedes the state testing RFP by roughly one quarter. Budget confirmed, procurement not open."},
-            {"signal": "Data center moratorium placed on planning agenda", "place": "Prince George Cty, VA", "date": "2026-05-19", "contact": "Planning Commission clerk", "why": "Opposition forming pre-application. Re-route siting or engage before the public hearing."}
-          ] %}
-          {% for r in sample_rows %}
-          <div class="rd-table-cell">{{ r.signal }}</div>
-          <div class="rd-table-cell">{{ r.place }}</div>
-          <div class="rd-table-cell rd-table-cell-mono">{{ r.date }}</div>
-          <div class="rd-table-cell" style="font-size:13px;">{{ r.contact }}</div>
-          <div class="rd-table-cell" style="font-size:13px; color:var(--rd-text-tertiary);">{{ r.why }}</div>
-          {% endfor %}
-        </div>
-      </div>
-      <p class="rd-table-foot" style="margin:28px 0 0;">EVERY ROW LINKS BACK TO THE SOURCE DOCUMENT</p>
   </div>
 
   <!-- CUSTOM QUERIES -->
