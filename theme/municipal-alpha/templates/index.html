@@ -96,7 +96,7 @@
   <div class="rd-wrap" style="padding-top:clamp(56px,8vw,110px); padding-bottom:clamp(48px,7vw,90px); display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:clamp(36px,5vw,64px); align-items:center;">
     <div>
       <p class="rd-eyebrow">MUNICIPAL SIGNAL IN THE AI TOOLS YOUR REVENUE TEAMS ALREADY USE</p>
-      <h1>Win more public contracts by <em>having the intelligence first.</em></h1>
+      <h1>Win more <em>public contracts</em></h1>
       <p class="rd-lead" style="max-width:520px; margin:24px 0 20px; font-size:21px; line-height:1.4; color:var(--rd-text); font-weight:500;">Get the full municipal record straight in your <span style="white-space:nowrap;">AI-tool:</span></p>
       <ul style="list-style:none; padding:0; margin:0 0 32px; max-width:500px; display:flex; flex-direction:column; gap:10px;">
         {% for s in STEPS %}
@@ -108,36 +108,8 @@
         <a href="{{ SITEURL }}/free-lead-intake/" class="rd-btn rd-btn-outline">Get One Free Lead</a>
       </div>
     </div>
-    <div class="rd-panel">
-      <svg viewBox="0 0 420 358" style="width:100%; height:auto; display:block;" role="img" aria-label="Municipal Alpha and your CRM both connect into the AI assistant your team already uses.">
-        <!-- MUNICIPAL ALPHA -->
-        <rect x="60" y="12" width="300" height="96" fill="none" stroke="oklch(0.7 0.12 75)" stroke-width="1.5"></rect>
-        <text x="210" y="40" text-anchor="middle" fill="oklch(0.78 0.14 75)" font-family="IBM Plex Mono, monospace" font-size="12" letter-spacing="0.5">MUNICIPAL ALPHA</text>
-        <text x="210" y="61" text-anchor="middle" fill="oklch(0.78 0.01 60)" font-family="IBM Plex Sans, sans-serif" font-size="12">Full corpus · Research agents</text>
-        <text x="210" y="90" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10" letter-spacing="0.02em">
-          <tspan fill="oklch(0.78 0.14 75)" font-weight="600">{{ METRICS.municipalities }}</tspan><tspan fill="oklch(0.65 0.01 60)"> MUNICIPALITIES · </tspan><tspan fill="oklch(0.85 0.01 60)" font-weight="600">{{ METRICS.documents }}</tspan><tspan fill="oklch(0.65 0.01 60)"> DOCUMENTS</tspan>
-        </text>
-        <!-- MA <-> AI -->
-        <line x1="175" y1="110" x2="175" y2="140" stroke="oklch(0.45 0.01 50)" stroke-width="1.5"></line>
-        <polygon points="171,138 175,148 179,138" fill="oklch(0.45 0.01 50)"></polygon>
-        <line x1="245" y1="148" x2="245" y2="118" stroke="oklch(0.45 0.01 50)" stroke-width="1.5"></line>
-        <polygon points="241,120 245,110 249,120" fill="oklch(0.45 0.01 50)"></polygon>
-        <!-- YOUR AI ASSISTANT -->
-        <rect x="40" y="150" width="340" height="100" fill="none" stroke="oklch(0.85 0.01 60)" stroke-width="2"></rect>
-        <text x="210" y="182" text-anchor="middle" fill="oklch(0.93 0.01 60)" font-family="IBM Plex Mono, monospace" font-size="14" letter-spacing="0.5">YOUR AI ASSISTANT</text>
-        <text x="210" y="203" text-anchor="middle" fill="oklch(0.78 0.01 60)" font-family="IBM Plex Mono, monospace" font-size="10" letter-spacing="0.04em">CLAUDE · CHATGPT · GEMINI</text>
-        <line x1="140" y1="216" x2="280" y2="216" stroke="oklch(0.4 0.01 50)" stroke-width="1"></line>
-        <text x="210" y="236" text-anchor="middle" fill="oklch(0.85 0.01 60)" font-family="IBM Plex Sans, sans-serif" font-size="12">Ask · Follow up · Go deeper</text>
-        <!-- AI <-> CRM -->
-        <line x1="175" y1="252" x2="175" y2="282" stroke="oklch(0.45 0.01 50)" stroke-width="1.5"></line>
-        <polygon points="171,280 175,290 179,280" fill="oklch(0.45 0.01 50)"></polygon>
-        <line x1="245" y1="290" x2="245" y2="260" stroke="oklch(0.45 0.01 50)" stroke-width="1.5"></line>
-        <polygon points="241,262 245,252 249,262" fill="oklch(0.45 0.01 50)"></polygon>
-        <!-- YOUR CRM -->
-        <rect x="60" y="292" width="300" height="52" fill="none" stroke="oklch(0.5 0.01 60)" stroke-width="1.5"></rect>
-        <text x="210" y="324" text-anchor="middle" fill="oklch(0.85 0.01 60)" font-family="IBM Plex Mono, monospace" font-size="12" letter-spacing="0.5">YOUR CRM</text>
-      </svg>
-      <p style="font-family:'Source Serif 4',serif; font-style:italic; font-size:13px; color:var(--rd-text-muted); margin:16px 0 0; text-align:center;">How deep you go is your call, lead by lead.</p>
+    <div>
+      <img src="{{ SITEURL }}/images/hero-record-to-ai.png" width="1000" height="598" alt="The public record of thousands of US municipalities, converging into a single AI chat window." style="width:100%; height:auto; display:block;">
     </div>
   </div>
 
@@ -303,7 +275,39 @@
 
   <!-- HOW IT WORKS -->
   <div id="how-it-works" class="rd-wrap rd-section">
-    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:clamp(32px,5vw,64px);">
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:clamp(32px,5vw,64px); margin-bottom:clamp(40px,5vw,64px);">
+      <div style="max-width:440px;">
+      <svg viewBox="0 0 420 358" style="width:100%; height:auto; display:block;" role="img" aria-label="Municipal Alpha and your CRM both connect into the AI assistant your team already uses.">
+        <!-- MUNICIPAL ALPHA -->
+        <rect x="60" y="12" width="300" height="96" fill="none" stroke="oklch(0.7 0.12 75)" stroke-width="1.5"></rect>
+        <text x="210" y="40" text-anchor="middle" fill="oklch(0.78 0.14 75)" font-family="IBM Plex Mono, monospace" font-size="12" letter-spacing="0.5">MUNICIPAL ALPHA</text>
+        <text x="210" y="61" text-anchor="middle" fill="oklch(0.78 0.01 60)" font-family="IBM Plex Sans, sans-serif" font-size="12">Full corpus · Research agents</text>
+        <text x="210" y="90" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10" letter-spacing="0.02em">
+          <tspan fill="oklch(0.78 0.14 75)" font-weight="600">{{ METRICS.municipalities }}</tspan><tspan fill="oklch(0.65 0.01 60)"> MUNICIPALITIES · </tspan><tspan fill="oklch(0.85 0.01 60)" font-weight="600">{{ METRICS.documents }}</tspan><tspan fill="oklch(0.65 0.01 60)"> DOCUMENTS</tspan>
+        </text>
+        <!-- MA <-> AI -->
+        <line x1="175" y1="110" x2="175" y2="140" stroke="oklch(0.45 0.01 50)" stroke-width="1.5"></line>
+        <polygon points="171,138 175,148 179,138" fill="oklch(0.45 0.01 50)"></polygon>
+        <line x1="245" y1="148" x2="245" y2="118" stroke="oklch(0.45 0.01 50)" stroke-width="1.5"></line>
+        <polygon points="241,120 245,110 249,120" fill="oklch(0.45 0.01 50)"></polygon>
+        <!-- YOUR AI ASSISTANT -->
+        <rect x="40" y="150" width="340" height="100" fill="none" stroke="oklch(0.85 0.01 60)" stroke-width="2"></rect>
+        <text x="210" y="182" text-anchor="middle" fill="oklch(0.93 0.01 60)" font-family="IBM Plex Mono, monospace" font-size="14" letter-spacing="0.5">YOUR AI ASSISTANT</text>
+        <text x="210" y="203" text-anchor="middle" fill="oklch(0.78 0.01 60)" font-family="IBM Plex Mono, monospace" font-size="10" letter-spacing="0.04em">CLAUDE · CHATGPT · GEMINI</text>
+        <line x1="140" y1="216" x2="280" y2="216" stroke="oklch(0.4 0.01 50)" stroke-width="1"></line>
+        <text x="210" y="236" text-anchor="middle" fill="oklch(0.85 0.01 60)" font-family="IBM Plex Sans, sans-serif" font-size="12">Ask · Follow up · Go deeper</text>
+        <!-- AI <-> CRM -->
+        <line x1="175" y1="252" x2="175" y2="282" stroke="oklch(0.45 0.01 50)" stroke-width="1.5"></line>
+        <polygon points="171,280 175,290 179,280" fill="oklch(0.45 0.01 50)"></polygon>
+        <line x1="245" y1="290" x2="245" y2="260" stroke="oklch(0.45 0.01 50)" stroke-width="1.5"></line>
+        <polygon points="241,262 245,252 249,262" fill="oklch(0.45 0.01 50)"></polygon>
+        <!-- YOUR CRM -->
+        <rect x="60" y="292" width="300" height="52" fill="none" stroke="oklch(0.5 0.01 60)" stroke-width="1.5"></rect>
+        <text x="210" y="324" text-anchor="middle" fill="oklch(0.85 0.01 60)" font-family="IBM Plex Mono, monospace" font-size="12" letter-spacing="0.5">YOUR CRM</text>
+      </svg>
+        <p style="font-family:'Source Serif 4',serif; font-style:italic; font-size:13px; color:var(--rd-text-muted); margin:16px 0 0; text-align:center;">How deep you go is your call, lead by lead.</p>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:clamp(28px,4vw,44px);">
       <div>
         <h3 style="margin:0 0 16px;">99% of these documents don't show up in search</h3>
         <p style="margin:0 0 16px;">A town clerk uploads a check register. It gets a URL. Nothing on the site ever links to it. Google can't index what it can't find. AI agents browse the same pages Google does.</p>
@@ -314,6 +318,7 @@
         <p style="margin:0 0 16px;">Software in this category is usually delivered as a web app, because per-seat pricing needs a seat to meter and a login is what creates one. We price on coverage, recency and depth instead. Our price is the same whether two people ask or twenty.</p>
         <p style="margin:0 0 16px;">So there is nothing to put behind a login. One connector serves the whole revenue team, in whichever assistant your employer has sanctioned, alongside the other tools they already have connected there.</p>
         <a href="{{ SITEURL }}/mcp-launch/" style="font-size:15px; font-weight:600;">How the connector works →</a>
+      </div>
       </div>
     </div>
   </div>
