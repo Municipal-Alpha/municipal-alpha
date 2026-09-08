@@ -145,60 +145,6 @@
     </div>
   </div>
 
-  <!-- WORKS WHERE YOU ALREADY WORK -->
-  {# The positioning line, promoted out of an 11px footnote under the hero art.
-     Client names are wordmarks, not third-party logos: MCP is an open protocol
-     so "works in" is a true compatibility statement, but a logo row reads as
-     endorsement and we have no such agreement. See redesign.css. #}
-  <div class="rd-works">
-    <div class="rd-wrap rd-works-inner">
-      <div>
-        <p class="rd-eyebrow-tight" style="margin:0 0 14px;">NOTHING TO INSTALL &middot; NO NEW LOGIN &middot; NO SEATS</p>
-        <h2>Built for the way AI-powered teams already work.</h2>
-        <p class="rd-works-sub">Municipal Alpha was built from the ground up for the reality your team is already in. They want the answer and the outcome, not another interface to learn, so the record shows up in the assistant they already have open, in the thread they were already working in.</p>
-        <div class="rd-clients">
-          <div class="rd-client"><span class="rd-client-name">Claude</span><span class="rd-client-note">CONNECTED</span></div>
-          <div class="rd-client"><span class="rd-client-name">ChatGPT</span><span class="rd-client-note">CONNECTED</span></div>
-          <div class="rd-client"><span class="rd-client-name">Gemini</span><span class="rd-client-note">CONNECTED</span></div>
-          <div class="rd-client"><span class="rd-client-name">Copilot</span><span class="rd-client-note">MCP CLIENT</span></div>
-        </div>
-        <p class="rd-works-join">And because the assistant is the one asking, it can set our record beside whatever else your team has already connected. Your CRM, your spreadsheets, your own datasets, joined inside the conversation rather than inside an integration project. Your data answers to your assistant, not to us. It stays in your systems, and we never ingest it.</p>
-        <p class="rd-works-join">And if the work happens in a spreadsheet or a warehouse rather than a chat window, the same record arrives as a file or into your own systems. The rule is that it lands where your team already works, not that it lands in a chat.</p>
-        <p class="rd-clients-foot">ANY MCP-CAPABLE CLIENT &middot; PRICED ON COVERAGE, RECENCY AND DEPTH</p>
-      </div>
-      <div class="rd-connector">
-        <p class="rd-connector-eyebrow">WHAT COMES BACK</p>
-        <img src="{{ SITEURL }}/images/mcp-answer.png" width="1378" height="369" alt="An answer inside an AI assistant naming a Massachusetts town whose FY2027-2031 capital improvements program lists an online electronic permitting system as a Priority 2 project, covering the Conservation Commission, Planning Board and ZBA, with the vendor question still open. The town name is redacted.">
-        <p class="rd-connector-cap">One question, asked in the thread they were already working in. <strong>Back comes a town that has not picked a vendor yet, the stage it has reached, the boards that decide it, and the date it lands on.</strong> The money is there too, but the timing and the open seat are the part a sales team can act on this week.</p>
-      </div>
-    </div>
-    <div class="rd-wrap rd-nots" style="padding-top:clamp(34px,4vw,52px); padding-bottom:clamp(38px,5vw,60px);">
-      <p class="rd-eyebrow-tight" style="margin:0 0 14px;">THE THING YOU WERE ACTUALLY BUYING</p>
-      <p class="rd-not-kicker">Nobody ever wanted the interface.</p>
-      <p class="rd-not-lede">Software asks the same thing of every team that buys it: learn this, adopt this, get into the habit of opening this. That was never the thing you were buying, though. You were buying an answer to a question, and the outcome on the other side of it, and the interface was only what the technology of the day needed in order to hand it to you. That requirement has gone away, and Municipal Alpha is built for the world where it has.</p>
-      <p class="rd-eyebrow-tight" style="margin:26px 0 0;">SO YOUR TEAM NEVER HAS TO</p>
-      <div class="rd-notgrid">
-        <div class="rd-not">
-          <p class="rd-not-h">Learn a new interface</p>
-          <p class="rd-not-b">There is no Municipal Alpha screen. The record arrives in the assistant they already have open.</p>
-        </div>
-        <div class="rd-not">
-          <p class="rd-not-h">Buy seats</p>
-          <p class="rd-not-b">We price on coverage, recency and depth. One connector serves the team, however many of them use it.</p>
-        </div>
-        <div class="rd-not">
-          <p class="rd-not-h">Run an onboarding project</p>
-          <p class="rd-not-b">Nothing to install, nothing to configure on your side, no data for your team to load before it is useful.</p>
-        </div>
-        <div class="rd-not">
-          <p class="rd-not-h">Hand us your data</p>
-          <p class="rd-not-b">Your CRM answers to your assistant, not to us. Your records stay in your systems and we never ingest them, so there is less of your data in scope from the day you start.</p>
-        </div>
-      </div>
-      <p class="rd-not-shape"><strong>The older bargain was that the product is a place you go, and the work is getting your team to go there.</strong> It is a perfectly good bargain when the interface is the product. Here the answer is the product, so it comes to the place they already are. And what makes that worth connecting to is not the connection: it is the {{ METRICS.municipalities }} municipalities on the other end of it, read down to the small towns that publish to no one.</p>
-    </div>
-  </div>
-
   <!-- QUESTION GRID -->
   {# The 51 real buyer questions from docs/plans/corpus-job-api.md, sorted into
      the three states that design names: answered (a rendered page exists now),
@@ -275,21 +221,6 @@
     <p class="rd-qfoot">Every count on this page is the count of towns whose own documents we hold and have read. It is never an estimate of the market, and a topic that looks thin here is at least as likely to be thin in our coverage as in the country. And where a question is one the towns never put on the record at all, we say so plainly and point you at the nearest one that is answerable, rather than assembling a fluent answer out of documents that do not bear on it.</p>
   </div>
 
-  <!-- DEMO -->
-  <div id="demo" class="rd-wrap" style="margin-bottom:90px;">
-    <div class="rd-panel" style="border-color:var(--rd-accent); display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:clamp(32px,4vw,56px); align-items:start; padding:clamp(24px,4vw,48px);">
-      <div>
-        <p class="rd-eyebrow-tight" style="margin:0 0 14px;">START HERE · 20 MINUTES</p>
-        <h2 style="margin:0 0 16px;">See it work. Your product, your territory, in the tool you already use.</h2>
-        <p class="rd-lead" style="max-width:520px; margin:0 0 24px;">The demo is the product. We open an AI chatbot, ask the municipal record about your market, and pull up a live lead. Then we follow that same lead as far as you want to take it, while you watch. Nothing to install and nothing to connect on your side.</p>
-        <div style="display:flex; gap:16px; flex-wrap:wrap;">
-          <a href="https://calendar.app.google/TeT9KujoL6CDbxRy8" target="_blank" rel="noopener" class="rd-btn rd-btn-primary">Book a Demo</a>
-          <a href="#sample" class="rd-btn rd-btn-outline">See What Comes Back</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <!-- REAL SESSION -->
   <div id="sample" class="rd-band rd-section">
     <div class="rd-wrap" style="padding:0;">
@@ -332,6 +263,75 @@
       <div style="display:flex; gap:28px; flex-wrap:wrap; align-items:center; margin-top:32px;">
         <a href="https://calendar.app.google/TeT9KujoL6CDbxRy8" target="_blank" rel="noopener" style="font-size:15px; font-weight:600;">Ask these questions of your own territory →</a>
         <p class="rd-table-foot" style="margin:0;">EVERY SIGNAL LINKS BACK TO ITS SOURCE DOCUMENT</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- WORKS WHERE YOU ALREADY WORK -->
+  {# The positioning line, promoted out of an 11px footnote under the hero art.
+     Client names are wordmarks, not third-party logos: MCP is an open protocol
+     so "works in" is a true compatibility statement, but a logo row reads as
+     endorsement and we have no such agreement. See redesign.css. #}
+  <div class="rd-works">
+    <div class="rd-wrap rd-works-inner">
+      <div>
+        <p class="rd-eyebrow-tight" style="margin:0 0 14px;">NOTHING TO INSTALL &middot; NO NEW LOGIN &middot; NO SEATS</p>
+        <h2>Built for the way AI-powered teams already work.</h2>
+        <p class="rd-works-sub">Municipal Alpha was built from the ground up for the reality your team is already in. They want the answer and the outcome, not another interface to learn, so the record shows up in the assistant they already have open, in the thread they were already working in.</p>
+        <div class="rd-clients">
+          <div class="rd-client"><span class="rd-client-name">Claude</span><span class="rd-client-note">CONNECTED</span></div>
+          <div class="rd-client"><span class="rd-client-name">ChatGPT</span><span class="rd-client-note">CONNECTED</span></div>
+          <div class="rd-client"><span class="rd-client-name">Gemini</span><span class="rd-client-note">CONNECTED</span></div>
+          <div class="rd-client"><span class="rd-client-name">Copilot</span><span class="rd-client-note">MCP CLIENT</span></div>
+        </div>
+        <p class="rd-works-join">And because the assistant is the one asking, it can set our record beside whatever else your team has already connected. Your CRM, your spreadsheets, your own datasets, joined inside the conversation rather than inside an integration project. Your data answers to your assistant, not to us. It stays in your systems, and we never ingest it.</p>
+        <p class="rd-works-join">And if the work happens in a spreadsheet or a warehouse rather than a chat window, the same record arrives as a file or into your own systems. The rule is that it lands where your team already works, not that it lands in a chat.</p>
+        <p class="rd-clients-foot">ANY MCP-CAPABLE CLIENT &middot; PRICED ON COVERAGE, RECENCY AND DEPTH</p>
+      </div>
+      <div class="rd-connector">
+        <p class="rd-connector-eyebrow">WHAT COMES BACK</p>
+        <img src="{{ SITEURL }}/images/mcp-answer.png" width="1378" height="369" alt="An answer inside an AI assistant naming a Massachusetts town whose FY2027-2031 capital improvements program lists an online electronic permitting system as a Priority 2 project, covering the Conservation Commission, Planning Board and ZBA, with the vendor question still open. The town name is redacted.">
+        <p class="rd-connector-cap">One question, asked in the thread they were already working in. <strong>Back comes a town that has not picked a vendor yet, the stage it has reached, the boards that decide it, and the date it lands on.</strong> The money is there too, but the timing and the open seat are the part a sales team can act on this week.</p>
+      </div>
+    </div>
+    <div class="rd-wrap rd-nots" style="padding-top:clamp(34px,4vw,52px); padding-bottom:clamp(38px,5vw,60px);">
+      <p class="rd-eyebrow-tight" style="margin:0 0 14px;">THE THING YOU WERE ACTUALLY BUYING</p>
+      <p class="rd-not-kicker">Nobody ever wanted the interface.</p>
+      <p class="rd-not-lede">Software asks the same thing of every team that buys it: learn this, adopt this, get into the habit of opening this. That was never the thing you were buying, though. You were buying an answer to a question, and the outcome on the other side of it, and the interface was only what the technology of the day needed in order to hand it to you. That requirement has gone away, and Municipal Alpha is built for the world where it has.</p>
+      <p class="rd-eyebrow-tight" style="margin:26px 0 0;">SO YOUR TEAM NEVER HAS TO</p>
+      <div class="rd-notgrid">
+        <div class="rd-not">
+          <p class="rd-not-h">Learn a new interface</p>
+          <p class="rd-not-b">There is no Municipal Alpha screen. The record arrives in the assistant they already have open.</p>
+        </div>
+        <div class="rd-not">
+          <p class="rd-not-h">Buy seats</p>
+          <p class="rd-not-b">We price on coverage, recency and depth. One connector serves the team, however many of them use it.</p>
+        </div>
+        <div class="rd-not">
+          <p class="rd-not-h">Run an onboarding project</p>
+          <p class="rd-not-b">Nothing to install, nothing to configure on your side, no data for your team to load before it is useful.</p>
+        </div>
+        <div class="rd-not">
+          <p class="rd-not-h">Hand us your data</p>
+          <p class="rd-not-b">Your CRM answers to your assistant, not to us. Your records stay in your systems and we never ingest them, so there is less of your data in scope from the day you start.</p>
+        </div>
+      </div>
+      <p class="rd-not-shape"><strong>The older bargain was that the product is a place you go, and the work is getting your team to go there.</strong> It is a perfectly good bargain when the interface is the product. Here the answer is the product, so it comes to the place they already are. And what makes that worth connecting to is not the connection: it is the {{ METRICS.municipalities }} municipalities on the other end of it, read down to the small towns that publish to no one.</p>
+    </div>
+  </div>
+
+  <!-- DEMO -->
+  <div id="demo" class="rd-wrap" style="margin-bottom:90px;">
+    <div class="rd-panel" style="border-color:var(--rd-accent); display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:clamp(32px,4vw,56px); align-items:start; padding:clamp(24px,4vw,48px);">
+      <div>
+        <p class="rd-eyebrow-tight" style="margin:0 0 14px;">START HERE · 20 MINUTES</p>
+        <h2 style="margin:0 0 16px;">See it work. Your product, your territory, in the tool you already use.</h2>
+        <p class="rd-lead" style="max-width:520px; margin:0 0 24px;">The demo is the product. We open an AI chatbot, ask the municipal record about your market, and pull up a live lead. Then we follow that same lead as far as you want to take it, while you watch. Nothing to install and nothing to connect on your side.</p>
+        <div style="display:flex; gap:16px; flex-wrap:wrap;">
+          <a href="https://calendar.app.google/TeT9KujoL6CDbxRy8" target="_blank" rel="noopener" class="rd-btn rd-btn-primary">Book a Demo</a>
+          <a href="#sample" class="rd-btn rd-btn-outline">See What Comes Back</a>
+        </div>
       </div>
     </div>
   </div>
