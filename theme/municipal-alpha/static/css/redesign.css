@@ -454,3 +454,4 @@ a.rd-qcard:focus-visible { outline: 2px solid var(--rd-accent); outline-offset: 
 .rd-gate-error { color: var(--rd-error); font-size: 14px; margin: 12px 0 0; }
 .rd-gate-note { font-size: 13px; color: var(--rd-text-muted); margin: 14px 0 0; }
 .rd-gate-success { border-left: 3px solid var(--rd-accent); padding-left: 16px; font-size: 16px; line-height: 1.55; color: var(--rd-text-secondary); margin: 0; }
+.rd-not-kicker { font-family: 'Source Serif 4', Georgia, serif; font-size: clamp(22px, 2.6vw, 30px); line-height: 1.25; color: var(--rd-text); margin: 0 0 14px; max-width: 640px; }
