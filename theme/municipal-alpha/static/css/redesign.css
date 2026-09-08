@@ -357,3 +357,28 @@
 .rd-tabs > input:nth-of-type(2):checked ~ .rd-tablist label:nth-child(2) .rd-mono,
 .rd-tabs > input:nth-of-type(3):checked ~ .rd-tablist label:nth-child(3) .rd-mono { color: var(--rd-accent); }
 .rd-tabs > input:focus-visible ~ .rd-tablist label { outline: 2px solid var(--rd-accent); outline-offset: 2px; }
+
+/* --- Question grid (homepage "Ask it something") ---------------------------
+   The 51 real buyer questions, sorted into the three states the corpus job API
+   design names: answered now, answerable-if-commissioned, never published.
+   Every "answered now" tile carries the count of its own destination, so the
+   funnel is checkable before the click rather than claimed after it. */
+.rd-qgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 1px; background: var(--rd-border); border: 1px solid var(--rd-border); margin-top: 26px; }
+.rd-qcol { background: var(--rd-bg); display: flex; flex-direction: column; }
+.rd-qcolhead { padding: 16px 20px 14px; border-bottom: 1px solid var(--rd-border); }
+.rd-qcolhead .rd-qstate { font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: .12em; font-weight: 600; }
+.rd-qcolhead p { margin: 7px 0 0; font-size: 13px; line-height: 1.45; color: var(--rd-text-muted); }
+.is-now  .rd-qstate { color: var(--rd-accent); }
+.is-build .rd-qstate { color: oklch(0.74 0.11 240); }
+.is-never .rd-qstate { color: var(--rd-error); }
+.rd-qcard { display: block; padding: 17px 20px; border-bottom: 1px solid var(--rd-border); text-decoration: none; color: inherit; }
+.rd-qcard:last-child { border-bottom: none; }
+.rd-qcard .rd-q { font-size: 15px; font-weight: 600; line-height: 1.4; color: var(--rd-text); margin: 0; }
+.rd-qcard .rd-qmeta { font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12px; color: var(--rd-text-faint); margin: 8px 0 0; letter-spacing: .03em; }
+.rd-qcard .rd-qnote { font-size: 13.5px; line-height: 1.5; color: var(--rd-text-secondary); margin: 8px 0 0; }
+a.rd-qcard:hover { background: var(--rd-surface); }
+a.rd-qcard:hover .rd-q { color: var(--rd-accent); }
+a.rd-qcard:hover .rd-qmeta { color: var(--rd-accent-muted); }
+a.rd-qcard:focus-visible { outline: 2px solid var(--rd-accent); outline-offset: -2px; }
+.rd-qcard .rd-qcount { color: var(--rd-accent); font-weight: 500; }
+.rd-qfoot { margin: 22px 0 0; font-size: 14px; color: var(--rd-text-muted); max-width: 720px; }

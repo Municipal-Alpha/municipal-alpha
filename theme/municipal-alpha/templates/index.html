@@ -114,6 +114,103 @@
     </div>
   </div>
 
+
+  <!-- QUESTION GRID -->
+  {# The 51 real buyer questions from docs/plans/corpus-job-api.md, sorted into
+     the three states that design names: answered (a rendered page exists now),
+     committed (answerable, not yet answered — the funnel quotes the cost), and
+     refused (never published — carries the adjacent question we CAN answer).
+
+     COUNTS: every figure below was read out of the rendered pages in this same
+     build (scope/class-*-national.html). The three CONTRACT-CLOCK figures in the
+     "not on the record" column are from the corpus-job-api measurement session
+     and are the ONLY numbers here not re-derived from a rendered artifact —
+     re-run them on the VPS before this ships. #}
+  {% set QUESTIONS_NOW = [
+    {"q": "Which towns are rewriting their zoning right now?",
+     "url": "/scope/class-zoning-and-site-plan-national.html", "count": "401", "unit": "towns on the record"},
+    {"q": "Where is PFAS forcing a spend?",
+     "url": "/scope/class-pfas-and-contaminants-national.html", "count": "261", "unit": "towns on the record"},
+    {"q": "Which towns are moving on housing density?",
+     "url": "/scope/class-housing-density-national.html", "count": "246", "unit": "towns on the record"},
+    {"q": "Who is regulating data centers, and where?",
+     "url": "/scope/class-data-center-regulation-national.html", "count": "72", "unit": "towns on the record"},
+    {"q": "What is moving across my whole sector this quarter?",
+     "url": "/scope/area-development.html", "count": "8", "unit": "areas · 47 topics ranked by movement"},
+    {"q": "What is going on in one specific town?",
+     "url": "/towns/", "count": "108", "unit": "towns · deepest in ME NH MA VT CT"}
+  ] %}
+  {% set QUESTIONS_BUILD = [
+    {"q": "Which towns are most likely to buy what I sell?",
+     "note": "The components are measured; the scorer is not built. It needs a definition of \"a lead\" we are willing to commit to, agreed with you first."},
+    {"q": "Where are my competitors winning, and who did they displace?",
+     "note": "Blocked on entity resolution — the record spells one vendor five ways in a single town. This is the highest-leverage thing on our own build list."},
+    {"q": "What have you NOT found in my accounts?",
+     "note": "The gap list, priced per blank. It is the same object as our extraction queue, which is why naming your accounts is what moves them up it."}
+  ] %}
+  {% set QUESTIONS_NEVER = [
+    {"q": "Which of these contracts come up for renewal next year?",
+     "note": "We read 1,010 utility agreements. Thirteen carry a term you could quote. We will not pad the rest with fiscal-year labels and call them contract dates.",
+     "adj": "What we can tell you instead: 38% carry a migration signal — and a migration usually picks the vendor before any renewal date arrives."},
+    {"q": "How are residents spending their state relief checks?",
+     "note": "Municipal minutes never record it. A keyword search returns hundreds of real, correctly-quoted, entirely irrelevant documents about housing and water affordability.",
+     "adj": "We refuse this rather than weave those into a fluent answer. That refusal is the product working."}
+  ] %}
+
+  <div id="ask" class="rd-wrap rd-section" style="padding-top:0;">
+    <p class="rd-eyebrow-tight" style="margin:0 0 14px;">NO FORM · NOTHING TO INSTALL</p>
+    <h2 style="margin:0 0 14px; max-width:760px;">Ask it something now</h2>
+    <p class="rd-lead" style="max-width:700px; margin:0 0 4px;">These are real questions buyers have put to us, sorted by what we can actually do about them today. The ones on the left are a page, not a form &mdash; click one.</p>
+
+    <div class="rd-qgrid">
+      <div class="rd-qcol is-now">
+        <div class="rd-qcolhead">
+          <span class="rd-qstate">ANSWERED NOW</span>
+          <p>A page already exists. Each says how many towns it stands on, before you click.</p>
+        </div>
+        {% for x in QUESTIONS_NOW %}
+        <a class="rd-qcard" href="{{ SITEURL }}{{ x.url }}">
+          <p class="rd-q">{{ x.q }}</p>
+          <p class="rd-qmeta"><span class="rd-qcount">{{ x.count }}</span> {{ x.unit }} &rarr;</p>
+        </a>
+        {% endfor %}
+      </div>
+
+      <div class="rd-qcol is-build">
+        <div class="rd-qcolhead">
+          <span class="rd-qstate">WE&rsquo;D HAVE TO BUILD IT</span>
+          <p>Answerable, not yet answered. We tell you what it takes and what it costs before you commit.</p>
+        </div>
+        {% for x in QUESTIONS_BUILD %}
+        <div class="rd-qcard">
+          <p class="rd-q">{{ x.q }}</p>
+          <p class="rd-qnote">{{ x.note }}</p>
+        </div>
+        {% endfor %}
+        <a class="rd-qcard" href="{{ SITEURL }}/free-lead-intake/">
+          <p class="rd-qmeta" style="color:var(--rd-accent);">NAME YOUR ACCOUNTS &rarr;</p>
+          <p class="rd-qnote" style="margin-top:6px;">Tell us the towns you sell into and we will come back with what we hold, what is missing, and what closing each blank takes. No call required.</p>
+        </a>
+      </div>
+
+      <div class="rd-qcol is-never">
+        <div class="rd-qcolhead">
+          <span class="rd-qstate">NOT ON THE RECORD</span>
+          <p>Towns never published it. We say so, and hand you the nearest question that is answerable.</p>
+        </div>
+        {% for x in QUESTIONS_NEVER %}
+        <div class="rd-qcard">
+          <p class="rd-q">{{ x.q }}</p>
+          <p class="rd-qnote">{{ x.note }}</p>
+          <p class="rd-qnote" style="color:var(--rd-text-muted);">{{ x.adj }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <p class="rd-qfoot">Every count on this page is the count of towns whose own documents we hold and have read. It is never an estimate of the market, and a topic that looks thin here is at least as likely to be thin in our coverage as in the country.</p>
+  </div>
+
   <!-- DEMO -->
   <div id="demo" class="rd-wrap" style="margin-bottom:90px;">
     <div class="rd-panel" style="border-color:var(--rd-accent); display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:clamp(32px,4vw,56px); align-items:start; padding:clamp(24px,4vw,48px);">
