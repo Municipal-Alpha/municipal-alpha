@@ -18,7 +18,7 @@ full prompt back at that address within the hour.
 That is the trade, and it is a fair one: the prompt took real work, it is written
 to be run *against* us, and we would rather know who is evaluating us than not.
 
-**What arrives.** The full evaluation prompt, hardened so a lazy run cannot fake
+**What arrives.** The full evaluation prompt, hardened so a lazy run cannot bluff
 its way to an easy answer. It forces verifiable hands-on work with fetched source
 URLs, labels every number as fetched, derived or prior knowledge, makes the model
 audit our own framing for bias and rewrite it neutrally, and asks it to steelman
