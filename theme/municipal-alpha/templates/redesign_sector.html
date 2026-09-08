@@ -27,7 +27,7 @@
       <h1 class="rd-h1-sector">{{ s.headline }}</h1>
       <p class="rd-lead" style="max-width:520px; margin:0 0 32px;">{{ s.sub }}</p>
       <div style="display:flex; gap:14px; flex-wrap:wrap; margin-bottom:18px;">
-        <a href="{{ SITEURL }}/free-lead-intake/" class="rd-btn rd-btn-primary">{{ s.cta_label }}</a>
+        <a href="{{ s.cta_url | default(SITEURL + '/free-lead-intake/', true) }}" class="rd-btn rd-btn-primary">{{ s.cta_label }}</a>
         <a href="#sample" class="rd-btn rd-btn-outline">See Sample Data</a>
       </div>
       <p class="rd-cta-note">{{ s.cta_note }}</p>
@@ -157,7 +157,7 @@
       <h2 style="margin:0 0 16px; max-width:720px;">{{ s.cta_title }}</h2>
       <p style="font-size:16px; color:var(--rd-text-secondary); margin:0 0 26px; max-width:560px;">{{ s.cta_body }}</p>
       <div style="display:flex; gap:14px; flex-wrap:wrap;">
-        <a href="{{ SITEURL }}/free-lead-intake/" class="rd-btn rd-btn-primary">{{ s.cta_label }}</a>
+        <a href="{{ s.cta_url | default(SITEURL + '/free-lead-intake/', true) }}" class="rd-btn rd-btn-primary">{{ s.cta_label }}</a>
         <a href="{{ SITEURL }}/" class="rd-btn rd-btn-outline">See the Full Platform</a>
       </div>
     </div>

@@ -87,21 +87,22 @@
       "workflow": [
         {
           "n": "01",
-          "text": "You send us what you sell, your ICP, and your territory."
+          "text": "We show the municipal record answering questions inside an AI chatbot."
         },
         {
           "n": "02",
-          "text": "We write the query and run it weekly against the corpus."
+          "text": "A live signal in your territory, pulled from the record while you watch."
         },
         {
           "n": "03",
-          "text": "You get a spreadsheet your ops team can load into your own CRM."
+          "text": "Follow that lead as deep as you want it taken, then move it to your CRM."
         }
       ],
-      "cta_label": "Get One Free Lead",
-      "cta_note": "One intake form. One qualified lead in your territory. No cost.",
-      "cta_title": "One free assessment. At least one lead worth your time.",
-      "cta_body": "Tell us what you sell, your ICP, and your territory. We come back with a live signal, the decision maker on record, and why it is the one to act on."
+      "cta_label": "Book the Demo",
+      "cta_note": "Twenty minutes, on your territory, in the tool your team already uses.",
+      "cta_title": "See it work, on your territory.",
+      "cta_body": "We open an AI chatbot, ask the record about your market, and pull up a live lead. Then we take it as deep as you want it taken, while you watch.",
+      "cta_url": "https://calendar.app.google/TeT9KujoL6CDbxRy8"
     },
     "newsrooms": {
       "slug": "for-newsroom-teams",

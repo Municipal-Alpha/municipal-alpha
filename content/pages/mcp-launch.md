@@ -1,10 +1,10 @@
 Title: Ask your own AI what is happening in local government, before it happens
 Slug: mcp-launch
-Status: hidden
-Summary: Query municipal precursor intelligence across 4,500+ U.S. municipalities, from inside your own AI.
+Sortorder: 24
+Summary: Query municipal precursor intelligence across 4,500+ U.S. municipalities, from inside the AI assistant your team already uses.
 header_image: mcp-launch-hero.png
 
-Municipal Alpha is opening a first-of-its-kind integration: a Model Context Protocol (MCP) connector that lets you query Municipal Alpha's municipal precursor-signal corpus directly from your own AI assistant. Ask a question in Claude, or any MCP-capable client, and Municipal Alpha answers with source-cited, dated signals pulled straight from local government records.
+Municipal Alpha runs a Model Context Protocol (MCP) connector that lets you query our municipal precursor-signal corpus directly from your own AI assistant. Ask a question in any MCP-capable client, and Municipal Alpha answers with source-cited, dated signals pulled straight from local government records.
 
 There is no new dashboard to learn and no export to wrangle. The intelligence shows up where you already work, inside your own AI.
 
@@ -16,7 +16,7 @@ The corpus spans the documents local governments actually produce: meeting minut
 
 ## Why it matters
 
-The edge is upstream of the decision. The discussion, the draft ordinance, the early agenda item surface months before the permit, the vote, or the RFP. Municipal Alpha captures that signal across thousands of U.S. municipalities, and now delivers it through the interface your team already uses.
+The edge is before the decision. The discussion, the draft ordinance and the early agenda item are on the record while the outcome is still open, and they are routinely dated months ahead of the permit or award that eventually follows them. In the Amherst NH tower chain we traced 17 such signals across 32 months, starting from a coverage complaint in the minutes. Municipal Alpha captures that signal across thousands of U.S. municipalities, and delivers it through the interface your team already uses.
 
 ## What it looks like in your AI
 
@@ -33,6 +33,6 @@ Every answer carries the municipality, the board, the date, and a path back to t
 
 ## How to get it
 
-MCP access is provisioned per client, scoped to your markets and the signal types you track. It is offered to Municipal Alpha clients today.
+MCP access is provisioned per client, scoped to your markets and the signal types you track. Our pricing covers coverage, recency and depth rather than seats, so one connector serves your whole team.
 
-To request access, email matt@municipalalpha.com.
+**[Book the demo](https://calendar.app.google/TeT9KujoL6CDbxRy8)** and we will show you the connector answering questions about your own territory.
