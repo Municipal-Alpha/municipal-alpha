@@ -123,7 +123,7 @@
         <p class="rd-lead" style="max-width:520px; margin:0 0 24px;">The demo is the product. We open an AI chatbot, ask the municipal record about your market, and pull up a live lead. Then we follow that same lead as far as you want to take it, while you watch. Nothing to install and nothing to connect on your side.</p>
         <div style="display:flex; gap:16px; flex-wrap:wrap;">
           <a href="https://calendar.app.google/TeT9KujoL6CDbxRy8" target="_blank" rel="noopener" class="rd-btn rd-btn-primary">Book the Demo</a>
-          <a href="#sample" class="rd-btn rd-btn-outline">See the Signal Fields</a>
+          <a href="#sample" class="rd-btn rd-btn-outline">See What Comes Back</a>
         </div>
       </div>
       <div class="rd-seam-grid" style="grid-template-columns:1fr;">
@@ -143,9 +143,41 @@
     </div>
   </div>
 
-  <!-- SAMPLE DATA -->
+  <!-- REAL SESSION -->
   <div id="sample" class="rd-band rd-section">
     <div class="rd-wrap" style="padding:0;">
+      <h2 style="margin:0 0 12px; max-width:760px;">What comes back when you ask</h2>
+      <p style="font-size:16px; color:var(--rd-text-muted); max-width:680px; margin:0 0 12px;">One session end to end: the question, the signals the record gave back, and the same six accounts sitting in the CRM twenty minutes later. A permitting software vendor asked which New England towns had budgeted for what they sell.</p>
+      <p class="rd-table-foot" style="margin:0 0 40px;">RUN 8 SEPTEMBER 2026 · TOWN NAMES REDACTED · EVERYTHING ELSE IS THE UNEDITED SESSION</p>
+
+      <div style="display:flex; flex-direction:column; gap:clamp(32px,4vw,52px);">
+        <div>
+          <p class="rd-eyebrow-tight" style="margin:0 0 10px;">01 · ASK, THEN GO DEEPER</p>
+          <p style="font-size:15px; color:var(--rd-text-secondary); max-width:680px; margin:0 0 16px;">Asked to look harder, it widened its own search from 146 documents to 158 and found another town in the process. You decide how far each lead is worth taking.</p>
+          <img src="{{ SITEURL }}/images/demo-ask.png" alt="An AI assistant using the Municipal Alpha connector, widening its own search across municipal records and surfacing an additional town with a budgeted permitting project." width="1500" height="558" loading="lazy" style="width:100%; height:auto; display:block; border:1px solid var(--rd-rule);">
+        </div>
+
+        <div>
+          <p class="rd-eyebrow-tight" style="margin:0 0 10px;">02 · WHAT THE RECORD GIVES BACK</p>
+          <p style="font-size:15px; color:var(--rd-text-secondary); max-width:680px; margin:0 0 16px;">Six towns across four states, each with the budget line, the dollar figure, the stage it has reached, and the incumbent where the record names one. One of them had put in writing that it had not chosen a vendor yet.</p>
+          <img src="{{ SITEURL }}/images/demo-signals.png" alt="Six municipalities with budgeted permitting software projects, each showing the dollar amount, the procurement stage and the quoted language from the town's own record. Town names are redacted." width="1500" height="769" loading="lazy" style="width:100%; height:auto; display:block; border:1px solid var(--rd-rule);">
+        </div>
+
+        <div>
+          <p class="rd-eyebrow-tight" style="margin:0 0 10px;">03 · INTO YOUR CRM</p>
+          <p style="font-size:15px; color:var(--rd-text-secondary); max-width:680px; margin:0 0 16px;">The same six, created as companies in the same session. That step runs through your CRM's own connector, so it is not an integration we built or one you wait on us for.</p>
+          <img src="{{ SITEURL }}/images/demo-crm.png" alt="A CRM company list showing the same six municipalities created as records within the same session, all timestamped minutes apart. Company and city names are redacted." width="1500" height="758" loading="lazy" style="width:100%; height:auto; display:block; border:1px solid var(--rd-rule);">
+        </div>
+      </div>
+
+      <div style="display:flex; gap:28px; flex-wrap:wrap; align-items:center; margin-top:36px;">
+        <a href="https://calendar.app.google/TeT9KujoL6CDbxRy8" target="_blank" rel="noopener" style="font-size:15px; font-weight:600;">Ask these questions of your own territory →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- SAMPLE DATA -->
+  <div class="rd-wrap rd-section">
       <h2 style="margin:0 0 12px; max-width:760px;">Five fields behind every signal</h2>
       <p style="font-size:16px; color:var(--rd-text-muted); max-width:640px; margin:0 0 40px;">Every signal carries the same five: what happened, where, the date it became public, the contact on record, and why it is worth acting on. Ask for four of them or four hundred, and take any one further in the same conversation.</p>
       <div class="rd-table-wrap">
@@ -170,11 +202,7 @@
           {% endfor %}
         </div>
       </div>
-      <div style="display:flex; gap:28px; flex-wrap:wrap; align-items:center; margin-top:28px;">
-        <a href="https://calendar.app.google/TeT9KujoL6CDbxRy8" target="_blank" rel="noopener" style="font-size:15px; font-weight:600;">Ask these questions of your own territory →</a>
-        <p class="rd-table-foot" style="margin:0;">EVERY ROW LINKS BACK TO THE SOURCE DOCUMENT</p>
-      </div>
-    </div>
+      <p class="rd-table-foot" style="margin:28px 0 0;">EVERY ROW LINKS BACK TO THE SOURCE DOCUMENT</p>
   </div>
 
   <!-- CUSTOM QUERIES -->
