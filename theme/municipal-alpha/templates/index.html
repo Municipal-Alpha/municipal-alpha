@@ -68,6 +68,28 @@
 {% endblock %}
 
 {% block content %}
+{# The three steps are defined ONCE and rendered in three places (hero list,
+   demo cards, evidence tabs). Edit here and every surface moves together. #}
+{% set STEPS = [
+  {"n": "01",
+   "label": "Find your most relevant leads",
+   "body": "Ask in the AI tool your team already has open. The record comes back filtered to what you sell and where you sell it.",
+   "note": "Asked to look harder, it widened its own search from 146 documents to 158 and found another town.",
+   "img": "demo-ask.png", "w": 1400, "h": 631,
+   "alt": "An AI assistant using the Municipal Alpha connector, widening its own search across municipal records and surfacing an additional town with a budgeted permitting project."},
+  {"n": "02",
+   "label": "Research them as deep as it deserves",
+   "body": "Take any one of them further in the same conversation: the document, the board, the history, the people on record.",
+   "note": "Six towns across four states, each with the budget line, the dollar figure and the stage it has reached.",
+   "img": "demo-signals.png", "w": 1400, "h": 1003,
+   "alt": "Six municipalities with budgeted permitting software projects, each showing the dollar amount, the procurement stage and the quoted language from the town's own record. Town names are redacted."},
+  {"n": "03",
+   "label": "Move what you find into your CRM",
+   "body": "That step runs through your CRM's own connector, so it is not an integration we built or one you wait on us for.",
+   "note": "The same six, created as company records in the same session.",
+   "img": "demo-crm.png", "w": 1400, "h": 788,
+   "alt": "A CRM company list showing six municipalities created as records within the same session, all timestamped minutes apart. Company and city names are redacted."}
+] %}
 <div class="rd-nav-page">
 
   <!-- HERO -->
@@ -77,9 +99,9 @@
       <h1>Win more public contracts by <em>having the intelligence first.</em></h1>
       <p class="rd-lead" style="max-width:500px; margin:22px 0 18px;">Municipal Alpha puts the municipal record in your AI tool:</p>
       <ul style="list-style:none; padding:0; margin:0 0 32px; max-width:500px; display:flex; flex-direction:column; gap:10px;">
-        <li style="display:flex; gap:12px; align-items:baseline; font-size:17px; color:var(--rd-text-secondary);"><span class="rd-mono" style="color:var(--rd-accent); font-size:13px;">01</span>Find your most relevant leads</li>
-        <li style="display:flex; gap:12px; align-items:baseline; font-size:17px; color:var(--rd-text-secondary);"><span class="rd-mono" style="color:var(--rd-accent); font-size:13px;">02</span>Research them as deep as it deserves</li>
-        <li style="display:flex; gap:12px; align-items:baseline; font-size:17px; color:var(--rd-text-secondary);"><span class="rd-mono" style="color:var(--rd-accent); font-size:13px;">03</span>Move what you find into your CRM</li>
+        {% for s in STEPS %}
+        <li style="display:flex; gap:12px; align-items:baseline; font-size:17px; color:var(--rd-text-secondary);"><span class="rd-mono" style="color:var(--rd-accent); font-size:13px;">{{ s.n }}</span>{{ s.label }}</li>
+        {% endfor %}
       </ul>
       <div style="display:flex; gap:14px; flex-wrap:wrap; margin-bottom:18px;">
         <a href="https://calendar.app.google/TeT9KujoL6CDbxRy8" target="_blank" rel="noopener" class="rd-btn rd-btn-primary">Book a Demo</a>
@@ -132,18 +154,13 @@
         </div>
       </div>
       <div class="rd-seam-grid" style="grid-template-columns:1fr;">
+        {% for s in STEPS %}
         <div class="rd-card">
-          <p class="rd-eyebrow-tight" style="margin:0 0 6px;">STEP 1 · SEE IT WORK</p>
-          <p style="font-size:14px; color:var(--rd-text-secondary); margin:0;">We show the municipal record answering questions inside an AI chatbot.</p>
+          <p class="rd-eyebrow-tight" style="margin:0 0 6px;">STEP {{ s.n }}</p>
+          <p style="font-size:15px; font-weight:600; color:var(--rd-text); margin:0 0 6px;">{{ s.label }}</p>
+          <p style="font-size:14px; color:var(--rd-text-secondary); margin:0;">{{ s.body }}</p>
         </div>
-        <div class="rd-card">
-          <p class="rd-eyebrow-tight" style="margin:0 0 6px;">STEP 2 · FIND A LEAD</p>
-          <p style="font-size:14px; color:var(--rd-text-secondary); margin:0;">A live signal in your territory, pulled from {{ METRICS.municipalities }} jurisdictions while you watch.</p>
-        </div>
-        <div class="rd-card">
-          <p class="rd-eyebrow-tight" style="margin:0 0 6px;">STEP 3 · GO DEEPER</p>
-          <p style="font-size:14px; color:var(--rd-text-secondary); margin:0;">Follow that lead down: the document, the board, the history, the people on record. You say where to stop.</p>
-        </div>
+        {% endfor %}
       </div>
     </div>
   </div>
@@ -152,30 +169,32 @@
   <div id="sample" class="rd-band rd-section">
     <div class="rd-wrap" style="padding:0;">
       <h2 style="margin:0 0 12px; max-width:760px;">What comes back when you ask</h2>
-      <p style="font-size:16px; color:var(--rd-text-muted); max-width:680px; margin:0 0 12px;">One session end to end: the question, the signals the record gave back, and the same six accounts sitting in the CRM twenty minutes later. A permitting software vendor asked which New England towns had budgeted for what they sell.</p>
-      <p class="rd-table-foot" style="margin:0 0 40px;">RUN 8 SEPTEMBER 2026 · TOWN NAMES REDACTED · EVERYTHING ELSE IS THE UNEDITED SESSION</p>
+      <p style="font-size:16px; color:var(--rd-text-muted); max-width:680px; margin:0 0 12px;">One session end to end. A permitting software vendor asked which New England towns had budgeted for what they sell.</p>
+      <p class="rd-table-foot" style="margin:0 0 32px;">RUN 8 SEPTEMBER 2026 · TOWN NAMES REDACTED · EVERYTHING ELSE IS THE UNEDITED SESSION</p>
 
-      <div style="display:flex; flex-direction:column; gap:clamp(40px,5vw,64px); max-width:900px;">
-        <div>
-          <p class="rd-eyebrow-tight" style="margin:0 0 10px;">01 · ASK, THEN GO DEEPER</p>
-          <p style="font-size:15px; color:var(--rd-text-secondary); max-width:680px; margin:0 0 16px;">Asked to look harder, it widened its own search from 146 documents to 158 and found another town in the process. You decide how far each lead is worth taking.</p>
-          <div style="padding:10px; background:var(--rd-surface); border:1px solid var(--rd-border); border-radius:4px;"><img src="{{ SITEURL }}/images/demo-ask.png" width="1400" height="631" alt="An AI assistant using the Municipal Alpha connector, widening its own search across municipal records and surfacing an additional town with a budgeted permitting project." loading="lazy" style="width:100%; height:auto; display:block; border-radius:3px;"></div>
+      <div class="rd-tabs">
+        {% for s in STEPS %}
+        <input type="radio" name="rd-session-tab" id="rd-tab-{{ s.n }}"{% if loop.first %} checked{% endif %}>
+        {% endfor %}
+        <div class="rd-tablist">
+          {% for s in STEPS %}
+          <label for="rd-tab-{{ s.n }}"><span class="rd-mono">{{ s.n }}</span>{{ s.label }}</label>
+          {% endfor %}
         </div>
-
-        <div>
-          <p class="rd-eyebrow-tight" style="margin:0 0 10px;">02 · WHAT THE RECORD GIVES BACK</p>
-          <p style="font-size:15px; color:var(--rd-text-secondary); max-width:680px; margin:0 0 16px;">Six towns across four states, each with the budget line, the dollar figure, the stage it has reached, and the incumbent where the record names one. One of them had put in writing that it had not chosen a vendor yet.</p>
-          <div style="padding:10px; background:var(--rd-surface); border:1px solid var(--rd-border); border-radius:4px;"><img src="{{ SITEURL }}/images/demo-signals.png" width="1400" height="1003" alt="Six municipalities with budgeted permitting software projects, each showing the dollar amount, the procurement stage and the quoted language from the town's own record. Town names are redacted." loading="lazy" style="width:100%; height:auto; display:block; border-radius:3px;"></div>
-        </div>
-
-        <div>
-          <p class="rd-eyebrow-tight" style="margin:0 0 10px;">03 · INTO YOUR CRM</p>
-          <p style="font-size:15px; color:var(--rd-text-secondary); max-width:680px; margin:0 0 16px;">The same six, created as companies in the same session. That step runs through your CRM's own connector, so it is not an integration we built or one you wait on us for.</p>
-          <div style="padding:10px; background:var(--rd-surface); border:1px solid var(--rd-border); border-radius:4px;"><img src="{{ SITEURL }}/images/demo-crm.png" width="1400" height="788" alt="A CRM company list showing the same six municipalities created as records within the same session, all timestamped minutes apart. Company and city names are redacted." loading="lazy" style="width:100%; height:auto; display:block; border-radius:3px;"></div>
+        <div class="rd-tabpanels">
+          {% for s in STEPS %}
+          <div class="rd-tabpanel">
+            <p style="font-size:15px; color:var(--rd-text-secondary); max-width:680px; margin:0 0 18px;">{{ s.body }}</p>
+            <div class="rd-figure">
+              <img src="{{ SITEURL }}/images/{{ s.img }}" width="{{ s.w }}" height="{{ s.h }}" loading="lazy" alt="{{ s.alt }}">
+            </div>
+            <p class="rd-table-foot" style="margin:14px 0 0;">{{ s.note }}</p>
+          </div>
+          {% endfor %}
         </div>
       </div>
 
-      <div style="display:flex; gap:28px; flex-wrap:wrap; align-items:center; margin-top:36px;">
+      <div style="margin-top:32px;">
         <a href="https://calendar.app.google/TeT9KujoL6CDbxRy8" target="_blank" rel="noopener" style="font-size:15px; font-weight:600;">Ask these questions of your own territory →</a>
       </div>
     </div>
