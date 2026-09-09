@@ -68,8 +68,11 @@
 {% endblock %}
 
 {% block content %}
-{# The three steps are defined ONCE and rendered in three places (hero list,
-   demo cards, evidence tabs). Edit here and every surface moves together. #}
+{# The three steps are defined ONCE and rendered in two places (the demo
+   cards and the evidence tabs). Edit here and both surfaces move together.
+   They were also listed in the hero until 2026-09-09; removed on founder
+   direction, because the hero's job is the promise and the CTA, and the steps
+   restate below what the reader has not agreed to care about yet. #}
 {% set STEPS = [
   {"n": "01",
    "label": "Find your most relevant leads",
@@ -95,14 +98,9 @@
   <!-- HERO -->
   <div class="rd-wrap" style="padding-top:clamp(56px,8vw,110px); padding-bottom:clamp(48px,7vw,90px); display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:clamp(36px,5vw,64px); align-items:center;">
     <div>
-      <p class="rd-eyebrow">MUNICIPAL SIGNAL IN THE AI TOOLS YOUR REVENUE TEAMS ALREADY USE</p>
-      <h1>Win more <em>public contracts</em></h1>
-      <p class="rd-lead" style="max-width:520px; margin:24px 0 20px; font-size:21px; line-height:1.4; color:var(--rd-text); font-weight:500;">Get the full municipal record straight in your <span style="white-space:nowrap;">AI-tool:</span></p>
-      <ul style="list-style:none; padding:0; margin:0 0 32px; max-width:500px; display:flex; flex-direction:column; gap:10px;">
-        {% for s in STEPS %}
-        <li style="display:flex; gap:12px; align-items:baseline; font-size:17px; color:var(--rd-text-secondary);"><span class="rd-mono" style="color:var(--rd-accent); font-size:13px;">{{ s.n }}</span>{{ s.label }}</li>
-        {% endfor %}
-      </ul>
+      <p class="rd-eyebrow">FOR TEAMS THAT SELL TO LOCAL GOVERNMENT</p>
+      <h1>Win and retain more <em>public contracts</em></h1>
+      <p class="rd-lead" style="max-width:520px; margin:24px 0 32px; font-size:21px; line-height:1.4; color:var(--rd-text); font-weight:500;">What towns are planning and buying, inside the AI tool your team already has open.</p>
       <div style="display:flex; gap:14px; flex-wrap:wrap; margin-bottom:18px;">
         <a href="https://calendar.app.google/TeT9KujoL6CDbxRy8" target="_blank" rel="noopener" class="rd-btn rd-btn-primary">Book a Demo</a>
         <a href="{{ SITEURL }}/free-lead-intake/" class="rd-btn rd-btn-outline">Get One Free Lead</a>
@@ -190,13 +188,21 @@
           <p style="font-size:14px; color:var(--rd-text-secondary); margin:0;">Jurisdictions matching your best-fit accounts, by behavior not firmographics.</p>
         </div>
       </div>
+      {# Ordered earliest to latest on purpose. A renewal date or an expiring
+         contract is a keyword, and a keyword is the LAST thing a losing account
+         produces. The signals that actually precede churn are softer and
+         unstructured: someone complaining in public comment, the incumbent
+         named in passing in a check register, a town whose budget is under
+         pressure so every line gets re-argued. Founder direction 2026-09-09. #}
       <div class="rd-card">
         <p class="rd-eyebrow-tight" style="margin:0 0 14px;">PROTECT THE BOOK</p>
-        <p style="font-family:'Source Serif 4',serif; font-size:22px; margin:0 0 20px; color:var(--rd-text);">Renewal risk, flagged while there's still time to work it.</p>
+        <p style="font-family:'Source Serif 4',serif; font-size:22px; margin:0 0 20px; color:var(--rd-text);">Churn shows up as a complaint long before it shows up as an RFP.</p>
         <div style="display:flex; flex-direction:column; gap:12px;">
-          <p style="font-size:14px; color:var(--rd-text-secondary); margin:0;">A competitor's name entering minutes in a jurisdiction you hold.</p>
-          <p style="font-size:14px; color:var(--rd-text-secondary); margin:0;">An RFP drafted for a service you're already delivering.</p>
-          <p style="font-size:14px; color:var(--rd-text-secondary); margin:0;">Your champion leaving, or the line item moving under a new department.</p>
+          <p style="font-size:14px; color:var(--rd-text-secondary); margin:0;">A resident or a department head complaining about the service you provide, on the record, in a public meeting.</p>
+          <p style="font-size:14px; color:var(--rd-text-secondary); margin:0;">Your own name in passing: a line in a check register, a mention in a packet, a note in minutes nobody flagged.</p>
+          <p style="font-size:14px; color:var(--rd-text-secondary); margin:0;">A town under budget pressure, where every line gets re-argued and yours is one of them.</p>
+          <p style="font-size:14px; color:var(--rd-text-secondary); margin:0;">Your champion leaving, or your line item moving under a new department.</p>
+          <p style="font-size:14px; color:var(--rd-text-secondary); margin:0;">A competitor's name in the minutes, or an RFP drafted for what you already deliver, by which point the decision is mostly made.</p>
         </div>
       </div>
     </div>
