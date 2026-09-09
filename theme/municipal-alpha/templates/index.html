@@ -76,22 +76,25 @@
 {% set STEPS = [
   {"n": "01",
    "label": "Find your most relevant leads",
+   "ask": "Which towns in New England have budgeted for permitting software but not picked a vendor?",
    "body": "Ask in the AI tool your team already has open. The record comes back filtered to what you sell and where you sell it.",
-   "note": "Asked to look harder, it widened its own search from 146 documents to 158 and found another town.",
-   "img": "demo-ask.png", "w": 1400, "h": 631,
-   "alt": "An AI assistant using the Municipal Alpha connector, widening its own search across municipal records and surfacing an additional town with a budgeted permitting project."},
+   "note": "Four towns across three states, each with the budget line, the dollar figure, the stage it has reached and the incumbent where the record names one.",
+   "img": "demo-ask.png", "w": 1496, "h": 848,
+   "alt": "An AI assistant using the Municipal Alpha connector returns four New England towns with budgeted permitting software projects, each with the dollar figure, the funding source, the procurement stage and the incumbent vendor where the record names one. Town names are redacted."},
   {"n": "02",
    "label": "Research them as deep as it deserves",
+   "ask": "Get me more detailed information on [town] that helps me understand in more detail who to speak to and what potential pain points the town mentions",
    "body": "Take any one of them further in the same conversation: the document, the board, the history, the people on record.",
-   "note": "Six towns across four states, each with the budget line, the dollar figure and the stage it has reached.",
-   "img": "demo-signals.png", "w": 1400, "h": 1003,
-   "alt": "Six municipalities with budgeted permitting software projects, each showing the dollar amount, the procurement stage and the quoted language from the town's own record. Town names are redacted."},
+   "note": "Two things that would have cost you the call. The fire department already owns a system you would be pitching against, and a neighbouring town shares services, so procurement may be shared too.",
+   "img": "demo-signals.png", "w": 1454, "h": 392,
+   "alt": "The assistant answering a follow-up question about one town, naming two risks to check before calling: the fire department already runs a competing system, and a neighbouring municipality shares services and may share procurement. Town names are redacted."},
   {"n": "03",
    "label": "Move what you find into your CRM",
-   "body": "That step runs through your CRM's own connector, so it is not an integration we built or one you wait on us for.",
-   "note": "The same six, created as company records in the same session, each carrying the budget line that surfaced it.",
-   "img": "demo-crm.png", "w": 1400, "h": 788,
-   "alt": "A CRM company list showing six municipalities created as records within the same session, each with a description field carrying the budgeted amount and the funding source. Town names are redacted; the state is left visible."}
+   "ask": "Push all the details on [town] into HubSpot",
+   "body": "That step runs through your CRM\u2019s own connector, so it is not an integration we built or one you wait on us for.",
+   "note": "Seven contacts created against the company record, each carrying the role it plays in this deal rather than a job title alone.",
+   "img": "demo-crm.png", "w": 1488, "h": 934,
+   "alt": "A CRM showing seven contacts created against one municipality\u2019s company record, each with a job title and the role that person plays in the deal, including the champion, the sponsor, the signer and an integration gatekeeper. Staff names are redacted."}
 ] %}
 <div class="rd-nav-page">
 
@@ -140,8 +143,8 @@
   <div id="sample" class="rd-band rd-section">
     <div class="rd-wrap" style="padding:0;">
       <h2 style="margin:0 0 12px; max-width:760px;">What comes back when you ask</h2>
-      <p style="font-size:16px; color:var(--rd-text-muted); max-width:680px; margin:0 0 12px;">One session end to end. A permitting software vendor asked which New England towns had budgeted for what they sell.</p>
-      <p class="rd-table-foot" style="margin:0 0 32px;">RUN 8 SEPTEMBER 2026 · TOWN NAMES REDACTED · EVERYTHING ELSE IS THE UNEDITED SESSION</p>
+      <p style="font-size:16px; color:var(--rd-text-muted); max-width:680px; margin:0 0 12px;">One conversation, three turns, run for a permitting software vendor: find the towns, take one of them apart, push it into the CRM.</p>
+      <p class="rd-table-foot" style="margin:0 0 32px;">RUN 9 SEPTEMBER 2026 · TOWN AND STAFF NAMES REDACTED · EVERYTHING ELSE IS THE UNEDITED SESSION</p>
 
       <div class="rd-tabs">
         {% for s in STEPS %}
@@ -156,6 +159,8 @@
           {% for s in STEPS %}
           <div class="rd-tabpanel">
             <div class="rd-tabcopy">
+              <p class="rd-mono" style="font-size:11px; letter-spacing:0.1em; color:var(--rd-text-muted); margin:0 0 8px;">WHAT WAS ASKED</p>
+              <p style="font-size:15px; color:var(--rd-text); margin:0 0 20px; padding-left:14px; border-left:2px solid var(--rd-accent);">{{ s.ask }}</p>
               <p style="font-size:16px; color:var(--rd-text-secondary); margin:0 0 18px;">{{ s.body }}</p>
               <p class="rd-table-foot" style="margin:0;">{{ s.note }}</p>
             </div>
