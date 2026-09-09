@@ -9,14 +9,21 @@
  * /free-lead-intake/ do not carry it and are left completely alone, so one form
  * serves both flows and no existing behaviour changes.
  *
- * INSTALL (Matt, one time, ~2 minutes):
- *   1. Open the Form, three-dot menu, Script editor.
+ * INSTALL: CHRISTIAN, not Matt. He owns the Form, so he owns this bound
+ * script project, and a trigger runs as whoever creates it. Installed by
+ * anyone else it either will not save or will send from the wrong mailbox.
+ * One time, ~2 minutes:
+ *   1. Open the Form, three-dot menu, Apps Script.
  *   2. Paste this file in, save.
  *   3. Triggers (clock icon), Add Trigger:
  *        function: onPromptRequest
  *        event source: From form
  *        event type: On form submit
  *   4. Authorise when prompted (it needs permission to send mail as you).
+ *      If the trigger does not appear afterwards, the consent window was
+ *      dismissed or popup-blocked: run onPromptRequest once from the editor
+ *      to force the prompt, then add the trigger. It fails on the missing
+ *      event object, which is expected and harmless.
  *   5. Test: submit the gate form on the page with your own address and confirm
  *      the prompt arrives. Per redesign-intake.js's own note, our POST is
  *      no-cors and opaque, so a real end-to-end test is the only proof it works.
@@ -125,23 +132,23 @@ function onPromptRequest(e) {
       + '--- END ---\n\n'
       + 'When you have a result, send it over and we will return a per-jurisdiction coverage\n'
       + 'manifest next to what your build would cost, including the towns the model tested.\n\n'
-      + 'Matt MacDonald\n'
+      + 'Christian Milz\n'
       + 'Municipal Alpha\n'
-      + 'matt@municipalalpha.com\n';
+      + 'christian@municipalalpha.com\n';
 
     MailApp.sendEmail({
       to: email,
       subject: 'The build-vs-buy evaluation prompt',
       body: body,
-      name: 'Matt MacDonald'
+      name: 'Christian Milz'
     });
 
-    MailApp.sendEmail('matt@municipalalpha.com',
+    MailApp.sendEmail('matt@municipalalpha.com,christian@municipalalpha.com',
       'Prompt sent: ' + email,
       'The build-vs-buy prompt was sent to ' + email + '.\n\nSubmission:\n' + blob);
 
   } catch (err) {
-    MailApp.sendEmail('matt@municipalalpha.com',
+    MailApp.sendEmail('matt@municipalalpha.com,christian@municipalalpha.com',
       'Prompt gate FAILED',
       'onPromptRequest threw: ' + err + '\n\nNobody received the prompt. Check the trigger.');
   }
