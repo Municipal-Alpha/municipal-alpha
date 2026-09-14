@@ -51,7 +51,7 @@
 .rd-page em { color: var(--rd-accent); font-style: italic; font-weight: 400; }
 .rd-eyebrow { font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--rd-accent-muted); margin: 0 0 20px; }
 .rd-eyebrow-tight { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--rd-accent-muted); }
-.rd-lead { font-size: 17px; color: var(--rd-text-secondary); }
+.rd-lead, .rd-page .rd-lead { font-size: 17px; color: var(--rd-text-secondary); }
 .rd-page p { font-size: 15px; color: var(--rd-text-tertiary); }
 .rd-mono { font-family: 'IBM Plex Mono', monospace; }
 
