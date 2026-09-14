@@ -1,0 +1,28 @@
+{
+ "glossary": {
+  "entries": 8,
+  "keys": [
+   "bond_rating",
+   "debt_service",
+   "net_opeb_liability",
+   "net_pension_liability",
+   "outstanding_debt",
+   "tax_rate",
+   "total_budget",
+   "unassigned_fund_balance"
+  ],
+  "missing": [],
+  "path": "config/figure_glossary.yaml",
+  "present": true,
+  "rendered": 8,
+  "reviewed_by": "matt 2026-09-05",
+  "unreviewed": 0
+ },
+ "layout": "v31",
+ "pitches": {
+  "pitch_cards": 13,
+  "pitch_fallbacks": 23,
+  "pitch_heroes": 12,
+  "starting_points": 34
+ }
+}
