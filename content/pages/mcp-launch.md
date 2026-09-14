@@ -2,7 +2,7 @@ Title: The municipal record, inside your AI assistant
 Slug: mcp-launch
 Template: redesign_mcp
 Sortorder: 24
-Summary: Ask what towns are planning and buying from the AI assistant your team already uses. Every answer names the town, the board and the date, and links to the town's own document.
+Summary: Ask which towns fit what you sell, which of them are in the market for it right now, and who decides, from the AI assistant your team already uses.
 header_image: hero-record-to-ai.png
 header_image_width: 1100
 header_image_height: 564
