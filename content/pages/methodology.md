@@ -12,7 +12,7 @@ We have records from 4,500+ municipalities across 50 states (as of July 2026). T
 
 - Municipal meeting documents (agendas, minutes, packets) from 4,500+ municipalities
 - Check registers and accounts payable data from 200+ municipalities
-- Building permits (44,000+ structured records, entity-resolved)
+- Building permits (45,000+ structured records, entity-resolved)
 - Tower and infrastructure lease data from assessor records (13,000+ sites screened)
 - FOAA/FOIA response data from 100+ jurisdictions with active records requests
 

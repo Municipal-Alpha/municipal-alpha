@@ -32,7 +32,7 @@ The system is good at finding things because it has spent a year learning the sy
 | What exists nationally | Volume | What's structured today |
 |---|---|---|
 | US municipalities | 19,500 | 4,500+ monitored daily |
-| Building permits issued annually | ~1.5 million (Census Bureau) | 44,000+ structured in our pipeline |
+| Building permits issued annually | ~1.5 million (Census Bureau) | 45,000+ structured in our pipeline |
 | Annual municipal government spending | $3.9 trillion (Census of Governments) | Vendor payments from 230+ towns, 100+ resolved tickers |
 | Municipal bond market | $4 trillion (SIFMA) | Credit signals from source spending documents |
 | FCC-registered tower structures | 130,000+ | 5,400+ screened with parcel cross-reference |
