@@ -167,23 +167,5 @@
     </div>
   </div>
 
-  <!-- HUB: WHO WE SERVE -->
-  <div class="rd-band rd-section">
-    <div class="rd-wrap" style="padding:0;">
-      <p class="rd-eyebrow-tight" style="margin:0 0 12px;">WHO WE SERVE</p>
-      <h2 style="margin:0 0 40px; max-width:760px;">One corpus. Read a different way for every buyer.</h2>
-      <div class="rd-seam-grid" style="grid-template-columns:repeat(auto-fit,minmax(270px,1fr));">
-        {% for key in SECTOR_ORDER %}
-        {% set hs = SECTORS[key] %}
-        <a href="{{ SITEURL }}/{{ hs.slug }}/" class="rd-card-band" style="color:var(--rd-text);">
-          <span style="font-family:'Source Serif 4',serif; font-size:22px;">{{ hs.label }}</span>
-          <span style="font-size:14px; color:var(--rd-text-tertiary);">{{ hs.hub_blurb }}</span>
-          <span style="font-size:13px; font-weight:600; color:var(--rd-accent);">Open this page →</span>
-        </a>
-        {% endfor %}
-      </div>
-    </div>
-  </div>
-
 </div>
 {% endblock %}
