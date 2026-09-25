@@ -89,12 +89,13 @@ MARKDOWN = {
 }
 
 # Static paths
-STATIC_PATHS = ["images", "extra/CNAME", "extra/sample-data", "extra/case-studies", "extra/decks", "extra/robots.txt", "extra/brand-review", "extra/materials-periodic-table", "extra/hipcamp", "extra/favicon.ico", "extra/favicon-32.png", "extra/apple-touch-icon.png"]
+STATIC_PATHS = ["images", "extra/CNAME", "extra/sample-data", "extra/case-studies", "extra/decks", "extra/robots.txt", "extra/brand-review", "extra/materials-periodic-table", "extra/hipcamp", "extra/favicon.ico", "extra/favicon-32.png", "extra/apple-touch-icon.png", "extra/connect"]
 # Prevent Pelican from treating HTML in extra/ as content
 READERS = {"html": None}
 EXTRA_PATH_METADATA = {
     "extra/CNAME": {"path": "CNAME"},
     "extra/robots.txt": {"path": "robots.txt"},
+    "extra/connect/municipal-alpha.mcpb": {"path": "connect/municipal-alpha.mcpb"},
     "extra/sample-data/tower-prospects-sample.csv": {"path": "sample-data/tower-prospects-sample.csv"},
     "extra/sample-data/signals-sample.csv": {"path": "sample-data/signals-sample.csv"},
     "extra/sample-data/credit-sample.csv": {"path": "sample-data/credit-sample.csv"},
