@@ -19,6 +19,32 @@
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:alt" content="Municipal Alpha: the municipal record, inside your AI assistant">
 <meta name="twitter:card" content="summary_large_image">
+{# Machine-readable label for search engines and AI assistants: what this page
+   offers and for whom. `audience` in data/sectors.json is optional and falls
+   back to the sector label. #}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": {{ ("Municipal Alpha for " ~ s.label)|tojson }},
+    "serviceType": "Municipal public-record intelligence",
+    "description": {{ s.sub|tojson }},
+    "url": "{{ SITEURL }}/{{ s.slug }}/",
+    "areaServed": {
+        "@type": "Country",
+        "name": "United States"
+    },
+    "audience": {
+        "@type": "BusinessAudience",
+        "audienceType": {{ (s.audience|default(s.label, true))|tojson }}
+    },
+    "provider": {
+        "@type": "Organization",
+        "name": "Municipal Alpha",
+        "url": "https://municipalalpha.com"
+    }
+}
+</script>
 {% endblock %}
 
 {% block content %}

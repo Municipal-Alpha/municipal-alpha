@@ -10,7 +10,8 @@ targets), so it regenerates on every build/deploy and never drifts from the
 content. Stdlib-only — no extra dependency in the GitHub Actions build.
 
 Inclusion is rule-based (INCLUDE_PREFIXES below): new pages under solutions/,
-research/, stories/, essays/ auto-include; the long-tail town/profile/vendor/
+research/, stories/, essays/ auto-include, as do the per-buyer pages named in
+data/sectors.json and the connector page; the long-tail town/profile/vendor/
 prospect pages auto-exclude. Add a prefix here to widen the corpus.
 
 Usage:
@@ -19,6 +20,7 @@ Usage:
 """
 
 import html
+import json
 import re
 import sys
 from html.parser import HTMLParser
@@ -26,6 +28,7 @@ from pathlib import Path
 
 SITE_URL = "https://municipalalpha.com"
 OUTPUT_DIR = Path(__file__).resolve().parent.parent / "output"
+SECTORS_FILE = Path(__file__).resolve().parent.parent / "data" / "sectors.json"
 
 # Path prefixes (relative to output/) whose pages belong in the full-text corpus.
 # A page qualifies if its directory is exactly one of these, or nested under one.
@@ -37,7 +40,23 @@ INCLUDE_PREFIXES = (
     "research",
     "stories",
     "essays",
+    # The connector page: what the product is for today's buyer.
+    "mcp-launch",
 )
+
+
+def _sector_slugs() -> tuple:
+    """The per-buyer pages (for-saas-revenue-teams, ...), read from
+    data/sectors.json so a new sector page joins the corpus without an edit
+    here. A missing or unreadable file fails the build loudly: silently
+    dropping the buyer pages is how this file came to describe nobody's
+    current buyer."""
+    with open(SECTORS_FILE, encoding="utf-8") as f:
+        sectors = json.load(f)["sectors"]
+    return tuple(s["slug"] for s in sectors.values())
+
+
+INCLUDE_PREFIXES = INCLUDE_PREFIXES + _sector_slugs()
 
 # Hard ceiling per page so one runaway page can't bloat the file.
 MAX_CHARS_PER_PAGE = 24_000
