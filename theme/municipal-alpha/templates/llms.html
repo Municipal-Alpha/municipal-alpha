@@ -1,16 +1,41 @@
 {% autoescape false %}# Municipal Alpha
 
-> Municipal Alpha reads the precursor chain in US municipal public records (the working-group discussion, the draft moratorium, the early agenda item) months before a town votes, permits, or issues an RFP. A knowledge graph of US local government built from daily collection of agendas, minutes, check registers, permits, RFPs, capital plans, and assessor records across {{ METRICS.municipalities }} of the ~19,500 US municipalities.
+> Municipal Alpha tells teams that sell to local government what US towns, cities and counties are planning and buying. It reads their public meeting records (agendas, minutes, budgets, check registers, RFPs, capital plans) across {{ METRICS.municipalities }} municipalities in {{ METRICS.states }} states and answers questions about them inside the AI assistant the team already uses. Software companies that sell to local government use it to find new accounts before procurement opens and to see renewal risk on the accounts they hold.
 
-Municipal Alpha shows you what a town is working toward before it decides, before the vote, before the permit, before the RFP. It reads the precursor chain (the working-group discussion, the draft moratorium, the early agenda item) in {{ METRICS.municipalities }} of the ~19,500 US municipalities, months before the decision is on record.
+Municipal Alpha is for revenue teams at companies that sell software and services to local government (often called SLED, B2G or govtech vendors): sales, account management, partnerships, product marketing and revenue operations. A team asks the municipal record a question in plain language, in the AI assistant it already has open, and gets back the towns, the budget line, the stage the purchase has reached, the incumbent where the record names one, and the source documents. Nothing to install, no new login, no seats.
 
-Buyers use it to act on the front end of the timeline instead of the finish line: to compete on an RFP before it becomes an RFP, to trade on a municipal signal before the building permit, to flag credit or infrastructure risk before it becomes a rating action or a claim. Documents are classified by type, vendor names are resolved to public-company tickers, and the signal chain is traced from the earliest trigger to the eventual decision.
+Two questions a team can ask any day:
+
+- Grow the book (pipeline): which jurisdictions are funding what we sell, before procurement opens? Budget lines, committee discussion of a capability the team already ships, and jurisdictions that behave like its best-fit accounts.
+- Protect the book (retention): which accounts we hold are at risk? A competitor's name entering the minutes in a jurisdiction the team holds, an RFP drafted for a service it already delivers, a champion leaving or the line item moving department.
+
+Questions asked of the record in a recorded session on 9 September 2026 (town names redacted):
+
+- "Which towns in New England have budgeted for permitting software but not picked a vendor?" What came back: four towns across three states, each with the budget line, the dollar figure, the stage it has reached and the incumbent where the record names one.
+- "Get me more detailed information on [town] that helps me understand in more detail who to speak to and what potential pain points the town mentions." What came back: what the town already owns that a vendor would be pitching against, and a neighbouring town it shares services with.
+- Then the findings were moved into the team's CRM.
+
+Start here:
+
+- For software revenue teams selling to local government: {{ SITEURL }}/for-saas-revenue-teams/
+- The municipal record inside your AI assistant (how the connector works): {{ SITEURL }}/mcp-launch/
+- One free lead from your own territory: {{ SITEURL }}/free-lead-intake/
+
+Who it serves, one page each:
+{% for k in SECTOR_ORDER %}
+- {{ SECTORS[k].label }}: {{ SECTORS[k].hub_blurb }}
+  {{ SITEURL }}/{{ SECTORS[k].slug }}/
+{% endfor %}
+
+The same record serves other desks. Municipal Alpha shows what a town is working toward before it decides, before the vote, before the permit, before the RFP. It reads the precursor chain (the working-group discussion, the draft moratorium, the early agenda item) months before the decision is on record. Buyers use it to act on the front end of the timeline instead of the finish line: to compete on an RFP before it becomes an RFP, to trade on a municipal signal before the building permit, to flag credit or infrastructure risk before it becomes a rating action or a claim. Documents are classified by type, vendor names are resolved to public-company tickers, and the signal chain is traced from the earliest trigger to the eventual decision.
 
 This file is generated at build time from the live site content and metrics ({{ METRICS.updated }}); the numbers and product/story lists below stay in sync with the site automatically.
 
 ## The blind spot it closes
 
 Different desks, one complaint: by the time it reaches them, the decision is already made. Here is the problem each kind of buyer is solving, in their own words.
+
+- Software and services vendors selling to local government (sales, account management, revenue operations): "The overall contract price isn't super super helpful. The dates of the contract, competitor who's in there, sentiment around it, when there's upcoming meetings talking about it, all that stuff is gold for our selling team." (go-to-market VP, SLED software vendor). The job: new accounts reached before procurement opens, and renewal risk flagged on the accounts already held while there is still time to work it.
 
 - Tower & wireless infrastructure (REITs, aggregators, lessors): "You'll find out about them, it closed two months ago, and we didn't know about it. It's really about getting in early." (competitive-intelligence lead, national tower REIT). The job: compete on a tower lease before it becomes an RFP, traced back to the citizen complaint and budget line that started it, before a broker sees it.
 
