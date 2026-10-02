@@ -274,9 +274,9 @@ Summary: Cross-municipal patterns from live pipeline data. Each story is built e
 <a href="/research/pfas-contagion/" class="ds-card">
 <img src="/images/story-pfas.png" alt="PFAS Contagion" class="ds-card-img">
 <div class="ds-card-body">
-<h3>PFAS Is Spreading Through Municipal Agendas Faster Than Groundwater</h3>
-<div class="ds-card-desc">The remediation wave is visible in town council agendas months before EPA enforcement actions.</div>
-<div class="ds-card-stat"><strong>120</strong> events &middot; <strong>72</strong> municipalities &middot; <strong>23</strong> states</div>
+<h3>PFAS Money Shows Up in the Minutes Long Before It Moves</h3>
+<div class="ds-card-desc">In three towns, the first PFAS record sat in the town’s own minutes 13 to 33 months before settlement money arrived or a treatment plant started running.</div>
+<div class="ds-card-stat"><strong>Newark</strong> &middot; <strong>Brunswick</strong> &middot; <strong>Homestead</strong></div>
 </div>
 </a>
 
