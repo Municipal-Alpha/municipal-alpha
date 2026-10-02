@@ -316,6 +316,14 @@ Summary: Cross-municipal patterns from live pipeline data. Each story is built e
 </div>
 </a>
 
+<a href="/research/ebike-rules/" class="ds-card">
+<div class="ds-card-body">
+<h3>E-Bike Complaints Reach the Minutes Long Before the Rules Do</h3>
+<div class="ds-card-desc">In three towns that adopted e-bike rules this year, the first warning sat in their minutes 3 to 14 months before the vote.</div>
+<div class="ds-card-stat"><strong>3</strong> towns &middot; <strong>3 to 14</strong> months of warning</div>
+</div>
+</a>
+
 <a href="/research/pickleball-wave/" class="ds-card">
 <img src="/images/story-pickleball.png" alt="Pickleball Wave" class="ds-card-img">
 <div class="ds-card-body">
