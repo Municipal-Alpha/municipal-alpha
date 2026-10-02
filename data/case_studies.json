@@ -7,6 +7,7 @@
     "la-marque-credit",
     "data-center-zoning",
     "data-center-zoning-national",
+    "ebike-rules",
     "business-retention",
     "cell-tower-leasing",
     "geneva-altdata",
@@ -139,6 +140,16 @@
       "nav_note": "24 states · 47 jurisdictions",
       "card_title": "Data Center Zoning, Nationally",
       "card_body": "Municipal Alpha tracks data-center zoning and siting activity across US municipalities, surfacing it months before national reporting. 80 records across 47 jurisdictions in 24 states.",
+      "has_stats": false,
+      "stats": []
+    },
+    "ebike-rules": {
+      "url_slug": "ebike-rules",
+      "title": "E-Bike Complaints Reach the Minutes Long Before the Rules Do",
+      "dek": "Towns are tightening e-bike rules in 2026, and the warning shows up in their own public records first. In three towns that adopted rules this year, the first warning sat in their minutes 3 to 14 months before the vote.",
+      "nav_note": "Highland, Stratham, Saugus",
+      "card_title": "E-Bike Rules",
+      "card_body": "In three towns that adopted e-bike rules this year, the first warning sat in their minutes 3 to 14 months before the vote.",
       "has_stats": false,
       "stats": []
     },
