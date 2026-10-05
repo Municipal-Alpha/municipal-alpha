@@ -324,6 +324,14 @@ Summary: Cross-municipal patterns from live pipeline data. Each story is built e
 </div>
 </a>
 
+<a href="/research/adu-rules/" class="ds-card">
+<div class="ds-card-body">
+<h3>ADU Rules Start in the Minutes Long Before the Vote</h3>
+<div class="ds-card-desc">In three towns that adopted new ADU rules this year, the first sign sat in their minutes 5 months to more than 3 years before the vote.</div>
+<div class="ds-card-stat"><strong>3</strong> towns &middot; <strong>5 months to 3+ years</strong> of warning</div>
+</div>
+</a>
+
 <a href="/research/pickleball-wave/" class="ds-card">
 <img src="/images/story-pickleball.png" alt="Pickleball Wave" class="ds-card-img">
 <div class="ds-card-body">

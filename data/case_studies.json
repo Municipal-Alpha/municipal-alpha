@@ -8,6 +8,7 @@
     "data-center-zoning",
     "data-center-zoning-national",
     "ebike-rules",
+    "adu-rules",
     "business-retention",
     "cell-tower-leasing",
     "geneva-altdata",
@@ -154,6 +155,17 @@
       "stats": []
 ,
       "header_image": "story-ebike-rules.jpg"
+    },
+    "adu-rules": {
+      "url_slug": "adu-rules",
+      "title": "ADU Rules Start in the Minutes Long Before the Vote",
+      "dek": "Towns are rewriting their rules for backyard homes in 2026, and the reason shows up in their own public records first. In three towns that adopted new ADU rules this year, the first sign sat in their minutes 5 months to more than 3 years before the vote.",
+      "nav_note": "Clinton, Keene, Highland",
+      "card_title": "ADU Rules",
+      "card_body": "In three towns that adopted new ADU rules this year, the first sign sat in their minutes 5 months to more than 3 years before the vote.",
+      "has_stats": false,
+      "stats": [],
+      "header_image": "story-housing-wave.png"
     },
     "business-retention": {
       "url_slug": "business-retention-signals",
