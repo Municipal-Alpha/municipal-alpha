@@ -11,10 +11,11 @@
     "revenue": {
       "slug": "for-saas-revenue-teams",
       "label": "SaaS Revenue Teams",
+      "audience": "Sales, account management, partnerships, product marketing and revenue operations teams at software companies that sell to local government",
       "hub_blurb": "Territory coverage and renewal risk from the same weekly pull.",
       "eyebrow": "FOR SAAS REVENUE TEAMS SELLING INTO LOCAL GOVERNMENT",
       "headline": "Your pipeline starts in the minutes, not the RFP.",
-      "sub": "Net-new accounts entering procurement, and the early signs a municipal contract is being re-opened, sourced from 4,300+ jurisdictions and refreshed weekly.",
+      "sub": "Net-new accounts entering procurement, and the early signs a municipal contract is being re-opened, sourced from {{METRICS_MUNICIPALITIES}} jurisdictions and refreshed weekly.",
       "stats": [
         {
           "value": "{{METRICS_MUNICIPALITIES}}",
