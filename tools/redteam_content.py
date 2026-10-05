@@ -156,6 +156,7 @@ ALLOWLISTED_PAGES = {
     'landing-tower.md',     # Landing page for tower buyers
     'research.md',          # Data stories hub (mentions signal classification)
     'towns-index.md',       # Towns index (mentions expansion)
+    'story-ebike-rules.md', # Cites a town's own minutes link, whose host name is civicplus.com
 }
 
 
