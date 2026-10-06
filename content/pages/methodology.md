@@ -4,6 +4,23 @@ Template: redesign_content_page
 Sortorder: 5
 Summary: Coverage, data freshness, classification, entity resolution, alpha measurement, and known gaps. How we build structured intelligence from municipal public records.
 
+## How We Read the Public Record
+
+<!-- Sources for every claim in the video: muni-scraper business/materials/explainer-video-2026-10/sources.md -->
+<div style="margin:16px 0 48px;">
+    <div class="ma-video-stage">
+      <div class="ma-video-frame">
+        <video muted playsinline preload="metadata" poster="/images/explainer/municipal-alpha-explainer-poster.jpg" aria-label="How Municipal Alpha reads the public record: a 65-second explainer with captions">
+          <source src="/images/explainer/municipal-alpha-explainer.mp4" type="video/mp4">
+        </video>
+        <button type="button" class="ma-video-play" aria-label="Play the video (sound off; turn it on in the player)" onclick="var v=this.parentNode.querySelector('video');v.controls=true;v.muted=true;v.play();this.remove();">
+          <span class="ma-video-play-group"><span class="ma-video-play-btn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg></span>
+          <span class="ma-video-play-label">Watch · 1:05</span></span>
+        </button>
+      </div>
+    </div>
+</div>
+
 ## Coverage
 
 We have records from 4,800+ municipalities across 50 states (as of July 2026). The United States has 19,500 municipalities. <!-- metrics-ok: total US --> Coverage density follows buyer demand, not capability: our earliest buyers were concentrated in New England, so coverage is deepest there today, with substantial footprints in the Midwest and Mountain West. Onboarding is by publishing platform, and the platforms are national (CivicPlus, Granicus, BoardDocs, and others), so a new buyer's footprint anywhere in the country onboards the same way. Coverage expands weekly through automated onboarding.
@@ -128,12 +145,3 @@ A complete data dictionary covering all data products (signals, entity sightings
 If you want to understand our coverage for a specific jurisdiction, entity, or data type, reach out. We'll tell you exactly what we have and what we don't.
 
 **Email:** [matt@municipalalpha.com](mailto:matt@municipalalpha.com?subject=Data%20methodology%20question)
-
-## How It Works, in 65 Seconds
-
-<!-- Sources for every claim in the video: muni-scraper business/materials/explainer-video-2026-10/sources.md -->
-<div style="margin-top:16px;">
-    <video controls preload="metadata" playsinline poster="/images/explainer/municipal-alpha-explainer-poster.jpg" style="width:100%; height:auto; display:block; border-radius:12px; border:1px solid var(--rd-border); background:#000;" aria-label="How Municipal Alpha reads the public record: a 65-second explainer with captions">
-      <source src="/images/explainer/municipal-alpha-explainer.mp4" type="video/mp4">
-    </video>
-</div>

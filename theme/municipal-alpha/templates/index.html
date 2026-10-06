@@ -256,6 +256,23 @@
     </div>
   </div>
 
+  <!-- EXPLAINER VIDEO (sources for every claim: muni-scraper business/materials/explainer-video-2026-10/sources.md) -->
+  <div class="rd-wrap" style="padding-bottom:clamp(56px,8vw,100px);">
+    <h2 style="margin:0 0 12px;">How we read the public record.</h2>
+    <p style="font-size:16px; color:var(--rd-text-muted); max-width:640px; margin:0 0 32px;">From one village’s vote to the 91,438 local governments behind it, and how our own rules tell a plan from a decision.</p>
+    <div class="ma-video-stage">
+      <div class="ma-video-frame">
+        <video muted playsinline preload="metadata" poster="{{ SITEURL }}/images/explainer/municipal-alpha-explainer-poster.jpg" aria-label="How Municipal Alpha reads the public record: a 65-second explainer with captions">
+          <source src="{{ SITEURL }}/images/explainer/municipal-alpha-explainer.mp4" type="video/mp4">
+        </video>
+        <button type="button" class="ma-video-play" aria-label="Play the video (sound off; turn it on in the player)" onclick="var v=this.parentNode.querySelector('video');v.controls=true;v.muted=true;v.play();this.remove();">
+          <span class="ma-video-play-group"><span class="ma-video-play-btn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg></span>
+          <span class="ma-video-play-label">Watch · 1:05</span></span>
+        </button>
+      </div>
+    </div>
+  </div>
+
   <!-- CONTACT CTA -->
   <div id="contact" class="rd-wrap" style="padding-top:clamp(64px,9vw,110px); padding-bottom:clamp(64px,9vw,110px); text-align:center;">
     <h2 style="margin:0 0 20px; max-width:760px; margin-left:auto; margin-right:auto;">Bring one market. We pull a live lead<br>out of it while you watch.</h2>
@@ -264,15 +281,6 @@
       <a href="https://calendar.app.google/TeT9KujoL6CDbxRy8" target="_blank" rel="noopener" class="rd-btn rd-btn-primary">Book a Demo</a>
       <a href="{{ SITEURL }}/free-lead-intake/" class="rd-btn rd-btn-outline">Get One Free Lead</a>
     </div>
-  </div>
-
-  <!-- EXPLAINER VIDEO (sources for every claim: muni-scraper business/materials/explainer-video-2026-10/sources.md) -->
-  <div class="rd-wrap" style="padding-bottom:clamp(64px,9vw,110px);">
-    <h2 style="margin:0 0 12px;">How we read the public record, in 65 seconds.</h2>
-    <p style="font-size:16px; color:var(--rd-text-muted); max-width:640px; margin:0 0 32px;">From one village’s vote to the 91,438 local governments behind it, and how our own rules tell a plan from a decision.</p>
-    <video controls preload="metadata" playsinline poster="{{ SITEURL }}/images/explainer/municipal-alpha-explainer-poster.jpg" style="width:100%; height:auto; display:block; border-radius:12px; border:1px solid var(--rd-border); background:#000;" aria-label="How Municipal Alpha reads the public record: a 65-second explainer with captions">
-      <source src="{{ SITEURL }}/images/explainer/municipal-alpha-explainer.mp4" type="video/mp4">
-    </video>
   </div>
 
 </div>
