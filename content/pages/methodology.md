@@ -128,3 +128,12 @@ A complete data dictionary covering all data products (signals, entity sightings
 If you want to understand our coverage for a specific jurisdiction, entity, or data type, reach out. We'll tell you exactly what we have and what we don't.
 
 **Email:** [matt@municipalalpha.com](mailto:matt@municipalalpha.com?subject=Data%20methodology%20question)
+
+## How It Works, in 65 Seconds
+
+<!-- Sources for every claim in the video: muni-scraper business/materials/explainer-video-2026-10/sources.md -->
+<div style="margin-top:16px;">
+    <video controls preload="metadata" playsinline poster="/images/explainer/municipal-alpha-explainer-poster.jpg" style="width:100%; height:auto; display:block; border-radius:12px; border:1px solid var(--rd-border); background:#000;" aria-label="How Municipal Alpha reads the public record: a 65-second explainer with captions">
+      <source src="/images/explainer/municipal-alpha-explainer.mp4" type="video/mp4">
+    </video>
+</div>
