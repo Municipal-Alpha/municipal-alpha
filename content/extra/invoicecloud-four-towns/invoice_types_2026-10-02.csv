@@ -1,0 +1,58 @@
+town_slug,invoice_type,issued_by,payment_processor,fee_as_published,fee_paid_by,billing_system,processor_contract_start,processor_contract_end,processor_est_renewal,processor_notice,confidence
+manchester-nh,Motor vehicle registration renewal,Tax Collector,InvoiceCloud,"card: 2.75%, min $1.95; e-check: $0.95",resident,Avitar,≤ 2015-12,not_published,not_published,not_published,high
+manchester-nh,Dog licence,City Clerk,InvoiceCloud,"card: 2.75%, min $1.95",resident,null,≤ 2015-06,not_published,not_published,not_published,high
+manchester-nh,Birth / death / marriage / divorce certificates,City Clerk,InvoiceCloud,"card: 2.75%, min $1.95",not_stated,null,≤ 2015-12,not_published,not_published,not_published,high
+manchester-nh,Marriage licence,City Clerk,in_person,"card: 2.75%, min $1.95",not_stated,null,N/A,N/A,N/A,N/A,medium
+manchester-nh,Property tax,Tax Collector,InvoiceCloud,"card: 2.75%, min $1.95; e-check: $0.95",resident,CentralSquare,2022-04-15,not_published,2027-04 / 2028-04,90 days,high
+manchester-nh,Water bills,Water Works,Tyler Payments,not_published,town,Tyler Munis,2026-10-01,not_published,not_published,60 days,conflict
+manchester-nh,Sewer / wastewater bills,Environmental Protection Division,Tyler Payments,null,null,Tyler Munis,not_published,not_published,not_published,not_published,medium
+manchester-nh,Bulky item collection,Public Works,InvoiceCloud,not_published,town,null,not_published,not_published,not_published,not_published,high
+manchester-nh,Trash / recycling carts,Public Works,not_stated,card: 2.99%,resident,null,null,null,null,null,medium
+manchester-nh,Parking tickets,Parking Division,Gtechna,null,null,null,not_published,not_published,not_published,not_published,medium
+manchester-nh,Parking permits / on-street permits,Parking Division,Gtechna,null,null,null,not_published,not_published,not_published,not_published,medium
+manchester-nh,Metered parking,Parking Division,PayByPhone,null,null,null,not_published,not_published,not_published,not_published,high
+manchester-nh,Metered parking,Parking Division,Passport Parking,null,null,null,not_published,not_published,not_published,not_published,high
+manchester-nh,Airport parking,Airport,LAZ Parking,reservation: up to $3.00,resident,null,not_published,not_published,not_published,not_published,medium
+manchester-nh,Recreation program registration,"Parks, Recreation & Cemetery Division",not_stated,null,null,null,null,null,null,null,medium
+manchester-nh,Building / trade / sign / yard-sale permits,Planning & Community Development,in_person,N/A,N/A,null,N/A,N/A,N/A,N/A,medium
+manchester-nh,Commercial pay-and-display parking permit,Parking Division,in_person,N/A,N/A,null,N/A,N/A,N/A,N/A,medium
+manchester-nh,Police report copies,Police Records Division,in_person,N/A,N/A,null,N/A,N/A,N/A,N/A,medium
+manchester-nh,Cemetery lots and burials,"Parks, Recreation & Cemetery Division",in_person,N/A,N/A,null,N/A,N/A,N/A,N/A,medium
+manchester-nh,Library replacement charges,Manchester City Library,in_person,N/A,N/A,null,N/A,N/A,N/A,N/A,medium
+manchester-nh,Business licences,City Clerk,in_person,N/A,N/A,null,N/A,N/A,N/A,N/A,medium
+hagerstown-md,Electric bill,Customer & Support Services / Utilities,InvoiceCloud,not_published,town,Tyler Munis,2022-01-31,not_published,2027-01 / 2028-01,90 days,high
+hagerstown-md,Water and wastewater bill,Customer & Support Services / Utilities,InvoiceCloud,not_published,town,Tyler Munis,2022-01-31,not_published,2027-01 / 2028-01,90 days,high
+hagerstown-md,Real estate tax,Customer & Support Services,InvoiceCloud,not_published,town,Tyler Munis,2022-01-31,not_published,2027-01 / 2028-01,90 days,conflict
+hagerstown-md,Personal property tax,Customer & Support Services,InvoiceCloud,not_published,town,Tyler Munis,2022-01-31,not_published,2027-01 / 2028-01,90 days,high
+hagerstown-md,Business and rental licences,not_stated,InvoiceCloud,not_published,town,null,2022-01-31,not_published,2027-01 / 2028-01,90 days,high
+hagerstown-md,General billing,Finance,InvoiceCloud,not_published,town,Workday,2022-01-31,not_published,2027-01 / 2028-01,90 days,high
+hagerstown-md,Permits,Permits Division,InvoiceCloud,not_published,town,Tyler Portico,2022-01-31,not_published,2027-01 / 2028-01,90 days,high
+hagerstown-md,Bulk trash,Public Works,InvoiceCloud,not_published,town,null,2022-01-31,not_published,2027-01 / 2028-01,90 days,high
+hagerstown-md,Parking passes / monthly parking invoices,Parking Division,InvoiceCloud,not_published,town,null,2022-01-31,not_published,2027-01 / 2028-01,90 days,high
+hagerstown-md,Economic development loans,Community & Economic Development,InvoiceCloud,not_published,town,null,2022-01-31,not_published,2027-01 / 2028-01,90 days,high
+hagerstown-md,Parking meters / lots,Parking Division,PayByPhone,null,null,null,not_published,not_published,not_published,not_published,medium
+hagerstown-md,Parking citations,Parking Division,Remit-Online,$3.95,not_stated,null,not_published,not_published,not_published,not_published,high
+hagerstown-md,Red-light camera citations,Police,Verra Mobility,$5.00,not_stated,null,not_published,not_published,not_published,not_published,high
+hagerstown-md,Speed-camera citations,Police,Altumint,null,null,null,not_published,not_published,not_published,not_published,medium
+hagerstown-md,Recreation program registration,Parks & Recreation,ActiveNet,null,null,ActiveNet,not_published,not_published,not_published,not_published,medium
+westbrook-me,Property tax,Finance / Tax Collector,Official Payments,card: 2.5%,resident,Tyler Munis,≤ 2015-04,not_published,not_published,not_published,medium
+westbrook-me,Liened sewer bill,Finance / Tax Collector,Official Payments,null,null,null,≤ 2015-04,not_published,not_published,not_published,medium
+westbrook-me,Sewer bill,Wastewater / Finance,not_stated,null,null,null,null,null,null,null,medium
+westbrook-me,Rescue bill,Fire Rescue,Official Payments,null,null,null,≤ 2015-04,not_published,not_published,not_published,medium
+westbrook-me,Motor vehicle registration / excise tax,Finance,State of Maine,card: 2.5%,not_stated,TRIO,not_published,not_published,not_published,not_published,medium
+westbrook-me,Dog licences,City Clerk,State of Maine,null,null,null,not_published,not_published,not_published,not_published,medium
+westbrook-me,Vital records,City Clerk,State of Maine,not_published,town,null,not_published,not_published,not_published,not_published,medium
+westbrook-me,"Hunting / fishing licences, ATV / boat / snowmobile registrations",Finance,State of Maine,null,null,null,not_published,not_published,not_published,not_published,medium
+westbrook-me,Recreation / Community Center programs,Community Services,Rec1,null,null,null,not_published,not_published,not_published,not_published,medium
+westbrook-me,Building / planning permits,Planning & Code Enforcement,MyGov,null,null,null,not_published,not_published,not_published,not_published,medium
+westbrook-me,Business licences,City Clerk,MyGov,null,null,null,not_published,not_published,not_published,not_published,low
+westbrook-me,Burn permits,Fire Rescue,State of Maine,null,null,null,not_published,not_published,not_published,not_published,medium
+hattiesburg-ms,Water and sewer bill,Water & Sewer,Xpress-pay,null,null,Tyler Technologies,≤ 2013-04,not_published,not_published,not_published,conflict
+hattiesburg-ms,Municipal court fines,Municipal Court,in_person,N/A,N/A,null,N/A,N/A,N/A,N/A,conflict
+hattiesburg-ms,Police event and parade permits,Police,in_person,N/A,N/A,null,N/A,N/A,N/A,N/A,medium
+hattiesburg-ms,Community centre reservations,Cultural Affairs / Parks & Recreation,not_stated,null,null,null,null,null,null,null,medium
+hattiesburg-ms,Privilege licences,City Clerk / Tax Division,Tyler Payments,not_published,town,Tyler EnerGov,not_published,not_published,not_published,not_published,medium
+hattiesburg-ms,Garage-sale permits,City Clerk / Tax Division,in_person,N/A,N/A,null,N/A,N/A,N/A,N/A,medium
+hattiesburg-ms,Golf-cart registration,City Clerk / Tax Division,in_person,N/A,N/A,null,N/A,N/A,N/A,N/A,medium
+hattiesburg-ms,Vacant/abandoned building registration; records-request fees; cemetery,Urban Development / HPD / Parks,not_stated,null,null,null,null,null,null,null,medium
+hattiesburg-ms,Building permits / code enforcement / planning fees,Urban Development,Tyler Payments,null,null,null,not_published,not_published,not_published,not_published,medium

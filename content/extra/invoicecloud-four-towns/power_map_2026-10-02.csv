@@ -1,0 +1,44 @@
+town_slug,name,department,title,role_in_decision,confidence
+manchester-nh,Sharon Wickens,Finance,Finance Director; 'Finance Officer',approves,medium
+manchester-nh,Jennifer Heon,Finance,Finance Manager,day_to_day_owner,medium
+manchester-nh,Kim LeBlanc,Finance,Financial Analyst II,day_to_day_user,medium
+manchester-nh,Richard Martinez,Information Systems,Information Systems Director,recommends,medium
+manchester-nh,vacant,Information Systems,IT Applications Administrator - MUNIS,day_to_day_owner,medium
+manchester-nh,"Brenda Masewic Adams, TC",Tax Collector,Tax Collector,day_to_day_owner,low
+manchester-nh,"Philip W. Croasdale, C.P.A.",Water Works,Water Works Director,decides,medium
+manchester-nh,Mia Lee,Water Works,"Water Works Deputy Director, Finance & Administration",day_to_day_owner,low
+manchester-nh,"Matthew Normand, CMC",City Clerk,City Clerk,day_to_day_owner,low
+manchester-nh,Tim Clougherty,Public Works,Public Works Director,day_to_day_owner,low
+manchester-nh,Alderman O'Neil,Board of Mayor and Aldermen,"Chair, Committee on Accounts, Enrollment & Revenue Administration",approves,medium
+manchester-nh,Board of Mayor and Aldermen,Mayor / Board,Approving body; Mayor is ex-officio member of the Board of Water Commissioners,approves,medium
+manchester-nh,not_published,Human Resources,HR Director,N/A,medium
+hagerstown-md,Scott Nicewarner,City Administrator,City Administrator,approves,medium
+hagerstown-md,Michelle Hepburn,Finance,Chief Financial Officer,decides,high
+hagerstown-md,Brooke Garver,Finance,Accounting/Budget Manager,recommends,low
+hagerstown-md,Beth Everhart,Customer & Support Services,Support Services Manager,day_to_day_owner,medium
+hagerstown-md,Ryan Grove,Customer & Support Services,Support Services Supervisor,day_to_day_user,low
+hagerstown-md,Oren Reed,Information Technology,Technology Manager,recommends,high
+hagerstown-md,Dave Gordon,Information Technology,Applications and Project Manager,day_to_day_owner,low
+hagerstown-md,Tyler French,Finance,Procurement Administrator,recommends,medium
+hagerstown-md,Nancy Hausrath,Utilities,Director of Utilities,decides,medium
+hagerstown-md,Tyler Puffenberger,Utilities,Deputy Director,day_to_day_owner,low
+hagerstown-md,Mayor and City Council,Mayor and Council,Approving body,approves,medium
+westbrook-me,Laura King,Finance,Interim Finance Director/Tax Collector; Deputy Finance Director,day_to_day_owner,high
+westbrook-me,Bruno Inacio,Finance,Finance Director,decides,low
+westbrook-me,vacant,Finance,Finance Director,decides,medium
+westbrook-me,Melissa Littlehale,Finance,Tax Collector,day_to_day_owner,high
+westbrook-me,Angela Holmes,Administration,City Administrator,decides,medium
+westbrook-me,Jennie Franceschi,Administration,Assistant City Administrator,recommends,medium
+westbrook-me,David Morse,Mayor's Office,Mayor,approves,medium
+westbrook-me,Greg Hamilton,IT / Dispatch,Director of Emergency Communications & IT,recommends,medium
+westbrook-me,"Katherine Kelley, P.E.",Engineering & Wastewater,Wastewater Division Manager,day_to_day_owner,medium
+westbrook-me,Ellis Ledoux,City Clerk,City Clerk & Registrar of Voters,day_to_day_owner,medium
+westbrook-me,Brian McCambridge,City Council,"City Councillor, Ward 1; Finance Committee Chair",approves,medium
+hattiesburg-ms,Malcolm Berch,Finance,Chief Financial Officer,decides,medium
+hattiesburg-ms,Ann Jones,Administration,Chief Administrative Officer,decides,high
+hattiesburg-ms,Toby Barker,Mayor,Mayor,approves,medium
+hattiesburg-ms,Kermas Eaton,City Clerk/Tax Division,Director of Administration / City Clerk,day_to_day_owner,medium
+hattiesburg-ms,Alan Howe,Water & Sewer,Director of Water & Sewer,decides,medium
+hattiesburg-ms,Brian R. Bledsoe,Municipal Court,Judge; 'Director' on the FY2027 court budget presentation,decides,medium
+hattiesburg-ms,Dave Ware,City Council,City Council President,approves,medium
+hattiesburg-ms,not_published,IT / Water Billing,N/A,N/A,low

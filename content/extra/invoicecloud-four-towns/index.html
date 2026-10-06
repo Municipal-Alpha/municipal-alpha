@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Four towns for InvoiceCloud</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,500&family=DM+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+  :root {
+    --ink: #0C0C0C; --paper: #F7F4F0; --signal: #E8512D; --surface: #FFFFFF;
+    --ink-80: rgba(12,12,12,.80); --ink-60: rgba(12,12,12,.60); --ink-40: rgba(12,12,12,.40);
+    --ink-12: rgba(12,12,12,.12); --ink-06: rgba(12,12,12,.06); --signal-06: rgba(232,81,45,.06);
+    --hi:#27724a; --hi-bg:#e1f1e7; --md:#8a6410; --md-bg:#f6ecd4; --lo:#6b5a7a; --lo-bg:#ece6f1; --cf:#a3402c; --cf-bg:#f6e0da;
+    --font-display: 'Newsreader', Georgia, serif;
+    --font-body: 'DM Sans', -apple-system, sans-serif;
+    --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+    color-scheme: light;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-padding-top: 84px; }
+  html, body { margin: 0; padding: 0; background: var(--paper); color: var(--ink);
+    font-family: var(--font-body); -webkit-font-smoothing: antialiased; }
+  .container { max-width: 780px; margin: 0 auto; padding: 0 16px 80px; }
+  .wide { max-width: 1240px; margin: 0 auto; padding: 0 16px; }
+  .header { position: sticky; top: 0; z-index: 10; background: var(--paper);
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 22px 0 16px; border-bottom: 1px solid var(--ink-12); margin-bottom: 32px; }
+  .wordmark { font-family: var(--font-display); font-weight: 500; font-size: 22px; }
+  .header-meta { font-family: var(--font-mono); font-size: 11px; letter-spacing: .04em;
+    text-transform: uppercase; color: var(--ink-60); text-align: right; line-height: 1.4; }
+  h1 { font-family: var(--font-display); font-weight: 500; font-size: clamp(30px, 5vw, 38px);
+    line-height: 1.1; letter-spacing: -.01em; margin: 0 0 14px; }
+  .lede { font-size: 15.5px; line-height: 1.55; color: var(--ink-60); margin: 0; max-width: 64ch; }
+  .section { margin-top: 48px; padding-top: 28px; border-top: 1px solid var(--ink-12); }
+  .section h2 { font-family: var(--font-display); font-weight: 500; font-size: 26px; line-height: 1.2; margin: 0 0 8px; }
+  .section-sub { font-size: 14px; color: var(--ink-60); line-height: 1.5; margin: 0 0 20px; max-width: 62ch; }
+  .section p, .section li { font-size: 14.5px; line-height: 1.65; max-width: 62ch; }
+  .section p { margin: 0 0 14px; }
+  .section ul, .section ol { padding-left: 20px; margin: 0 0 14px; }
+  .section li { margin-bottom: 10px; }
+  a { color: var(--signal); text-decoration: none; border-bottom: 1px solid rgba(232,81,45,.35); overflow-wrap: anywhere; }
+  a:hover { border-bottom-color: var(--signal); }
+  .hl { background: var(--signal-06); }
+  .said { margin: 0 0 18px; padding: 0 0 0 18px; border-left: 3px solid var(--signal); max-width: 64ch; }
+  .said p { font-family: var(--font-display); font-size: 17px; line-height: 1.5; margin: 0 0 6px; }
+  .said .who { font-family: var(--font-mono); font-size: 11px; letter-spacing: .04em; text-transform: uppercase; color: var(--ink-60); }
+  .section ul.wk { list-style: none; padding: 0; margin: 0; }
+  .wk li { padding: 16px 0; border-bottom: 1px solid var(--ink-12); max-width: none; }
+  .wk li:first-child { padding-top: 0; }
+  .wk .chead { font-family: var(--font-display); font-size: 19px; line-height: 1.35; margin: 0 0 6px; font-weight: 500; }
+  .wk .src { font-size: 12.5px; color: var(--ink-60); }
+  .key { display: grid; grid-template-columns: 120px minmax(0,1fr); gap: 8px 14px; align-items: baseline; font-size: 14px; margin: 0 0 14px; max-width: 64ch; }
+  .key code { font-family: var(--font-mono); font-size: 12.5px; }
+  @media (max-width: 520px) { .key { grid-template-columns: minmax(0,1fr); gap: 2px 0; } .key > :nth-child(odd) { margin-top: 8px; } }
+  .pill { font-family: var(--font-mono); font-size: 10.5px; font-weight: 500; letter-spacing: .04em; text-transform: uppercase;
+    padding: 2px 8px; border-radius: 999px; display: inline-block; white-space: nowrap; line-height: 1.5; justify-self: start; align-self: start; }
+  .high { color: var(--hi); background: var(--hi-bg); } .medium { color: var(--md); background: var(--md-bg); }
+  .low { color: var(--lo); background: var(--lo-bg); } .conflict { color: var(--cf); background: var(--cf-bg); }
+  .dl { display: flex; flex-wrap: wrap; gap: 10px; margin: 6px 0 0; }
+  .dl a { font-family: var(--font-mono); font-size: 12px; letter-spacing: .04em; text-transform: uppercase;
+    color: var(--signal); background: var(--signal-06); border: 1px solid var(--signal); border-radius: 2px; padding: 7px 13px; }
+  .dl a:hover { background: var(--signal); color: var(--paper); }
+  nav.towns { position: sticky; top: 70px; z-index: 5; background: var(--paper); display: flex; flex-wrap: wrap; gap: 8px;
+    padding: 10px 0; border-bottom: 1px solid var(--ink-12); margin: 40px 0 8px; }
+  nav.towns a { font-family: var(--font-mono); font-size: 12px; border: 1px solid var(--ink-12); border-radius: 999px; padding: 4px 12px; color: var(--ink); }
+  .town { margin-top: 36px; scroll-margin-top: 130px; }
+  .town > header { display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: baseline; margin-bottom: 6px; }
+  .town h2 { font-family: var(--font-display); font-weight: 500; font-size: 26px; margin: 0; }
+  .town .tag { font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; letter-spacing: .04em; color: var(--ink-60); }
+  .town h3 { font-family: var(--font-mono); font-size: 11.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-60); font-weight: 500; margin: 18px 0 8px; }
+  .town h3 .n { color: var(--ink-40); margin-left: 8px; }
+  .scroll { overflow-x: auto; border: 1px solid var(--ink-12); background: var(--surface); }
+  table.dbt { border-collapse: collapse; width: 100%; min-width: max-content; font-size: 12.5px; }
+  .dbt th, .dbt td { text-align: left; border-bottom: 1px solid var(--ink-12); border-right: 1px solid var(--ink-06); padding: 7px 10px; white-space: nowrap; }
+  .dbt th { font-family: var(--font-mono); font-size: 11px; font-weight: 500; color: var(--ink-60); background: var(--paper); }
+  .dbt tbody tr:last-child td { border-bottom: 0; }
+  .dbt td.dt { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+  .dbt td.gap { color: var(--ink-40); font-family: var(--font-mono); font-style: italic; }
+  .dbt th:first-child, .dbt td:first-child { position: sticky; left: 0; background: var(--surface); font-weight: 600; z-index: 1; }
+  .dbt th:first-child { background: var(--paper); }
+  .footer { margin-top: 64px; padding-top: 18px; border-top: 1px solid var(--ink-12); font-size: 12.5px; color: var(--ink-60); }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="header">
+    <div class="wordmark">municip&alpha;l</div>
+    <div class="header-meta">Four-town sample<br>InvoiceCloud &middot; Tue 2026-10-06</div>
+  </div>
+
+  <h1>Four towns, read from their own records</h1>
+    <p class="lede">Two InvoiceCloud accounts drawn at random, Manchester, NH and Hagerstown, MD, are both in the middle
+  of a core-system change. The public record shows Manchester consolidating payments onto Tyler and Hagerstown keeping
+  InvoiceCloud. Westbrook, ME and Hattiesburg, MS, two towns that are not your accounts, are here for comparison.
+  Every row was read from the towns' own records and websites as they stood on 2 October 2026, and every item
+  below links to its source. Three things back from you would move this forward: what your Manchester CSM makes of the first item, your own list of invoice types, and which first block of accounts you want.</p>
+
+
+  <div class="section">
+    <h2>What's worth knowing right now</h2>
+    <p class="section-sub">The leading edge of the event stream: things on the record that will change a future
+    snapshot but have not changed it yet.</p>
+    <ul class="wk">
+      <li>
+        <p class="chead">Manchester, NH is moving card payments onto Tyler Payments, one department at a time, and the
+        departments it named next are the ones on InvoiceCloud.</p>
+        <p>Water and sewer billing came first, the city's payment page named Paymentus until 18 September, and the
+        Tyler agreement runs from 1 October. At the 7 July Committee on Accounts the Finance Manager said
+        "eventually the remainder of the city, we're going to bring the rest of them on to that one platform," and
+        the Finance Officer pointed to the Clerk's office and Tax as where "this could be another way around, just
+        using one processor." Both took payments through InvoiceCloud when we read them on 2 October.</p>
+        <span class="src">Sources: <a href="https://manchesternh.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=5148,plainText=false)">Committee on Accounts minutes, 7 Jul 2026</a>
+        &middot; <a href="https://manchesternh.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=5191,plainText=false)">Board minutes, 7 Jul 2026</a>
+        &middot; <a href="https://www.manchesternh.gov/Departments/Water-Works">Water Works page, read 30 Sep 2026</a></span>
+      </li>
+      <li>
+        <p class="chead">Hagerstown, MD is moving to Workday plus SpryPoint, and the SpryPoint work keeps InvoiceCloud in
+        place.</p>
+        <p>The SpryPoint and Workday subscription fees were on the council's December 2025 agenda. The signed SpryPoint statement
+        of work in the July 2026 packet specifies a two-way integration between SpryCIS and InvoiceCloud, covering account lookups, statements, payment postback and autopay.</p>
+        <span class="src">Sources: <a href="https://hagerstown.novusagenda.com/agendapublic/DisplayAgendaPDF.ashx?MeetingID=1444">Council agenda packet, 16 Dec 2025</a>
+        &middot; <a href="https://hagerstown.novusagenda.com/agendapublic/DisplayAgendaPDF.ashx?MeetingID=1486">Council agenda packet, 28 Jul 2026</a></span>
+      </li>
+      <li>
+        <p class="chead">Westbrook, ME voted to move recreation payments to CivicPlus.</p>
+        <p>The council added CivicPlus for recreation registration payments, replacing what the packet calls "two
+        separate vendors" with variable fees, at a flat 3% that the city absorbs. The city's recreation page still
+        linked to Rec1 when we read it on 30 September, which is why the snapshot row below says Rec1. That gap is
+        the difference between the snapshot and the stream.</p>
+        <span class="src">Sources: <a href="https://www.westbrookmaine.gov/AgendaCenter/ViewFile/Agenda/_09082025-961">Council agenda packet, 8 Sep 2025</a>
+        &middot; <a href="https://www.westbrookmaine.gov/AgendaCenter/ViewFile/Minutes/_09082025-961">Council minutes, 8 Sep 2025</a></span>
+      </li>
+      <li>
+        <p class="chead">Hattiesburg, MS is adopting Tyler Payments across "all applicable" departments.</p>
+        <p>The quotation marks are the budget presentation's own words. It does not say which departments those are.</p>
+        <span class="src">Source: <a href="https://hattiesburgms.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=4495,plainText=false)">FY2027 budget presentation, 21 Jul 2026</a></span>
+      </li>
+    </ul>
+  </div>
+
+    <div class="section">
+    <h2>What we'd like back</h2>
+    <ul>
+      <li><strong>What your Manchester CSM says.</strong> Gary called it the proof, did they already know? Either
+      answer tells us something.</li>
+      <li><strong>Your own list of invoice types.</strong> Then our rows use your names, and we can check that nothing
+      you track is missing from ours.</li>
+      <li><strong>The first block, when you're ready.</strong> Your top 100 accounts, or the 200 Manchester-sized ones,
+      whichever your leadership picks.</li>
+    </ul>
+  </div>
+  <div class="section">
+    <h2>What we heard</h2>
+    <p class="section-sub">In your words, from the call. Everything else on this page is built on these, so if one is
+    wrong it is the most useful thing you can tell me.</p>
+
+    <p><strong>Churn comes from the core system, not from the payment layer.</strong></p>
+    <div class="said"><p>"One of our key drivers of churn is when they're not leaving InvoiceCloud for payment, per se,
+    it's when they're changing their core software and then we become a casualty of that change."</p>
+    <span class="who">Stephen</span></div>
+    <div class="said"><p>"These early indicators of conversion are the single most beneficial churn thing that we could
+    be doing."</p><span class="who">Gary</span></div>
+    <p>Stephen asked the right follow-up: how early does the first conversation show? These four towns were read once,
+    so they show where each town stands, not when it started. That is the case for reading your accounts
+    continuously rather than once, because the agenda item, the budget line and the RFP come before the vote, and the stream
+    picks up each one as it is posted.</p>
+
+    <p><strong>White space, ordered by the money behind it.</strong></p>
+    <div class="said"><p>"I would order these by collectible revenue... this just becomes instantly our own white space
+    analysis."</p><span class="who">Gary</span></div>
+    <p>Stephen asked whether we read the towns' financial documents. We do, budgets are in what we hold.</p>
+
+    <p><strong>Leading indicators of a new invoice type.</strong> A rezoning such as Falmouth, ME's Route One corridor
+    means building permits and business licences that don't exist yet.</p>
+    <div class="said"><p>"Within our government and municipalities, something like that, that's a perfect indicator."</p>
+    <span class="who">Gary</span></div>
+
+    <p><strong>Knowing who to talk to, years after the contract was signed.</strong></p>
+    <div class="said"><p>"Who is that person that signed the agreement 10 years ago and they're not even there
+    anymore?"</p><span class="who">Stephen</span></div>
+  </div>
+
+  <div class="section">
+    <h2>What the next version changes</h2>
+    <ol>
+      <li><strong>The same list in every town.</strong> Every town gets the same invoice types and the same roles, so a
+      missing row is a finding rather than a gap in our reading. Where a town only takes something at the counter,
+      the row says so. Stephen asked about building permits in Manchester: they are in the table, third from the
+      bottom, as <code>in_person</code>.</li>
+      <li><strong>An IT contact in every power map</strong>, even when it is one person or an outside firm. Gary put
+      it plainly: in a lot of these towns "it's going to just say IT guy."</li>
+      <li><strong>Revenue by invoice type.</strong> Each invoice type gets the town's own budgeted revenue for it and
+      its trend across the budget years we hold, so the white space above can be sorted by dollars.</li>
+    </ol>
+    <p>Depth per town stays fixed. What changes with scope is how many towns.</p>
+  </div>
+
+  <div class="section">
+    <h2>Coming separately</h2>
+    <p>Gary asked for the table of contents: the kinds of documents we read, what each kind usually contains, and how
+    many of each we hold for these four towns. That comes as its own document, for the conversation with your
+    leadership team.</p>
+  </div>
+
+  <div class="section">
+    <h2>How to read the tables</h2>
+    <p>Each town has two tables. The <strong>snapshot</strong> is what is live and true on the day it is taken, meaning every way
+    the town bills, who processes it and on what terms, and the people who decide. The <strong>event stream</strong>
+    is what the town is saying in agendas, minutes and budgets that will change a later snapshot. The snapshot
+    would run monthly; events arrive as the records do, and could land straight in your data warehouse.</p>
+    <div class="key">
+      <span class="pill high">high</span><span>Two or more independent sources agree, and at least one is a board record, a contract or a live web page we read and dated. No source disagrees.</span>
+      <span class="pill medium">medium</span><span>One such source.</span>
+      <span class="pill low">low</span><span>Only indirect signs, such as a vendor's customer list or traces in a website's code.</span>
+      <span class="pill conflict">conflict</span><span>Sources disagree. Both are kept and flagged for a person to check. Manchester's water row is one: the old processor's page and the new agreement were both current in the same week.</span>
+    </div>
+    <p>Two pages on the same website count as one source, and a row whose evidence is more than 12 months old drops
+    one level. The words in the cells mean:</p>
+    <div class="key">
+      <code>in_person</code><span>No online way to pay when we read it; the town takes it at the counter.</span>
+      <code>not_published</code><span>Looked for and not found anywhere the town publishes. Contract end dates usually land here, since towns post agendas and minutes, not signed agreements, and with no contract in hand the term is unknown. A records request can get the agreement.</span>
+      <code>not_stated</code><span>The source covers the item but doesn't say.</span>
+      <code>null</code><span>The fact exists and we don't have it yet.</span>
+      <code>N/A</code><span>The column doesn't apply, for example contract terms on an in-person row.</span>
+    </div>
+    <div class="dl">
+      <a href="invoice_types_2026-10-02.csv" download>Invoice types CSV (57 rows)</a>
+      <a href="power_map_2026-10-02.csv" download>Power map CSV (43 rows)</a>
+    </div>
+  </div>
+
+</div>
+
+<div class="wide">
+  <nav class="towns" aria-label="Towns"><a href="#manchester-nh">Manchester, NH</a><a href="#hagerstown-md">Hagerstown, MD</a><a href="#westbrook-me">Westbrook, ME</a><a href="#hattiesburg-ms">Hattiesburg, MS</a></nav>
+  <section class="town" id="manchester-nh"><header><h2>Manchester, NH</h2><span class="tag">your customer</span></header><h3>Invoice types by vendor <span class="n">21 rows</span></h3><div class="scroll"><table class="dbt inv"><thead><tr><th>invoice_type</th><th>issued_by</th><th>payment_processor</th><th>fee_as_published</th><th>fee_paid_by</th><th>billing_system</th><th>processor_contract_start</th><th>processor_contract_end</th><th>processor_est_renewal</th><th>processor_notice</th><th>confidence</th></tr></thead><tbody><tr><td>Motor vehicle registration renewal</td><td>Tax Collector</td><td>InvoiceCloud</td><td>card: 2.75%, min $1.95; e-check: $0.95</td><td>resident</td><td>Avitar</td><td class="dt">≤ 2015-12</td><td class="dt">not_published</td><td class="dt">not_published</td><td class="dt">not_published</td><td><span class="pill high">high</span></td></tr><tr><td>Dog licence</td><td>City Clerk</td><td>InvoiceCloud</td><td>card: 2.75%, min $1.95</td><td>resident</td><td class="gap">null</td><td class="dt">≤ 2015-06</td><td class="dt">not_published</td><td class="dt">not_published</td><td class="dt">not_published</td><td><span class="pill high">high</span></td></tr><tr><td>Birth / death / marriage / divorce certificates</td><td>City Clerk</td><td>InvoiceCloud</td><td>card: 2.75%, min $1.95</td><td>not_stated</td><td class="gap">null</td><td class="dt">≤ 2015-12</td><td class="dt">not_published</td><td class="dt">not_published</td><td class="dt">not_published</td><td><span class="pill high">high</span></td></tr><tr><td>Marriage licence</td><td>City Clerk</td><td>in_person</td><td>card: 2.75%, min $1.95</td><td>not_stated</td><td class="gap">null</td><td class="gap">N/A</td><td class="gap">N/A</td><td class="gap">N/A</td><td class="gap">N/A</td><td><span class="pill medium">medium</span></td></tr><tr><td>Property tax</td><td>Tax Collector</td><td>InvoiceCloud</td><td>card: 2.75%, min $1.95; e-check: $0.95</td><td>resident</td><td>CentralSquare</td><td class="dt">2022-04-15</td><td class="dt">not_published</td><td class="dt">2027-04 / 2028-04</td><td class="dt">90 days</td><td><span class="pill high">high</span></td></tr><tr><td>Water bills</td><td>Water Works</td><td>Tyler Payments</td><td>not_published</td><td>town</td><td>Tyler Munis</td><td class="dt">2026-10-01</td><td class="dt">not_published</td><td class="dt">not_published</td><td class="dt">60 days</td><td><span class="pill conflict">conflict</span></td></tr><tr><td>Sewer / wastewater bills</td><td>Environmental Protection Division</td><td>Tyler Payments</td><td class="gap">null</td><td class="gap">null</td><td>Tyler Munis</td><td class="dt">not_published</td><td class="dt">not_published</td><td class="dt">not_published</td><td class="dt">not_published</td><td><span class="pill medium">medium</span></td></tr><tr><td>Bulky item collection</td><td>Public Works</td><td>InvoiceCloud</td><td>not_published</td><td>town</td><td class="gap">null</td><td class="dt">not_published</td><td class="dt">not_published</td><td class="dt">not_published</td><td class="dt">not_published</td><td><span class="pill high">high</span></td></tr><tr><td>Trash / recycling carts</td><td>Public Works</td><td>not_stated</td><td>card: 2.99%</td><td>resident</td><td class="gap">null</td><td class="gap">null</td><td class="gap">null</td><td class="gap">null</td><td class="gap">null</td><td><span class="pill medium">medium</span></td></tr><tr><td>Parking tickets</td><td>Parking Division</td><td>Gtechna</td><td class="gap">null</td><td class="gap">null</td><td class="gap">null</td><td class="dt">not_published</td><td class="dt">not_published</td><td class="dt">not_published</td><td class="dt">not_published</td><td><span class="pill medium">medium</span></td></tr><tr><td>Parking permits / on-street permits</td><td>Parking Division</td><td>Gtechna</td><td class="gap">null</td><td class="gap">null</td><td class="gap">null</td><td class="dt">not_published</td><td class="dt">not_published</td><td class="dt">not_published</td><td class="dt">not_published</td><td><span class="pill medium">medium</span></td></tr><tr><td>Metered parking</td><td>Parking Division</td><td>PayByPhone</td><td class="gap">null</td><td class="gap">null</td><td class="gap">null</td><td class="dt">not_published</td><td class="dt">not_published</td><td class="dt">not_published</td><td class="dt">not_published</td><td><span class="pill high">high</span></td></tr><tr><td>Metered parking</td><td>Parking Division</td><td>Passport Parking</td><td class="gap">null</td><td class="gap">null</td><td class="gap">null</td><td class="dt">not_published</td><td class="dt">not_published</td><td class="dt">not_published</td><td class="dt">not_published</td><td><span class="pill high">high</span></td></tr><tr><td>Airport parking</td><td>Airport</td><td>LAZ Parking</td><td>reservation: up to $3.00</td><td>resident</td><td class="gap">null</td><td class="dt">not_published</td><td class="dt">not_published</td><td class="dt">not_published</td><td class="dt">not_published</td><td><span class="pill medium">medium</span></td></tr><tr><td>Recreation program registration</td><td>Parks, Recreation &amp; Cemetery Division</td><td>not_stated</td><td class="gap">null</td><td class="gap">null</td><td class="gap">null</td><td class="gap">null</td><td class="gap">null</td><td class="gap">null</td><td class="gap">null</td><td><span class="pill medium">medium</span></td></tr><tr><td>Building / trade / sign / yard-sale permits</td><td>Planning &amp; Community Development</td><td>in_person</td><td class="gap">N/A</td><td class="gap">N/A</td><td class="gap">null</td><td class="gap">N/A</td><td class="gap">N/A</td><td class="gap">N/A</td><td class="gap">N/A</td><td><span class="pill medium">medium</span></td></tr><tr><td>Commercial pay-and-display parking permit</td><td>Parking Division</td><td>in_person</td><td class="gap">N/A</td><td class="gap">N/A</td><td class="gap">null</td><td class="gap">N/A</td><td class="gap">N/A</td><td class="gap">N/A</td><td class="gap">N/A</td><td><span class="pill medium">medium</span></td></tr><tr><td>Police report copies</td><td>Police Records Division</td><td>in_person</td><td class="gap">N/A</td><td class="gap">N/A</td><td class="gap">null</td><td class="gap">N/A</td><td class="gap">N/A</td><td class="gap">N/A</td><td class="gap">N/A</td><td><span class="pill medium">medium</span></td></tr><tr><td>Cemetery lots and burials</td><td>Parks, Recreation &amp; Cemetery Division</td><td>in_person</td><td class="gap">N/A</td><td class="gap">N/A</td><td class="gap">null</td><td class="gap">N/A</td><td class="gap">N/A</td><td class="gap">N/A</td><td class="gap">N/A</td><td><span class="pill medium">medium</span></td></tr><tr><td>Library replacement charges</td><td>Manchester City Library</td><td>in_person</td><td class="gap">N/A</td><td class="gap">N/A</td><td class="gap">null</td><td class="gap">N/A</td><td class="gap">N/A</td><td class="gap">N/A</td><td class="gap">N/A</td><td><span class="pill medium">medium</span></td></tr><tr><td>Business licences</td><td>City Clerk</td><td>in_person</td><td class="gap">N/A</td><td class="gap">N/A</td><td class="gap">null</td><td class="gap">N/A</td><td class="gap">N/A</td><td class="gap">N/A</td><td class="gap">N/A</td><td><span class="pill medium">medium</span></td></tr></tbody></table></div><h3>Power map <span class="n">13 rows</span></h3><div class="scroll"><table class="dbt ppl"><thead><tr><th>name</th><th>department</th><th>title</th><th>role_in_decision</th><th>confidence</th></tr></thead><tbody><tr><td>Sharon Wickens</td><td>Finance</td><td>Finance Director; &#x27;Finance Officer&#x27;</td><td>approves</td><td><span class="pill medium">medium</span></td></tr><tr><td>Jennifer Heon</td><td>Finance</td><td>Finance Manager</td><td>day_to_day_owner</td><td><span class="pill medium">medium</span></td></tr><tr><td>Kim LeBlanc</td><td>Finance</td><td>Financial Analyst II</td><td>day_to_day_user</td><td><span class="pill medium">medium</span></td></tr><tr><td>Richard Martinez</td><td>Information Systems</td><td>Information Systems Director</td><td>recommends</td><td><span class="pill medium">medium</span></td></tr><tr><td>vacant</td><td>Information Systems</td><td>IT Applications Administrator - MUNIS</td><td>day_to_day_owner</td><td><span class="pill medium">medium</span></td></tr><tr><td>Brenda Masewic Adams, TC</td><td>Tax Collector</td><td>Tax Collector</td><td>day_to_day_owner</td><td><span class="pill low">low</span></td></tr><tr><td>Philip W. Croasdale, C.P.A.</td><td>Water Works</td><td>Water Works Director</td><td>decides</td><td><span class="pill medium">medium</span></td></tr><tr><td>Mia Lee</td><td>Water Works</td><td>Water Works Deputy Director, Finance &amp; Administration</td><td>day_to_day_owner</td><td><span class="pill low">low</span></td></tr><tr><td>Matthew Normand, CMC</td><td>City Clerk</td><td>City Clerk</td><td>day_to_day_owner</td><td><span class="pill low">low</span></td></tr><tr><td>Tim Clougherty</td><td>Public Works</td><td>Public Works Director</td><td>day_to_day_owner</td><td><span class="pill low">low</span></td></tr><tr><td>Alderman O&#x27;Neil</td><td>Board of Mayor and Aldermen</td><td>Chair, Committee on Accounts, Enrollment &amp; Revenue Administration</td><td>approves</td><td><span class="pill medium">medium</span></td></tr><tr><td>Board of Mayor and Aldermen</td><td>Mayor / Board</td><td>Approving body; Mayor is ex-officio member of the Board of Water Commissioners</td><td>approves</td><td><span class="pill medium">medium</span></td></tr><tr><td>not_published</td><td>Human Resources</td><td>HR Director</td><td class="gap">N/A</td><td><span class="pill medium">medium</span></td></tr></tbody></table></div></section>
+<section class="town" id="hagerstown-md"><header><h2>Hagerstown, MD</h2><span class="tag">your customer</span></header><h3>Invoice types by vendor <span class="n">15 rows</span></h3><div class="scroll"><table class="dbt inv"><thead><tr><th>invoice_type</th><th>issued_by</th><th>payment_processor</th><th>fee_as_published</th><th>fee_paid_by</th><th>billing_system</th><th>processor_contract_start</th><th>processor_contract_end</th><th>processor_est_renewal</th><th>processor_notice</th><th>confidence</th></tr></thead><tbody><tr><td>Electric bill</td><td>Customer &amp; Support Services / Utilities</td><td>InvoiceCloud</td><td>not_published</td><td>town</td><td>Tyler Munis</td><td class="dt">2022-01-31</td><td class="dt">not_published</td><td class="dt">2027-01 / 2028-01</td><td class="dt">90 days</td><td><span class="pill high">high</span></td></tr><tr><td>Water and wastewater bill</td><td>Customer &amp; Support Services / Utilities</td><td>InvoiceCloud</td><td>not_published</td><td>town</td><td>Tyler Munis</td><td class="dt">2022-01-31</td><td class="dt">not_published</td><td class="dt">2027-01 / 2028-01</td><td class="dt">90 days</td><td><span class="pill high">high</span></td></tr><tr><td>Real estate tax</td><td>Customer &amp; Support Services</td><td>InvoiceCloud</td><td>not_published</td><td>town</td><td>Tyler Munis</td><td class="dt">2022-01-31</td><td class="dt">not_published</td><td class="dt">2027-01 / 2028-01</td><td class="dt">90 days</td><td><span class="pill conflict">conflict</span></td></tr><tr><td>Personal property tax</td><td>Customer &amp; Support Services</td><td>InvoiceCloud</td><td>not_published</td><td>town</td><td>Tyler Munis</td><td class="dt">2022-01-31</td><td class="dt">not_published</td><td class="dt">2027-01 / 2028-01</td><td class="dt">90 days</td><td><span class="pill high">high</span></td></tr><tr><td>Business and rental licences</td><td>not_stated</td><td>InvoiceCloud</td><td>not_published</td><td>town</td><td class="gap">null</td><td class="dt">2022-01-31</td><td class="dt">not_published</td><td class="dt">2027-01 / 2028-01</td><td class="dt">90 days</td><td><span class="pill high">high</span></td></tr><tr><td>General billing</td><td>Finance</td><td>InvoiceCloud</td><td>not_published</td><td>town</td><td>Workday</td><td class="dt">2022-01-31</td><td class="dt">not_published</td><td class="dt">2027-01 / 2028-01</td><td class="dt">90 days</td><td><span class="pill high">high</span></td></tr><tr><td>Permits</td><td>Permits Division</td><td>InvoiceCloud</td><td>not_published</td><td>town</td><td>Tyler Portico</td><td class="dt">2022-01-31</td><td class="dt">not_published</td><td class="dt">2027-01 / 2028-01</td><td class="dt">90 days</td><td><span class="pill high">high</span></td></tr><tr><td>Bulk trash</td><td>Public Works</td><td>InvoiceCloud</td><td>not_published</td><td>town</td><td class="gap">null</td><td class="dt">2022-01-31</td><td class="dt">not_published</td><td class="dt">2027-01 / 2028-01</td><td class="dt">90 days</td><td><span class="pill high">high</span></td></tr><tr><td>Parking passes / monthly parking invoices</td><td>Parking Division</td><td>InvoiceCloud</td><td>not_published</td><td>town</td><td class="gap">null</td><td class="dt">2022-01-31</td><td class="dt">not_published</td><td class="dt">2027-01 / 2028-01</td><td class="dt">90 days</td><td><span class="pill high">high</span></td></tr><tr><td>Economic development loans</td><td>Community &amp; Economic Development</td><td>InvoiceCloud</td><td>not_published</td><td>town</td><td class="gap">null</td><td class="dt">2022-01-31</td><td class="dt">not_published</td><td class="dt">2027-01 / 2028-01</td><td class="dt">90 days</td><td><span class="pill high">high</span></td></tr><tr><td>Parking meters / lots</td><td>Parking Division</td><td>PayByPhone</td><td class="gap">null</td><td class="gap">null</td><td class="gap">null</td><td class="dt">not_published</td><td class="dt">not_published</td><td class="dt">not_published</td><td class="dt">not_published</td><td><span class="pill medium">medium</span></td></tr><tr><td>Parking citations</td><td>Parking Division</td><td>Remit-Online</td><td>$3.95</td><td>not_stated</td><td class="gap">null</td><td class="dt">not_published</td><td class="dt">not_published</td><td class="dt">not_published</td><td class="dt">not_published</td><td><span class="pill high">high</span></td></tr><tr><td>Red-light camera citations</td><td>Police</td><td>Verra Mobility</td><td>$5.00</td><td>not_stated</td><td class="gap">null</td><td class="dt">not_published</td><td class="dt">not_published</td><td class="dt">not_published</td><td class="dt">not_published</td><td><span class="pill high">high</span></td></tr><tr><td>Speed-camera citations</td><td>Police</td><td>Altumint</td><td class="gap">null</td><td class="gap">null</td><td class="gap">null</td><td class="dt">not_published</td><td class="dt">not_published</td><td class="dt">not_published</td><td class="dt">not_published</td><td><span class="pill medium">medium</span></td></tr><tr><td>Recreation program registration</td><td>Parks &amp; Recreation</td><td>ActiveNet</td><td class="gap">null</td><td class="gap">null</td><td>ActiveNet</td><td class="dt">not_published</td><td class="dt">not_published</td><td class="dt">not_published</td><td class="dt">not_published</td><td><span class="pill medium">medium</span></td></tr></tbody></table></div><h3>Power map <span class="n">11 rows</span></h3><div class="scroll"><table class="dbt ppl"><thead><tr><th>name</th><th>department</th><th>title</th><th>role_in_decision</th><th>confidence</th></tr></thead><tbody><tr><td>Scott Nicewarner</td><td>City Administrator</td><td>City Administrator</td><td>approves</td><td><span class="pill medium">medium</span></td></tr><tr><td>Michelle Hepburn</td><td>Finance</td><td>Chief Financial Officer</td><td>decides</td><td><span class="pill high">high</span></td></tr><tr><td>Brooke Garver</td><td>Finance</td><td>Accounting/Budget Manager</td><td>recommends</td><td><span class="pill low">low</span></td></tr><tr><td>Beth Everhart</td><td>Customer &amp; Support Services</td><td>Support Services Manager</td><td>day_to_day_owner</td><td><span class="pill medium">medium</span></td></tr><tr><td>Ryan Grove</td><td>Customer &amp; Support Services</td><td>Support Services Supervisor</td><td>day_to_day_user</td><td><span class="pill low">low</span></td></tr><tr><td>Oren Reed</td><td>Information Technology</td><td>Technology Manager</td><td>recommends</td><td><span class="pill high">high</span></td></tr><tr><td>Dave Gordon</td><td>Information Technology</td><td>Applications and Project Manager</td><td>day_to_day_owner</td><td><span class="pill low">low</span></td></tr><tr><td>Tyler French</td><td>Finance</td><td>Procurement Administrator</td><td>recommends</td><td><span class="pill medium">medium</span></td></tr><tr><td>Nancy Hausrath</td><td>Utilities</td><td>Director of Utilities</td><td>decides</td><td><span class="pill medium">medium</span></td></tr><tr><td>Tyler Puffenberger</td><td>Utilities</td><td>Deputy Director</td><td>day_to_day_owner</td><td><span class="pill low">low</span></td></tr><tr><td>Mayor and City Council</td><td>Mayor and Council</td><td>Approving body</td><td>approves</td><td><span class="pill medium">medium</span></td></tr></tbody></table></div></section>
+<section class="town" id="westbrook-me"><header><h2>Westbrook, ME</h2><span class="tag">not a customer</span></header><h3>Invoice types by vendor <span class="n">12 rows</span></h3><div class="scroll"><table class="dbt inv"><thead><tr><th>invoice_type</th><th>issued_by</th><th>payment_processor</th><th>fee_as_published</th><th>fee_paid_by</th><th>billing_system</th><th>processor_contract_start</th><th>processor_contract_end</th><th>processor_est_renewal</th><th>processor_notice</th><th>confidence</th></tr></thead><tbody><tr><td>Property tax</td><td>Finance / Tax Collector</td><td>Official Payments</td><td>card: 2.5%</td><td>resident</td><td>Tyler Munis</td><td class="dt">≤ 2015-04</td><td class="dt">not_published</td><td class="dt">not_published</td><td class="dt">not_published</td><td><span class="pill medium">medium</span></td></tr><tr><td>Liened sewer bill</td><td>Finance / Tax Collector</td><td>Official Payments</td><td class="gap">null</td><td class="gap">null</td><td class="gap">null</td><td class="dt">≤ 2015-04</td><td class="dt">not_published</td><td class="dt">not_published</td><td class="dt">not_published</td><td><span class="pill medium">medium</span></td></tr><tr><td>Sewer bill</td><td>Wastewater / Finance</td><td>not_stated</td><td class="gap">null</td><td class="gap">null</td><td class="gap">null</td><td class="gap">null</td><td class="gap">null</td><td class="gap">null</td><td class="gap">null</td><td><span class="pill medium">medium</span></td></tr><tr><td>Rescue bill</td><td>Fire Rescue</td><td>Official Payments</td><td class="gap">null</td><td class="gap">null</td><td class="gap">null</td><td class="dt">≤ 2015-04</td><td class="dt">not_published</td><td class="dt">not_published</td><td class="dt">not_published</td><td><span class="pill medium">medium</span></td></tr><tr><td>Motor vehicle registration / excise tax</td><td>Finance</td><td>State of Maine</td><td>card: 2.5%</td><td>not_stated</td><td>TRIO</td><td class="dt">not_published</td><td class="dt">not_published</td><td class="dt">not_published</td><td class="dt">not_published</td><td><span class="pill medium">medium</span></td></tr><tr><td>Dog licences</td><td>City Clerk</td><td>State of Maine</td><td class="gap">null</td><td class="gap">null</td><td class="gap">null</td><td class="dt">not_published</td><td class="dt">not_published</td><td class="dt">not_published</td><td class="dt">not_published</td><td><span class="pill medium">medium</span></td></tr><tr><td>Vital records</td><td>City Clerk</td><td>State of Maine</td><td>not_published</td><td>town</td><td class="gap">null</td><td class="dt">not_published</td><td class="dt">not_published</td><td class="dt">not_published</td><td class="dt">not_published</td><td><span class="pill medium">medium</span></td></tr><tr><td>Hunting / fishing licences, ATV / boat / snowmobile registrations</td><td>Finance</td><td>State of Maine</td><td class="gap">null</td><td class="gap">null</td><td class="gap">null</td><td class="dt">not_published</td><td class="dt">not_published</td><td class="dt">not_published</td><td class="dt">not_published</td><td><span class="pill medium">medium</span></td></tr><tr><td>Recreation / Community Center programs</td><td>Community Services</td><td>Rec1</td><td class="gap">null</td><td class="gap">null</td><td class="gap">null</td><td class="dt">not_published</td><td class="dt">not_published</td><td class="dt">not_published</td><td class="dt">not_published</td><td><span class="pill medium">medium</span></td></tr><tr><td>Building / planning permits</td><td>Planning &amp; Code Enforcement</td><td>MyGov</td><td class="gap">null</td><td class="gap">null</td><td class="gap">null</td><td class="dt">not_published</td><td class="dt">not_published</td><td class="dt">not_published</td><td class="dt">not_published</td><td><span class="pill medium">medium</span></td></tr><tr><td>Business licences</td><td>City Clerk</td><td>MyGov</td><td class="gap">null</td><td class="gap">null</td><td class="gap">null</td><td class="dt">not_published</td><td class="dt">not_published</td><td class="dt">not_published</td><td class="dt">not_published</td><td><span class="pill low">low</span></td></tr><tr><td>Burn permits</td><td>Fire Rescue</td><td>State of Maine</td><td class="gap">null</td><td class="gap">null</td><td class="gap">null</td><td class="dt">not_published</td><td class="dt">not_published</td><td class="dt">not_published</td><td class="dt">not_published</td><td><span class="pill medium">medium</span></td></tr></tbody></table></div><h3>Power map <span class="n">11 rows</span></h3><div class="scroll"><table class="dbt ppl"><thead><tr><th>name</th><th>department</th><th>title</th><th>role_in_decision</th><th>confidence</th></tr></thead><tbody><tr><td>Laura King</td><td>Finance</td><td>Interim Finance Director/Tax Collector; Deputy Finance Director</td><td>day_to_day_owner</td><td><span class="pill high">high</span></td></tr><tr><td>Bruno Inacio</td><td>Finance</td><td>Finance Director</td><td>decides</td><td><span class="pill low">low</span></td></tr><tr><td>vacant</td><td>Finance</td><td>Finance Director</td><td>decides</td><td><span class="pill medium">medium</span></td></tr><tr><td>Melissa Littlehale</td><td>Finance</td><td>Tax Collector</td><td>day_to_day_owner</td><td><span class="pill high">high</span></td></tr><tr><td>Angela Holmes</td><td>Administration</td><td>City Administrator</td><td>decides</td><td><span class="pill medium">medium</span></td></tr><tr><td>Jennie Franceschi</td><td>Administration</td><td>Assistant City Administrator</td><td>recommends</td><td><span class="pill medium">medium</span></td></tr><tr><td>David Morse</td><td>Mayor&#x27;s Office</td><td>Mayor</td><td>approves</td><td><span class="pill medium">medium</span></td></tr><tr><td>Greg Hamilton</td><td>IT / Dispatch</td><td>Director of Emergency Communications &amp; IT</td><td>recommends</td><td><span class="pill medium">medium</span></td></tr><tr><td>Katherine Kelley, P.E.</td><td>Engineering &amp; Wastewater</td><td>Wastewater Division Manager</td><td>day_to_day_owner</td><td><span class="pill medium">medium</span></td></tr><tr><td>Ellis Ledoux</td><td>City Clerk</td><td>City Clerk &amp; Registrar of Voters</td><td>day_to_day_owner</td><td><span class="pill medium">medium</span></td></tr><tr><td>Brian McCambridge</td><td>City Council</td><td>City Councillor, Ward 1; Finance Committee Chair</td><td>approves</td><td><span class="pill medium">medium</span></td></tr></tbody></table></div></section>
+<section class="town" id="hattiesburg-ms"><header><h2>Hattiesburg, MS</h2><span class="tag">not a customer</span></header><h3>Invoice types by vendor <span class="n">9 rows</span></h3><div class="scroll"><table class="dbt inv"><thead><tr><th>invoice_type</th><th>issued_by</th><th>payment_processor</th><th>fee_as_published</th><th>fee_paid_by</th><th>billing_system</th><th>processor_contract_start</th><th>processor_contract_end</th><th>processor_est_renewal</th><th>processor_notice</th><th>confidence</th></tr></thead><tbody><tr><td>Water and sewer bill</td><td>Water &amp; Sewer</td><td>Xpress-pay</td><td class="gap">null</td><td class="gap">null</td><td>Tyler Technologies</td><td class="dt">≤ 2013-04</td><td class="dt">not_published</td><td class="dt">not_published</td><td class="dt">not_published</td><td><span class="pill conflict">conflict</span></td></tr><tr><td>Municipal court fines</td><td>Municipal Court</td><td>in_person</td><td class="gap">N/A</td><td class="gap">N/A</td><td class="gap">null</td><td class="gap">N/A</td><td class="gap">N/A</td><td class="gap">N/A</td><td class="gap">N/A</td><td><span class="pill conflict">conflict</span></td></tr><tr><td>Police event and parade permits</td><td>Police</td><td>in_person</td><td class="gap">N/A</td><td class="gap">N/A</td><td class="gap">null</td><td class="gap">N/A</td><td class="gap">N/A</td><td class="gap">N/A</td><td class="gap">N/A</td><td><span class="pill medium">medium</span></td></tr><tr><td>Community centre reservations</td><td>Cultural Affairs / Parks &amp; Recreation</td><td>not_stated</td><td class="gap">null</td><td class="gap">null</td><td class="gap">null</td><td class="gap">null</td><td class="gap">null</td><td class="gap">null</td><td class="gap">null</td><td><span class="pill medium">medium</span></td></tr><tr><td>Privilege licences</td><td>City Clerk / Tax Division</td><td>Tyler Payments</td><td>not_published</td><td>town</td><td>Tyler EnerGov</td><td class="dt">not_published</td><td class="dt">not_published</td><td class="dt">not_published</td><td class="dt">not_published</td><td><span class="pill medium">medium</span></td></tr><tr><td>Garage-sale permits</td><td>City Clerk / Tax Division</td><td>in_person</td><td class="gap">N/A</td><td class="gap">N/A</td><td class="gap">null</td><td class="gap">N/A</td><td class="gap">N/A</td><td class="gap">N/A</td><td class="gap">N/A</td><td><span class="pill medium">medium</span></td></tr><tr><td>Golf-cart registration</td><td>City Clerk / Tax Division</td><td>in_person</td><td class="gap">N/A</td><td class="gap">N/A</td><td class="gap">null</td><td class="gap">N/A</td><td class="gap">N/A</td><td class="gap">N/A</td><td class="gap">N/A</td><td><span class="pill medium">medium</span></td></tr><tr><td>Vacant/abandoned building registration; records-request fees; cemetery</td><td>Urban Development / HPD / Parks</td><td>not_stated</td><td class="gap">null</td><td class="gap">null</td><td class="gap">null</td><td class="gap">null</td><td class="gap">null</td><td class="gap">null</td><td class="gap">null</td><td><span class="pill medium">medium</span></td></tr><tr><td>Building permits / code enforcement / planning fees</td><td>Urban Development</td><td>Tyler Payments</td><td class="gap">null</td><td class="gap">null</td><td class="gap">null</td><td class="dt">not_published</td><td class="dt">not_published</td><td class="dt">not_published</td><td class="dt">not_published</td><td><span class="pill medium">medium</span></td></tr></tbody></table></div><h3>Power map <span class="n">8 rows</span></h3><div class="scroll"><table class="dbt ppl"><thead><tr><th>name</th><th>department</th><th>title</th><th>role_in_decision</th><th>confidence</th></tr></thead><tbody><tr><td>Malcolm Berch</td><td>Finance</td><td>Chief Financial Officer</td><td>decides</td><td><span class="pill medium">medium</span></td></tr><tr><td>Ann Jones</td><td>Administration</td><td>Chief Administrative Officer</td><td>decides</td><td><span class="pill high">high</span></td></tr><tr><td>Toby Barker</td><td>Mayor</td><td>Mayor</td><td>approves</td><td><span class="pill medium">medium</span></td></tr><tr><td>Kermas Eaton</td><td>City Clerk/Tax Division</td><td>Director of Administration / City Clerk</td><td>day_to_day_owner</td><td><span class="pill medium">medium</span></td></tr><tr><td>Alan Howe</td><td>Water &amp; Sewer</td><td>Director of Water &amp; Sewer</td><td>decides</td><td><span class="pill medium">medium</span></td></tr><tr><td>Brian R. Bledsoe</td><td>Municipal Court</td><td>Judge; &#x27;Director&#x27; on the FY2027 court budget presentation</td><td>decides</td><td><span class="pill medium">medium</span></td></tr><tr><td>Dave Ware</td><td>City Council</td><td>City Council President</td><td>approves</td><td><span class="pill medium">medium</span></td></tr><tr><td>not_published</td><td>IT / Water Billing</td><td class="gap">N/A</td><td class="gap">N/A</td><td><span class="pill low">low</span></td></tr></tbody></table></div></section>
+</div>
+
+<div class="container">
+  <div class="footer">
+    <p>Municipal Alpha &middot; Prepared for Gary Novoson, Nicholas Lisac and Stephen Williams after our call on
+    2026-10-06. Tables as read 2026-10-02.</p>
+  </div>
+</div>
+</body>
+</html>
