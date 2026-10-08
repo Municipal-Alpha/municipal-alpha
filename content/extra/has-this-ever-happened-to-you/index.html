@@ -200,6 +200,12 @@ h3{font-size:28px}
 .sincere{background:linear-gradient(180deg,var(--blue),var(--navy));text-align:center}
 .sincere h2{max-width:900px;margin:0 auto}
 .sincere .lead{margin:16px auto 0}
+/* the one grown-up paragraph: plain serif on paper, on purpose */
+.grownup{max-width:680px;margin:28px auto 0;background:#fffdf5;color:#1a1a1a;text-align:left;padding:28px 32px;
+  font-family:Georgia,"Times New Roman",serif;font-size:19px;line-height:1.6;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+.grownup p{margin:0 0 14px}
+.grownup .sig{font-style:italic;margin:18px 0 0;text-align:right}
+@media (max-width:820px){.grownup{padding:20px;font-size:17px}}
 
 /* watch this */
 .watch{background:#000}
@@ -307,7 +313,7 @@ footer{background:#000;padding:22px 16px 40px;text-align:center;font-family:var(
     <div>
       <p class="kicker">TAKE THE 10-SECOND QUIZ</p>
       <h1 class="chroma">Are you struggling to find municipal data?</h1>
-      <p class="also">Have you found your AI prompts unreliable?</p>
+      <p class="also">Have you found your AI prompts for this data unreliable?</p>
       <p class="also">Do you like spending time wrangling PDFs and fighting government websites?</p>
       <div class="quiz" role="group" aria-label="Your answer">
         <button type="button" class="yn">YES</button><button type="button" class="yn">NO</button>
@@ -428,9 +434,14 @@ footer{background:#000;padding:22px 16px 40px;text-align:center;font-family:var(
 
 <section class="sincere">
   <div class="wrap">
-    <p class="kicker">A WORD FROM THE OPERATORS</p>
+    <p class="kicker">A WORD FROM THE OPERATORS (THE SERIOUS PART)</p>
     <h2 class="chroma">Serious about municipal data. Unserious but sincere people.</h2>
-    <p class="lead">Tired of digging through meeting packets the length of a novel? Hunting for that one line item in a check register? We read the whole packet. Then we package it up and hand each of your teams the few bits that really matter to them.</p>
+    <div class="grownup">
+      <p>Yes, we built the website this way on purpose. We're serious about the data and serious about solving your business problem. That doesn't mean we have to be serious all the time.</p>
+      <p>We've both worked inside corporate companies, with brand guidelines and rules about what you can and can't say. This time, that just wasn't what we wanted.</p>
+      <p>So if you're tired of digging through meeting packets the length of a novel, or hunting for one line item in a check register, we'll read the whole packet and hand each of your teams the few bits that really matter to them.</p>
+      <p class="sig">Matt &amp; Christian</p>
+    </div>
   </div>
 </section>
 
