@@ -25,7 +25,7 @@ a{color:var(--yellow)}
 body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:50;
   background:repeating-linear-gradient(to bottom,rgba(0,0,0,.18) 0 1px,transparent 1px 3px),
              radial-gradient(ellipse at center,transparent 55%,rgba(0,0,0,.45) 100%)}
-.osd{position:fixed;top:14px;left:16px;z-index:60;font-family:var(--mono);font-weight:700;font-size:15px;
+.osd{position:absolute;top:14px;left:16px;z-index:60;font-family:var(--mono);font-weight:700;font-size:15px;
   color:#fff;text-shadow:2px 0 rgba(255,0,0,.6),-2px 0 rgba(0,180,255,.6);letter-spacing:.06em;pointer-events:none}
 .osd .rec{display:inline-block;margin-left:10px}
 .chroma{text-shadow:3px 0 rgba(255,0,60,.55),-3px 0 rgba(0,200,255,.55),0 3px 0 #000}
@@ -33,7 +33,7 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:50;
 /* marquee */
 .marquee{background:var(--red);color:var(--yellow);font-family:var(--impact);font-size:22px;letter-spacing:.04em;
   white-space:nowrap;overflow:hidden;border-top:3px solid var(--yellow);border-bottom:3px solid var(--yellow)}
-.marquee span{display:inline-block;padding:6px 0;animation:scroll 28s linear infinite}
+.marquee span{display:inline-block;padding:6px 0;animation:scroll 70s linear infinite}
 @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
 /* nav */
@@ -93,14 +93,113 @@ h3{font-size:28px}
 /* stat strip */
 .stats{background:var(--maroon);border-bottom:6px solid #000}
 .stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;text-align:center}
-.stat b{display:block;font-family:var(--impact);font-weight:400;font-size:clamp(48px,7vw,76px);color:var(--yellow)}
+.stat b{display:block;font-family:var(--impact);font-weight:400;font-size:clamp(40px,4.2vw,54px);color:var(--yellow);white-space:nowrap}
 .stat span{font-family:var(--impact);font-size:22px;letter-spacing:.03em}
+.stat em{display:block;font-style:normal;font-size:15px;color:var(--yellow);margin-top:6px}
 
 /* exclaim list */
 .exclaims{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:28px}
 .exclaim{background:#2b2b2b;border:3px solid var(--yellow);padding:18px;font-family:var(--impact);font-size:26px;color:#fff;transform:rotate(-.6deg)}
 .exclaim:nth-child(even){transform:rotate(.8deg);border-color:#fff}
 .exclaim em{display:block;font-style:normal;font-family:var(--comic);font-size:15px;color:var(--muted);margin-top:6px}
+
+/* hero quiz */
+.hero h1{font-size:clamp(40px,5.4vw,66px)}
+.also{font-family:var(--impact);font-size:clamp(22px,2.4vw,30px);color:#fff;margin:14px 0 0;line-height:1.1}
+.quiz{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:22px 0 4px}
+.quiz .yn{font-family:var(--impact);font-size:26px;letter-spacing:.04em;padding:6px 22px;border:4px solid #000;cursor:pointer;
+  box-shadow:4px 4px 0 #000;background:#fff;color:var(--navy)}
+.quiz .yn:first-of-type{background:var(--yellow);color:var(--red)}
+.quiz .yn:hover,.quiz .yn:focus-visible{transform:scale(1.06);outline:3px solid var(--yellow);outline-offset:2px}
+.stamp{font-family:var(--impact);font-size:28px;color:var(--red);background:var(--white);border:4px double var(--red);
+  padding:2px 14px;transform:rotate(-8deg);display:none}
+.stamp.on{display:inline-block;animation:stamp .25s ease-out}
+@keyframes stamp{from{transform:rotate(-8deg) scale(2.2);opacity:0}to{transform:rotate(-8deg) scale(1);opacity:1}}
+
+/* legit band */
+.legit{background:var(--white);color:var(--ink);border-top:6px solid #000}
+.legit h2,.legit .kicker{color:var(--navy)}
+.legit .chroma{text-shadow:3px 3px 0 var(--yellow)}
+.legit .lead{margin:12px 0 0}
+.legit .troy{font-size:clamp(20px,2.3vw,26px);max-width:820px}
+.legit-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:28px;margin-top:30px;align-items:start}
+.cert{position:relative;background:#fff;border:4px double var(--navy);box-shadow:0 0 0 6px var(--white),0 0 0 9px var(--navy);
+  padding:22px 22px 18px;display:grid;grid-template-columns:140px 1fr;gap:6px 20px;align-items:start}
+.cert img{grid-row:span 2;width:140px;height:140px;object-fit:cover;border:3px solid #000}
+.cert h3{color:var(--red);font-size:32px;align-self:end}
+.cert ul{margin:0;padding:0;list-style:none}
+.cert li{padding:5px 0 5px 30px;position:relative;font-size:16px;line-height:1.35}
+.cert li::before{content:"\2605";position:absolute;left:4px;top:4px;color:var(--red);font-size:18px}
+.cert.small{grid-template-columns:96px 1fr}
+.cert.small img{width:96px;height:96px}
+.cert.small .btn{grid-column:1/-1;justify-self:start;margin-top:10px}
+.seal{position:absolute;right:-18px;top:-26px;width:104px;height:104px;border-radius:50%;display:grid;place-items:center;
+  text-align:center;background:var(--red);color:var(--yellow);font-family:var(--impact);font-size:22px;line-height:1;letter-spacing:.02em;
+  border:4px dashed var(--yellow);box-shadow:0 0 0 4px var(--red);transform:rotate(12deg)}
+.seal.alt{background:var(--yellow);color:var(--red);border-color:var(--red);box-shadow:0 0 0 4px var(--yellow);
+  transform:rotate(-9deg);width:92px;height:92px;font-size:20px;top:-22px}
+@media (max-width:820px){
+  .seal.alt{right:2px;top:-50px;width:78px;height:78px;font-size:16px}
+  .cert.small h3{padding-right:64px}
+  .legit-grid{grid-template-columns:1fr}
+  .cert{grid-template-columns:96px 1fr}.cert img{width:96px;height:96px}
+  .seal{right:2px;top:-30px;width:90px;height:90px;font-size:19px}
+}
+
+/* ginsu belt */
+.ginsu{background:#111;border-top:6px solid var(--yellow);border-bottom:6px solid var(--yellow);overflow:hidden}
+.belt{margin:26px 0 8px;display:grid;gap:12px}
+.belt .row{display:flex;gap:12px;width:max-content;animation:belt 60s linear infinite}
+.belt .row.rev{animation-direction:reverse;animation-duration:70s}
+.belt span{font-family:var(--impact);font-size:clamp(20px,2.4vw,28px);letter-spacing:.02em;white-space:nowrap;
+  background:var(--yellow);color:var(--ink);padding:8px 16px;border:3px solid #000;transform:rotate(-1deg)}
+.belt .row.rev span{background:var(--white);color:var(--red)}
+@keyframes belt{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.punch{font-family:var(--impact);font-size:clamp(26px,3.4vw,40px);color:#fff;margin:22px 0 0}
+.punch em{font-style:normal;color:var(--yellow)}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* why us */
+.whyus{background:var(--white);color:var(--ink)}
+.whyus h2,.whyus .kicker{color:var(--red)}
+.whyus .chroma{text-shadow:none}
+.compare{margin-top:30px;border:4px solid #000;box-shadow:8px 8px 0 #000;background:#fff}
+.crow{display:grid;grid-template-columns:1.6fr 1fr 1fr;align-items:center;border-top:2px solid #000}
+.crow:first-child{border-top:0}
+.crow>span{padding:12px 14px;font-size:17px}
+.crow>span+span{text-align:center;border-left:2px solid #000;font-family:var(--impact);font-size:22px}
+.chead>span{font-family:var(--impact);font-size:20px;letter-spacing:.03em}
+.chead>span:last-child{background:var(--red);color:var(--yellow)}
+.crow .yes{color:#0a8a2a}
+.crow .unk{font-family:var(--mono);font-size:15px;color:#666}
+.crow:not(.chead)>span:last-child{background:#fff7cc}
+
+/* why-us cutaway: the secret formula */
+.cutaway{display:grid;grid-template-columns:1fr auto 1fr;grid-template-rows:auto auto;gap:0 18px;align-items:center;
+  margin:26px 0 8px;max-width:900px}
+.cutaway .layer{grid-column:1;border:4px solid #000;padding:12px 16px;position:relative}
+.cutaway .layer b{display:block;font-family:var(--impact);font-weight:400;font-size:22px;letter-spacing:.04em}
+.cutaway .layer span{font-size:16px}
+.cutaway .top{grid-row:1;background:var(--yellow);transform:rotate(-1deg);z-index:1}
+.cutaway .under{grid-row:2;background:var(--navy);color:#fff;margin-top:-4px;
+  background-image:repeating-linear-gradient(45deg,transparent 0 10px,rgba(255,255,255,.07) 10px 20px)}
+.cutaway .under b{color:var(--yellow)}
+.cutaway .equals{grid-column:2;grid-row:1/3;font-family:var(--impact);font-size:64px;color:var(--red)}
+.cutaway .result{grid-column:3;grid-row:1/3;background:var(--red);color:var(--yellow);border:4px solid #000;
+  box-shadow:6px 6px 0 #000;padding:18px;text-align:center;transform:rotate(1.5deg)}
+.cutaway .result b{display:block;font-family:var(--impact);font-weight:400;font-size:28px;line-height:1}
+.cutaway .result span{font-family:var(--impact);font-size:22px;color:#fff}
+.promise{font-family:var(--impact);font-size:clamp(26px,3.4vw,40px);color:var(--navy);margin:26px 0 0;line-height:1.05}
+@media (max-width:820px){
+  .cutaway{grid-template-columns:1fr;gap:0}
+  .cutaway .layer,.cutaway .equals,.cutaway .result{grid-column:1;grid-row:auto}
+  .cutaway .equals{text-align:center;font-size:48px;line-height:1.1}
+}
+
+/* operators' note */
+.sincere{background:linear-gradient(180deg,var(--blue),var(--navy));text-align:center}
+.sincere h2{max-width:900px;margin:0 auto}
+.sincere .lead{margin:16px auto 0}
 
 /* watch this */
 .watch{background:#000}
@@ -125,7 +224,7 @@ h3{font-size:28px}
 .offer .price{font-family:var(--impact);font-size:22px;color:var(--red);margin-top:12px}
 .offer .burst{width:120px;height:120px;font-size:17px;right:-22px;top:-34px;padding:22px}
 .noseats{text-align:center;margin-top:44px}
-.noseats .big{font-family:var(--impact);font-size:clamp(52px,10vw,120px);line-height:.95;color:var(--red);
+.noseats .big{font-family:var(--impact);font-size:clamp(40px,8vw,104px);line-height:.95;color:var(--red);
   text-shadow:4px 4px 0 #000;animation:blink 1s steps(1) infinite}
 @keyframes blink{50%{opacity:.25}}
 .noseats p{font-size:20px;max-width:620px;margin:16px auto 0}
@@ -177,7 +276,9 @@ footer{background:#000;padding:22px 16px 40px;text-align:center;font-family:var(
   .offer .burst{right:4px}
 }
 @media (prefers-reduced-motion:reduce){
-  .marquee span,.crawl span,.burst,.noseats .big,.unmute{animation:none}
+  .marquee span,.crawl span,.burst,.noseats .big,.unmute,.belt .row{animation:none}
+  .belt .row{flex-wrap:wrap;width:auto;padding:0 16px}
+  .belt .row span:nth-child(n+16){display:none}
   .marquee span,.crawl span{white-space:normal}
 }
 </style>
@@ -188,8 +289,8 @@ footer{background:#000;padding:22px 16px 40px;text-align:center;font-family:var(
 
 
 <div class="marquee" aria-hidden="true"><span>
-  &#9733; NOW READING MORE THAN 1,000 LOCAL GOVERNMENTS EVERY MONTH &#9733; OPERATORS ARE STANDING BY &#9733; ASK ABOUT OUR DEEP DIVE SPECIAL &#9733; NO SEATS! ONE PRICE! &#9733; THE INTERN GETS ACCESS &#9733;&nbsp;
-  &#9733; NOW READING MORE THAN 1,000 LOCAL GOVERNMENTS EVERY MONTH &#9733; OPERATORS ARE STANDING BY &#9733; ASK ABOUT OUR DEEP DIVE SPECIAL &#9733; NO SEATS! ONE PRICE! &#9733; THE INTERN GETS ACCESS &#9733;&nbsp;
+  &#9733; RECORDS FROM 4,800+ MUNICIPALITIES IN 51 STATES &#9733; 13,000,000,000+ CHARACTERS ALREADY SEARCHABLE &#9733; AN ESTIMATED 40,000,000,000+ CHARACTERS IN THE PILE &#9733; 1,489,000+ DOCUMENTS COLLECTED &#9733; OPERATORS ARE STANDING BY &#9733; 2,400,000+ PAGES COUNTED &#9733; AN ESTIMATED 24,000,000+ PAGES IN THE PILE &#9733; 470,000+ MEETING DATES ON RECORD &#9733; 492,000+ SIGNALS CLASSIFIED &#9733; 200,000+ BUSINESS &amp; ORGANIZATION NAMES &#9733; ONE FLAT FEE! NO PER-SEAT PRICING! &#9733; 68,000+ VENDOR NAMES SPOTTED &#9733; 73,000+ TOWER SITES CROSS-REFERENCED &#9733; 46,000+ PERMIT RECORDS &#9733; 2,300+ TOWNS ON THE READING ROUNDS &#9733; ASK ABOUT OUR DEEP DIVE SPECIAL &#9733;&nbsp;
+  &#9733; RECORDS FROM 4,800+ MUNICIPALITIES IN 51 STATES &#9733; 13,000,000,000+ CHARACTERS ALREADY SEARCHABLE &#9733; AN ESTIMATED 40,000,000,000+ CHARACTERS IN THE PILE &#9733; 1,489,000+ DOCUMENTS COLLECTED &#9733; OPERATORS ARE STANDING BY &#9733; 2,400,000+ PAGES COUNTED &#9733; AN ESTIMATED 24,000,000+ PAGES IN THE PILE &#9733; 470,000+ MEETING DATES ON RECORD &#9733; 492,000+ SIGNALS CLASSIFIED &#9733; 200,000+ BUSINESS &amp; ORGANIZATION NAMES &#9733; ONE FLAT FEE! NO PER-SEAT PRICING! &#9733; 68,000+ VENDOR NAMES SPOTTED &#9733; 73,000+ TOWER SITES CROSS-REFERENCED &#9733; 46,000+ PERMIT RECORDS &#9733; 2,300+ TOWNS ON THE READING ROUNDS &#9733; ASK ABOUT OUR DEEP DIVE SPECIAL &#9733;&nbsp;
 </span></div>
 
 <nav aria-label="Primary">
@@ -204,9 +305,15 @@ footer{background:#000;padding:22px 16px 40px;text-align:center;font-family:var(
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <p class="kicker">HAS THIS EVER HAPPENED TO YOU?</p>
-      <h1 class="chroma">Hi, I read your town's meeting minutes</h1>
-      <p class="hero-sub">Serious municipal data from unserious but sincere people. Tired of meeting packets the length of a novel? We read them. Then we tell each of your teams the few bits that matter to them.</p>
+      <p class="kicker">TAKE THE 10-SECOND QUIZ</p>
+      <h1 class="chroma">Are you struggling to find municipal data?</h1>
+      <p class="also">Have you found your AI prompts unreliable?</p>
+      <p class="also">Do you like spending time wrangling PDFs and fighting government websites?</p>
+      <div class="quiz" role="group" aria-label="Your answer">
+        <button type="button" class="yn">YES</button><button type="button" class="yn">NO</button>
+        <span class="stamp" aria-live="polite"></span>
+      </div>
+      <p class="hero-sub">If the answer to any of those is <b>YES</b> or <b>NO</b>, you've landed at the right place.</p>
       <a class="btn btn-red" href="#contact">CALL NOW!*</a>
       <p class="asterisk">*Operators are standing by. The operators are Matt and Christian. There are two of them. Please be patient.</p>
     </div>
@@ -224,23 +331,60 @@ footer{background:#000;padding:22px 16px 40px;text-align:center;font-family:var(
 
 <section class="stats" aria-label="What we read">
   <div class="wrap stat-grid">
-    <div class="stat"><b class="chroma">1,000+</b><span>LOCAL GOVERNMENTS READ EVERY MONTH</span></div>
-    <div class="stat"><b class="chroma">1.4M+</b><span>DOCUMENTS READ SO FAR</span></div>
-    <div class="stat"><b class="chroma">0</b><span>SEATS TO COUNT</span></div>
+    <div class="stat"><b class="chroma">4,800+</b><span>MUNICIPALITIES WE HOLD RECORDS FROM</span></div>
+    <div class="stat"><b class="chroma">1,489,000+</b><span>DOCUMENTS COLLECTED</span></div>
+    <div class="stat"><b class="chroma">492,000+</b><span>SIGNALS CLASSIFIED</span></div>
+    <div class="stat"><b class="chroma">1</b><span>FLAT FEE · NO PER-SEAT PRICING</span><em>Your second seat is free. So are all the others.</em></div>
   </div>
 </section>
 
-<section>
+<section class="legit" aria-labelledby="legit-h">
   <div class="wrap">
-    <p class="kicker">WE READ IT SO YOU DON'T HAVE TO</p>
-    <h2 class="chroma">Agendas! Minutes! Budgets the size of a doorstop!</h2>
-    <p class="lead">The documents almost nobody outside city hall opens. We open them, keep the good bits for you and quietly put the rest back on the shelf.</p>
-    <div class="exclaims">
-      <div class="exclaim">AGENDAS AND MINUTES!<em>Yes, all of them</em></div>
-      <div class="exclaim">BUDGETS!<em>The size of a doorstop</em></div>
-      <div class="exclaim">PAYMENT RECORDS!<em>Who got paid, for what</em></div>
-      <div class="exclaim">THE SCANNED PDF FROM 2019!<em>Sideways</em></div>
+    <p class="kicker">WHO'S THE GUY IN THE SUIT?</p>
+    <h2 class="chroma" id="legit-h">Silly website. Serious résumé.</h2>
+    <p class="lead troy">"Hi, I'm Matt MacDonald. You may remember me from such apps as <i>This American Life</i>, <i>Radiolab</i> and <i>The Moth</i>, and such companies as RadioPublic and Acast."</p>
+    <div class="legit-grid">
+      <div class="cert">
+        <div class="seal" aria-hidden="true">100%<br>LEGIT</div>
+        <img src="assets/matt-pointing.jpg" alt="Matt MacDonald in a suit, pointing at the camera" width="960" height="720" loading="lazy" style="object-position:58% 30%">
+        <h3>Matt MacDonald</h3>
+        <ul>
+          <li>Multiple-time founder, with an exit: co-founded RadioPublic, acquired by Acast</li>
+          <li>Chief Product Officer at Acast, through its NASDAQ listing</li>
+          <li>Chief Product Officer at PRX, where the apps above were built</li>
+          <li>Guest lecturer at Harvard Kennedy School</li>
+          <li>First took on town documents in 2012 with NearbyFYI, a Knight News Challenge semi-finalist</li>
+        </ul>
+      </div>
+      <div class="cert small">
+        <div class="seal alt" aria-hidden="true">98%<br>LEGIT</div>
+        <img src="assets/christian-milz.jpg" alt="Christian Milz" width="512" height="512" loading="lazy">
+        <h3>Christian Milz</h3>
+        <ul>
+          <li>Ran product and data teams at Acast, at large scale</li>
+          <li>Usually the first person you'll talk to</li>
+        </ul>
+        <a class="btn btn-yellow small" href="about/">Meet the operators</a>
+      </div>
     </div>
+  </div>
+</section>
+
+<section class="ginsu">
+  <div class="wrap">
+    <p class="kicker">IT SLICES! IT DICES! IT READS CAPITAL IMPROVEMENT PLANS!</p>
+    <h2 class="chroma">We read the whole record</h2>
+    <p class="lead">Minutes, agendas, capital plans and the rest of the stack, 1,489,000+ documents from 4,800+ municipalities and counting. Watch it cut through:</p>
+  </div>
+  <div class="belt" aria-hidden="true">
+    <div class="row"><span>Agendas</span><span>Minutes</span><span>Ordinances</span><span>Resolutions</span><span>Public notices</span><span>Town meeting warrants</span><span>Election results</span><span>Check registers</span><span>Budgets</span><span>Audits</span><span>Annual financial reports</span><span>Investment reports</span><span>Tax liens</span><span>Tax rate recaps</span><span>Bond statements</span>
+      <span>Agendas</span><span>Minutes</span><span>Ordinances</span><span>Resolutions</span><span>Public notices</span><span>Town meeting warrants</span><span>Election results</span><span>Check registers</span><span>Budgets</span><span>Audits</span><span>Annual financial reports</span><span>Investment reports</span><span>Tax liens</span><span>Tax rate recaps</span><span>Bond statements</span></div>
+    <div class="row rev"><span>Requests for proposals</span><span>Surplus sales</span><span>Police &amp; fire logs</span><span>Permits &amp; zoning</span><span>Capital plans</span><span>Master plans</span><span>Site plans</span><span>Variance decisions</span><span>Federal grants</span><span>Stormwater reports</span><span>Contamination reports</span><span>Climate plans</span><span>Labor contracts</span><span>Development deals</span><span>Settlements</span>
+      <span>Requests for proposals</span><span>Surplus sales</span><span>Police &amp; fire logs</span><span>Permits &amp; zoning</span><span>Capital plans</span><span>Master plans</span><span>Site plans</span><span>Variance decisions</span><span>Federal grants</span><span>Stormwater reports</span><span>Contamination reports</span><span>Climate plans</span><span>Labor contracts</span><span>Development deals</span><span>Settlements</span></div>
+  </div>
+  <div class="wrap">
+    <p class="sr-only">We read agendas, minutes, ordinances and resolutions, public notices, town meeting warrants, election results, check registers, budgets, audits, annual financial reports, investment reports, tax liens, tax rate recaps, bond statements, requests for proposals, surplus sales, police and fire logs, permits and zoning documents, capital plans, master plans, site plans, variance decisions, federal grants, stormwater and contamination reports, climate plans, labor contracts, development deals and settlements.</p>
+    <p class="punch">It even reads the scanned PDF from 2019. <em>Sideways.</em></p>
   </div>
 </section>
 
@@ -256,6 +400,37 @@ footer{background:#000;padding:22px 16px 40px;text-align:center;font-family:var(
     <div class="tv">
       <div class="screen"><img src="assets/demo-ask.jpg" alt="An AI assistant returning four New England towns with budgeted permitting software projects, each with the dollar figure, the funding source, the stage and the incumbent vendor where the record names one. Town names are redacted." width="1496" height="848"></div>
     </div>
+  </div>
+</section>
+
+<section class="whyus">
+  <div class="wrap">
+    <p class="kicker">SO WHY US?</p>
+    <h2 class="chroma">Sure, other companies read this stuff too</h2>
+    <p class="lead">Here's the secret: under the hood, Municipal Alpha is a product. One platform reads the record for every customer, and that's what lets us build each engagement around your business, at price points that feel more like SaaS than a high-priced consulting contract.</p>
+    <div class="cutaway" aria-label="How we do it">
+      <div class="layer top"><b>ON TOP</b><span>Your signals, for your teams, in your format</span></div>
+      <div class="layer under"><b>UNDER THE HOOD</b><span>One platform reads the public record for every customer</span></div>
+      <div class="equals">=</div>
+      <div class="result"><b>CUSTOM ENGAGEMENTS</b><span>at SaaS prices</span></div>
+    </div>
+    <p class="promise">We'll work with you. We won't make you work the way we work.</p>
+    <div class="compare" role="table" aria-label="The other guys compared with Municipal Alpha">
+      <div class="crow chead" role="row"><span role="columnheader"></span><span role="columnheader">THE OTHER GUYS</span><span role="columnheader">MUNICIPAL ALPHA</span></div>
+      <div class="crow" role="row"><span role="rowheader">Reads municipal records</span><span role="cell" class="yes">&#10004;</span><span role="cell" class="yes">&#10004;</span></div>
+      <div class="crow" role="row"><span role="rowheader">Works the way you work, not the other way round</span><span role="cell" class="unk">Ask them</span><span role="cell" class="yes">&#10004;</span></div>
+      <div class="crow" role="row"><span role="rowheader">Each team gets only what it acts on</span><span role="cell" class="unk">Ask them</span><span role="cell" class="yes">&#10004;</span></div>
+      <div class="crow" role="row"><span role="rowheader">Priced like SaaS, not a consulting contract</span><span role="cell" class="unk">Ask them</span><span role="cell" class="yes">&#10004;</span></div>
+      <div class="crow" role="row"><span role="rowheader">You know the two people answering the phone</span><span role="cell" class="unk">Ask them</span><span role="cell" class="yes">&#10004;</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sincere">
+  <div class="wrap">
+    <p class="kicker">A WORD FROM THE OPERATORS</p>
+    <h2 class="chroma">Serious about municipal data. Unserious but sincere people.</h2>
+    <p class="lead">Tired of digging through meeting packets the length of a novel? Hunting for that one line item in a check register? We read the whole packet. Then we package it up and hand each of your teams the few bits that really matter to them.</p>
   </div>
 </section>
 
@@ -296,7 +471,7 @@ footer{background:#000;padding:22px 16px 40px;text-align:center;font-family:var(
       </div>
     </div>
     <div class="noseats">
-      <div class="big">NO SEATS!<br>ONE PRICE!</div>
+      <div class="big">ONE FLAT FEE!<br>NO PER-SEAT PRICING!</div>
       <p>One price for your whole company, agreed before we start. You'll know the full cost before anyone opens a single PDF. Everyone at your company can use it, even the intern.</p>
     </div>
   </div>
@@ -338,6 +513,16 @@ footer{background:#000;padding:22px 16px 40px;text-align:center;font-family:var(
 
 <script>
 (function () {
+  // Hero quiz: any answer qualifies.
+  var stamp = document.querySelector('.quiz .stamp');
+  document.querySelectorAll('.quiz .yn').forEach(function (b) {
+    b.addEventListener('click', function () {
+      stamp.classList.remove('on'); void stamp.offsetWidth;
+      stamp.textContent = b.textContent === 'YES' ? 'YOU QUALIFY!' : 'YOU STILL QUALIFY!';
+      stamp.classList.add('on');
+    });
+  });
+
   // Hero TV: plays muted on a loop; the call to action is the sound button, which
   // restarts the commercial from the top with sound. Reduced-motion visitors get no
   // autoplay, just the button.
