@@ -108,28 +108,28 @@
     },
     "data-center-zoning": {
       "url_slug": "maine-data-center-moratorium",
-      "title": "Maine's Data Center Fight Was Visible in Town Halls Five Months Before the State Vote",
-      "dek": "Six Maine town halls, out of 173 we monitor in the state, were already discussing data center restrictions five months before LD 307 reached the Maine House. The House passed it, the Governor vetoed it, the override failed, and a different shape of restriction landed on the same day.",
-      "nav_note": "Maine data centers · 5 months early",
+      "title": "Maine's Data Center Fight Was Visible in Town Halls Nearly Five Months Before the State Vote",
+      "dek": "Five Maine town halls, of the 173 we monitored in the state in April 2026, took up data centers in their public records before LD 307 reached the Maine House, the first formal move to restrict them nearly five months before the vote. The House passed it, the Governor vetoed it, the override failed, and a different shape of restriction landed on the same day.",
+      "nav_note": "Maine data centers · nearly 5 months early",
       "card_title": "Data Center Zoning Fights",
-      "card_body": "6 of 173 monitored Maine towns were on the record before the state legislature took up LD 307. Every source document linked.",
+      "card_body": "5 of the 173 Maine towns we monitored in April 2026 were on the record before the state legislature took up LD 307. Every source document linked.",
       "has_stats": false,
       "stats": [
         {
-          "value": "6",
-          "label": "towns signaling"
+          "value": "5",
+          "label": "towns on the record"
         },
         {
           "value": "173",
-          "label": "Maine towns monitored"
+          "label": "Maine towns monitored, April 2026"
         },
         {
-          "value": "3.5%",
+          "value": "2.9%",
           "label": "of towns discussing it"
         },
         {
-          "value": "5 mo",
-          "label": "first signal to state vote"
+          "value": "4.6 mo",
+          "label": "first formal action to House vote"
         }
       ],
       "header_image": "story-maine-data-center-moratorium.png"
