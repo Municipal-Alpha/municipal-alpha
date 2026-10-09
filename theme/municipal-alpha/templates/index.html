@@ -1,35 +1,62 @@
 {% extends "base.html" %}
 
-{% block body_class %}rd-page{% endblock %}
+{# Homepage, direction B ("the power of a product, the care of a consultancy").
+   Draft: muni-scraper PR #631, business/materials/strategy/homepage-draft-tailored-signals-2026-10-07.html.
+   Look is scoped to body.rd-b in static/css/direction-b.css; no other page changes. #}
+
+{% block body_class %}rd-page rd-b{% endblock %}
 
 {% block extra_head %}
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{{ SITEURL }}/theme/css/redesign.css">
+<link rel="stylesheet" href="{{ SITEURL }}/theme/css/direction-b.css">
 <script defer src="{{ SITEURL }}/theme/js/redesign-nav.js"></script>
 {% endblock %}
 
 {% block nav %}
-{% include "includes/redesign_nav.html" %}
+<nav class="rd-nav" aria-label="Primary">
+  <a href="https://municipalalpha.com/" class="rd-nav-brand">
+    <span class="wordmark">municip<b>α</b>l</span>
+    <span class="rd-tagline">Alpha, extracted.</span>
+  </a>
+  <div class="rd-nav-right">
+    <a href="https://municipalalpha.com/case-studies/" class="rd-nav-link">Case Studies</a>
+    <a href="{{ SITEURL }}/about/" class="rd-nav-link">About us</a>
+    <a href="{{ SITEURL }}/about/#contact" class="rd-nav-cta">Get in touch</a>
+  </div>
+</nav>
 {% endblock %}
 
 {% block footer %}
-{% include "includes/redesign_footer.html" %}
+<footer class="rd-footer">
+  <div class="rd-footer-inner">
+    <div class="rd-footer-links">
+      <a href="{{ SITEURL }}/topics/">On the Record</a>
+      <a href="{{ SITEURL }}/contact/">Contact</a>
+      <a href="{{ SITEURL }}/about/">About</a>
+      <a href="{{ SITEURL }}/methodology/">Methodology</a>
+      <a href="{{ SITEURL }}/legal/privacy/">Privacy</a>
+      <a href="{{ SITEURL }}/legal/terms/">Terms</a>
+    </div>
+  </div>
+  <p class="rd-footer-copy">© 2026 Municipal Alpha LLC · NSIH · Roux Institute, Northeastern University</p>
+</footer>
 {% endblock %}
 
-{% block title %}Municipal Alpha · The Municipal Record, Inside Your AI Assistant{% endblock %}
+{% block title %}Municipal Alpha · The power of a product, the care of a consultancy{% endblock %}
 
 {% block meta %}
-    <meta name="description" content="Municipal Alpha connects the public record from {{ METRICS.municipalities }} municipalities across {{ METRICS.states }} states to the AI assistant your revenue team already uses. No login, no seats.">
-    <meta property="og:title" content="Municipal Alpha · The Municipal Record, Inside Your AI Assistant">
-    <meta property="og:description" content="Ask the municipal record from {{ METRICS.municipalities }} municipalities across {{ METRICS.states }} states, in the AI assistant your team already has open. Take any lead as deep as it deserves.">
+    <meta name="description" content="Custom signals from thousands of cities, towns and districts, shaped around what you need to know: where to show up, who to talk to, what to cover and what is about to change.">
+    <meta property="og:title" content="Municipal Alpha · The power of a product, the care of a consultancy">
+    <meta property="og:description" content="Custom signals from thousands of cities, towns and districts, shaped around what you need to know: where to show up, who to talk to, what to cover and what is about to change.">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="{{ SITENAME }}">
     <meta property="og:image" content="{{ SITEURL }}/images/share-card-2026-09-24.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:type" content="image/png">
-    <meta property="og:image:alt" content="Municipal Alpha: the municipal record, inside your AI assistant">
+    <meta property="og:image:alt" content="Municipal Alpha">
     <meta name="twitter:card" content="summary_large_image">
     <script type="application/ld+json">
     {
@@ -72,193 +99,103 @@
 {% endblock %}
 
 {% block content %}
-{# The three steps are defined ONCE and rendered in two places (the demo
-   cards and the evidence tabs). Edit here and both surfaces move together.
-   They were also listed in the hero until 2026-09-09; removed on founder
-   direction, because the hero's job is the promise and the CTA, and the steps
-   restate below what the reader has not agreed to care about yet. #}
-{% set STEPS = [
-  {"n": "01",
-   "label": "Find your most relevant leads",
-   "ask": "Which towns in New England have budgeted for permitting software but not picked a vendor?",
-   "note": "Four towns across three states, each with the budget line, the dollar figure, the stage it has reached and the incumbent where the record names one.",
-   "img": "demo-ask.png", "w": 1496, "h": 848,
-   "alt": "An AI assistant using the Municipal Alpha connector returns four New England towns with budgeted permitting software projects, each with the dollar figure, the funding source, the procurement stage and the incumbent vendor where the record names one. Town names are redacted."},
-  {"n": "02",
-   "label": "Research them as deep as it deserves",
-   "ask": "Get me more detailed information on [town] that helps me understand in more detail who to speak to and what potential pain points the town mentions",
-   "note": "Two things that would have cost you the call. The fire department already owns a system you would be pitching against, and a neighbouring town shares services, so procurement may be shared too.",
-   "img": "demo-signals.png", "w": 1454, "h": 392,
-   "alt": "The assistant answering a follow-up question about one town, naming two risks to check before calling: the fire department already runs a competing system, and a neighbouring municipality shares services and may share procurement. Town names are redacted."},
-  {"n": "03",
-   "label": "Move what you find into your CRM",
-   "ask": "Push all the details on [town] into HubSpot",
-   "note": "Seven contacts created against the company record, each carrying the role it plays in this deal rather than a job title alone.",
-   "img": "demo-crm.png", "w": 1488, "h": 934,
-   "alt": "A CRM showing seven contacts created against one municipality\u2019s company record, each with a job title and the role that person plays in the deal, including the champion, the sponsor, the signer and an integration gatekeeper. Staff names are redacted."}
-] %}
 <div class="rd-nav-page">
-
-  <!-- HERO -->
-  <div class="rd-wrap" style="padding-top:clamp(56px,8vw,110px); padding-bottom:clamp(48px,7vw,90px); display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:clamp(36px,5vw,64px); align-items:center;">
-    <div>
-      <p class="rd-eyebrow">FOR TEAMS THAT SELL TO LOCAL GOVERNMENT</p>
-      <h1>Win and retain more <em>public contracts</em></h1>
-      <p class="rd-lead" style="max-width:520px; margin:24px 0 32px; font-size:21px; line-height:1.4; color:var(--rd-text); font-weight:500;">What towns are planning and buying, inside the AI tool your team already has open.</p>
-      <div style="display:flex; gap:14px; flex-wrap:wrap; margin-bottom:18px;">
-        <a href="https://calendar.app.google/TeT9KujoL6CDbxRy8" target="_blank" rel="noopener" class="rd-btn rd-btn-primary">Book a Demo</a>
-        <a href="{{ SITEURL }}/free-lead-intake/" class="rd-btn rd-btn-outline">Get One Free Lead</a>
-      </div>
-    </div>
-    <div>
-      <img src="{{ SITEURL }}/images/hero-record-to-ai.png" width="1100" height="564" alt="The public record of thousands of US municipalities, converging into a single AI chat window." style="width:100%; height:auto; display:block;">
-      <p class="rd-mono" style="margin:10px 0 0; text-align:right; font-size:11px; letter-spacing:0.08em; color:var(--rd-text-muted);">WORKS IN <span style="color:var(--rd-text-secondary);">CLAUDE</span> · <span style="color:var(--rd-text-secondary);">CHATGPT</span> · <span style="color:var(--rd-text-secondary);">GEMINI</span></p>
+<!-- HERO -->
+  <div class="rd-wrap" style="padding-top:clamp(48px,8vw,104px); padding-bottom:clamp(40px,6vw,80px);">
+    <p class="rd-eyebrow">FOR ANYONE WHOSE WORK DEPENDS ON LOCAL GOVERNMENT</p>
+    <h1>The power of a product<br>The care of a <em>consultancy</em></h1>
+    <p class="rd-lead" style="max-width:660px; margin:24px 0 32px; font-size:21px; line-height:1.45; color:var(--rd-text); font-weight:500;">Custom signals from thousands of cities, towns and districts, shaped around what you need to know: where to show up, who to talk to, what to cover and what is about to change.</p>
+    <div style="display:flex; gap:14px; flex-wrap:wrap;">
+      <a href="{{ SITEURL }}/about/#contact" class="rd-btn rd-btn-primary">Get in touch</a>
+      <a href="{{ SITEURL }}/about/" class="rd-btn rd-btn-outline">Meet the team</a>
     </div>
   </div>
 
-  <!-- DEMO -->
-  <div id="demo" class="rd-wrap" style="margin-bottom:90px;">
-    <div class="rd-panel" style="border-color:var(--rd-accent); display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:clamp(32px,4vw,56px); align-items:start; padding:clamp(24px,4vw,48px);">
-      <div>
-        <p class="rd-eyebrow-tight" style="margin:0 0 14px;">START HERE · 20 MINUTES</p>
-        <h2 style="margin:0 0 16px;">See it work, on your territory, in the tool you already use.</h2>
-        <p class="rd-lead" style="max-width:520px; margin:0 0 24px;">The demo is the product. We open an AI chatbot, ask the municipal record about your market, and pull up a live lead. Then we follow that same lead as far as you want to take it, while you watch. Nothing to install and nothing to connect on your side.</p>
-        <div style="display:flex; gap:16px; flex-wrap:wrap;">
-          <a href="https://calendar.app.google/TeT9KujoL6CDbxRy8" target="_blank" rel="noopener" class="rd-btn rd-btn-primary">Book a Demo</a>
-          <a href="#sample" class="rd-btn rd-btn-outline">See What Comes Back</a>
-        </div>
-      </div>
-      <div class="rd-seam-grid" style="grid-template-columns:1fr;">
-        {% for s in STEPS %}
-        <div class="rd-card">
-          <p class="rd-eyebrow-tight" style="margin:0 0 6px;">STEP {{ s.n }}</p>
-          <p style="font-size:15px; font-weight:600; color:var(--rd-text); margin:0 0 6px;">{{ s.label }}</p>
-        </div>
-        {% endfor %}
-      </div>
-    </div>
-  </div>
-
-  <!-- REAL SESSION -->
-  <div id="sample" class="rd-band rd-section">
+  <!-- WE LEARN YOUR BUSINESS -->
+  <div class="rd-band rd-section">
     <div class="rd-wrap" style="padding:0;">
-      <h2 style="margin:0 0 32px; max-width:760px;">What comes back when you ask</h2>
-
-      <div class="rd-tabs">
-        {% for s in STEPS %}
-        <input type="radio" name="rd-session-tab" id="rd-tab-{{ s.n }}"{% if loop.first %} checked{% endif %}>
-        {% endfor %}
-        <div class="rd-tablist">
-          {% for s in STEPS %}
-          <label for="rd-tab-{{ s.n }}"><span class="rd-mono">{{ s.n }}</span>{{ s.label }}</label>
-          {% endfor %}
-        </div>
-        <div class="rd-tabpanels">
-          {% for s in STEPS %}
-          <div class="rd-tabpanel">
-            <div class="rd-tabcopy">
-              <p class="rd-mono" style="font-size:11px; letter-spacing:0.1em; color:var(--rd-text-muted); margin:0 0 8px;">WHAT WAS ASKED</p>
-              <p style="font-size:15px; color:var(--rd-text); margin:0 0 20px; padding-left:14px; border-left:2px solid var(--rd-accent);">{{ s.ask }}</p>
-              <p class="rd-table-foot" style="margin:0;">{{ s.note }}</p>
-            </div>
-            <div class="rd-figure">
-              <img src="{{ SITEURL }}/images/{{ s.img }}" width="{{ s.w }}" height="{{ s.h }}" loading="lazy" alt="{{ s.alt }}">
-            </div>
-          </div>
-          {% endfor %}
-        </div>
-      </div>
-
-      <p style="font-size:13px; line-height:1.5; color:var(--rd-text-muted); margin:26px 0 0;">Run 9 September 2026 &middot; town and staff names redacted &middot; everything else is the unedited session.</p>
-    </div>
-  </div>
-
-  <!-- AVAILABLE WHERE YOUR TEAM WORKS -->
-  {# Benefits stated as benefits. An earlier form of this section paired a
-     header naming what you avoid ("Learn a new interface") with a line
-     reversing it ("There is no Municipal Alpha screen"), which makes the
-     reader do the flip. A later one led on "Nobody ever wanted the interface",
-     which is a true observation about the category and not a benefit to the
-     reader. The headline is now the benefit itself. Founder direction
-     2026-09-09. #}
-  <div class="rd-wrap rd-section">
-    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:clamp(32px,5vw,64px); align-items:start;">
-      <div>
-        <p class="rd-eyebrow-tight" style="margin:0 0 14px;">NOTHING TO INSTALL &middot; NO NEW LOGIN &middot; NO SEATS</p>
-        <h2 style="margin:0 0 18px; max-width:440px;">Available where your team already works</h2>
-        <p class="rd-lead" style="max-width:420px; margin:0 0 24px;">The record answers inside the assistant they already have open.</p>
-        <a href="{{ SITEURL }}/mcp-launch/" class="rd-btn rd-btn-outline">How the connector works</a>
-      </div>
-      <div style="display:flex; flex-direction:column; gap:10px;">
-        <div class="rd-card" style="padding:16px 20px;">
-          <p style="font-size:16px; font-weight:600; color:var(--rd-text); margin:0 0 4px;">One connector serves everyone</p>
-          <p style="font-size:14px; color:var(--rd-text-secondary); margin:0;">Priced on coverage, recency and depth. The same whether two people ask or twenty.</p>
-        </div>
-        <div class="rd-card" style="padding:16px 20px;">
-          <p style="font-size:16px; font-weight:600; color:var(--rd-text); margin:0 0 4px;">Live the day you connect it</p>
-          <p style="font-size:14px; color:var(--rd-text-secondary); margin:0;">Nothing to install, nothing to configure, no data to load first.</p>
-        </div>
-        <div class="rd-card" style="padding:16px 20px;">
-          <p style="font-size:16px; font-weight:600; color:var(--rd-text); margin:0 0 4px;">Your records stay yours</p>
-          <p style="font-size:14px; color:var(--rd-text-secondary); margin:0;">They stay in your systems. We never ingest them.</p>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:clamp(32px,5vw,64px); align-items:start;">
+        <div>
+          <p class="rd-eyebrow-tight" style="margin:0 0 14px;">WE LEARN YOUR BUSINESS FIRST</p>
+          <h2 style="margin:0 0 18px; max-width:460px;">Your way of working, applied to the public record</h2>
+          <p class="rd-lead" style="max-width:440px; margin:0;">Most platforms make you work the way they want. We start with how your organization works and what it needs to know, then tailor what we read from local government to fit it.</p>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- CUSTOM QUERIES -->
-  <div class="rd-wrap rd-section">
-    <h2 style="margin:0 0 48px; max-width:820px;">Two questions your team can ask any day.<br><em>Pipeline and churn.</em></h2>
-    <div class="rd-seam-grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr));">
-      <div class="rd-card">
-        <p class="rd-eyebrow-tight" style="color:var(--rd-accent); margin:0 0 14px;">GROW THE BOOK</p>
-        <p style="font-family:'Source Serif 4',serif; font-size:22px; margin:0 0 20px; color:var(--rd-text);">Net-new pipeline, sourced from the record instead of a list.</p>
-        <div style="display:flex; flex-direction:column; gap:12px;">
-          <p style="font-size:14px; color:var(--rd-text-secondary); margin:0;">Budget lines that fund what you sell, before procurement opens.</p>
-          <p style="font-size:14px; color:var(--rd-text-secondary); margin:0;">Committee discussion of a capability you already ship.</p>
-          <p style="font-size:14px; color:var(--rd-text-secondary); margin:0;">Jurisdictions matching your best-fit accounts, by behavior not firmographics.</p>
+  <!-- WAYS AND PRICE -->
+  <div class="rd-band rd-section">
+    <div class="rd-wrap" style="padding:0;">
+      <p class="rd-eyebrow-tight" style="margin:0 0 14px;">TWO WAYS TO WORK WITH US</p>
+      <h2 style="margin:0 0 32px; max-width:820px;">A one-time deep dive, or an ongoing service</h2>
+      <div class="rd-seam-grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr));">
+        <div class="rd-card">
+          <p class="rd-eyebrow-tight" style="color:var(--rd-accent); margin:0 0 14px;">ONE-TIME DEEP DIVE</p>
+          <p style="font-family:'Fraunces',serif; font-size:22px; margin:0 0 12px; color:var(--rd-text);">One question, answered in depth</p>
+          <p style="font-size:15px; color:var(--rd-text-secondary); margin:0 0 14px;">A region, a topic, a set of accounts or a decision in front of you. We read everything the record holds on it and deliver the answer with every source linked.</p>
+          <p style="font-size:14px; font-weight:600; color:var(--rd-text); margin:0;">Priced separately.</p>
+        </div>
+        <div class="rd-card">
+          <p class="rd-eyebrow-tight" style="color:var(--rd-accent); margin:0 0 14px;">ONGOING SERVICE</p>
+          <p style="font-family:'Fraunces',serif; font-size:22px; margin:0 0 12px; color:var(--rd-text);">Signals for each team, as they happen</p>
+          <p style="font-size:15px; color:var(--rd-text-secondary); margin:0 0 14px;">We keep reading the places and topics you care about, keep tuning what you receive, and stay your point of contact.</p>
+          <p style="font-size:14px; font-weight:600; color:var(--rd-text); margin:0;">One price for the whole company. No seats, and no hourly invoices.</p>
         </div>
       </div>
-      <div class="rd-card">
-        <p class="rd-eyebrow-tight" style="margin:0 0 14px;">PROTECT THE BOOK</p>
-        <p style="font-family:'Source Serif 4',serif; font-size:22px; margin:0 0 20px; color:var(--rd-text);">Renewal risk, flagged while there is still time to work it.</p>
-        <div style="display:flex; flex-direction:column; gap:12px;">
-          <p style="font-size:14px; color:var(--rd-text-secondary); margin:0;">A competitor's name entering minutes in a jurisdiction you hold.</p>
-          <p style="font-size:14px; color:var(--rd-text-secondary); margin:0;">An RFP drafted for a service you're already delivering.</p>
-          <p style="font-size:14px; color:var(--rd-text-secondary); margin:0;">Your champion leaving, or the line item moving department.</p>
+      <div class="rd-seam-grid" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); margin-top:16px;">
+        <div class="rd-card" style="padding:16px 20px;">
+          <p style="font-size:16px; font-weight:600; color:var(--rd-text); margin:0 0 4px;">One price, agreed up front</p>
+          <p style="font-size:14px; color:var(--rd-text-secondary); margin:0;">We set it together, based on what you need covered and what it is worth to you. You know the full cost before you start.</p>
+        </div>
+        <div class="rd-card" style="padding:16px 20px;">
+          <p style="font-size:16px; font-weight:600; color:var(--rd-text); margin:0 0 4px;">Where your team already works</p>
+          <p style="font-size:14px; color:var(--rd-text-secondary); margin:0;">Signals arrive wherever they are most useful for you. Your records stay in your systems.</p>
         </div>
       </div>
+      <p style="font-size:15px; color:var(--rd-text-secondary); margin:18px 0 0;">Everyone in your organization can use it.</p>
     </div>
   </div>
 
-  <!-- QUOTES -->
-  <div class="rd-wrap" style="padding-top:20px; padding-bottom:clamp(56px,8vw,100px);">
-    <h2 style="margin:0 0 48px;">In their words, not ours.</h2>
-    {# Both of the first two are verbatim from real call transcripts, and both
-       are attributed by ROLE out of necessity rather than style: one speaker's
-       employer signed a mutual NDA whose section 1.1 makes the existence of the
-       discussions confidential, and the other has given no consent to be named.
-       Do not add either name. See .claude/rules/business-outreach.md items 13
-       and 15. #}
-    <div class="rd-seam-grid" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr));">
-      <div class="rd-card">
-        <p class="rd-quote">"The overall contract price isn't super super helpful. The dates of the contract, competitor who's in there, sentiment around it, when there's upcoming meetings talking about it, all that stuff is gold for our selling team."</p>
-        <p class="rd-quote-attr">Go-to-market VP, SLED software vendor</p>
+  <!-- WHO WE SERVE -->
+  <div class="rd-section">
+    <div class="rd-wrap" style="padding:0;">
+      <p class="rd-eyebrow-tight" style="margin:0 0 14px;">WHO WE SERVE</p>
+      <h2 style="margin:0 0 16px; max-width:820px;">Anyone who needs to know what local government is doing</h2>
+      <p class="rd-lead" style="max-width:640px; margin:0 0 36px;">If your work depends on what towns, counties and districts decide, the record has something for you.</p>
+      <div class="rd-seam-grid" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr));">
+        <div class="rd-card">
+          <p style="font-family:'Fraunces',serif; font-size:19px; margin:0 0 8px; color:var(--rd-text);">Software and service vendors</p>
+          <p style="font-size:14px; color:var(--rd-text-secondary); margin:0;">Where the next purchase is forming, and which customers are drifting.</p>
+        </div>
+        <div class="rd-card">
+          <p style="font-family:'Fraunces',serif; font-size:19px; margin:0 0 8px; color:var(--rd-text);">Newsrooms</p>
+          <p style="font-size:14px; color:var(--rd-text-secondary); margin:0;">What your towns decided this week, and the story behind it.</p>
+        </div>
+        <div class="rd-card">
+          <p style="font-family:'Fraunces',serif; font-size:19px; margin:0 0 8px; color:var(--rd-text);">Municipal advisors</p>
+          <p style="font-size:14px; color:var(--rd-text-secondary); margin:0;">Budgets, capital plans and the debates behind them.</p>
+        </div>
+        <div class="rd-card">
+          <p style="font-family:'Fraunces',serif; font-size:19px; margin:0 0 8px; color:var(--rd-text);">Private equity</p>
+          <p style="font-size:14px; color:var(--rd-text-secondary); margin:0;">Local signals behind the companies you own or want to buy.</p>
+        </div>
+        <div class="rd-card">
+          <p style="font-family:'Fraunces',serif; font-size:19px; margin:0 0 8px; color:var(--rd-text);">Real estate</p>
+          <p style="font-size:14px; color:var(--rd-text-secondary); margin:0;">Zoning, permits and moratoriums near the places you care about.</p>
+        </div>
+        <div class="rd-card">
+          <p style="font-family:'Fraunces',serif; font-size:19px; margin:0 0 8px; color:var(--rd-text);">Financial institutions</p>
+          <p style="font-size:14px; color:var(--rd-text-secondary); margin:0;">Early signs of local fiscal strength or strain.</p>
+        </div>
       </div>
-      <div class="rd-card">
-        <p class="rd-quote">"A utility-scale solar moratorium tells me someone applied at the planning board and they already don't like it."</p>
-        <p class="rd-quote-attr">Platform lead, renewable-energy investment firm</p>
-      </div>
-      <div class="rd-card">
-        <p class="rd-quote">"You'll find out about them, it closed two months ago, and we didn't know about it. It's really about getting in early."</p>
-        <p class="rd-quote-attr">Competitive intelligence lead, national tower REIT</p>
-      </div>
+      <p class="small-print">And anyone else who needs municipal data.</p>
     </div>
   </div>
 
   <!-- EXPLAINER VIDEO (sources for every claim: muni-scraper business/materials/explainer-video-2026-10/sources.md) -->
   <div class="rd-wrap" style="padding-bottom:clamp(56px,8vw,100px);">
-    <h2 style="margin:0 0 12px;">How we read the public record.</h2>
+    <h2 style="margin:0 0 12px;">How we read the public record</h2>
     <p style="font-size:16px; color:var(--rd-text-muted); max-width:640px; margin:0 0 32px;">From one village’s vote to the 91,438 local governments behind it, and how our own rules tell a plan from a decision.</p>
     <div class="ma-video-stage">
       <div class="ma-video-frame">
@@ -273,15 +210,13 @@
     </div>
   </div>
 
-  <!-- CONTACT CTA -->
-  <div id="contact" class="rd-wrap" style="padding-top:clamp(64px,9vw,110px); padding-bottom:clamp(64px,9vw,110px); text-align:center;">
-    <h2 style="margin:0 0 20px; max-width:760px; margin-left:auto; margin-right:auto;">Bring one market. We pull a live lead<br>out of it while you watch.</h2>
-    <p style="font-size:16px; color:var(--rd-text-muted); max-width:560px; margin:0 auto 40px;">Twenty minutes, in an AI assistant you already have open.</p>
+  <!-- CTA -->
+  <div class="rd-wrap" style="padding-top:clamp(56px,8vw,100px); padding-bottom:clamp(56px,8vw,100px); text-align:center;">
+    <h2 style="margin:0 auto 20px; max-width:760px;">Tell us how your business works<br>We'll show you what the record says about it</h2>
+    <p style="font-size:16px; color:var(--rd-text-muted); max-width:560px; margin:0 auto 40px;">Your first consultation with the two of us is free.</p>
     <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
-      <a href="https://calendar.app.google/TeT9KujoL6CDbxRy8" target="_blank" rel="noopener" class="rd-btn rd-btn-primary">Book a Demo</a>
-      <a href="{{ SITEURL }}/free-lead-intake/" class="rd-btn rd-btn-outline">Get One Free Lead</a>
+      <a href="{{ SITEURL }}/about/#contact" class="rd-btn rd-btn-primary">Get in touch</a>
     </div>
   </div>
-
 </div>
 {% endblock %}

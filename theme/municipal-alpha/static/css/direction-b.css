@@ -1,0 +1,29 @@
+/* Direction B (homepage + About). Scoped to body.rd-b so no other page changes.
+   Source: muni-scraper PR #631 draft. */
+body.rd-b{--rd-bg:#F6F1E8;--rd-surface:#FFFFFF;--rd-band:#ECE3D3;--rd-border:#D8CCB8;--rd-border-strong:#C2B39B;--rd-accent:#B4532A;--rd-accent-hover:#963F1C;--rd-accent-muted:#8A4A2C;--rd-text:#1F2E2A;--rd-text-secondary:#3C4A45;--rd-text-tertiary:#4B5853;--rd-text-muted:#6C756F;--rd-text-faint:#8D948E;background:var(--rd-bg);color:var(--rd-text);font-family:'Source Sans 3',sans-serif}
+body.rd-b .rd-nav{background:rgba(246,241,232,.94);border-bottom:1px solid var(--rd-border)}
+body.rd-b h1,body.rd-b h2,body.rd-b h3{font-family:'Fraunces',serif;font-weight:500}
+body.rd-b p,body.rd-b .rd-lead{font-family:'Source Sans 3',sans-serif}
+body.rd-b .rd-page p,body.rd-b p{font-size:16px}
+body.rd-b .rd-eyebrow,body.rd-b .rd-eyebrow-tight{font-family:'Source Sans 3',sans-serif;font-weight:700;letter-spacing:.12em}
+body.rd-b .rd-seam-grid{border:0;gap:16px}
+body.rd-b .rd-card{background:var(--rd-surface);border:1px solid var(--rd-border);border-radius:12px;box-shadow:0 1px 2px rgba(31,46,42,.06),0 8px 24px rgba(31,46,42,.06)}
+body.rd-b a.rd-btn{border-radius:8px;font-family:'Source Sans 3',sans-serif;font-weight:700}
+body.rd-b a.rd-btn-primary{background:var(--rd-accent);color:#fff}
+body.rd-b a.rd-btn-primary:hover{background:var(--rd-accent-hover);color:#fff}
+body.rd-b a.rd-btn-outline{border:1px solid var(--rd-border-strong);color:var(--rd-text);background:#fff}
+body.rd-b .rd-nav-cta{border-radius:8px;color:#fff!important;background:var(--rd-accent);border-color:var(--rd-accent)!important}
+body.rd-b .rd-quote{font-family:'Fraunces',serif}
+body.rd-b .photo{border-color:var(--rd-border-strong);background:#fff}
+body.rd-b .wordmark{font-family:'Fraunces',serif;font-weight:600}
+body.rd-b p[style*="Source Serif"]{font-family:'Fraunces',serif!important}
+body.rd-b .small-print{font-size:12px;color:var(--rd-text-muted);margin:14px 0 0}
+body.rd-b .small-print{font-size:13px;color:var(--rd-text-muted);margin:18px 0 0}
+body.rd-b .person{padding:clamp(22px,3vw,34px)}
+body.rd-b .facts{margin:16px 0 0;padding:0;list-style:none;display:grid;gap:6px}
+body.rd-b .facts li{font-size:14px;color:var(--rd-text-secondary)}
+body.rd-b .wordmark{font-family:inherit;font-weight:700;font-size:20px;color:var(--rd-text);letter-spacing:-.01em}
+body.rd-b .wordmark b{color:var(--rd-accent);font-weight:inherit}
+body.rd-b .photo-img{width:96px;height:96px;border-radius:50%;object-fit:cover;display:block;margin:0 0 18px}
+body.rd-b .rd-nav-brand{text-decoration:none}
+body.rd-b .ma-video-stage{background:var(--rd-surface)}
