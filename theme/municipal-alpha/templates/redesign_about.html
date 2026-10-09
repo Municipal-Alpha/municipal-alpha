@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+
+{# About page, direction B. Draft: muni-scraper PR #631. Look scoped to body.rd-b. #}
+
+{% block body_class %}rd-page rd-b{% endblock %}
+
+{% block extra_head %}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ SITEURL }}/theme/css/redesign.css">
+<link rel="stylesheet" href="{{ SITEURL }}/theme/css/direction-b.css">
+<script defer src="{{ SITEURL }}/theme/js/redesign-nav.js"></script>
+{% endblock %}
+
+{% block nav %}
+<nav class="rd-nav" aria-label="Primary">
+  <a href="{{ SITEURL }}/" class="rd-nav-brand">
+    <span class="wordmark">municip<b>α</b>l</span>
+    <span class="rd-tagline">Alpha, extracted.</span>
+  </a>
+  <div class="rd-nav-right">
+    <a href="{{ SITEURL }}/" class="rd-nav-link">Home</a>
+    <a href="{{ SITEURL }}/about/#contact" class="rd-nav-cta">Get in touch</a>
+  </div>
+</nav>
+{% endblock %}
+
+{% block footer %}
+<footer class="rd-footer">
+  <div class="rd-footer-inner">
+    <div class="rd-footer-links">
+      <a href="{{ SITEURL }}/topics/">On the Record</a>
+      <a href="{{ SITEURL }}/contact/">Contact</a>
+      <a href="{{ SITEURL }}/about/">About</a>
+      <a href="{{ SITEURL }}/methodology/">Methodology</a>
+      <a href="{{ SITEURL }}/legal/privacy/">Privacy</a>
+      <a href="{{ SITEURL }}/legal/terms/">Terms</a>
+    </div>
+  </div>
+  <p class="rd-footer-copy">© 2026 Municipal Alpha LLC · NSIH · Roux Institute, Northeastern University</p>
+</footer>
+{% endblock %}
+
+{% block title %}About · Municipal Alpha{% endblock %}
+
+{% block meta %}
+    <meta name="description" content="Municipal Alpha is two people and a product that reads the public record of thousands of local governments every day. Meet Matt MacDonald and Christian Milz.">
+    <meta property="og:title" content="About · Municipal Alpha">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="{{ SITENAME }}">
+{% endblock %}
+
+{% block canonical %}<link rel="canonical" href="{{ SITEURL }}/about/">{% endblock %}
+
+{% block content %}
+<div class="rd-nav-page">
+<div class="rd-wrap" style="padding-top:clamp(48px,8vw,104px); padding-bottom:clamp(32px,5vw,64px); max-width:860px;">
+    <p class="rd-eyebrow">ABOUT US</p>
+    <h1>You should know who you're <em>working with</em></h1>
+    <p class="rd-lead" style="max-width:660px; margin:24px 0 0; font-size:20px; line-height:1.45; color:var(--rd-text);">Municipal Alpha is two people and a product that reads the public record of thousands of local governments every day. The product does the reading. We do the listening: learning how your organization works and making sure what reaches you fits it.</p>
+  </div>
+
+  <div class="rd-wrap" style="padding-bottom:clamp(48px,7vw,90px);">
+    <div class="rd-seam-grid" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr));">
+      <div class="rd-card person">
+        <img class="photo-img" src="{{ SITEURL }}/images/team/matt-macdonald.jpg" alt="Matt MacDonald" width="96" height="96">
+        <p style="font-family:'Source Serif 4',serif; font-size:26px; margin:0 0 4px; color:var(--rd-text);">Matt MacDonald</p>
+        <p class="rd-eyebrow-tight" style="margin:0 0 16px;">FOUNDER · PORTLAND, MAINE</p>
+        <p style="font-size:15px; color:var(--rd-text-secondary); margin:0;">Matt built Municipal Alpha. He has spent nearly three decades building data products from fragmented, unstructured sources at scale: first in the early web, then in audio, now in public records. He first tried to make town documents readable with NearbyFYI more than a decade ago.</p>
+        <ul class="facts">
+          <li>Chief Product Officer at Acast, through its NASDAQ listing</li>
+          <li>Co-founder of RadioPublic, later acquired by Acast</li>
+          <li>Chief Product Officer at PRX</li>
+          <li>Embedded at the Roux Institute, Northeastern University</li>
+        </ul>
+      </div>
+      <div class="rd-card person">
+        <img class="photo-img" src="{{ SITEURL }}/images/team/christian-milz.jpg" alt="Christian Milz" width="96" height="96">
+        <p style="font-family:'Source Serif 4',serif; font-size:26px; margin:0 0 4px; color:var(--rd-text);">Christian Milz</p>
+        <p class="rd-eyebrow-tight" style="margin:0 0 16px;">PARTNER</p>
+        <p style="font-size:15px; color:var(--rd-text-secondary); margin:0;">Christian is a partner at Municipal Alpha. At Acast, where he and Matt worked together, he ran product and data teams at large scale, in people and in data. He is usually the first person you'll talk to, and the one who stays with you until the work is running.</p>
+        <ul class="facts">
+          <li>Ran product and data teams at Acast, at large scale</li>
+          <li>Partner at Municipal Alpha since August 2026</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="contact" class="rd-wrap" style="padding-top:clamp(56px,8vw,100px); padding-bottom:clamp(56px,8vw,100px); text-align:center;">
+    <h2 style="margin:0 auto 20px; max-width:760px;">Your first consultation is on us</h2>
+    <p style="font-size:16px; color:var(--rd-text-muted); max-width:560px; margin:0 auto 32px;">Write to us, or pick a time that suits you.</p>
+    <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+      <a href="mailto:matt@municipalalpha.com,christian@municipalalpha.com?subject=Hello%20from%20the%20website" class="rd-btn rd-btn-primary">Email us</a>
+      <a href="https://calendar.app.google/TeT9KujoL6CDbxRy8" target="_blank" rel="noopener" class="rd-btn rd-btn-outline">Book a meeting</a>
+    </div>
+  </div>
+</div>
+{% endblock %}
