@@ -1,10 +1,10 @@
-Title: Maine's Data Center Fight Was Visible in Town Halls Nearly Five Months Before the State Vote
+Title: Maine's Data Center Fight Was Visible in Town Halls Months Before the State Vote
 Slug: research/maine-data-center-moratorium
 Template: redesign_case_study
 Article_Key: data-center-zoning
 Sortorder: 11
 Header_image: story-maine-data-center-moratorium.png
-Summary: Municipal Alpha tracks US data-center siting and zoning from municipal meeting records, often months before a state vote or public reporting. Five Maine town halls (of the 173 we monitored in Maine in April 2026) took up data centers in their public records before LD 307 reached the Maine House, and the first formal move to restrict them came nearly five months before the vote. The House passed it, the Governor vetoed it, the override failed, and a different shape of restriction landed on the same day. Every source document is linked.
+Summary: Municipal Alpha tracks US data-center siting and zoning from municipal meeting records, often months before a state vote or public reporting. Maine town halls were taking up data centers in their public records months before LD 307 reached the Maine House: Gorham's council moved to restrict them 4.6 months before the vote, and Lewiston, Rockland, Bangor and Winthrop followed. The House passed it, the Governor vetoed it, the override failed, and a different shape of restriction landed on the same day. Every source document is linked.
 
 <!-- Retheme note (2026-08-31, site redesign): this article's shared
      components (cs-intro, cs-stats, timeline, cs-window, cs-cta, ...) were
@@ -23,14 +23,13 @@ Summary: Municipal Alpha tracks US data-center siting and zoning from municipal 
 </style>
 
 <p class="cs-intro">
-On April 6, 2026, Maine's House passed LD 307, what would have become the country's first state-level moratorium on large-scale data centers, on an 82-62 vote. Eighteen days later Governor Janet Mills vetoed it. On April 29 the House attempted to override and failed 72-65. The moratorium died, but on the same day Mills signed LD 713, which prohibits data centers from claiming tax incentives under Maine's business development programs, and issued an executive order establishing the Maine Data Center Advisory Council. Maine ended up with a different shape of restriction. <strong>What's worth showing is that the signal of what was coming sat in the record long before any of those state-level votes. Starting nearly five months earlier, five Maine town halls took up the same question one after another, in different kinds of meetings, after LD 307 had been filed as a study bill. Whether the bill prompted them, or they simply arrived at the same worry, the records we read do not say.</strong>
+On April 6, 2026, Maine's House passed LD 307, what would have become the country's first state-level moratorium on large-scale data centers, on an 82-62 vote. Eighteen days later Governor Janet Mills vetoed it. On April 29 the House attempted to override and failed 72-65. The moratorium died, but on the same day Mills signed LD 713, which prohibits data centers from claiming tax incentives under Maine's business development programs, and issued an executive order establishing the Maine Data Center Advisory Council. Maine ended up with a different shape of restriction. <strong>What's worth showing is that the signal of what was coming sat in the record long before any of those state-level votes. Starting months earlier, Maine town halls took up the same question one after another, in different kinds of meetings, after LD 307 had been filed as a study bill. Whether the bill prompted them, or they simply arrived at the same worry, the records we read do not say.</strong>
 </p>
 
 <div class="cs-stats">
-<div class="cs-stat"><span class="cs-stat-value">5</span><span class="cs-stat-label">towns on the record</span></div>
-<div class="cs-stat"><span class="cs-stat-value">173</span><span class="cs-stat-label">Maine towns monitored, April 2026</span></div>
-<div class="cs-stat"><span class="cs-stat-value">2.9%</span><span class="cs-stat-label">of towns discussing it</span></div>
-<div class="cs-stat"><span class="cs-stat-value">4.6 mo</span><span class="cs-stat-label">first formal action to House vote</span></div>
+<div class="cs-stat"><span class="cs-stat-value">4.6 mo</span><span class="cs-stat-label">Gorham's first formal action to the House vote</span></div>
+<div class="cs-stat"><span class="cs-stat-value">Nov 18, 2025</span><span class="cs-stat-label">first move to restrict, Gorham Town Council</span></div>
+<div class="cs-stat"><span class="cs-stat-value">Apr 6, 2026</span><span class="cs-stat-label">LD 307 passes the House, 82-62</span></div>
 </div>
 
 <div style="display: flex; gap: 10px; flex-wrap: wrap; margin: 0 0 40px 0;">
@@ -44,7 +43,7 @@ On April 6, 2026, Maine's House passed LD 307, what would have become the countr
 
 <div class="cs-window">
 <h3>What you're about to read</h3>
-<p>Every municipal entry links to a real document on a Maine town or city website. Five towns, five different kinds of body, one pattern forming in real time. Wiscasset, which handled its prospect largely in executive session, is shown from local press reporting. <span class="cs-highlight">The bill's sponsor represents Freeport, about 20 miles from the first town to act.</span></p>
+<p>Every municipal entry links to a real document on a Maine town or city website. Different towns, different kinds of body, one pattern forming in real time. Wiscasset, which handled its prospect largely in executive session, is shown from local press reporting. <span class="cs-highlight">The bill's sponsor represents Freeport, about 20 miles from the first town to act.</span></p>
 </div>
 
 ## The Signal Chain
@@ -199,9 +198,9 @@ On April 6, 2026, Maine's House passed LD 307, what would have become the countr
 
 </div>
 
-## The Denominator
+## Read Together
 
-Five towns out of 173. That's 2.9%. Not a groundswell: a small, early cluster, readable only when the towns are read together.
+No single town hall shows it. Read together, they show the question arriving months before the State House took it up.
 
 The pattern wasn't visible from any single town hall. It was scattered across a one-line agenda item in Gorham, a rejected $300 million deal in Lewiston, a sustainability committee in Rockland, a planning division memo in Bangor, and a planning board discussion in Winthrop. Different bodies, different document types, different concerns. The same question.
 
@@ -209,7 +208,7 @@ The bill's sponsor, Rep. Melanie Sachs, represents Freeport, about 20 miles from
 
 ## Not Just Maine
 
-In the same months, municipal documents in Georgia, Idaho, Iowa, Nevada, Massachusetts, Arkansas, Colorado, and Virginia showed towns having the same conversation. Fourteen municipalities across eight states. Maine was first to put a state-level moratorium to a chamber vote, and the outcome changed in three weeks. The question for other states isn't whether the pattern follows. It's which town halls are signaling, and what shape the response will take when it reaches the legislature.
+In the same months, municipal documents in Georgia, Idaho, Iowa, Nevada, Massachusetts, Arkansas, Colorado, and Virginia showed towns having the same conversation. Maine was first to put a state-level moratorium to a chamber vote, and the outcome changed in three weeks. The question for other states isn't whether the pattern follows. It's which town halls are signaling, and what shape the response will take when it reaches the legislature.
 
 For a broader cut across the corpus, see <a href="/research/data-center-zoning">Data Centers Are Contested in 24 States, and the Friction Curve Is Steepening</a>.
 
@@ -220,9 +219,9 @@ For a broader cut across the corpus, see <a href="/research/data-center-zoning">
 </div>
 
 <div class="cs-note">
-<strong>Methodology note:</strong> This signal chain was assembled from public municipal documents published on the official websites of Gorham, Lewiston, Rockland, Bangor, and Winthrop, Maine. Every municipal link goes to the original source document. No proprietary data sources were used for the municipal layer. The Wiscasset entries come from local press reporting (Portland Press Herald, Wiscasset Newspaper), and the Lewiston vote and correspondence figures from GovTech. The state-legislative outcomes (veto, override-vote failure, LD 713 signing, executive order) were verified against the Office of the Governor of Maine's published statements, Maine Morning Star, Maine Public Radio, Press Herald, and TechCrunch reporting; those were not captured in our automated pipeline at the time of the events. When this piece was written in April 2026, Municipal Alpha monitored 173 Maine municipalities; the denominator above is that count.
+<strong>Methodology note:</strong> This signal chain was assembled from public municipal documents published on the official websites of Gorham, Lewiston, Rockland, Bangor, and Winthrop, Maine. Every municipal link goes to the original source document. No proprietary data sources were used for the municipal layer. The Wiscasset entries come from local press reporting (Portland Press Herald, Wiscasset Newspaper), and the Lewiston vote and correspondence figures from GovTech. The state-legislative outcomes (veto, override-vote failure, LD 713 signing, executive order) were verified against the Office of the Governor of Maine's published statements, Maine Morning Star, Maine Public Radio, Press Herald, and TechCrunch reporting; those were not captured in our automated pipeline at the time of the events.
 </div>
 
 <div class="cs-note">
-<strong>Corrected October 9, 2026.</strong> An earlier version counted six Maine towns, including a Sidney entry whose source document came from Sidney, Nebraska; Sidney has been removed and the count is now five (2.9%). It dated the Winthrop discussion April 8; the minutes are from the March 11 meeting. It placed Freeport ten miles south of Gorham; it is about 20 miles northeast. It described a Wiscasset group and a November 4 vote to pause talks that we could not source, and those are removed. It said "five months" from the first signal; the first formal action, in Gorham on November 18, 2025, came about 4.6 months before the April 6 House vote. The methodology note's current monitoring counts have been replaced with the April 2026 count the denominator uses.
+<strong>Corrected October 9, 2026.</strong> An earlier version counted six Maine towns, including a Sidney entry whose source document came from Sidney, Nebraska; Sidney has been removed. It dated the Winthrop discussion April 8; the minutes are from the March 11 meeting. It placed Freeport ten miles south of Gorham; it is about 20 miles northeast. It described a Wiscasset group and a November 4 vote to pause talks that we could not source, and those are removed. It said "five months" from the first signal; the first formal action, in Gorham on November 18, 2025, came about 4.6 months before the April 6 House vote. The headline count of towns and its denominator were removed: the towns shown are examples from the record, not a total.
 </div>
