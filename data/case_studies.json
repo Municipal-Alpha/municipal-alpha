@@ -108,28 +108,24 @@
     },
     "data-center-zoning": {
       "url_slug": "maine-data-center-moratorium",
-      "title": "Maine's Data Center Fight Was Visible in Town Halls Five Months Before the State Vote",
-      "dek": "Six Maine town halls, out of 173 we monitor in the state, were already discussing data center restrictions five months before LD 307 reached the Maine House. The House passed it, the Governor vetoed it, the override failed, and a different shape of restriction landed on the same day.",
-      "nav_note": "Maine data centers · 5 months early",
+      "title": "Maine's Data Center Fight Was Visible in Town Halls Months Before the State Vote",
+      "dek": "Maine town halls were taking up data centers in their public records months before LD 307 reached the Maine House; Gorham's council moved to restrict them 4.6 months before the vote. The House passed it, the Governor vetoed it, the override failed, and a different shape of restriction landed on the same day.",
+      "nav_note": "Maine data centers · months early",
       "card_title": "Data Center Zoning Fights",
-      "card_body": "6 of 173 monitored Maine towns were on the record before the state legislature took up LD 307. Every source document linked.",
+      "card_body": "Maine town halls were on the record before the state legislature took up LD 307. Every source document linked.",
       "has_stats": false,
       "stats": [
         {
-          "value": "6",
-          "label": "towns signaling"
+          "value": "4.6 mo",
+          "label": "Gorham's first formal action to the House vote"
         },
         {
-          "value": "173",
-          "label": "Maine towns monitored"
+          "value": "Nov 18, 2025",
+          "label": "first move to restrict, Gorham Town Council"
         },
         {
-          "value": "3.5%",
-          "label": "of towns discussing it"
-        },
-        {
-          "value": "5 mo",
-          "label": "first signal to state vote"
+          "value": "Apr 6, 2026",
+          "label": "LD 307 passes the House, 82-62"
         }
       ],
       "header_image": "story-maine-data-center-moratorium.png"
@@ -152,8 +148,7 @@
       "card_title": "E-Bike Rules",
       "card_body": "In three towns that adopted e-bike rules this year, the first warning sat in their minutes 3 to 14 months before the vote.",
       "has_stats": false,
-      "stats": []
-,
+      "stats": [],
       "header_image": "story-ebike-rules.jpg"
     },
     "adu-rules": {
